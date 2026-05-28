@@ -27,7 +27,7 @@ def load_config():
     config["email_password"] = os.environ.get("BRIEFING_EMAIL_PASSWORD", "")
     config["email_recipient"] = os.environ.get("BRIEFING_EMAIL_RECIPIENT", "")
     config["smtp_server"] = os.environ.get("BRIEFING_SMTP_SERVER", "smtp.qq.com")
-    config["smtp_port"] = int(os.environ.get("BRIEFING_SMTP_PORT") or "587")
+    config["smtp_port"] = int(os.environ.get("BRIEFING_SMTP_PORT") or "465")
 
     # LLM
     config["openai_api_key"] = os.environ.get("OPENAI_API_KEY", "")
@@ -232,10 +232,16 @@ Codex 晨间简报 · GitHub Actions · 工作日 8:00 推送
     msg["To"] = config["email_recipient"]
     msg.attach(MIMEText(full_html, "html", "utf-8"))
 
-    with smtplib.SMTP(config["smtp_server"], config["smtp_port"], timeout=30) as server:
+    # 自动识别邮箱类型：国内邮箱用 465 SSL（GitHub Actions 兼容）
+    sender_domain = config["email_sender"].split("@")[-1].lower() if "@" in config["email_sender"] else ""
+    if sender_domain in ("qq.com", "foxmail.com", "163.com", "126.com"):
+        server = smtplib.SMTP_SSL(config["smtp_server"], 465, timeout=30)
+    else:
+        server = smtplib.SMTP(config["smtp_server"], config["smtp_port"], timeout=30)
         server.starttls()
-        server.login(config["email_sender"], config["email_password"])
-        server.send_message(msg)
+    server.login(config["email_sender"], config["email_password"])
+    server.send_message(msg)
+    server.quit()
 
     print(f"✅ 简报已发送至 {config['email_recipient']}")
 
