@@ -32,7 +32,7 @@ def load_config():
     # LLM
     config["openai_api_key"] = os.environ.get("OPENAI_API_KEY", "")
     config["openai_base_url"] = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
-    config["openai_model"] = os.environ.get("OPENAI_MODEL", "gpt-4.1")
+    config["openai_model"] = os.environ.get("OPENAI_MODEL", "deepseek-v4-pro")
 
     # Fallback to local config file
     local_path = Path(".briefing_config.json")
