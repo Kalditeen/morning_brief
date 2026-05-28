@@ -2,9 +2,8 @@ name: 晨间简报
 
 on:
   schedule:
-    # UTC 00:00 = 北京时间 8:00，周一至周五
     - cron: "0 0 * * 1-5"
-  workflow_dispatch:  # 允许手动触发测试
+  workflow_dispatch:
 
 jobs:
   briefing:
@@ -25,11 +24,7 @@ jobs:
 
       - name: Run briefing
         env:
-          BRIEFING_EMAIL_SENDER: ${{ secrets.BRIEFING_EMAIL_SENDER }}
-          BRIEFING_EMAIL_PASSWORD: ${{ secrets.BRIEFING_EMAIL_PASSWORD }}
-          BRIEFING_EMAIL_RECIPIENT: ${{ secrets.BRIEFING_EMAIL_RECIPIENT }}
-          BRIEFING_SMTP_SERVER: ${{ secrets.BRIEFING_SMTP_SERVER }}
-          BRIEFING_SMTP_PORT: ${{ secrets.BRIEFING_SMTP_PORT }}
+          WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
