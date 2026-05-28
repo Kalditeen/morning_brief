@@ -1,0 +1,4 @@
+.briefing_config.json
+__pycache__/
+.env
+venv/
