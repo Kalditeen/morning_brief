@@ -27,7 +27,7 @@ def load_config():
     config["email_password"] = os.environ.get("BRIEFING_EMAIL_PASSWORD", "")
     config["email_recipient"] = os.environ.get("BRIEFING_EMAIL_RECIPIENT", "")
     config["smtp_server"] = os.environ.get("BRIEFING_SMTP_SERVER", "smtp.qq.com")
-    config["smtp_port"] = int(os.environ.get("BRIEFING_SMTP_PORT", "587"))
+    config["smtp_port"] = int(os.environ.get("BRIEFING_SMTP_PORT") or "587")
 
     # LLM
     config["openai_api_key"] = os.environ.get("OPENAI_API_KEY", "")
