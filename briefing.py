@@ -122,12 +122,12 @@ def compose_daily(items: list[dict], config: dict) -> str:
 
 ## 📊 简报 · {len(items)}条 | 信源: HN/V2EX/36氪/Google News
 
-总字数控制在 2500 以内。不编造信息，不确定的标注「未经确认」。"""
+总字数严格控制在 2000 以内。不编造信息，不确定的标注「未经确认」。"""
 
     response = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role": "system", "content": prompt}, {"role": "user", "content": f"新闻：\n\n{news_text}"}],
-        temperature=0.7, max_tokens=3000,
+        temperature=0.7, max_tokens=2400,
     )
     return response.choices[0].message.content
 
@@ -161,17 +161,20 @@ def compose_friday_special(items: list[dict], config: dict) -> str:
 
 ## 📊 特辑统计 · 学术X篇 + 保研/就业Y条
 
-不编造。总字数 3000 内。"""
+不编造。总字数严格控制在 2800 内。"""
 
     response = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role": "system", "content": prompt}, {"role": "user", "content": f"本周学术 & 保研信息：\n\n{news_text}"}],
-        temperature=0.7, max_tokens=3500,
+        temperature=0.7, max_tokens=3200,
     )
     return response.choices[0].message.content
 
 
 def send_wechat(markdown: str, webhook_url: str, label: str = ""):
+    if len(markdown) > 4000:
+        markdown = markdown[:4000] + "\n\n> ⚠️ 内容过长已截断"
+        print(f"   ⚠️ 已截断至 {len(markdown)} 字符")
     payload = json.dumps({
         "msgtype": "markdown",
         "markdown": {"content": markdown}
