@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "0 23 * * 0-4"
   workflow_dispatch:
+  repository_dispatch:
+    types: [morning-briefing]
 
 jobs:
   briefing:

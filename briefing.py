@@ -42,7 +42,8 @@ FRIDAY_SOURCES = [
     {"name": "ArXiv cs.AI", "url": "http://export.arxiv.org/rss/cs.AI", "category": "学术"},
     {"name": "ArXiv cs.CL", "url": "http://export.arxiv.org/rss/cs.CL", "category": "学术"},
     {"name": "Reddit ML", "url": "https://www.reddit.com/r/MachineLearning/.rss", "category": "学术"},
-    {"name": "Google News 保研", "url": "https://news.google.com/rss/search?q=%E4%BF%9D%E7%A0%94+%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "category": "保研"},
+    {"name": "Google News 保研", "url": "https://news.google.com/rss/search?q=%E4%BF%9D%E7%A0%94+%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+site:zhihu.com&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "category": "保研"},
+    {"name": "Google News 保研2", "url": "https://news.google.com/rss/search?q=%E4%BF%9D%E7%A0%94+%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "category": "保研"},
     {"name": "Google News 校招", "url": "https://news.google.com/rss/search?q=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B+%E8%AE%A1%E7%AE%97%E6%9C%BA+%E6%A0%A1%E6%8B%9B+%E5%AE%9E%E4%B9%A0&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "category": "保研/就业"},
 ]
 
