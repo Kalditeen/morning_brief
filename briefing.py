@@ -95,25 +95,27 @@ def compose_all(items, config, date_str):
 🤖 AI 产业
 **一句话趋势:** (今天AI领域核心事件)
 
-· **事件标题** — 经过:(具体数据/细节)
-  📊 AI总结:(一句话概括影响) 🔮 预测:(对学生可操作建议)
+**一句话:** (本条新闻一句话概括)
+· 具体事件 — 数据/细节
+  → 启示: (对学生可操作建议)
 
-(每条3行,最多6条)
+(每条4行,最多6条)
 
 ===
 
 💼 就业水温
 **一句话水温:** (就业市场核心信号)
 
-· **事件标题** — 经过:(具体细节)
-  📊 AI总结:(一句话) 🔮 预测:(对学生可操作建议)
+**一句话:** (本条新闻一句话概括)
+· 具体事件 — 细节
+  → 启示: (对学生可操作建议)
 
-(每条3行,最多5条)
+(每条4行,最多5条)
 
 ===
 📊 {len(items)}条 · HN/V2EX/36氪/Google News
 
-禁止「学习XX是必备技能」废话。1600字内。"""
+禁止「学习XX是必备技能」废话。启示必须具体可操作。1600字内。"""
     resp = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role":"system","content":prompt},{"role":"user","content":f"新闻:\n\n{news_text}"}],
@@ -209,8 +211,12 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
                 card_open = True
 
             # render line
-            if stripped.startswith("**一句话"):
+            if stripped.startswith("**一句话趋势") or stripped.startswith("**一句话水温"):
                 buf.append(f'<div class="one-liner">{_md_inline(stripped)}</div>')
+            elif stripped.startswith("**一句话:"):
+                buf.append(f'<div class="news-summary">{_md_inline(stripped)}</div>')
+            elif stripped.startswith("  → 启示") or stripped.startswith("→ 启示"):
+                buf.append(f'<div class="news-insight">{_md_inline(stripped.strip())}</div>')
             elif stripped.startswith("· "):
                 text = stripped[2:]
                 # split into event / summary / prediction
@@ -224,19 +230,12 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
                         ai_part = p
                     if "预测" in text:
                         pred_part = p
-                # simpler approach: use regex
-                m = re.search(r"📊\s*AI总结:(.+?)(?:🔮|$)", text)
-                ai_sum = m.group(1).strip() if m else ""
-                m2 = re.search(r"🔮\s*预测:(.+)$", text)
-                pred = m2.group(1).strip() if m2 else ""
-                # strip AI总结/预测 from event
-                event = re.sub(r"[📊🔮].+$","",text).strip()
-                event = event.rstrip("—").rstrip("-").strip()
+                # Parse: 一句话 / · event / → insight
+                event = text.strip()
+                # If starts with 一句话:, render as summary
+                if event.startswith("一句话:") or event.startswith("一句话趋势") or event.startswith("一句话水温"):
+                    event = event  # keep as-is, will be rendered
                 buf.append(f'<div class="news-item"><div class="news-title">{_md_inline(event)}</div>')
-                if ai_sum:
-                    buf.append(f'<div class="news-ai"><span class="label">📊 总结</span> {_md_inline(ai_sum)}</div>')
-                if pred:
-                    buf.append(f'<div class="news-pred"><span class="label">🔮 预测</span> {_md_inline(pred)}</div>')
                 buf.append('</div>')
             elif stripped.startswith("📰"):
                 buf.append(f'<h1 class="page-title">{_md_inline(stripped)}</h1>')
@@ -312,6 +311,8 @@ body{{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backg
 .news-title{{font-weight:700;font-size:1.02em;margin-bottom:6px;line-height:1.5}}
 .news-ai{{background:var(--ai-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em}}
 .news-pred{{background:var(--pred-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em;border-left:3px solid #f0b90b}}
+.news-summary{{font-weight:600;font-size:1em;margin:8px 0 4px;color:var(--accent)}}
+.news-insight{{padding-left:14px;margin:3px 0;font-size:.9em;color:#555;border-left:3px solid #90caf9}}
 .label{{font-weight:700;font-size:.85em;margin-right:4px}}
 
 .page-title{{font-size:1.3em;margin:10px 0}}
