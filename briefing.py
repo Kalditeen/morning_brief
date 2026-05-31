@@ -40,9 +40,12 @@ FRIDAY_SOURCES = [
     {"name": "保研 知乎", "url": "https://news.google.com/rss/search?q=%E4%BF%9D%E7%A0%94+%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+site:zhihu.com&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
     {"name": "保研 综合", "url": "https://news.google.com/rss/search?q=%E4%BF%9D%E7%A0%94+%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
     {"name": "校招 实习", "url": "https://news.google.com/rss/search?q=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B+%E8%AE%A1%E7%AE%97%E6%9C%BA+%E6%A0%A1%E6%8B%9B+%E5%AE%9E%E4%B9%A0&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
+    {"name": "南理工研招", "url": "https://news.google.com/rss/search?q=site:njust.edu.cn+%E7%A0%94%E7%A9%B6%E7%94%9F+%E6%8E%A8%E5%85%8D+%E5%A4%8F%E4%BB%A4%E8%90%A5&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
+    {"name": "南航研招", "url": "https://news.google.com/rss/search?q=site:nuaa.edu.cn+%E7%A0%94%E7%A9%B6%E7%94%9F+%E6%8E%A8%E5%85%8D+%E5%A4%8F%E4%BB%A4%E8%90%A5&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
+    {"name": "华东211研招", "url": "https://news.google.com/rss/search?q=%E5%A4%8F%E4%BB%A4%E8%90%A5+%E6%8E%A8%E5%85%8D+%E8%AE%A1%E7%AE%97%E6%9C%BA&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "cat": "baoyan"},
 ]
 
-CDN_BASE = "https://cdn.jsdelivr.net/gh/Kalditeen/morning_brief@main"
+CDN_BASE = "https://kalditeen.github.io/morning_brief"
 
 
 def fetch_news(sources, hours_back):
