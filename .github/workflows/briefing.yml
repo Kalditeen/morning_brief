@@ -5,6 +5,9 @@ on:
   repository_dispatch:
     types: [morning-briefing]
 
+permissions:
+  contents: write
+
 jobs:
   briefing:
     runs-on: ubuntu-latest
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
