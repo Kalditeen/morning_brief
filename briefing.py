@@ -6,7 +6,7 @@
 周五附加：本周学术论文 & 保研特辑
 """
 
-import os, re, json, subprocess, html as html_mod, hashlib, urllib.request
+import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -286,6 +286,16 @@ def commit_and_push(docs_dir: str):
     print("   ✅ HTML 页面已推送")
 
 
+def wait_until_beijing(target_hour=7, target_min=0):
+    """等待到北京时间指定时刻"""
+    beijing_now = datetime.now(timezone(timedelta(hours=8)))
+    target = beijing_now.replace(hour=target_hour, minute=target_min, second=0, microsecond=0)
+    wait_sec = (target - beijing_now).total_seconds()
+    if wait_sec > 0 and wait_sec < 3600:
+        print(f"⏳ 等待至北京时间 {target.strftime('%H:%M')}（{int(wait_sec)}秒）…")
+        time.sleep(wait_sec)
+
+
 def main():
     print("=" * 50)
     print("📰 晨间简报 · 开始运行")
@@ -350,6 +360,9 @@ def main():
     # ── 推送 HTML 到 repo ──
     print("\n📤 提交 HTML 页面…")
     commit_and_push(docs_dir)
+
+    # 等到北京时间7:00再推微信（网页已部署）
+    wait_until_beijing(7, 0)
 
     print("\n" + "=" * 50)
     print("✅ 完成" + ("（含特辑）" if is_friday else ""))
