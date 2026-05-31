@@ -296,6 +296,15 @@ def wait_until_beijing(target_hour=7, target_min=0):
         time.sleep(wait_sec)
 
 
+def cleanup_old(docs_dir: str, keep_days: int = 7):
+    """删除 N 天前的 HTML 文件"""
+    cutoff = datetime.now() - timedelta(days=keep_days)
+    for f in Path(docs_dir).glob("*.html"):
+        if datetime.fromtimestamp(f.stat().st_mtime) < cutoff:
+            f.unlink()
+            print(f"   🗑 清理: {f.name}")
+
+
 def main():
     print("=" * 50)
     print("📰 晨间简报 · 开始运行")
@@ -334,7 +343,7 @@ def main():
     print(f"   📄 {html_path}")
 
     # 微信消息 = 摘要 + 链接
-    cdn_url = f"{CDN_BASE}/{html_path}"
+    cdn_url = f"{CDN_BASE}/{html_path.replace("docs/", "")}"
     summary = extract_summary(md)
     wechat_msg = f"{summary}\n\n📖 [查看完整晨报]({cdn_url})"
 
@@ -353,9 +362,11 @@ def main():
         spath = os.path.join(docs_dir, f"{file_date}-special.html")
         with open(spath, "w") as f:
             f.write(shtml)
-        surl = f"{CDN_BASE}/{spath}"
+        surl = f"{CDN_BASE}/{spath.replace("docs/", "")}"
         swx = extract_summary(smd) + f"\n\n📖 [查看特辑]({surl})"
         send_wechat(swx, config["wechat_webhook"], "特辑")
+        print("\n🗑 清理一周前旧文件…")
+        cleanup_old(docs_dir, 7)
 
     # ── 推送 HTML 到 repo ──
     print("\n📤 提交 HTML 页面…")
