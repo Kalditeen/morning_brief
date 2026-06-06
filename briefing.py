@@ -128,31 +128,32 @@ def compose_all(items, config, date_str):
 
 def compose_friday_special(items, config, date_str):
     client = OpenAI(api_key=config["openai_api_key"],base_url=config["openai_base_url"])
-    news_text = "\n\n".join(
-        f"[{i+1}] [{it['cat']}] {it['title']}\n来源:{it['source']} | {it['hours_ago']}h前\n摘要:{it['summary'][:300]}"
-        for i,it in enumerate(items[:60])
-    )
-    prompt = f"""你是软件工程本科生学术保研助手。北京时间 {date_str}。
+    # Academic items: ArXiv + Reddit; Baoyan items: Google News baoyan sources
+    academic = [it for it in items if it["cat"]=="academic"]
+    baoyan = [it for it in items if it["cat"]=="baoyan"]
+    paper_text = "\n".join(f"{i+1}. {it['title']}" for i,it in enumerate(academic[:30]))
+    baoyan_text = "\n".join(f"{i+1}. {it['title']} (来源:{it['source']})" for i,it in enumerate(baoyan[:20]))
+    prompt = f"""你是软件工程本科生的学术保研助手。北京时间{date_str}。请分析以下信息并输出周五特辑。
 
-输出周五特辑:
+第一行必须：🎓 学术&保研特辑 | {date_str}
 
-## 🎓 学术&保研特辑 | {date_str}
+然后严格按此结构输出:
 
-===
+📄 本周论文
+从30篇论文中精选5-8篇最重要的。每条必须包含:
+- 英文标题
+- **中文一句话摘要**（这篇论文做了什么，为什么值得本科生关注）
 
-## 📄 本周论文(5-8篇)
-- 英文原标题 + **一句中文摘要**(做了什么/为什么重要,本科生能懂)
+🏫 保研&校招动态
+整理保研、夏令营、推免、校招相关信息。每条一句话说明。
 
-===
+最后一行: 📊 论文X篇 + 保研/就业Y条
 
-## 🏫 保研&校招动态
-- 夏令营/推免/重点院校计算机方向
-
-不编造。2500字内。"""
+禁止输出格式说明。只输出内容。2000字。"""
     resp = client.chat.completions.create(
         model=config["openai_model"],
-        messages=[{"role":"system","content":prompt},{"role":"user","content":f"信息:\n\n{news_text}"}],
-        temperature=0.7,max_tokens=3000,
+        messages=[{"role":"system","content":prompt},{"role":"user","content":f"本周论文:\n{paper_text}\n\n保研信息:\n{baoyan_text}"}],
+        temperature=0.7,max_tokens=2500,
     )
     return resp.choices[0].message.content
 
@@ -188,9 +189,14 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
             nonlocal card_open, buf, current_section
             if not buf: return
             html = "\n".join(buf)
-            icon_map = {"🤖 AI":"🤖","💼 就业":"💼","📄 本周论文":"📄","🏫 保研":"🏫","📰 晨间":"📰"}
+            icon_map = {"🤖":"🤖","💼":"💼","📄":"📄","🏫":"🏫","🎓":"🎓","📰":"📰"}
             sec_id = current_section.strip().split()[0] if current_section else ""
-            sec_icon = icon_map.get(sec_id,"📌")
+            # Find matching icon by partial key match
+            sec_icon = "📌"
+            for key in icon_map:
+                if key in sec_id:
+                    sec_icon = icon_map[key]
+                    break
             out.append(f'<div class="card" id="sec-{html_mod.escape(sec_id)}"><div class="card-head">{sec_icon} {html_mod.escape(current_section)}</div><div class="card-body">{html}</div></div>')
             buf = []
             card_open = False
@@ -203,7 +209,7 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
                 continue
             # detect next section
             if stripped and not stripped.startswith("·") and not stripped.startswith(">") and not stripped.startswith("**") and not stripped.startswith("-") and not stripped.startswith("📊") and not stripped.startswith("📰"):
-                if "🤖" in stripped or "💼" in stripped or "📄" in stripped or "🏫" in stripped or "🎓" in stripped:
+                if any(kw in stripped for kw in ["🤖","💼","📄","🏫","🎓"]):
                     flush_card()
                     current_section = stripped
                     card_open = True
