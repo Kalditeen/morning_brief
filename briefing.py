@@ -90,7 +90,7 @@ def compose_all(items, config, date_str):
         for i,it in enumerate(items[:50])
     )
     prompt = f"""你是软件工程本科生的AI & 就业晨间助手。北京时间 {date_str}。
-
+    规则: ①趋势必须基于所给的新闻概括，禁止空洞描述 ②每条必须含新闻内容 ③所有英文翻译为中文再输出
 分析以下新闻，输出日报。严格按此格式:
 
 📰 晨间简报 | {date_str}
@@ -101,8 +101,8 @@ def compose_all(items, config, date_str):
 **趋势:** （用2-3句话概括今天AI领域整体动向，必须基于真实新闻）
 
 （从以下新闻中提取最多10条，每条格式如下）
-· [公司/产品名称] — [具体数据或细节]
-  → 启示: [对学生可操作的建议，一句话]
+· [公司/产品名称] — [新闻/事件具体内容]
+  → 启示: [学生可以跟进的关注方向，一句话]
 
 ===
 
@@ -110,7 +110,7 @@ def compose_all(items, config, date_str):
 **趋势:** （用2-3句话概括今天就业市场信号，必须基于真实新闻）
 
 （最多10条）
-· [公司/事件] — [具体细节]
+· [公司/事件] — [新闻/事件具体内容]
   → 启示: [学生可以跟进的学习方向和可操作建议，一句话]
 
 ===
@@ -119,13 +119,13 @@ def compose_all(items, config, date_str):
 **趋势:** （用2-3句话概括过去24小时全球最重要变化）
 
 （最多10条）
-· [事件] — [关键细节]
-  → 影响: [对普通人的影响，一句话]
+· [事件] — [新闻/事件具体内容]
+  → 影响: [可能对普通人的影响，一句话]
 
 ===
-📊 {len(items)}条 · HN/V2EX/36氪/Google News
+📊 {len(items)}条
 
-规则: ①趋势必须基于真实新闻概括，禁止空洞描述 ②每条·必须含具体公司名/数据/数字 ③所有英文翻译为中文 ④1500字内"""
+"""
     resp = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role":"system","content":prompt},{"role":"user","content":f"新闻:\n\n{news_text}"}],
