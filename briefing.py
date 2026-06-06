@@ -6,6 +6,10 @@
 """
 
 import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.request
+
+BJT = timezone(timedelta(hours=8))  # 北京时间
+
+def now_bj(): return datetime.now(BJT)
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -256,7 +260,7 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
 
     cards_html = md2cards(md)
     sidebar_html = render_sidebar()
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now_str = now_bj().strftime("%Y-%m-%d %H:%M")
     special_class = "special" if is_special else ""
 
     return f'''<!DOCTYPE html>
@@ -404,7 +408,7 @@ def commit_and_push(docs_dir: str):
     if r.returncode == 0:
         print("   📄 无变更,跳过提交")
         return
-    subprocess.run(["git","commit","-m",f"📰 晨间简报 {datetime.now().strftime('%Y-%m-%d')}"],check=True)
+    subprocess.run(["git","commit","-m",f"📰 晨间简报 {now_bj().strftime('%Y-%m-%d')}"],check=True)
     subprocess.run(["git","push"],check=True)
     print("   ✅ HTML 页面已推送")
 
@@ -419,7 +423,7 @@ def wait_until_beijing(h=7,m=0):
 
 
 def cleanup_old(docs_dir: str, days=7):
-    cutoff = datetime.now()-timedelta(days=days)
+    cutoff = now_bj()-timedelta(days=days)
     for f in Path(docs_dir).glob("*.html"):
         if datetime.fromtimestamp(f.stat().st_mtime) < cutoff:
             f.unlink()
@@ -429,14 +433,14 @@ def cleanup_old(docs_dir: str, days=7):
 def main():
     print("="*50)
     print("📰 晨间简报 · 开始运行")
-    print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC")
+    print(f"⏰ {now_bj().strftime('%Y-%m-%d %H:%M:%S')} 北京时间")
     print("="*50)
 
     config = load_config()
     for k in ["wechat_webhook","openai_api_key"]:
         if not config[k]: raise RuntimeError(f"缺少配置:{k}")
 
-    today = datetime.now()
+    today = now_bj()
     date_str = today.strftime("%Y年%m月%d日")
     wd = ["周一","周二","周三","周四","周五","周六","周日"]
     date_full = f"{date_str} {wd[today.weekday()]}"
