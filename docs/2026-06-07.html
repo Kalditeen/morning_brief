@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="📰 晨间简报 | 2026年06月07日 周日">
+<meta property="og:description" content="📰 晨间简报 | 2026年06月07日 周日
+**趋势:** 人工智能领域正在迎来一个新浪潮，全球各大科技公司纷纷推出新一轮人工智能产品和服务。同时，人工智能的应用也开始在各个行业得到广泛接受。">
+<meta property="og:type" content="article">
+<title>晨间简报 | 2026年06月07日 周日</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff;--pred-bg:#fef9e7;--sidebar-w:280px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;display:flex;min-height:100vh}
+
+/* 侧边栏 */
+.sidebar{width:var(--sidebar-w);background:#1e1e2e;color:#ccc;position:fixed;top:0;left:0;bottom:0;overflow-y:auto;z-index:100;padding:16px 0;font-size:0.82em;transition:transform .25s}
+.sidebar h2{color:#fff;font-size:1em;padding:0 16px 10px;border-bottom:1px solid #333;margin-bottom:8px}
+.sidebar-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--accent);color:#fff;border:none;width:36px;height:36px;border-radius:8px;font-size:1.2em;cursor:pointer}
+.src-item{display:flex;align-items:flex-start;gap:8px;padding:6px 16px;text-decoration:none;color:#b0b0c0;border-left:2px solid transparent;transition:.15s}
+.src-item:hover,.src-item:focus{background:#2a2a3e;color:#fff;border-left-color:var(--accent)}
+.src-icon{flex-shrink:0;font-size:1em}
+.src-text{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-meta{flex-shrink:0;font-size:0.75em;color:#666}
+
+/* 主内容 */
+.main{margin-left:var(--sidebar-w);flex:1;padding:32px 40px 60px;max-width:860px}
+
+/* 顶部 header */
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:32px 36px;border-radius:16px;margin-bottom:28px;box-shadow:0 6px 24px rgba(102,126,234,.3)}
+.header h1{font-size:1.5em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.85;margin-top:6px}
+
+/* 标签导航 */
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:8px 18px;border-radius:20px;border:none;background:#fff;color:var(--text);font-size:.88em;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:.2s;text-decoration:none}
+.tab:hover,.tab.active{background:var(--accent);color:#fff}
+
+/* 卡片 */
+.card{background:var(--card);border-radius:14px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card-head{font-size:1.1em;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #667eea18;color:var(--accent)}
+.card-body p{margin:6px 0;font-size:.94em}
+
+/* 一句话 */
+.one-liner{background:linear-gradient(135deg,#f0f4ff,#ede7f6);border-radius:8px;padding:10px 16px;margin:10px 0;font-weight:600;font-size:.95em;border-left:3px solid var(--accent)}
+.trend-box{background:linear-gradient(135deg,#f3e5f5,#ede7f6);border-radius:10px;padding:14px 18px;margin:12px 0;font-size:.94em;line-height:1.7;border-left:4px solid var(--accent2)}
+
+/* 新闻条目 */
+.news-item{border-bottom:1px solid #eee;padding:14px 0}
+.news-item:last-child{border-bottom:none}
+.news-title{font-weight:700;font-size:1.02em;margin-bottom:6px;line-height:1.5}
+.news-ai{background:var(--ai-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em}
+.news-pred{background:var(--pred-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em;border-left:3px solid #f0b90b}
+.news-summary{font-weight:600;font-size:1em;margin:8px 0 4px;color:var(--accent)}
+.news-insight{padding-left:14px;margin:3px 0;font-size:.9em;color:#555;border-left:3px solid #90caf9}
+.label{font-weight:700;font-size:.85em;margin-right:4px}
+
+.page-title{font-size:1.3em;margin:10px 0}
+.stats-bar{color:var(--muted);font-size:.85em;text-align:center;padding:10px}
+blockquote{border-left:3px solid var(--accent);padding:8px 16px;margin:12px 0;background:#f8f9ff;border-radius:0 8px 8px 0;font-size:.92em}
+
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:32px;padding-top:18px;border-top:1px solid #e0e0e0}
+.footer a{color:var(--accent)}
+
+/* 响应式 */
+@media(max-width:768px){
+.sidebar{transform:translateX(-100%)}
+.sidebar.open{transform:translateX(0)}
+.sidebar-toggle{display:block}
+.main{margin-left:0;padding:20px 16px 40px}
+.header{padding:22px 20px}
+.card{padding:16px}
+}
+</style>
+</head>
+<body class="">
+<button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<aside class="sidebar">
+<h2>📡 信息源 (80条)</h2>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8xNjhTZHpKYlkxbEFhaUExNzN5MElmdTVnZnJ2X1g0Z0lqQnpVLXBmbHNPTmtGWXFwNERCUThCcE9BVE1BVkU5S25HZVJvWVBQOHBlMUs4TUlaWjhlSkhoTERXa1FoVDdB?oc=5" target="_blank" title="以军称打击黎巴嫩南部约150处真主党目标 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">以军称打击黎巴嫩南部约150处真主党目标 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 0.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE5OVmlRU3gwVkdTNzZqVmduTVFLZ21QOFpULXNnZy1YbU1qbXZwYVBNbFF2bWtpYlhRaTRmdy1iTThaYVFyLUM3ZzhidDFQc2ppNENfdTJBSGxTMURlZG1LNzZPNVhVaV9mU0RmcTh4OUNXNW9DVUVQQ2lJSEQ?oc=5" target="_blank" title="世界杯伊朗代表团十余人遭美国拒签 - 中国日报网"><span class="src-icon">🌍</span><span class="src-text">世界杯伊朗代表团十余人遭美国拒签 - 中国日报网</span><span class="src-meta">Google News 全球 · 0.9h</span></a>
+<a class="src-item" href="https://universalmemoryprotocol.io/" target="_blank" title="Universal Memory Protocol – a shared format for agent memory"><span class="src-icon">🤖</span><span class="src-text">Universal Memory Protocol – a shared format for agent memory</span><span class="src-meta">Hacker News · 2.0h</span></a>
+<a class="src-item" href="https://www.randalolson.com/2026/06/04/recent-grad-unemployment-flip/" target="_blank" title="New U.S. college grads now have higher unemployment than the"><span class="src-icon">🤖</span><span class="src-text">New U.S. college grads now have higher unemployment than the</span><span class="src-meta">Hacker News · 2.1h</span></a>
+<a class="src-item" href="https://www.eetimes.com/computex-2026-are-we-heading-for-the-agentic-pc-era-yet/" target="_blank" title="Computex 2026: Are We Heading for the Agentic PC Era Yet?"><span class="src-icon">🤖</span><span class="src-text">Computex 2026: Are We Heading for the Agentic PC Era Yet?</span><span class="src-meta">Hacker News · 2.3h</span></a>
+<a class="src-item" href="https://ataraxy-labs.github.io/sem/" target="_blank" title="Sem: New primitive for code understanding – not LSPs, but en"><span class="src-icon">🤖</span><span class="src-text">Sem: New primitive for code understanding – not LSPs, but en</span><span class="src-meta">Hacker News · 2.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE1CU1NqY2F1SlB1MlJJUzhJVXBNczFzV1d2YV9oZjc1cnVTR2lBbktnYWNfN0ZXWWFaQW0ybnVqdC1QRWJCT1lmZw?oc=5" target="_blank" title="特朗普禁令被绕过？Anthropic新模型魅力太大 美政府机构争相合作 - 财联社"><span class="src-icon">🤖</span><span class="src-text">特朗普禁令被绕过？Anthropic新模型魅力太大 美政府机构争相合作 - 财联社</span><span class="src-meta">Google News AI · 2.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5SWEVlclNXdUZfYjRoRVRfUXJpbmZqX0x2NXoxVVlSX0ZXNHMteDBnOG9iTWl2QlR5NV9rSWs4YmVRWFNVQmlYOUktVTVTbzdYMW5WdGpSdlk0NTBQc2dRaA?oc=5" target="_blank" title="韩正会见俄罗斯总统普京 - 光明网"><span class="src-icon">🌍</span><span class="src-text">韩正会见俄罗斯总统普京 - 光明网</span><span class="src-meta">Google News 全球 · 2.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQRnp6M25xQnZlMmYxQUhlbjZvWDVFaGFIRzhPT05XVm9vMXZ2SHphWjRndjhtZUxycV9McGdCcGZHTUVWVVkzdVRYMUxCeVppUFBoLVNLOW5NR0tFN1pyLVF1aE5WVVhNQWhTU0JCalRuU3BGN2EwTDV3YVZaVjZyam9n?oc=5" target="_blank" title="推动中朝关系与时俱进取得更大发展 - 天津日报"><span class="src-icon">🌍</span><span class="src-text">推动中朝关系与时俱进取得更大发展 - 天津日报</span><span class="src-meta">Google News 全球 · 2.7h</span></a>
+<a class="src-item" href="https://www.science.org/doi/10.1126/science.aec7671" target="_blank" title="Home alone: Remote work, isolation, and mental health"><span class="src-icon">🤖</span><span class="src-text">Home alone: Remote work, isolation, and mental health</span><span class="src-meta">Hacker News · 2.8h</span></a>
+<a class="src-item" href="https://ntsc.rs/" target="_blank" title="Ntsc-rs – open-source video emulation of analog TV and VHS a"><span class="src-icon">🤖</span><span class="src-text">Ntsc-rs – open-source video emulation of analog TV and VHS a</span><span class="src-meta">Hacker News · 3.4h</span></a>
+<a class="src-item" href="https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/" target="_blank" title="Meta confirms 1000s of Instagram accounts were hacked by abu"><span class="src-icon">🤖</span><span class="src-text">Meta confirms 1000s of Instagram accounts were hacked by abu</span><span class="src-meta">Hacker News · 4.1h</span></a>
+<a class="src-item" href="https://www.nbcnews.com/politics/national-security/pentagon-raised-threat-israeli-spying-us-highest-level-sources-say-rcna348565" target="_blank" title="Pentagon raised threat of Israeli spying on U.S. to highest "><span class="src-icon">🤖</span><span class="src-text">Pentagon raised threat of Israeli spying on U.S. to highest </span><span class="src-meta">Hacker News · 4.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMickFVX3lxTE1CSUFaRVpnMHN1b2w2djhoUm9NZ3ZDMUNIaGZ6TTVMeWNMUG95elpsX09SZnEtNVBRY1Z2em5SOG1nVDEtbWZXVmxKOW9HQmFHOTN4OVE2ejlOTnVIUnJ3U3hQWk9EYkVDd005ei1GOWR6Zw?oc=5" target="_blank" title="全国小麦收获进度已过半 多地抢收、烘干齐发力守护群众“粮袋子” - 红星新闻"><span class="src-icon">🌍</span><span class="src-text">全国小麦收获进度已过半 多地抢收、烘干齐发力守护群众“粮袋子” - 红星新闻</span><span class="src-meta">Google News 全球 · 4.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5kc2FoSjI3ZzBrOElYdHVrOTNrLU1DWUp2YUVfYVI3QTcyc2dudWdZMkpmZnhDSm1PYmhrdndyNGdXMk5yMnVYbEhfWm5QZHBZdzVaSWlCNW5IQ0F5Yk8tVFNuV0JWUlJJcmFLREhTOVg?oc=5" target="_blank" title="字节再度否认造车 聚焦技术服务合作 - 中华网"><span class="src-icon">🌍</span><span class="src-text">字节再度否认造车 聚焦技术服务合作 - 中华网</span><span class="src-meta">Google News 全球 · 5.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE1XYnVMZDRzeUwzU3gyM3d5cUJIdmc0T3pIRDM4VUx2MGkyeU1MbDE1Q1BXUWZpRDlFSm5qSDN4QWxqZi1EQ1JKNA?oc=5" target="_blank" title="Anthropic“神话”模型扩大全球内测范围 已揪出上万高危漏洞 - 财联社"><span class="src-icon">🤖</span><span class="src-text">Anthropic“神话”模型扩大全球内测范围 已揪出上万高危漏洞 - 财联社</span><span class="src-meta">Google News AI · 5.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMilgJBVV95cUxORWdQRTBFRlFoUnMxME1URDNVc0xBUkQzVENfNW9RNk8yT1hFaXJ5WHNTd0doNlpIVHloalhtYzRNZEs1TDZhR1RtTnNQaWdnZEFQOHBON3ViakJnOTk2MEVqdW15bHlhWGU3Y2k2T2lTdUItLXNUSE9QRERmSVRHT0xHMzNCOFl2WWZTWFJCZ2xRU3B2SnpTX2JmbTVqNjBSc09OZW84bEwwRWdGeGpXV3FaRDJaaHhOcEtyYXhQM3M3SDhmWGROazRDNGlCUEVyelZSVnZwT21XbkZRMURCWEM1SjU1bXpObHIwNzJlSElSNzBqcUJMMlNXNUlWZmF0ck5kV3VGMXpGZU5LT1MtOXBhZU5Td9IBlgJBVV95cUxQb1Y5cFlIRER6UzBIck41LU9zSUpwSnVtMHBGcG9wZ3NZTFdUMXlSNllDQmlsTU1NNVM3eW9UeXk0SmpLYVhXcjMyZ213ckRYd2xza2FsWGczeFBMMmZlaF9xdVZFRUpaWDE5MVRDT2cxTi1HcFI1dUhHNnZIOFFKRGpLSDh4YU40cFp0WkIwUllXWEZWXzNVVEVEcklhOWV4U0QwMHptNERveFNhbEFLa3RKSm9LVU9FMUp4ME80a3JqS0lZZzNmQlpkdVhlQlFTaXM3LTVxc0pnaUdHQTQ3U1h5WTR6WWFCWkthWDlzTm5jZ1VDMU5wZDJhLW1Wc1VSa1NSVWRXdHRlSzUwWXhvRnQ3LXZ2QQ?oc=5" target="_blank" title="美军打击伊朗雷达站 伊朗袭击美军基地 - DW.com"><span class="src-icon">🌍</span><span class="src-text">美军打击伊朗雷达站 伊朗袭击美军基地 - DW.com</span><span class="src-meta">Google News 全球 · 5.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5rczMxcEhJeFhBVDU4THZVNG51TVM0NVoyd00weUZUTjkyTGFfZExqVzUxRjZKZ2VFRWVyVW9pMWJuclhNVjVIZHQzTUstQmlScm9NVHBFaGNRX1dxLThHQzgtejB2VXdTUVJJaUc5RQ?oc=5" target="_blank" title="年度票房破160亿！暑期档佳片汇聚 我们影院见 - 中国网"><span class="src-icon">🌍</span><span class="src-text">年度票房破160亿！暑期档佳片汇聚 我们影院见 - 中国网</span><span class="src-meta">Google News 全球 · 6.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5uR1FDeFRkS0VkVjNhLVU0QUdHRUFRRmx3TUhJZERoNkRFZ2tpR2VEaDR3emlvczgzZ1ZRT3JXREtaR2JCUVZzNzJXYTVWdTRtN19aTDhWNTZualoxWnRGVGZNbGQ5bnU2TXZld0ctTjBISzQ?oc=5" target="_blank" title="专家：中国不是借口，而是榜样 - 新浪军事"><span class="src-icon">🤖</span><span class="src-text">专家：中国不是借口，而是榜样 - 新浪军事</span><span class="src-meta">Google News AI · 6.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE53a2QzZTZTeEJTWUNQS1VWY1FRaTZtVUg3SjB3RjhyTWJEVVIzcGFSQXd2YVE0YVZMLXd4ZmlLTkJ0dkZtUG1EclhHZzFBSlVpVU82ckVR?oc=5" target="_blank" title="第31个全国爱眼日：淘宝买药发起“科学护眼联盟”，以专业重构眼健康管理新范式 - news.tom.com"><span class="src-icon">🌍</span><span class="src-text">第31个全国爱眼日：淘宝买药发起“科学护眼联盟”，以专业重构眼健康管理新范式 - news.tom.com</span><span class="src-meta">Google News 全球 · 6.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pQkl4Q0tFckpHcnFrd3ZBWnBnY2Z5UTFRUnJEZFZHUTY5QWc4UExqMjNFUU5LWjA2bWo4dzlCUS1NNHB0ay1OSE9DVnc0d0lObFltejBhMC1ZS2w1d2c2ZlNfMA?oc=5" target="_blank" title="野生大熊猫种群“守护记”丨美丽中国行·探访大熊猫国家公园 - 四川新闻"><span class="src-icon">🌍</span><span class="src-text">野生大熊猫种群“守护记”丨美丽中国行·探访大熊猫国家公园 - 四川新闻</span><span class="src-meta">Google News 全球 · 6.5h</span></a>
+<a class="src-item" href="https://magazine.atavist.com/2026/mccann-cocaine-fugitives" target="_blank" title="You Can Run"><span class="src-icon">🤖</span><span class="src-text">You Can Run</span><span class="src-meta">Hacker News · 6.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi4ANBVV95cUxNekNYRUhjRWxrX2JaQktjR25qVHpmLVhrOWwxOVRFTlBYRS04NVVIbFBJUnJlNXNrMlFZa2tCbDliZ2gtbHpxMHpGQ0txcVc1OVRXWWNmRlpOM1lHcnpTU2tUUTV0bERBTTJzOU1fSWZ1ZWFMSXRBeExYd3cxX2VlOFczaTlUTTFpZ0hKZ2JrU0I2MlZyeDJ2SnVvNnBuSG80UjJNWnR4MHhyUTVNd2FKQ2lSU0VfUnlhSWZiNnVCZklCZTV2UmdfZ3RPN1ZFUVg5NlM5UHJWVTNWalZubk40T0w2Z1pQdFNJLTExa2RiZHdBVDJRSWFjMlppN3FtM1JxRHRfTEptbGxWaFo0alN1WWpFbDhxMm0wc0ozZlFuRVhBdzB2eEJLcHRGNm1sZ3F0SHFDTG5HV0U2dTRJckl2MWpBUEtkZHduTXlTcW9pNUloUGRRcklLSlc1eVRWLWltSHVtWlNVYXhZTDQydlI2bWFhR2dZYkx2VVNDckNndXc4LTNoS2xpd2VVMndNb3ZYMGt3enBwVUhaclhLc25OUW16VUVlRVZoekVBdXJLT09vZW1Gbi1iZy1oemtwRHlpLTRJYkNheFNRUndCVTVhTDRETS1IVlY3Sk1UcFZjX2g?oc=5" target="_blank" title="要闻解说 - 俄乌战场持续僵持，普京再次拒绝泽连斯基的直接对话倡议 - RFI"><span class="src-icon">🌍</span><span class="src-text">要闻解说 - 俄乌战场持续僵持，普京再次拒绝泽连斯基的直接对话倡议 - RFI</span><span class="src-meta">Google News 全球 · 6.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1aVm1oeXE0OVY5UW01d0F1Q3k5U1pFOG9GbC1FRUNGZ2h3T0hEU0hsU3NmNE5lX3pHbnNmNXJaUFNWRHFGdTZnLVV0bGtjQk5IdVYzVk4ydWItNTRzN2JBbGZtNXlfR1hN?oc=5" target="_blank" title="印尼羽毛球公开赛：国羽混双、女双晋级决赛 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">印尼羽毛球公开赛：国羽混双、女双晋级决赛 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 6.7h</span></a>
+<a class="src-item" href="https://discuss.python.org/t/an-announcement-from-the-steering-council-regarding-the-jit-project/107638" target="_blank" title="Python JIT project was asked to pause development"><span class="src-icon">🤖</span><span class="src-text">Python JIT project was asked to pause development</span><span class="src-meta">Hacker News · 7.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNemQxME1TUjY1blNVdlNVTE5OSmN6a3VRM19mR3RMRG9EaXZDOWYxZkhsWVlDcWM2Sjh0amxUSjVHWkFqYlRnSndRLS1iOEZQLVFGZm93dUptMl81N2dZTExMcjFJYk9tTU1mZk02cTNsOEg2aFRNeWhTcDR3bU92Y3FhQXFKbzF4LUk1SQ?oc=5" target="_blank" title="南威软件参股的大数据公司拿下港股平台，出海版图又落一子 - 搜狐网"><span class="src-icon">🤖</span><span class="src-text">南威软件参股的大数据公司拿下港股平台，出海版图又落一子 - 搜狐网</span><span class="src-meta">Google News AI · 7.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1wV2Jwc01zVGQydmpjM0NuOEdlTW84dXZZOHpOdVBqbU0tYUE4SHBGUEtSOG1icjYwTGlual9yaU9xcThfdEtjSVhpVXc?oc=5" target="_blank" title="伊朗导弹从天而降，特朗普终于说了实话，美伊停战倒计时？ - 凤凰网"><span class="src-icon">🌍</span><span class="src-text">伊朗导弹从天而降，特朗普终于说了实话，美伊停战倒计时？ - 凤凰网</span><span class="src-meta">Google News 全球 · 7.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1CbjlIdVl3T3l1VGJKbTBaWVd3NFFYc2d3SzhJa0JxM0ZlczE5RFVpMDlTWGVWc2JhTWFDb0wwWEI2QlA4dVUtRHRMQ3p1ekE0aHBETFVhQzB3dGExU1RNQ0tZWm5idlR2ek51QU9ISk44cF9PQlE?oc=5" target="_blank" title="【中国能源周】李庆峰：人工智能和新型电力系统“双向赋能” - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">【中国能源周】李庆峰：人工智能和新型电力系统“双向赋能” - 新浪财经</span><span class="src-meta">Google News AI · 7.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ESXRGaUNLZTBjVHpyWjdpUTJHaTAtOThha2JDY1VraEVKU05xRF9JVG9wWVlNbl9UeWFTX29HWFBBY3VXWi1GZk4xVTRxSGFjc1h6Y2plWWROVzQ?oc=5" target="_blank" title="19岁米拉·安德列娃法网女单夺冠，喜提280万欧元巨奖，为史上首位“05后”大满贯单打冠军 - 极目新闻"><span class="src-icon">🌍</span><span class="src-text">19岁米拉·安德列娃法网女单夺冠，喜提280万欧元巨奖，为史上首位“05后”大满贯单打冠军 - 极目新闻</span><span class="src-meta">Google News 全球 · 7.6h</span></a>
+<a class="src-item" href="https://su3.io/posts/introducing-zeroserve" target="_blank" title="Zeroserve: A zero-config web server you can script with eBPF"><span class="src-icon">🤖</span><span class="src-text">Zeroserve: A zero-config web server you can script with eBPF</span><span class="src-meta">Hacker News · 7.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1oWVlWYUthRHItR2VTX1Y4bWpmN2J3Smhzc203ejFxbm9DMkxlSVFpd19hVXQ2bGQ3TkRzS24zMTR2MFo0MmZnUG9QeHgxWUNIY3BzUTdZSjZlZTVuX0lSaENQcVBlQQ?oc=5" target="_blank" title="腾讯云首发“效率智能体工具集”，覆盖20多个垂直场景 汤道生：腾讯AI产品不是在“赛马” - 每日经济新闻"><span class="src-icon">🤖</span><span class="src-text">腾讯云首发“效率智能体工具集”，覆盖20多个垂直场景 汤道生：腾讯AI产品不是在“赛马” - 每日经济新闻</span><span class="src-meta">Google News AI · 7.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5QeTIwRGdES3B6b3dWczNjX0xaTFF3WDNSQnJrYXFKbDFxV2NaenZmOFZLOXI3M1hSWTRDd0xlOTRQNmhZSjFlV3lLS2o2VnJ2dlFR?oc=5" target="_blank" title="上海队时隔24年再夺CBA总冠军 - 搜狐网"><span class="src-icon">🌍</span><span class="src-text">上海队时隔24年再夺CBA总冠军 - 搜狐网</span><span class="src-meta">Google News 全球 · 7.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9ISXFVdzdha1BibGo1WUVKNFZSMjNPamlmbS1xYldJVTRTZkw3QVViM3VHV2kzTEdhSnZ5NU0yT2RzZS1Oemw2MThibHp0YTRoWXQwMlh4N1dDTFI0LXNaenlqVFg1YWhvcTI1bkJR?oc=5" target="_blank" title="宠智灵宠物AI大模型赋能宠物情感陪护，打造更懂宠物的智能体验 - 中华网"><span class="src-icon">🤖</span><span class="src-text">宠智灵宠物AI大模型赋能宠物情感陪护，打造更懂宠物的智能体验 - 中华网</span><span class="src-meta">Google News AI · 7.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ubl9GV0w3TEtEUlBVaFZXaFRwbVdiWlFUd0h4cC1uT1VCUmFIMzJiUi1jZmk5ZlgyOTZ5MEY5TkJUUWpKak44c0R1WmRlbUVCRzFCd25MQm5iWExyYmc?oc=5" target="_blank" title="车轮载温情 爱心助赶考——湘普大队湘潭分队暖心护航2026年湘潭高考 - 中华网"><span class="src-icon">🌍</span><span class="src-text">车轮载温情 爱心助赶考——湘普大队湘潭分队暖心护航2026年湘潭高考 - 中华网</span><span class="src-meta">Google News 全球 · 7.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi_AJBVV95cUxOWGdUdFdBS3JPaHE5TDY3eTl3NWY0RU50THhhYk9Nb01DMmxlMHBwczVENG5KSWY1Vmc4d0E0SDl2NmlkaExTOWFGRWVjdk1ZazlndFZudzc2QUkxa3VqQ05xbHVWN0RrWGNjWkctMzY5VUNvUjdBcUZDcEZJa1MxUENReUI1cmwzNG40UUhaOEFKVW92SHBMcTRoN1RFelJpM3dtOVpzY2xQVFFJeXdiN0tVV3FOcnowWk9FNzQzWENMVkdCM2FRN1hxc3E4WHlXbjFOdXNQVVBoYzl5RGdLNEZNUEYyb2lRem90OHVVZy1STG15QmcyMVl1V3I0eXFQV1d1ZEpreVlUQkJ4Y1BuZEVZQkJMN09QOHJzVXFqNXhFdm1ZaGJ4cS1zTVFzdUpxdUFZby1BYnNoQ1FMalE5MENVdlNHYmo4UURaS01HNjFBZTRtMlgycEhrTjJSREI5VmJpN1JJZmJmcXRKQlpnUkdzeDZFTHhYX2g4Ug?oc=5" target="_blank" title="腾讯聘前 OpenAI 研究员姚舜宇为首席 AI 科学家，发力通用人工智能 - Yellow.com"><span class="src-icon">🤖</span><span class="src-text">腾讯聘前 OpenAI 研究员姚舜宇为首席 AI 科学家，发力通用人工智能 - Yellow.com</span><span class="src-meta">Google News AI · 8.0h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5FZEh1M3FKUWtHTG5UelRLeGhJODBlWEZVbmUxVWFPR21EeTRhdEgxZldEc2RGWFBSMW1xS00xUE14dXJNaEZIajVnaEdCRnF2THctVGk4TGpnQXMwb1VFMk1BUzJ5Z1dyTTNB?oc=5" target="_blank" title="江苏高考天气地图来了，雷阵雨、雾气、高温轮番登场 - 新华报业网"><span class="src-icon">🌍</span><span class="src-text">江苏高考天气地图来了，雷阵雨、雾气、高温轮番登场 - 新华报业网</span><span class="src-meta">Google News 全球 · 8.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE82YjcxQ1lTN19ES3BVVkFNdGVFZFBYWG5yVVZqY1dYRVY5SnFCOUMyR0lXS1FnZ0ZRSGR3Nmt1UGFkU29ScnpmSmFSUWJmQURqTWltOC1xVEdVRHRvME1STVNhYW9LX0NISmc?oc=5" target="_blank" title="讲述新疆青年故事 电影《加油吧！娜依拉》上映 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">讲述新疆青年故事 电影《加油吧！娜依拉》上映 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 8.3h</span></a>
+<a class="src-item" href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/" target="_blank" title="Running Python code in a sandbox with MicroPython and WASM"><span class="src-icon">🤖</span><span class="src-text">Running Python code in a sandbox with MicroPython and WASM</span><span class="src-meta">Hacker News · 8.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9JS3l6UGFiVFY4VEdDaXBtbi1fS3QyVk1OaWNNNWNIb3daS2IxVHVsV1k0UEc2U2tpSTkxWVRqWVN5ZVEwQ1RHYzZKUGdCNzV6cnRMMjdYOA?oc=5" target="_blank" title="引爆世界模型浪潮，构筑“超高清视听+AI”全球引力场 - 上海科技报"><span class="src-icon">🤖</span><span class="src-text">引爆世界模型浪潮，构筑“超高清视听+AI”全球引力场 - 上海科技报</span><span class="src-meta">Google News AI · 8.5h</span></a>
+<a class="src-item" href="https://arxiv.org/abs/2606.05818" target="_blank" title="Benchmarks in Leipzig"><span class="src-icon">🤖</span><span class="src-text">Benchmarks in Leipzig</span><span class="src-meta">Hacker News · 8.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE8tZ1hEaG1FV2pzQ0UxYjE4NmY2V3k2TlJCR2ZHZjF2YkptY3BjQnp1bVZ5VXktMG5GNHlZX0M5eF9IMlI5Zmk5NFlhUlpMSkFRaEJtdFEyUS1pUWlUNUFCb2E4WWs?oc=5" target="_blank" title="工业AI为何落地难？场景识别、组织壁垒与回报率是关键挑战 - 财新"><span class="src-icon">🤖</span><span class="src-text">工业AI为何落地难？场景识别、组织壁垒与回报率是关键挑战 - 财新</span><span class="src-meta">Google News AI · 8.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOM09FRzcxOWh3emk0c3dhRXgwcVJpMVR2MUhvbTJ4MU5qR2E5SVFkTlljbnN2RjJWQjFXeUU4cTY0bHhWUUJPN0l2ZlFHTC1PRHZGQlU0LVEyTjQtZ3VVbHZtMklMRkJicHJCb2dtc3FEMnhVUEdvQ0Zwc0UzcUFuUEhjZWNBa3lNeUJEMFJoRXUxQnRr?oc=5" target="_blank" title="香港天文台在下午8时55分发出之有关黄色暴雨警告信号的特别报告： - 紫荆网"><span class="src-icon">🌍</span><span class="src-text">香港天文台在下午8时55分发出之有关黄色暴雨警告信号的特别报告： - 紫荆网</span><span class="src-meta">Google News 全球 · 8.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9feDhkUTAxMlZhbmRTQ0FONjdLZU9leHlBaWhiSU80TGZWdFQwMXFDQVdqN3pfaVA3TnZTekFwd3BFXzlKQnNKNw?oc=5" target="_blank" title="2026智源大会丨30+顶级芯片、软件、AI系统专家，汇聚“智算前沿”论坛 - 智源社区"><span class="src-icon">🤖</span><span class="src-text">2026智源大会丨30+顶级芯片、软件、AI系统专家，汇聚“智算前沿”论坛 - 智源社区</span><span class="src-meta">Google News AI · 9.0h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sWDc3cnhlNExSRllhdGlBZHkxVUt2U2FVWGl0dWFRb0lDazlfM0tNVFpkLTIwTXJHTTVmMGRpSFFCZlgyZmIyNkNPYmx0ZHBlU0VvdjAtaVhENXhMYmVsZ01R?oc=5" target="_blank" title="光谷人工智能创意技术研究院成立，多模态AI创意生产平台“爱乌”进入公测 - 长江网"><span class="src-icon">🤖</span><span class="src-text">光谷人工智能创意技术研究院成立，多模态AI创意生产平台“爱乌”进入公测 - 长江网</span><span class="src-meta">Google News AI · 9.6h</span></a>
+<a class="src-item" href="https://arxiv.org/abs/2605.00414" target="_blank" title="Trees to Flows and Back: Unifying Decision Trees and Diffusi"><span class="src-icon">🤖</span><span class="src-text">Trees to Flows and Back: Unifying Decision Trees and Diffusi</span><span class="src-meta">Hacker News · 9.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBfdzJuUlJkT1pXaTB1VTAyU0JMdnJlTFN3VFlMNElDelhWanNnVGxwV19qOFhQcnBGSmFMQjN0dUN1VnAtTFNaTHYyUW92T0RIdU9nUFhlWlctaHlNTDZidGMzNjNEU0VKWWd3M1AwWEkzOGh5NHNIVA?oc=5" target="_blank" title="香港推出首个生产力级超级智能体 - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">香港推出首个生产力级超级智能体 - 新浪财经</span><span class="src-meta">Google News AI · 9.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOS3ozTnppUmVKTDFXSGN6U1pWTXdXdXBqaC1rdHpxRk1IVUpNSDVoNzVsMzBaMlpvcHVnY1Bxa0l5Si03ODlUVXRjQVVZUGY0V2haNFA2bUFaQUZVV1NsWnlzRXZqNXFxTFZ6MDNUUUIzT0JEblpGTmQwaDRxMFFQbXhLb0hHVWJfU0x3WjhXSQ?oc=5" target="_blank" title="5月美国非农就业人数远超市场预期，特朗普呼吁美联储降息 - 21财经"><span class="src-icon">🌍</span><span class="src-text">5月美国非农就业人数远超市场预期，特朗普呼吁美联储降息 - 21财经</span><span class="src-meta">Google News 全球 · 9.7h</span></a>
+<a class="src-item" href="https://twitter.com/lemire/status/2062880075117113739" target="_blank" title="Nvidia is proposing a beast of a CPU system for Windows PCs"><span class="src-icon">🤖</span><span class="src-text">Nvidia is proposing a beast of a CPU system for Windows PCs</span><span class="src-meta">Hacker News · 9.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxORFdIempTeHR1ODdfQzJKc2JURFh4c0JFSlZuQmtVaVNsYUFRLTROZzJYblJINXNsOVdnMVlfaE1SRkdaNEFGRUFDOUZaeV9JSFh5V2dGTHBNNWNUVUwxbzU3clFZcVdHMGRxeV9IbTFFdTk1T1hWbzZNSG1EbDRjVkRHbTRkYWQ2TVpYTVo4eWs4WVFtM1pnWXNXWUhHVXpSVGpwSzNGQTRuMmhQVV9Yd0VUeXBHWXlnS0RVZUh6bldncWhRVnUzekNHYnl3eXBHeFdDQXJBLTJweEF1eDZ4UU1Oak14VkdLaVVXMGhFUXdTazJRWDg2ZTJrdU4?oc=5" target="_blank" title="AI应用即将爆发？ - 财富号"><span class="src-icon">🤖</span><span class="src-text">AI应用即将爆发？ - 财富号</span><span class="src-meta">Google News AI · 9.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBQaDBCazBkYWFjOWF0VHJfa0dCODN5cUZRZmF5T3hKa1c4XzFDWjZXbVd4UUQ2LVdKZ2luZWxQSExHZl9oNTJPUGhEcGZiZ1pFOFQ4?oc=5" target="_blank" title="实探2026 SNEC展会：储能不再只是配角，光伏洗牌或正接近尾声 - 第一财经"><span class="src-icon">🌍</span><span class="src-text">实探2026 SNEC展会：储能不再只是配角，光伏洗牌或正接近尾声 - 第一财经</span><span class="src-meta">Google News 全球 · 10.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBld0RTNHVtV1dWYTQ2M1VLZENFNkVuWkMzMm1CUU0zaWkyTlJRNndTMG1xQmYyalktRWM5cWRBekpqQ3VvdFR5dkRodw?oc=5" target="_blank" title="台湾岛东部海域海上交通专项执法行动启动 - 新浪财经"><span class="src-icon">🌍</span><span class="src-text">台湾岛东部海域海上交通专项执法行动启动 - 新浪财经</span><span class="src-meta">Google News 全球 · 10.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiWHFkMjRXMkU1T0ItQWJ4SU5wb19OT3V2M0d3VW84OS1sLUw1d0UzYnE5WUw4bEh0eC13ZzI2QzgtMmUzQ1BhZVJudFR1UVp6bm5udGJWcUludmlmVEE?oc=5" target="_blank" title="徽墨文化传承大剧《家业》收官，拉升安徽文旅热度 - 京报网"><span class="src-icon">🌍</span><span class="src-text">徽墨文化传承大剧《家业》收官，拉升安徽文旅热度 - 京报网</span><span class="src-meta">Google News 全球 · 10.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE03UE5SZGtEaVEzdHdsVFVPYVQzM2FPanR2Q1hVeEtlWks4QVdGME92N2I1QWdSN3lxYWpKT3h6a3NWSGUzTGc?oc=5" target="_blank" title="大厂Agent天团已就位！AI智能体时代年度盛会进展公布，同期自进化智能体研讨会嘉宾揭晓 - 智东西"><span class="src-icon">🤖</span><span class="src-text">大厂Agent天团已就位！AI智能体时代年度盛会进展公布，同期自进化智能体研讨会嘉宾揭晓 - 智东西</span><span class="src-meta">Google News AI · 11.3h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841563903740162?f=rss" target="_blank" title="蜂巢能源1-4月动力电池装车量同比增长37.2%，排名升至全球第九"><span class="src-icon">💼</span><span class="src-text">蜂巢能源1-4月动力电池装车量同比增长37.2%，排名升至全球第九</span><span class="src-meta">36氪 · 12.0h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9oMUtLdW42cUc0Q1Ftb2NaX2xxMU5hRWszMTVtR2d5M0xrSE9nZmM4Vm5rOXNCMTlIWDU2bUN2alp1STlobmhqVnJaTmhEeE54OVI4UFc4ajJ2M284VWpLSG5YTm9FQXZRdUs1OC1QUXVuZ0lYUWc?oc=5" target="_blank" title="习近平同老挝人民革命党中央总书记、国家主席通伦举行会谈 - 央广网"><span class="src-icon">🌍</span><span class="src-text">习近平同老挝人民革命党中央总书记、国家主席通伦举行会谈 - 央广网</span><span class="src-meta">Google News 全球 · 12.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFB3X0U0WUtyYnltbkpFM1p0MlRBWl9lalB0X0hOWWpiNld5U1E4Y0dTMWM1ZkI3TmFtVUpmYkRaQVdwU0ZZTFo3R2k1bXVwdWFGRFZ3?oc=5" target="_blank" title="AI泡沫破裂前兆？单日暴跌1.3万亿美元，费城半导体指数暴跌超10%！ - 电子工程专辑"><span class="src-icon">🌍</span><span class="src-text">AI泡沫破裂前兆？单日暴跌1.3万亿美元，费城半导体指数暴跌超10%！ - 电子工程专辑</span><span class="src-meta">Google News 全球 · 12.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841477677451778?f=rss" target="_blank" title="吴清：过去五年公募基金投资于先进制造和科创领域股票超过6万亿元"><span class="src-icon">💼</span><span class="src-text">吴清：过去五年公募基金投资于先进制造和科创领域股票超过6万亿元</span><span class="src-meta">36氪 · 13.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1rYThuV0V0RHl5cnkyaENVVXJJRVd3TURKN0xWLXQ1dHBuVzhjM09GZThsWVJCMUs5VzAwMVhZNUdQTUh5U3Rna0tFaFJ5VzZmWlN1bkhSNGxaOVpJOEdXbGFkWjBfbXVob3FRNnNRZTltamxqS0E?oc=5" target="_blank" title="一年“造”出上千个模型！这座工厂如何实现AI工业化量产？ - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">一年“造”出上千个模型！这座工厂如何实现AI工业化量产？ - 新浪财经</span><span class="src-meta">Google News AI · 13.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE10VjVldElNQWdFY1c2QnhvbVdOM2lMVERPZDRvT0lMNFJaX3Z6cDFZUVQtOTR6WmZoWHdDcnNTQVlDanAyWnhCejlveUlCLWNXekphZXdVX2p3Z3d2b015bTVrQWVoNmllbXBaOA?oc=5" target="_blank" title="“平台＋终端＋服务”全链条布局：元九体锚定政策导向深耕智慧健康领域 - 中华网"><span class="src-icon">🤖</span><span class="src-text">“平台＋终端＋服务”全链条布局：元九体锚定政策导向深耕智慧健康领域 - 中华网</span><span class="src-meta">Google News AI · 13.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841456953755913?f=rss" target="_blank" title="聚杰微纤：无尘面料市场需求持续旺盛 业务增长态势良好"><span class="src-icon">💼</span><span class="src-text">聚杰微纤：无尘面料市场需求持续旺盛 业务增长态势良好</span><span class="src-meta">36氪 · 13.8h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841455348746496?f=rss" target="_blank" title="特锐德：推出算力中心供电站“算电岛” Token成本可降低30%"><span class="src-icon">💼</span><span class="src-text">特锐德：推出算力中心供电站“算电岛” Token成本可降低30%</span><span class="src-meta">36氪 · 13.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5YRnpxT2U1VlB6alNzc0s5WVU3RlY0NUdkSDNTYXl3aG1lNFFkOHFhSE80UC12QURWVW1BZWoxRS1KR1pwOXR6b0ZZb3ZZWks4ajNmenE2Mkt4OEdONWdjZ0lybzF2ejA?oc=5" target="_blank" title="南方财经全媒体集团 - 南方财经"><span class="src-icon">🤖</span><span class="src-text">南方财经全媒体集团 - 南方财经</span><span class="src-meta">Google News AI · 13.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pTVgwS1FDN0VkR2t3anFQenlabGxNbU5hRU05UWlXelNjc3ljcWtWaE1ZcHljVWVjTlJfdUhrQmtQcjBIc2p1NjNnQmM0Zw?oc=5" target="_blank" title="315曝光AI大模型“投毒”黑产，39.9元篡改AI答案 - 36 Kr"><span class="src-icon">🤖</span><span class="src-text">315曝光AI大模型“投毒”黑产，39.9元篡改AI答案 - 36 Kr</span><span class="src-meta">Google News AI · 13.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841428159301893?f=rss" target="_blank" title="刘伟担任中基协新一届监事长"><span class="src-icon">💼</span><span class="src-text">刘伟担任中基协新一届监事长</span><span class="src-meta">36氪 · 14.3h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841423767603465?f=rss" target="_blank" title="2026年第二批医保参照药预沟通论证顺利实施"><span class="src-icon">💼</span><span class="src-text">2026年第二批医保参照药预沟通论证顺利实施</span><span class="src-meta">36氪 · 14.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841422772455689?f=rss" target="_blank" title="5日国际金价和银价显著下跌 全周均累计大幅下跌"><span class="src-icon">💼</span><span class="src-text">5日国际金价和银价显著下跌 全周均累计大幅下跌</span><span class="src-meta">36氪 · 14.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841419758192900?f=rss" target="_blank" title="尚太科技：原材料价格存在不同程度增长 公司多角度综合应对"><span class="src-icon">💼</span><span class="src-text">尚太科技：原材料价格存在不同程度增长 公司多角度综合应对</span><span class="src-meta">36氪 · 14.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNajN2dk05anZzSzdscklNWHctc0d3dVpRSk54S2hrUzRBbC1aRE9mckFwU1RrcW5xXzdzRWhySFl1Zk9xazMxRzZsOHhfUy00LWRwNFd0cUVNNFhkYkdrNTRWcnZkTEl1NzcyaVpRLW1ndE9kMFNPei1Yb2ppdmRWU2JYanhzOTlvTlB2bW1ZWU16a3BFUWxDQVp0OWRMWkpXZkx5N3k1aGlKYnUxaFFiZ1ZuUzZiU2hXT0QyUWVoemdrUUprSERTcXdBLUMtVXQ5X3BLT0puaTFuUW5NNlJUMi1BZFZ2WjMwaGc?oc=5" target="_blank" title="不止于工具革新，爱学如何打造面向未来的个性化学习伙伴？ - 新浪网"><span class="src-icon">🤖</span><span class="src-text">不止于工具革新，爱学如何打造面向未来的个性化学习伙伴？ - 新浪网</span><span class="src-meta">Google News AI · 14.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841417483995656?f=rss" target="_blank" title="易方达董事长刘晓艳担任中基协新一届理事会兼职会长"><span class="src-icon">💼</span><span class="src-text">易方达董事长刘晓艳担任中基协新一届理事会兼职会长</span><span class="src-meta">36氪 · 14.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBIcDNyQTFEMUF3MHRheDk0ZWF5WTl6ZVVrbEhDckZHWElncWl1SE1EM0ZKMkZOMUJ0ZkFsRTd3VmU2MVhlYmtjZ3dCMTB1MzVfMFotcGtjSWRVMUw5TjMtenRWWQ?oc=5" target="_blank" title="“侨批留韵・光影传心”—青岛市举办侨界主题观影活动 - chinaqw.com"><span class="src-icon">🌍</span><span class="src-text">“侨批留韵・光影传心”—青岛市举办侨界主题观影活动 - chinaqw.com</span><span class="src-meta">Google News 全球 · 14.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841373065791747?f=rss" target="_blank" title="富途老虎长桥之后，未被“点名”的华盛证券也将清理内地业务"><span class="src-icon">💼</span><span class="src-text">富途老虎长桥之后，未被“点名”的华盛证券也将清理内地业务</span><span class="src-meta">36氪 · 15.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841354006645248?f=rss" target="_blank" title="证监会主席吴清：坚决遏制概念炒作、复杂嵌套、过度投机、通道空转等伪创新、乱创新"><span class="src-icon">💼</span><span class="src-text">证监会主席吴清：坚决遏制概念炒作、复杂嵌套、过度投机、通道空转等伪创新、乱创新</span><span class="src-meta">36氪 · 15.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841347938388227?f=rss" target="_blank" title="证监会主席吴清：提升投资运作稳健性 努力为投资者创造更可持续的中长期收益"><span class="src-icon">💼</span><span class="src-text">证监会主席吴清：提升投资运作稳健性 努力为投资者创造更可持续的中长期收益</span><span class="src-meta">36氪 · 15.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841346737768712?f=rss" target="_blank" title="银之杰：“被立案调查”等传闻不实 公司已报案追究造谣者法律责任"><span class="src-icon">💼</span><span class="src-text">银之杰：“被立案调查”等传闻不实 公司已报案追究造谣者法律责任</span><span class="src-meta">36氪 · 15.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841345628424452?f=rss" target="_blank" title="证监会主席吴清：持续完善程序化交易监管的机制安排 坚决打击操纵市场、扰乱市场秩序等违法违规行为"><span class="src-icon">💼</span><span class="src-text">证监会主席吴清：持续完善程序化交易监管的机制安排 坚决打击操纵市场、扰乱市场秩序等违法违规行为</span><span class="src-meta">36氪 · 15.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5oU2U4cVYxdkJrQ3l5dGtBWTNNNUNGdkE1MzQ2NHJBaFF1Z1l6OEJ4NVY5VVZYSUJqUFNhbGJFbTVpdk92U1B4VEsxWHI3YUJPdWFZUk9yT3dzSzhfa3c0eQ?oc=5" target="_blank" title="上海“模速空间”：青春先锋，在AI浪潮中大显身手 - thepaper.cn"><span class="src-icon">🤖</span><span class="src-text">上海“模速空间”：青春先锋，在AI浪潮中大显身手 - thepaper.cn</span><span class="src-meta">Google News AI · 16.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiugJBVV95cUxNS0d6UjcyZVlvTTRRYmNzNzlzNDg2U0I0MVYxd1gyZHRRaUoydUNhYW9ocTAtX0hXcDFtNi1sTDZzckg4TXcza3BHUllmQS04VVNqVTV3VU9vN2NuTHphekZiakdBQldEVG9mU1pPcnkwU1o3VWwxajlNcmU3NFNCNmFKQjBGalRUbV91Y2lkVjF4anFKX2hYSVVQd2RKQXZTTDIwNlVLMFZPWml6b08tTXRIbEZfd3hFZEVjaHNqTjZwcjZZUnR0VS1yanNzbXNGUEF4ckpvQ3VKMl9mcjlHM1h2TmRrdEswUmN1blRFa00ySUhyODNvREI3YXl5ZHQyMzdNUU5pUnZROG0tbUh0ZWI1dUthRFJfWjM5RjFLWjg1RGRpVGdOXy11X19BTTJjV2RkYTZzWERfUQ?oc=5" target="_blank" title="高通宣布车端人工智能Claw生态计划，将智能体AI引入智能座舱 - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">高通宣布车端人工智能Claw生态计划，将智能体AI引入智能座舱 - 新浪财经</span><span class="src-meta">Google News AI · 16.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841294657964544?f=rss" target="_blank" title="安科生物：全球首款CD7 CAR-T儿童适应症一期临床启动"><span class="src-icon">💼</span><span class="src-text">安科生物：全球首款CD7 CAR-T儿童适应症一期临床启动</span><span class="src-meta">36氪 · 16.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841290346924552?f=rss" target="_blank" title="中国能建：科特迪瓦松贡372兆瓦燃机投资项目融资主协议签署"><span class="src-icon">💼</span><span class="src-text">中国能建：科特迪瓦松贡372兆瓦燃机投资项目融资主协议签署</span><span class="src-meta">36氪 · 16.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3841269285128711?f=rss" target="_blank" title="深圳科学家领衔发布亚洲首个合成细胞技术路线图"><span class="src-icon">💼</span><span class="src-text">深圳科学家领衔发布亚洲首个合成细胞技术路线图</span><span class="src-meta">36氪 · 17.0h</span></a>
+</aside>
+
+<main class="main">
+<div class="header">
+<h1>📰 晨间简报</h1>
+<p class="subtitle">2026年06月07日 周日</p>
+</div>
+
+<div class="tabs">
+<a class="tab active" href="#sec-🤖">🤖 AI 产业</a>
+<a class="tab" href="#sec-💼">💼 就业水温</a>
+<a class="tab" href="#sec-🌍">🌍 时事</a>
+<a class="tab" href="#" onclick="document.querySelector('.sidebar').classList.toggle('open');return false">📡 全部信源</a>
+</div>
+
+<div class="card" id="sec-"><div class="card-head">📌 </div><div class="card-body"><h1 class="page-title">📰 晨间简报 | 2026年06月07日 周日</h1></div></div>
+<div class="card" id="sec-🤖"><div class="card-head">🤖 🤖 AI 产业</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> 人工智能领域正在迎来一个新浪潮，全球各大科技公司纷纷推出新一轮人工智能产品和服务。同时，人工智能的应用也开始在各个行业得到广泛接受。</div>
+<div class="news-item"><div class="news-title">[Anthropic] — 特朗普禁令被绕过？Anthropic新模型魅力太大 美政府机构争相合作</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何在人工智能领域创造新颖的解决方案。</div>
+<div class="news-item"><div class="news-title">[Meta] — Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何防御人工智能相关的安全威胁。</div>
+<div class="news-item"><div class="news-title">[Nvidia] — Nvidia is proposing a beast of a CPU system for Windows PCs</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何设计和开发高性能计算机系统。</div>
+<div class="news-item"><div class="news-title">[Tencent] — 腾讯聘前 OpenAI 研究员姚舜宇为首席 AI 科学家，发力通用人工智能</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何在人工智能领域从业。</div>
+<div class="news-item"><div class="news-title">[Light] — 引爆世界模型浪潮，构筑“超高清视听+AI”全球引力场</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在视听领域。</div>
+<div class="news-item"><div class="news-title">[Ntsc-rs] — open-source video emulation of analog TV and VHS artifacts</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何开发人工智能相关的开源软件。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Zeroserve: A zero-config web server you can script with eBPF]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何开发人工智能相关的零配置网络服务器。</div>
+<div class="news-item"><div class="news-title">[Benchmarks in Leipzig]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何在人工智能领域进行基准测试。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用人工智能在决策树和扩散模型方面。</div>
+<div class="news-item"><div class="news-title">[Trees to Flows and Back: Unifying Decision Trees and Diffusion Models]</div>
+</div>
+<div class="news-insight">→ 启示: 学习如何应用</div></div></div>
+
+<div class="footer">
+⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-06-07 06:40
+</div>
+</main>
+
+<script>
+// tab 切换高亮
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  if(!this.getAttribute('onclick')) this.classList.add('active');
+}));
+</script>
+</body>
+</html>
