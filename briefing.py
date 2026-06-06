@@ -97,24 +97,22 @@ def compose_all(items, config, date_str):
 ===
 
 🤖 AI 产业
-**一句话趋势:** (今天AI领域核心事件)
+**趋势:** (一段话描述今天AI领域整体动向，2-3句，不要压缩成一句)
 
-**一句话:** (本条新闻一句话概括)
 · 具体事件 — 数据/细节
   → 启示: (对学生可操作建议)
 
-(每条4行,最多6条)
+(每条3行,最多6条)
 
 ===
 
 💼 就业水温
-**一句话水温:** (就业市场核心信号)
+**趋势:** (一段话描述今天就业市场整体信号，2-3句)
 
-**一句话:** (本条新闻一句话概括)
 · 具体事件 — 细节
   → 启示: (对学生可操作建议)
 
-(每条4行,最多5条)
+(每条3行,最多5条)
 
 ===
 📊 {len(items)}条 · HN/V2EX/36氪/Google News
@@ -215,10 +213,8 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
                 card_open = True
 
             # render line
-            if stripped.startswith("**一句话趋势") or stripped.startswith("**一句话水温"):
-                buf.append(f'<div class="one-liner">{_md_inline(stripped)}</div>')
-            elif stripped.startswith("**一句话:"):
-                buf.append(f'<div class="news-summary">{_md_inline(stripped)}</div>')
+            if stripped.startswith("**趋势"):
+                buf.append(f'<div class="trend-box">{_md_inline(stripped)}</div>')
             elif stripped.startswith("  → 启示") or stripped.startswith("→ 启示"):
                 buf.append(f'<div class="news-insight">{_md_inline(stripped.strip())}</div>')
             elif stripped.startswith("· "):
@@ -308,6 +304,7 @@ body{{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backg
 
 /* 一句话 */
 .one-liner{{background:linear-gradient(135deg,#f0f4ff,#ede7f6);border-radius:8px;padding:10px 16px;margin:10px 0;font-weight:600;font-size:.95em;border-left:3px solid var(--accent)}}
+.trend-box{{background:linear-gradient(135deg,#f3e5f5,#ede7f6);border-radius:10px;padding:14px 18px;margin:12px 0;font-size:.94em;line-height:1.7;border-left:4px solid var(--accent2)}}
 
 /* 新闻条目 */
 .news-item{{border-bottom:1px solid #eee;padding:14px 0}}
