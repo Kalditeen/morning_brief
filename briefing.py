@@ -24,6 +24,7 @@ DAILY_SOURCES = [
     {"name":"36氪","url":"https://36kr.com/feed","cat":"job"},
     {"name":"Google News AI","url":"https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+AI+%E5%A4%A7%E6%A8%A1%E5%9E%8B+when:24h&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","cat":"ai"},
     {"name":"Google News 就业","url":"https://news.google.com/rss/search?q=%E4%BA%92%E8%81%94%E7%BD%91+%E6%8B%9B%E8%81%98+%E8%A3%81%E5%91%98+%E9%9D%A2%E7%BB%8F+%E7%A8%8B%E5%BA%8F%E5%91%98+%E5%B0%B1%E4%B8%9A&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","cat":"job"},
+    {"name":"Google News 全球","url":"https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans","cat":"world"},
 ]
 
 FRIDAY_SOURCES = [
@@ -112,16 +113,26 @@ def compose_all(items, config, date_str):
 · 具体事件 — 细节
   → 启示: (对学生可操作建议)
 
+(每条3行,最多4条)
+
+===
+
+🌍 时事
+**趋势:** (一段话概括过去24小时全球最重要的2-3件事)
+
+· 具体事件 — 关键细节
+  → 影响: (对学生/普通人的影响或关注点)
+
 (每条3行,最多5条)
 
 ===
 📊 {len(items)}条 · HN/V2EX/36氪/Google News
 
-禁止「学习XX是必备技能」废话。启示必须具体可操作。1600字内。"""
+禁止「学习XX是必备技能」废话。启示必须具体可操作。时事板块影响要具体。2000字内。"""
     resp = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role":"system","content":prompt},{"role":"user","content":f"新闻:\n\n{news_text}"}],
-        temperature=0.7,max_tokens=2800,
+        temperature=0.7,max_tokens=3200,
     )
     return resp.choices[0].message.content
 
@@ -169,7 +180,7 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
     def render_sidebar():
         rows = []
         for it in all_for_sidebar:
-            cat_icon = {"ai":"🤖","job":"💼","academic":"📄","baoyan":"🏫"}.get(it["cat"],"📌")
+            cat_icon = {"ai":"🤖","job":"💼","world":"🌍","academic":"📄","baoyan":"🏫"}.get(it["cat"],"📌")
             link = html_mod.escape(it.get("link","#"))
             t = html_mod.escape(it["title"][:60])
             src = html_mod.escape(it["source"])
@@ -209,7 +220,7 @@ def build_page(md: str, items: list, date_str: str, title: str, is_special: bool
                 continue
             # detect next section
             if stripped and not stripped.startswith("·") and not stripped.startswith(">") and not stripped.startswith("**") and not stripped.startswith("-") and not stripped.startswith("📊") and not stripped.startswith("📰"):
-                if any(kw in stripped for kw in ["🤖","💼","📄","🏫","🎓"]):
+                if any(kw in stripped for kw in ["🤖","💼","🌍","📄","🏫","🎓"]):
                     flush_card()
                     current_section = stripped
                     card_open = True
@@ -357,6 +368,7 @@ blockquote{{border-left:3px solid var(--accent);padding:8px 16px;margin:12px 0;b
 <div class="tabs">
 <a class="tab active" href="#sec-🤖">🤖 AI 产业</a>
 <a class="tab" href="#sec-💼">💼 就业水温</a>
+<a class="tab" href="#sec-🌍">🌍 时事</a>
 <a class="tab" href="#" onclick="document.querySelector('.sidebar').classList.toggle('open');return false">📡 全部信源</a>
 </div>
 
