@@ -131,7 +131,7 @@ def compose_all(items, config, date_str):
 ===
 📊 {len(items)}条 · HN/V2EX/36氪/Google News
 
-⚠️ 上述示例仅示范格式，全部替换为真实新闻。禁止输出示例本身。每条必须含具体名称/数据。2000字内。"""
+⚠️ 上述示例仅示范格式，全部替换为真实新闻。禁止输出示例本身。每条必须含具体名称/数据。所有英文标题和内容翻译为中文后展示。2000字内。"""
     resp = client.chat.completions.create(
         model=config["openai_model"],
         messages=[{"role":"system","content":prompt},{"role":"user","content":f"新闻:\n\n{news_text}"}],
