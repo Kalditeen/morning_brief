@@ -396,9 +396,9 @@ def extract_summary(md: str) -> str:
         s = line.strip()
         if s.startswith("📰") or s.startswith("#"):
             lines.append(s.replace("# ","").replace("## ",""))
-        elif s.startswith("**一句话"):
-            lines.append(s)
-        if len(lines) >= 4: break
+        elif s.startswith("**趋势") or s.startswith("**一句话"):
+            lines.append(s[:120])
+        if len(lines) >= 5: break
     return "\n".join(lines) if lines else md[:200]
 
 
@@ -408,11 +408,21 @@ def send_wechat(md: str, webhook: str, label: str):
         md = md[:len(md)-80]
     payload = json.dumps({"msgtype":"markdown","markdown":{"content":md}}).encode()
     req = urllib.request.Request(webhook,data=payload,headers={"Content-Type":"application/json"},method="POST")
-    with urllib.request.urlopen(req,timeout=15) as resp:
-        r = json.loads(resp.read())
-        if r.get("errcode")!=0:
-            raise RuntimeError(f"推送失败:{r}")
-    print(f"✅ {label} 已推送")
+    last_err = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req,timeout=30) as resp:
+                r = json.loads(resp.read())
+                if r.get("errcode")!=0:
+                    raise RuntimeError(f"推送失败:{r}")
+                print(f"✅ {label} 已推送")
+                return
+        except Exception as e:
+            last_err = e
+            if attempt < 2:
+                print(f"   ⚠️ 第{attempt+1}次失败，{3-attempt-1}秒后重试…")
+                time.sleep(3)
+    raise RuntimeError(f"推送失败(重试3次): {last_err}")
 
 
 def commit_and_push(docs_dir: str):
