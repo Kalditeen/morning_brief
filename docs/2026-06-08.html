@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="📰 晨间简报 | 2026年06月08日 周一">
+<meta property="og:description" content="📰 晨间简报 | 2026年06月08日 周一
+**趋势:** AI领域正朝着更强大的方向发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。
+**趋势:** AI领域的就业市场正在朝着更强大的方向发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。
+**趋势:** 今天的全球新闻主要涉及到AI领域的发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。">
+<meta property="og:type" content="article">
+<title>晨间简报 | 2026年06月08日 周一</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff;--pred-bg:#fef9e7;--sidebar-w:280px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;display:flex;min-height:100vh}
+
+/* 侧边栏 */
+.sidebar{width:var(--sidebar-w);background:#1e1e2e;color:#ccc;position:fixed;top:0;left:0;bottom:0;overflow-y:auto;z-index:100;padding:16px 0;font-size:0.82em;transition:transform .25s}
+.sidebar h2{color:#fff;font-size:1em;padding:0 16px 10px;border-bottom:1px solid #333;margin-bottom:8px}
+.sidebar-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--accent);color:#fff;border:none;width:36px;height:36px;border-radius:8px;font-size:1.2em;cursor:pointer}
+.src-item{display:flex;align-items:flex-start;gap:8px;padding:6px 16px;text-decoration:none;color:#b0b0c0;border-left:2px solid transparent;transition:.15s}
+.src-item:hover,.src-item:focus{background:#2a2a3e;color:#fff;border-left-color:var(--accent)}
+.src-icon{flex-shrink:0;font-size:1em}
+.src-text{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-meta{flex-shrink:0;font-size:0.75em;color:#666}
+
+/* 主内容 */
+.main{margin-left:var(--sidebar-w);flex:1;padding:32px 40px 60px;max-width:860px}
+
+/* 顶部 header */
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:32px 36px;border-radius:16px;margin-bottom:28px;box-shadow:0 6px 24px rgba(102,126,234,.3)}
+.header h1{font-size:1.5em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.85;margin-top:6px}
+
+/* 标签导航 */
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:8px 18px;border-radius:20px;border:none;background:#fff;color:var(--text);font-size:.88em;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:.2s;text-decoration:none}
+.tab:hover,.tab.active{background:var(--accent);color:#fff}
+
+/* 卡片 */
+.card{background:var(--card);border-radius:14px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card-head{font-size:1.1em;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #667eea18;color:var(--accent)}
+.card-body p{margin:6px 0;font-size:.94em}
+
+/* 一句话 */
+.one-liner{background:linear-gradient(135deg,#f0f4ff,#ede7f6);border-radius:8px;padding:10px 16px;margin:10px 0;font-weight:600;font-size:.95em;border-left:3px solid var(--accent)}
+.trend-box{background:linear-gradient(135deg,#f3e5f5,#ede7f6);border-radius:10px;padding:14px 18px;margin:12px 0;font-size:.94em;line-height:1.7;border-left:4px solid var(--accent2)}
+
+/* 新闻条目 */
+.news-item{border-bottom:1px solid #eee;padding:14px 0}
+.news-item:last-child{border-bottom:none}
+.news-title{font-weight:700;font-size:1.02em;margin-bottom:6px;line-height:1.5}
+.news-ai{background:var(--ai-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em}
+.news-pred{background:var(--pred-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em;border-left:3px solid #f0b90b}
+.news-summary{font-weight:600;font-size:1em;margin:8px 0 4px;color:var(--accent)}
+.news-insight{padding-left:14px;margin:3px 0;font-size:.9em;color:#555;border-left:3px solid #90caf9}
+.label{font-weight:700;font-size:.85em;margin-right:4px}
+
+.page-title{font-size:1.3em;margin:10px 0}
+.stats-bar{color:var(--muted);font-size:.85em;text-align:center;padding:10px}
+blockquote{border-left:3px solid var(--accent);padding:8px 16px;margin:12px 0;background:#f8f9ff;border-radius:0 8px 8px 0;font-size:.92em}
+
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:32px;padding-top:18px;border-top:1px solid #e0e0e0}
+.footer a{color:var(--accent)}
+
+/* 响应式 */
+@media(max-width:768px){
+.sidebar{transform:translateX(-100%)}
+.sidebar.open{transform:translateX(0)}
+.sidebar-toggle{display:block}
+.main{margin-left:0;padding:20px 16px 40px}
+.header{padding:22px 20px}
+.card{padding:16px}
+}
+</style>
+</head>
+<body class="">
+<button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<aside class="sidebar">
+<h2>📡 信息源 (80条)</h2>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOYnFCTHc0OFRHUmtoVDBLaFF0eXgyRW52WXViUC1WVkZ2Q1BoaWZnb0wyYVYzWUpqTEFfNFR4MEV0Z1EwSElGTFhHY1FmSlN6UGtvZkdQdGFrZzU5cktGVjNPdUNUWmJkTEVrTE1MWHR0czNpazhVWGxsb3QwRG44LVVIOHVIcWo4VjlqZXRRUQ?oc=5" target="_blank" title="如何避免AI大模型“顺着你说”？专家支招 - 21财经"><span class="src-icon">🤖</span><span class="src-text">如何避免AI大模型“顺着你说”？专家支招 - 21财经</span><span class="src-meta">Google News AI · 0.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMmxIVHkydEI2WTNlZzdxSjFweFJOSFlpaE5tZnNfbVVzMjRTQ2s4SE1RSDhGMjB4ODBGclNnd25HVkdXbGNLaHc1ZEtYZEV5aUVzdEdTU2xyMDdUQ09OZWF1RVpLdEdhdXRTVGNOQlMtVUtOaFZPVW5jc3NGU3pLX1ZBc0xBUmpDOW5kNDFqUXhpaUpZN2FLVWl3TlR6RW9KOGFNUE9MWjIyaE1ELXhVRlpSTEF4Q0NxZlZBNG5sV09PcGRReF9QcllsWUhBMVZrUV82eFBiTnM?oc=5" target="_blank" title="“All in AI”再升级！中国工业第一区，深圳龙岗剑指“AI强区”|深圳市龙岗区|月之暗面|DeepSeek|智能体"><span class="src-icon">🤖</span><span class="src-text">“All in AI”再升级！中国工业第一区，深圳龙岗剑指“AI强区”|深圳市龙岗区|月之暗面|DeepSeek|智能体</span><span class="src-meta">Google News AI · 0.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE82RjB4Zm1wcHpDemlERXFiSTkzMXNhZGdiSkJSTG43R29JN19CblFOc1NwTUQtWkJYTlVLTzhkSDBaR3pmbGpJRlZzQ1UtanhRNFlTbm8tYllrVW1QWVRDSXJsMW9xNjJiRV9zbTB3?oc=5" target="_blank" title="海洋强国建设风帆正劲--经济·科技 - 人民网财经"><span class="src-icon">🌍</span><span class="src-text">海洋强国建设风帆正劲--经济·科技 - 人民网财经</span><span class="src-meta">Google News 全球 · 0.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5DazJOWExkaDh2X2NIeHBsR2gxbGE4WFpFSmQwalMzTVlrcXczRnlRcjJGeUljMXN1b2Vlek5DS0NvLTJkZjZuWDBtT3JGRlE1VEViVjBHTVpHNWloOHI2anZJRDEwZDJo?oc=5" target="_blank" title="“学馆”里飞出“金凤凰”（感知文化里的中国） - 人民网"><span class="src-icon">🌍</span><span class="src-text">“学馆”里飞出“金凤凰”（感知文化里的中国） - 人民网</span><span class="src-meta">Google News 全球 · 0.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9mc25NZy0tQmlpVGlxM0NRRGxvTzR3cEN0M0Q4ZTVqTV9MZUVYbk9xOFdfMmlhaWxOQVhtOXNSblNUYzBMWlgtaUV1dHdRdUZ1TENHN3hDcW5WX2ZMOHN0dUR0MG5kYVVYb3dtc0Jn?oc=5" target="_blank" title="2026北京国际文旅消费博览会闭幕--经济·科技 - 人民网财经"><span class="src-icon">🌍</span><span class="src-text">2026北京国际文旅消费博览会闭幕--经济·科技 - 人民网财经</span><span class="src-meta">Google News 全球 · 0.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBXX05DWjFMcWtpc2V3dFo4T3BrR1d0WDl1eHl4akRBUjltd290aGFFM0EzM2hFT2pKUzNZY1NhOGttZ1I0SXdHOVJfcUE3VUluc1phaHZ1VFgzZDRaZDN3a3VfVHpxdw?oc=5" target="_blank" title="时隔两月，伊朗再袭以色列！以军：准备强力打击；央行连续第19个月增持黄金；ChatGPT将转型；英伟达+SK集团今日宣布"><span class="src-icon">🌍</span><span class="src-text">时隔两月，伊朗再袭以色列！以军：准备强力打击；央行连续第19个月增持黄金；ChatGPT将转型；英伟达+SK集团今日宣布</span><span class="src-meta">Google News 全球 · 1.0h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9FZ3J5WWVWb3ZmU1gtTnNjVVRWdWM1ZnpsUUhxZG9XU2k5UnBVekZsaURCaUViSTRuaHBZZWdURXI1MnczZ3QtLQ?oc=5" target="_blank" title="打破AI烧钱魔咒！Anthropic销售额暴增 有望迎来首个季度盈利 - 财联社"><span class="src-icon">🤖</span><span class="src-text">打破AI烧钱魔咒！Anthropic销售额暴增 有望迎来首个季度盈利 - 财联社</span><span class="src-meta">Google News AI · 1.1h</span></a>
+<a class="src-item" href="https://vibeos.sh/" target="_blank" title="VibeOS: First ever AI-native operating system"><span class="src-icon">🤖</span><span class="src-text">VibeOS: First ever AI-native operating system</span><span class="src-meta">Hacker News · 1.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMisgNBVV95cUxPVjBOUWkyUFkwbDk0ZTBCbXU5MlRqNzhXTUJTT0dQSEJQS3ZDTEtSaDlwbkk5UWRCTjc3UGd1SVJ0Tzl4OVZycW1ETEd3V3ZzeEFhbXQtNGhETW95ZkRpTzlzRldpRHJ5Zm1zTlFyTlpzTWpXV2k2LVRsbzV0S1h5Q2ZLTEVUQ19DUkN3djlEbngzN0REOHVyUWZCY2pmbU41NnlfRHR1dUU3dFFpbmR4dU9BNnpjaGFtSzZLMVZfeVZEbFFocTRQQ3p1NnpuTUVDUFExQ0VmX2dZRTlkQ0JhQlRqZzZCcWFDVjdEQW5QTmZvWVktcXE5TDJEbXhNVGZ3eDNHcUJwRFF0cjdrdDBJcXVmTzBlQ3FmUndsMXdQUFZXMzhBZ3dPQmZZYUJsRkhMa2lfaWFYTHVqaTRiaXlPLUNfZzVQMXFETWcxel9fQXZKNnJXRGJzVXhrOXpUNkluRHBNMjdtNWN3QXFPRWhSUjlEQm1MWV9wbl8tOWxBTEFpakIxM0QxNnd3UklHT085RWNZeDBjSDBWSUs5bDFJdzNtSVlpLTE5SXVGbWthdHZndw?oc=5" target="_blank" title="特朗普拒绝提前解冻伊朗资产 呼吁以色列对真主党实施“精准打击” - RFI"><span class="src-icon">🌍</span><span class="src-text">特朗普拒绝提前解冻伊朗资产 呼吁以色列对真主党实施“精准打击” - RFI</span><span class="src-meta">Google News 全球 · 1.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNU0tuN0NQb3NOVDdDRElGX0drZmpnZmI4Tk4xVGtMUmtrUVdrZnhUckhNbll3N0xQOXhqRXh3dHBlZ092blZ3enYwTFo5NUpGc0hZSE5tOVFzOUJIQ2VoMHNfcVlMVlloQ0x0RE00WDVETlAyWEJZVkhBVzZMc2FnN0lHMDRLZw?oc=5" target="_blank" title="AI应用第一省炼成记：“华为场景”激活“赛博广东” - 21财经"><span class="src-icon">🤖</span><span class="src-text">AI应用第一省炼成记：“华为场景”激活“赛博广东” - 21财经</span><span class="src-meta">Google News AI · 1.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPZ0VsQTd2b3dUc080Mk9seHFPS3JQOUZ1M3FZbW9rYzJOcHZDaEVVVkRCblB0ZWEwVXluVlEtaU9Za04yekh3NXpmQTIzeGpJUmRqa29PWXcxX3lESW9vT05PczJUZk5jVW1IR3FJbC12Nkt3d2gxSXZsT21iVEd1VHlDSC1SNTRFWC0xcw?oc=5" target="_blank" title="《四渡》再现长征首捷传奇 - 搜狐网"><span class="src-icon">🌍</span><span class="src-text">《四渡》再现长征首捷传奇 - 搜狐网</span><span class="src-meta">Google News 全球 · 1.9h</span></a>
+<a class="src-item" href="https://www.science.org/doi/10.1126/science.aei2409" target="_blank" title="The architecture of the internet creates risks for democracy"><span class="src-icon">🤖</span><span class="src-text">The architecture of the internet creates risks for democracy</span><span class="src-meta">Hacker News · 2.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5iS0ZCblZDYTVNQzV0cjZxVXJ3RHQ1S1FScHFrejNVcDlRQ19hZkZhOHR2N21lSDNJTW1WYktXTW9yWEdIeWk3RHZrVmZZelhFVVVPTENMTkw2NGxJQ2N3dg?oc=5" target="_blank" title="伊朗革命卫队称对以色列空军基地发动导弹袭击 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">伊朗革命卫队称对以色列空军基地发动导弹袭击 - 东方财富</span><span class="src-meta">Google News 全球 · 2.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOM0RKUzNvOEs3VDhPcmVJT1hUWkVRcEpla1NIUkFBTjI0Q0RWODBibzJua0ViZ3Npd2Z1cl9NV1JZaXVGZWk0c2p5LS1lbWRCQ1FSeEdMX0pJS250SV91eFBWbjVsV3RRREhQUzlJQVRPdzVwMXdvWGxYTkczVWlFRWVqbHk5WndaaVcwOWtYSGJ0VzJn?oc=5" target="_blank" title="香港天文台在上午3时50分发出之有关黄色暴雨警告信号的特别报告： - 紫荆网"><span class="src-icon">🌍</span><span class="src-text">香港天文台在上午3时50分发出之有关黄色暴雨警告信号的特别报告： - 紫荆网</span><span class="src-meta">Google News 全球 · 2.7h</span></a>
+<a class="src-item" href="https://www.natesilver.net/p/why-isnt-the-us-better-at-soccer" target="_blank" title="Why isn&#x27;t the U.S. better at soccer?"><span class="src-icon">🤖</span><span class="src-text">Why isn&#x27;t the U.S. better at soccer?</span><span class="src-meta">Hacker News · 3.0h</span></a>
+<a class="src-item" href="https://performance.dev/how-is-linear-so-fast-a-technical-breakdown" target="_blank" title="How&#x27;s Linear so fast? A technical breakdown"><span class="src-icon">🤖</span><span class="src-text">How&#x27;s Linear so fast? A technical breakdown</span><span class="src-meta">Hacker News · 3.6h</span></a>
+<a class="src-item" href="https://arxiv.org/abs/2605.31514" target="_blank" title="If LLMs Have Human-Like Attributes, Then So Does Age of Empi"><span class="src-icon">🤖</span><span class="src-text">If LLMs Have Human-Like Attributes, Then So Does Age of Empi</span><span class="src-meta">Hacker News · 3.8h</span></a>
+<a class="src-item" href="https://gavinray97.github.io/blog/building-from-zero-after-addiction-prison-felony" target="_blank" title="Building from zero after addiction, prison, and a felony"><span class="src-icon">🤖</span><span class="src-text">Building from zero after addiction, prison, and a felony</span><span class="src-meta">Hacker News · 4.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBIZFlkb1dtR0hqUkJ4ZWtYdDJTOFl5TkxjdkEwMEVTMjAtM1o5Q2I4Z2lmLWJnZ2V3WUJZalZZU3BfZTZkOGhESUxFams2SlozcnF1czkzdEdHM2tSUzlnVDFVbWxMZkNqMW51Sl93?oc=5" target="_blank" title="美国5月非农数据“爆表” 美联储加息预期重燃 - 上海证券报电子版"><span class="src-icon">🌍</span><span class="src-text">美国5月非农数据“爆表” 美联储加息预期重燃 - 上海证券报电子版</span><span class="src-meta">Google News 全球 · 4.2h</span></a>
+<a class="src-item" href="https://www.alexself.dev/blog/automated-doubt" target="_blank" title="My automated doubt development process"><span class="src-icon">🤖</span><span class="src-text">My automated doubt development process</span><span class="src-meta">Hacker News · 4.4h</span></a>
+<a class="src-item" href="https://nik.art/making-peace-with-your-unlived-dreams/" target="_blank" title="Making peace with your unlived dreams (2023)"><span class="src-icon">🤖</span><span class="src-text">Making peace with your unlived dreams (2023)</span><span class="src-meta">Hacker News · 4.4h</span></a>
+<a class="src-item" href="https://worldip.io/" target="_blank" title="The complete IPv4 address space, mapped"><span class="src-icon">🤖</span><span class="src-text">The complete IPv4 address space, mapped</span><span class="src-meta">Hacker News · 4.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1lMWFUZmM2ZnBFUkxkOGducWtFc2RzVUpXZVFjckVPbjQwLU51ZWtGRE5GQnBtcDhwZi1mMTJXdVgtQUhMOWliMlVrcw?oc=5" target="_blank" title="热烈欢迎习近平总书记 平壤飘扬中朝国旗 - 新浪财经"><span class="src-icon">🌍</span><span class="src-text">热烈欢迎习近平总书记 平壤飘扬中朝国旗 - 新浪财经</span><span class="src-meta">Google News 全球 · 4.8h</span></a>
+<a class="src-item" href="https://github.com/yukiyokotani/office-open-xml-viewer" target="_blank" title="Silurus/ooxml: Pixel-faithful Office documents, rendered in "><span class="src-icon">🤖</span><span class="src-text">Silurus/ooxml: Pixel-faithful Office documents, rendered in </span><span class="src-meta">Hacker News · 5.3h</span></a>
+<a class="src-item" href="https://www.righto.com/2026/06/ibm-604-thyraton-tube-module.html" target="_blank" title="Powering up a module from the IBM 604: an electronic calcula"><span class="src-icon">🤖</span><span class="src-text">Powering up a module from the IBM 604: an electronic calcula</span><span class="src-meta">Hacker News · 5.4h</span></a>
+<a class="src-item" href="https://www.ycombinator.com/companies/proliferate/jobs/L3copvK-founding-engineer" target="_blank" title="Proliferate (YC S25) is hiring to building open source Codex"><span class="src-icon">🤖</span><span class="src-text">Proliferate (YC S25) is hiring to building open source Codex</span><span class="src-meta">Hacker News · 5.7h</span></a>
+<a class="src-item" href="https://nlkw.de/en/blog/getting-fried-part-1-cogentiv/" target="_blank" title="The week I lost the plot at a startup where the tools worked"><span class="src-icon">🤖</span><span class="src-text">The week I lost the plot at a startup where the tools worked</span><span class="src-meta">Hacker News · 6.1h</span></a>
+<a class="src-item" href="https://www.bbc.com/news/articles/c8e8e7g0r82o" target="_blank" title="The gamers taking on the industry to stop it switching off g"><span class="src-icon">🤖</span><span class="src-text">The gamers taking on the industry to stop it switching off g</span><span class="src-meta">Hacker News · 6.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE90SmlTVnQtZXNHcDRDSFNPV0dHaWJsTVdOY2ZYaXdmVlNtenpTbEJqQjByNmE4Z0ZUTTY2S2ZQcGFXdnZDT3gyMGZ4cGJ3RGJuT2NJdXNfVHFzaFUzNUk0SA?oc=5" target="_blank" title="沙停火谈判重启 哈马斯移交管理权成谈判重点 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">沙停火谈判重启 哈马斯移交管理权成谈判重点 - 东方财富</span><span class="src-meta">Google News 全球 · 6.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5QSUw4MW5OUURxdzBrTjJ2aXFOZ2c4MklTZHhodTBVR2hwRHk3aDlSSmNJRzVESnVzeGdZZlloSW83Rmp1cXY1SlZKd1BfQ0lYTkNjVGxEdk5Nb2dxTVRELTh1ZkdKYTdSd0hIMnk1UHRkbzIyNVE4YjBHWnZ1T00?oc=5" target="_blank" title="青春逐梦 聚力护航——2026年高考首日见闻 - 新华网"><span class="src-icon">🌍</span><span class="src-text">青春逐梦 聚力护航——2026年高考首日见闻 - 新华网</span><span class="src-meta">Google News 全球 · 6.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pUFdjTHRFN05mN1Y5a2lnQ1Y5cnRBUjg0QmdlSEtxNmZEdHI1eWJ4dm9VYkZydmJYYm9ocnBVZUFqSzNVZmNFbV9ZVEh5aEpxUHgtNzFNMVJNWEkxMFdiWDZaVQ?oc=5" target="_blank" title="广州天河红棉老兵开展2026年高考护航行动 - 羊城晚报"><span class="src-icon">🌍</span><span class="src-text">广州天河红棉老兵开展2026年高考护航行动 - 羊城晚报</span><span class="src-meta">Google News 全球 · 7.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5EcHd4dFRkMzlUcWdyZnctY1FwWE1TLTlreUVhZHZERHVTSGVHTnR4akFiSXZVMUxETnlHekh2bXZaU0pzY1VPS2gzc3M?oc=5" target="_blank" title="英伟达 CEO 黄仁勋明日会见三星电子副会长全永铉，HBM、机器人合作计划成焦点 - IT之家"><span class="src-icon">🌍</span><span class="src-text">英伟达 CEO 黄仁勋明日会见三星电子副会长全永铉，HBM、机器人合作计划成焦点 - IT之家</span><span class="src-meta">Google News 全球 · 7.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRmt6V1NRRE1OdDJIYlJ6ejZKOHRYdndSRUJiMzF1d3FCNC1TY3ptcEJJS0NlZTFpTlNOdlpCWGJoRXBMc1p1Zk1kYjR6aDQ5TTBNaXBHM2VsNHJBRmF3RndzbFdRRE5TdENsUXUxblRWeVVWcC1FYXItR000QjVyb2lORHRRVWxJ?oc=5" target="_blank" title="金博洋回应未来规划 透露最近喜欢打网球 - 搜狐网"><span class="src-icon">🌍</span><span class="src-text">金博洋回应未来规划 透露最近喜欢打网球 - 搜狐网</span><span class="src-meta">Google News 全球 · 7.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lRk1RZHlTakw1N1A5V0h3bHRHb202blhRYlZuX1ZKWVcyN1RvYWpuSmN2aFRsQVZfUVBIcDBpM2ZmSjZROVZaVEhaal8ySjZYZzRCUzJoMG5Qa1EyTU5nNms2d2ZpLTYz?oc=5" target="_blank" title="奥运冠军郑姝音谈成长：学会坚持、相信团队、拥抱运动 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">奥运冠军郑姝音谈成长：学会坚持、相信团队、拥抱运动 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 7.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa05TRnlvaHRqLWNjUFJ2NHBuNnhpZ0Roek1FRVNVYklLdmlzZEd4SV9RU3AzWndqZ0lLYXNHNFlWSTdTSTdGa0tBSzlkVWJwOTM1VzhMOVhOUUpJS3JELXVaSHMxak1ObVloNEVCMnlsWkpWTVZBT3E0UnhIMXpWd0VVazBuZWoz?oc=5" target="_blank" title="AI眼镜国补政策落地 华强北多家门店成交量增长七成 - 搜狐网"><span class="src-icon">🤖</span><span class="src-text">AI眼镜国补政策落地 华强北多家门店成交量增长七成 - 搜狐网</span><span class="src-meta">Google News AI · 7.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1HNUVlQ3Vnd1lKUFd4ZmNsT3czOG1XZG9obUpMWURhSjd3V3RnNWxTZ2NOOHJSeVc2WDc0ZTdxY0FaVGs2eDZhVk94cmFVSEI0MkxDYWs1NmY3VjNVUnlSNlptQnpKQjR6WHlEOXA3QQ?oc=5" target="_blank" title="欧佩克+在周日的会议上决定在集团范围内维持 石油 产量政策不变。 - 金融界"><span class="src-icon">🌍</span><span class="src-text">欧佩克+在周日的会议上决定在集团范围内维持 石油 产量政策不变。 - 金融界</span><span class="src-meta">Google News 全球 · 7.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1fWFFKWWYyWnNrUWVCcHdFTVFmcmVUQWExbWdib0lqQTlBZDdYcjhKRXdiSm5fY25YVzBpd1RPbm4yQWV4UUZKSGZxc0lyQ3dOLTZFck1BOWNPcVBxYWFHREtORTZab3RtUVZCSVdILWpSN0dNQ20xNGxR?oc=5" target="_blank" title="2分钟速办！高考首日忘带身份证，南京民警开启“绿色通道” - 紫牛新闻"><span class="src-icon">🌍</span><span class="src-text">2分钟速办！高考首日忘带身份证，南京民警开启“绿色通道” - 紫牛新闻</span><span class="src-meta">Google News 全球 · 8.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5hOWMzZ1JabmJLUENWM2lnSzhQUHZtQ3F2dkV5RG9SSUtfRGVvZzRlMk9Sc0tyRXAzNkc1dzlkRDQ3TmtoUkNJWA?oc=5" target="_blank" title="英媒：伊朗收取的海峡通行费用大幅下降 - 凤凰网"><span class="src-icon">🌍</span><span class="src-text">英媒：伊朗收取的海峡通行费用大幅下降 - 凤凰网</span><span class="src-meta">Google News 全球 · 8.1h</span></a>
+<a class="src-item" href="https://blog.podman.io/2025/10/podman-6-machine-usability-improvements/" target="_blank" title="Podman 6: machine usability improvements (2025)"><span class="src-icon">🤖</span><span class="src-text">Podman 6: machine usability improvements (2025)</span><span class="src-meta">Hacker News · 8.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DODFibkFZRERzSHhRV1kzODZtbkFhSmRfejNSeGJSTGNFV1pMZ0s1RXVJWFdIV1JQSzhwb2RZaC1NcXVudFdPanFtTmotZVhvcXBlNC1ER2JPXzhpVl9n?oc=5" target="_blank" title="熊猫老家焕新颜，美丽中国启新程｜这里是雅安·一周报㉑ - 四川在线"><span class="src-icon">🌍</span><span class="src-text">熊猫老家焕新颜，美丽中国启新程｜这里是雅安·一周报㉑ - 四川在线</span><span class="src-meta">Google News 全球 · 8.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1QZzdnUGJfUzZ3OTVzRFNoNjBHbzZtNEFoajM2Zm9WWmF0eVdaRmhiOFpfMUFmWVIwOTl0WktsVzFqRGt0WEZwdFlWSVBqQmJLZDNGenAyTFYyTldHMVJxMFZ3?oc=5" target="_blank" title="重庆AI智能体开发公司推荐：2026年最新测评 - 手机网易网"><span class="src-icon">🤖</span><span class="src-text">重庆AI智能体开发公司推荐：2026年最新测评 - 手机网易网</span><span class="src-meta">Google News AI · 9.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMirgNBVV95cUxPd3V6NjlmMnkzWUhTTnlqblNDZHFSLUJhQ3J4ZlJUTUx2bEFRZFNDSnZZZG9fOVhBREs4RGpBUlBuQklodGtHaU8yb01uVXBqeVlHNnE2OWg0QzJzYmwxR3QxOVpxR2hqclVoT2lUZWhKMFBPTUkxcFVob2FoQ0JCM3JnWVFHZVJRamN0WmxkWFlTemZfT1JOc0dtZTdGSzJJVkpkZEhmWjJNVHN3QWhFS29RVlZEOUJhMl9YbWlvUUVJMkszeVlHa3Ayem8xczM3X3E5YjFmbU16Nlp5NHhBVUNFTlJvQnpvSURtNlVpQmstVFoybEFXaURtN1lFTDdWWmxpSGliVnZBMU1HOGh0djFvZlE4dUFxTk44S1dHeWxsRUhOS09WV2FNc3FPRU9QZVNOWkNkODlCdjJldnZEOXNRa05UdzRuenhSOW1zWG95WlZmQzZxYlFWU2FwS2pBV0FiUnB4Qy1ObTlxNG5FQURyQ0Vkb2lzMktDbnJEUW93LVRZMEJIaUxMeHVTdGMydEl4UnVPNW9VQTZKbjZDaktyMlhWSkpNdFJoeEVn?oc=5" target="_blank" title="2026世界杯:伊朗国家足球队抵达墨西哥 伊足协主席等15人被美国拒签 - RFI"><span class="src-icon">🌍</span><span class="src-text">2026世界杯:伊朗国家足球队抵达墨西哥 伊足协主席等15人被美国拒签 - RFI</span><span class="src-meta">Google News 全球 · 9.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9CajI2Z3haQlFGSER4M25HM0huUjAyQTVoa1d2ajFOVDRBbERtWnd6d3Y2djNfLWtVaHF5ZFRENV9OSFVjYS1udnJxRFl2YWI2TGowS3ZieHlSOHNmckllWGR2clJKeXc?oc=5" target="_blank" title="水利部启动洪水防御Ⅳ级应急响应 会商部署高考期间暴雨洪水防御工作 - 中国青年网"><span class="src-icon">🌍</span><span class="src-text">水利部启动洪水防御Ⅳ级应急响应 会商部署高考期间暴雨洪水防御工作 - 中国青年网</span><span class="src-meta">Google News 全球 · 9.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE0yaWxDa2ZRUGRiR01Nczh0WDdQNF9SSUhhX0t5ckY4Y1hQN3ppa0xlR3lZcllQWlhXSDh4aEwyQ1BwM2hscl9WU3BEOWVtQUc0d1hhbE8wNV9KYW5RczhvVnRHRjEtOTRtN2FGOXhR?oc=5" target="_blank" title="华为云AI安全峰会举办：智守安全·可信释放AI生产力 - 中华网"><span class="src-icon">🤖</span><span class="src-text">华为云AI安全峰会举办：智守安全·可信释放AI生产力 - 中华网</span><span class="src-meta">Google News AI · 10.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE83SGEwSVBnbENrNU5oTDJEb0RnMURSMDFWeXZzZ1Bsbzh4YVQ2N0NKWGZ5cmZXUkdaLU9vTjBTTlNXUzI0OUpRck5WVE5PdG45Vk0ycjY2cF91WDNham1MVzdhY1o?oc=5" target="_blank" title="看《主角》吼秦腔 陕西惠民演出走进西安南门、大唐不夜城 - 西部网"><span class="src-icon">🌍</span><span class="src-text">看《主角》吼秦腔 陕西惠民演出走进西安南门、大唐不夜城 - 西部网</span><span class="src-meta">Google News 全球 · 10.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1sRDFVeFFneTE0UmFlRXhILU52dkcwSDJfWjd6R3ZyQUI1Zkdhb0JEN1FpSk1fSjdac2s4bGotS3prVDdEM2o1aEdHZ21EVTNOb0Y0bl9URUM?oc=5" target="_blank" title="孙正义直言：超级智能有望两年内到来 能自研下一代大模型 - 驱动之家"><span class="src-icon">🤖</span><span class="src-text">孙正义直言：超级智能有望两年内到来 能自研下一代大模型 - 驱动之家</span><span class="src-meta">Google News AI · 11.0h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1SVFNZakZuT3dYanZaai1EMTdMSVlxd01ydXZmVkgwcWF5dVg3NFdBNzk0QWZ3QlhyUTB0UURVWWctYnVjN213YTdfVW96N0p6VldCdkZ5VjA1QllIR2FEel9PeUpmM05EWHNzYzVnTGVwVkl3V2l2NA?oc=5" target="_blank" title="9款国内外主流AI大模型当“考生”写上海卷作文 - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">9款国内外主流AI大模型当“考生”写上海卷作文 - 新浪财经</span><span class="src-meta">Google News AI · 11.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8wQzVVNHBBRFZ0QkRNb25IMTB3WDdpSDUzYlljR2tuWnF1Y3VpNWNfWERENlExamhBNE5CR3JCYUlhRnRNekhxME9KQnJBYXpBRm1OZTR6aVZfTlIzdlJLS1MzUkFYbWNlYUE?oc=5" target="_blank" title="《给阿嬷的情书》即将全球上映 暑期档超60部影片‌定档 - 紫牛新闻"><span class="src-icon">🌍</span><span class="src-text">《给阿嬷的情书》即将全球上映 暑期档超60部影片‌定档 - 紫牛新闻</span><span class="src-meta">Google News 全球 · 11.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzWWJOOHh0N0RncjhRMG1DZXc0bU12SFZhX3kwNHVnOXp0amdRYzloSU5PSGlIMm5tN0FGOUhfYl9KNktueFNNdTZWd002ZFpTNU9LS0Y4YWM5LU1FcnlqZzlrRHM?oc=5" target="_blank" title="北京高考语文卷继续考查《红楼梦》 - 新京报"><span class="src-icon">🌍</span><span class="src-text">北京高考语文卷继续考查《红楼梦》 - 新京报</span><span class="src-meta">Google News 全球 · 11.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5rQUN4cEk0Z1RQT0s1QTJKUkFxdDRpTlhWSXdhREc0VGRoTUF1eFBqSUp1bGU1VGlzNG9DLVhZRUJ5RHgySC1faQ?oc=5" target="_blank" title="2026智源大会｜AI智能体安全论坛 - 智源社区"><span class="src-icon">🤖</span><span class="src-text">2026智源大会｜AI智能体安全论坛 - 智源社区</span><span class="src-meta">Google News AI · 12.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBTR0ZGTzJ6RW5LbEhfMnduNTNhN09QTENiTkVOZ00tQ1VzcHhJTGJRQlJTVEloeHdJSHg5bE1pNE5iNXpjZ3pxenNETWFUaThobkRpMnBPdnhHUlVJS2MzRzdnWmVndGsyZjNJOGhSUmg?oc=5" target="_blank" title="AI作文哪家强 四大主流大模型同题竞技 - 中华网"><span class="src-icon">🤖</span><span class="src-text">AI作文哪家强 四大主流大模型同题竞技 - 中华网</span><span class="src-meta">Google News AI · 12.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842867898157316?f=rss" target="_blank" title="泰坦股份：公司电子布织机仍处于研发阶段，不会对公司近期经营业绩产生任何影响"><span class="src-icon">💼</span><span class="src-text">泰坦股份：公司电子布织机仍处于研发阶段，不会对公司近期经营业绩产生任何影响</span><span class="src-meta">36氪 · 12.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842866662230275?f=rss" target="_blank" title="东诚药业：注射用甲磺酸萘莫司他上市许可申请获受理"><span class="src-icon">💼</span><span class="src-text">东诚药业：注射用甲磺酸萘莫司他上市许可申请获受理</span><span class="src-meta">36氪 · 12.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842865935796488?f=rss" target="_blank" title="新宙邦：与宁德时代签订电解液合作协议 预计2026-2028年采购量合计30万吨"><span class="src-icon">💼</span><span class="src-text">新宙邦：与宁德时代签订电解液合作协议 预计2026-2028年采购量合计30万吨</span><span class="src-meta">36氪 · 13.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842804170918147?f=rss" target="_blank" title="派瑞股份：公司股票被实施其他风险警示 6月9日起简称变更为“ST派瑞”"><span class="src-icon">💼</span><span class="src-text">派瑞股份：公司股票被实施其他风险警示 6月9日起简称变更为“ST派瑞”</span><span class="src-meta">36氪 · 13.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842802928306434?f=rss" target="_blank" title="金时科技：控股子公司拟投建千吨级多孔炭产线项目"><span class="src-icon">💼</span><span class="src-text">金时科技：控股子公司拟投建千吨级多孔炭产线项目</span><span class="src-meta">36氪 · 13.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842801849076233?f=rss" target="_blank" title="孚能科技：股东拟合计减持不超2%公司股份"><span class="src-icon">💼</span><span class="src-text">孚能科技：股东拟合计减持不超2%公司股份</span><span class="src-meta">36氪 · 13.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZFNMd3pvbzdEMlE5ZzVXd1hBMkY3SVFiQUJBMFpNUEk1VWt0NkpMTjkweElSZ20yNTlidkM3VHpRS1d5bEFLUnRDZzltMmIyLTkzLXladGNBMTVHM0p3S3lJcjVXaklRQmV1bHB2YW53QXZzY2s1Y1VGTzlCQkFZeEVoTVpNVmsz?oc=5" target="_blank" title="财经聚焦｜算力普惠浪潮奔涌 赋能产业民生双升级 - 搜狐网"><span class="src-icon">🤖</span><span class="src-text">财经聚焦｜算力普惠浪潮奔涌 赋能产业民生双升级 - 搜狐网</span><span class="src-meta">Google News AI · 13.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842801052174601?f=rss" target="_blank" title="华恒生物：香港联交所审议公司发行H股并在主板挂牌上市申请"><span class="src-icon">💼</span><span class="src-text">华恒生物：香港联交所审议公司发行H股并在主板挂牌上市申请</span><span class="src-meta">36氪 · 14.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842800238692609?f=rss" target="_blank" title="优必选：优世界超仿生人形机器人首发预订单量累计超2110台"><span class="src-icon">💼</span><span class="src-text">优必选：优世界超仿生人形机器人首发预订单量累计超2110台</span><span class="src-meta">36氪 · 14.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5PTWh3ZDN5SkpwTDZpUW84b3g3MnJGSW1FRTF6bUluMnUxUlZmcHVibHlkOXRtUVVja2pjRVZDcVF0b3AwVndNNUU5X2w3V19qM3RIRlBCelRfZmF3Zk56ZA?oc=5" target="_blank" title="京沪高考作文考AI！三大模型同台PK：谁是真正的“作文王者”？ - cnBeta.COM"><span class="src-icon">🤖</span><span class="src-text">京沪高考作文考AI！三大模型同台PK：谁是真正的“作文王者”？ - cnBeta.COM</span><span class="src-meta">Google News AI · 14.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842799319435784?f=rss" target="_blank" title="沪市公司将密集分红 未来一周A股分红近千亿元"><span class="src-icon">💼</span><span class="src-text">沪市公司将密集分红 未来一周A股分红近千亿元</span><span class="src-meta">36氪 · 14.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842798722812164?f=rss" target="_blank" title="百度成立数字人创新业务部"><span class="src-icon">💼</span><span class="src-text">百度成立数字人创新业务部</span><span class="src-meta">36氪 · 14.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9YMDhEeFQ4Yk9NWDZYSUs5dlo2d3d4MS0wS3BvV1pvU2cxNVdVUUoxZGRCWU1fT1p1bHZad3gzNFBiVVZNd051aA?oc=5" target="_blank" title="生物医药的下一轮跃迁：AI制药发展的8大核心趋势！ - 智源社区"><span class="src-icon">🤖</span><span class="src-text">生物医药的下一轮跃迁：AI制药发展的8大核心趋势！ - 智源社区</span><span class="src-meta">Google News AI · 15.0h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842764594792708?f=rss" target="_blank" title="黄仁勋会见韩国两大游戏商代表共商游戏AI合作方案"><span class="src-icon">💼</span><span class="src-text">黄仁勋会见韩国两大游戏商代表共商游戏AI合作方案</span><span class="src-meta">36氪 · 15.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842735724333569?f=rss" target="_blank" title="京东方A：布局玻璃基封装载板、钙钛矿和MicroLED光互联相关应用作为未来业务发展的重要方向】"><span class="src-icon">💼</span><span class="src-text">京东方A：布局玻璃基封装载板、钙钛矿和MicroLED光互联相关应用作为未来业务发展的重要方向】</span><span class="src-meta">36氪 · 15.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842734592346633?f=rss" target="_blank" title="京东方A：随着体育赛事与促销季备货收尾，五月份主流尺寸TV价格持稳"><span class="src-icon">💼</span><span class="src-text">京东方A：随着体育赛事与促销季备货收尾，五月份主流尺寸TV价格持稳</span><span class="src-meta">36氪 · 15.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842708490799369?f=rss" target="_blank" title="京东方A回应存储涨价对显示行业的影响"><span class="src-icon">💼</span><span class="src-text">京东方A回应存储涨价对显示行业的影响</span><span class="src-meta">36氪 · 15.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842695260768775?f=rss" target="_blank" title="《给阿嬷的情书》票房突破16亿"><span class="src-icon">💼</span><span class="src-text">《给阿嬷的情书》票房突破16亿</span><span class="src-meta">36氪 · 15.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842711379446018?f=rss" target="_blank" title="中际旭创：公司产能在持续扩建中"><span class="src-icon">💼</span><span class="src-text">中际旭创：公司产能在持续扩建中</span><span class="src-meta">36氪 · 16.1h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842694357092869?f=rss" target="_blank" title="AI等机器网络请求量首超人类"><span class="src-icon">💼</span><span class="src-text">AI等机器网络请求量首超人类</span><span class="src-meta">36氪 · 16.1h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842691789654273?f=rss" target="_blank" title="中国银河证券：非农走强并不意味着美联储年内加息"><span class="src-icon">💼</span><span class="src-text">中国银河证券：非农走强并不意味着美联储年内加息</span><span class="src-meta">36氪 · 16.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE4tdjVpdUota0Q2T3dKQzhEWEd6RVRybGpZZC1HaFc0T3FiOHZGZG5hb3JKR011RU9KLWVvNDNLMFVDWURYaS1adQ?oc=5" target="_blank" title="中国首个AI应用中心双国双城双中心面向东盟正式启幕，多款AI应用正式发布 - 凤凰网"><span class="src-icon">🤖</span><span class="src-text">中国首个AI应用中心双国双城双中心面向东盟正式启幕，多款AI应用正式发布 - 凤凰网</span><span class="src-meta">Google News AI · 16.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842626008647945?f=rss" target="_blank" title="多家供给方下调算力价格 算力普惠再提速"><span class="src-icon">💼</span><span class="src-text">多家供给方下调算力价格 算力普惠再提速</span><span class="src-meta">36氪 · 16.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3842624097569288?f=rss" target="_blank" title="小米机器人或将亮相小米17T发布会"><span class="src-icon">💼</span><span class="src-text">小米机器人或将亮相小米17T发布会</span><span class="src-meta">36氪 · 16.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMimgJBVV95cUxPa0puU1VaREsxSkFaNHlxUGozdy1QbjVKa1NyVUdxaENlWlRtekYzRGVvakF5WjMtV1EzcTd2RHRUcnZ5Y2V3Mk5SLTUxU2pSelltMXZmZkF2bUkwZ2RTbjhhZVFrSWplWWp2Vk1QWkcybFpmZnNfdWpQRTZ5YzkwM3pxYkpJWkhOeFY3S1NRSlRvU0V1MUNaRkhpTmRWY1E1TThvdkpSU3RXcDlRYTZrZzlGbUZxVHFqeVQwSGZwZk1YZ1Y4WWJQTm9VRFRUNUJDOFNjQ05HX0t0QVVJazY5ZDhlRXJ0dUdMd3JaX2puTlFjNW5ZalNfWTRmMmk1VU5LZVdnbkRDS2liMHB1c1FlaklwcVR1UHdpWXc?oc=5" target="_blank" title="中国高考拉开帷幕多地新增AI监考严防作弊| 国际 | 2026-06-07 - 光明日报"><span class="src-icon">🤖</span><span class="src-text">中国高考拉开帷幕多地新增AI监考严防作弊| 国际 | 2026-06-07 - 光明日报</span><span class="src-meta">Google News AI · 19.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPY1d1QlEtVTMzdV9kV1FYaDVGUU5GdjdJa3hvemE0OVBDZ3NDa21qX3RGMUZEbmFQbjRja2N5WlhOT1laN3JFcmlVa3ctM0dUQmZybFRQeldZN0pVYzRYR040S3JVUUxOeVdSYkVGSXBSUFZ6SnVSZVEwWjlWTVBTZUZPa18tWGM?oc=5" target="_blank" title="孙正义预判超级智能两年内或将到来，可自主设计下一代大模型 - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">孙正义预判超级智能两年内或将到来，可自主设计下一代大模型 - 新浪财经</span><span class="src-meta">Google News AI · 19.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBLWFh4eVNoNTZyemhaT2E4Q1MtX3dwaXMwaWM2eHk0NWdscTNoemkwYkRWSXJpN0Z6ZGp5S2t0ZkVlSFJ2RFZydzM1Vm4tektOZ1UzMjZ2aVdzOW5nYmZOYVRHNnVySVJZLTNUOFNxaTBlQWp5eW13Y1VyVE1CZ00?oc=5" target="_blank" title="雄安日记丨扎根，创业的“种子”在萌发 - 中国雄安官网"><span class="src-icon">🤖</span><span class="src-text">雄安日记丨扎根，创业的“种子”在萌发 - 中国雄安官网</span><span class="src-meta">Google News AI · 20.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOVmxzZ1p2eExWUk42UjViNUdhYmdkc20wWGZMd3NGd09KLTBDR2k2QUhHWXNiWTV6X2NvdUJ6LVFPRTl5ckZsa0hpd0NJWmtVcGlaR2tobmRiLUZCU2hjanJraTRCZk9ZcHBlUW40UGtINGpMQzVwSm16eFB4NEdBSEM0N1hseEFWTl9iWQ?oc=5" target="_blank" title="央视报道济南人工智能工厂流水线规模化量产AI模型 - 搜狐网"><span class="src-icon">🤖</span><span class="src-text">央视报道济南人工智能工厂流水线规模化量产AI模型 - 搜狐网</span><span class="src-meta">Google News AI · 21.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5GU2Fobjh4bDZOQllpaGEyTGZ5OEdmMV84Ul9NWUstQlFuNXNnYTQ0Z0lMZDV2cENwNUllTEgwMFR0ZW5tQnNXbGw2cVhaSnRfODN1YVZBNmdxaVQza0hsUzFHMXppdXVfbU1mejcyNERwRUZhNDIyeXJ6MA?oc=5" target="_blank" title="友谊赛-吉马良斯、恩德里克破门 巴西2-1埃及 - 央视体育"><span class="src-icon">🌍</span><span class="src-text">友谊赛-吉马良斯、恩德里克破门 巴西2-1埃及 - 央视体育</span><span class="src-meta">Google News 全球 · 22.2h</span></a>
+</aside>
+
+<main class="main">
+<div class="header">
+<h1>📰 晨间简报</h1>
+<p class="subtitle">2026年06月08日 周一</p>
+</div>
+
+<div class="tabs">
+<a class="tab active" href="#sec-🤖">🤖 AI 产业</a>
+<a class="tab" href="#sec-💼">💼 就业水温</a>
+<a class="tab" href="#sec-🌍">🌍 时事</a>
+<a class="tab" href="#" onclick="document.querySelector('.sidebar').classList.toggle('open');return false">📡 全部信源</a>
+</div>
+
+<div class="card" id="sec-"><div class="card-head">📌 </div><div class="card-body"><h1 class="page-title">📰 晨间简报 | 2026年06月08日 周一</h1></div></div>
+<div class="card" id="sec-🤖"><div class="card-head">🤖 🤖 AI 产业</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> AI领域正朝着更强大的方向发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。</div>
+<div class="news-item"><div class="news-title">[华为] — 华为云AI安全峰会举办：智守安全·可信释放AI生产力</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于AI安全的知识和技术，掌握如何在开发和使用AI时考虑到安全问题。</div>
+<div class="news-item"><div class="news-title">[Anthropic] — 打破AI烧钱魔咒！Anthropic销售额暴增 有望迎来首个季度盈利</div>
+</div>
+<div class="news-insight">→ 启示: 学习Anthropic的成功经验，了解如何在AI领域取得商业成功。</div>
+<div class="news-item"><div class="news-title">[VibeOS] — VibeOS: First ever AI-native operating system</div>
+</div>
+<div class="news-insight">→ 启示: 关注AI原生操作系统的发展，了解其对未来AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[华为] — AI眼镜国补政策落地 华强北多家门店成交量增长七成</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于AI眼镜和国补政策的知识，了解其对AI行业的影响。</div>
+<div class="news-item"><div class="news-title">[Podman] — Podman 6: machine usability improvements (2025)</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于Podman和机器可用性改进的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[重庆AI智能体] — 重庆AI智能体开发公司推荐：2026年最新测评</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于重庆AI智能体开发公司的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[孙正义] — 孙正义直言：超级智能有望两年内到来 能自研下一代大模型</div>
+</div>
+<div class="news-insight">→ 启示: 关注孙正义的看法和预测，了解其对未来AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[9款AI大模型] — 9款国内外主流AI大模型当“考生”写上海卷作文</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于AI大模型和作文的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[华为云] — 华为云AI安全峰会举办：智守安全·可信释放AI生产力</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于华为云AI安全峰会和AI安全的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[2026智源大会] — 2026智源大会｜AI智能体安全论坛</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于2026智源大会和AI智能体安全论坛的知识，了解其对AI应用的影响。</div></div></div>
+<div class="card" id="sec-💼"><div class="card-head">💼 💼 就业水温</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> AI领域的就业市场正在朝着更强大的方向发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。</div>
+<div class="news-item"><div class="news-title">[Anthropic] — 打破AI烧钱魔咒！Anthropic销售额暴增 有望迎来首个季度盈利</div>
+</div>
+<div class="news-insight">→ 启示: 学习Anthropic的成功经验，了解如何在AI领域取得商业成功。</div>
+<div class="news-item"><div class="news-title">[华为] — AI眼镜国补政策落地 华强北多家门店成交量增长七成</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于AI眼镜和国补政策的知识，了解其对AI行业的影响。</div>
+<div class="news-item"><div class="news-title">[Podman] — Podman 6: machine usability improvements (2025)</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于Podman和机器可用性改进的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[重庆AI智能体] — 重庆AI智能体开发公司推荐：2026年最新测评</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于重庆AI智能体开发公司的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[孙正义] — 孙正义直言：超级智能有望两年内到来 能自研下一代大模型</div>
+</div>
+<div class="news-insight">→ 启示: 关注孙正义的看法和预测，了解其对未来AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[9款AI大模型] — 9款国内外主流AI大模型当“考生”写上海卷作文</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于AI大模型和作文的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[华为云] — 华为云AI安全峰会举办：智守安全·可信释放AI生产力</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于华为云AI安全峰会和AI安全的知识，了解其对AI应用的影响。</div>
+<div class="news-item"><div class="news-title">[2026智源大会] — 2026智源大会｜AI智能体安全论坛</div>
+</div>
+<div class="news-insight">→ 启示: 学习更多关于2026智源大会和AI智能体安全论坛的知识，了解其对AI应用的影响。</div></div></div>
+<div class="card" id="sec-🌍"><div class="card-head">📌 🌍 时事</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> 今天的全球新闻主要涉及到AI领域的发展，尤其是大模型和智能体的研发取得了突破性的进展。同时，AI安全也成为越来越重要的关注点。</div>
+<div class="news-item"><div class="news-title">[海洋强国建设] — 海洋强国建设风帆正劲--经济·科技</div>
+</div>
+<p>→ 影响: 这将对全球海洋资源的开发和利用产生重大影响。</p>
+<div class="news-item"><div class="news-title">[伊朗革命卫队] — 伊朗革命卫队称对以色列空军基地发动导弹袭击</div>
+</div>
+<p>→ 影响: 这将对中东地区的局势产生重大影响。</p>
+<div class="news-item"><div class="news-title">[香港天文台] — 香港天文台在上午3时50分发出之有关黄色暴雨警告信号的特别报告：</div>
+</div>
+<p>→ 影响: 这将对香港地区的气象和交通产生重大影响。</p>
+<div class="news-item"><div class="news-title">[美国5月非农数据] — 美国5月非农数据“爆表” 美联储加息预期重燃</div>
+</div>
+<p>→ 影响: 这将对全球经济和金融市场产生重大影响。</p>
+<div class="news-item"><div class="news-title">[伊朗国家足球队] — 2026世界杯:伊朗国家足球队抵达墨西哥 伊足协主席等15人被美国拒签</div>
+</div>
+<p>→ 影响: 这将对全球足球和体育领域产生重大影响。</p>
+<div class="news-item"><div class="news-title">[水利部] — 水利部启动洪水防御Ⅳ级应急响应 会商部署高考期间暴雨洪水防御工作</div>
+</div>
+<p>→ 影响: 这将对全球水利和防洪领域产生重大影响。</p>
+<div class="news-item"><div class="news-title">[金博洋] — 金博洋回应未来规划 透露最近喜欢打网球</div>
+</div>
+<p>→ 影响: 这将对全球体育和娱乐领域产生重大影响。</p>
+<div class="news-item"><div class="news-title">[奥运冠军] — 奥运冠军郑姝音谈成长：学会坚持、相信团队、拥抱运动</div>
+</div>
+<p>→ 影响: 这将对全球体育和教育领域产生重大影响。</p>
+<div class="news-item"><div class="news-title">[沙停火谈判] — 沙停火谈判重启 哈马斯移交管理权成谈判重点</div>
+</div>
+<p>→ 影响: 这将对全球地区和局势产生重大影响。</p></div></div>
+
+<div class="footer">
+⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-06-08 06:40
+</div>
+</main>
+
+<script>
+// tab 切换高亮
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  if(!this.getAttribute('onclick')) this.classList.add('active');
+}));
+</script>
+</body>
+</html>
