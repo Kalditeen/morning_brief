@@ -392,6 +392,29 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',function
 </html>'''
 
 
+def compose_wechat_summary(items, config, date_str):
+    """LLM 独立生成微信摘要（至多3条最热点）"""
+    client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
+    news_text = "\n".join(
+        f"[{it['cat']}] {it['title']}（{it['source']}）"
+        for it in items[:50]
+    )
+    prompt = f"""你是晨间简报摘要助手。{date_str}。阅读以下新闻，选出至多3条最重要/最热点的事件，用一句话概括每条（· 开头）。突出事件本身和为什么值得关注。总字数150字内，不要标题和解释。
+
+新闻：
+{news_text}"""
+    try:
+        resp = client.chat.completions.create(
+            model=config["openai_model"],
+            messages=[{"role":"user","content":prompt}],
+            temperature=0.3, max_tokens=300,
+        )
+        s = resp.choices[0].message.content.strip()
+        return s[:400] if len(s) > 400 else s
+    except Exception as e:
+        print(f"   ⚠️ 微信摘要生成失败: {e}")
+        return "今日晨报已更新，点击查看完整内容。"
+
 def extract_summary(md: str) -> str:
     lines = []
     for line in md.split("\n"):
@@ -492,8 +515,9 @@ def main():
     print(f"   📄 {html_path}")
 
     cdn_url = f'{CDN_BASE}/{html_path.replace("docs/","")}'
-    summary = extract_summary(md)
-    wechat_msg = f"{summary}\n\n📖 [查看完整晨报]({cdn_url})"
+    print("\n🤖 生成微信摘要…")
+    wx_summary = compose_wechat_summary(daily, config, date_full)
+    wechat_msg = f"📰 晨间简报 | {date_full}\n\n{wx_summary}\n\n📖 [查看完整晨报]({cdn_url})"
     send_wechat(wechat_msg,config["wechat_webhook"],"日报")
 
     # ── 周五特辑 ──
@@ -509,7 +533,8 @@ def main():
         with open(spath,"w") as f:
             f.write(shtml)
         surl = f'{CDN_BASE}/{spath.replace("docs/","")}'
-        swx = extract_summary(smd)+f"\n\n📖 [查看特辑]({surl})"
+        wxs = compose_wechat_summary(fri, config, date_full)
+        swx = f"🎓 周五特辑 | {date_full}\n\n{wxs}\n\n📖 [查看特辑]({surl})"
         send_wechat(swx,config["wechat_webhook"],"特辑")
         print("\n🗑 清理一周前旧文件…")
         cleanup_old(docs_dir,7)
