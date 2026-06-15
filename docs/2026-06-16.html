@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="📰 晨间简报 | 2026年06月16日 周二">
+<meta property="og:description" content="📰 晨间简报 | 2026年06月16日 周二
+**趋势:** AI领域正在迅速发展，新技术和产品不断涌现，吸引着投资者和开发者的关注。同时，AI领域的安全问题和伦理问题也逐渐受到关注。
+**趋势:** 就业市场正在发生变化，新技术和新行业不断涌现，吸引着求职者和雇主的关注。
+**趋势:** 全球市场和政治形势正在发生变化，新事件和新趋势不断涌现。">
+<meta property="og:type" content="article">
+<title>晨间简报 | 2026年06月16日 周二</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff;--pred-bg:#fef9e7;--sidebar-w:280px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;display:flex;min-height:100vh}
+
+/* 侧边栏 */
+.sidebar{width:var(--sidebar-w);background:#1e1e2e;color:#ccc;position:fixed;top:0;left:0;bottom:0;overflow-y:auto;z-index:100;padding:16px 0;font-size:0.82em;transition:transform .25s}
+.sidebar h2{color:#fff;font-size:1em;padding:0 16px 10px;border-bottom:1px solid #333;margin-bottom:8px}
+.sidebar-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--accent);color:#fff;border:none;width:36px;height:36px;border-radius:8px;font-size:1.2em;cursor:pointer}
+.src-item{display:flex;align-items:flex-start;gap:8px;padding:6px 16px;text-decoration:none;color:#b0b0c0;border-left:2px solid transparent;transition:.15s}
+.src-item:hover,.src-item:focus{background:#2a2a3e;color:#fff;border-left-color:var(--accent)}
+.src-icon{flex-shrink:0;font-size:1em}
+.src-text{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-meta{flex-shrink:0;font-size:0.75em;color:#666}
+
+/* 主内容 */
+.main{margin-left:var(--sidebar-w);flex:1;padding:32px 40px 60px;max-width:860px}
+
+/* 顶部 header */
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:32px 36px;border-radius:16px;margin-bottom:28px;box-shadow:0 6px 24px rgba(102,126,234,.3)}
+.header h1{font-size:1.5em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.85;margin-top:6px}
+
+/* 标签导航 */
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:8px 18px;border-radius:20px;border:none;background:#fff;color:var(--text);font-size:.88em;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:.2s;text-decoration:none}
+.tab:hover,.tab.active{background:var(--accent);color:#fff}
+
+/* 卡片 */
+.card{background:var(--card);border-radius:14px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}
+.card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card-head{font-size:1.1em;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #667eea18;color:var(--accent)}
+.card-body p{margin:6px 0;font-size:.94em}
+
+/* 一句话 */
+.one-liner{background:linear-gradient(135deg,#f0f4ff,#ede7f6);border-radius:8px;padding:10px 16px;margin:10px 0;font-weight:600;font-size:.95em;border-left:3px solid var(--accent)}
+.trend-box{background:linear-gradient(135deg,#f3e5f5,#ede7f6);border-radius:10px;padding:14px 18px;margin:12px 0;font-size:.94em;line-height:1.7;border-left:4px solid var(--accent2)}
+
+/* 新闻条目 */
+.news-item{border-bottom:1px solid #eee;padding:14px 0}
+.news-item:last-child{border-bottom:none}
+.news-title{font-weight:700;font-size:1.02em;margin-bottom:6px;line-height:1.5}
+.news-ai{background:var(--ai-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em}
+.news-pred{background:var(--pred-bg);border-radius:6px;padding:6px 12px;margin:4px 0;font-size:.88em;border-left:3px solid #f0b90b}
+.news-summary{font-weight:600;font-size:1em;margin:8px 0 4px;color:var(--accent)}
+.news-insight{padding-left:14px;margin:3px 0;font-size:.9em;color:#555;border-left:3px solid #90caf9}
+.label{font-weight:700;font-size:.85em;margin-right:4px}
+
+.page-title{font-size:1.3em;margin:10px 0}
+.stats-bar{color:var(--muted);font-size:.85em;text-align:center;padding:10px}
+blockquote{border-left:3px solid var(--accent);padding:8px 16px;margin:12px 0;background:#f8f9ff;border-radius:0 8px 8px 0;font-size:.92em}
+
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:32px;padding-top:18px;border-top:1px solid #e0e0e0}
+.footer a{color:var(--accent)}
+
+/* 响应式 */
+@media(max-width:768px){
+.sidebar{transform:translateX(-100%)}
+.sidebar.open{transform:translateX(0)}
+.sidebar-toggle{display:block}
+.main{margin-left:0;padding:20px 16px 40px}
+.header{padding:22px 20px}
+.card{padding:16px}
+}
+</style>
+</head>
+<body class="">
+<button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<aside class="sidebar">
+<h2>📡 信息源 (80条)</h2>
+<a class="src-item" href="https://www.riksdagen.se/en/news/articles/2026/jun/9/permanent-residence-permits-to-be-abolished_cmsc5d86c7b-fecc-4799-9e89-e63592d6c6bfen/" target="_blank" title="Swedish parliament abolishes permanent residence visas for m"><span class="src-icon">🤖</span><span class="src-text">Swedish parliament abolishes permanent residence visas for m</span><span class="src-meta">Hacker News · 0.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMickFVX3lxTE1iUkVIYWVVeDBNRHhxc0tsTm1WTWxpNHR4YTR6UG1LcF9xNFVkSm92VEZOYU1Ja2VMZEJMaVhYclpOc2VZdGNOaWR6LWFxU2lTWjRFMko5Mk9MREY1cDFrWEhLMy0wRkxTWHlGd1dUcWFDQQ?oc=5" target="_blank" title="全国党建工作座谈会发言摘编 - politics.people.com.cn"><span class="src-icon">🌍</span><span class="src-text">全国党建工作座谈会发言摘编 - politics.people.com.cn</span><span class="src-meta">Google News 全球 · 0.6h</span></a>
+<a class="src-item" href="https://www.goodinternetmagazine.com/why-i-email-complete-strangers/" target="_blank" title="Why I Email Complete Strangers"><span class="src-icon">🤖</span><span class="src-text">Why I Email Complete Strangers</span><span class="src-meta">Hacker News · 0.7h</span></a>
+<a class="src-item" href="https://economist.com/the-americas/2026/06/11/techno-libertarians-are-flocking-to-the-caribbean" target="_blank" title="Techno-libertarians are flocking to the Caribbean"><span class="src-icon">🤖</span><span class="src-text">Techno-libertarians are flocking to the Caribbean</span><span class="src-meta">Hacker News · 1.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5pQU9XbGhvSm1SNkFTMkcxQ0dBMDdyQzJWSkc5N2diT2Q0RDBVbEpEWEN4dkd0MXVkc0FRQmREdUh4NEZRVDlwLUUxc0RBekhPemxB?oc=5" target="_blank" title="SpaceX收涨20%！IPO募资总额升至857亿美元，“绿鞋”超额配售落定 - 华尔街见闻"><span class="src-icon">🌍</span><span class="src-text">SpaceX收涨20%！IPO募资总额升至857亿美元，“绿鞋”超额配售落定 - 华尔街见闻</span><span class="src-meta">Google News 全球 · 1.2h</span></a>
+<a class="src-item" href="https://gmalandrakis.com/writings/ad-economicum.html" target="_blank" title="The Dead Economy Theory"><span class="src-icon">🤖</span><span class="src-text">The Dead Economy Theory</span><span class="src-meta">Hacker News · 1.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnNmFKNFpfel9LUm5MY1dXU29IMnNXR050bVJGMjlPTEY3b0ZUcVJDUGtfX2pwMGtjWmZYdHlldUlCZnlyR2d4bFViNXByMHdSeTdCME9QTEJ0bmM5amVtVw?oc=5" target="_blank" title="国际金价重回4300美元关口 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">国际金价重回4300美元关口 - 东方财富</span><span class="src-meta">Google News 全球 · 1.9h</span></a>
+<a class="src-item" href="https://forgottenbytes.net/" target="_blank" title="Commander Keen Games (free book)"><span class="src-icon">🤖</span><span class="src-text">Commander Keen Games (free book)</span><span class="src-meta">Hacker News · 2.2h</span></a>
+<a class="src-item" href="https://fred.stlouisfed.org/series/IPG33591S" target="_blank" title="US battery manufacturing output continues to break records"><span class="src-icon">🤖</span><span class="src-text">US battery manufacturing output continues to break records</span><span class="src-meta">Hacker News · 2.2h</span></a>
+<a class="src-item" href="https://michaelenger.com/blog/i-love-the-computer/" target="_blank" title="I Love the Computer"><span class="src-icon">🤖</span><span class="src-text">I Love the Computer</span><span class="src-meta">Hacker News · 2.4h</span></a>
+<a class="src-item" href="https://notnotp.com/notes/what-job-interviews-taught-me-about-kubernetes/" target="_blank" title="What job interviews taught me about Kubernetes"><span class="src-icon">🤖</span><span class="src-text">What job interviews taught me about Kubernetes</span><span class="src-meta">Hacker News · 2.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPdnpUU1VsTlk4NFAwUDJrTkZ3ZUM3WS1Ob1NwQUNOYXZISGJjN3VsLXBlSkhwMjhTY1I1Rk5yWXR6MHFWMWpVOXduYVRyMFg1TGJvSXI2Yk02S25aNkt3Zw?oc=5" target="_blank" title="中国新能源汽车助力全球绿色变革 - 光明网"><span class="src-icon">🌍</span><span class="src-text">中国新能源汽车助力全球绿色变革 - 光明网</span><span class="src-meta">Google News 全球 · 2.5h</span></a>
+<a class="src-item" href="https://roman.pt/posts/linkedin-backdoor/" target="_blank" title="A backdoor in a LinkedIn job offer"><span class="src-icon">🤖</span><span class="src-text">A backdoor in a LinkedIn job offer</span><span class="src-meta">Hacker News · 2.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPcGhvYTN5a01lc1RTVVZjaWlEVzBjRHVXeF9reGlPclI2S3VLNXp1UFlLekdScDhEV1dEUmdLVlVhQjJqQ0pkRFlNdjN3SFVzYUlQYVhvcWdTS2tKaHNRcHBnbWFqTmxkVFRyVEtoeTByVHpId3E4MzRFdHQyQlNVQ1FETWJ3bTR1RmpIMW9rcHlYWWg2UU5POEVGbzByeWlsdW01YUw1Sm1fY1pZdU0w?oc=5" target="_blank" title="兵团按下5G智能工厂梯度培育“加速键” - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">兵团按下5G智能工厂梯度培育“加速键” - 新浪财经</span><span class="src-meta">Google News AI · 2.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PcEpXNzhiaEFGQmRJOFZVRENveng4N1U3NU1XZjZNRFVqY2ZGY2tBdmFUbDY0cEt5M0VEeHRwUk5WZ3hrU3l2N0F1blNDQmZlT1l3bjlURU9la1VTTU01Mw?oc=5" target="_blank" title="美军一架B-52轰炸机在加州爱德华兹空军基地坠毁 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">美军一架B-52轰炸机在加州爱德华兹空军基地坠毁 - 东方财富</span><span class="src-meta">Google News 全球 · 2.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPLVNvNDBWUlZqWGVpU1BnSktETzhlVWR2TkQ2UG5xcHVBS05rWlZISW5zZnJTcDJnUEthcHN5bmV0bkRHS2p6SVBrMllCX1VHbmg5dWRIc3hBbnhUd1E2bVFfV05mUU5ycV9WUGhVeU5xbFphc2JkaVJsNWtxV3ZqZE5sZ0tZSnZIeHV6VUc2WUNlYk1ULUxvS1NR?oc=5" target="_blank" title="内塔尼亚胡称对美伊协议条款并不知情 - 新华网客户端"><span class="src-icon">🌍</span><span class="src-text">内塔尼亚胡称对美伊协议条款并不知情 - 新华网客户端</span><span class="src-meta">Google News 全球 · 3.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBRMTVXcXE3TjdaSWczbk5yMFlwbnBNQ3VlWmVWNjBrbXdsbXVHcXpEOW1rdzBTN1J4dWsyWE9mS3dYdGRzbDB4STNzWHVneEEwVkh3?oc=5" target="_blank" title="王毅出席上海合作组织成立25周年招待会 - 华尔街见闻"><span class="src-icon">🌍</span><span class="src-text">王毅出席上海合作组织成立25周年招待会 - 华尔街见闻</span><span class="src-meta">Google News 全球 · 3.2h</span></a>
+<a class="src-item" href="https://grassdx.com/" target="_blank" title="Show HN: Vet turned founder, AI lawn diagnosis"><span class="src-icon">🤖</span><span class="src-text">Show HN: Vet turned founder, AI lawn diagnosis</span><span class="src-meta">Hacker News · 4.7h</span></a>
+<a class="src-item" href="https://forgottenbytes.net/commander_keen.html" target="_blank" title="Game Engine White Papers Commander Keen"><span class="src-icon">🤖</span><span class="src-text">Game Engine White Papers Commander Keen</span><span class="src-meta">Hacker News · 4.8h</span></a>
+<a class="src-item" href="https://roszigit.com/en/blog/timescaledb-compression-hypercore" target="_blank" title="How TimescaleDB compresses time-series data"><span class="src-icon">🤖</span><span class="src-text">How TimescaleDB compresses time-series data</span><span class="src-meta">Hacker News · 5.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE1XYnVMZDRzeUwzU3gyM3d5cUJIdmc0T3pIRDM4VUx2MGkyeU1MbDE1Q1BXUWZpRDlFSm5qSDN4QWxqZi1EQ1JKNA?oc=5" target="_blank" title="Anthropic“神话”模型扩大全球内测范围 已揪出上万高危漏洞 - 财联社"><span class="src-icon">🤖</span><span class="src-text">Anthropic“神话”模型扩大全球内测范围 已揪出上万高危漏洞 - 财联社</span><span class="src-meta">Google News AI · 5.2h</span></a>
+<a class="src-item" href="https://typst.app/docs/changelog/0.15.0/" target="_blank" title="Typst 0.15.0"><span class="src-icon">🤖</span><span class="src-text">Typst 0.15.0</span><span class="src-meta">Hacker News · 5.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE0wNi1Rd093c283STV0MHJvX0h3MkI1WXJIeFY0RVQyRUNGTmo2WVNUMVRlOXdWV3dOZDRnVDdRMGxCbHZTb2RXRg?oc=5" target="_blank" title="美伊和谈热点Q&amp;A：霍尔木兹海峡还要多久恢复正常？ - 财联社"><span class="src-icon">🌍</span><span class="src-text">美伊和谈热点Q&amp;A：霍尔木兹海峡还要多久恢复正常？ - 财联社</span><span class="src-meta">Google News 全球 · 5.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzaldDd0RVd2pfNnlBS29sbkxjM3JDWjE2T2FpMmFjWjdweTYxYUp2S2RfS05yR0EyVzlVWmNCT0ljVmhBbXJXb2Q0Y2RybTlKQU4tbWZLUG95NXMwUGFnUQ?oc=5" target="_blank" title="电影《给阿嬷的情书》热度持续走高，让潮汕旅游走入大众视野 一封“情书”激活 广东文旅新活力 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">电影《给阿嬷的情书》热度持续走高，让潮汕旅游走入大众视野 一封“情书”激活 广东文旅新活力 - 东方财富</span><span class="src-meta">Google News 全球 · 5.7h</span></a>
+<a class="src-item" href="https://news.ycombinator.com/item?id=48543908" target="_blank" title="Launch HN: Drafted (YC P26) – Models for residential archite"><span class="src-icon">🤖</span><span class="src-text">Launch HN: Drafted (YC P26) – Models for residential archite</span><span class="src-meta">Hacker News · 5.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBSV2VyVXZkS1FNZmJkZllNZHAzMEhTc3MxekJmU3hhU0V3NENnTmV1RmhLZlNteDY4WXk3RkEzcVdtQVlwN1dUQVgtcm5RWGc3NWdldVo4ZG82M01fanJuU3pTbkNrc1BZTjVCOERLcXBlRHRmX1NzS3hPMHFZSjA?oc=5" target="_blank" title="特朗普：美伊协议内容将在19日签署后公布 - 新华网"><span class="src-icon">🌍</span><span class="src-text">特朗普：美伊协议内容将在19日签署后公布 - 新华网</span><span class="src-meta">Google News 全球 · 5.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBsWkpTbGpzT09WQXpIcTRSbnEtRTJraFhla1VMcGRPZWFSbU53dGVkUnlFX2R1Z2ttcW9ZbEp4YmMwdjF2NWJCaU94TW9PQWVudFpRa09KOUdSR1N2d3NQYjVaeENQcmthSHZ0OUlFMU0?oc=5" target="_blank" title="男子去世留房贷银行起诉父母 民政局成遗产管理人 - 中华网"><span class="src-icon">🌍</span><span class="src-text">男子去世留房贷银行起诉父母 民政局成遗产管理人 - 中华网</span><span class="src-meta">Google News 全球 · 6.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBaTEdVX3B5cWxtLVNyYTdWaGV4QThvaEFlRmdSZzV4ejYzckx0WW13ck94bXlpVFB6Wkw0bkVaTXVkM0ZIaWFSdDZlUXlSandSTTFoQy1DSQ?oc=5" target="_blank" title="乌克兰：俄罗斯最新袭击造成平民死亡，文化地标受损 - UN News"><span class="src-icon">🌍</span><span class="src-text">乌克兰：俄罗斯最新袭击造成平民死亡，文化地标受损 - UN News</span><span class="src-meta">Google News 全球 · 6.1h</span></a>
+<a class="src-item" href="https://tinywind.io" target="_blank" title="TinyWind: A pixel pirate sailing game with real wind physics"><span class="src-icon">🤖</span><span class="src-text">TinyWind: A pixel pirate sailing game with real wind physics</span><span class="src-meta">Hacker News · 6.4h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE9za0RtSlZvLVEtOTVGS0p1ZGhUR01Va09uT1k0SUZNY2Q4bUpBRVI1UEpGTkxoU194UTFzNWtpZHhtOHpyRkFrX2tmbm94aDROUGtCUi1acjhDdm1nQ1EzaEhLdmNqQQ?oc=5" target="_blank" title="伊朗媒体：以色列发动袭击后，美方对伊让步 - 每日经济新闻"><span class="src-icon">🌍</span><span class="src-text">伊朗媒体：以色列发动袭击后，美方对伊让步 - 每日经济新闻</span><span class="src-meta">Google News 全球 · 6.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ETnk4aGx2UmVQaHZfVHBVLTdQRXlUMkx3Y2hrZ2pIZlNxMDFvcG5OYUNpVmwzd2JmOGYwMDQtUENFWktkTVJ2bUxfeVQ3UHB4LXRRWVZWRnNNQzRyTEE?oc=5" target="_blank" title="北京未来两天多雷阵雨天气，注意防范强对流 - 京报网"><span class="src-icon">🌍</span><span class="src-text">北京未来两天多雷阵雨天气，注意防范强对流 - 京报网</span><span class="src-meta">Google News 全球 · 7.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQZFBpcS1VSjE3d2lSdlY3VU96X01OLXRaRW1NR1Nydy1GdGpPc3lucGs1SlljM2NackVTM05YY2phNy02OHY5TThaeHdidlBadU0yV2pEWExmRkVDRmdjUnNKemZCREIyMFdfUXhKUFhMYlktLU1SUmdxVmN0alpmbmVsTlBBcTUxNWRUUkZQYmZ2SFZuTGVTcDln?oc=5" target="_blank" title="刘海星会见尼泊尔民族独立党外事部部长、政府外长希西尔 - 新华网客户端"><span class="src-icon">🌍</span><span class="src-text">刘海星会见尼泊尔民族独立党外事部部长、政府外长希西尔 - 新华网客户端</span><span class="src-meta">Google News 全球 · 7.8h</span></a>
+<a class="src-item" href="https://36kr.com/p/3854510160549124?f=rss" target="_blank" title="Pocket 4P双摄来了：手机影像之外，大疆正在重做一台“口袋电影机”"><span class="src-icon">💼</span><span class="src-text">Pocket 4P双摄来了：手机影像之外，大疆正在重做一台“口袋电影机”</span><span class="src-meta">36氪 · 8.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiigRBVV95cUxNUm9vYVZKUzBnNXlpaF9jbUNvc0tyRHotQUhLOHB4UVU1dGs3eUVmejRITGVDSEEtckYteHd5TGFqNXNVd01kdFlmMUlYclZHMjhycVM5clBfMnB0ZnBuZC1JV09tREdadEZHTDdjcjVUWFJhd3JJWlBPa2t0NFIyMHB0VFd6aGEzOXQ1dmpCTHdTUGlrcldkbVlkMDJXQ0dKdVEyWFhFYmpFOXZBQzVKRlhiaU5CeGFsTl94RmtTR19uMlZEWkVvaDl6ZUZ6ME84NU1kaldsWmFEQXRqNVZKdFFZTlNRQUhjTEkxeEp0WW5kR2w3TERaVGd0bGpXUlctVEttVDJyRHc4RFE5Um1pbDRfUVBsRUFYeDJCdzA0UlZqUk1MMVZFMlQ2cnFHa3lOZ0M0czBZSjZjN1BBLXVlOXkzNkRYbDVaeGZVNExCSWtFSXlmUThGTGNVZTZxWWRLenFTU25xSmNCNXNJR3VPQ0otWTVQeXJSQVNfRTBUTjByYlExWlJoV3Nkc1Zvb0k4R0xHMDR2QmlONzdRQXVGZzFRRVVUSV9JbWYyZHMyNmpuUndWS2c3bThnQkJsbnMzYmZ4cFNJbnh6T1Bycy1VSHlWRXp4ZU5fV3RlYWp0d0g0WU1TRnp2NVhPcUtMUUNWZ2N3b1UyMTlWSHcyUTktRXZCWVZycF9iZXc?oc=5" target="_blank" title="要闻解说 - G7埃维昂峰会开幕：特朗普备受期待 马克龙力推霍尔木兹海峡重启通航 - RFI"><span class="src-icon">🌍</span><span class="src-text">要闻解说 - G7埃维昂峰会开幕：特朗普备受期待 马克龙力推霍尔木兹海峡重启通航 - RFI</span><span class="src-meta">Google News 全球 · 8.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE1zRXNac0c3ZHRBZnB0VWllaFRQTkNHbHBFWEh3OXNBeGNoblRXbTc4MnN5MmVnNzQyN2E2Rkp5ZU4ydHo5WnRzaA?oc=5" target="_blank" title="日均盈利约3亿，“链主”科创板上市在即，国产存储或迎生态跃迁 - 凤凰网"><span class="src-icon">🌍</span><span class="src-text">日均盈利约3亿，“链主”科创板上市在即，国产存储或迎生态跃迁 - 凤凰网</span><span class="src-meta">Google News 全球 · 8.7h</span></a>
+<a class="src-item" href="https://36kr.com/p/3854486447510535?f=rss" target="_blank" title="氪星晚报 ｜我国成功发射吉星高分07C04星等8颗卫星；小红书或已准备好本月在香港提交IPO申请；智谱：公司已推出最新一"><span class="src-icon">💼</span><span class="src-text">氪星晚报 ｜我国成功发射吉星高分07C04星等8颗卫星；小红书或已准备好本月在香港提交IPO申请；智谱：公司已推出最新一</span><span class="src-meta">36氪 · 8.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5sWlN1T3N1eExvdHk1dW90MkJqSXZDTS1UcE1aZkV5amlxNElhTDE0NTFiOEw3UGJUamVHZmhFek1DNkg0UXBlU1BQTDJqTWpFWWkxNWUxT2l3QlpXbjJ6b3pXVDlucTVK?oc=5" target="_blank" title="上海迪士尼度假区十周年庆典星光红毯明星云集 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">上海迪士尼度假区十周年庆典星光红毯明星云集 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 9.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854431418782729?f=rss" target="_blank" title="Salesforce将斥资近36亿美元收购客户代理公司Fin"><span class="src-icon">💼</span><span class="src-text">Salesforce将斥资近36亿美元收购客户代理公司Fin</span><span class="src-meta">36氪 · 9.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMi_wFBVV95cUxOOGFXdnR6RURjWlFCcTBWam9KZGNTN2NWUVNHWGhEdERZdlppWWFzRzFRcGhOeG5BbkpmYnByVE1OYWRob1BaZndmTVNfUHVUUTRqVThxT3IweVpKSVpZcnFhUVdRNDRDV2VzMXBRMVdreEJzLWRleDhvUzRKTldVNmJBS2NBMkxpSEQ5WEo1YWt4MlZIMHQySHBrMVpkeUVLa1FUcE9TVFBkdmswRDhJQmRSNzJjWmptd2JYN0MtMnJsOWNwd01NcndyVkxTRHAtQkEyRU9SaDFIbGFXenFNN1dWeDVmNEdvcnVYTmxGV1VGaG9DbmtDNXluekVqMlE?oc=5" target="_blank" title="算力集群迈向百万卡规模？AI大模型持续创新，人工智能长线逻辑不变？ - 财富号"><span class="src-icon">🤖</span><span class="src-text">算力集群迈向百万卡规模？AI大模型持续创新，人工智能长线逻辑不变？ - 财富号</span><span class="src-meta">Google News AI · 9.7h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wTHk3NmEtbUhFcUhMNDRNYWU0VHBIdHJ6R0RkTGVnUEMyMk5TbTIxRUI2OEdvcUNZMGZJMW9RLWdNYXRRanRxZldoQjFwbXhOTlQxT2toS2JKbzJyMENtSVI1RklKU1o2?oc=5" target="_blank" title="（美加墨世界杯）亚足联球队四场不败 杯赛前景被看好 - chinanews.com.cn"><span class="src-icon">🌍</span><span class="src-text">（美加墨世界杯）亚足联球队四场不败 杯赛前景被看好 - chinanews.com.cn</span><span class="src-meta">Google News 全球 · 9.8h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854428377060359?f=rss" target="_blank" title="东百集团：全资子公司拟转让东百红星100%股权"><span class="src-icon">💼</span><span class="src-text">东百集团：全资子公司拟转让东百红星100%股权</span><span class="src-meta">36氪 · 9.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854426273273095?f=rss" target="_blank" title="热门中概股美股盘前涨多跌少，理想汽车涨超1%"><span class="src-icon">💼</span><span class="src-text">热门中概股美股盘前涨多跌少，理想汽车涨超1%</span><span class="src-meta">36氪 · 9.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854424886547720?f=rss" target="_blank" title="美股大型科技股盘前普涨，SpaceX涨超6%"><span class="src-icon">💼</span><span class="src-text">美股大型科技股盘前普涨，SpaceX涨超6%</span><span class="src-meta">36氪 · 9.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854416540783872?f=rss" target="_blank" title="儒意电影：拟8000万元至1.5亿元回购公司股份"><span class="src-icon">💼</span><span class="src-text">儒意电影：拟8000万元至1.5亿元回购公司股份</span><span class="src-meta">36氪 · 10.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5OUFM4cTduSVpwZ1JVZEFaTTZic3BNdUtsaFJ5ckNQei1rQ1RzdWxaSHVURFlaYklIdHNHd1lIN1VZQVplSmkxWDdBLWVjMzlLQlNwWGVTSTBwS3JpUVhDeWdyTDJoWjVHNW8zdXhR?oc=5" target="_blank" title="2026太原演出盘点，徐良、蔡依林、伍佰、张韶涵、周华健齐聚，这份购票攻略请收好 - 中华网"><span class="src-icon">🌍</span><span class="src-text">2026太原演出盘点，徐良、蔡依林、伍佰、张韶涵、周华健齐聚，这份购票攻略请收好 - 中华网</span><span class="src-meta">Google News 全球 · 10.1h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854411116057856?f=rss" target="_blank" title="蓝筹控股收购新加坡DCF未来数据中心"><span class="src-icon">💼</span><span class="src-text">蓝筹控股收购新加坡DCF未来数据中心</span><span class="src-meta">36氪 · 10.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854405392307462?f=rss" target="_blank" title="爱迪特：持股5%以上股东拟减持不超3%股份"><span class="src-icon">💼</span><span class="src-text">爱迪特：持股5%以上股东拟减持不超3%股份</span><span class="src-meta">36氪 · 10.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE51Tm9ZcWlUcW5vX1A2RnNLVUdGUDlzU216NGE4V3FUYUVrRG9xVHRBR1ZCQVBWTE03YURBR2xYTkhqd0FQQXFBYldqd294bTBteGZlSnZqUFFPVHdQenlyWQ?oc=5" target="_blank" title="美加墨世界杯｜赛前一日入境美国，伊朗队艰难开局 - thepaper.cn"><span class="src-icon">🌍</span><span class="src-text">美加墨世界杯｜赛前一日入境美国，伊朗队艰难开局 - thepaper.cn</span><span class="src-meta">Google News 全球 · 10.3h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854398462759941?f=rss" target="_blank" title="英伟达计划通过发行高等级债券筹资至少200亿美元"><span class="src-icon">💼</span><span class="src-text">英伟达计划通过发行高等级债券筹资至少200亿美元</span><span class="src-meta">36氪 · 10.4h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854391903048713?f=rss" target="_blank" title="欧洲央行扩大私募信贷关联调查范围，所覆盖银行数量翻番"><span class="src-icon">💼</span><span class="src-text">欧洲央行扩大私募信贷关联调查范围，所覆盖银行数量翻番</span><span class="src-meta">36氪 · 10.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE9wOEJzX3c5R3dEMWM2eTdwZzJNMk4wQkxKSnNkVVNTdWlzdjZSbEZSd3NMdEQ2VjBxRGlWVXJsWnhEbEppM1JWMEJMRnRTTFB6RWMzQVFlYVBEOUwwTzV6V0ZxOFhMQQ?oc=5" target="_blank" title="“四舍五入”进八强？粤BA附加赛上演好戏，四分之一决赛本周末打响 - 羊城晚报"><span class="src-icon">🌍</span><span class="src-text">“四舍五入”进八强？粤BA附加赛上演好戏，四分之一决赛本周末打响 - 羊城晚报</span><span class="src-meta">Google News 全球 · 10.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854384311932164?f=rss" target="_blank" title="崔东树：近期新能源经销商的厂家和渠道库存面临市场零售低于预期"><span class="src-icon">💼</span><span class="src-text">崔东树：近期新能源经销商的厂家和渠道库存面临市场零售低于预期</span><span class="src-meta">36氪 · 10.6h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854379226731779?f=rss" target="_blank" title="福克斯公司将以每股160美元的现金和股票收购Roku"><span class="src-icon">💼</span><span class="src-text">福克斯公司将以每股160美元的现金和股票收购Roku</span><span class="src-meta">36氪 · 10.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854373478749190?f=rss" target="_blank" title="东阳光：拟发行股份收购东数一号等公司股权，交易总价80.5亿元"><span class="src-icon">💼</span><span class="src-text">东阳光：拟发行股份收购东数一号等公司股权，交易总价80.5亿元</span><span class="src-meta">36氪 · 10.8h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854370547291392?f=rss" target="_blank" title="云南锗业：公司股价存在非理性炒作风险"><span class="src-icon">💼</span><span class="src-text">云南锗业：公司股价存在非理性炒作风险</span><span class="src-meta">36氪 · 10.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9Fc2ZCRi1hM2tvaWJCV25hUkhQQTdxOGJJRjNBeFU2QkJ6VXY3RkQtdmN5RG5fRWZTNFdVR0Fxb25IaXJ6RUF3TVl2TFlYYzJlT1NqdG1Ra213VUN2VUtIZG1kblJpdk5IV011cHNhQjdLeDVDVGhDTQ?oc=5" target="_blank" title="大暴雨、特大暴雨 中央气象台多预警齐发 - 央视网"><span class="src-icon">🌍</span><span class="src-text">大暴雨、特大暴雨 中央气象台多预警齐发 - 央视网</span><span class="src-meta">Google News 全球 · 10.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854355498275844?f=rss" target="_blank" title="常山北明：张玮扬辞任董事长、董事"><span class="src-icon">💼</span><span class="src-text">常山北明：张玮扬辞任董事长、董事</span><span class="src-meta">36氪 · 11.1h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854349810668546?f=rss" target="_blank" title="盛达资源：实际控制人赵满堂被证监会立案调查"><span class="src-icon">💼</span><span class="src-text">盛达资源：实际控制人赵满堂被证监会立案调查</span><span class="src-meta">36氪 · 11.2h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854343231870209?f=rss" target="_blank" title="中荣股份：拟4000万元至8000万元回购公司股份"><span class="src-icon">💼</span><span class="src-text">中荣股份：拟4000万元至8000万元回购公司股份</span><span class="src-meta">36氪 · 11.3h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE4yX0NrOW5INUlldVpoS240OHhCbnoyZExQYkhSN0tsM1JBdXcxMXNwdzUzZXFENnJaY1dtVzJ2aXNaTHZLakl1VGYyelNfM2gtOTRCeUpQWFhJOHVNeWRLQkt3OHBZZw?oc=5" target="_blank" title="拉加德欢迎美伊达成协议 纳格尔警告欧元区通胀压力仍将持续 - 东方财富"><span class="src-icon">🌍</span><span class="src-text">拉加德欢迎美伊达成协议 纳格尔警告欧元区通胀压力仍将持续 - 东方财富</span><span class="src-meta">Google News 全球 · 11.5h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854323746018311?f=rss" target="_blank" title="支付宝：政务AI助手“晓政”服务突破1亿次"><span class="src-icon">💼</span><span class="src-text">支付宝：政务AI助手“晓政”服务突破1亿次</span><span class="src-meta">36氪 · 11.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854322277405952?f=rss" target="_blank" title="锡业股份：以1.77亿元竞得赤峰大井子锡业100%股权"><span class="src-icon">💼</span><span class="src-text">锡业股份：以1.77亿元竞得赤峰大井子锡业100%股权</span><span class="src-meta">36氪 · 11.7h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854312346391814?f=rss" target="_blank" title="巴基斯坦央行维持基准利率在11.5%不变"><span class="src-icon">💼</span><span class="src-text">巴基斯坦央行维持基准利率在11.5%不变</span><span class="src-meta">36氪 · 11.9h</span></a>
+<a class="src-item" href="https://36kr.com/newsflashes/3854309559489799?f=rss" target="_blank" title="常铝股份：控股股东拟协议转让22.38%股份，股票复牌"><span class="src-icon">💼</span><span class="src-text">常铝股份：控股股东拟协议转让22.38%股份，股票复牌</span><span class="src-meta">36氪 · 11.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFA1aHZZUGVKbkJfMXpJNzVGS1NRMV9ad2ZXSVA3ek5ZZUZjOXJlM2pCZGk5U2NoRS1VM2pON2M2ZHZobzVqakl4TVdwRUhlT1JqbDJEenJqOG5VcFBZTFNhWlZsaFZTR2gwLW54Tzdpck0?oc=5" target="_blank" title="潍坊“人工智能+”按下快进键 - 鲁网"><span class="src-icon">🤖</span><span class="src-text">潍坊“人工智能+”按下快进键 - 鲁网</span><span class="src-meta">Google News AI · 11.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE4zNktRRXQ3S2RteEw3czVablpRZHBWa0FueDJLb2pramRrRllGM2FRRl96QV9wN2hPRTlISVdsZ1JpZFEtOEhGRzJSWjZGeTloa1dsT0VucEJtSnpBd3Z2U3lpSTFwTWM0aUNDQ2IxWWdSVlZRNFp2QQ?oc=5" target="_blank" title="只堆参数没用了？大模型的产业价值该怎么算 - 新浪财经"><span class="src-icon">🤖</span><span class="src-text">只堆参数没用了？大模型的产业价值该怎么算 - 新浪财经</span><span class="src-meta">Google News AI · 12.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1KWnBXbjA1dWhnQkpfb1ItdlZyV0VtaTFWRFI4Y0UtSGJnR1d3MlpkMXVtN0FjbXN3eTByOWxRUnBIOHBqRFBvdFRTSk9TLVBqaHp1V0VPYVJCaUhjMDlyWWwwclRUcFQ2cFpTakZhbUVzcE9lYXc?oc=5" target="_blank" title="行进中国丨大龙湾畔的“算力高速” - 新浪新闻_手机新浪网"><span class="src-icon">🤖</span><span class="src-text">行进中国丨大龙湾畔的“算力高速” - 新浪新闻_手机新浪网</span><span class="src-meta">Google News AI · 12.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1DamlrV0ZuUlRhdnlxRzJmMUlyclJTNC1SaUk5WU1nZy1SaVpiVmRaN096S3Y0OTFRNk1wUVR6eS03Y0E2a2FnS3ZxT3hhWDVJWm5TWEdJQ1dCczNBRWRGWmdNMC1pNVZ0ZVc0UjZseHBVVEdLcWJvUFYzLWI?oc=5" target="_blank" title="（活力中国调研行）跨界人才聚力未来产业 北京创新创业活力持续释放 - 中国日报网"><span class="src-icon">🤖</span><span class="src-text">（活力中国调研行）跨界人才聚力未来产业 北京创新创业活力持续释放 - 中国日报网</span><span class="src-meta">Google News AI · 12.8h</span></a>
+<a class="src-item" href="https://36kr.com/p/3854243718550528?f=rss" target="_blank" title="从一个想法到一个产品，年轻开发者把生活观察写进代码"><span class="src-icon">💼</span><span class="src-text">从一个想法到一个产品，年轻开发者把生活观察写进代码</span><span class="src-meta">36氪 · 12.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MZzRCblh4NW5IRkFpTEllVGtSYy1VRG52ajV5WTBIVl93YzZsUzdaczR5UEtvVnJrbFNlUjRiVnZLVFBHMlEwR3loRlA?oc=5" target="_blank" title="扎克伯格承认Meta人工智能转型出现失误但承诺今年不会再大规模裁员- 美南新闻- 全美最大亚裔多媒体集团 - 美南新聞"><span class="src-icon">🤖</span><span class="src-text">扎克伯格承认Meta人工智能转型出现失误但承诺今年不会再大规模裁员- 美南新闻- 全美最大亚裔多媒体集团 - 美南新聞</span><span class="src-meta">Google News AI · 13.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5SQkRKcDU5U09IazVDUEttWC0zeGdkRWZmNzhjYzR5dFZCZ2pzdGJIODhTbHd2cGg4eEgtVFVtcXFoXzZXZzhXREwtcXVVVlVURERMVjItZGt4TzJwMldtR1p2WHN3SjZ4ekE?oc=5" target="_blank" title="燧原科技科创板IPO过会 - 大河财立方"><span class="src-icon">🤖</span><span class="src-text">燧原科技科创板IPO过会 - 大河财立方</span><span class="src-meta">Google News AI · 13.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUx6aHQ2bVZBbFNSaS1hNmxsRGgtOWVWSlRvUGhVN2l2YW9LNXFrelhrc3ZfVnZjeVRHeENCY2MzbjBLRDY3MFdFOWMzejJjNjktNEU1QlpGdTB6ZWFNUEFtbkpDQmhhNUxtTVZaZmRJU0UxbjdhbzkxZ0J1Z1RSMUlSRHctcjJpMzFuVzJvSQ?oc=5" target="_blank" title="AI Agent走出Demo时代｜聊懂新“新三样”（上） - 21财经"><span class="src-icon">🤖</span><span class="src-text">AI Agent走出Demo时代｜聊懂新“新三样”（上） - 21财经</span><span class="src-meta">Google News AI · 13.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5TY0x6NUZaeUdCS2NJM3FkaVlIYnBadERUQzFjTWtxLXgyZXN1OWJqWkNiYkJmTmZ5UUxRdUxiOGM4bHlKMG4wV2VEUGQ3dElORWd1WXFWS0JydzE4b0FWOGFCVUNXRjI3NnVkdg?oc=5" target="_blank" title="解码大健康产业新未来——百度智能云×深圳市物联网产业协会联合举办AI大模型驱动大健康产业创新发展研讨会 - RFID世界"><span class="src-icon">🤖</span><span class="src-text">解码大健康产业新未来——百度智能云×深圳市物联网产业协会联合举办AI大模型驱动大健康产业创新发展研讨会 - RFID世界</span><span class="src-meta">Google News AI · 13.9h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5sNVpzZERnTEJxd185d09rN0hOMFZ6dnJPXzFJb2lDcTF1bnMxa3E2V3djRy1rNDFPbE9VWDlENjlXcGc3Z0ZobjNjZFI2MG40V3NfWE1fcVYtVi1IZm00NjFIdUpyMWVVX3FR?oc=5" target="_blank" title="从数字西安标杆看海康威视：大模型如何重构城市治理？ - 财经号"><span class="src-icon">🤖</span><span class="src-text">从数字西安标杆看海康威视：大模型如何重构城市治理？ - 财经号</span><span class="src-meta">Google News AI · 14.5h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pWEpfTTY2ZDNDU1lta24zYUtfLTlPd2pKbGR6WDUwc0pIODh5QnZ3UnVFbG5zanpGdXltXy1qeS1hOC1SV2NUZVpvbU8zbDVobzRJbDB3?oc=5" target="_blank" title="西安培华学院人工智能专业：智启未来，AI赋能，创造无限可能 - Jiemian.com"><span class="src-icon">🤖</span><span class="src-text">西安培华学院人工智能专业：智启未来，AI赋能，创造无限可能 - Jiemian.com</span><span class="src-meta">Google News AI · 14.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY2xmNU9VMDhXanR4UjFWbGUxNWJpalNvNGwzQVNMV3B1aG9DdnJ1aEtlUndjUjFjNUpwY1pTWXNLVDB0Q3B6Sy1ibC03U2xHczBpRWRBUWRRdVFBU2hDbzgwUnBudHpOYzNMUTJLcXFFYks2QXdTcy10MWNjVTByZERRUjJmUXFP?oc=5" target="_blank" title="AI应用只做软件赚钱难？盛景网联刘燕：AI创业要走软硬一体化道路 - Sohu"><span class="src-icon">🤖</span><span class="src-text">AI应用只做软件赚钱难？盛景网联刘燕：AI创业要走软硬一体化道路 - Sohu</span><span class="src-meta">Google News AI · 15.1h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1EdU9yTVMyOXNhVlFkOEV2X3plb2ZwaWY0bVVYZjNPaHEwclU3Nnd6d3J3QVM5X3J3ZV90OXNjMDc2RDM3T0NweTA2a25YR0ZSdFdORG1kR0Y?oc=5" target="_blank" title="长江讲坛关注当大脑“外包”给AI：“智能”进步，“人工”何往- 湖北日报新闻客户端 - 湖北日报传媒集团"><span class="src-icon">🤖</span><span class="src-text">长江讲坛关注当大脑“外包”给AI：“智能”进步，“人工”何往- 湖北日报新闻客户端 - 湖北日报传媒集团</span><span class="src-meta">Google News AI · 15.8h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE54clYzVkFiTTRDODlmSkdZVVltNkhwX1NLZ2RwMzRVdUhsamxxc3RvY2VsQWxQeFUzZV9EcGlsVUdlaHQyV0gxZHZiR000cGZ6dzVaTzZhNVdxZkZlbXp5LWNFcl9rTzZkMHB3YVl1c0RIdXJMdUxCR01UUGc?oc=5" target="_blank" title="当中国AI遇见非洲青年：APUS搭建跨国AI人才成长桥梁 - 中国日报网"><span class="src-icon">🤖</span><span class="src-text">当中国AI遇见非洲青年：APUS搭建跨国AI人才成长桥梁 - 中国日报网</span><span class="src-meta">Google News AI · 16.2h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hRWw5UVFMRXIxZ2VvVUJCaFNJaExwZjFhNFFjS1IxQUt1Y1RPdWlpenBDT2d0c1N4MTZtWl9OejVpaW9ONzRqNUtiX2dsRWJLSlU3RDhOc3dIeEN4QjJhMQ?oc=5" target="_blank" title="分析师用AI写研报搞了个大乌龙 互联网信息该如何排污？ - cnBeta.COM"><span class="src-icon">🤖</span><span class="src-text">分析师用AI写研报搞了个大乌龙 互联网信息该如何排污？ - cnBeta.COM</span><span class="src-meta">Google News AI · 16.6h</span></a>
+<a class="src-item" href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBITUIwZVlJeDFfQTBkNXU4eDVEX0lERUZGQWRuRGY5ZndCVVBRd0dUZUdnOTRpYXVLajJCUmdmQXdyU2piR0t2a3ZncEoweEhEOEs2REl3dW9NWUtoVjJ6cE9QaG1jajByVWpucTVXdlV2QTY0QmlHcjZmRQ?oc=5" target="_blank" title="中国裁判傅明将参与世界杯H组首轮西班牙VS佛得角赛事执法 - 央视网体育"><span class="src-icon">🌍</span><span class="src-text">中国裁判傅明将参与世界杯H组首轮西班牙VS佛得角赛事执法 - 央视网体育</span><span class="src-meta">Google News 全球 · 16.7h</span></a>
+</aside>
+
+<main class="main">
+<div class="header">
+<h1>📰 晨间简报</h1>
+<p class="subtitle">2026年06月16日 周二</p>
+</div>
+
+<div class="tabs">
+<a class="tab active" href="#sec-🤖">🤖 AI 产业</a>
+<a class="tab" href="#sec-💼">💼 就业水温</a>
+<a class="tab" href="#sec-🌍">🌍 时事</a>
+<a class="tab" href="#" onclick="document.querySelector('.sidebar').classList.toggle('open');return false">📡 全部信源</a>
+</div>
+
+<div class="card" id="sec-"><div class="card-head">📌 </div><div class="card-body"><h1 class="page-title">📰 晨间简报 | 2026年06月16日 周二</h1></div></div>
+<div class="card" id="sec-🤖"><div class="card-head">🤖 🤖 AI 产业</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> AI领域正在迅速发展，新技术和产品不断涌现，吸引着投资者和开发者的关注。同时，AI领域的安全问题和伦理问题也逐渐受到关注。</div>
+<div class="news-item"><div class="news-title">[公司/产品] Swedish parliament abolishes permanent residence visas for migrants</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注AI在社会和政策领域的应用。</div>
+<div class="news-item"><div class="news-title">[公司/产品] Why I Email Complete Strangers</div>
+</div>
+<div class="news-insight">→ 启示: 学生应学习如何有效利用电子邮件工具。</div>
+<div class="news-item"><div class="news-title">[公司/产品] Techno-libertarians are flocking to the Caribbean</div>
+</div>
+<div class="news-insight">→ 启示: 学生应了解AI和技术的国际化趋势。</div>
+<div class="news-item"><div class="news-title">[公司/产品] The Dead Economy Theory</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注AI在经济和财务领域的应用。</div>
+<div class="news-item"><div class="news-title">[公司/产品] Commander Keen Games (free book)</div>
+</div>
+<div class="news-insight">→ 启示: 学生应学习如何利用AI和游戏技术。</div>
+<div class="news-item"><div class="news-title">[公司/产品] US battery manufacturing output continues to break records</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注AI在制造业和技术领域的应用。</div>
+<div class="news-item"><div class="news-title">[公司/产品] I Love the Computer</div>
+</div>
+<div class="news-insight">→ 启示: 学生应学习如何利用AI和计算机技术。</div>
+<div class="news-item"><div class="news-title">[公司/产品] What job interviews taught me about Kubernetes</div>
+</div>
+<div class="news-insight">→ 启示: 学生应学习如何利用AI和容器技术。</div>
+<div class="news-item"><div class="news-title">[公司/产品] A backdoor in a LinkedIn job offer</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注AI在安全和风险管理领域的应用。</div>
+<div class="news-item"><div class="news-title">[公司/产品] 兵团按下5G智能工厂梯度培育“加速键”</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注AI在制造业和5G领域的应用。</div></div></div>
+<div class="card" id="sec-💼"><div class="card-head">💼 💼 就业水温</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> 就业市场正在发生变化，新技术和新行业不断涌现，吸引着求职者和雇主的关注。</div>
+<div class="news-item"><div class="news-title">[公司/事件] Pocket 4P双摄来了：手机影像之外，大疆正在重做一台“口袋电影机”</div>
+</div>
+<div class="news-insight">→ 启示: 学生应学习如何利用新技术和新行业。</div>
+<div class="news-item"><div class="news-title">[公司/事件] Salesforce将斥资近36亿美元收购客户代理公司Fin</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注公司并购和整合的趋势。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 热门中概股美股盘前涨多跌少，理想汽车涨超1%</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注中概股和美股市场的变化。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 美股大型科技股盘前普涨，SpaceX涨超6%</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注美股市场和科技股的变化。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 蓝筹控股收购新加坡DCF未来数据中心</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注公司并购和数据中心的发展。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 爱迪特：持股5%以上股东拟减持不超3%股份</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注股价和股东持股比例的变化。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 英伟达计划通过发行高等级债券筹资至少200亿美元</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注公司债券和筹资的趋势。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 欧洲央行扩大私募信贷关联调查范围，所覆盖银行数量翻番</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注欧洲央行的政策和调查。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 东百集团：全资子公司拟转让东百红星100%股权</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注公司并购和股权转让的趋势。</div>
+<div class="news-item"><div class="news-title">[公司/事件] 热门中概股美股盘前涨多跌少，理想汽车涨超1%</div>
+</div>
+<div class="news-insight">→ 启示: 学生应关注中概股和美股市场的变化。</div></div></div>
+<div class="card" id="sec-🌍"><div class="card-head">📌 🌍 时事</div><div class="card-body"><div class="trend-box"><strong>趋势:</strong> 全球市场和政治形势正在发生变化，新事件和新趋势不断涌现。</div>
+<div class="news-item"><div class="news-title">[事件] 全国党建工作座谈会发言摘编</div>
+</div>
+<p>→ 影响: 政治形势和政策方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] SpaceX收涨20%！IPO募资总额升至857亿美元，“绿鞋”超额配售落定</div>
+</div>
+<p>→ 影响: SpaceX的成功将对航空和航天业产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 美军一架B-52轰炸机在加州爱德华兹空军基地坠毁</div>
+</div>
+<p>→ 影响: 军事行动和安全问题会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 内塔尼亚胡称对美伊协议条款并不知情</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 王毅出席上海合作组织成立25周年招待会</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 北京未来两天多雷阵雨天气，注意防范强对流</div>
+</div>
+<p>→ 影响: 天气和自然灾害会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 刘海星会见尼泊尔民族独立党外事部部长、政府外长希西尔</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 美伊和谈热点Q&amp;A：霍尔木兹海峡还要多久恢复正常？</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 电影《给阿嬷的情书》热度持续走高，让潮汕旅游走入大众视野</div>
+</div>
+<p>→ 影响: 文化和旅游业会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 特朗普：美伊协议内容将在19日签署后公布</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 男子去世留房贷银行起诉父母 民政局成遗产管理人</div>
+</div>
+<p>→ 影响: 社会和经济问题会对个人和家庭产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 乌克兰：俄罗斯最新袭击造成平民死亡，文化地标受损</div>
+</div>
+<p>→ 影响: 军事行动和安全问题会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 伊朗媒体：以色列发动袭击后，美方对伊让步</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 北京未来两天多雷阵雨天气，注意防范强对流</div>
+</div>
+<p>→ 影响: 天气和自然灾害会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 刘海星会见尼泊尔民族独立党外事部部长、政府外长希西尔</div>
+</div>
+<p>→ 影响: 政治形势和协议方向会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 美加墨世界杯｜赛前一日入境美国，伊朗队艰难开局</div>
+</div>
+<p>→ 影响: 运动和体育赛事会对社会和经济产生影响。</p>
+<div class="news-item"><div class="news-title">[事件] 日均盈利约3亿，“链主”科创板上市在即，国产存储或迎生态跃迁</div>
+</div>
+<p>→ 影响: 科创板和国产存储业会对社会和经济产生影响。</p></div></div>
+
+<div class="footer">
+⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-06-16 06:40
+</div>
+</main>
+
+<script>
+// tab 切换高亮
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  if(!this.getAttribute('onclick')) this.classList.add('active');
+}));
+</script>
+</body>
+</html>
