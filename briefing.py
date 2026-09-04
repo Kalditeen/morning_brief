@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 晨间双语头条 · GitHub Actions 版
-每日激活：采集 NYT + BBC 头版头条
-NVIDIA AI 翻译为简体中文 + 提取四六级高频词汇
-前端：英文优先，点击展开中文翻译（保留新闻图片）
-通知：企业微信群机器人推送摘要 + 链接
+每日激活：采集 NYT + BBC 各 1 篇头版头条
+AI 翻译为简体中文 + 提取四六级高频词汇
+前端：每日总览页 + NYT/BBC 两个原文子页
+原文优先展示，右下角固定翻译按钮，点击后原文左移、右侧显示译文
+通知：企业微信群机器人直推英文原文 + 子页链接
 """
 
 import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.request
@@ -38,19 +39,16 @@ def load_config():
 
 def extract_image(entry) -> str:
     """从 RSS entry 提取图片 URL"""
-    # 优先 media_content
     if hasattr(entry, "media_content") and entry.media_content:
         for m in entry.media_content:
             url = m.get("url", "")
             if url and "image" in m.get("type", "image"):
                 return url
-    # 其次 media_thumbnail
     if hasattr(entry, "media_thumbnail") and entry.media_thumbnail:
         for m in entry.media_thumbnail:
             url = m.get("url", "")
             if url:
                 return url
-    # 最后从 summary/description 中提取 img 标签
     summary = getattr(entry, "summary", "") or getattr(entry, "description", "")
     m = re.search(r'<img[^>]+src="([^"]+)"', summary)
     if m:
@@ -58,8 +56,8 @@ def extract_image(entry) -> str:
     return ""
 
 
-def fetch_headlines(sources, max_per_source=8):
-    """抓取头版头条，保留标题/摘要/图片/链接"""
+def fetch_headlines(sources, max_per_source=1):
+    """抓取头版头条，默认每个信源只取 1 篇"""
     all_items = []
     seen = set()
     for src in sources:
@@ -98,11 +96,7 @@ def fetch_headlines(sources, max_per_source=8):
 
 
 def translate_and_vocab(item: dict, config: dict):
-    """
-    用 NVIDIA AI 将新闻标题+摘要翻译成简体中文，
-    并提取文章中出现的 5 个四六级高频词汇。
-    返回 (中文标题, 中文摘要, 词汇列表)
-    """
+    """AI 翻译标题+摘要，并提取 5 个四六级高频词汇"""
     client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
     prompt = f"""你是一名中英双语新闻编辑。请处理以下英文新闻：
 
@@ -137,7 +131,7 @@ def translate_and_vocab(item: dict, config: dict):
         return parse_translation(content)
     except Exception as e:
         print(f"   ⚠️ 翻译失败: {e}")
-        return item["title"], "", []
+        return "", "", []
 
 
 def parse_translation(content: str):
@@ -146,17 +140,14 @@ def parse_translation(content: str):
     zh_summary = ""
     vocab = []
 
-    # 解析中文标题
     m = re.search(r"【中文标题】\s*\n(.*?)(?=\n\s*【中文摘要】|\Z)", content, re.DOTALL)
     if m:
         zh_title = m.group(1).strip()
 
-    # 解析中文摘要
     m = re.search(r"【中文摘要】\s*\n(.*?)(?=\n\s*【高频词汇】|\Z)", content, re.DOTALL)
     if m:
         zh_summary = m.group(1).strip()
 
-    # 解析词汇
     m = re.search(r"【高频词汇】\s*\n(.*?)\Z", content, re.DOTALL)
     if m:
         for line in m.group(1).strip().split("\n"):
@@ -168,77 +159,185 @@ def parse_translation(content: str):
     return zh_title, zh_summary, vocab[:5]
 
 
-def compose_wechat_summary(items, config, date_str):
-    """用 NVIDIA AI 生成微信摘要（至多3条热点）"""
-    client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
-    news_text = "\n".join(
-        f"- [{it['source']}] {it['title']}"
-        for it in items[:15]
+ARTICLE_CSS = """
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:1180px;margin:0 auto;padding:0 16px 110px;transition:grid-template-columns .25s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.original-panel{background:var(--card);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:transform .25s ease}
+.reader.open .original-panel{transform:translateX(0)}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff}
+.reader.open .translation-panel{display:block;animation:slideIn .2s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.28em;margin:8px 0;line-height:1.4;color:var(--text)}
+.article-summary-en{font-size:.95em;color:#444;margin:8px 0}
+.article-title-zh{font-weight:750;font-size:1.12em;color:var(--accent2);margin:8px 0}
+.article-summary-zh{font-size:.93em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap}
+.source-link{color:var(--accent);text-decoration:none;font-weight:600}
+.source-link:hover{text-decoration:underline}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.translate-fab{position:fixed;right:20px;bottom:20px;z-index:999;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:12px 18px;border-radius:24px;cursor:pointer;font-size:.88em;font-weight:700;box-shadow:0 8px 24px rgba(102,126,234,.4);transition:.2s}
+.translate-fab:hover{transform:translateY(-2px)}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader{padding:0 8px 100px}
+.original-panel,.translation-panel{padding:18px}
+.reader.open{grid-template-columns:1fr;gap:16px}
+.reader.open .translation-panel{animation:none}
+}
+"""
+
+ARTICLE_JS = """
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+"""
+
+INDEX_CSS = """
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:32px 36px;border-radius:16px;margin:32px auto 28px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:920px}
+.header h1{font-size:1.5em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.85;margin-top:6px}
+.main{max-width:920px;margin:0 auto;padding:0 16px 60px}
+.article{background:var(--card);border-radius:14px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}
+.article:hover{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.article-title-en{font-weight:750;font-size:1.15em;margin-bottom:8px;line-height:1.4;color:var(--text)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:8px 0;display:block}
+.article-summary-en{font-size:.92em;color:#444;margin:6px 0}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.82em;flex-wrap:wrap}
+.source-badge{background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600}
+.source-link{color:var(--accent);text-decoration:none;font-weight:700}
+.source-link:hover{text-decoration:underline}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:32px;padding-top:18px;border-top:1px solid #e0e0e0}
+.footer a{color:var(--accent)}
+@media(max-width:480px){
+.header{margin:16px 8px 20px;padding:22px 20px}
+.main{padding:0 8px 40px}
+.article{padding:16px}
+}
+"""
+
+
+def _image_html(image: str) -> str:
+    if not image:
+        return ""
+    img_url = html_mod.escape(image)
+    return f'<img class="article-img" src="{img_url}" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+
+
+def _vocab_html(vocab: list) -> str:
+    if not vocab:
+        return ""
+    vocab_items = "\n".join(
+        f'<span class="vocab-item">{html_mod.escape(v)}</span>'
+        for v in vocab
     )
-    prompt = f"""你是晨间简报摘要助手。{date_str}。阅读以下英文新闻标题，选出至多3条最重要/最热点的新闻，用简体中文一句话概括每条（· 开头）。突出事件本身和为什么值得关注。总字数150字内，不要标题和解释。
-
-新闻：
-{news_text}"""
-    try:
-        resp = client.chat.completions.create(
-            model=config["openai_model"],
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.3, max_tokens=300,
-        )
-        s = resp.choices[0].message.content.strip()
-        return s[:400] if len(s) > 400 else s
-    except Exception as e:
-        print(f"   ⚠️ 微信摘要生成失败: {e}")
-        return "今日双语头条已更新，点击查看完整内容。"
+    return f'<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list">{vocab_items}</div></div>'
 
 
-def build_page(items: list, date_str: str, config) -> str:
-    """生成双语对照 HTML 页面（英文优先，点击展开中文）"""
-    article_cards = []
-    for i, it in enumerate(items):
-        zh_title, zh_summary, vocab = translate_and_vocab(it, config)
-        # 卡片：英文标题+图片+摘要 → 点击展开中文翻译+词汇
-        title_en = html_mod.escape(it["title"])
-        title_zh = html_mod.escape(zh_title) if zh_title else ""
-        summary_en = html_mod.escape(it["summary"][:400]) if it["summary"] else ""
-        summary_zh = html_mod.escape(zh_summary) if zh_summary else ""
-        source = html_mod.escape(it["source"])
-        link = html_mod.escape(it["link"]) if it["link"] else "#"
-        img_html = ""
-        if it["image"]:
-            img_url = html_mod.escape(it["image"])
-            img_html = f'<img class="article-img" src="{img_url}" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-        vocab_html = ""
-        if vocab:
-            vocab_items = "\n".join(
-                f'<span class="vocab-item">{html_mod.escape(v)}</span>'
-                for v in vocab
-            )
-            vocab_html = f'<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list">{vocab_items}</div></div>'
-
-        card = f'''<article class="article">
-<div class="article-en">
-<h3 class="article-title-en">{title_en}</h3>
-{img_html}
-<p class="article-summary-en">{summary_en}</p>
-</div>
-<div class="article-toggle">
-<button class="translate-btn" onclick="toggleZh({i})">🇨🇳 查看中文翻译</button>
-</div>
-<div class="article-zh" id="zh-{i}" style="display:none">
-<h4 class="article-title-zh">{title_zh}</h4>
-<p class="article-summary-zh">{summary_zh}</p>
-{vocab_html}
-</div>
-<div class="article-meta"><span class="source-badge">{source}</span> <a href="{link}" target="_blank" class="source-link">阅读原文 ↗</a></div>
-</article>'''
-        article_cards.append(card)
-
-    cards_html = "\n".join(article_cards)
+def build_article_page(article: dict, date_str: str, date_file: str) -> str:
+    """生成单篇文章原文子页：原文优先，右下角按钮切换右栏翻译"""
+    it = article["item"]
+    title_en = html_mod.escape(it["title"])
+    title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
+    summary_en = html_mod.escape(it["summary"]) if it["summary"] else ""
+    summary_zh = html_mod.escape(article["zh_summary"]) if article["zh_summary"] else ""
+    source = html_mod.escape(it["source"])
+    external_link = html_mod.escape(it["link"]) if it["link"] else "#"
+    hub_link = html_mod.escape(f"{date_file}.html")
+    img_html = _image_html(it["image"])
+    vocab_html = _vocab_html(article["vocab"])
     now_str = now_bj().strftime("%Y-%m-%d %H:%M")
     safe_date = html_mod.escape(date_str)
 
-    return f'''<!DOCTYPE html>
+    translation_heading = f'<h3 class="article-title-zh">{title_zh}</h3>' if title_zh else ""
+    translation_body = f'<p class="article-summary-zh">{summary_zh}</p>' if summary_zh else ""
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="{safe_date} · {source}">
+<meta property="og:description" content="{title_en}">
+<meta property="og:type" content="article">
+<title>{source} | {safe_date}</title>
+<style>{ARTICLE_CSS}</style>
+</head>
+<body>
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">{safe_date} · {source}</p>
+<a class="back-link" href="{hub_link}">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader">
+<section class="original-panel">
+<span class="source-badge">{source}</span>
+<h2 class="article-title-en">{title_en}</h2>
+{img_html}
+<p class="article-summary-en">{summary_en}</p>
+<div class="article-meta"><a href="{external_link}" target="_blank" class="source-link">阅读原始报道 ↗</a></div>
+</section>
+<section class="translation-panel">
+<span class="source-badge">中文翻译</span>
+{translation_heading}
+{translation_body}
+{vocab_html}
+</section>
+</main>
+<button class="translate-fab" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
+<script>{ARTICLE_JS}</script>
+</body>
+</html>"""
+
+
+def build_index_page(articles: list, date_str: str, date_file: str) -> str:
+    """生成今日总览页：NYT/BBC 两张卡片，阅读原文链接到对应子网页"""
+    cards = []
+    for article in articles:
+        it = article["item"]
+        title_en = html_mod.escape(it["title"])
+        summary_en = html_mod.escape(it["summary"][:260]) if it["summary"] else ""
+        source = html_mod.escape(it["source"])
+        subpage = html_mod.escape(f"{date_file}-{it['cat']}.html")
+        img_html = _image_html(it["image"])
+        cards.append(f"""<article class="article">
+<span class="source-badge">{source}</span>
+<h2 class="article-title-en">{title_en}</h2>
+{img_html}
+<p class="article-summary-en">{summary_en}</p>
+<div class="article-meta"><a href="{subpage}" class="source-link">阅读原文 → 进入双语页</a></div>
+</article>""")
+
+    cards_html = "\n".join(cards)
+    now_str = now_bj().strftime("%Y-%m-%d %H:%M")
+    safe_date = html_mod.escape(date_str)
+
+    return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -247,67 +346,34 @@ def build_page(items: list, date_str: str, config) -> str:
 <meta property="og:description" content="纽约时报 + BBC 头版头条，双语对照，四六级词汇">
 <meta property="og:type" content="article">
 <title>晨间双语头条 | {safe_date}</title>
-<style>
-:root{{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff;--pred-bg:#fef9e7;--sidebar-w:280px}}
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}}
-.header{{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:32px 36px;border-radius:16px;margin:32px auto 28px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:860px}}
-.header h1{{font-size:1.5em;font-weight:800;letter-spacing:.5px}}
-.header .subtitle{{font-size:.88em;opacity:.85;margin-top:6px}}
-.main{{max-width:860px;margin:0 auto;padding:0 16px 60px}}
-.article{{background:var(--card);border-radius:14px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}}
-.article:hover{{box-shadow:0 4px 18px rgba(0,0,0,.08)}}
-.article-title-en{{font-weight:700;font-size:1.12em;margin-bottom:8px;line-height:1.4;color:var(--text)}}
-.article-img{{max-width:100%;height:auto;border-radius:8px;margin:8px 0;display:block}}
-.article-summary-en{{font-size:.92em;color:#444;margin:6px 0}}
-.article-zh{{border-top:1px solid #eee;margin-top:12px;padding-top:12px}}
-.article-title-zh{{font-weight:700;font-size:1.02em;color:var(--accent2);margin-bottom:6px}}
-.article-summary-zh{{font-size:.92em;color:#333;margin:6px 0}}
-.translate-btn{{background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:16px;cursor:pointer;font-size:.82em;transition:.2s}}
-.translate-btn:hover{{background:var(--accent2)}}
-.vocab-box{{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:10px}}
-.vocab-box strong{{font-size:.88em;color:var(--accent)}}
-.vocab-list{{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}}
-.vocab-item{{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}}
-.article-meta{{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.82em}}
-.source-badge{{background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600}}
-.source-link{{color:var(--accent);text-decoration:none}}
-.source-link:hover{{text-decoration:underline}}
-.footer{{text-align:center;color:#999;font-size:.78em;margin-top:32px;padding-top:18px;border-top:1px solid #e0e0e0}}
-.footer a{{color:var(--accent)}}
-@media(max-width:480px){{
-.header{{margin:16px 8px 20px;padding:22px 20px}}
-.main{{padding:0 8px 40px}}
-.article{{padding:16px}}
-}}
-</style>
+<style>{INDEX_CSS}</style>
 </head>
 <body>
 <div class="header">
 <h1>📰 晨间双语头条</h1>
-<p class="subtitle">{safe_date} · 纽约时报 + BBC · 英文优先，点击查看中文</p>
+<p class="subtitle">{safe_date} · 每日 2 篇：纽约时报 + BBC</p>
 </div>
 <main class="main">
 {cards_html}
-<div class="footer">
-⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}
-</div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
 </main>
-<script>
-function toggleZh(id){{
-  var el=document.getElementById('zh-'+id);
-  var btn=event.target;
-  if(el.style.display==='none'){{
-    el.style.display='block';
-    btn.textContent='🇨🇳 收起翻译';
-  }}else{{
-    el.style.display='none';
-    btn.textContent='🇨🇳 查看中文翻译';
-  }}
-}}
-</script>
 </body>
-</html>'''
+</html>"""
+
+
+def build_wechat_message(articles: list, date_str: str, date_file: str) -> str:
+    """微信简报直接展示英文原文摘要，并附两个子页链接"""
+    lines = [f"📰 晨间双语头条 | {date_str}"]
+    for article in articles:
+        it = article["item"]
+        subpage_url = f"{CDN_BASE}/{date_file}-{it['cat']}.html"
+        lines.append("")
+        lines.append(f"**{it['source']}**")
+        lines.append(it["title"])
+        if it["summary"]:
+            lines.append(it["summary"][:420])
+        lines.append(f"🔗 [查看双语原文]({subpage_url})")
+    return "\n".join(lines)
 
 
 def send_wechat(md: str, webhook: str, label: str):
@@ -384,27 +450,44 @@ def main():
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    # 1. 抓取头版头条
-    print("\n📡 采集 NYT + BBC 头版头条…")
-    items = fetch_headlines(SOURCES, max_per_source=8)
-    print(f"📊 共采集 {len(items)} 条")
+    # 1. 抓取 NYT + BBC 各 1 篇头版头条
+    print("\n📡 采集 NYT + BBC 头版头条（各 1 篇）…")
+    items = fetch_headlines(SOURCES, max_per_source=1)
+    print(f"📊 共采集 {len(items)} 篇")
+    if not items:
+        raise RuntimeError("未采集到任何新闻")
 
-    # 2. 生成 HTML（含翻译+词汇）
-    print("\n🤖 NVIDIA AI 翻译 + 提取词汇…")
-    html = build_page(items, date_full, config)
-    html_path = os.path.join(docs_dir, f"{file_date}.html")
-    with open(html_path, "w") as f:
-        f.write(html)
-    print(f"   📄 {html_path}")
+    # 2. 每篇文章翻译一次，生成对应子页
+    print("\n🤖 AI 翻译 + 提取高频词汇…")
+    articles = []
+    for it in items:
+        print(f"   📄 处理 {it['source']}: {it['title'][:46]}")
+        zh_title, zh_summary, vocab = translate_and_vocab(it, config)
+        articles.append({
+            "item": it,
+            "zh_title": zh_title,
+            "zh_summary": zh_summary,
+            "vocab": vocab,
+        })
+        sub_html = build_article_page(articles[-1], date_full, file_date)
+        sub_path = os.path.join(docs_dir, f"{file_date}-{it['cat']}.html")
+        with open(sub_path, "w") as f:
+            f.write(sub_html)
+        print(f"   ✅ {sub_path}")
 
-    # 3. 微信摘要
-    print("\n🤖 生成微信摘要…")
-    wx_summary = compose_wechat_summary(items, config, date_full)
-    cdn_url = f'{CDN_BASE}/{html_path.replace("docs/", "")}'
-    wechat_msg = f"📰 晨间双语头条 | {date_full}\n\n{wx_summary}\n\n📖 [查看完整头条]({cdn_url})"
+    # 3. 生成今日总览页
+    index_html = build_index_page(articles, date_full, file_date)
+    index_path = os.path.join(docs_dir, f"{file_date}.html")
+    with open(index_path, "w") as f:
+        f.write(index_html)
+    print(f"   ✅ {index_path}")
+
+    # 4. 微信直推英文原文 + 子页链接
+    print("\n💬 推送企业微信…")
+    wechat_msg = build_wechat_message(articles, date_full, file_date)
     send_wechat(wechat_msg, config["wechat_webhook"], "日报")
 
-    # 4. 清理旧文件 + 推送
+    # 5. 清理旧文件 + 推送
     cleanup_old(docs_dir, 7)
     print("\n📤 提交 HTML 页面…")
     commit_and_push(docs_dir)
