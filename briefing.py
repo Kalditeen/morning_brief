@@ -357,9 +357,9 @@ def wait_until_beijing(h=7, m=0):
 
 
 def cleanup_old(docs_dir: str, days=7):
-    cutoff = now_bj() - timedelta(days=days)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     for f in Path(docs_dir).glob("*.html"):
-        if datetime.fromtimestamp(f.stat().st_mtime) < cutoff:
+        if datetime.fromtimestamp(f.stat().st_mtime, tz=timezone.utc) < cutoff:
             f.unlink()
             print(f"   🗑 清理:{f.name}")
 
