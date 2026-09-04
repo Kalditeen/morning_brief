@@ -1,9 +1,11 @@
-name: 晨间简报
+name: 晨间双语头条
 
 on:
   workflow_dispatch:
   repository_dispatch:
     types: [morning-briefing]
+  schedule:
+    - cron: "0 23 * * *"  # 23:00 UTC = 07:00 北京时间
 
 permissions:
   contents: write
