@@ -2,10 +2,11 @@
 """
 晨间双语头条 · GitHub Actions 版
 每日激活：采集 NYT + BBC 各 1 篇头版头条
-AI 翻译为简体中文 + 提取四六级高频词汇
+爬取完整正文，AI 翻译为简体中文 + 提取四六级高频词汇
 前端：每日总览页 + NYT/BBC 两个原文子页
 原文优先展示，右下角固定翻译按钮，点击后原文左移、右侧显示译文
 通知：企业微信群机器人直推英文原文 + 子页链接
+过去 3 天标题去重，重复时自动换下一篇文章
 """
 
 import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.request
@@ -18,8 +19,10 @@ def now_bj(): return datetime.now(BJT)
 
 import feedparser
 from openai import OpenAI
+from bs4 import BeautifulSoup
 
 CDN_BASE = "https://kalditeen.github.io/morning_brief"
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
 # ── 信源：NYT + BBC 头版 ──
 SOURCES = [
@@ -56,8 +59,87 @@ def extract_image(entry) -> str:
     return ""
 
 
-def fetch_headlines(sources, max_per_source=1):
-    """抓取头版头条，默认每个信源只取 1 篇"""
+def title_key(title: str) -> str:
+    """标题归一化，用于最近 3 天去重"""
+    return re.sub(r"[^a-z0-9]+", "", title.lower())
+
+
+def scrape_article_text(url: str, cat: str) -> str:
+    """抓取并抽取新闻正文，失败时返回空字符串"""
+    if not url:
+        return ""
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"},
+        )
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            raw = resp.read()
+        charset = resp.headers.get_content_charset() or "utf-8"
+        html = raw.decode(charset, errors="ignore")
+        soup = BeautifulSoup(html, "html.parser")
+        selectors = [
+            "section[name='articleBody'] p",
+            "div[data-testid='article-body'] p",
+            "article div[data-component='text-block'] p",
+            "article p",
+            "main p",
+        ]
+        paragraphs = []
+        seen = set()
+        for selector in selectors:
+            for p in soup.select(selector):
+                text = p.get_text(" ", strip=True)
+                if len(text) < 20 or text in seen:
+                    continue
+                seen.add(text)
+                paragraphs.append(text)
+            if len(paragraphs) >= 3:
+                break
+        return "\n".join(paragraphs)
+    except Exception as e:
+        print(f"   ⚠️ 抓取正文失败 {cat}: {e}")
+        return ""
+
+
+def load_recent_titles(docs_dir: str, days=3):
+    """读取过去 days 天的标题，返回去重 key 集合和历史列表"""
+    history_path = Path(docs_dir) / "history.json"
+    cutoff_date = (now_bj() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = set()
+    history = []
+    if history_path.exists():
+        try:
+            data = json.loads(history_path.read_text())
+            for row in data.get("articles", []):
+                date = row.get("date", "")
+                title = row.get("title", "")
+                if date >= cutoff_date and title:
+                    history.append(row)
+                    recent.add(title_key(title))
+        except Exception as e:
+            print(f"   ⚠️ 读取历史标题失败: {e}")
+    return recent, history
+
+
+def save_history(docs_dir: str, history: list, items: list, file_date: str, days=3):
+    """保存今天选中的标题，并只保留过去 days 天"""
+    for it in items:
+        history.append({"date": file_date, "cat": it["cat"], "title": it["title"]})
+    cutoff_date = (now_bj() - timedelta(days=days)).strftime("%Y-%m-%d")
+    history = [row for row in history if row.get("date", "") >= cutoff_date]
+    dedup = {}
+    for row in history:
+        dedup[(row["date"], row["cat"], title_key(row["title"]))] = row
+    Path(docs_dir).mkdir(parents=True, exist_ok=True)
+    (Path(docs_dir) / "history.json").write_text(
+        json.dumps({"articles": list(dedup.values())}, ensure_ascii=False, indent=2)
+    )
+
+
+def fetch_headlines(sources, recent_titles=None, max_per_source=1):
+    """抓取头版头条，默认每个信源只取 1 篇，并跳过最近 3 天重复标题"""
+    recent_titles = recent_titles or set()
     all_items = []
     seen = set()
     for src in sources:
@@ -71,10 +153,13 @@ def fetch_headlines(sources, max_per_source=1):
             title = html_mod.unescape(getattr(entry, "title", "").strip())
             if len(title) < 10:
                 continue
-            h = hashlib.md5((src["cat"] + title).encode()).hexdigest()
-            if h in seen:
+            key = title_key(title)
+            if key in seen:
                 continue
-            seen.add(h)
+            if key in recent_titles:
+                print(f"   ⏭️ 跳过重复标题 {src['name']}: {title[:60]}")
+                continue
+            seen.add(key)
             summary = html_mod.unescape(getattr(entry, "summary", "") or getattr(entry, "description", ""))
             summary = re.sub(r"<[^>]+>", " ", summary)
             summary = re.sub(r"\s+", " ", summary).strip()[:500]
@@ -85,23 +170,25 @@ def fetch_headlines(sources, max_per_source=1):
                 "source": src["name"],
                 "cat": src["cat"],
                 "summary": summary,
+                "content": "",
                 "link": link,
                 "image": image,
             })
             count += 1
             if count >= max_per_source:
                 break
-        print(f"  ✅ {src['name']}: {count} 条")
+        print(f"  ✅ {src['name']}: {count} 篇")
     return all_items
 
 
 def translate_and_vocab(item: dict, config: dict):
-    """AI 翻译标题+摘要，并提取 5 个四六级高频词汇"""
+    """AI 翻译标题+正文片段，并提取 5 个四六级高频词汇"""
     client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
+    body = (item.get("content") or item.get("summary") or "")[:1800]
     prompt = f"""你是一名中英双语新闻编辑。请处理以下英文新闻：
 
 标题：{item['title']}
-摘要：{item['summary'][:400]}
+正文片段：{body}
 
 请完成两件事，严格按以下格式输出，不要添加任何解释：
 
@@ -109,7 +196,7 @@ def translate_and_vocab(item: dict, config: dict):
 （将标题翻译成简体中文）
 
 【中文摘要】
-（将摘要翻译成简体中文，保持原意，2-3句）
+（将正文内容翻译成简体中文，保持原意，3-4句）
 
 【高频词汇】
 1. 英文单词 — 词性. 中文释义
@@ -177,13 +264,11 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 @keyframes slideIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
 .article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
 .article-title-en{font-weight:750;font-size:1.28em;margin:8px 0;line-height:1.4;color:var(--text)}
-.article-summary-en{font-size:.95em;color:#444;margin:8px 0}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
 .article-title-zh{font-weight:750;font-size:1.12em;color:var(--accent2);margin:8px 0}
-.article-summary-zh{font-size:.93em;color:#333;margin:8px 0}
+.article-summary-zh{white-space:pre-line;font-size:.93em;color:#333;margin:8px 0}
 .source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
-.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap}
-.source-link{color:var(--accent);text-decoration:none;font-weight:600}
-.source-link:hover{text-decoration:underline}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
 .vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
 .vocab-box strong{font-size:.88em;color:var(--accent)}
 .vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
@@ -263,10 +348,9 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
     it = article["item"]
     title_en = html_mod.escape(it["title"])
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
-    summary_en = html_mod.escape(it["summary"]) if it["summary"] else ""
+    content_en = html_mod.escape(it.get("content") or it.get("summary") or "")
     summary_zh = html_mod.escape(article["zh_summary"]) if article["zh_summary"] else ""
     source = html_mod.escape(it["source"])
-    external_link = html_mod.escape(it["link"]) if it["link"] else "#"
     hub_link = html_mod.escape(f"{date_file}.html")
     img_html = _image_html(it["image"])
     vocab_html = _vocab_html(article["vocab"])
@@ -274,7 +358,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
     safe_date = html_mod.escape(date_str)
 
     translation_heading = f'<h3 class="article-title-zh">{title_zh}</h3>' if title_zh else ""
-    translation_body = f'<p class="article-summary-zh">{summary_zh}</p>' if summary_zh else ""
+    translation_body = f'<div class="article-summary-zh">{summary_zh}</div>' if summary_zh else ""
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -298,8 +382,8 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 <span class="source-badge">{source}</span>
 <h2 class="article-title-en">{title_en}</h2>
 {img_html}
-<p class="article-summary-en">{summary_en}</p>
-<div class="article-meta"><a href="{external_link}" target="_blank" class="source-link">阅读原始报道 ↗</a></div>
+<div class="article-body">{content_en}</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
 </section>
 <section class="translation-panel">
 <span class="source-badge">中文翻译</span>
@@ -321,7 +405,8 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
     for article in articles:
         it = article["item"]
         title_en = html_mod.escape(it["title"])
-        summary_en = html_mod.escape(it["summary"][:260]) if it["summary"] else ""
+        excerpt = (it.get("content") or it.get("summary") or "")[:260]
+        summary_en = html_mod.escape(excerpt)
         source = html_mod.escape(it["source"])
         subpage = html_mod.escape(f"{date_file}-{it['cat']}.html")
         img_html = _image_html(it["image"])
@@ -367,11 +452,12 @@ def build_wechat_message(articles: list, date_str: str, date_file: str) -> str:
     for article in articles:
         it = article["item"]
         subpage_url = f"{CDN_BASE}/{date_file}-{it['cat']}.html"
+        body = (it.get("content") or it.get("summary") or "")[:420]
         lines.append("")
         lines.append(f"**{it['source']}**")
         lines.append(it["title"])
-        if it["summary"]:
-            lines.append(it["summary"][:420])
+        if body:
+            lines.append(body)
         lines.append(f"🔗 [查看双语原文]({subpage_url})")
     return "\n".join(lines)
 
@@ -450,14 +536,25 @@ def main():
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    # 1. 抓取 NYT + BBC 各 1 篇头版头条
+    # 1. 读取过去 3 天标题并采集当天头条
+    recent_titles, history = load_recent_titles(docs_dir, days=3)
+    print(f"📚 最近 3 天标题去重库: {len(recent_titles)} 条")
     print("\n📡 采集 NYT + BBC 头版头条（各 1 篇）…")
-    items = fetch_headlines(SOURCES, max_per_source=1)
+    items = fetch_headlines(SOURCES, recent_titles=recent_titles, max_per_source=1)
     print(f"📊 共采集 {len(items)} 篇")
     if not items:
         raise RuntimeError("未采集到任何新闻")
 
-    # 2. 每篇文章翻译一次，生成对应子页
+    # 2. 抓取完整正文
+    print("\n🌐 抓取完整报道正文…")
+    for it in items:
+        print(f"   🌐 {it['source']}: {it['title'][:48]}")
+        it["content"] = scrape_article_text(it["link"], it["cat"])
+        if not it["content"]:
+            print(f"   ⚠️ 正文抓取为空，回退到 RSS 摘要")
+            it["content"] = it["summary"]
+
+    # 3. 每篇文章翻译一次，生成对应子页
     print("\n🤖 AI 翻译 + 提取高频词汇…")
     articles = []
     for it in items:
@@ -475,19 +572,22 @@ def main():
             f.write(sub_html)
         print(f"   ✅ {sub_path}")
 
-    # 3. 生成今日总览页
+    # 4. 生成今日总览页
     index_html = build_index_page(articles, date_full, file_date)
     index_path = os.path.join(docs_dir, f"{file_date}.html")
     with open(index_path, "w") as f:
         f.write(index_html)
     print(f"   ✅ {index_path}")
 
-    # 4. 微信直推英文原文 + 子页链接
+    # 5. 保存今天选中的标题到历史库
+    save_history(docs_dir, history, items, file_date, days=3)
+
+    # 6. 微信直推英文原文 + 子页链接
     print("\n💬 推送企业微信…")
     wechat_msg = build_wechat_message(articles, date_full, file_date)
     send_wechat(wechat_msg, config["wechat_webhook"], "日报")
 
-    # 5. 清理旧文件 + 推送
+    # 7. 清理旧文件 + 推送
     cleanup_old(docs_dir, 7)
     print("\n📤 提交 HTML 页面…")
     commit_and_push(docs_dir)
