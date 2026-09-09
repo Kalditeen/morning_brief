@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-05",
-      "cat": "nytimes",
-      "title": "In Major Leak Hunt, Pentagon Gives Polygraph Tests to Joint Staff Members"
-    },
-    {
-      "date": "2026-09-05",
-      "cat": "bbc",
-      "title": "'I'd rather die than ring the police': Distrust and fear in Middlesbrough after A66 crash"
-    },
-    {
       "date": "2026-09-06",
       "cat": "nytimes",
       "title": "Trump Officials Draft Plan to Pay At-Home Parents, Using Funds for Working Ones"
@@ -39,6 +29,16 @@
       "date": "2026-09-08",
       "cat": "bbc",
       "title": "Minister condemns disorder at Portsmouth anti-migrant protest after police officers hurt"
+    },
+    {
+      "date": "2026-09-09",
+      "cat": "nytimes",
+      "title": "Dueling Court Rulings Leave Missouri’s Congressional Races in Chaos"
+    },
+    {
+      "date": "2026-09-09",
+      "cat": "bbc",
+      "title": "UK announces sanctions on West Bank settlements prompting furious Israeli response"
     }
   ]
 }
