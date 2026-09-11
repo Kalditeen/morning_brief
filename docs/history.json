@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-07",
-      "cat": "nytimes",
-      "title": "Germany’s Far Right Just Misses Majority in Crucial State Election"
-    },
-    {
-      "date": "2026-09-07",
-      "cat": "bbc",
-      "title": "Germany's far-right AfD set for big win in eastern state, just short of majority"
-    },
-    {
       "date": "2026-09-08",
       "cat": "nytimes",
       "title": "After 9/11, Documents Suggest New Yorkers Were Misled About Air Quality"
@@ -39,6 +29,16 @@
       "date": "2026-09-10",
       "cat": "bbc",
       "title": "Police launch criminal investigation into Reform UK donations"
+    },
+    {
+      "date": "2026-09-11",
+      "cat": "nytimes",
+      "title": "Behind the Scenes, Vance Gathered Unvarnished Views of the Iran War"
+    },
+    {
+      "date": "2026-09-11",
+      "cat": "bbc",
+      "title": "Labour mayors in England vow to cap tourist tax at 5%"
     }
   ]
 }

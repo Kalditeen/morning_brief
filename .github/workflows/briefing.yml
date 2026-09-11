@@ -5,7 +5,7 @@ on:
   repository_dispatch:
     types: [morning-briefing]
   schedule:
-    - cron: "0 23 * * *"  # 23:00 UTC = 07:00 北京时间
+    - cron: "0 23 * * *"  # 23:00 UTC = 06:00 北京时间
 
 permissions:
   contents: write
