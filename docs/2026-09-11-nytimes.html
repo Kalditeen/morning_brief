@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta property="og:title" content="2026年09月11日 周五 · 纽约时报 NYT">
-<meta property="og:description" content="Behind the Scenes, Vance Gathered Unvarnished Views of the Iran War">
+<meta property="og:description" content="Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally">
 <meta property="og:type" content="article">
 <title>纽约时报 NYT | 2026年09月11日 周五</title>
 <style>
@@ -16,34 +16,43 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
 .back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
 .back-link:hover{text-decoration:underline}
-.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:1180px;margin:0 auto;padding:0 16px 110px;transition:grid-template-columns .25s ease}
-.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
-.original-panel{background:var(--card);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:transform .25s ease}
-.reader.open .original-panel{transform:translateX(0)}
-.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff}
-.reader.open .translation-panel{display:block;animation:slideIn .2s ease}
-@keyframes slideIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+/* 默认：单栏居中，宽度收敛到适合阅读的 880px；展开后：卡片拉长到 1440px，两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+/* 展开状态：两栏各占一半，内边距略收，让窄栏里内容更舒展 */
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
 .article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
-.article-title-en{font-weight:750;font-size:1.28em;margin:8px 0;line-height:1.4;color:var(--text)}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
 .article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
-.article-title-zh{font-weight:750;font-size:1.12em;color:var(--accent2);margin:8px 0}
-.article-content-zh{white-space:pre-line;font-size:.93em;color:#333;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
 .source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
 .article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
 .vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
 .vocab-box strong{font-size:.88em;color:var(--accent)}
 .vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
-.translate-fab{position:fixed;right:20px;bottom:20px;z-index:999;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:12px 18px;border-radius:24px;cursor:pointer;font-size:.88em;font-weight:700;box-shadow:0 8px 24px rgba(102,126,234,.4);transition:.2s}
-.translate-fab:hover{transform:translateY(-2px)}
 .footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
 .footer a{color:var(--accent)}
+@media(max-width:980px){
+.reader.open{grid-template-columns:1fr;gap:16px;max-width:880px}
+.reader.open .translation-panel{animation:none}
+}
 @media(max-width:760px){
 .header{margin:16px 8px 16px;padding:20px}
-.reader{padding:0 8px 100px}
+.reader{padding:0 8px 40px}
 .original-panel,.translation-panel{padding:18px}
-.reader.open{grid-template-columns:1fr;gap:16px}
-.reader.open .translation-panel{animation:none}
+.reader.open .original-panel,.reader.open .translation-panel{padding:18px}
 }
 </style>
 </head>
@@ -55,25 +64,29 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 </div>
 <main class="reader" id="reader">
 <section class="original-panel">
+<div class="panel-header">
 <span class="source-badge">纽约时报 NYT</span>
-<h2 class="article-title-en">Behind the Scenes, Vance Gathered Unvarnished Views of the Iran War</h2>
-<img class="article-img" src="https://static01.nyt.com/images/2026/09/10/multimedia/10dc-vance-commanders-new-ltpk/10dc-vance-commanders-new-ltpk-mediumSquareAt3X.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
-<div class="article-body">Vice President JD Vance received sobering assessments about the war that did not line up with what he, President Trump and other top administration officials were saying publicly.</div>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally</h2>
+<img class="article-img" src="https://static01.nyt.com/images/2026/09/10/multimedia/10int-yemen-mokha-hztm/10int-yemen-mokha-hztm-mediumSquareAt3X.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">The Iran-backed militia routed Yemeni government forces in Mokha, putting the group in a stronger position to attack ships in a crucial waterway for global trade.</div>
 <div class="article-meta">已抓取完整报道并保存在本站</div>
 </section>
 <section class="translation-panel">
+<div class="panel-header">
 <span class="source-badge">中文翻译</span>
-<h3 class="article-title-zh">幕后，Vance收集关于伊朗战争的坦率意见</h3>
-<div class="article-content-zh">副总统JD·万斯收到的关于战争的严峻评估，与他、特朗普总统及其他政府高层官员公开发表的说法并不一致。</div>
-<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">sobering — adj. 令人警醒的</span>
-<span class="vocab-item">assessment — n. 评估</span>
-<span class="vocab-item">line up — v. 一致</span>
-<span class="vocab-item">administration — n. 政府；行政部门</span>
-<span class="vocab-item">publicly — adv. 公开地</span></div></div>
+</div>
+<h3 class="article-title-zh">胡塞武装夺取红海战略港口，伊朗盟友获重大胜利</h3>
+<div class="article-content-zh">伊朗支持的这支民兵组织在莫卡击溃了也门政府军，使该组织在攻击全球贸易关键航道上的船只方面处于更有利的地位。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">seize — v. 夺取；占领</span>
+<span class="vocab-item">strategic — adj. 战略性的</span>
+<span class="vocab-item">rout — v. 击溃；使溃败</span>
+<span class="vocab-item">crucial — adj. 至关重要的</span>
+<span class="vocab-item">waterway — n. 水路；航道</span></div></div>
 </section>
 </main>
-<button class="translate-fab" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
-<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-11 08:48</div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-11 09:22</div>
 <script>
 function toggleTranslation(){
   var reader=document.getElementById('reader');
