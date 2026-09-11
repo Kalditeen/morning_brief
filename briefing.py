@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
 晨间双语头条 · GitHub Actions 版
-每日激活：采集 NYT + BBC 各 1 篇头版头条
+每日激活：采集 Guardian + BBC 各 1 篇头版头条
 爬取完整正文，AI 翻译为简体中文 + 提取四六级高频词汇
-前端：每日总览页 + NYT/BBC 两个原文子页
-原文优先展示，卡片右上角翻译按钮，点击后卡片横向展开为左右两栏
+前端：每日总览页 + 原文子页；桌面端左右分栏，移动端标签切换
 通知：企业微信群机器人直推英文原文 + 子页链接
 过去 3 天标题去重，重复时自动换下一篇文章
 """
@@ -24,11 +23,69 @@ from bs4 import BeautifulSoup
 CDN_BASE = "https://kalditeen.github.io/morning_brief"
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
-# ── 信源：NYT + BBC 头版 ──
+# ── 信源：Guardian + BBC ──
 SOURCES = [
-    {"name": "纽约时报 NYT", "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml", "cat": "nytimes"},
-    {"name": "BBC News", "url": "http://feeds.bbci.co.uk/news/rss.xml", "cat": "bbc"},
+    {
+        "name": "卫报 The Guardian",
+        "url": "https://www.theguardian.com/world/rss",
+        "cat": "guardian",
+    },
+    {
+        "name": "卫报 The Guardian (科技)",
+        "url": "https://www.theguardian.com/technology/rss",
+        "cat": "guardian-tech",
+    },
+    {
+        "name": "卫报 The Guardian (环境)",
+        "url": "https://www.theguardian.com/environment/rss",
+        "cat": "guardian-env",
+    },
+    {
+        "name": "卫报 The Guardian (科学)",
+        "url": "https://www.theguardian.com/science/rss",
+        "cat": "guardian-science",
+    },
+    {
+        "name": "卫报 The Guardian (商业)",
+        "url": "https://www.theguardian.com/business/rss",
+        "cat": "guardian-business",
+    },
+    {
+        "name": "BBC News",
+        "url": "http://feeds.bbci.co.uk/news/rss.xml",
+        "cat": "bbc",
+    },
 ]
+
+# ── 四六级常考话题关键词（标题粗筛）──
+RELEVANT_KEYWORDS = [
+    "technology", "tech", "ai", "artificial intelligence", "robot", "digital",
+    "smartphone", "internet", "cyber", "data", "algorithm", "software", "app",
+    "computer", "online", "social media", "privacy", "hack", "chip", "semiconductor",
+    "climate", "environment", "green", "carbon", "emission", "pollution",
+    "renewable", "energy", "sustainable", "biodiversity", "wildlife", "ocean",
+    "plastic", "recycling", "global warming", "extreme weather", "flood", "drought",
+    "health", "medical", "medicine", "disease", "cancer", "virus", "vaccine",
+    "mental health", "obesity", "diet", "exercise", "sleep", "brain", "gene",
+    "drug", "therapy", "hospital", "pandemic", "nutrition",
+    "education", "school", "university", "student", "teacher", "learning",
+    "social", "society", "culture", "community", "equality", "diversity",
+    "immigration", "refugee", "poverty", "housing", "urban", "family",
+    "economy", "economic", "business", "market", "finance", "financial",
+    "trade", "inflation", "job", "employment", "wage", "tax", "bank",
+    "investment", "startup", "industry", "manufacturing", "globalization",
+    "science", "research", "study", "discovery", "space", "nasa", "physics",
+    "chemistry", "biology", "evolution", "experiment", "scientist",
+    "international", "global", "world", "war", "peace", "diplomacy",
+    "united nations", "european union", "nato", "democracy", "election",
+    "government", "policy", "law", "rights", "protest", "conflict",
+]
+
+
+def _is_relevant(title: str) -> bool:
+    """标题关键词粗筛：命中任一关键词则返回 True"""
+    low = title.lower()
+    return any(kw in low for kw in RELEVANT_KEYWORDS)
 
 
 def load_config():
@@ -64,36 +121,8 @@ def title_key(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", title.lower())
 
 
-def _extract_nyt_content(html: str) -> str:
-    """从 NYT 页面的 window.__preloadedData JSON 中提取完整正文"""
-    match = re.search(
-        r"window\.__preloadedData\s*=\s*(\{.*?\});",
-        html,
-        re.DOTALL,
-    )
-    if not match:
-        return ""
-    try:
-        data_str = match.group(1).replace(":undefined", ":null")
-        data = json.loads(data_str)
-        article = data["initialData"]["data"]["article"]
-        blocks = article["sprinkledBody"]["content"]
-    except (KeyError, json.JSONDecodeError) as e:
-        print(f"   ⚠️ NYT __preloadedData 解析失败: {e}")
-        return ""
-
-    paragraphs = []
-    for block in blocks:
-        if block.get("__typename") == "ParagraphBlock":
-            parts = [cc.get("text", "") for cc in block.get("content", [])]
-            para = "".join(parts).strip()
-            if para:
-                paragraphs.append(para)
-    return "\n".join(paragraphs)
-
-
 def scrape_article_text(url: str, cat: str, max_paragraphs: int = 50) -> str:
-    """抓取并抽取新闻正文；NYT 走 __preloadedData 解析，其他走原有逻辑"""
+    """抓取并抽取新闻正文，失败时返回空字符串"""
     if not url:
         return ""
     try:
@@ -105,19 +134,11 @@ def scrape_article_text(url: str, cat: str, max_paragraphs: int = 50) -> str:
             raw = resp.read()
         charset = resp.headers.get_content_charset() or "utf-8"
         html = raw.decode(charset, errors="ignore")
-
-        # ── 针对 NYT 的特殊处理：优先解析 __preloadedData ──
-        if "nytimes.com" in url:
-            nyt_content = _extract_nyt_content(html)
-            if nyt_content:
-                return nyt_content
-
-        # ── 原有逻辑（BBC 等）──
         soup = BeautifulSoup(html, "html.parser")
         selectors = [
+            "div[data-gu-name='body'] p",
+            "div[data-component='text-block'] p",
             "section[name='articleBody'] p",
-            "div[data-testid='article-body'] p",
-            "article div[data-component='text-block'] p",
             "article p",
             "main p",
         ]
@@ -176,7 +197,7 @@ def save_history(docs_dir: str, history: list, items: list, file_date: str, days
 
 
 def fetch_headlines(sources, recent_titles=None, max_per_source=1, request_delay=1.5):
-    """抓取头版头条，默认每个信源只取 1 篇，并跳过最近 3 天重复标题；同时抓取全文"""
+    """抓取头版头条，跳过无关话题、最近 3 天重复标题，并抓取全文"""
     recent_titles = recent_titles or set()
     all_items = []
     seen = set()
@@ -192,6 +213,8 @@ def fetch_headlines(sources, recent_titles=None, max_per_source=1, request_delay
             title = html_mod.unescape(getattr(entry, "title", "").strip())
             if len(title) < 10:
                 continue
+            if not _is_relevant(title):
+                continue
             key = title_key(title)
             if key in seen:
                 continue
@@ -205,7 +228,6 @@ def fetch_headlines(sources, recent_titles=None, max_per_source=1, request_delay
             link = getattr(entry, "link", "")
             image = extract_image(entry)
 
-            # 抓取全文
             content = ""
             if link:
                 if not first_request:
@@ -236,18 +258,15 @@ def split_text_by_length(text: str, max_chars: int = 1500) -> list:
     chunks = []
     remaining = text
     while len(remaining) > max_chars:
-        # 在 max_chars 范围内找最后一个换行
         cut = remaining.rfind("\n", 0, max_chars)
         if cut == -1:
-            # 没找到换行，找句号加空格
             cut = remaining.rfind(". ", 0, max_chars)
             if cut == -1:
-                # 还是没找到，硬切
                 cut = max_chars
             else:
-                cut += 2  # 把 ". " 一起带上
+                cut += 2
         else:
-            cut += 1  # 把换行符一起带上
+            cut += 1
         chunk = remaining[:cut].strip()
         if chunk:
             chunks.append(chunk)
@@ -279,7 +298,6 @@ def _parse_vocab(raw: str) -> list:
         line = line.strip()
         if not line:
             continue
-        # 去掉可能的编号前缀，如 "1. "、"1、"、"1)"
         line = re.sub(r"^\d+\s*[\.、\)]\s*", "", line)
         if line:
             vocab.append(line)
@@ -298,7 +316,6 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
     if not title and not body:
         return "", "", []
 
-    # ---------- 1. 翻译标题 ----------
     title_prompt = f"""你是中英双语新闻编辑。请把下面的英文新闻标题翻译成简体中文。
 
 要求：
@@ -310,7 +327,6 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
 {title}"""
     zh_title = _ai_call(client, config, title_prompt, max_tokens=300)
 
-    # ---------- 2. 翻译正文（拆分后逐块翻译） ----------
     chunks = split_text_by_length(body, max_chars=max_chars)
     zh_chunks = []
     total = len(chunks)
@@ -332,7 +348,6 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
             print(f"   ⚠️ 第 {i}/{total} 段翻译失败，已跳过")
     zh_body = "\n".join(zh_chunks)
 
-    # ---------- 3. 提取高频词汇 ----------
     vocab_prompt = f"""你是英语教学编辑。请从下面的英文新闻中提取 5 个四六级考试常见的高频词汇。
 
 要求：
@@ -362,14 +377,13 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
 .back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
 .back-link:hover{text-decoration:underline}
-/* 默认：单栏居中，宽度收敛到适合阅读的 880px；展开后：卡片拉长到 1440px，两栏平分 */
+/* 桌面端：默认单栏居中，open 后两栏平分 */
 .reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
 .reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
 .original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
 .translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
 .reader.open .translation-panel{display:block;animation:slideIn .24s ease}
 @keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
-/* 展开状态：两栏各占一半，内边距略收，让窄栏里内容更舒展 */
 .reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
 .panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
 .translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
@@ -390,15 +404,41 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
 .footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
 .footer a{color:var(--accent)}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
 @media(max-width:980px){
-.reader.open{grid-template-columns:1fr;gap:16px;max-width:880px}
-.reader.open .translation-panel{animation:none}
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
 }
 @media(max-width:760px){
 .header{margin:16px 8px 16px;padding:20px}
-.reader{padding:0 8px 40px}
-.original-panel,.translation-panel{padding:18px}
-.reader.open .original-panel,.reader.open .translation-panel{padding:18px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
 }
 """
 
@@ -409,10 +449,30 @@ function toggleTranslation(){
   reader.classList.toggle('open');
   if(reader.classList.contains('open')){
     btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
   }else{
     btn.textContent='🇨🇳 查看翻译';
   }
 }
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
 """
 
 INDEX_CSS = """
@@ -460,7 +520,7 @@ def _vocab_html(vocab: list) -> str:
 
 
 def build_article_page(article: dict, date_str: str, date_file: str) -> str:
-    """生成单篇文章原文子页：默认单栏居中，点击右上角按钮后卡片横向拉长、左右两栏对照"""
+    """生成单篇文章子页：桌面端左右分栏；移动端标签切换"""
     it = article["item"]
     title_en = html_mod.escape(it["title"])
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
@@ -493,7 +553,11 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 <p class="subtitle">{safe_date} · {source}</p>
 <a class="back-link" href="{hub_link}">← 返回今日总览</a>
 </div>
-<main class="reader" id="reader">
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
 <section class="original-panel">
 <div class="panel-header">
 <span class="source-badge">{source}</span>
@@ -520,7 +584,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 
 
 def build_index_page(articles: list, date_str: str, date_file: str) -> str:
-    """生成今日总览页：NYT/BBC 两张卡片，阅读原文链接到对应子网页"""
+    """生成今日总览页"""
     cards = []
     for article in articles:
         it = article["item"]
@@ -548,7 +612,7 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta property="og:title" content="📰 晨间双语头条 | {safe_date}">
-<meta property="og:description" content="纽约时报 + BBC 头版头条，双语对照，四六级词汇">
+<meta property="og:description" content="卫报 + BBC 头版头条，双语对照，四六级词汇">
 <meta property="og:type" content="article">
 <title>晨间双语头条 | {safe_date}</title>
 <style>{INDEX_CSS}</style>
@@ -556,7 +620,7 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 <body>
 <div class="header">
 <h1>📰 晨间双语头条</h1>
-<p class="subtitle">{safe_date} · 每日 2 篇：纽约时报 + BBC</p>
+<p class="subtitle">{safe_date} · 每日 2 篇：卫报 + BBC</p>
 </div>
 <main class="main">
 {cards_html}
@@ -656,16 +720,14 @@ def main():
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    # 1. 读取过去 3 天标题并采集当天头条（fetch_headlines 内部会抓全文）
     recent_titles, history = load_recent_titles(docs_dir, days=3)
     print(f"📚 最近 3 天标题去重库: {len(recent_titles)} 条")
-    print("\n📡 采集 NYT + BBC 头版头条（各 1 篇）…")
+    print("\n📡 采集 Guardian + BBC 头版头条（各 1 篇）…")
     items = fetch_headlines(SOURCES, recent_titles=recent_titles, max_per_source=1)
     print(f"📊 共采集 {len(items)} 篇")
     if not items:
         raise RuntimeError("未采集到任何新闻")
 
-    # 2. 检查正文（fetch_headlines 已抓取全文，这里只处理失败回退）
     print("\n🌐 检查正文抓取结果…")
     for it in items:
         if not it["content"]:
@@ -674,7 +736,6 @@ def main():
         else:
             print(f"   ✅ {it['source']}: 正文 {len(it['content'])} 字符")
 
-    # 3. 每篇文章翻译一次，生成对应子页
     print("\n🤖 AI 翻译 + 提取高频词汇…")
     articles = []
     for it in items:
@@ -692,22 +753,18 @@ def main():
             f.write(sub_html)
         print(f"   ✅ {sub_path}")
 
-    # 4. 生成今日总览页
     index_html = build_index_page(articles, date_full, file_date)
     index_path = os.path.join(docs_dir, f"{file_date}.html")
     with open(index_path, "w") as f:
         f.write(index_html)
     print(f"   ✅ {index_path}")
 
-    # 5. 保存今天选中的标题到历史库
     save_history(docs_dir, history, items, file_date, days=3)
 
-    # 6. 微信直推英文原文 + 子页链接
     print("\n💬 推送企业微信…")
     wechat_msg = build_wechat_message(articles, date_full, file_date)
     send_wechat(wechat_msg, config["wechat_webhook"], "日报")
 
-    # 7. 清理旧文件 + 推送
     cleanup_old(docs_dir, 7)
     print("\n📤 提交 HTML 页面…")
     commit_and_push(docs_dir)
