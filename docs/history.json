@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "date": "2026-09-07",
+      "cat": "nytimes",
+      "title": "Germany’s Far Right Just Misses Majority in Crucial State Election"
+    },
+    {
+      "date": "2026-09-07",
+      "cat": "bbc",
+      "title": "Germany's far-right AfD set for big win in eastern state, just short of majority"
+    },
+    {
+      "date": "2026-09-08",
+      "cat": "nytimes",
+      "title": "After 9/11, Documents Suggest New Yorkers Were Misled About Air Quality"
+    },
+    {
+      "date": "2026-09-08",
+      "cat": "bbc",
+      "title": "Minister condemns disorder at Portsmouth anti-migrant protest after police officers hurt"
+    },
+    {
+      "date": "2026-09-09",
+      "cat": "nytimes",
+      "title": "Dueling Court Rulings Leave Missouri’s Congressional Races in Chaos"
+    },
+    {
+      "date": "2026-09-09",
+      "cat": "bbc",
+      "title": "UK announces sanctions on West Bank settlements prompting furious Israeli response"
+    },
+    {
+      "date": "2026-09-10",
+      "cat": "nytimes",
+      "title": "Trump’s Census Overhaul Would Exclude Some Immigrants and Remove Questions on Race"
+    },
+    {
+      "date": "2026-09-10",
+      "cat": "bbc",
+      "title": "Police launch criminal investigation into Reform UK donations"
+    }
+  ]
+}
