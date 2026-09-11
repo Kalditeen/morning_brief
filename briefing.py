@@ -64,7 +64,7 @@ def title_key(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", title.lower())
 
 
-def scrape_article_text(url: str, cat: str) -> str:
+def scrape_article_text(url: str, cat: str, max_paragraphs: int = 50) -> str:
     """抓取并抽取新闻正文，失败时返回空字符串"""
     if not url:
         return ""
@@ -94,7 +94,9 @@ def scrape_article_text(url: str, cat: str) -> str:
                     continue
                 seen.add(text)
                 paragraphs.append(text)
-            if len(paragraphs) >= 3:
+                if len(paragraphs) >= max_paragraphs:
+                    break
+            if len(paragraphs) >= max_paragraphs:
                 break
         return "\n".join(paragraphs)
     except Exception as e:
@@ -137,11 +139,12 @@ def save_history(docs_dir: str, history: list, items: list, file_date: str, days
     )
 
 
-def fetch_headlines(sources, recent_titles=None, max_per_source=1):
-    """抓取头版头条，默认每个信源只取 1 篇，并跳过最近 3 天重复标题"""
+def fetch_headlines(sources, recent_titles=None, max_per_source=1, request_delay=1.5):
+    """抓取头版头条，默认每个信源只取 1 篇，并跳过最近 3 天重复标题；同时抓取全文"""
     recent_titles = recent_titles or set()
     all_items = []
     seen = set()
+    first_request = True
     for src in sources:
         try:
             feed = feedparser.parse(src["url"])
@@ -162,15 +165,24 @@ def fetch_headlines(sources, recent_titles=None, max_per_source=1):
             seen.add(key)
             summary = html_mod.unescape(getattr(entry, "summary", "") or getattr(entry, "description", ""))
             summary = re.sub(r"<[^>]+>", " ", summary)
-            summary = re.sub(r"\s+", " ", summary).strip()[:500]
+            summary = re.sub(r"\s+", " ", summary).strip()
             link = getattr(entry, "link", "")
             image = extract_image(entry)
+
+            # 抓取全文
+            content = ""
+            if link:
+                if not first_request:
+                    time.sleep(request_delay)
+                first_request = False
+                content = scrape_article_text(link, src["cat"])
+
             all_items.append({
                 "title": title,
                 "source": src["name"],
                 "cat": src["cat"],
                 "summary": summary,
-                "content": "",
+                "content": content,
                 "link": link,
                 "image": image,
             })
@@ -181,69 +193,128 @@ def fetch_headlines(sources, recent_titles=None, max_per_source=1):
     return all_items
 
 
-def translate_and_vocab(item: dict, config: dict):
-    """AI 翻译标题+正文片段，并提取 5 个四六级高频词汇"""
-    client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
-    body = (item.get("content") or item.get("summary") or "")[:1800]
-    prompt = f"""你是一名中英双语新闻编辑。请处理以下英文新闻：
+def split_text_by_length(text: str, max_chars: int = 1500) -> list:
+    """把长文本按长度拆成多块，优先在换行或句号处切分"""
+    if not text:
+        return []
+    chunks = []
+    remaining = text
+    while len(remaining) > max_chars:
+        # 在 max_chars 范围内找最后一个换行
+        cut = remaining.rfind("\n", 0, max_chars)
+        if cut == -1:
+            # 没找到换行，找句号加空格
+            cut = remaining.rfind(". ", 0, max_chars)
+            if cut == -1:
+                # 还是没找到，硬切
+                cut = max_chars
+            else:
+                cut += 2  # 把 ". " 一起带上
+        else:
+            cut += 1  # 把换行符一起带上
+        chunk = remaining[:cut].strip()
+        if chunk:
+            chunks.append(chunk)
+        remaining = remaining[cut:].strip()
+    if remaining:
+        chunks.append(remaining)
+    return chunks
 
-标题：{item['title']}
-正文片段：{body}
 
-请完成两件事，严格按以下格式输出，不要添加任何解释：
-
-【中文标题】
-（将标题翻译成简体中文）
-
-【中文摘要】
-（将正文内容翻译成简体中文，保持原意，3-4句）
-
-【高频词汇】
-1. 英文单词 — 词性. 中文释义
-2. 英文单词 — 词性. 中文释义
-3. 英文单词 — 词性. 中文释义
-4. 英文单词 — 词性. 中文释义
-5. 英文单词 — 词性. 中文释义
-
-词汇必须是这篇文章中实际出现的、四六级考试常见词汇。"""
-
+def _ai_call(client, config, prompt: str, max_tokens: int = 2000) -> str:
+    """调用 AI，返回文本；失败返回空字符串"""
     try:
         resp = client.chat.completions.create(
             model=config["openai_model"],
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            max_tokens=600,
+            max_tokens=max_tokens,
         )
-        content = resp.choices[0].message.content.strip()
-        return parse_translation(content)
+        return (resp.choices[0].message.content or "").strip()
     except Exception as e:
-        print(f"   ⚠️ 翻译失败: {e}")
+        print(f"   ⚠️ AI 调用失败: {e}")
+        return ""
+
+
+def _parse_vocab(raw: str) -> list:
+    """把 AI 返回的词汇文本解析成列表，最多 5 条"""
+    vocab = []
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        # 去掉可能的编号前缀，如 "1. "、"1、"、"1)"
+        line = re.sub(r"^\d+\s*[\.、\)]\s*", "", line)
+        if line:
+            vocab.append(line)
+        if len(vocab) >= 5:
+            break
+    return vocab
+
+
+def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
+    """AI 翻译标题+正文（分段翻译），并提取 5 个四六级高频词汇"""
+    client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
+
+    title = (item.get("title") or "").strip()
+    body = (item.get("content") or item.get("summary") or "").strip()
+
+    if not title and not body:
         return "", "", []
 
+    # ---------- 1. 翻译标题 ----------
+    title_prompt = f"""你是中英双语新闻编辑。请把下面的英文新闻标题翻译成简体中文。
 
-def parse_translation(content: str):
-    """解析 AI 返回的翻译结果"""
-    zh_title = ""
-    zh_summary = ""
-    vocab = []
+要求：
+- 只输出译文，不要添加任何解释、引号、前缀或后缀
+- 保持新闻标题简洁的风格
+- 人名、机构名、产品名等专有名词保留英文原文，只翻译其余部分
 
-    m = re.search(r"【中文标题】\s*\n(.*?)(?=\n\s*【中文摘要】|\Z)", content, re.DOTALL)
-    if m:
-        zh_title = m.group(1).strip()
+英文标题：
+{title}"""
+    zh_title = _ai_call(client, config, title_prompt, max_tokens=300)
 
-    m = re.search(r"【中文摘要】\s*\n(.*?)(?=\n\s*【高频词汇】|\Z)", content, re.DOTALL)
-    if m:
-        zh_summary = m.group(1).strip()
+    # ---------- 2. 翻译正文（拆分后逐块翻译） ----------
+    chunks = split_text_by_length(body, max_chars=max_chars)
+    zh_chunks = []
+    total = len(chunks)
+    for i, chunk in enumerate(chunks, 1):
+        body_prompt = f"""你是中英双语新闻编辑。请把下面的英文新闻正文片段翻译成简体中文。
 
-    m = re.search(r"【高频词汇】\s*\n(.*?)\Z", content, re.DOTALL)
-    if m:
-        for line in m.group(1).strip().split("\n"):
-            line = line.strip()
-            if re.match(r"^\d+\.\s*", line):
-                line = re.sub(r"^\d+\.\s*", "", line).strip()
-                if line:
-                    vocab.append(line)
-    return zh_title, zh_summary, vocab[:5]
+要求：
+- 这是全文的第 {i}/{total} 块，请直接翻译，不要添加任何解释、标题或前缀
+- 忠实原文，不要增删内容，不要概括
+- 保持原文的段落结构，原文有换行的地方译文也要有换行
+- 如果片段以不完整的句子开头或结尾，也请如实翻译，不要自行补全
+
+英文片段：
+{chunk}"""
+        translated = _ai_call(client, config, body_prompt, max_tokens=2000)
+        if translated:
+            zh_chunks.append(translated)
+        else:
+            print(f"   ⚠️ 第 {i}/{total} 段翻译失败，已跳过")
+    zh_body = "\n".join(zh_chunks)
+
+    # ---------- 3. 提取高频词汇 ----------
+    vocab_prompt = f"""你是英语教学编辑。请从下面的英文新闻中提取 5 个四六级考试常见的高频词汇。
+
+要求：
+- 词汇必须是原文中实际出现的，不要凭印象选取
+- 优先选择对四六级考生有学习价值的实词（名词、动词、形容词、副词）
+- 严格按以下格式输出，每行一个，共 5 行，不要添加任何解释或额外文字：
+  英文单词 — 词性缩写. 中文释义
+- 词性缩写用 n. / v. / adj. / adv. / prep. / conj. 等
+
+英文标题：
+{title}
+
+英文正文：
+{body[:3000]}"""
+    vocab_raw = _ai_call(client, config, vocab_prompt, max_tokens=500)
+    vocab = _parse_vocab(vocab_raw)
+
+    return zh_title, zh_body, vocab
 
 
 ARTICLE_CSS = """
@@ -266,7 +337,7 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .article-title-en{font-weight:750;font-size:1.28em;margin:8px 0;line-height:1.4;color:var(--text)}
 .article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
 .article-title-zh{font-weight:750;font-size:1.12em;color:var(--accent2);margin:8px 0}
-.article-summary-zh{white-space:pre-line;font-size:.93em;color:#333;margin:8px 0}
+.article-content-zh{white-space:pre-line;font-size:.93em;color:#333;margin:8px 0}
 .source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
 .article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
 .vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
@@ -349,7 +420,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
     title_en = html_mod.escape(it["title"])
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
     content_en = html_mod.escape(it.get("content") or it.get("summary") or "")
-    summary_zh = html_mod.escape(article["zh_summary"]) if article["zh_summary"] else ""
+    content_zh = html_mod.escape(article["zh_content"]) if article["zh_content"] else ""
     source = html_mod.escape(it["source"])
     hub_link = html_mod.escape(f"{date_file}.html")
     img_html = _image_html(it["image"])
@@ -358,7 +429,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
     safe_date = html_mod.escape(date_str)
 
     translation_heading = f'<h3 class="article-title-zh">{title_zh}</h3>' if title_zh else ""
-    translation_body = f'<div class="article-summary-zh">{summary_zh}</div>' if summary_zh else ""
+    translation_body = f'<div class="article-content-zh">{content_zh}</div>' if content_zh else ""
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -536,7 +607,7 @@ def main():
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    # 1. 读取过去 3 天标题并采集当天头条
+    # 1. 读取过去 3 天标题并采集当天头条（fetch_headlines 内部会抓全文）
     recent_titles, history = load_recent_titles(docs_dir, days=3)
     print(f"📚 最近 3 天标题去重库: {len(recent_titles)} 条")
     print("\n📡 采集 NYT + BBC 头版头条（各 1 篇）…")
@@ -545,25 +616,25 @@ def main():
     if not items:
         raise RuntimeError("未采集到任何新闻")
 
-    # 2. 抓取完整正文
-    print("\n🌐 抓取完整报道正文…")
+    # 2. 检查正文（fetch_headlines 已抓取全文，这里只处理失败回退）
+    print("\n🌐 检查正文抓取结果…")
     for it in items:
-        print(f"   🌐 {it['source']}: {it['title'][:48]}")
-        it["content"] = scrape_article_text(it["link"], it["cat"])
         if not it["content"]:
-            print(f"   ⚠️ 正文抓取为空，回退到 RSS 摘要")
+            print(f"   ⚠️ {it['source']} 正文抓取为空，回退到 RSS 摘要")
             it["content"] = it["summary"]
+        else:
+            print(f"   ✅ {it['source']}: 正文 {len(it['content'])} 字符")
 
     # 3. 每篇文章翻译一次，生成对应子页
     print("\n🤖 AI 翻译 + 提取高频词汇…")
     articles = []
     for it in items:
         print(f"   📄 处理 {it['source']}: {it['title'][:46]}")
-        zh_title, zh_summary, vocab = translate_and_vocab(it, config)
+        zh_title, zh_content, vocab = translate_and_vocab(it, config)
         articles.append({
             "item": it,
             "zh_title": zh_title,
-            "zh_summary": zh_summary,
+            "zh_content": zh_content,
             "vocab": vocab,
         })
         sub_html = build_article_page(articles[-1], date_full, file_date)
