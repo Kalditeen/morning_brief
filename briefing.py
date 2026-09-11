@@ -4,7 +4,7 @@
 每日激活：采集 NYT + BBC 各 1 篇头版头条
 爬取完整正文，AI 翻译为简体中文 + 提取四六级高频词汇
 前端：每日总览页 + NYT/BBC 两个原文子页
-原文优先展示，右下角固定翻译按钮，点击后原文左移、右侧显示译文
+原文优先展示，卡片右上角翻译按钮，点击后卡片横向展开为左右两栏
 通知：企业微信群机器人直推英文原文 + 子页链接
 过去 3 天标题去重，重复时自动换下一篇文章
 """
@@ -64,8 +64,36 @@ def title_key(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", title.lower())
 
 
+def _extract_nyt_content(html: str) -> str:
+    """从 NYT 页面的 window.__preloadedData JSON 中提取完整正文"""
+    match = re.search(
+        r"window\.__preloadedData\s*=\s*(\{.*?\});",
+        html,
+        re.DOTALL,
+    )
+    if not match:
+        return ""
+    try:
+        data_str = match.group(1).replace(":undefined", ":null")
+        data = json.loads(data_str)
+        article = data["initialData"]["data"]["article"]
+        blocks = article["sprinkledBody"]["content"]
+    except (KeyError, json.JSONDecodeError) as e:
+        print(f"   ⚠️ NYT __preloadedData 解析失败: {e}")
+        return ""
+
+    paragraphs = []
+    for block in blocks:
+        if block.get("__typename") == "ParagraphBlock":
+            parts = [cc.get("text", "") for cc in block.get("content", [])]
+            para = "".join(parts).strip()
+            if para:
+                paragraphs.append(para)
+    return "\n".join(paragraphs)
+
+
 def scrape_article_text(url: str, cat: str, max_paragraphs: int = 50) -> str:
-    """抓取并抽取新闻正文，失败时返回空字符串"""
+    """抓取并抽取新闻正文；NYT 走 __preloadedData 解析，其他走原有逻辑"""
     if not url:
         return ""
     try:
@@ -77,6 +105,14 @@ def scrape_article_text(url: str, cat: str, max_paragraphs: int = 50) -> str:
             raw = resp.read()
         charset = resp.headers.get_content_charset() or "utf-8"
         html = raw.decode(charset, errors="ignore")
+
+        # ── 针对 NYT 的特殊处理：优先解析 __preloadedData ──
+        if "nytimes.com" in url:
+            nyt_content = _extract_nyt_content(html)
+            if nyt_content:
+                return nyt_content
+
+        # ── 原有逻辑（BBC 等）──
         soup = BeautifulSoup(html, "html.parser")
         selectors = [
             "section[name='articleBody'] p",
@@ -326,34 +362,43 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
 .back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
 .back-link:hover{text-decoration:underline}
-.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:1180px;margin:0 auto;padding:0 16px 110px;transition:grid-template-columns .25s ease}
-.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
-.original-panel{background:var(--card);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:transform .25s ease}
-.reader.open .original-panel{transform:translateX(0)}
-.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff}
-.reader.open .translation-panel{display:block;animation:slideIn .2s ease}
-@keyframes slideIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+/* 默认：单栏居中，宽度收敛到适合阅读的 880px；展开后：卡片拉长到 1440px，两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+/* 展开状态：两栏各占一半，内边距略收，让窄栏里内容更舒展 */
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
 .article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
-.article-title-en{font-weight:750;font-size:1.28em;margin:8px 0;line-height:1.4;color:var(--text)}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
 .article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
-.article-title-zh{font-weight:750;font-size:1.12em;color:var(--accent2);margin:8px 0}
-.article-content-zh{white-space:pre-line;font-size:.93em;color:#333;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
 .source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
 .article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
 .vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
 .vocab-box strong{font-size:.88em;color:var(--accent)}
 .vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
-.translate-fab{position:fixed;right:20px;bottom:20px;z-index:999;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:12px 18px;border-radius:24px;cursor:pointer;font-size:.88em;font-weight:700;box-shadow:0 8px 24px rgba(102,126,234,.4);transition:.2s}
-.translate-fab:hover{transform:translateY(-2px)}
 .footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
 .footer a{color:var(--accent)}
+@media(max-width:980px){
+.reader.open{grid-template-columns:1fr;gap:16px;max-width:880px}
+.reader.open .translation-panel{animation:none}
+}
 @media(max-width:760px){
 .header{margin:16px 8px 16px;padding:20px}
-.reader{padding:0 8px 100px}
+.reader{padding:0 8px 40px}
 .original-panel,.translation-panel{padding:18px}
-.reader.open{grid-template-columns:1fr;gap:16px}
-.reader.open .translation-panel{animation:none}
+.reader.open .original-panel,.reader.open .translation-panel{padding:18px}
 }
 """
 
@@ -415,7 +460,7 @@ def _vocab_html(vocab: list) -> str:
 
 
 def build_article_page(article: dict, date_str: str, date_file: str) -> str:
-    """生成单篇文章原文子页：原文优先，右下角按钮切换右栏翻译"""
+    """生成单篇文章原文子页：默认单栏居中，点击右上角按钮后卡片横向拉长、左右两栏对照"""
     it = article["item"]
     title_en = html_mod.escape(it["title"])
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
@@ -450,20 +495,24 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 </div>
 <main class="reader" id="reader">
 <section class="original-panel">
+<div class="panel-header">
 <span class="source-badge">{source}</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
 <h2 class="article-title-en">{title_en}</h2>
 {img_html}
 <div class="article-body">{content_en}</div>
 <div class="article-meta">已抓取完整报道并保存在本站</div>
 </section>
 <section class="translation-panel">
+<div class="panel-header">
 <span class="source-badge">中文翻译</span>
+</div>
 {translation_heading}
 {translation_body}
 {vocab_html}
 </section>
 </main>
-<button class="translate-fab" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
 <div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
 <script>{ARTICLE_JS}</script>
 </body>
