@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年09月13日 周日 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="I turned off my algorithm for 24 hours. Is this how social media used to be?">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年09月13日 周日</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年09月13日 周日 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-09-13.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">I turned off my algorithm for 24 hours. Is this how social media used to be?</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/4c2b563e667cc8974ed5cc26b221538708d28d3d/600_0_6827_5464/master/6827.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=e59a40f2a17d2bb570b9efc7852d2c4e" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">I have a confession. I love my social media algorithm. It is a perfectly curated window into my insane and inquiring mind. It knows precisely which videos will tickle me and which memes will gently distract me from the slow collapse of humankind.
+On Tuesday the Australian government announced “world-leading” reforms that would force social media platforms to allow users to opt-out of algorithms, dubbed “my feed, my way” . On the same day, I was delighted to be confronted with a video on Instagram of a woman accidentally spilling a bucket of eels on a Chinese train. Dozens of eels slithered among the passengers, who appeared not as surprised as I would have expected.
+In bed that night, after sending the video to several friends and watching it multiple times, I lamented to my partner how I would find content like this if my accounts weren’t at the whim of the algorithm gods. “You can still search for eels,” he said. But would it be the same?
+So, for 24 hours, I decided to manually turn off my algorithm via little-known settings on Instagram to get a sense of how the reforms might change my feed. This feature – accessed simply by tapping on the Instagram logo at the top of the home screen – allows you to limit your feed to posts from accounts you are following, in chronological order. This is basically what social media feeds, including Facebook, looked like when they started.
+Would I be thrust back into the old days of social media, to how things were before artificial intelligence and Elon Musk bought Twitter and everything became an ad?
+As a reminder of how things used to be, I scroll back to my first posts on Instagram and find sepia-heavy pictures of trees, gigs and friends. “The SKY,” says one, simply showing a sunset.
+I am gripped with nostalgia for 2012, when all my posts got eight likes and no comments and I only followed two dozen close friends from school.
+For a truly “authentic” social media experience, I trawl through my contacts and unfollow any account that isn’t a person I have met in real life. It is refreshing to unfollow news accounts, and politicians, but sad to let go of funny influencers and meme accounts and chefs.
+“Goodbye, Ottolenghi,” I think wistfully. “Farewell, woman from Dallas Cowboys cheerleaders.” In total, about 100 accounts get the axe. I refresh my feed, and it only takes about 10 minutes of scrolling to run out of content to look at.
+For the first time in years, Instagram informs me I have reached the “End of following”. “There are no more posts from accounts that you follow from the past 30 days,” it says.
+I am floored and unmoored. Each time I refresh my feed for the next few hours, there is nothing new for me to mindlessly scroll. Instinctively, I keep clicking on the app but it’s futile. Is this how social media used to be? A tool to communicate with people rather than a way to remain constantly distracted?
+What disturbs me, though, scrolling through a feed that should theoretically be made up of friends and family updating me about nice moments in their lives, is that it still feels hollow and impersonal.
+Mostly, people are using it for self-promotion, whether it be posting about something they’ve published, projects they’ve done, brand partnerships or attempts to “go viral”. The only ones who seem to be using social media as it used to be are my mum and her friends, who still upload happy snaps with abandon. This is soothing but also very boring. And do I really need to know or care that someone I met backpacking in 2015 is appearing at an art festival in Amsterdam?
+During my lunch break, instead of hitting the apps, I read my book and look at my surroundings. It’s nice. Maybe the solution is not to opt out of algorithms but to opt out of social media altogether.
+The justification for turning off algorithm-driven content makes sense. The federal government and many experts have raised concerns about how dangerous and divisive content can be pushed into people’s feeds, drawing them further and further into rabbit holes.
+I have watched on with concern as figures from the “manosphere” gain traction across the world alongside the rise of far-right parties, and how thinness appears to be the new norm in Hollywood, with eating disorder content proliferating on X, TikTok and Instagram.
+Thankfully, this has not been my social media experience. According to Instagram’s AI summary of my algorithm, a little-known feature of the app, I enjoy “community events” and “saving furry friends”, with a particular penchant for content related to the “Sydney food scene” and, somewhat vaguely, “Australia” (click on the reels icon and then the double-heart symbol in the top-right corner to see yours).
+My “For You” page is a haphazard collection of animals, food and gossip about reality TV. The top posts are an old man who summarises the latest episodes of Below Deck Mediterranean, a dachshund being pet with a spatula and someone making a cake with the face of Edward Cullen. It knows me so well!
+But is this healthy? Do I really need to spend my time watching AI-generated dogs dancing in the shower, or marvelling at a man attempting to eat an extremely gigantic cone of soft-serve ice-cream? After 24 hours switching off, my conclusion? It’s numbing my brain and turning my own thoughts into slop.
+Thanks to a little-known feature in Instagram, I try to travel back to 2012 – before everything on the internet was an ad
+Follow our Australia news live blog for latest updates
+Get our breaking news email , free app or daily news podcast</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">我关闭算法24小时。社交媒体以前就是这样吗？</h3>
+<div class="article-content-zh">我要坦白一件事。我爱我的社交媒体算法。它是一扇精心策展的窗口，映照出我疯狂而好奇的内心。它精确地知道哪些视频会让我发笑，哪些梗图能温柔地把我从人类缓慢崩塌的现实中分散开去。
+
+周二，澳大利亚政府宣布了“世界领先”的改革措施，将强制社交媒体平台允许用户选择退出算法，这项改革被称为“我的信息流，我做主”。同一天，我很高兴在Instagram上刷到一个视频：一名女子在中国的高铁上不小心打翻了一桶鳗鱼。几十条鳗鱼在乘客之间滑来滑去，而乘客们看起来并没有我预想中那么惊讶。
+
+那天晚上躺在床上，我把视频发给了好几个朋友，又反复看了好几遍，然后向伴侣感叹：如果我的账号不由算法之神任意摆布，我怎么能刷到这样的内容呢。“你还是可以搜鳗鱼啊，”他说。但那能一样吗？
+
+于是，在24小时里，我决定通过Instagram上一个鲜为人知的设置手动关闭算法，感受一下这些改革可能会如何改变我的信息流。这个功能——只需点击主页顶部的Instagram标志即可进入——可以让你把信息流限制为只看你关注的账号发布的帖子，按时间顺序排列。这基本上就是社交媒体信息流（包括Facebook）最初的样子。
+我会不会一下子被拽回过去那种社交媒体时代，回到人工智能出现之前、埃隆·马斯克收购Twitter之前、一切都变成广告之前的样子？
+为了提醒自己过去是什么样，我翻回到我在Instagram上最早发的那些帖子，看到大量深褐色调的照片，拍的是树、演出现场和朋友。“天空，”其中一条只配了一张日落图，文字就写了这两个字。
+我深深怀念起2012年，那时我的每条帖子只有8个赞，没有评论，而且我只关注了二十几个在学校里关系亲近的朋友。
+为了获得真正“原汁原味”的社交媒体体验，我把联系人翻了个遍，取关了所有不是我在现实生活中见过的人。取关新闻账号和政客让人神清气爽，但放弃那些有趣的网红、梗图账号和厨师账号又让人难过。
+“再见，奥托伦吉，”我怅然地想。“再会了，达拉斯牛仔队啦啦队的那位女士。”总共有大约100个账号被我砍掉。我刷新了一下信息流，只滑了大约10分钟，就没有内容可看了。
+多年来头一次，Instagram提示我，我已经刷到了“关注列表的尽头”。上面写着：“过去30天里，你关注的账号没有更多帖子了。”
+我既震惊又茫然。接下来几个小时里，每次我刷新信息流，都没有任何新内容可以让我无意识地往下滑。我本能地不停点开这个应用，但都是徒劳。难道过去的社交媒体就是这样吗？一个用来与人交流的工具，而不是一种让人持续分心的方式？
+但让我不安的是，当我刷着一个理论上应该由朋友和家人分享生活中美好时刻的动态时，它仍然感觉空洞而缺乏人情味。
+大多数人都用它来自我宣传，无论是发布他们发表的作品、完成的项目、品牌合作，还是试图“走红”。唯一似乎还在像过去那样使用社交媒体的人是我妈妈和她的朋友们，她们仍然毫无顾忌地上传快乐的照片。这让人感到安慰，但也非常无聊。而且，我真的需要知道或关心某个2015年背包旅行时认识的人正在阿姆斯特丹的一个艺术节上露面吗？
+午休时间，我没有刷这些应用，而是读书、观察周围的环境。感觉很好。也许解决办法不是关闭算法，而是彻底退出社交媒体。
+关闭算法驱动内容的理由是合理的。联邦政府和许多专家已经对危险和分裂性内容如何被推送到人们的信息流中、将他们越拉越深地引入兔子洞表示担忧。
+我忧心忡忡地看着“男性圈”人物在全世界获得关注，与此同时极右翼政党崛起；看着骨感似乎成为好莱坞的新常态，而饮食失调内容在X、TikTok和Instagram上泛滥。
+所幸，这并非我的社交媒体体验。根据Instagram对我算法的一份AI摘要——这是该应用一个鲜为人知的功能——我喜爱“社区活动”和“救助毛孩子”，尤其偏爱与“悉尼美食圈”相关的内容，以及略显笼统的“澳大利亚”（点击Reels图标，再点右上角的双心符号，就能看到你自己的摘要）。
+
+我的“为你推荐”页面是一堆杂乱无章的动物、美食和真人秀八卦。排在最前面的帖子包括：一位老人总结《地中海甲板之下》最新一集、一只腊肠犬被锅铲抚摸，以及有人做了一块印有爱德华·卡伦面孔的蛋糕。它可太懂我了！
+
+但这健康吗？我真的需要把时间花在看AI生成的狗在淋浴间跳舞，或者惊叹于一个男人试图吃掉一个巨大无比的甜筒冰淇淋上吗？在断网24小时后，我的结论是？它正在麻痹我的大脑，把我自己的思绪变成一滩烂泥。
+
+多亏了Instagram上一个鲜为人知的功能，我试着穿越回2012年——那时互联网上还没有铺天盖地的广告。
+
+关注我们的澳大利亚新闻实时博客，获取最新更新
+
+订阅我们的突发新闻邮件、免费应用或每日新闻播客</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">algorithm — n. 算法</span>
+<span class="vocab-item">curated — adj. 精心策划的；精选的</span>
+<span class="vocab-item">opt-out — n. 选择退出</span>
+<span class="vocab-item">chronological — adj. 按时间顺序的</span>
+<span class="vocab-item">nostalgia — n. 怀旧；念旧</span></div></div>
+</section>
+</main>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-13 08:40</div>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+</script>
+</body>
+</html>

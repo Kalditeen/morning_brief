@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-09",
-      "cat": "nytimes",
-      "title": "Dueling Court Rulings Leave Missouri’s Congressional Races in Chaos"
-    },
-    {
-      "date": "2026-09-09",
-      "cat": "bbc",
-      "title": "UK announces sanctions on West Bank settlements prompting furious Israeli response"
-    },
-    {
       "date": "2026-09-10",
       "cat": "nytimes",
       "title": "Trump’s Census Overhaul Would Exclude Some Immigrants and Remove Questions on Race"
@@ -69,6 +59,36 @@
       "date": "2026-09-12",
       "cat": "bbc",
       "title": "Reform receives record £36m donation from crypto billionaire"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "guardian",
+      "title": "Six Nigerians extradited to US over $6m online romance scam"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "guardian-tech",
+      "title": "I turned off my algorithm for 24 hours. Is this how social media used to be?"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "guardian-env",
+      "title": "Chemical companies reach $455m settlement with North Carolina over ‘forever chemicals’ claims"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "guardian-science",
+      "title": "‘One of the biggest discoveries in science’: have scientists found dark matter? – podcast"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "guardian-business",
+      "title": "Global bond sell-off resumes as surging oil prices stoke fears about inflation"
+    },
+    {
+      "date": "2026-09-13",
+      "cat": "bbc",
+      "title": "Anthropic boss Dario Amodei calls for AI development to slow down"
     }
   ]
 }
