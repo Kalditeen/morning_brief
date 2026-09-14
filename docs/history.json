@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-10",
-      "cat": "nytimes",
-      "title": "Trump’s Census Overhaul Would Exclude Some Immigrants and Remove Questions on Race"
-    },
-    {
-      "date": "2026-09-10",
-      "cat": "bbc",
-      "title": "Police launch criminal investigation into Reform UK donations"
-    },
-    {
       "date": "2026-09-11",
       "cat": "nytimes",
       "title": "Behind the Scenes, Vance Gathered Unvarnished Views of the Iran War"
@@ -89,6 +79,16 @@
       "date": "2026-09-13",
       "cat": "bbc",
       "title": "Anthropic boss Dario Amodei calls for AI development to slow down"
+    },
+    {
+      "date": "2026-09-14",
+      "cat": "guardian",
+      "title": "Canada offers air defense support for Ukraine as Zelenskyy visits"
+    },
+    {
+      "date": "2026-09-14",
+      "cat": "bbc-tech",
+      "title": "Why are there concerns AI could threaten humanity, and how real are they?"
     }
   ]
 }
