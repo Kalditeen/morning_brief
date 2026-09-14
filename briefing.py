@@ -165,7 +165,13 @@ def load_config():
         "wechat_webhook": os.environ.get("WECHAT_WEBHOOK_URL", "").strip(),
         "openai_api_key": os.environ.get("OPENAI_API_KEY", "").strip(),
         "openai_base_url": os.environ.get("OPENAI_BASE_URL") or "https://integrate.api.nvidia.com/v1",
-        "openai_model": os.environ.get("OPENAI_MODEL") or "meta/llama-3.1-8b-instruct",
+        "openai_model": os.environ.get("OPENAI_MODEL") or "meta/llama-3.3-70b-instruct",
+        "openai_fallback_models": [m.strip() for m in os.environ.get("OPENAI_FALLBACK_MODELS", "").split(",") if m.strip()] or [
+            "nvidia/llama-3.1-nemotron-70b-instruct",
+            "meta/llama-3.1-8b-instruct",
+            "deepseek-ai/deepseek-r1",
+            "qwen/qwen3-235b-a22b-instruct-2507",
+        ],
     }
 
 
@@ -361,18 +367,35 @@ def split_text_by_length(text: str, max_chars: int = 1500) -> list:
 
 
 def _ai_call(client, config, prompt: str, max_tokens: int = 2000) -> str:
-    """调用 AI，返回文本；失败返回空字符串"""
-    try:
-        resp = client.chat.completions.create(
-            model=config["openai_model"],
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.3,
-            max_tokens=max_tokens,
-        )
-        return (resp.choices[0].message.content or "").strip()
-    except Exception as e:
-        print(f"   ⚠️ AI 调用失败: {e}")
-        return ""
+    """调用 AI，主模型 410 下线时自动切换备用模型"""
+    models = [config["openai_model"]] + config.get("openai_fallback_models", [])
+    tried = set()
+    last_error = None
+    for model in models:
+        if model in tried:
+            continue
+        tried.add(model)
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3,
+                max_tokens=max_tokens,
+            )
+            result = (resp.choices[0].message.content or "").strip()
+            if model != config["openai_model"]:
+                print(f"   🔁 已切换可用模型: {model}")
+                config["openai_model"] = model
+            return result
+        except Exception as e:
+            last_error = e
+            status = getattr(e, "status_code", None)
+            if status != 410 and "410" not in str(e):
+                print(f"   ⚠️ AI 调用失败({model}): {e}")
+                break
+            print(f"   ⚠️ 模型已下线，跳过: {model}")
+    print(f"   ⚠️ AI 调用失败: {last_error}")
+    return ""
 
 
 def _parse_vocab(raw: str) -> list:
