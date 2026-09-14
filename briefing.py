@@ -168,7 +168,6 @@ def load_config():
         "openai_model": os.environ.get("OPENAI_MODEL") or "meta/llama-3.3-70b-instruct",
         "openai_fallback_models": [m.strip() for m in os.environ.get("OPENAI_FALLBACK_MODELS", "").split(",") if m.strip()] or [
             "nvidia/llama-3.1-nemotron-70b-instruct",
-            "meta/llama-3.1-8b-instruct",
             "deepseek-ai/deepseek-r1",
             "qwen/qwen3-235b-a22b-instruct-2507",
         ],
