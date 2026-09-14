@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 晨间双语头条 · GitHub Actions 版
-每日激活：采集 Guardian + BBC 各 1 篇头版头条
+每日激活：轮换领域采集 Guardian + BBC 各 1 篇头条
 爬取完整正文，AI 翻译为简体中文 + 提取四六级高频词汇
 前端：每日总览页 + 原文子页；桌面端左右分栏，移动端标签切换
-通知：企业微信群机器人直推英文原文 + 子页链接
+通知：企业微信群机器人只推送新闻标题 + 子页链接
 过去 3 天标题去重，重复时自动换下一篇文章
 """
 
@@ -51,11 +51,83 @@ SOURCES = [
         "cat": "guardian-business",
     },
     {
-        "name": "BBC News",
-        "url": "http://feeds.bbci.co.uk/news/rss.xml",
-        "cat": "bbc",
+        "name": "BBC News (国际)",
+        "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+        "cat": "bbc-world",
+    },
+    {
+        "name": "BBC News (科技)",
+        "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+        "cat": "bbc-tech",
+    },
+    # BBC 官方将环境与科学合并在同一个 RSS，因此这里拆成两个轮换槽位，但订阅源相同
+    {
+        "name": "BBC News (环境)",
+        "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+        "cat": "bbc-env",
+    },
+    {
+        "name": "BBC News (科学)",
+        "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+        "cat": "bbc-science",
+    },
+    {
+        "name": "BBC News (商业)",
+        "url": "http://feeds.bbci.co.uk/news/business/rss.xml",
+        "cat": "bbc-business",
     },
 ]
+
+# ── 每日领域轮换：国际、科技、环境、科学、商业 ──
+# 前 5 个槽位给卫报，后 5 个槽位给 BBC；BBC 段整体向后错一位，保证 5+x 永不同领域。
+DOMAIN_CYCLE = [
+    {"cat": "guardian", "label": "国际"},
+    {"cat": "guardian-tech", "label": "科技"},
+    {"cat": "guardian-env", "label": "环境"},
+    {"cat": "guardian-science", "label": "科学"},
+    {"cat": "guardian-business", "label": "商业"},
+    {"cat": "bbc-tech", "label": "科技"},
+    {"cat": "bbc-env", "label": "环境"},
+    {"cat": "bbc-science", "label": "科学"},
+    {"cat": "bbc-business", "label": "商业"},
+    {"cat": "bbc-world", "label": "国际"},
+]
+
+GUARDIAN_SLOTS = DOMAIN_CYCLE[:5]
+BBC_SLOTS = DOMAIN_CYCLE[5:]
+DOMAIN_LABEL_BY_CAT = {slot["cat"]: slot["label"] for slot in DOMAIN_CYCLE}
+
+
+def source_domain_label(src: dict) -> str:
+    """返回信源当前轮换槽位的领域名称"""
+    return DOMAIN_LABEL_BY_CAT.get(src.get("cat", ""), src.get("cat", "未知"))
+
+
+def rotate_slots(slots: list, start: int) -> list:
+    """从指定位置开始，返回循环后的槽位顺序"""
+    if not slots:
+        return []
+    start %= len(slots)
+    return slots[start:] + slots[:start]
+
+
+def daily_source_orders(sources: list, day=None):
+    """按星期为卫报选 x 槽位，为 BBC 选 5+x 槽位"""
+    day = day or now_bj()
+    by_cat = {s["cat"]: s for s in sources}
+    x = day.weekday() % 5
+    guardian_order = [
+        by_cat[slot["cat"]]
+        for slot in rotate_slots(GUARDIAN_SLOTS, x)
+        if slot["cat"] in by_cat
+    ]
+    bbc_order = [
+        by_cat[slot["cat"]]
+        for slot in rotate_slots(BBC_SLOTS, x)
+        if slot["cat"] in by_cat
+    ]
+    return guardian_order, bbc_order
+
 
 # ── 四六级常考话题关键词（标题粗筛）──
 RELEVANT_KEYWORDS = [
@@ -251,6 +323,18 @@ def fetch_headlines(sources, recent_titles=None, max_per_source=1, request_delay
     return all_items
 
 
+def fetch_first_from_group(sources: list, recent_titles: set, exclude_domains=None) -> dict:
+    """按给定轮换顺序，从信源组中抓取第一篇可用新闻"""
+    exclude_domains = exclude_domains or set()
+    for src in sources:
+        if exclude_domains and source_domain_label(src) in exclude_domains:
+            continue
+        items = fetch_headlines([src], recent_titles=recent_titles, max_per_source=1)
+        if items:
+            return items[0]
+    return None
+
+
 def split_text_by_length(text: str, max_chars: int = 1500) -> list:
     """把长文本按长度拆成多块，优先在换行或句号处切分"""
     if not text:
@@ -404,6 +488,21 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
 .footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
 .footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(25vh + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:25vh;display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:pointer;font:inherit}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
 /* 移动端标签栏：默认隐藏 */
 .mobile-tabs{display:none}
 /* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
@@ -439,6 +538,10 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .reader .translation-panel,
 .reader.open .original-panel,
 .reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(25vh + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
 }
 """
 
@@ -459,6 +562,15 @@ function switchTab(tab){
   var reader=document.getElementById('reader');
   reader.setAttribute('data-active-tab',tab);
   updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
 }
 function updateTabs(){
   var reader=document.getElementById('reader');
@@ -520,7 +632,7 @@ def _vocab_html(vocab: list) -> str:
 
 
 def build_article_page(article: dict, date_str: str, date_file: str) -> str:
-    """生成单篇文章子页：桌面端左右分栏；移动端标签切换"""
+    """生成单篇文章子页：保留原分栏/标签方案，并增加底部中文浮窗"""
     it = article["item"]
     title_en = html_mod.escape(it["title"])
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
@@ -547,7 +659,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 <title>{source} | {safe_date}</title>
 <style>{ARTICLE_CSS}</style>
 </head>
-<body>
+<body class="drawer-open">
 <div class="header">
 <h1>📰 晨间双语头条</h1>
 <p class="subtitle">{safe_date} · {source}</p>
@@ -577,6 +689,18 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 {vocab_html}
 </section>
 </main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" onclick="toggleDrawer()" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+{translation_heading}
+{translation_body}
+{vocab_html}
+</div>
+</aside>
 <div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
 <script>{ARTICLE_JS}</script>
 </body>
@@ -612,7 +736,7 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta property="og:title" content="📰 晨间双语头条 | {safe_date}">
-<meta property="og:description" content="卫报 + BBC 头版头条，双语对照，四六级词汇">
+<meta property="og:description" content="卫报 1 篇 + BBC 1 篇，领域每日轮换，双语对照，四六级词汇">
 <meta property="og:type" content="article">
 <title>晨间双语头条 | {safe_date}</title>
 <style>{INDEX_CSS}</style>
@@ -620,7 +744,7 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 <body>
 <div class="header">
 <h1>📰 晨间双语头条</h1>
-<p class="subtitle">{safe_date} · 每日 2 篇：卫报 + BBC</p>
+<p class="subtitle">{safe_date} · 卫报 1 篇 + BBC 1 篇 · 领域每日轮换</p>
 </div>
 <main class="main">
 {cards_html}
@@ -631,18 +755,21 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 
 
 def build_wechat_message(articles: list, date_str: str, date_file: str) -> str:
-    """微信简报直接展示英文原文摘要，并附两个子页链接"""
-    lines = [f"📰 晨间双语头条 | {date_str}"]
-    for article in articles:
+    """微信简报只展示新闻标题和链接，不附带正文内容"""
+    divider = "━━━━━━━━━━━━━━━━"
+    lines = [
+        "📰 **晨间双语头条**",
+        f"🗓 {date_str}",
+        divider,
+    ]
+    for idx, article in enumerate(articles, 1):
         it = article["item"]
         subpage_url = f"{CDN_BASE}/{date_file}-{it['cat']}.html"
-        body = (it.get("content") or it.get("summary") or "")[:420]
-        lines.append("")
-        lines.append(f"**{it['source']}**")
-        lines.append(it["title"])
-        if body:
-            lines.append(body)
+        source_emoji = "📺" if it.get("cat", "").startswith("bbc") else "🗞️"
+        lines.append(f"{source_emoji} **{idx}. {it['title']}**")
         lines.append(f"🔗 [查看双语原文]({subpage_url})")
+        lines.append("")
+        lines.append(divider)
     return "\n".join(lines)
 
 
@@ -722,8 +849,21 @@ def main():
 
     recent_titles, history = load_recent_titles(docs_dir, days=3)
     print(f"📚 最近 3 天标题去重库: {len(recent_titles)} 条")
-    print("\n📡 采集 Guardian + BBC 头版头条（各 1 篇）…")
-    items = fetch_headlines(SOURCES, recent_titles=recent_titles, max_per_source=1)
+    print("\n📡 选择今日 Guardian + BBC 领域（各 1 篇）…")
+    guardian_order, bbc_order = daily_source_orders(SOURCES)
+    print(f"   Guardian 领域轮换: {' → '.join(source_domain_label(s) for s in guardian_order)}")
+    print(f"   BBC 领域轮换:     {' → '.join(source_domain_label(s) for s in bbc_order)}")
+
+    guardian_item = fetch_first_from_group(guardian_order, recent_titles)
+    bbc_item = fetch_first_from_group(
+        bbc_order,
+        recent_titles,
+        exclude_domains={source_domain_label(guardian_item)} if guardian_item else None,
+    )
+    if bbc_item is None:
+        bbc_item = fetch_first_from_group(bbc_order, recent_titles)
+
+    items = [it for it in (guardian_item, bbc_item) if it]
     print(f"📊 共采集 {len(items)} 篇")
     if not items:
         raise RuntimeError("未采集到任何新闻")
