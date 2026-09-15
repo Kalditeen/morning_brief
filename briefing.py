@@ -389,10 +389,12 @@ def _ai_call(client, config, prompt: str, max_tokens: int = 2000) -> str:
         except Exception as e:
             last_error = e
             status = getattr(e, "status_code", None)
-            if status != 410 and "410" not in str(e):
+            retryable = status in {404, 410} or "404" in str(e) or "410" in str(e)
+            if not retryable:
                 print(f"   ⚠️ AI 调用失败({model}): {e}")
                 break
-            print(f"   ⚠️ 模型已下线，跳过: {model}")
+            reason = "已下线" if status == 410 or "410" in str(e) else "当前账号不可用"
+            print(f"   ⚠️ 模型{reason}，继续尝试下一个: {model}")
     print(f"   ⚠️ AI 调用失败: {last_error}")
     return ""
 
@@ -511,11 +513,12 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
 .footer a{color:var(--accent)}
 /* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
-body.drawer-open .reader{padding-bottom:calc(25vh + 76px)}
-.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:25vh;display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
 .translation-drawer.collapsed{height:46px}
 .translation-drawer.collapsed .drawer-content{display:none}
-.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:pointer;font:inherit}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
 .drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
 .drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
 .drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
@@ -560,7 +563,7 @@ body.drawer-open .reader{padding-bottom:calc(25vh + 76px)}
 .reader .translation-panel,
 .reader.open .original-panel,
 .reader.open .translation-panel{padding:18px}
-body.drawer-open .reader{padding-bottom:calc(25vh + 68px)}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
 .translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
 .drawer-handle{padding:0 12px}
 .drawer-content{padding:12px 16px 18px}
@@ -594,6 +597,44 @@ function toggleDrawer(){
   var txt=btn.querySelector('.drawer-toggle-text');
   if(txt){txt.textContent=collapsed?'展开':'收起';}
 }
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
 function updateTabs(){
   var reader=document.getElementById('reader');
   var active=reader.getAttribute('data-active-tab')||'original';
@@ -607,6 +648,7 @@ function updateTabs(){
   }
 }
 updateTabs();
+initDrawerResize();
 """
 
 INDEX_CSS = """
@@ -712,7 +754,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 </section>
 </main>
 <aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
-<button class="drawer-handle" id="drawerToggle" type="button" onclick="toggleDrawer()" aria-expanded="true">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
 <span class="drawer-grip"></span>
 <span class="drawer-title">🇨🇳 中文翻译</span>
 <span class="drawer-toggle-text">收起</span>
