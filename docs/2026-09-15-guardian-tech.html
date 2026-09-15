@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年09月15日 周二 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="AI-linked stocks slide after tech bosses call for slowdown in ‘reckless’ development">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年09月15日 周二</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(25vh + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:25vh;display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:pointer;font:inherit}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(25vh + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年09月15日 周二 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-09-15.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">AI-linked stocks slide after tech bosses call for slowdown in ‘reckless’ development</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/9bbe355703cc6582b5706d62aed9afb01a1e0061/89_0_4604_3681/master/4604.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=deac2ee8a316dfc74c54871026813f42" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">AI -linked stocks tumbled on Monday after the bosses of Anthropic, OpenAI and SpaceX called for a slowdown in AI “reckless” development , citing fears the technology could soon run out of control.
+Shares in the semiconductor designer Nvidia – the world’s most valuable company – were down 3.3% by market closing in New York City, while Advanced Micro Devices (AMD) slid 4% and Micron Technology and Sandisk shares slumped by 5%. The tech-heavy Nasdaq index fund was down 0.5% by the end of the day.
+The sell-off came after the chief executive of Anthropic, Dario Amodei, appealed at the weekend for the AI industry to “slow down” .
+However, Donald Trump dismissed calls to increase controls on AI as a “sick conspiracy”.
+In a social media post on Monday, the president wrote: “The only control or ‘guardrails’ that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT, and the USA has that, in spades!”
+The president added that his administration had “stopped AI ‘people’ from doing bad, or potentially bad, ‘things,’ like Dario (Anthropic!)”.
+“There is a SICK conspiracy going on against AI and Data Centers, and the only one that is happy about it is China. WHOEVER WINS AI, WINS!”, he wrote.
+Trump offered a similar assessment when he called Nvidia chief, Jensen Huang, while the executive was on stage at an AI conference in California on Monday.
+“It’s a hoax,” Trump said via speaker phone to the audience. “The robots are not going to be taking over the world. That’s not going to happen.”
+The UN security council, meanwhile, is planning to hold a meeting on AI next week as international concern rises, Agence France-Presse reported on Monday.
+Shares in SoftBank, a Japanese investor that is a big backer of OpenAI , slumped 13%, while the South Korean Kospi stock index, which relies heavily on chipmakers that supply AI companies, dropped by 3%.
+Shares in the big global microchip supplier Taiwan Semiconductor Manufacturing Company dropped 1.2%.
+In Europe, shares in the Dutch tech manufacturer ASML, Europe’s biggest company by value and an important supplier for the semiconductor industry, slumped by 6%.
+There was, however, a rally in shares that have been threatened by the rise of AI, including the advertising group WPP, which rose by 5% in London, and the analytics business Relx, which was also up 5%. The latter had suffered a sharp fall earlier this year after Anthropic launched a suite of new data and automation tools.
+Amodei has said that “building too fast is reckless”, warning that a swarm of AI agents could cause hundreds of billions of dollars of damage by “taking over the entire internet” in future.
+His claims have been disputed by some experts , but on Monday investors began to price in a slowdown that would make it harder for the industry to pay for hundreds of billions of dollar in investments in AI infrastructure.
+The OpenAI CEO, Sam Altman, the Google DeepMind chief, Demis Hassabis, and SpaceX boss, Elon Musk, all posted support for Amodei’s essay on slowing AI development, titled “We Must Pace the Frontier”.
+Altman added that he would match Amodei’s commitment to embedding outside evaluators within his company to verify safety practices.
+Sign up to Business Today
+Get set for the working day – we&#x27;ll point you to all the business news and analysis you need every morning
+after newsletter promotion
+And Jack Clark, an Anthropic co-founder, told the BBC an AI “kill switch” that could be triggered by a third party may be necessary to prevent catastrophe.
+Fears continue to grow over the rapid pace and lack of regulation in AI development. On Monday, a cross-party group of UK MPs and peers identified a series of human rights risks posed by AI , arguing that no country in the world had laws sufficient to contain them.
+Meanwhile, China’s top intelligence official warned that the use of AI by adversaries could pose a risk to the country’s political and social security.
+Chen Yixin wrote in a government outlet on Sunday that advanced US models such as Anthropic’s Mythos and OpenAI’s GPT-5.5-Cyber could pose serious risks to Beijing’s critical information ​infrastructure, and called for a comprehensive strengthening of AI security.
+Despite such concern about the risks around AI, Jim Reid, of Deutsche Bank, said intense competition in the sector meant it was unlikely AI companies would stop investing so heavily in their technology.
+“The competitive race between companies and countries remains intense, and it’s difficult to imagine firms voluntarily stepping back while rivals continue to push ahead.” he said. “It is hard to see China standing still.
+“If leading executives are openly discussing the risks of increasingly powerful systems, it could be them trying to get across how transformative they believe the technology may become and help advertise the power of their product.
+“Rather than signalling less spending, it could simply be that a greater share of AI investment is directed towards safety, monitoring and governance alongside the continued build-out of compute infrastructure.”
+Amodei’s warning came before reports emerged that Anthropic is on track to be profitable this quarter.
+The company told investors that its adjusted operating income would be positive for a second quarter in a row, according to the Financial Times, in a big milestone as it prepares to list on the US stock market this year.
+OpenAI has also suggested it will also join the stock market, although Altman said over the weekend that the company would not go public in 2026 owing to safety concerns with the technology .
+Donald Trump dismisses attempts to increase controls on artificial intelligence as ‘sick conspiracy’</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">科技高管呼吁放缓“鲁莽”开发后，AI相关股票下跌</h3>
+<div class="article-content-zh">周一，AI相关股票大幅下跌，此前Anthropic、OpenAI和SpaceX的负责人呼吁放缓AI“鲁莽”的开发，称担心该技术可能很快就会失控。
+
+全球市值最高的公司、半导体设计企业英伟达在纽约股市收盘时下跌3.3%，超威半导体公司下跌4%，美光科技和闪迪股价暴跌5%。以科技股为主的纳斯达克指数基金收盘时下跌0.5%。
+
+此次抛售发生前，Anthropic首席执行官达里奥·阿莫代伊周末呼吁AI行业“放慢脚步”。
+
+然而，唐纳德·特朗普将对AI加强管控的呼吁斥为“病态的阴谋”。
+
+总统在周一的一篇社交媒体帖子中写道：“AI唯一需要的控制或‘护栏’是一位强大而聪明（高智商！）的总统，而美国恰恰拥有这样一位总统！”
+
+总统还表示，他的政府已经“阻止了AI‘人士’做坏事或可能做坏事，比如达里奥（Anthropic！）”。
+
+他写道：“有一场针对AI和数据中心的病态阴谋，唯一对此感到高兴的是中国。谁赢得AI，谁就赢得一切！”
+
+周一，特朗普在英伟达首席执行官黄仁勋于加州一场AI会议上登台时给他打了电话，并表达了类似的看法。
+
+“这是个骗局，”特朗普通过免提电话对听众说，“机器人不会接管世界。这不会发生。”
+与此同时，联合国安理会计划于下周召开一次关于人工智能的会议，原因是国际社会对此的担忧日益加剧，法新社周一报道称。
+
+日本投资者软银集团是OpenAI的重要支持者，其股价暴跌13%，而严重依赖为人工智能公司供货的芯片制造商的韩国Kospi股指下跌了3%。
+
+全球大型微芯片供应商台积电的股价下跌了1.2%。
+
+在欧洲，荷兰科技制造商ASML——欧洲市值最大的公司，也是半导体行业的重要供应商——股价暴跌6%。
+
+然而，那些曾因人工智能崛起而受到威胁的股票却出现了反弹，包括广告集团WPP，其在伦敦上涨5%，以及数据分析企业励讯集团，同样上涨5%。后者在今年早些时候因Anthropic推出一套新的数据和自动化工具而遭遇股价大幅下跌。
+
+阿莫迪曾表示“过快建设是鲁莽的”，并警告称，未来一群人工智能代理可能通过“接管整个互联网”造成数千亿美元的损失。
+
+他的说法遭到了一些专家的质疑，但周一投资者开始将增长放缓纳入定价考量，这将使该行业更难为其数千亿美元的人工智能基础设施投资买单。
+OpenAI首席执行官萨姆·奥尔特曼、谷歌DeepMind负责人德米斯·哈萨比斯以及SpaceX老板埃隆·马斯克均发文支持阿莫代伊关于放缓AI发展的文章，该文题为《我们必须为前沿技术设定节奏》。
+
+奥尔特曼补充说，他将兑现阿莫代伊的承诺，在公司内部引入外部评估人员，以核实安全实践。
+
+订阅《今日商业》
+
+为新的一天做好准备——我们将为您提供每天早晨所需的全部商业新闻与分析
+
+在新闻简报推广之后
+
+Anthropic联合创始人杰克·克拉克告诉BBC，可能有必要设置一个可由第三方触发的AI“紧急停止开关”，以防止灾难发生。
+
+人们对AI发展速度过快且缺乏监管的担忧持续加剧。周一，英国跨党派议员和上议院成员指出AI带来的一系列人权风险，认为世界上没有任何国家的法律足以加以约束。
+
+与此同时，中国最高情报官员警告称，对手使用AI可能对该国的政治和社会安全构成风险。
+
+陈一新上周日在政府媒体上发表文章称，Anthropic的Mythos和OpenAI的GPT-5.5-Cyber等美国先进模型可能对北京的关键信息基础设施构成严重威胁，并呼吁全面加强AI安全。
+尽管对人工智能相关风险存在上述担忧，德意志银行的吉姆·里德表示，该行业的激烈竞争意味着人工智能公司不太可能停止对其技术的大规模投资。
+
+“企业和国家之间的竞争仍然激烈，很难想象在竞争对手继续推进的同时，企业会自愿退让。”他说，“很难想象中国会停滞不前。”
+
+“如果领先的高管们公开讨论日益强大的系统所带来的风险，那可能是他们试图让人们理解他们认为这项技术可能变得多么具有变革性，并帮助宣传他们产品的强大之处。”
+
+“与其说这预示着减少支出，不如说这可能只是意味着人工智能投资的更大份额被用于安全、监控和治理，同时继续建设计算基础设施。”
+
+阿莫迪发出警告之前，有报道称Anthropic有望在本季度实现盈利。
+
+据英国《金融时报》报道，该公司告诉投资者，其调整后营业收入将连续第二个季度为正，这是该公司准备今年在美国股市上市的一个重要里程碑。
+
+OpenAI也表示将加入股市，不过奥特曼上周末表示，出于对该技术安全性的担忧，该公司不会在2026年上市。
+
+唐纳德·特朗普将对人工智能加强管制的尝试斥为“病态的阴谋”。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">tumbled — v. 暴跌；摔倒</span>
+<span class="vocab-item">slumped — v. 大幅下跌；瘫倒</span>
+<span class="vocab-item">reckless — adj. 鲁莽的；不计后果的</span>
+<span class="vocab-item">dismissed — v. 驳回；不予理会</span>
+<span class="vocab-item">hoax — n. 骗局；恶作剧</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" onclick="toggleDrawer()" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">科技高管呼吁放缓“鲁莽”开发后，AI相关股票下跌</h3>
+<div class="article-content-zh">周一，AI相关股票大幅下跌，此前Anthropic、OpenAI和SpaceX的负责人呼吁放缓AI“鲁莽”的开发，称担心该技术可能很快就会失控。
+
+全球市值最高的公司、半导体设计企业英伟达在纽约股市收盘时下跌3.3%，超威半导体公司下跌4%，美光科技和闪迪股价暴跌5%。以科技股为主的纳斯达克指数基金收盘时下跌0.5%。
+
+此次抛售发生前，Anthropic首席执行官达里奥·阿莫代伊周末呼吁AI行业“放慢脚步”。
+
+然而，唐纳德·特朗普将对AI加强管控的呼吁斥为“病态的阴谋”。
+
+总统在周一的一篇社交媒体帖子中写道：“AI唯一需要的控制或‘护栏’是一位强大而聪明（高智商！）的总统，而美国恰恰拥有这样一位总统！”
+
+总统还表示，他的政府已经“阻止了AI‘人士’做坏事或可能做坏事，比如达里奥（Anthropic！）”。
+
+他写道：“有一场针对AI和数据中心的病态阴谋，唯一对此感到高兴的是中国。谁赢得AI，谁就赢得一切！”
+
+周一，特朗普在英伟达首席执行官黄仁勋于加州一场AI会议上登台时给他打了电话，并表达了类似的看法。
+
+“这是个骗局，”特朗普通过免提电话对听众说，“机器人不会接管世界。这不会发生。”
+与此同时，联合国安理会计划于下周召开一次关于人工智能的会议，原因是国际社会对此的担忧日益加剧，法新社周一报道称。
+
+日本投资者软银集团是OpenAI的重要支持者，其股价暴跌13%，而严重依赖为人工智能公司供货的芯片制造商的韩国Kospi股指下跌了3%。
+
+全球大型微芯片供应商台积电的股价下跌了1.2%。
+
+在欧洲，荷兰科技制造商ASML——欧洲市值最大的公司，也是半导体行业的重要供应商——股价暴跌6%。
+
+然而，那些曾因人工智能崛起而受到威胁的股票却出现了反弹，包括广告集团WPP，其在伦敦上涨5%，以及数据分析企业励讯集团，同样上涨5%。后者在今年早些时候因Anthropic推出一套新的数据和自动化工具而遭遇股价大幅下跌。
+
+阿莫迪曾表示“过快建设是鲁莽的”，并警告称，未来一群人工智能代理可能通过“接管整个互联网”造成数千亿美元的损失。
+
+他的说法遭到了一些专家的质疑，但周一投资者开始将增长放缓纳入定价考量，这将使该行业更难为其数千亿美元的人工智能基础设施投资买单。
+OpenAI首席执行官萨姆·奥尔特曼、谷歌DeepMind负责人德米斯·哈萨比斯以及SpaceX老板埃隆·马斯克均发文支持阿莫代伊关于放缓AI发展的文章，该文题为《我们必须为前沿技术设定节奏》。
+
+奥尔特曼补充说，他将兑现阿莫代伊的承诺，在公司内部引入外部评估人员，以核实安全实践。
+
+订阅《今日商业》
+
+为新的一天做好准备——我们将为您提供每天早晨所需的全部商业新闻与分析
+
+在新闻简报推广之后
+
+Anthropic联合创始人杰克·克拉克告诉BBC，可能有必要设置一个可由第三方触发的AI“紧急停止开关”，以防止灾难发生。
+
+人们对AI发展速度过快且缺乏监管的担忧持续加剧。周一，英国跨党派议员和上议院成员指出AI带来的一系列人权风险，认为世界上没有任何国家的法律足以加以约束。
+
+与此同时，中国最高情报官员警告称，对手使用AI可能对该国的政治和社会安全构成风险。
+
+陈一新上周日在政府媒体上发表文章称，Anthropic的Mythos和OpenAI的GPT-5.5-Cyber等美国先进模型可能对北京的关键信息基础设施构成严重威胁，并呼吁全面加强AI安全。
+尽管对人工智能相关风险存在上述担忧，德意志银行的吉姆·里德表示，该行业的激烈竞争意味着人工智能公司不太可能停止对其技术的大规模投资。
+
+“企业和国家之间的竞争仍然激烈，很难想象在竞争对手继续推进的同时，企业会自愿退让。”他说，“很难想象中国会停滞不前。”
+
+“如果领先的高管们公开讨论日益强大的系统所带来的风险，那可能是他们试图让人们理解他们认为这项技术可能变得多么具有变革性，并帮助宣传他们产品的强大之处。”
+
+“与其说这预示着减少支出，不如说这可能只是意味着人工智能投资的更大份额被用于安全、监控和治理，同时继续建设计算基础设施。”
+
+阿莫迪发出警告之前，有报道称Anthropic有望在本季度实现盈利。
+
+据英国《金融时报》报道，该公司告诉投资者，其调整后营业收入将连续第二个季度为正，这是该公司准备今年在美国股市上市的一个重要里程碑。
+
+OpenAI也表示将加入股市，不过奥特曼上周末表示，出于对该技术安全性的担忧，该公司不会在2026年上市。
+
+唐纳德·特朗普将对人工智能加强管制的尝试斥为“病态的阴谋”。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">tumbled — v. 暴跌；摔倒</span>
+<span class="vocab-item">slumped — v. 大幅下跌；瘫倒</span>
+<span class="vocab-item">reckless — adj. 鲁莽的；不计后果的</span>
+<span class="vocab-item">dismissed — v. 驳回；不予理会</span>
+<span class="vocab-item">hoax — n. 骗局；恶作剧</span></div></div>
+</div>
+</aside>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-15 09:15</div>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+</script>
+</body>
+</html>
