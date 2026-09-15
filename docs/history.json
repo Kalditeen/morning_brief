@@ -1,26 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-11",
-      "cat": "nytimes",
-      "title": "Behind the Scenes, Vance Gathered Unvarnished Views of the Iran War"
-    },
-    {
-      "date": "2026-09-11",
-      "cat": "bbc",
-      "title": "Labour mayors in England vow to cap tourist tax at 5%"
-    },
-    {
-      "date": "2026-09-11",
-      "cat": "nytimes",
-      "title": "Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally"
-    },
-    {
-      "date": "2026-09-11",
-      "cat": "bbc",
-      "title": "Spies, strategies and missed opportunities: How the lessons of 9/11 are still being learnt"
-    },
-    {
       "date": "2026-09-12",
       "cat": "guardian",
       "title": "$15m fund launched to create ‘unstoppable momentum’ to end FGM worldwide"
@@ -109,6 +89,16 @@
       "date": "2026-09-14",
       "cat": "bbc-tech",
       "title": "Questions mount over what an AI 'slowdown' would look like"
+    },
+    {
+      "date": "2026-09-15",
+      "cat": "guardian-tech",
+      "title": "AI-linked stocks slide after tech bosses call for slowdown in ‘reckless’ development"
+    },
+    {
+      "date": "2026-09-15",
+      "cat": "bbc-env",
+      "title": "US scraps limits on emissions from coal and gas power plants"
     }
   ]
 }
