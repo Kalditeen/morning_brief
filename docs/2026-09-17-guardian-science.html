@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年09月17日 周四 · 卫报 The Guardian (科学)">
+<meta property="og:description" content="Scientists create mice with part-human brains">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科学) | 2026年09月17日 周四</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年09月17日 周四 · 卫报 The Guardian (科学)</p>
+<a class="back-link" href="2026-09-17.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科学)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Scientists create mice with part-human brains</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/bfb4c143c4e2dc0296b37aca85eaf95a7a3c6514/2966_2453_16433_13144/master/16433.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=f99a768808915b89494faa93159473ff" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Researchers have created mice with half-human brains in an effort to understand and develop new treatments for disorders such as schizophrenia, epilepsy, cerebral palsy, intellectual disability and rare forms of dementia.
+The scientists transplanted lab-grown human brain cells into animals that were engineered to be born without a cortex or hippocampus. This made space for the human tissue to grow inside the rodents’ skulls.
+The procedure means scientists can now take cells from patients with brain disorders, turn them into brain tissue in the laboratory, and grow that tissue in living animals. The animals can then be studied to see how the disorder takes hold in human brain tissue, and how drugs might treat the conditions.
+“We’ve been trying really hard as a community to find therapeutic solutions for these conditions, but the reality is that in psychiatry and neurology we’ve been left behind [by] every single branch of medicine and we have fewer therapeutics than, again, every single branch of medicine,” said Sergiu Pașca, a professor of psychiatry who led the research at Stanford University.
+“That could be because the human brain is very complex, but it’s also because the human brain is inaccessible,” he added. “To a large extent, our goal has been to make aspects of human brain development and function accessible for investigation.”
+The work is the latest from the field of neural organoids, where human brain cells, grown in the lab, assemble into tiny but complex structures that mimic some of the features of real brains.
+While potentially transformative for brain medicine, organoids have sparked a wave of ethical concerns, not least around whether the clumps of tissue could become conscious or feel pain, and the welfare of animals implanted with organoids.
+Pașca said the work had received extensive ethical oversight from the start.
+Experts said this would need to continue. Emily Jackson, professor of law at London School of Economics and chair of a recent report on neural organoids for the Nuffield Council on Bioethics, said: “Animal welfare is a really important concern, and it will be necessary to closely monitor these animals in order to evaluate the impact on them.”
+In previous work, the Stanford team transplanted human neurons into rat brains. The tissue took root and wired into the animals’ brain circuits, but there was too little room for the human tissue to grow very much.
+To solve the problem, the researchers genetically engineered mice to stunt the growth of key brain regions, the cerebral cortex and hippocampus. Surprisingly, the mice survived because the remaining parts of the brain took on new roles. While the mice look normal, they are cautious on their feet and more forgetful.
+Writing in Nature, Paşca describes how the mice were injected with human brain organoids that were themselves created by reprogramming donated skin cells. The newborn mice received several injections, each containing about 100,000 human brain cells, into the space where their own brain tissue was missing. In total, the rodents lacked about 14m mouse brain cells and ended up with about 4m human ones – half the brain by volume.
+Three months after surgery, the human tissue had hooked up to the mouse’s blood supply and almost entirely filled the cavity, taking up about half the size of the rodent’s brain. Some of the human neurons formed connections with mouse brain cells and spinal cord.
+The human neurons were not structured or wired up in the same way as in people, and the brain tissue was immature, equivalent to that found halfway through human pregnancy. Tests on the “xenocortical” mice showed the animals were not enhanced by the transplants, but their shaky gait and cognitive problems did improve a little.
+To demonstrate how the mice could shed light on human brain disorders, the researchers exposed some of the animals to five hours of low oxygen. This showed how vulnerable human nerve cells are to oxygen deprivation, which in pregnancy and birth can cause cerebral palsy.
+The researchers found that human brain tissue in the mice contained rare cells known as von Economo neurons, which have only been seen in postmortem examinations. The cells are among the first to die in frontotemporal dementia, a rare form of the disease, which Paşca now hopes to study in xenocortical mice.
+Prof Madeline Lancaster, group leader at the MRC Laboratory of Molecular Biology in Cambridge, said the approach was best suited to questions about disorders and treatments where a whole animal was needed. “It’s less clear to me how this will inform our understanding of human brain development since it is rather artificial, and not at all like how the brain develops naturally,” she said.
+Many researchers working on brain organoids are growing them in vitro , or in dishes. The hope is they help to reduce the number of animals used in research. “It’s obviously ethically sensitive and there needs to be a very good reason to do this type of animal experimentation, which most scientific avenues do not require,” Lancaster added. “The field is still aiming for fully in vitro solutions, but this work can also inform on what may be needed to improve those in vitro models to reach more mature stages.”
+Researchers hope to shed light on conditions such as schizophrenia, epilepsy, cerebral palsy, intellectual disability and rare forms of dementia</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">科学家创造具有部分人类大脑的小鼠</h3>
+<div class="article-content-zh">研究人员已创造出拥有半人脑的小鼠，旨在理解并开发针对精神分裂症、癫痫、脑瘫、智力障碍及罕见痴呆等疾病的新疗法。
+
+科学家将实验室培养的人类脑细胞移植到经过基因工程改造、天生没有大脑皮层或海马体的动物体内。这为人类组织在啮齿动物颅骨内生长腾出了空间。
+
+这一过程意味着科学家现在可以从脑疾病患者身上获取细胞，在实验室将其转化为脑组织，并在活体动物体内培育该组织。随后可以研究这些动物，以观察疾病如何在人类脑组织中扎根，以及药物如何治疗这些疾病。
+
+“我们整个领域一直在非常努力地为这些疾病寻找治疗方案，但现实是，在精神病学和神经病学方面，我们已经被医学的每一个分支甩在了后面，我们的治疗方法也比医学的每一个分支都要少，”领导这项斯坦福大学研究的精神病学教授塞尔吉乌·帕什卡说。
+
+“这可能是因为人脑非常复杂，但也因为人脑难以触及，”他补充道。“在很大程度上，我们的目标一直是让人类大脑发育和功能的各个方面变得可供研究。”
+这项工作是神经类器官领域的最新成果，人类脑细胞在实验室中生长，组装成微小但复杂的结构，模拟真实大脑的某些特征。尽管类器官可能为脑医学带来变革性影响，但它们也引发了一系列伦理担忧，尤其是这些组织团块是否可能产生意识或感到疼痛，以及植入类器官的动物的福利问题。帕斯卡表示，这项工作从一开始就受到了广泛的伦理监督。专家们表示，这种监督需要继续下去。伦敦政治经济学院法学教授、近期为纳菲尔德生物伦理委员会撰写的神经类器官报告主席艾米莉·杰克逊表示：“动物福利是一个非常重要的关切问题，有必要密切监测这些动物，以评估对其产生的影响。”在之前的研究中，斯坦福团队将人类神经元移植到大鼠脑中。这些组织成功扎根并接入动物的大脑回路，但空间太小，人类组织无法充分生长。为了解决这个问题，研究人员对小鼠进行了基因改造，抑制其关键脑区——大脑皮层和海马体——的生长。令人惊讶的是，这些小鼠存活了下来，因为大脑的其余部分承担了新的功能。虽然小鼠看起来正常，但它们走路时小心翼翼，且更容易健忘。
+在《自然》杂志上撰文的帕斯卡描述了如何将人类脑类器官注射到小鼠体内，这些类器官本身是通过重新编程捐赠的皮肤细胞而创建的。新生小鼠接受了数次注射，每次注射约含10万个人类脑细胞，注入其自身脑组织缺失的空间。总体而言，这些啮齿动物缺少约1400万个小鼠脑细胞，最终获得了约400万个人类细胞——按体积计算约占大脑的一半。
+
+手术三个月后，人类组织已与小鼠的血液供应相连，几乎完全填满了空腔，约占啮齿动物大脑体积的一半。一些人类神经元与小鼠脑细胞和脊髓形成了连接。
+
+这些人类神经元的结构和连接方式与人体内不同，且脑组织尚未成熟，相当于人类妊娠中期时的状态。对“异种皮层”小鼠的测试显示，这些动物并未因移植而得到增强，但它们不稳的步态和认知问题确实略有改善。
+
+为了证明这些小鼠如何能揭示人类脑部疾病，研究人员让部分动物暴露于五小时的低氧环境中。这显示了人类神经细胞对缺氧的脆弱性，而在妊娠和分娩过程中，缺氧可能导致脑瘫。
+研究人员发现，小鼠体内的人脑组织含有一种罕见的细胞，称为冯·埃科诺莫神经元，这种细胞此前仅在尸检中观察到。这些细胞是额颞叶痴呆（一种罕见的疾病形式）中最早死亡的细胞之一，帕什卡现在希望在这种异种皮层小鼠中对其进行研究。
+
+剑桥MRC分子生物学实验室的小组负责人玛德琳·兰卡斯特教授表示，这种方法最适合那些需要完整动物来研究疾病和治疗方案的问题。“我不太清楚这将如何帮助我们理解人脑发育，因为它相当人为，完全不像大脑自然发育的方式，”她说。
+
+许多从事脑类器官研究的研究人员正在体外（即在培养皿中）培养它们。他们的希望是这有助于减少研究中使用的动物数量。“这显然在伦理上很敏感，进行这类动物实验需要有非常充分的理由，而大多数科学途径并不需要这样做，”兰卡斯特补充道。“该领域仍在追求完全体外的解决方案，但这项工作也可以为改进这些体外模型以达到更成熟阶段所需的条件提供信息。”
+
+研究人员希望揭示精神分裂症、癫痫、脑瘫、智力障碍和罕见形式的痴呆等疾病的奥秘。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">transplanted — v. 移植</span>
+<span class="vocab-item">disorders — n. 失调；紊乱</span>
+<span class="vocab-item">treatments — n. 治疗；疗法</span>
+<span class="vocab-item">complex — adj. 复杂的</span>
+<span class="vocab-item">accessible — adj. 可接近的；可获得的</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">科学家创造具有部分人类大脑的小鼠</h3>
+<div class="article-content-zh">研究人员已创造出拥有半人脑的小鼠，旨在理解并开发针对精神分裂症、癫痫、脑瘫、智力障碍及罕见痴呆等疾病的新疗法。
+
+科学家将实验室培养的人类脑细胞移植到经过基因工程改造、天生没有大脑皮层或海马体的动物体内。这为人类组织在啮齿动物颅骨内生长腾出了空间。
+
+这一过程意味着科学家现在可以从脑疾病患者身上获取细胞，在实验室将其转化为脑组织，并在活体动物体内培育该组织。随后可以研究这些动物，以观察疾病如何在人类脑组织中扎根，以及药物如何治疗这些疾病。
+
+“我们整个领域一直在非常努力地为这些疾病寻找治疗方案，但现实是，在精神病学和神经病学方面，我们已经被医学的每一个分支甩在了后面，我们的治疗方法也比医学的每一个分支都要少，”领导这项斯坦福大学研究的精神病学教授塞尔吉乌·帕什卡说。
+
+“这可能是因为人脑非常复杂，但也因为人脑难以触及，”他补充道。“在很大程度上，我们的目标一直是让人类大脑发育和功能的各个方面变得可供研究。”
+这项工作是神经类器官领域的最新成果，人类脑细胞在实验室中生长，组装成微小但复杂的结构，模拟真实大脑的某些特征。尽管类器官可能为脑医学带来变革性影响，但它们也引发了一系列伦理担忧，尤其是这些组织团块是否可能产生意识或感到疼痛，以及植入类器官的动物的福利问题。帕斯卡表示，这项工作从一开始就受到了广泛的伦理监督。专家们表示，这种监督需要继续下去。伦敦政治经济学院法学教授、近期为纳菲尔德生物伦理委员会撰写的神经类器官报告主席艾米莉·杰克逊表示：“动物福利是一个非常重要的关切问题，有必要密切监测这些动物，以评估对其产生的影响。”在之前的研究中，斯坦福团队将人类神经元移植到大鼠脑中。这些组织成功扎根并接入动物的大脑回路，但空间太小，人类组织无法充分生长。为了解决这个问题，研究人员对小鼠进行了基因改造，抑制其关键脑区——大脑皮层和海马体——的生长。令人惊讶的是，这些小鼠存活了下来，因为大脑的其余部分承担了新的功能。虽然小鼠看起来正常，但它们走路时小心翼翼，且更容易健忘。
+在《自然》杂志上撰文的帕斯卡描述了如何将人类脑类器官注射到小鼠体内，这些类器官本身是通过重新编程捐赠的皮肤细胞而创建的。新生小鼠接受了数次注射，每次注射约含10万个人类脑细胞，注入其自身脑组织缺失的空间。总体而言，这些啮齿动物缺少约1400万个小鼠脑细胞，最终获得了约400万个人类细胞——按体积计算约占大脑的一半。
+
+手术三个月后，人类组织已与小鼠的血液供应相连，几乎完全填满了空腔，约占啮齿动物大脑体积的一半。一些人类神经元与小鼠脑细胞和脊髓形成了连接。
+
+这些人类神经元的结构和连接方式与人体内不同，且脑组织尚未成熟，相当于人类妊娠中期时的状态。对“异种皮层”小鼠的测试显示，这些动物并未因移植而得到增强，但它们不稳的步态和认知问题确实略有改善。
+
+为了证明这些小鼠如何能揭示人类脑部疾病，研究人员让部分动物暴露于五小时的低氧环境中。这显示了人类神经细胞对缺氧的脆弱性，而在妊娠和分娩过程中，缺氧可能导致脑瘫。
+研究人员发现，小鼠体内的人脑组织含有一种罕见的细胞，称为冯·埃科诺莫神经元，这种细胞此前仅在尸检中观察到。这些细胞是额颞叶痴呆（一种罕见的疾病形式）中最早死亡的细胞之一，帕什卡现在希望在这种异种皮层小鼠中对其进行研究。
+
+剑桥MRC分子生物学实验室的小组负责人玛德琳·兰卡斯特教授表示，这种方法最适合那些需要完整动物来研究疾病和治疗方案的问题。“我不太清楚这将如何帮助我们理解人脑发育，因为它相当人为，完全不像大脑自然发育的方式，”她说。
+
+许多从事脑类器官研究的研究人员正在体外（即在培养皿中）培养它们。他们的希望是这有助于减少研究中使用的动物数量。“这显然在伦理上很敏感，进行这类动物实验需要有非常充分的理由，而大多数科学途径并不需要这样做，”兰卡斯特补充道。“该领域仍在追求完全体外的解决方案，但这项工作也可以为改进这些体外模型以达到更成熟阶段所需的条件提供信息。”
+
+研究人员希望揭示精神分裂症、癫痫、脑瘫、智力障碍和罕见形式的痴呆等疾病的奥秘。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">transplanted — v. 移植</span>
+<span class="vocab-item">disorders — n. 失调；紊乱</span>
+<span class="vocab-item">treatments — n. 治疗；疗法</span>
+<span class="vocab-item">complex — adj. 复杂的</span>
+<span class="vocab-item">accessible — adj. 可接近的；可获得的</span></div></div>
+</div>
+</aside>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-17 08:04</div>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
