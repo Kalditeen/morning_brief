@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年09月19日 周六 · BBC News (科技)">
+<meta property="og:description" content="The virtual worlds where robots are trained">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年09月19日 周六</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年09月19日 周六 · BBC News (科技)</p>
+<a class="back-link" href="2026-09-19.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">The virtual worlds where robots are trained</h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4861/live/2c408c40-a786-11f1-b2d5-535b3b3d379f.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">This video can not be played
+Freddo the robot in action at Vsim
+Freddo the robot walks across the office and takes a plastic bottled offered by a staff member.
+Given that a robot recently beat Usain Bolt&#x27;s 100m sprint record, it&#x27;s not the most startling achievement.
+But the speed by which Freddo has been trained to walk, recognise the bottle and grasp it is impressive. It took just a few minutes to develop those skills and upload them to Freddo. His developers say rival systems could take days to attain such skills.
+I&#x27;m at Vsim, a British start-up based in Cambridge. Founders Michelle Lu and Kier Storey hope one day their software will control robots that can navigate and do useful tasks in the home and workplace.
+But there&#x27;s a long way to go.
+&quot;It&#x27;s a weird situation with robotics because actually the stuff that we find as humans to be incredibly difficult, like gymnastics, you can get robots to do reasonably well. The stuff that humans are really good at, like fine dexterity, is really hard in robots,&quot; Storey says.
+Vsim founders Michelle Lu and Kier Storey
+Freddo&#x27;s skills were honed in a virtual environment, where a task can be performed  in a computer simulation millions of times. Once the optimum solution (known as a policy) is found, it can be uploaded and used by the hardware - in this case Freddo.
+Such virtual simulations are a common way to train robots. Tech giant Nvidia has a system called Isaac Sim which works that way - Lu and Storey both worked on an early version of it.
+In 2022 they decided to set up Vsim, to build the their own training system environment and other tools.
+As they were starting from scratch Lu and Storey could optimise the software to exploit the powerful computer chips used in AI, known as graphics processing units or GPUs.
+&quot;The underlying algorithms that we were using for most of these robotic simulations they hark back to the 1970s and 1980s, but those algorithms are not really brilliant fits for GPUs,&quot; Storey says.
+Within months they realised their system could work much faster than anything they had seen before.
+&quot;Eighteen months in and we actually have a completely functional, super high-performance simulator,&quot; says Lu.
+The software is so efficient that it can run on the hardware carried by Freddo. That means the robot can run tens of thousand of simulations while it is moving around.
+&quot;It can look about a second, or so, ahead into the future for 20,000 different kind of combinations of things that might happen,&quot; Storey explains.
+And that would be vital for a robot moving around an unstructured environment like the average home.
+&quot;Things outside of the robot&#x27;s control, like humans, animals or even other robots, could do things that require a change of strategy. These unexpected events could happen very quickly and the robot needs to be able to quickly adapt to ensure its actions remain safe and on-mission,&quot; Lu says.
+Robot training systems use virtual environments where tasks are practised
+Vsim is a start-up with 10 engineers working on its tech. Nvidia is at the other end of the industry. It dominates the market for computer chips used for AI and has a leading robotics software division, with hundreds of engineers.
+It does not build robots, instead it has a suite of software designed to let organisations train and control robots.
+That includes virtual simulation training systems and a so-called world model , external , called Cosmos, which gives a robot an understanding of the physics of the real world and how its environment might change as it moves around.
+But even with the powerful computer resources available to Nvidia, the software only gives a rudimentary understanding of the real world.
+&quot;Manipulation, - where I just grab a bottle, that&#x27;s not too hard. The problem is when you start doing long-horizon tasks, where I say: &#x27;I want you to take the bottle and I want you to fill it up and I want you to go pour&#x27;,&quot; says Spencer Huang, director of product for robotics at Nvidia.
+But he&#x27;s confident that good progress is being made. This year Nvidia has started using AI agents to help build virtual environments to train robots and validate whether the solutions from training work or not.
+&quot;When we talk about creating the [virtual] world and actually scanning it in - a lot of that is actually manual labour.
+&quot;We&#x27;re just throwing agents at it... it&#x27;s basically given us a huge workforce,&quot; Huang says.
+Simulation is not the only method for training robots. They can also be trained by watching human or video demonstrations.
+Rika Antonova has spent more than a decade working in robotics
+Rika Antonova has been working in the field of robotics since 2015 and is currently an associate professor at the Department of Computer Science and Technology at the University of Cambridge.
+Her research is focused on , external developing software and hardware that can aid robots to learn complex behaviour.
+Antonova works with a training system called MuJoCo, owned by Google&#x27;s DeepMind since 2021. It&#x27;s open-source software, which means researchers can use it for free, and are allowed to tinker with the code.
+&quot;It is very, very user-friendly. So for research groups or for small start-ups, that&#x27;s useful,&quot; she says.
+She says that Vsim&#x27;s approach - very fast simulation - is promising.
+&quot;If you have a very, very fast simulator, then you can simulate hundreds of millions of samples in that few seconds that your robot is thinking about how to adjust its motion, and then you can change the motion almost in real time,&quot; she says.
+But those simulated environments are still rough approximations of the real world, which limits what can be trained.
+&quot;There are certain things that are hard to model in simulation, like highly deformable objects and cutting,&quot; she says.
+It&#x27;s a challenge that Nvidia and Lu and Storey at Vsim are working on.
+Lu says their system has &quot;reduced approximation, using accurate simulations to train models that genuinely work in reality as well as they do in simulations.&quot;
+Soon a second robot, to be called Nacho, will be helping develop that tech.
+Lu says that should speed up their development process and ensure their software can run on different machines.
+And, of course, provide Freddo with some company.
+The critical tech staying safe by going underground
+Tokenomics: Why making AI pay is tricky
+Why airlines are warning over lithium-ion batteries</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">训练机器人的虚拟世界</h3>
+<div class="article-content-zh">这段视频无法播放
+机器人弗雷多正在Vsim公司演示
+弗雷多机器人走过办公室，接过一名员工递来的塑料瓶。
+考虑到最近有机器人打破了尤塞恩·博尔特的100米短跑纪录，这算不上最惊人的成就。
+但弗雷多被训练行走、识别瓶子并抓取它的速度令人印象深刻。开发这些技能并将其上传到弗雷多只花了几分钟。其开发者表示，竞争对手的系统可能需要数天才能掌握此类技能。
+我现在身处Vsim，这是一家总部位于剑桥的英国初创公司。创始人米歇尔·卢和基尔·斯托里希望有一天，他们的软件能控制机器人在家庭和工作场所中导航并执行有用的任务。
+但前路漫漫。
+“机器人领域有一种奇怪的情况：实际上，我们人类觉得极其困难的事情，比如体操，你可以让机器人做得相当好。而人类真正擅长的事情，比如精细的灵巧操作，对机器人来说却非常困难，”斯托里说。
+Vsim创始人米歇尔·卢和基尔·斯托里
+弗雷多的技能是在虚拟环境中磨练出来的，在那里，一项任务可以在计算机模拟中执行数百万次。一旦找到最优解（称为策略），就可以上传并由硬件使用——在这里就是弗雷多。
+这种虚拟仿真训练机器人是一种常见方式。科技巨头英伟达有一套名为Isaac Sim的系统，正是以这种方式运作——卢和斯托里都曾参与其早期版本的开发。
+2022年，他们决定创立Vsim，构建自己的训练系统环境及其他工具。
+由于是从零开始，卢和斯托里得以优化软件，以充分利用人工智能领域所用的强大计算机芯片，即图形处理器（GPU）。
+“我们用于大多数机器人仿真模拟的底层算法可以追溯到20世纪70年代和80年代，但这些算法并不真正适合GPU，”斯托里说。
+几个月内，他们便意识到自己的系统运行速度远超此前见过的任何同类系统。
+“十八个月后，我们实际上已经拥有了一款功能完备、性能超高的模拟器，”卢说。
+该软件效率极高，可以在弗雷多搭载的硬件上运行。这意味着机器人在移动过程中可以运行数万次模拟。
+“它能够展望大约一秒后的未来，预判两万种可能发生的不同组合情况，”斯托里解释道。
+这对于在像普通家庭这样无结构环境中移动的机器人来说至关重要。
+“机器人无法控制的外部事物，比如人类、动物甚至其他机器人，可能会做出需要改变策略的行为。这些意外事件可能发生得非常快，机器人需要能够迅速适应，以确保其行动保持安全并继续执行任务，”卢说。
+
+机器人训练系统使用虚拟环境来练习任务
+
+Vsim是一家初创公司，有10名工程师从事其技术研发。英伟达则处于该行业的另一端。它主导着用于人工智能的计算机芯片市场，并拥有一个领先的机器人软件部门，有数百名工程师。
+
+它不制造机器人，而是提供一套软件，旨在让各类组织训练和控制机器人。
+
+这包括虚拟仿真训练系统，以及一个名为Cosmos的所谓“世界模型”（外部链接），该模型让机器人理解现实世界的物理规律，以及当它移动时周围环境可能如何变化。
+
+但即使英伟达拥有强大的计算机资源，该软件也只能提供对现实世界的基本理解。
+
+“操作——比如我拿起一个瓶子，这并不太难。问题在于当你开始执行长期任务时，我说：‘我想让你拿起瓶子，把它装满水，然后去倒掉，’”英伟达机器人产品总监斯宾塞·黄说。
+但他有信心正在取得良好进展。今年，英伟达已开始使用AI智能体来帮助构建虚拟环境，以训练机器人，并验证训练出的解决方案是否有效。
+
+“当我们谈论创建[虚拟]世界并实际扫描它时——其中很多其实都是体力活。”
+
+“我们只是把智能体扔进去……这基本上给了我们一支庞大的劳动力队伍，”黄仁勋说。
+
+模拟并非训练机器人的唯一方法。它们还可以通过观看人类演示或视频演示来训练。
+
+里卡·安东诺娃在机器人领域工作了十多年
+
+里卡·安东诺娃自2015年以来一直从事机器人领域的研究，目前是剑桥大学计算机科学与技术系的副教授。
+
+她的研究重点是开发能够帮助机器人学习复杂行为的软硬件。
+
+安东诺娃使用一个名为MuJoCo的训练系统，该系统自2021年起归谷歌DeepMind所有。它是开源软件，这意味着研究人员可以免费使用，并允许修改代码。
+
+“它非常非常用户友好。所以对于研究团队或小型初创公司来说，这很有用，”她说。
+
+她表示，Vsim的方法——极速模拟——很有前景。
+“如果你拥有一个非常非常快的模拟器，那么你就能在机器人思考如何调整动作的那几秒钟内，模拟出数亿个样本，然后几乎实时地改变动作，”她说道。
+但那些模拟环境仍然是真实世界的粗略近似，这限制了可以训练的内容。
+“有些东西很难在模拟中建模，比如高度可变形物体和切割，”她说。
+这是英伟达以及Vsim公司的Lu和Storey正在攻克的挑战。
+Lu表示，他们的系统“减少了近似误差，利用精确的模拟来训练模型，使它们在现实中的表现与在模拟中一样好。”
+很快，第二台名为Nacho的机器人将协助开发这项技术。
+Lu表示，这将加快他们的开发进程，并确保他们的软件能在不同机器上运行。
+当然，也能给Freddo做个伴。
+关键科技转入地下以确保安全
+代币经济学：为何让AI付费如此棘手
+航空公司为何就锂离子电池发出警告</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">grasp — v. 抓住；理解</span>
+<span class="vocab-item">simulation — n. 模拟；仿真</span>
+<span class="vocab-item">navigate — v. 导航；航行；应对</span>
+<span class="vocab-item">dexterity — n. 灵巧；熟练</span>
+<span class="vocab-item">adapt — v. 适应；改编</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">训练机器人的虚拟世界</h3>
+<div class="article-content-zh">这段视频无法播放
+机器人弗雷多正在Vsim公司演示
+弗雷多机器人走过办公室，接过一名员工递来的塑料瓶。
+考虑到最近有机器人打破了尤塞恩·博尔特的100米短跑纪录，这算不上最惊人的成就。
+但弗雷多被训练行走、识别瓶子并抓取它的速度令人印象深刻。开发这些技能并将其上传到弗雷多只花了几分钟。其开发者表示，竞争对手的系统可能需要数天才能掌握此类技能。
+我现在身处Vsim，这是一家总部位于剑桥的英国初创公司。创始人米歇尔·卢和基尔·斯托里希望有一天，他们的软件能控制机器人在家庭和工作场所中导航并执行有用的任务。
+但前路漫漫。
+“机器人领域有一种奇怪的情况：实际上，我们人类觉得极其困难的事情，比如体操，你可以让机器人做得相当好。而人类真正擅长的事情，比如精细的灵巧操作，对机器人来说却非常困难，”斯托里说。
+Vsim创始人米歇尔·卢和基尔·斯托里
+弗雷多的技能是在虚拟环境中磨练出来的，在那里，一项任务可以在计算机模拟中执行数百万次。一旦找到最优解（称为策略），就可以上传并由硬件使用——在这里就是弗雷多。
+这种虚拟仿真训练机器人是一种常见方式。科技巨头英伟达有一套名为Isaac Sim的系统，正是以这种方式运作——卢和斯托里都曾参与其早期版本的开发。
+2022年，他们决定创立Vsim，构建自己的训练系统环境及其他工具。
+由于是从零开始，卢和斯托里得以优化软件，以充分利用人工智能领域所用的强大计算机芯片，即图形处理器（GPU）。
+“我们用于大多数机器人仿真模拟的底层算法可以追溯到20世纪70年代和80年代，但这些算法并不真正适合GPU，”斯托里说。
+几个月内，他们便意识到自己的系统运行速度远超此前见过的任何同类系统。
+“十八个月后，我们实际上已经拥有了一款功能完备、性能超高的模拟器，”卢说。
+该软件效率极高，可以在弗雷多搭载的硬件上运行。这意味着机器人在移动过程中可以运行数万次模拟。
+“它能够展望大约一秒后的未来，预判两万种可能发生的不同组合情况，”斯托里解释道。
+这对于在像普通家庭这样无结构环境中移动的机器人来说至关重要。
+“机器人无法控制的外部事物，比如人类、动物甚至其他机器人，可能会做出需要改变策略的行为。这些意外事件可能发生得非常快，机器人需要能够迅速适应，以确保其行动保持安全并继续执行任务，”卢说。
+
+机器人训练系统使用虚拟环境来练习任务
+
+Vsim是一家初创公司，有10名工程师从事其技术研发。英伟达则处于该行业的另一端。它主导着用于人工智能的计算机芯片市场，并拥有一个领先的机器人软件部门，有数百名工程师。
+
+它不制造机器人，而是提供一套软件，旨在让各类组织训练和控制机器人。
+
+这包括虚拟仿真训练系统，以及一个名为Cosmos的所谓“世界模型”（外部链接），该模型让机器人理解现实世界的物理规律，以及当它移动时周围环境可能如何变化。
+
+但即使英伟达拥有强大的计算机资源，该软件也只能提供对现实世界的基本理解。
+
+“操作——比如我拿起一个瓶子，这并不太难。问题在于当你开始执行长期任务时，我说：‘我想让你拿起瓶子，把它装满水，然后去倒掉，’”英伟达机器人产品总监斯宾塞·黄说。
+但他有信心正在取得良好进展。今年，英伟达已开始使用AI智能体来帮助构建虚拟环境，以训练机器人，并验证训练出的解决方案是否有效。
+
+“当我们谈论创建[虚拟]世界并实际扫描它时——其中很多其实都是体力活。”
+
+“我们只是把智能体扔进去……这基本上给了我们一支庞大的劳动力队伍，”黄仁勋说。
+
+模拟并非训练机器人的唯一方法。它们还可以通过观看人类演示或视频演示来训练。
+
+里卡·安东诺娃在机器人领域工作了十多年
+
+里卡·安东诺娃自2015年以来一直从事机器人领域的研究，目前是剑桥大学计算机科学与技术系的副教授。
+
+她的研究重点是开发能够帮助机器人学习复杂行为的软硬件。
+
+安东诺娃使用一个名为MuJoCo的训练系统，该系统自2021年起归谷歌DeepMind所有。它是开源软件，这意味着研究人员可以免费使用，并允许修改代码。
+
+“它非常非常用户友好。所以对于研究团队或小型初创公司来说，这很有用，”她说。
+
+她表示，Vsim的方法——极速模拟——很有前景。
+“如果你拥有一个非常非常快的模拟器，那么你就能在机器人思考如何调整动作的那几秒钟内，模拟出数亿个样本，然后几乎实时地改变动作，”她说道。
+但那些模拟环境仍然是真实世界的粗略近似，这限制了可以训练的内容。
+“有些东西很难在模拟中建模，比如高度可变形物体和切割，”她说。
+这是英伟达以及Vsim公司的Lu和Storey正在攻克的挑战。
+Lu表示，他们的系统“减少了近似误差，利用精确的模拟来训练模型，使它们在现实中的表现与在模拟中一样好。”
+很快，第二台名为Nacho的机器人将协助开发这项技术。
+Lu表示，这将加快他们的开发进程，并确保他们的软件能在不同机器上运行。
+当然，也能给Freddo做个伴。
+关键科技转入地下以确保安全
+代币经济学：为何让AI付费如此棘手
+航空公司为何就锂离子电池发出警告</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">grasp — v. 抓住；理解</span>
+<span class="vocab-item">simulation — n. 模拟；仿真</span>
+<span class="vocab-item">navigate — v. 导航；航行；应对</span>
+<span class="vocab-item">dexterity — n. 灵巧；熟练</span>
+<span class="vocab-item">adapt — v. 适应；改编</span></div></div>
+</div>
+</aside>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-09-19 07:57</div>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

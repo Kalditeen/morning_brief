@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-15",
-      "cat": "guardian-tech",
-      "title": "AI-linked stocks slide after tech bosses call for slowdown in ‘reckless’ development"
-    },
-    {
-      "date": "2026-09-15",
-      "cat": "bbc-env",
-      "title": "US scraps limits on emissions from coal and gas power plants"
-    },
-    {
       "date": "2026-09-17",
       "cat": "guardian-science",
       "title": "Scientists create mice with part-human brains"
@@ -29,6 +19,16 @@
       "date": "2026-09-18",
       "cat": "bbc-world",
       "title": "UN experts say grounds to believe US committed war crimes in Iran strikes"
+    },
+    {
+      "date": "2026-09-19",
+      "cat": "guardian",
+      "title": "Men deported from US bound and beaten in Equatorial Guinea detention hotel, lawyers say"
+    },
+    {
+      "date": "2026-09-19",
+      "cat": "bbc-tech",
+      "title": "The virtual worlds where robots are trained"
     }
   ]
 }
