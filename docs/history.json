@@ -1,26 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-17",
-      "cat": "guardian-science",
-      "title": "Scientists create mice with part-human brains"
-    },
-    {
-      "date": "2026-09-17",
-      "cat": "bbc-business",
-      "title": "Interest rates hold expected but Bank of England facing tough choices"
-    },
-    {
-      "date": "2026-09-18",
-      "cat": "guardian-business",
-      "title": "US Federal Reserve raises interest rates for the first time since 2023"
-    },
-    {
-      "date": "2026-09-18",
-      "cat": "bbc-world",
-      "title": "UN experts say grounds to believe US committed war crimes in Iran strikes"
-    },
-    {
       "date": "2026-09-19",
       "cat": "guardian",
       "title": "Men deported from US bound and beaten in Equatorial Guinea detention hotel, lawyers say"
@@ -29,6 +9,16 @@
       "date": "2026-09-19",
       "cat": "bbc-tech",
       "title": "The virtual worlds where robots are trained"
+    },
+    {
+      "date": "2026-09-22",
+      "cat": "guardian-tech",
+      "title": "Nvidia boss says there is ‘0% chance’ AI destroys the world by 2030"
+    },
+    {
+      "date": "2026-09-22",
+      "cat": "bbc-env",
+      "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar"
     }
   ]
 }
