@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-24",
-      "cat": "guardian-science",
-      "title": "Glimpses into lives of Roman suburbanites in Bath revealed in rare finds"
-    },
-    {
-      "date": "2026-09-24",
-      "cat": "bbc-business",
-      "title": "'Proteinflation': Meet the people paying up to £100 for a bag of protein"
-    },
-    {
       "date": "2026-09-25",
       "cat": "guardian-business",
       "title": "Stung by Trump, machinists union campaigns for affordability in midterms"
@@ -39,6 +29,16 @@
       "date": "2026-09-27",
       "cat": "bbc-env",
       "title": "Nor'easter brings flooding as New York and New Jersey declare emergency"
+    },
+    {
+      "date": "2026-09-28",
+      "cat": "guardian",
+      "title": "Indian billionaire’s payments firm plots biggest London flotation in years"
+    },
+    {
+      "date": "2026-09-28",
+      "cat": "bbc-tech",
+      "title": "OpenAI bots meddled with multiple US government agency sites"
     }
   ]
 }
