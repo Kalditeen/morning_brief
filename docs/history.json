@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-25",
-      "cat": "guardian-business",
-      "title": "Stung by Trump, machinists union campaigns for affordability in midterms"
-    },
-    {
-      "date": "2026-09-25",
-      "cat": "bbc-world",
-      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack"
-    },
-    {
       "date": "2026-09-26",
       "cat": "guardian",
       "title": "Rebel offensive against Ethiopian army stokes fears of return to civil war"
@@ -39,6 +29,16 @@
       "date": "2026-09-28",
       "cat": "bbc-tech",
       "title": "OpenAI bots meddled with multiple US government agency sites"
+    },
+    {
+      "date": "2026-09-29",
+      "cat": "guardian-tech",
+      "title": "AI godfathers warn of runaway ‘intelligence explosion’"
+    },
+    {
+      "date": "2026-09-29",
+      "cat": "bbc-env",
+      "title": "Hurricane Polo unleashes threatening winds as it approaches Mexico"
     }
   ]
 }
