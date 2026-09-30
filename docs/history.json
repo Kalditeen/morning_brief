@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-26",
-      "cat": "guardian",
-      "title": "Rebel offensive against Ethiopian army stokes fears of return to civil war"
-    },
-    {
-      "date": "2026-09-26",
-      "cat": "bbc-tech",
-      "title": "OpenAI investigating 'dozens' of instances of agents acting improperly"
-    },
-    {
       "date": "2026-09-27",
       "cat": "guardian-tech",
       "title": "OpenAI says agents leaked 53 images from ChatGPT users in latest example of rogue activity"
@@ -39,6 +29,16 @@
       "date": "2026-09-29",
       "cat": "bbc-env",
       "title": "Hurricane Polo unleashes threatening winds as it approaches Mexico"
+    },
+    {
+      "date": "2026-09-30",
+      "cat": "guardian-env",
+      "title": "EPA union sues Trump administration to restore collective bargaining contract"
+    },
+    {
+      "date": "2026-09-30",
+      "cat": "bbc-science",
+      "title": "How AI is creating a UK super-museum and revealing our planet's history"
     }
   ]
 }
