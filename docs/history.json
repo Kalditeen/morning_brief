@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-27",
-      "cat": "guardian-tech",
-      "title": "OpenAI says agents leaked 53 images from ChatGPT users in latest example of rogue activity"
-    },
-    {
-      "date": "2026-09-27",
-      "cat": "bbc-env",
-      "title": "Nor'easter brings flooding as New York and New Jersey declare emergency"
-    },
-    {
       "date": "2026-09-28",
       "cat": "guardian",
       "title": "Indian billionaire’s payments firm plots biggest London flotation in years"
@@ -39,6 +29,16 @@
       "date": "2026-09-30",
       "cat": "bbc-science",
       "title": "How AI is creating a UK super-museum and revealing our planet's history"
+    },
+    {
+      "date": "2026-10-01",
+      "cat": "guardian-science",
+      "title": "Can a mushroom make music? Devon exhibition explores ‘cultural world’ of fungi"
+    },
+    {
+      "date": "2026-10-01",
+      "cat": "bbc-business",
+      "title": "Vape prices to rise as new tax takes effect"
     }
   ]
 }
