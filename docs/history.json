@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-28",
-      "cat": "guardian",
-      "title": "Indian billionaire’s payments firm plots biggest London flotation in years"
-    },
-    {
-      "date": "2026-09-28",
-      "cat": "bbc-tech",
-      "title": "OpenAI bots meddled with multiple US government agency sites"
-    },
-    {
       "date": "2026-09-29",
       "cat": "guardian-tech",
       "title": "AI godfathers warn of runaway ‘intelligence explosion’"
@@ -39,6 +29,16 @@
       "date": "2026-10-01",
       "cat": "bbc-business",
       "title": "Vape prices to rise as new tax takes effect"
+    },
+    {
+      "date": "2026-10-02",
+      "cat": "guardian-business",
+      "title": "US borrowing costs hit 24-year high as global bond sell-off intensifies"
+    },
+    {
+      "date": "2026-10-02",
+      "cat": "bbc-world",
+      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says"
     }
   ]
 }
