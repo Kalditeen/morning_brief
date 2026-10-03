@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-09-29",
-      "cat": "guardian-tech",
-      "title": "AI godfathers warn of runaway ‘intelligence explosion’"
-    },
-    {
-      "date": "2026-09-29",
-      "cat": "bbc-env",
-      "title": "Hurricane Polo unleashes threatening winds as it approaches Mexico"
-    },
-    {
       "date": "2026-09-30",
       "cat": "guardian-env",
       "title": "EPA union sues Trump administration to restore collective bargaining contract"
@@ -39,6 +29,16 @@
       "date": "2026-10-02",
       "cat": "bbc-world",
       "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says"
+    },
+    {
+      "date": "2026-10-03",
+      "cat": "guardian",
+      "title": "Row erupts over Cairo mural depicting Tutankhamun and Nefertiti with dark skin"
+    },
+    {
+      "date": "2026-10-03",
+      "cat": "bbc-tech",
+      "title": "OpenAI fires workers for 'mishandling sensitive information'"
     }
   ]
 }
