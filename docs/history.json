@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-01",
-      "cat": "guardian-science",
-      "title": "Can a mushroom make music? Devon exhibition explores ‘cultural world’ of fungi"
-    },
-    {
-      "date": "2026-10-01",
-      "cat": "bbc-business",
-      "title": "Vape prices to rise as new tax takes effect"
-    },
-    {
       "date": "2026-10-02",
       "cat": "guardian-business",
       "title": "US borrowing costs hit 24-year high as global bond sell-off intensifies"
@@ -39,6 +29,16 @@
       "date": "2026-10-04",
       "cat": "bbc-env",
       "title": "I'm a wildlife cameraman but 'special' rare sightings can still take me by surprise"
+    },
+    {
+      "date": "2026-10-05",
+      "cat": "guardian",
+      "title": "Egyptian journalist faces terrorism charges after entire newsroom detained"
+    },
+    {
+      "date": "2026-10-05",
+      "cat": "bbc-tech",
+      "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names"
     }
   ]
 }
