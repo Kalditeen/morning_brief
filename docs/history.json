@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-02",
-      "cat": "guardian-business",
-      "title": "US borrowing costs hit 24-year high as global bond sell-off intensifies"
-    },
-    {
-      "date": "2026-10-02",
-      "cat": "bbc-world",
-      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says"
-    },
-    {
       "date": "2026-10-03",
       "cat": "guardian",
       "title": "Row erupts over Cairo mural depicting Tutankhamun and Nefertiti with dark skin"
@@ -39,6 +29,16 @@
       "date": "2026-10-05",
       "cat": "bbc-tech",
       "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names"
+    },
+    {
+      "date": "2026-10-06",
+      "cat": "guardian-tech",
+      "title": "Accept ‘bad things’ in return for benefits of AI, says Sam Altman"
+    },
+    {
+      "date": "2026-10-06",
+      "cat": "bbc-env",
+      "title": "Why are data centres such a big deal in Scotland?"
     }
   ]
 }
