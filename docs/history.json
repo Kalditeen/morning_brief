@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-03",
-      "cat": "guardian",
-      "title": "Row erupts over Cairo mural depicting Tutankhamun and Nefertiti with dark skin"
-    },
-    {
-      "date": "2026-10-03",
-      "cat": "bbc-tech",
-      "title": "OpenAI fires workers for 'mishandling sensitive information'"
-    },
-    {
       "date": "2026-10-04",
       "cat": "guardian-tech",
       "title": "Kinky dating app Feeld’s founders share in record £3.8m dividend after sales jump"
@@ -39,6 +29,16 @@
       "date": "2026-10-06",
       "cat": "bbc-env",
       "title": "Why are data centres such a big deal in Scotland?"
+    },
+    {
+      "date": "2026-10-07",
+      "cat": "guardian-env",
+      "title": "Veteran conservative lawyer quits Trump’s interior department and warns of ‘assault on the rule of law’"
+    },
+    {
+      "date": "2026-10-07",
+      "cat": "bbc-science",
+      "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows"
     }
   ]
 }
