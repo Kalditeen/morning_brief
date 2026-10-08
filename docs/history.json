@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-04",
-      "cat": "guardian-tech",
-      "title": "Kinky dating app Feeld’s founders share in record £3.8m dividend after sales jump"
-    },
-    {
-      "date": "2026-10-04",
-      "cat": "bbc-env",
-      "title": "I'm a wildlife cameraman but 'special' rare sightings can still take me by surprise"
-    },
-    {
       "date": "2026-10-05",
       "cat": "guardian",
       "title": "Egyptian journalist faces terrorism charges after entire newsroom detained"
@@ -39,6 +29,16 @@
       "date": "2026-10-07",
       "cat": "bbc-science",
       "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows"
+    },
+    {
+      "date": "2026-10-08",
+      "cat": "guardian-science",
+      "title": "Nobel prize in chemistry awarded for work on mirror-image molecules"
+    },
+    {
+      "date": "2026-10-08",
+      "cat": "bbc-business",
+      "title": "Hedgehog among four chosen animals to feature on new banknotes"
     }
   ]
 }
