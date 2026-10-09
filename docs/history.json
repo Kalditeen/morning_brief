@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-05",
-      "cat": "guardian",
-      "title": "Egyptian journalist faces terrorism charges after entire newsroom detained"
-    },
-    {
-      "date": "2026-10-05",
-      "cat": "bbc-tech",
-      "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names"
-    },
-    {
       "date": "2026-10-06",
       "cat": "guardian-tech",
       "title": "Accept ‘bad things’ in return for benefits of AI, says Sam Altman"
@@ -39,6 +29,16 @@
       "date": "2026-10-08",
       "cat": "bbc-business",
       "title": "Hedgehog among four chosen animals to feature on new banknotes"
+    },
+    {
+      "date": "2026-10-09",
+      "cat": "guardian-business",
+      "title": "Starbucks reportedly exploring Chipotle takeover"
+    },
+    {
+      "date": "2026-10-09",
+      "cat": "bbc-world",
+      "title": "Suspect linked to Monaco bomb attack on millionaire breaks silence to BBC"
     }
   ]
 }
