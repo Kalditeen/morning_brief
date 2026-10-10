@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-06",
-      "cat": "guardian-tech",
-      "title": "Accept ‘bad things’ in return for benefits of AI, says Sam Altman"
-    },
-    {
-      "date": "2026-10-06",
-      "cat": "bbc-env",
-      "title": "Why are data centres such a big deal in Scotland?"
-    },
-    {
       "date": "2026-10-07",
       "cat": "guardian-env",
       "title": "Veteran conservative lawyer quits Trump’s interior department and warns of ‘assault on the rule of law’"
@@ -39,6 +29,16 @@
       "date": "2026-10-09",
       "cat": "bbc-world",
       "title": "Suspect linked to Monaco bomb attack on millionaire breaks silence to BBC"
+    },
+    {
+      "date": "2026-10-10",
+      "cat": "guardian",
+      "title": "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau"
+    },
+    {
+      "date": "2026-10-10",
+      "cat": "bbc-tech",
+      "title": "Prize-winning image which sparked backlash was AI-generated, Nikon rules"
     }
   ]
 }
