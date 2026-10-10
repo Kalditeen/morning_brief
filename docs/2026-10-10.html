@@ -20,6 +20,14 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .article-title-en{font-weight:750;font-size:1.15em;margin-bottom:8px;line-height:1.4;color:var(--text)}
 .article-img{max-width:100%;height:auto;border-radius:8px;margin:8px 0;display:block}
 .article-summary-en{font-size:.92em;color:#444;margin:6px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
 .article-meta{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.82em;flex-wrap:wrap}
 .source-badge{background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600}
 .source-link{color:var(--accent);text-decoration:none;font-weight:700}
@@ -41,21 +49,94 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 <main class="main">
 <article class="article">
 <span class="source-badge">卫报 The Guardian</span>
-<h2 class="article-title-en">ICJ judge Navi Pillay wins Nobel peace prize for promoting international law</h2>
-<img class="article-img" src="https://i.guim.co.uk/img/media/1af4719571646d49b58a7ed6e715293e288fb0b4/221_146_6359_5087/master/6359.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=c3a3342197ea60869e430d51e4329640" alt="" loading="lazy" onerror="this.style.display='none'">
-<p class="article-summary-en">The Nobel peace prize has been awarded to Navi Pillay, the South African former UN human rights chief who chaired the UN commission that concluded Israel was guilty of genocide in Gaza .
-The Norwegian Nobel committee said Pillay, who is serving as a judge at t</p>
+<h2 class="article-title-en">Isaias strengthens to <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> Atlantic <button class="vocab-word" type="button" data-word="hurricane" data-pos="" data-def="n. 飓风, 暴风, 暴风雨">hurricane</button> of 2026 <button class="vocab-word" type="button" data-word="season" data-pos="" data-def="n. 季节, 时节, 当令期, 时期
+vt. 给...调味, 使成熟, 使老练, 缓和
+vi. 变干燥">season</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/8a68346734b6125aa8be112f9a09965d7b197558/58_0_2500_2000/master/2500.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=99048aa4fce3b6c2bdf7562778d83ccd" alt="" loading="lazy" onerror="this.style.display='none'">
+<p class="article-summary-en">Isaias has <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> Atlantic <button class="vocab-word" type="button" data-word="hurricane" data-pos="" data-def="n. 飓风, 暴风, 暴风雨">hurricane</button> of the 2026 <button class="vocab-word" type="button" data-word="season" data-pos="" data-def="n. 季节, 时节, 当令期, 时期
+vt. 给...调味, 使成熟, 使老练, 缓和
+vi. 变干燥">season</button>, with <button class="vocab-word" type="button" data-word="wind" data-pos="" data-def="n. 风, 气息, 气味, 呼吸, 风声, 趋势, 空谈, 卷绕, 弯曲
+vt. 使通风, 嗅出, 使喘气, 吹号角, 上发条, 缠绕, 包, 绞起, 吊起, 使弯曲, 使迂回
+vi. 嗅出猎物, 吹响号角, 卷曲, 蜿蜒, 迂回, 缠绕">wind</button> speeds of 80mph and a <button class="vocab-word" type="button" data-word="minimum" data-pos="" data-def="a. 最小的, 最低的
+n. 最小值
+ 最小值">minimum</button> pressure of 975mb. It is expected to strengthen to a <button class="vocab-word" type="button" data-word="category" data-pos="" data-def="n. 种类, 类项
+ 分类">category</button> 2 <button class="vocab-word" type="button" data-word="hurricane" data-pos="" data-def="n. 飓风, 暴风, 暴风雨">hurricane</button> as it approaches the US’s northern <button class="vocab-word" type="button" data-word="Gulf" data-pos="" data-def="n. 海湾, 深渊, 漩涡, 隔阂
+vt. 吞没">Gulf</button> <button class="vocab-word" type="button" data-word="coast" data-pos="" data-def="n. 海岸, 滑坡
+v. 沿海岸而行">coast</button> on <button class="vocab-word" type="button" data-word="Friday" data-pos="" data-def="n. 星期五">Friday</button>, according to the Natio</p>
 <div class="article-meta"><a href="2026-10-10-guardian.html" class="source-link">阅读原文 → 进入双语页</a></div>
 </article>
 <article class="article">
 <span class="source-badge">BBC News (科技)</span>
-<h2 class="article-title-en">Anthropic bans users from being &#x27;cruel&#x27; to its AI systems</h2>
-<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e673/live/aabc5740-c3db-11f1-95ba-dba767ffba7e.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
-<p class="article-summary-en">Anthropic has raised eyebrows by announcing it will ban users from &quot;sustained and needless&quot; abusive behaviour towards its AI.
-The Claude-maker said on Thursday it was updating its usage policy to let its tools end interactions where people are &quot;cruel&quot; - someth</p>
+<h2 class="article-title-en">Fired OpenAI researchers <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> they were <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> for &#x27;prioritising safety&#x27;</h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0e0e/live/a2f6be20-c3c1-11f1-9798-abffda1e61e7.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<p class="article-summary-en"><button class="vocab-word" type="button" data-word="Three" data-pos="" data-def="num. 三, 三个">Three</button> <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> OpenAI researchers sacked for allegedly mishandling information <button class="vocab-word" type="button" data-word="claim" data-pos="" data-def="n. 要求, 要求权, 断言, 权利
+vt. 要求, 认领, 主张
+vi. 提出要求, 主张, 断言">claim</button> they were <button class="vocab-word" type="button" data-word="instead" data-pos="" data-def="adv. 作为替代, 反而">instead</button> <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> they raised safety concerns at the tech <button class="vocab-word" type="button" data-word="firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">firm</button>.
+&quot;I <button class="vocab-word" type="button" data-word="believe" data-pos="" data-def="v. 相信">believe</button> we were fired for prioritising safety over the near-term interests of OpenAI as a corpo</p>
 <div class="article-meta"><a href="2026-10-10-bbc-tech.html" class="source-link">阅读原文 → 进入双语页</a></div>
 </article>
-<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-10 12:07</div>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-10 12:25</div>
 </main>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
 </body>
 </html>
