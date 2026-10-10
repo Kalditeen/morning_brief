@@ -2,13 +2,13 @@
 """
 晨间双语头条 · GitHub Actions 版
 每日激活：轮换领域采集 Guardian + BBC 各 1 篇头条
-爬取完整正文，AI 翻译为简体中文 + 提取四六级高频词汇
+爬取完整正文，Gemini 翻译为简体中文 + 匹配 CET 词表并提取四六级高频词汇
 前端：每日总览页 + 原文子页；桌面端左右分栏，移动端标签切换
 通知：企业微信群机器人只推送新闻标题 + 子页链接
 过去 3 天标题去重，重复时自动换下一篇文章
 """
 
-import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.request
+import os, re, json, subprocess, time, html as html_mod, hashlib, urllib.parse, urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -18,6 +18,7 @@ def now_bj(): return datetime.now(BJT)
 
 import feedparser
 from openai import OpenAI
+from openpyxl import load_workbook
 from bs4 import BeautifulSoup
 
 CDN_BASE = "https://kalditeen.github.io/morning_brief"
@@ -163,15 +164,81 @@ def _is_relevant(title: str) -> bool:
 def load_config():
     return {
         "wechat_webhook": os.environ.get("WECHAT_WEBHOOK_URL", "").strip(),
-        "openai_api_key": os.environ.get("OPENAI_API_KEY", "").strip(),
-        "openai_base_url": os.environ.get("OPENAI_BASE_URL") or "https://integrate.api.nvidia.com/v1",
-        "openai_model": os.environ.get("OPENAI_MODEL") or "meta/llama-3.3-70b-instruct",
-        "openai_fallback_models": [m.strip() for m in os.environ.get("OPENAI_FALLBACK_MODELS", "").split(",") if m.strip()] or [
-            "nvidia/llama-3.1-nemotron-70b-instruct",
-            "deepseek-ai/deepseek-r1",
-            "qwen/qwen3-235b-a22b-instruct-2507",
-        ],
+        "gemini_api_key": os.environ.get("GEMINI_API_KEY", "").strip(),
+        "gemini_base_url": os.environ.get("GEMINI_BASE_URL") or "https://generativelanguage.googleapis.com/v1beta/openai/",
+        "gemini_model": os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash",
+        "cet_vocab_path": os.environ.get("CET_VOCAB_PATH") or "CET_词表_最终版.xlsx",
     }
+
+def load_vocab(path: str) -> dict:
+    """从 CET 词表读取 单词 -> 词性/中文解释，按列名定位，不校验数据"""
+    if not path or not Path(path).exists():
+        print(f"   ⚠️ 词表不存在: {path}")
+        return {}
+    wb = load_workbook(path, read_only=True, data_only=True)
+    ws = wb["四六级词表"] if "四六级词表" in wb.sheetnames else wb.worksheets[0]
+    headers = {str(c).strip(): i for i, c in enumerate(next(ws.iter_rows(min_row=1, max_row=1, values_only=True)))}
+    word_i = headers.get("单词")
+    pos_i = headers.get("词性")
+    def_i = headers.get("中文解释")
+    if word_i is None or def_i is None:
+        wb.close()
+        print(f"   ⚠️ 词表缺少必要列: 单词/中文解释")
+        return {}
+    vocab = {}
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        word = str(row[word_i] or "").strip().lower()
+        definition = str(row[def_i] or "").strip().replace("\\n", "\n")
+        pos = str(row[pos_i] or "").strip() if pos_i is not None else ""
+        if not word or not definition:
+            continue
+        vocab.setdefault(word, []).append({"word": word, "pos": pos, "definition": definition})
+    wb.close()
+    return vocab
+
+
+WORD_TOKEN_RE = re.compile(r"[A-Za-z]+(?:['\u2019-][A-Za-z]+)*")
+
+
+def _vocab_popup_text(vocab_entries: list) -> tuple:
+    """合并同一单词的多条词性/释义，返回 (词性文本, 释义文本)"""
+    if not vocab_entries:
+        return "", ""
+    pos = " / ".join(sorted({v["pos"] for v in vocab_entries if v["pos"]}))
+    definitions = []
+    seen = set()
+    for entry in vocab_entries:
+        if entry["definition"] not in seen:
+            seen.add(entry["definition"])
+            definitions.append(entry["definition"])
+    definition = "\n".join(definitions)
+    return pos, definition
+
+
+def annotate_text(text: str, vocab: dict) -> str:
+    """把命中词表的英文词包成可点击元素，保留原文大小写"""
+    if not text or not vocab:
+        return html_mod.escape(text or "")
+    parts = []
+    cursor = 0
+    for match in WORD_TOKEN_RE.finditer(text):
+        key = match.group(0).lower()
+        if key not in vocab:
+            continue
+        start, end = match.span()
+        if start > cursor:
+            parts.append(html_mod.escape(text[cursor:start]))
+        word = match.group(0)
+        pos, definition = _vocab_popup_text(vocab[key])
+        parts.append(
+            f'<button class="vocab-word" type="button" data-word="{html_mod.escape(word)}" '
+            f'data-pos="{html_mod.escape(pos)}" data-def="{html_mod.escape(definition)}">'
+            f'{html_mod.escape(word)}</button>'
+        )
+        cursor = end
+    if cursor < len(text):
+        parts.append(html_mod.escape(text[cursor:]))
+    return "".join(parts)
 
 
 def extract_image(entry) -> str:
@@ -365,38 +432,26 @@ def split_text_by_length(text: str, max_chars: int = 1500) -> list:
     return chunks
 
 
-def _ai_call(client, config, prompt: str, max_tokens: int = 2000) -> str:
-    """调用 AI，主模型 410 下线时自动切换备用模型"""
-    models = [config["openai_model"]] + config.get("openai_fallback_models", [])
-    tried = set()
-    last_error = None
-    for model in models:
-        if model in tried:
-            continue
-        tried.add(model)
-        try:
-            resp = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.3,
-                max_tokens=max_tokens,
-            )
-            result = (resp.choices[0].message.content or "").strip()
-            if model != config["openai_model"]:
-                print(f"   🔁 已切换可用模型: {model}")
-                config["openai_model"] = model
-            return result
-        except Exception as e:
-            last_error = e
-            status = getattr(e, "status_code", None)
-            retryable = status in {404, 410} or "404" in str(e) or "410" in str(e)
-            if not retryable:
-                print(f"   ⚠️ AI 调用失败({model}): {e}")
-                break
-            reason = "已下线" if status == 410 or "410" in str(e) else "当前账号不可用"
-            print(f"   ⚠️ 模型{reason}，继续尝试下一个: {model}")
-    print(f"   ⚠️ AI 调用失败: {last_error}")
-    return ""
+def _ai_call(config: dict, prompt: str, max_tokens: int = 2000) -> str:
+    """通过 OpenAI 兼容接口调用 Gemini，返回纯文本"""
+    api_key = config.get("gemini_api_key", "").strip()
+    model = config.get("gemini_model") or "gemini-2.5-flash"
+    base_url = config.get("gemini_base_url") or "https://generativelanguage.googleapis.com/v1beta/openai/"
+    if not api_key:
+        print("   ⚠️ 缺少 GEMINI_API_KEY")
+        return ""
+    try:
+        client = OpenAI(api_key=api_key, base_url=base_url)
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            max_tokens=max_tokens,
+        )
+        return (resp.choices[0].message.content or "").strip()
+    except Exception as e:
+        print(f"   ⚠️ Gemini 调用失败: {e}")
+        return ""
 
 
 def _parse_vocab(raw: str) -> list:
@@ -415,8 +470,7 @@ def _parse_vocab(raw: str) -> list:
 
 
 def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
-    """AI 翻译标题+正文（分段翻译），并提取 5 个四六级高频词汇"""
-    client = OpenAI(api_key=config["openai_api_key"], base_url=config["openai_base_url"])
+    """Gemini 翻译标题+正文（分段翻译），并提取 5 个四六级高频词汇"""
 
     title = (item.get("title") or "").strip()
     body = (item.get("content") or item.get("summary") or "").strip()
@@ -433,7 +487,7 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
 
 英文标题：
 {title}"""
-    zh_title = _ai_call(client, config, title_prompt, max_tokens=300)
+    zh_title = _ai_call(config, title_prompt, max_tokens=300)
 
     chunks = split_text_by_length(body, max_chars=max_chars)
     zh_chunks = []
@@ -449,7 +503,7 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
 
 英文片段：
 {chunk}"""
-        translated = _ai_call(client, config, body_prompt, max_tokens=2000)
+        translated = _ai_call(config, body_prompt, max_tokens=2000)
         if translated:
             zh_chunks.append(translated)
         else:
@@ -470,7 +524,7 @@ def translate_and_vocab(item: dict, config: dict, max_chars: int = 1500):
 
 英文正文：
 {body[:3000]}"""
-    vocab_raw = _ai_call(client, config, vocab_prompt, max_tokens=500)
+    vocab_raw = _ai_call(config, vocab_prompt, max_tokens=500)
     vocab = _parse_vocab(vocab_raw)
 
     return zh_title, zh_body, vocab
@@ -501,6 +555,14 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
 .reader.open .article-title-en{font-size:1.14em}
 .article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
 .reader.open .article-body{font-size:.92em}
 .article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
 .article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
@@ -664,6 +726,14 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 .article-title-en{font-weight:750;font-size:1.15em;margin-bottom:8px;line-height:1.4;color:var(--text)}
 .article-img{max-width:100%;height:auto;border-radius:8px;margin:8px 0;display:block}
 .article-summary-en{font-size:.92em;color:#444;margin:6px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
 .article-meta{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.82em;flex-wrap:wrap}
 .source-badge{background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600}
 .source-link{color:var(--accent);text-decoration:none;font-weight:700}
@@ -694,13 +764,52 @@ def _vocab_html(vocab: list) -> str:
     )
     return f'<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list">{vocab_items}</div></div>'
 
+VOCAB_JS = """
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+"""
 
-def build_article_page(article: dict, date_str: str, date_file: str) -> str:
-    """生成单篇文章子页：保留原分栏/标签方案，并增加底部中文浮窗"""
+
+def build_article_page(article: dict, date_str: str, date_file: str, vocab: dict = None) -> str:
+    """生成单篇文章子页，并标记命中的 CET 词表单词"""
     it = article["item"]
-    title_en = html_mod.escape(it["title"])
+    title_plain = html_mod.escape(it["title"])
+    title_en = annotate_text(it["title"], vocab or {})
     title_zh = html_mod.escape(article["zh_title"]) if article["zh_title"] else ""
-    content_en = html_mod.escape(it.get("content") or it.get("summary") or "")
+    content_en = annotate_text(it.get("content") or it.get("summary") or "", vocab or {})
     content_zh = html_mod.escape(article["zh_content"]) if article["zh_content"] else ""
     source = html_mod.escape(it["source"])
     hub_link = html_mod.escape(f"{date_file}.html")
@@ -718,7 +827,7 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta property="og:title" content="{safe_date} · {source}">
-<meta property="og:description" content="{title_en}">
+<meta property="og:description" content="{title_plain}">
 <meta property="og:type" content="article">
 <title>{source} | {safe_date}</title>
 <style>{ARTICLE_CSS}</style>
@@ -765,20 +874,22 @@ def build_article_page(article: dict, date_str: str, date_file: str) -> str:
 {vocab_html}
 </div>
 </aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
 <div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
+<script>{VOCAB_JS}</script>
 <script>{ARTICLE_JS}</script>
 </body>
 </html>"""
 
 
-def build_index_page(articles: list, date_str: str, date_file: str) -> str:
+def build_index_page(articles: list, date_str: str, date_file: str, vocab: dict = None) -> str:
     """生成今日总览页"""
     cards = []
     for article in articles:
         it = article["item"]
-        title_en = html_mod.escape(it["title"])
+        title_en = annotate_text(it["title"], vocab or {})
         excerpt = (it.get("content") or it.get("summary") or "")[:260]
-        summary_en = html_mod.escape(excerpt)
+        summary_en = annotate_text(excerpt, vocab or {})
         source = html_mod.escape(it["source"])
         subpage = html_mod.escape(f"{date_file}-{it['cat']}.html")
         img_html = _image_html(it["image"])
@@ -812,8 +923,10 @@ def build_index_page(articles: list, date_str: str, date_file: str) -> str:
 </div>
 <main class="main">
 {cards_html}
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
 <div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · {now_str}</div>
 </main>
+<script>{VOCAB_JS}</script>
 </body>
 </html>"""
 
@@ -898,7 +1011,7 @@ def main():
     print("=" * 50)
 
     config = load_config()
-    for k in ["wechat_webhook", "openai_api_key"]:
+    for k in ["wechat_webhook", "gemini_api_key"]:
         if not config[k]:
             raise RuntimeError(f"缺少配置:{k}")
 
@@ -910,6 +1023,8 @@ def main():
 
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
+    cet_vocab = load_vocab(config["cet_vocab_path"])
+    print(f"📖 CET 词表已加载: {len(cet_vocab)} 个词条")
 
     recent_titles, history = load_recent_titles(docs_dir, days=3)
     print(f"📚 最近 3 天标题去重库: {len(recent_titles)} 条")
@@ -940,7 +1055,7 @@ def main():
         else:
             print(f"   ✅ {it['source']}: 正文 {len(it['content'])} 字符")
 
-    print("\n🤖 AI 翻译 + 提取高频词汇…")
+    print("\n🤖 Gemini 翻译 + 提取高频词汇…")
     articles = []
     for it in items:
         print(f"   📄 处理 {it['source']}: {it['title'][:46]}")
@@ -951,13 +1066,13 @@ def main():
             "zh_content": zh_content,
             "vocab": vocab,
         })
-        sub_html = build_article_page(articles[-1], date_full, file_date)
+        sub_html = build_article_page(articles[-1], date_full, file_date, cet_vocab)
         sub_path = os.path.join(docs_dir, f"{file_date}-{it['cat']}.html")
         with open(sub_path, "w") as f:
             f.write(sub_html)
         print(f"   ✅ {sub_path}")
 
-    index_html = build_index_page(articles, date_full, file_date)
+    index_html = build_index_page(articles, date_full, file_date, cet_vocab)
     index_path = os.path.join(docs_dir, f"{file_date}.html")
     with open(index_path, "w") as f:
         f.write(index_html)
