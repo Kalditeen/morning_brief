@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-07",
-      "cat": "guardian-env",
-      "title": "Veteran conservative lawyer quits Trump’s interior department and warns of ‘assault on the rule of law’"
-    },
-    {
-      "date": "2026-10-07",
-      "cat": "bbc-science",
-      "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows"
-    },
-    {
       "date": "2026-10-08",
       "cat": "guardian-science",
       "title": "Nobel prize in chemistry awarded for work on mirror-image molecules"
@@ -59,6 +49,16 @@
       "date": "2026-10-10",
       "cat": "bbc-tech",
       "title": "Fired OpenAI researchers say they were let go for 'prioritising safety'"
+    },
+    {
+      "date": "2026-10-11",
+      "cat": "guardian-tech",
+      "title": "UK must not be beholden to foreign AI, says head of Alan Turing Institute"
+    },
+    {
+      "date": "2026-10-11",
+      "cat": "bbc-env",
+      "title": "Four dead and thousands without power after Hurricane Isaias lashes US"
     }
   ]
 }

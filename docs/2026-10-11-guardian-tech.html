@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月11日 周日 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="UK must not be beholden to foreign AI, says head of Alan Turing Institute">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年10月11日 周日</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月11日 周日 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-10-11.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">UK must <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be beholden to <button class="vocab-word" type="button" data-word="foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">foreign</button> AI, says <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> of Alan Turing <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/86f6ce436080552a980f816a4c5ba14072a37b86/545_213_5198_4158/master/5198.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=d3dfce885f900e948ce678c839cdbbf8" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">The UK must <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> dependent on <button class="vocab-word" type="button" data-word="foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">foreign</button> AI systems that can be switched <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> at <button class="vocab-word" type="button" data-word="short" data-pos="" data-def="a. 短的, 近的, 矮的, 短期的, 简短的, 少量的
+adv. 简短地, 突然
+n. 扼要, 短片, 缺乏
+vt. 故意少给, 使短路">short</button> <button class="vocab-word" type="button" data-word="notice" data-pos="" data-def="n. 注意, 布告, 通知, 预告, 短评
+vt. 注意, 通知, 评论, 提及, 关注
+vi. 注意">notice</button> and must <button class="vocab-word" type="button" data-word="develop" data-pos="" data-def="vt. 发展, 使发达, 进步, 洗印, 显影
+vi. 发展, 生长">develop</button> its <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> versions of the <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button>, according to the <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> of the Alan Turing <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button>.
+The <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> needs a stronger <button class="vocab-word" type="button" data-word="domestic" data-pos="" data-def="a. 家庭的, 国内的, 驯养的
+ 家庭的, 家用的">domestic</button> <button class="vocab-word" type="button" data-word="position" data-pos="" data-def="n. 位置, 地位, 身分, 形势, 姿势, 立场, 职位, 状态, 阵地
+vt. 安置, 决定...的位置
+ 位置">position</button> in AI in response to the US and China’s runaway leadership in the <button class="vocab-word" type="button" data-word="field" data-pos="" data-def="n. 领域, 田地, 场地, 战场, 场, 域
+vt. 使...晒在场上, 使上场
+a. 田间的, 野生的, 野外的, 田赛的
+ 域, 字段">field</button>, with “national resilience” a <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> for ATI said George Williamson.
+The <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> is the UK’s leading AI <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> <button class="vocab-word" type="button" data-word="body" data-pos="" data-def="n. 身体, 人, 尸体, 主要部分, 团体
+vt. 赋以形体
+ 体">body</button> and is under <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> leadership <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the government, its <button class="vocab-word" type="button" data-word="main" data-pos="" data-def="n. 主要部分, 干线, 体力, 力量, 主群组
+a. 主要的, 重要的, 全力的
+ 主群组">main</button> <button class="vocab-word" type="button" data-word="source" data-pos="" data-def="n. 来源, 水源, 根源, 原始资料, 源
+ 来源, 源程序">source</button> of funding, demanded a strategic <button class="vocab-word" type="button" data-word="shift" data-pos="" data-def="n. 变化, 移动, 轮班, 手段, 应急办法, 移位
+vt. 替换, 转移, 改变, 推卸, 变速
+vi. 转换, 移动, 转变, 推托, 变速
+ DOS内部命令:该命令可将批处理参数向左移动一个位置">shift</button>.
+“As AI becomes <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> embedded in critical services, in domains <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> defence, national security, critical <button class="vocab-word" type="button" data-word="infrastructure" data-pos="" data-def="n. 基础结构, 基础设施
+ 基础设施">infrastructure</button> and healthcare we shouldn’t <button class="vocab-word" type="button" data-word="depend" data-pos="" data-def="vi. 靠, 视...而定, 信赖">depend</button> solely on systems we can’t <button class="vocab-word" type="button" data-word="inspect" data-pos="" data-def="vt. 检查, 检阅, 检验
+vi. 检查">inspect</button> or <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button>, or that could be restricted or <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> switched <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button>,” said Williamson.
+In <button class="vocab-word" type="button" data-word="June" data-pos="" data-def="n. 六月">June</button> Washington temporarily blocked the <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> the US of Anthropic’s latest models, and has reportedly asked leading AI labs to <button class="vocab-word" type="button" data-word="withhold" data-pos="" data-def="vt. 使停止, 扣留, 保留, 拒给
+vi. 克制, 忍住">withhold</button> their models from being tested by the UK’s AI Security <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button> <button class="vocab-word" type="button" data-word="until" data-pos="" data-def="prep. 直到, 在...以前
+conj. 直到...时, 在...以前">until</button> they have been examined by AISI’s US <button class="vocab-word" type="button" data-word="counterpart" data-pos="" data-def="n. 副本, 复本, 配对物, 相应物
+ 副本, 正副二份中之一">counterpart</button>.
+“We’ve seen <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> that <button class="vocab-word" type="button" data-word="both" data-pos="" data-def="a. 两者的
+adv. 两者都
+pron. 两者">both</button> political and commercial pressures <button class="vocab-word" type="button" data-word="mean" data-pos="" data-def="a. 低劣的, 卑贱的, 简陋的, 吝啬的, 惭愧的, 平均的, 中间的, 普通的
+vt. 意谓, 想要, 意欲, 预定
+vi. 用意, 有意义
+n. 平均数, 中间, 中庸">mean</button> we may <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> have <button class="vocab-word" type="button" data-word="access" data-pos="" data-def="n. 通路, 入口, 接近, 进入, 使用权, 发作
+vt. 访问, 存取, 接近, 使用
+ 访问, 存取">access</button> [to AI] in <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> the circumstances <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> we <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> it. That is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> a <button class="vocab-word" type="button" data-word="place" data-pos="" data-def="n. 地方, 地点, 位置, 住所, 座位, 地位, 处境, 特权, 空间, 余地, 职务, 位
+vt. 放置, 寄予, 认出, 评定, 任命
+vi. 名次列前">place</button> <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> a <button class="vocab-word" type="button" data-word="nation" data-pos="" data-def="n. 国家, 民族
+ 民族, 国家">nation</button> wants to be,” he said.
+Williamson added: “There’s a <button class="vocab-word" type="button" data-word="set" data-pos="" data-def="n. 日落, 同伙, 组合, 集合, 装置
+vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整
+vi. 日落, 凝固, 定型, 搁住, 结果, 适合
+a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的
+ 设置; DOS内部命令:改变或显示分配给环境变量的值">set</button> of circumstances <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> it would be a <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button> <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button> for us to have <button class="vocab-word" type="button" data-word="something" data-pos="" data-def="pron. 某事, 某物">something</button> that we don’t have to <button class="vocab-word" type="button" data-word="ask" data-pos="" data-def="vi. 问, 要求
+vt. 问, 要求, 邀请, 需要">ask</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> people’s permission to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button>.”
+He said national resilience would be a <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> of ATI’s <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> amid <button class="vocab-word" type="button" data-word="concern" data-pos="" data-def="n. 关心, 忧虑
+vt. 与...有关, 使担心, 使挂念">concern</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the geopolitical <button class="vocab-word" type="button" data-word="situation" data-pos="" data-def="n. 情形, 境遇, 位置
+ 情境, 处境">situation</button> and the <button class="vocab-word" type="button" data-word="risk" data-pos="" data-def="n. 冒险, 危险, 保险额
+vt. 冒...的危险, 冒险干">risk</button> posed by increasingly powerful AI systems.
+Those concerns were highlighted <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> by the UK <button class="vocab-word" type="button" data-word="prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">prime</button> <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>, Andy Burnham, announcing a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> national centre to <button class="vocab-word" type="button" data-word="tackle" data-pos="" data-def="n. 工具, 复滑车, 滑车, 装备, 扭倒
+vt. 固定, 处理, 抓住
+vi. 扭倒">tackle</button> state-backed disinformation , and Anthropic predicting the <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> had a greater than 10% <button class="vocab-word" type="button" data-word="chance" data-pos="" data-def="n. 机会, 意外, 可能性
+vi. 偶然发生
+vt. 冒险">chance</button> of wiping <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> humanity by 2030 .
+“It’s a <button class="vocab-word" type="button" data-word="moment" data-pos="" data-def="n. 片刻, 瞬间, 重要, 阶段, 力矩
+ 片刻, 瞬间, 时机, 因素, 矩">moment</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> national resilience is definitely <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> needs and it’s definitely a <button class="vocab-word" type="button" data-word="thing" data-pos="" data-def="n. 事物, 东西, 物, 用品, 事, 事件, 情况, 行为, 特征">thing</button> I <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> the Turing <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> can <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> with,” he said.
+“We are facing a <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> adversarial <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button>, <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="frequent" data-pos="" data-def="a. 时常发生的, 频繁的, 快速的
+vt. 时常来访, 常常聚集, 常与...交往">frequent</button> shocks to our critical <button class="vocab-word" type="button" data-word="infrastructure" data-pos="" data-def="n. 基础结构, 基础设施
+ 基础设施">infrastructure</button> and <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> powerful AI amplifying these threats. To strengthen national resilience, the Turing will <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> on securing critical systems against disruption, countering threats from AI itself and helping to <button class="vocab-word" type="button" data-word="shape" data-pos="" data-def="n. 形状, 形态, 外形, 形式, 身材
+vt. 定形, 使成形, 塑造, 计划, 使符合
+vi. 成形, 形成, 成长
+ 形状">shape</button> the <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> strategic AI capability for the UK .”
+Williamson said the <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> could <button class="vocab-word" type="button" data-word="assist" data-pos="" data-def="n. 帮助, 协助
+vt. 帮助, 促进
+vi. 协助, 参加">assist</button> in building <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> resilience by helping <button class="vocab-word" type="button" data-word="produce" data-pos="" data-def="n. 生产品, 物产, 后代
+vt. 产生, 生产, 提出, 出示
+vi. 生产, 制造">produce</button> uses for AI “for the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button>”, working on areas from <button class="vocab-word" type="button" data-word="weather" data-pos="" data-def="n. 天气, 气象, 处境
+a. 迎风的
+vt. 使受风吹雨打, 侵蚀, 使风化, 经受住
+vi. 风化, 受侵蚀, 经受风雨">weather</button> forecasting to farming, as <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> as helping <button class="vocab-word" type="button" data-word="spot" data-pos="" data-def="n. 污点, 地点, 斑点, 点, 娱乐场所, 处境, 少量
+a. 当场的, 现场的, 现货买卖的, 现金交易的, 抽样的
+vt. 点缀, 玷污, 认出, 准确定...的位, 用灯光照射
+vi. 玷污, (从空中)侦察敌方目标">spot</button> disinformation. Referring to state-led disinformation campaigns, he said: “It’s <button class="vocab-word" type="button" data-word="very" data-pos="" data-def="a. 真正的, 恰好的, 十足的, 特有的
+adv. 非常, 完全">very</button> dangerous for the <button class="vocab-word" type="button" data-word="state" data-pos="" data-def="n. 州, 状态, 情形, 国家, 政府, 领土, 国务, 社会地位
+a. 国家的, 正式的, 礼仪用的, 州的
+vt. 说明, 陈述, 规定
+ 状态">state</button> of <button class="vocab-word" type="button" data-word="democracy" data-pos="" data-def="n. 民主政治, 民主主义
+ 民主, 民主政治, 民主政体">democracy</button> and it’s an <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button> that we can <button class="vocab-word" type="button" data-word="monitor" data-pos="" data-def="n. 监督器, 级长, 监听员, 班长, 监视器, 告诫物
+v. 监视, 监听, 监督
+ 监视器, 监视程序; 监视">monitor</button>.”
+Williamson is the <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> of His Majesty’s Government Communications Centre, a secretive government <button class="vocab-word" type="button" data-word="body" data-pos="" data-def="n. 身体, 人, 尸体, 主要部分, 团体
+vt. 赋以形体
+ 体">body</button> that makes gadgets for UK <button class="vocab-word" type="button" data-word="spy" data-pos="" data-def="n. 间谍, 侦探, 侦察
+vt. 侦察, 找出, 发现
+vi. 做密探, 侦查">spy</button> agencies and counts Alan Turing – the <button class="vocab-word" type="button" data-word="second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">second</button> <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button> <button class="vocab-word" type="button" data-word="war" data-pos="" data-def="n. 战争, 战争状态, 战术, 军事, 冲突, 斗争, 竞争
+vi. 进行战争, 作战, 打仗, 战斗
+a. 战争的, 战时用的">war</button> codebreaker and AI <button class="vocab-word" type="button" data-word="pioneer" data-pos="" data-def="n. 先锋, 拓荒者, 创始人
+vt. 提倡, 开辟, 开创, 倡导
+vi. 作先驱, 开路
+a. 最早的, 开拓的, 先驱的, 有开拓者特点的">pioneer</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> ATI is named – among its <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button>.
+Williamson said it had <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> in <button class="vocab-word" type="button" data-word="recent" data-pos="" data-def="a. 最近的, 近代的, 最新的
+ 最近的, 新进的">recent</button> months that the UK needed “<button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> agency on <button class="vocab-word" type="button" data-word="access" data-pos="" data-def="n. 通路, 入口, 接近, 进入, 使用权, 发作
+vt. 访问, 存取, 接近, 使用
+ 访问, 存取">access</button> to <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button>” and a stronger <button class="vocab-word" type="button" data-word="sovereign" data-pos="" data-def="n. 元首, 独立国
+a. 具有主权的, 至高无上的, 国王的, 完全的">sovereign</button> <button class="vocab-word" type="button" data-word="position" data-pos="" data-def="n. 位置, 地位, 身分, 形势, 姿势, 立场, 职位, 状态, 阵地
+vt. 安置, 决定...的位置
+ 位置">position</button> in AI. “It feels <button class="vocab-word" type="button" data-word="pretty" data-pos="" data-def="a. 漂亮的, 优美的, 机灵的, 狡猾的, 恰当的
+adv. 相当, 颇">pretty</button> uncomfortable if you don’t have <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button> or ability to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> technologies <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> you <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> them, and <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> harder to <button class="vocab-word" type="button" data-word="imagine" data-pos="" data-def="vt. 想像, 设想, 猜测
+vi. 想像起来">imagine</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> you <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> an <button class="vocab-word" type="button" data-word="economy" data-pos="" data-def="n. 经济, 理财, 节约
+ 经济, 整体">economy</button> on the <button class="vocab-word" type="button" data-word="top" data-pos="" data-def="n. 顶部, 顶端, 极点, 上面, 上部, 顶篷, 最高地位, 首位, 陀螺
+a. 最高的, 顶上的, 头等的
+vt. 盖, 加以顶, 高达, 超越
+vi. 结束, 达到顶点, 高出
+ TOP协议">top</button> of <button class="vocab-word" type="button" data-word="stuff" data-pos="" data-def="n. 原料, 要素, 东西, 材料, 素质, 织品, 废物, 废话
+vt. 装填
+vi. 狼吞虎咽">stuff</button> that can <button class="vocab-word" type="button" data-word="disappear" data-pos="" data-def="vi. 消失, 不见">disappear</button>,” he said.
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="First" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">First</button> Edition
+Our <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button> <button class="vocab-word" type="button" data-word="email" data-pos="" data-def="n. 电子信函">email</button> breaks <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> the <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> stories of the <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>, telling you what’s happening and <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button> it matters
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+In <button class="vocab-word" type="button" data-word="recent" data-pos="" data-def="a. 最近的, 近代的, 最新的
+ 最近的, 新进的">recent</button> weeks Christine Lagarde, the <button class="vocab-word" type="button" data-word="president" data-pos="" data-def="n. 总统, 总裁, 董事长, (学院)院长, (大学)校长, 主管人, 主持人
+ 总经理, 董事长, 总裁">president</button> of the European Central <button class="vocab-word" type="button" data-word="Bank" data-pos="" data-def="n. 银行, 堤, 岸
+ 库">Bank</button>, and Ursula von der Leyen, the <button class="vocab-word" type="button" data-word="president" data-pos="" data-def="n. 总统, 总裁, 董事长, (学院)院长, (大学)校长, 主管人, 主持人
+ 总经理, 董事长, 总裁">president</button> of the European <button class="vocab-word" type="button" data-word="Commission" data-pos="" data-def="n. 委任状, 任官令, 所委职责, 佣金, 犯, 委托, 所托之事
+vt. 委任, 委托制作, 使服役">Commission</button>, have urged Europe to be <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> self-sufficient in AI, with Lagarde speaking <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button> of being “<button class="vocab-word" type="button" data-word="cut" data-pos="" data-def="n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路
+a. 经切割的, 缩减的
+vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出
+vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑
+ 剪切">cut</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button>” from US and Chinese <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button>.
+Williamson cited <button class="vocab-word" type="button" data-word="China" data-pos="" data-def="n. 中国, 瓷器
+a. 中国的">China</button> as <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> <button class="vocab-word" type="button" data-word="reason" data-pos="" data-def="n. 理由, 原因, 理智, 道理, 前提, 理性
+vt. 说服, 推论, 辩论
+vi. 推论, 劝说, 思考">reason</button> for boosting <button class="vocab-word" type="button" data-word="domestic" data-pos="" data-def="a. 家庭的, 国内的, 驯养的
+ 家庭的, 家用的">domestic</button> AI, amid concerns that Chinese-made systems might <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> “<button class="vocab-word" type="button" data-word="coincide" data-pos="" data-def="vi. 一致, 符合
+ 重合">coincide</button> with our values”. He said: “<button class="vocab-word" type="button" data-word="Try" data-pos="" data-def="n. 尝试, 试验, 审理, 审判
+vt. 试, 尝试, 试验, 考验, 审问, 提炼
+vi. 尝试, 试图">Try</button> asking <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of these models <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> events in the <button class="vocab-word" type="button" data-word="recent" data-pos="" data-def="a. 最近的, 近代的, 最新的
+ 最近的, 新进的">recent</button> <button class="vocab-word" type="button" data-word="past" data-pos="" data-def="n. 过去, 昔时, 往事, 早年经历, 过去时
+a. 过去的, 结束的, 卸任的, 过去时的
+prep. 越过, 晚于, 超越, 超出...的可能性(能力、范围等)
+pass的过去分词">past</button> in <button class="vocab-word" type="button" data-word="China" data-pos="" data-def="n. 中国, 瓷器
+a. 中国的">China</button> and you’re <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> going to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> an <button class="vocab-word" type="button" data-word="answer" data-pos="" data-def="n. 答案, 回答, 回报, 答辩
+vt. 回答, 反驳, 适应, 响应, 符合
+vi. 回答, 答应, 负责, 符合, 成功
+ 用户问题及答案新闻组">answer</button> that’s particularly helpful if you’re doing GCSE <button class="vocab-word" type="button" data-word="history" data-pos="" data-def="n. 历史, 过去, 经历, 发展过程, 历史学, 过去的事, 历史记录
+ 历史记录">history</button>.”
+“This is the defining <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> of our <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button>. We <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> to be <button class="vocab-word" type="button" data-word="able" data-pos="" data-def="a. 能干的, 能够的">able</button> to <button class="vocab-word" type="button" data-word="shape" data-pos="" data-def="n. 形状, 形态, 外形, 形式, 身材
+vt. 定形, 使成形, 塑造, 计划, 使符合
+vi. 成形, 形成, 成长
+ 形状">shape</button> that <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> … in a <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> that accords with <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> we are and our values,” he said, adding that <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> ATI and the UK probably could <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="match" data-pos="" data-def="n. 比赛, 火柴, 对手
+vt. 使相配, 使比赛, 与...竞争
+vi. 结婚, 相配
+ 比较">match</button> the financial resources of <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> AI labs, they could <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> <button class="vocab-word" type="button" data-word="produce" data-pos="" data-def="n. 生产品, 物产, 后代
+vt. 产生, 生产, 提出, 出示
+vi. 生产, 制造">produce</button> “nationally owned IP” or smaller models that could be made <button class="vocab-word" type="button" data-word="available" data-pos="" data-def="a. 可利用的, 可获得的, 有效的
+ 有效的, 可得的">available</button> to startups.
+“We can be ambitious <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> without trying to <button class="vocab-word" type="button" data-word="copy" data-pos="" data-def="n. 副本, 摹仿, 一册
+v. 复印, 抄袭, 复制
+ 副本; 复制; DOS内部命令:复制文件
+将几个文件合并成一个文件, 以及将文件传至外设或在设备之间传送">copy</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> <button class="vocab-word" type="button" data-word="frontier" data-pos="" data-def="n. 边界, 边境
+ 国境, 边境, 边界">frontier</button> labs are doing,” he said.
+Williamson said ATI, a registered <button class="vocab-word" type="button" data-word="charity" data-pos="" data-def="n. 慈悲, 博爱, 慈善团体, 施舍
+ 宽大, 宽恕, 慈善机关">charity</button>, could be an “<button class="vocab-word" type="button" data-word="objective" data-pos="" data-def="n. 目的, 目标, 宗旨, 宾格, 实物
+a. 客观的, 如实的, 无偏见的, 宾格的">objective</button> and helpful” arbiter of concerns <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> AI, including existential <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button>. “A national <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> should be an <button class="vocab-word" type="button" data-word="active" data-pos="" data-def="a. 活跃的, 起作用的, 积极的, 有效的, 主动的, 活性的, 现行的, 现役的
+n. 主动语态, 积极分子">active</button> <button class="vocab-word" type="button" data-word="partner" data-pos="" data-def="n. 合伙人, 股东, 伙伴, 伴侣
+vt. 与...合伙, 组成一对
+vi. 做伙伴, 当助手">partner</button> to government and the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> generally in helping to <button class="vocab-word" type="button" data-word="navigate" data-pos="" data-def="vi. 航行
+vt. 航行于, 驾驶, 操纵, 使通过">navigate</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of this <button class="vocab-word" type="button" data-word="stuff" data-pos="" data-def="n. 原料, 要素, 东西, 材料, 素质, 织品, 废物, 废话
+vt. 装填
+vi. 狼吞虎咽">stuff</button>.”
+He said <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> was a “a <button class="vocab-word" type="button" data-word="lot" data-pos="" data-def="n. 运气, 签, 抽签, 份额, 许多, 一堆
+vt. 划分
+vi. 抽签, 抓阄">lot</button> of <button class="vocab-word" type="button" data-word="stuff" data-pos="" data-def="n. 原料, 要素, 东西, 材料, 素质, 织品, 废物, 废话
+vt. 装填
+vi. 狼吞虎咽">stuff</button> being tossed <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button>” on the existential <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button> <button class="vocab-word" type="button" data-word="risk" data-pos="" data-def="n. 冒险, 危险, 保险额
+vt. 冒...的危险, 冒险干">risk</button> that “is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="always" data-pos="" data-def="adv. 总是, 始终">always</button> <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> grounded in <button class="vocab-word" type="button" data-word="science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">science</button>”. Referring to the penchant among <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> in the <button class="vocab-word" type="button" data-word="sector" data-pos="" data-def="n. 扇形, 部门, 部分, 函数尺, 象限仪, 段, 区段
+vt. 把...分成扇形
+ 扇面; 扇区; 段; 区段">sector</button> for expressing the <button class="vocab-word" type="button" data-word="risk" data-pos="" data-def="n. 冒险, 危险, 保险额
+vt. 冒...的危险, 冒险干">risk</button> of AI-triggered extinction in percentage terms, he said: “I’m <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="sure" data-pos="" data-def="a. 确信, 必然的, 必定的
+adv. 当然, 确实地, 无疑地">sure</button> it’s helpful trying to <button class="vocab-word" type="button" data-word="assign" data-pos="" data-def="vt. 分配, 指派, 赋值
+ 赋值">assign</button> <button class="vocab-word" type="button" data-word="particular" data-pos="" data-def="n. 一项(或条、点), 个别项目, 详细说明
+a. 特别的, 独有的, 挑剔的, 详尽的">particular</button> percentages to it <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> I have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> seen <button class="vocab-word" type="button" data-word="anyone" data-pos="" data-def="pron. 任何人">anyone</button> <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button> me a convincing evidence of <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they’ve arrived at the <button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> they then <button class="vocab-word" type="button" data-word="start" data-pos="" data-def="n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件
+vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛
+vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用
+ 起始">start</button> throwing <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button>.”
+Williamson indicated that the <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> on national resilience would <button class="vocab-word" type="button" data-word="enable" data-pos="" data-def="vt. 使能够
+ 允许, 使能, 打开">enable</button> ATI to <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> doing <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> on the <button class="vocab-word" type="button" data-word="environment" data-pos="" data-def="n. 环境, 外界, 围绕
+ 环境">environment</button> that Keir Starmer’s government had wanted to sideline. In 2025 the then <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> <button class="vocab-word" type="button" data-word="secretary" data-pos="" data-def="n. 秘书, 书记, 大臣
+ 秘书">secretary</button>, Peter Kyle, wrote to ATI’s <button class="vocab-word" type="button" data-word="chair" data-pos="" data-def="n. 椅子, 显要的席位, 主席
+vt. 使入座, 使就任要职">chair</button> demanding the <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> <button class="vocab-word" type="button" data-word="switch" data-pos="" data-def="n. 开关, 电闸, 转换, 软枝, 鞭子, 道岔
+vt. 转变, 切换, 摆动, 转换, 使转轨
+vi. 转换, 变换, 摆动
+ 开关; 翻转; 转移">switch</button> its <button class="vocab-word" type="button" data-word="main" data-pos="" data-def="n. 主要部分, 干线, 体力, 力量, 主群组
+a. 主要的, 重要的, 全力的
+ 主群组">main</button> <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> to defence and security. Williamson’s <button class="vocab-word" type="button" data-word="predecessor" data-pos="" data-def="n. 前任, 先辈, 前身
+ 初牙, 前辈, 祖先">predecessor</button> Jean Innes resigned <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button> afterwards .
+“For me <button class="vocab-word" type="button" data-word="climate" data-pos="" data-def="n. 气候, 社会趋势, 气候区
+ 气候">climate</button> is as <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> a national security <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button> as defence. For me, it [national resilience] is a <button class="vocab-word" type="button" data-word="frame" data-pos="" data-def="n. 框, 结构, 体格
+vt. 构成, 设计, 制定, 使适合, 陷害
+ 框架, 图文框, 帧">frame</button> that enables us to <button class="vocab-word" type="button" data-word="cover" data-pos="" data-def="n. 盖子, 封面, 藉口
+vt. 覆盖, 掩饰, 保护, 掩护, 包括
+vi. 覆盖">cover</button> the <button class="vocab-word" type="button" data-word="range" data-pos="" data-def="n. 排, 行, 山脉, 范围, 行列, 射程
+vt. 排列, 归类于, 使并列, 放牧
+vi. 平行, 延伸, 漫游
+ 量程; 范围; 域; 距离">range</button> of threats and opportunities to the UK,” he said.
+George Williamson says ‘national resilience’ is <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> of ATI amid US and China’s runaway leadership in <button class="vocab-word" type="button" data-word="field" data-pos="" data-def="n. 领域, 田地, 场地, 战场, 场, 域
+vt. 使...晒在场上, 使上场
+a. 田间的, 野生的, 野外的, 田赛的
+ 域, 字段">field</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">Alan Turing Institute负责人表示：英国绝不能受制</h3>
+<div class="article-content-zh">阿兰·图灵研究所负责人表示，英国绝不能依赖可能在短时间内被切断的外国人工智能系统，必须开发属于自己的技术版本。
+乔治·威廉姆森表示，面对美中两国在该领域的遥遥领先，英国需要在人工智能方面建立更强大的国内地位，而“国家韧性”是阿兰·图灵研究所的一个关键重点。
+该研究所是英国领先的人工智能研究机构，在其主要资金来源政府要求进行战略转型后，目前正由新的领导层执掌。
+威廉姆森说：“随着人工智能越来越深入地嵌入国防、国家安全、关键基础设施和医疗等领域的关键服务中，我们不应仅仅依赖那些我们无法检查或控制、或者可能会受到限制甚至被切断的系统。”
+今年6月，华盛顿暂时阻止了Anthropic最新模型在美国境外的发布，据报道还要求顶尖人工智能实验室暂缓让英国人工智能安全研究所测试其模型，直到这些模型先接受美国对应机构的审查。
+他说：“我们现在已经看到，政治和商业压力都意味着我们可能无法在所有需要的时候都能获得[人工智能]。这不是一个国家希望看到的处境。”
+威廉姆森补充道：“在某些情况下，拥有一些我们无需请求他人许可就能使用的东西，会是一个好主意。”
+他表示，在地缘政治局势以及日益强大的人工智能系统所带来的风险令人担忧之际，国家韧性将是 ATI 的工作重点。
+上个月，英国首相安迪·伯纳姆（Andy Burnham）宣布成立一个新的国家中心以应对国家支持的虚假信息，而 Anthropic 预测该技术在 2030 年之前毁灭人类的概率超过 10%，这些事件突显了上述担忧。
+“当前这个时刻，国家韧性绝对是国家所需要的，而且我认为图灵研究所绝对能在其中发挥作用，”他说。
+“我们正面临一个对抗性更强的世界，关键基础设施面临更频繁的冲击，而现在强大的人工智能放大了这些威胁。为了增强国家韧性，图灵研究所将重点致力于保护关键系统免受破坏、应对来自人工智能本身的威胁，并帮助英国塑造合适的人工智能战略能力。”
+威廉姆森表示，该研究所可以通过协助开发“造福公众”的人工智能应用来协助建立这种韧性，业务涵盖从天气预报到农业等多个领域，并帮助识别虚假信息。谈及国家主导的虚假信息行动时，他说：“这对民主制度的现状非常危险，也是一个我们可以进行监测的领域。”
+威廉姆森是国王陛下政府通信中心的前负责人。该中心是一个神秘的政府机构，负责为英国间谍机构制造特工装置，其前员工中包括艾伦·图灵——二战密码破译者兼人工智能先驱，ATI正是以他的名字命名的。
+威廉姆森表示，最近几个月来情况已变得很明确，英国需要“在获取技术方面拥有更多自主权”，并在人工智能领域占据更强的主权地位。“如果在你想使用技术时却没有一定的控制权或使用能力，那种感觉会相当令人不安，而且也很难想象你如何能把经济建立在可能会消失的东西之上，”他说。
+订阅 First Edition
+我们的晨间邮件为您梳理当天的重点要闻，告诉您正在发生什么以及为何重要
+通讯推广之后
+最近几周，欧洲央行行长克里斯蒂娜·拉加德与欧盟委员会主席乌尔苏拉·冯德莱恩敦促欧洲在人工智能领域实现更大程度的自给自足，拉加德还谈到了被切断美中技术供应的威胁。
+“这是定义我们这个时代的技术。我们希望能够以一种符合我们的特质和价值观的方式……去塑造这项技术，”他表示，并补充称，尽管ATI和英国可能无法与各大主流AI实验室的资金实力相匹敌，但他们仍可以产出“国家所有的知识产权”，或打造可供初创企业使用的小型模型。
+“我们可以在这方面展现雄心，而无需试图照搬前沿实验室的做法，”他说。
+威廉姆森表示，作为一家注册慈善机构，ATI可以就包括生存威胁在内的各类AI担忧充当“客观且有益的”仲裁者。“一家国家级研究机构应该成为政府以及更广泛公众的积极合作伙伴，帮助应对其中的一些问题。”
+他表示，关于生存威胁风险，目前流传着“很多说法”，而这些说法“往往缺乏充分的科学依据”。谈及该行业内某些人倾向于用百分比来表达AI引发人类灭绝的风险时，他说：“我不确定试图给出具体百分比是否有用，因为我还没看到任何人能向我拿出令人信服的证据，说明他们是如何得出那些随后被四处抛出的数字的。”
+威廉姆森表示，聚焦国家韧性将使ATI能够继续开展环境方面的工作，而基尔·斯塔默政府此前曾希望将这些工作边缘化。2025年，时任科技大臣彼得·凯尔致信ATI主席，要求该机构将其主要重点转向国防与安全。威廉姆森的前任吉恩·英尼斯随后不久便辞职了。
+“对我而言，气候与国防一样，都是国家安全问题。对我而言，它[国家韧性]是一个能够让我们涵盖英国所面临的一系列威胁与机遇的框架，”他说。
+乔治·威廉姆森表示，在中美两国于该领域遥遥领先之际，“国家韧性”是ATI的重点关注方向</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">domestic — adj. 本国的，国内的</span>
+<span class="vocab-item">inspect — v. 检查，检验</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">Alan Turing Institute负责人表示：英国绝不能受制</h3>
+<div class="article-content-zh">阿兰·图灵研究所负责人表示，英国绝不能依赖可能在短时间内被切断的外国人工智能系统，必须开发属于自己的技术版本。
+乔治·威廉姆森表示，面对美中两国在该领域的遥遥领先，英国需要在人工智能方面建立更强大的国内地位，而“国家韧性”是阿兰·图灵研究所的一个关键重点。
+该研究所是英国领先的人工智能研究机构，在其主要资金来源政府要求进行战略转型后，目前正由新的领导层执掌。
+威廉姆森说：“随着人工智能越来越深入地嵌入国防、国家安全、关键基础设施和医疗等领域的关键服务中，我们不应仅仅依赖那些我们无法检查或控制、或者可能会受到限制甚至被切断的系统。”
+今年6月，华盛顿暂时阻止了Anthropic最新模型在美国境外的发布，据报道还要求顶尖人工智能实验室暂缓让英国人工智能安全研究所测试其模型，直到这些模型先接受美国对应机构的审查。
+他说：“我们现在已经看到，政治和商业压力都意味着我们可能无法在所有需要的时候都能获得[人工智能]。这不是一个国家希望看到的处境。”
+威廉姆森补充道：“在某些情况下，拥有一些我们无需请求他人许可就能使用的东西，会是一个好主意。”
+他表示，在地缘政治局势以及日益强大的人工智能系统所带来的风险令人担忧之际，国家韧性将是 ATI 的工作重点。
+上个月，英国首相安迪·伯纳姆（Andy Burnham）宣布成立一个新的国家中心以应对国家支持的虚假信息，而 Anthropic 预测该技术在 2030 年之前毁灭人类的概率超过 10%，这些事件突显了上述担忧。
+“当前这个时刻，国家韧性绝对是国家所需要的，而且我认为图灵研究所绝对能在其中发挥作用，”他说。
+“我们正面临一个对抗性更强的世界，关键基础设施面临更频繁的冲击，而现在强大的人工智能放大了这些威胁。为了增强国家韧性，图灵研究所将重点致力于保护关键系统免受破坏、应对来自人工智能本身的威胁，并帮助英国塑造合适的人工智能战略能力。”
+威廉姆森表示，该研究所可以通过协助开发“造福公众”的人工智能应用来协助建立这种韧性，业务涵盖从天气预报到农业等多个领域，并帮助识别虚假信息。谈及国家主导的虚假信息行动时，他说：“这对民主制度的现状非常危险，也是一个我们可以进行监测的领域。”
+威廉姆森是国王陛下政府通信中心的前负责人。该中心是一个神秘的政府机构，负责为英国间谍机构制造特工装置，其前员工中包括艾伦·图灵——二战密码破译者兼人工智能先驱，ATI正是以他的名字命名的。
+威廉姆森表示，最近几个月来情况已变得很明确，英国需要“在获取技术方面拥有更多自主权”，并在人工智能领域占据更强的主权地位。“如果在你想使用技术时却没有一定的控制权或使用能力，那种感觉会相当令人不安，而且也很难想象你如何能把经济建立在可能会消失的东西之上，”他说。
+订阅 First Edition
+我们的晨间邮件为您梳理当天的重点要闻，告诉您正在发生什么以及为何重要
+通讯推广之后
+最近几周，欧洲央行行长克里斯蒂娜·拉加德与欧盟委员会主席乌尔苏拉·冯德莱恩敦促欧洲在人工智能领域实现更大程度的自给自足，拉加德还谈到了被切断美中技术供应的威胁。
+“这是定义我们这个时代的技术。我们希望能够以一种符合我们的特质和价值观的方式……去塑造这项技术，”他表示，并补充称，尽管ATI和英国可能无法与各大主流AI实验室的资金实力相匹敌，但他们仍可以产出“国家所有的知识产权”，或打造可供初创企业使用的小型模型。
+“我们可以在这方面展现雄心，而无需试图照搬前沿实验室的做法，”他说。
+威廉姆森表示，作为一家注册慈善机构，ATI可以就包括生存威胁在内的各类AI担忧充当“客观且有益的”仲裁者。“一家国家级研究机构应该成为政府以及更广泛公众的积极合作伙伴，帮助应对其中的一些问题。”
+他表示，关于生存威胁风险，目前流传着“很多说法”，而这些说法“往往缺乏充分的科学依据”。谈及该行业内某些人倾向于用百分比来表达AI引发人类灭绝的风险时，他说：“我不确定试图给出具体百分比是否有用，因为我还没看到任何人能向我拿出令人信服的证据，说明他们是如何得出那些随后被四处抛出的数字的。”
+威廉姆森表示，聚焦国家韧性将使ATI能够继续开展环境方面的工作，而基尔·斯塔默政府此前曾希望将这些工作边缘化。2025年，时任科技大臣彼得·凯尔致信ATI主席，要求该机构将其主要重点转向国防与安全。威廉姆森的前任吉恩·英尼斯随后不久便辞职了。
+“对我而言，气候与国防一样，都是国家安全问题。对我而言，它[国家韧性]是一个能够让我们涵盖英国所面临的一系列威胁与机遇的框架，”他说。
+乔治·威廉姆森表示，在中美两国于该领域遥遥领先之际，“国家韧性”是ATI的重点关注方向</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">domestic — adj. 本国的，国内的</span>
+<span class="vocab-item">inspect — v. 检查，检验</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-11 08:40</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
