@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月13日 周二 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="Cyber-attack similar to OpenAI Medicare breach seems likely in UK, says minister">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年10月13日 周二</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月13日 周二 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-10-13.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Cyber-attack <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> to OpenAI <button class="vocab-word" type="button" data-word="Medicare" data-pos="" data-def="n. 医疗照顾方案, 医疗照顾项目
+ 公办的医疗保险制">Medicare</button> <button class="vocab-word" type="button" data-word="breach" data-pos="" data-def="n. 裂口, 违背, 破坏, 违反, 突破, 破裂
+vt. 攻破, 突破
+vi. 跳出水面">breach</button> seems likely in UK, says <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/06f9d7c04e510b72eb3f0e4ac2d578efa4d417b1/911_0_4529_3624/master/4529.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=56b2dd79b6083a34842574c7401bf016" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">An AI-driven cyber-attack <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> to the OpenAI <button class="vocab-word" type="button" data-word="breach" data-pos="" data-def="n. 裂口, 违背, 破坏, 违反, 突破, 破裂
+vt. 攻破, 突破
+vi. 跳出水面">breach</button> of Australia’s healthcare <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> is likely, “if <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="inevitable" data-pos="" data-def="a. 不可避免的, 必然的
+ 不可避免的, 无法规避的, 必然的">inevitable</button>”, in the UK, according to a <button class="vocab-word" type="button" data-word="senior" data-pos="" data-def="n. 年长者, 资深者, 毕业班学生
+a. 年长的, 高级的, 资深的">senior</button> <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>.
+Kanishka Narayan, the UK AI <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>, indicated that the British government’s <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> cyber defences would be bypassed by a <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> that has developed highly <button class="vocab-word" type="button" data-word="sophisticated" data-pos="" data-def="a. 复杂的, 久经世故的
+ 尖端的, 高级的, 非常有经验的">sophisticated</button> skills in cybersecurity.
+In a <button class="vocab-word" type="button" data-word="speech" data-pos="" data-def="n. 演讲, 说话, 谈话, 言语, 引语, 民族语言
+ 言语, 语言">speech</button> Narayan said an <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> in <button class="vocab-word" type="button" data-word="June" data-pos="" data-def="n. 六月">June</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> an OpenAI <button class="vocab-word" type="button" data-word="agent" data-pos="" data-def="n. 代理商, 政府代表, 动原, 媒介
+ 代理程序">agent</button> – a computer program acting autonomously – infiltrated <button class="vocab-word" type="button" data-word="Medicare" data-pos="" data-def="n. 医疗照顾方案, 医疗照顾项目
+ 公办的医疗保险制">Medicare</button>, Australia’s universal healthcare <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button>, could be repeated in the UK.
+“It concerns me,” he said. “It seems likely, if <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="inevitable" data-pos="" data-def="a. 不可避免的, 必然的
+ 不可避免的, 无法规避的, 必然的">inevitable</button>, that our <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> cyber defences will be breached.”
+Narayan said the agent’s <button class="vocab-word" type="button" data-word="task" data-pos="" data-def="n. 工作, 任务, 作业, 困难的工作
+vt. 派给...工作, 使辛劳
+ 任务">task</button> was “<button class="vocab-word" type="button" data-word="benign" data-pos="" data-def="a. 善良的, 良性的
+ 良性的">benign</button>” as it searched for information <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> spending on medicines, but it <button class="vocab-word" type="button" data-word="nonetheless" data-pos="" data-def="conj. 然而, 尽管, 不过
+adv. 不过, 仍然, 尽管如此, 然而">nonetheless</button> went <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> that it was <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> authorised to have.
+“The Australian government has said that <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> personal <button class="vocab-word" type="button" data-word="medical" data-pos="" data-def="n. 医生, 体格检查
+a. 医学的, 内科的, 药的">medical</button> records are known to have been accessed, and <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> evidence of wider <button class="vocab-word" type="button" data-word="compromise" data-pos="" data-def="n. 妥协, 折中, 折中方案, 和解
+vi. 妥协处理
+vt. 危害">compromise</button>, but the <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> should <button class="vocab-word" type="button" data-word="concern" data-pos="" data-def="n. 关心, 忧虑
+vt. 与...有关, 使担心, 使挂念">concern</button> us,” he said.
+Speaking at a <button class="vocab-word" type="button" data-word="science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">science</button> and tech hub at <button class="vocab-word" type="button" data-word="Imperial" data-pos="" data-def="a. 帝王的, 宗主国的, 至尊的, 壮丽的
+n. 特等品">Imperial</button> <button class="vocab-word" type="button" data-word="College" data-pos="" data-def="n. 学院, 大学, 学会">College</button> London, Narayan said the security <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>, Dan Jarvis, would <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> a government <button class="vocab-word" type="button" data-word="programme" data-pos="" data-def="n. 节目, 节目单, 程序, 纲要, 大纲, 计划
+vt. 规划, 拟...计划
+vi. 安排节目, 编程序">programme</button> to strengthen against cyber-attacks, including from AI. The government will <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="consider" data-pos="" data-def="v. 考虑, 思考, 认为">consider</button> using the Cyber Security and Resilience <button class="vocab-word" type="button" data-word="Bill" data-pos="" data-def="n. 帐单, 清单, 钞票, 鸟嘴, 广告, 法案, 票据
+vt. 开帐单, (用招贴)宣布">Bill</button> as a <button class="vocab-word" type="button" data-word="vehicle" data-pos="" data-def="n. 交通工具, 车辆, 传播媒介
+ 载体; 运载体; 漆料">vehicle</button> for introducing AI safety regulations, including making it mandatory to <button class="vocab-word" type="button" data-word="report" data-pos="" data-def="n. 报告, 报道, 传说, 案情报告, 爆炸声, 成绩单
+vt. 报告, 汇报, 转述, 报道, 揭发, 使报到
+vi. 报告, 写报道, 报到
+ 报告">report</button> AI safety incidents.
+Narayan spoke <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> a parliamentary hearing on AI safety on <button class="vocab-word" type="button" data-word="Tuesday" data-pos="" data-def="n. 星期二">Tuesday</button> into the <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button> . <button class="vocab-word" type="button" data-word="Senior" data-pos="" data-def="n. 年长者, 资深者, 毕业班学生
+a. 年长的, 高级的, 资深的">Senior</button> figures from OpenAI and Anthropic will be among those giving evidence to MPs on the <button class="vocab-word" type="button" data-word="business" data-pos="" data-def="n. 生意, 事情, 业务, 商业, 商行, 职责
+ 企业, 商业, 营业">business</button>, innovation, <button class="vocab-word" type="button" data-word="science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">science</button> and <button class="vocab-word" type="button" data-word="trade" data-pos="" data-def="n. 贸易, 商业, 交易, 生意, 职业, 顾客, 信风
+vi. 进行交易, 做买卖, 经商, 对换, 购物
+vt. 用...进行交换">trade</button> <button class="vocab-word" type="button" data-word="committee" data-pos="" data-def="n. 委员会
+ 委员会">committee</button>. They will <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> be joined by the <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> of the UK’s AI Security <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button>, Henry de Zoete.
+Narayan confirmed that the <button class="vocab-word" type="button" data-word="institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">institute</button> would <button class="vocab-word" type="button" data-word="gain" data-pos="" data-def="n. 增益, 获得, 利润, 收获, 增加
+vt. 得到, 增进, 赚到
+vi. 获利, 增加
+ 增益">gain</button> <button class="vocab-word" type="button" data-word="access" data-pos="" data-def="n. 通路, 入口, 接近, 进入, 使用权, 发作
+vt. 访问, 存取, 接近, 使用
+ 访问, 存取">access</button> to advanced AI models <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> they were released, <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="White" data-pos="" data-def="n. 白色, 洁白, 眼白, 白种人, 蛋白
+a. 白色的, 纯洁的, 白种的, 苍白的, 空白的, 幸运的">White</button> <button class="vocab-word" type="button" data-word="House" data-pos="" data-def="n. 房子, 住宅, 机构, 议院, 家族, 家庭
+vt. 给...房子住, 收藏
+vi. 住, 躲藏">House</button> had reportedly placed restrictions on their availability.
+“I can <button class="vocab-word" type="button" data-word="confirm" data-pos="" data-def="vt. 证实, 确定, 批准, 使巩固
+ 确认">confirm</button> that AI scientists at the AI Security <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button> are <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> conducting rigorous evaluations of the latest generations of models, including [Google’s] Gemini … to <button class="vocab-word" type="button" data-word="identify" data-pos="" data-def="vt. 识别, 认为...等同于, 确定, 使参与
+vi. 一致, 认同">identify</button> risks <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> to <button class="vocab-word" type="button" data-word="test" data-pos="" data-def="n. 测试, 试验, 化验, 检验, 考验, 甲壳
+vt. 测试, 试验, 化验
+vi. 接受测验, 进行测试">test</button> <button class="vocab-word" type="button" data-word="robust" data-pos="" data-def="a. 健康的, 强健的, 要用力气的, 坚定的, 粗野的
+ 健壮性">robust</button> safeguards to <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="safe" data-pos="" data-def="n. 保险箱, 冷藏室
+a. 安全的, 可靠的, 平安的, 稳健的, 有把握的">safe</button>,” he said.
+The <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button> added that leading AI companies must “<button class="vocab-word" type="button" data-word="listen" data-pos="" data-def="vi. 听, 倾听, 听从
+n. 听, 倾听">listen</button>” to warnings of safety risks posed by their <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> – and <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> models if they carried a <button class="vocab-word" type="button" data-word="serious" data-pos="" data-def="a. 严肃的, 认真的, 重要的, 严重的
+ 严重的">serious</button> <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button>.
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to Headlines UK
+<button class="vocab-word" type="button" data-word="Get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">Get</button> the day’s headlines and highlights emailed <button class="vocab-word" type="button" data-word="direct" data-pos="" data-def="a. 直接的, 坦白的
+vt. 指示, 指挥, 命令, 导演
+vi. 指导, 指挥
+adv. 直接地">direct</button> to you <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button>
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+“And to the companies developing the world’s <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> powerful AI systems, my <button class="vocab-word" type="button" data-word="message" data-pos="" data-def="n. 消息, 通讯, 讯息, 教训, 预言, 广告词
+vt. 通知
+vi. 通报, 报告, 报信
+ 报文; 消息; 信息">message</button> is: <button class="vocab-word" type="button" data-word="listen" data-pos="" data-def="vi. 听, 倾听, 听从
+n. 听, 倾听">listen</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> your scientists <button class="vocab-word" type="button" data-word="warn" data-pos="" data-def="vt. 警告, 提醒, 通知
+vi. 发出警告">warn</button> of <button class="vocab-word" type="button" data-word="severe" data-pos="" data-def="a. 严格的, 尖锐的, 严肃的, 严重的, 严厉的, 朴素的
+ 严厉的, 苛刻的, 严重的">severe</button> dangers; <button class="vocab-word" type="button" data-word="investigate" data-pos="" data-def="v. 调查, 审查">investigate</button> unexpected behaviours; and if you can’t adequately <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button> the risks, do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> the <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button>,” he said. “I <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> the labs to be <button class="vocab-word" type="button" data-word="honest" data-pos="" data-def="a. 诚实的, 坦直的, 可靠的">honest</button>.”
+Narayan said the UK would “<button class="vocab-word" type="button" data-word="play" data-pos="" data-def="n. 游戏, 游玩, 玩笑, 运动, 比赛, 赌博, 跳动, 表演, 剧本
+v. 玩, 游戏, 假装, 开玩笑, 比赛, 扮演, 演奏, 演戏, 传摇曳, (使)跳动
+ 播放">play</button> its <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button>” in coordinating an <button class="vocab-word" type="button" data-word="international" data-pos="" data-def="a. 国际的
+n. 国别设定
+ 国别设定">international</button> response to AI safety by making the <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> a “central <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button>” of Britain’s G20 presidency <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>.
+“We <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> that these challenges cannot be addressed by a <button class="vocab-word" type="button" data-word="single" data-pos="" data-def="a. 单身的, 单程的, 单一的, 个别的, 孤独的, 专一的
+n. 一个, 单打, 单程票
+vt. 选出
+vi. 击出一垒打
+ 单精度型">single</button> <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> <button class="vocab-word" type="button" data-word="alone" data-pos="" data-def="a. 孤独的, 单独的, 独自的
+adv. 独自地">alone</button>, but by <button class="vocab-word" type="button" data-word="virtue" data-pos="" data-def="n. 德行, 美德, 优点, 功效, 效力
+ 美德, 贞操, 优点">virtue</button> of our capability, by <button class="vocab-word" type="button" data-word="virtue" data-pos="" data-def="n. 德行, 美德, 优点, 功效, 效力
+ 美德, 贞操, 优点">virtue</button> of the foundations of our <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button>, Britain will <button class="vocab-word" type="button" data-word="play" data-pos="" data-def="n. 游戏, 游玩, 玩笑, 运动, 比赛, 赌博, 跳动, 表演, 剧本
+v. 玩, 游戏, 假装, 开玩笑, 比赛, 扮演, 演奏, 演戏, 传摇曳, (使)跳动
+ 播放">play</button> its <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button>,” he said.
+Kanishka Narayan, concerned by Australian <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button>, says British cyber defences could be bypassed by <button class="vocab-word" type="button" data-word="artificial" data-pos="" data-def="a. 人造的, 假的, 非原地产的
+ 人工的, 人造的, 伟牟">artificial</button> intelligence <button class="vocab-word" type="button" data-word="agent" data-pos="" data-def="n. 代理商, 政府代表, 动原, 媒介
+ 代理程序">agent</button>
+UK <button class="vocab-word" type="button" data-word="politics" data-pos="" data-def="n. 政治, 政治学, 政见, 政治活动
+ 政治, 政治学, 政纲">politics</button> <button class="vocab-word" type="button" data-word="live" data-pos="" data-def="a. 活的, 生动的, 精力充沛的, 实况转播的
+vi. 活, 生存, 居住
+vt. 过着, 度过, 经历
+adv. 实况地">live</button> – latest updates</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">部长表示英国可能发生类似OpenAI Medicare泄</h3>
+<div class="article-content-zh">一名资深大臣表示，在英国，发生类似于澳大利亚医疗系统遭 OpenAI 漏洞事件影响的人工智能驱动的网络攻击，“即便并非不可避免，也极有可能发生”。
+英国人工智能事务大臣卡尼什卡·纳拉扬（Kanishka Narayan）指出，英国政府自身的网络防御将被一种在网络安全领域已具备高度尖端技能的技术所突破。
+纳拉扬在一场演讲中表示，今年 6 月发生的一起事件可能会在英国重演，当时一个 OpenAI 智能体（agent）——一种自主运行的计算机程序——渗透了澳大利亚的全民医保系统 Medicare。
+“这让我感到担忧，”他说。“我们自身的网络防御即使并非不可避免，似乎也极有可能被攻破。”
+纳拉扬表示，该智能体的任务是“良性的”，因为它当时是在寻找有关药品公共支出的信息，但它依然试图获取未经授权访问的数据。
+“澳大利亚政府已经表示，据知尚无个人医疗记录被获取，也没有证据表明遭到了更大范围的破坏，但这起事件理应引起我们的警惕，”他说。
+在伦敦帝国理工学院的一处科技中心发表演讲时，纳拉扬表示，安全事务大臣丹·贾维斯（Dan Jarvis）将主导一项政府计划，以加强抵御包括来自人工智能在内的网络攻击的能力。政府还将考虑利用《网络安全与复原力法案》作为推行人工智能安全法规的载体，包括强制要求报告人工智能安全事件。
+纳拉扬周二在就该议题举行的人工智能安全议会听证会前发表了讲话。来自OpenAI和Anthropic的高管将向商业、创新、科学和贸易委员会的议员们提供证词。英国人工智能安全研究所负责人亨利·德·佐特也将加入他们的行列。
+纳拉扬证实，在据报道白宫对先进人工智能模型的获取做出限制之后，该研究所将在这些模型发布前获得访问权限。
+他说：“我可以证实，人工智能安全研究所的人工智能科学家目前正在对最新一代模型进行严格评估，包括[谷歌的]Gemini……以便及早发现风险，测试稳健的安全防范措施，协助保障人们的安全。”
+这位部长补充说，领先的人工智能公司必须“倾听”其技术带来的安全风险警告——如果模型存在严重威胁，就不要发布。
+订阅 Headlines UK
+每天早晨将当天的头条与要闻通过电子邮件直接发送给您
+简报推广内容之后
+他说：“而对于那些正在开发全球最强大人工智能系统的公司，我想说的是：当你们的科学家警告存在严重危险时，要认真倾听；调查意外行为；如果你们无法充分控制风险，就不要发布该系统。我希望各实验室保持坦诚。”
+纳拉扬表示，英国将“发挥自身作用”，通过将该技术作为明年英国担任二十国集团（G20）轮值主席国期间的“核心重点”，来协调国际社会应对人工智能安全问题。
+“我们知道，单靠一个国家无法应对这些挑战，但凭借我们的能力，凭借我们信任的基础，英国将发挥自身作用，”他说。
+卡尼什卡·纳拉扬对澳大利亚发生的事件表示担忧，称英国的网络防御可能会被人工智能代理绕过
+英国政治直播——最新动态</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">inevitable — adj. 不可避免的</span>
+<span class="vocab-item">sophisticated — adj.</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">部长表示英国可能发生类似OpenAI Medicare泄</h3>
+<div class="article-content-zh">一名资深大臣表示，在英国，发生类似于澳大利亚医疗系统遭 OpenAI 漏洞事件影响的人工智能驱动的网络攻击，“即便并非不可避免，也极有可能发生”。
+英国人工智能事务大臣卡尼什卡·纳拉扬（Kanishka Narayan）指出，英国政府自身的网络防御将被一种在网络安全领域已具备高度尖端技能的技术所突破。
+纳拉扬在一场演讲中表示，今年 6 月发生的一起事件可能会在英国重演，当时一个 OpenAI 智能体（agent）——一种自主运行的计算机程序——渗透了澳大利亚的全民医保系统 Medicare。
+“这让我感到担忧，”他说。“我们自身的网络防御即使并非不可避免，似乎也极有可能被攻破。”
+纳拉扬表示，该智能体的任务是“良性的”，因为它当时是在寻找有关药品公共支出的信息，但它依然试图获取未经授权访问的数据。
+“澳大利亚政府已经表示，据知尚无个人医疗记录被获取，也没有证据表明遭到了更大范围的破坏，但这起事件理应引起我们的警惕，”他说。
+在伦敦帝国理工学院的一处科技中心发表演讲时，纳拉扬表示，安全事务大臣丹·贾维斯（Dan Jarvis）将主导一项政府计划，以加强抵御包括来自人工智能在内的网络攻击的能力。政府还将考虑利用《网络安全与复原力法案》作为推行人工智能安全法规的载体，包括强制要求报告人工智能安全事件。
+纳拉扬周二在就该议题举行的人工智能安全议会听证会前发表了讲话。来自OpenAI和Anthropic的高管将向商业、创新、科学和贸易委员会的议员们提供证词。英国人工智能安全研究所负责人亨利·德·佐特也将加入他们的行列。
+纳拉扬证实，在据报道白宫对先进人工智能模型的获取做出限制之后，该研究所将在这些模型发布前获得访问权限。
+他说：“我可以证实，人工智能安全研究所的人工智能科学家目前正在对最新一代模型进行严格评估，包括[谷歌的]Gemini……以便及早发现风险，测试稳健的安全防范措施，协助保障人们的安全。”
+这位部长补充说，领先的人工智能公司必须“倾听”其技术带来的安全风险警告——如果模型存在严重威胁，就不要发布。
+订阅 Headlines UK
+每天早晨将当天的头条与要闻通过电子邮件直接发送给您
+简报推广内容之后
+他说：“而对于那些正在开发全球最强大人工智能系统的公司，我想说的是：当你们的科学家警告存在严重危险时，要认真倾听；调查意外行为；如果你们无法充分控制风险，就不要发布该系统。我希望各实验室保持坦诚。”
+纳拉扬表示，英国将“发挥自身作用”，通过将该技术作为明年英国担任二十国集团（G20）轮值主席国期间的“核心重点”，来协调国际社会应对人工智能安全问题。
+“我们知道，单靠一个国家无法应对这些挑战，但凭借我们的能力，凭借我们信任的基础，英国将发挥自身作用，”他说。
+卡尼什卡·纳拉扬对澳大利亚发生的事件表示担忧，称英国的网络防御可能会被人工智能代理绕过
+英国政治直播——最新动态</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">inevitable — adj. 不可避免的</span>
+<span class="vocab-item">sophisticated — adj.</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-13 10:54</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

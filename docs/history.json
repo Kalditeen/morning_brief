@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-09",
-      "cat": "guardian-business",
-      "title": "Starbucks reportedly exploring Chipotle takeover"
-    },
-    {
-      "date": "2026-10-09",
-      "cat": "bbc-world",
-      "title": "Suspect linked to Monaco bomb attack on millionaire breaks silence to BBC"
-    },
-    {
       "date": "2026-10-10",
       "cat": "guardian",
       "title": "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau"
@@ -59,6 +49,16 @@
       "date": "2026-10-12",
       "cat": "bbc-tech",
       "title": "AI is less regulated than milk, says Microsoft president"
+    },
+    {
+      "date": "2026-10-13",
+      "cat": "guardian-tech",
+      "title": "Cyber-attack similar to OpenAI Medicare breach seems likely in UK, says minister"
+    },
+    {
+      "date": "2026-10-13",
+      "cat": "bbc-env",
+      "title": "Storm Rachel batters Southern California, brings flooding to Las Vegas"
     }
   ]
 }
