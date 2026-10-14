@@ -1,36 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-10",
-      "cat": "guardian",
-      "title": "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau"
-    },
-    {
-      "date": "2026-10-10",
-      "cat": "bbc-tech",
-      "title": "Prize-winning image which sparked backlash was AI-generated, Nikon rules"
-    },
-    {
-      "date": "2026-10-10",
-      "cat": "guardian",
-      "title": "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law"
-    },
-    {
-      "date": "2026-10-10",
-      "cat": "bbc-tech",
-      "title": "Anthropic bans users from being 'cruel' to its AI systems"
-    },
-    {
-      "date": "2026-10-10",
-      "cat": "guardian",
-      "title": "Isaias strengthens to become first Atlantic hurricane of 2026 season"
-    },
-    {
-      "date": "2026-10-10",
-      "cat": "bbc-tech",
-      "title": "Fired OpenAI researchers say they were let go for 'prioritising safety'"
-    },
-    {
       "date": "2026-10-11",
       "cat": "guardian-tech",
       "title": "UK must not be beholden to foreign AI, says head of Alan Turing Institute"
@@ -59,6 +29,16 @@
       "date": "2026-10-13",
       "cat": "bbc-env",
       "title": "Storm Rachel batters Southern California, brings flooding to Las Vegas"
+    },
+    {
+      "date": "2026-10-14",
+      "cat": "guardian-env",
+      "title": "Scientists deploy a 24-armed secret weapon to save California’s kelp forests"
+    },
+    {
+      "date": "2026-10-14",
+      "cat": "bbc-science",
+      "title": "Gales and heavy rain to impact UK as yellow wind warning issued"
     }
   ]
 }
