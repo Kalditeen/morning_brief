@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月15日 周四 · 卫报 The Guardian (科学)">
+<meta property="og:description" content="Stop making sense: focus on sounds to help learn a language, study suggests">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科学) | 2026年10月15日 周四</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月15日 周四 · 卫报 The Guardian (科学)</p>
+<a class="back-link" href="2026-10-15.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科学)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="Stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">Stop</button> making <button class="vocab-word" type="button" data-word="sense" data-pos="" data-def="n. 感应, 感觉, 感官, 意识, 观念, 情理, 知觉, 理智
+vt. 感觉, 觉察, 检测
+ 阅读; 检测">sense</button>: <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> on sounds to <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> <button class="vocab-word" type="button" data-word="learn" data-pos="" data-def="vt. 学习；认识到；得知">learn</button> a <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button>, <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> suggests</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/674da4764b855a56341ef688b8fc791939c52df7/545_292_4814_3851/master/4814.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=1da72d98f4037dce15fb57b11410c8c7" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">If you <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> really <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button> at French, Arabic or Hungarian, don’t <button class="vocab-word" type="button" data-word="start" data-pos="" data-def="n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件
+vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛
+vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用
+ 起始">start</button> with rote learning <button class="vocab-word" type="button" data-word="vocabulary" data-pos="" data-def="n. 词汇(量), 词汇表
+ 词表">vocabulary</button> and <button class="vocab-word" type="button" data-word="grammar" data-pos="" data-def="n. 语法学, 入门书
+ 语法检查">grammar</button>, <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> on <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> <button class="vocab-word" type="button" data-word="instead" data-pos="" data-def="adv. 作为替代, 反而">instead</button>, <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> suggests.
+A <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> of <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> humans <button class="vocab-word" type="button" data-word="learn" data-pos="" data-def="vt. 学习；认识到；得知">learn</button> <button class="vocab-word" type="button" data-word="modern" data-pos="" data-def="n. 现代人, 有思想的人
+a. 现代的, 时髦的">modern</button> languages has <button class="vocab-word" type="button" data-word="found" data-pos="" data-def="vt. 建立, 创立, 铸造
+find的过去式和过去分词">found</button> that the brains of the <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> talented linguists <button class="vocab-word" type="button" data-word="hear" data-pos="" data-def="vt. 听到, 倾听, 听说, 审理
+vi. 听见, 听">hear</button> <button class="vocab-word" type="button" data-word="foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">foreign</button> terms as <button class="vocab-word" type="button" data-word="random" data-pos="" data-def="n. 随意, 随机
+a. 任意的, 随便的, 胡乱的, 随机的
+adv. 胡乱地">random</button> <button class="vocab-word" type="button" data-word="noise" data-pos="" data-def="n. 噪音, 杂音, 响声, 喧闹
+vt. 谣传
+vi. 喧闹
+ 噪声">noise</button>, <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> words.
+Normally, <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="learn" data-pos="" data-def="vt. 学习；认识到；得知">learn</button> a <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button>, they <button class="vocab-word" type="button" data-word="try" data-pos="" data-def="n. 尝试, 试验, 审理, 审判
+vt. 试, 尝试, 试验, 考验, 审问, 提炼
+vi. 尝试, 试图">try</button> to <button class="vocab-word" type="button" data-word="understand" data-pos="" data-def="vt. 理解, 了解, 领会, 听说, 懂
+vi. 懂得, 认为">understand</button> it through the sounds of their <button class="vocab-word" type="button" data-word="native" data-pos="" data-def="n. 本地人, 土产, 当地人
+a. 本国的, 与生俱来的, 自然的">native</button> <button class="vocab-word" type="button" data-word="tongue" data-pos="" data-def="n. 舌, 语言能力, 讲话方式, 语言
+vt. 舔, 斥责, 发...的音
+vi. 使用舌头, 吹管乐器">tongue</button>. The <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> different the <button class="vocab-word" type="button" data-word="foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">foreign</button> language’s sounds and pronunciation are from the <button class="vocab-word" type="button" data-word="native" data-pos="" data-def="n. 本地人, 土产, 当地人
+a. 本国的, 与生俱来的, 自然的">native</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button>, the harder the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> will probably be to <button class="vocab-word" type="button" data-word="learn" data-pos="" data-def="vt. 学习；认识到；得知">learn</button>.
+But the <button class="vocab-word" type="button" data-word="best" data-pos="" data-def="a. 最好的
+adv. 最好地
+n. 最好的人">best</button> linguists <button class="vocab-word" type="button" data-word="master" data-pos="" data-def="n. 主人, 硕士, 大师, 母机
+a. 主人的, 主要的
+vt. 征服, 控制, 精通">master</button> <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> the trickiest pronunciation <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> easily. ​To <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button>, researchers at UCL and Tohoku <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button>, Japan, compared the auditory precision of 67 Japanese learners of English by measuring their ability to <button class="vocab-word" type="button" data-word="detect" data-pos="" data-def="vt. 发现, 察觉, 探测
+ 发现, 查明, 探测">detect</button> <button class="vocab-word" type="button" data-word="slight" data-pos="" data-def="n. 轻蔑, 怠慢
+a. 轻微的, 纤细的, 脆弱的, 苗条的
+vt. 轻视, 忽略, 怠慢">slight</button> changes in <button class="vocab-word" type="button" data-word="pitch" data-pos="" data-def="n. 程度, 坡度, 顶点, 前倾, 倾斜, 投掷, 音高, 螺距, 节距, 摊位, 树脂, 沥青
+vt. 投, 掷, 向前倾跌, 扎营, 竭力推销, 为...定调, 定位于, 用沥青涂
+vi. 搭帐篷, 投掷, 向前跌, 猛然摔倒, 坠落, 倾斜
+ 孔距">pitch</button>, length and <button class="vocab-word" type="button" data-word="tone" data-pos="" data-def="n. 音调, 音质, 语调, 语气, 色调, 气氛, 状况, 思想状态
+vt. 给...定色调, 增强, 使...的声调和谐, 定音调
+vi. 颜色调和
+ 双音频">tone</button>, in non-speech sounds. Using functional MRI scans, they measured participants’ <button class="vocab-word" type="button" data-word="brain" data-pos="" data-def="n. 脑
+vt. 打碎脑部">brain</button> activity as they tried to <button class="vocab-word" type="button" data-word="distinguish" data-pos="" data-def="v. 区别, 辨别">distinguish</button> between English vowel sounds that do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="occur" data-pos="" data-def="vi. 发生, 被想到, 存在">occur</button> in Japanese.
+They <button class="vocab-word" type="button" data-word="found" data-pos="" data-def="vt. 建立, 创立, 铸造
+find的过去式和过去分词">found</button> that those with higher auditory precision mastered the pronunciation of <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> languages faster and <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> accurately than <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> learners and relied <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> on the brain’s <button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button> sensorimotor <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> (involved in <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> processing) <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> processing foreign-language sounds. <button class="vocab-word" type="button" data-word="Instead" data-pos="" data-def="adv. 作为替代, 反而">Instead</button>, their <button class="vocab-word" type="button" data-word="brain" data-pos="" data-def="n. 脑
+vt. 打碎脑部">brain</button> activity patterns were <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> to those that <button class="vocab-word" type="button" data-word="occur" data-pos="" data-def="vi. 发生, 被想到, 存在">occur</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the <button class="vocab-word" type="button" data-word="brain" data-pos="" data-def="n. 脑
+vt. 打碎脑部">brain</button> processes non-speech sounds.
+With <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> interference from pre-existing patterns of their <button class="vocab-word" type="button" data-word="native" data-pos="" data-def="n. 本地人, 土产, 当地人
+a. 本国的, 与生俱来的, 自然的">native</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button>, it was simpler for these learners to accurately <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> sounds.
+In <button class="vocab-word" type="button" data-word="contrast" data-pos="" data-def="n. 差别, 对比, 对照物
+vt. 使对比
+vi. 成对照
+ 反差; 对比度">contrast</button>, those with lower auditory precision relied <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> on the brain’s <button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button> sensorimotor <button class="vocab-word" type="button" data-word="network" data-pos="" data-def="n. 网络, 广播网, 网状物
+ 网络">network</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> listening to foreign-language sounds. They <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> the pronunciation patterns of their <button class="vocab-word" type="button" data-word="native" data-pos="" data-def="n. 本地人, 土产, 当地人
+a. 本国的, 与生俱来的, 自然的">native</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> processing unfamiliar sounds.
+The latest findings <button class="vocab-word" type="button" data-word="challenge" data-pos="" data-def="n. 挑战, 盘问
+vt. 向...挑战, 要求, 怀疑
+vi. 挑战, 对(证据等)表示异议">challenge</button> stereotypes that Britons are <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> adept at languages. Prof Kazuya Saito-van Poeteren, the <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button> and <button class="vocab-word" type="button" data-word="professor" data-pos="" data-def="n. 教授">professor</button> of <button class="vocab-word" type="button" data-word="second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">second</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> education at UCL <button class="vocab-word" type="button" data-word="Institute" data-pos="" data-def="n. 学会, 学院, 协会
+vt. 创立, 开始, 制定, 任命">Institute</button> of Education, said: “I do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> British <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> are biologically <button class="vocab-word" type="button" data-word="bad" data-pos="" data-def="a. 坏的
+n. 坏
+adv. 坏地">bad</button> at languages. The <button class="vocab-word" type="button" data-word="problem" data-pos="" data-def="n. 问题, 难题
+a. 成问题的, 难处理的">problem</button> is <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> likely to be that <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="receive" data-pos="" data-def="vt. 收到, 接到, 得到, 接待, 迎接, 承受
+vi. 收到, 会客
+ 接收">receive</button> <button class="vocab-word" type="button" data-word="too" data-pos="" data-def="adv. 也, 非常, 太">too</button> <button class="vocab-word" type="button" data-word="little" data-pos="" data-def="n. 一点点, 少许, 一会儿, 短时间
+a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的
+adv. 很少, 稍微, 完全不">little</button> meaningful exposure, combined with teaching methods that do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> necessarily <button class="vocab-word" type="button" data-word="train" data-pos="" data-def="n. 火车, 列车, 行列, 长队, 一连串的后果, 顺序
+vt. 训练, 教育, 对准
+vi. 受训练, 锻炼">train</button> the auditory skills needed to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> the <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> of that limited exposure.
+“If you <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="hear" data-pos="" data-def="vt. 听到, 倾听, 听说, 审理
+vi. 听见, 听">hear</button> and <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> the <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> for a <button class="vocab-word" type="button" data-word="small" data-pos="" data-def="a. 小的, 少的, 小型的, 低微的, 小气的, 细微的
+adv. 些微地
+n. 狭小部分">small</button> <button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> of hours <button class="vocab-word" type="button" data-word="each" data-pos="" data-def="a. 每个, 每一
+adv. 每个
+pron. 每个, 个人, 各自">each</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button>, having a <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button> <button class="vocab-word" type="button" data-word="ear" data-pos="" data-def="n. 耳朵, 倾听, 听觉, 穗
+vi. 抽穗">ear</button> may <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> a <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> bigger difference. Learners with <button class="vocab-word" type="button" data-word="high" data-pos="" data-def="n. 高度, 高处
+a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的
+adv. 高度地, 奢侈地">high</button> auditory precision can <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> <button class="vocab-word" type="button" data-word="very" data-pos="" data-def="a. 真正的, 恰好的, 十足的, 特有的
+adv. 非常, 完全">very</button> effective <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> of relatively sparse <button class="vocab-word" type="button" data-word="input" data-pos="" data-def="n. 输入, 输入电路
+vt. 输入
+ 输入">input</button>, <button class="vocab-word" type="button" data-word="whereas" data-pos="" data-def="conj. 然而, 鉴于
+ 考虑到, 鉴于, 就...而论">whereas</button> others may <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> exposure <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> unfamiliar sounds <button class="vocab-word" type="button" data-word="begin" data-pos="" data-def="v. 开始
+ 开始">begin</button> to <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> established,” he said.
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="First" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">First</button> Edition
+Our <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button> <button class="vocab-word" type="button" data-word="email" data-pos="" data-def="n. 电子信函">email</button> breaks <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> the <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> stories of the <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>, telling you what’s happening and <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button> it matters
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+The findings <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="suggest" data-pos="" data-def="vt. 提议, 建议, 促成, 暗示, 启发, 使人想起
+ 建议, 提出, 提议">suggest</button> schools should <button class="vocab-word" type="button" data-word="focus" data-pos="" data-def="n. 焦点, 焦距
+vi. 聚焦, 注视
+vt. 使聚焦, 调焦, 集中
+ 焦点">focus</button> on sounds <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="grammar" data-pos="" data-def="n. 语法学, 入门书
+ 语法检查">grammar</button> and <button class="vocab-word" type="button" data-word="vocabulary" data-pos="" data-def="n. 词汇(量), 词汇表
+ 词表">vocabulary</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> teaching <button class="vocab-word" type="button" data-word="modern" data-pos="" data-def="n. 现代人, 有思想的人
+a. 现代的, 时髦的">modern</button> languages, he added.
+“<button class="vocab-word" type="button" data-word="Foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">Foreign</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> education should <button class="vocab-word" type="button" data-word="move" data-pos="" data-def="n. 移动, 迁居, 步骤
+vt. 移动, 开动, 感动, 搬(家)
+vi. 移动, 离开, 运行, 迁移, 摇动, 搬家, 交往, 进展, 脱手
+ 移动; 传送; DOS外部命令:移动文件, 它可将文件移动到指定的地方">move</button> <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button> an <button class="vocab-word" type="button" data-word="approach" data-pos="" data-def="n. 接近, 入门
+vt. 接近, 近似, 找...商量
+vi. 靠近">approach</button> based on ‘<button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> practice’ and <button class="vocab-word" type="button" data-word="towards" data-pos="" data-def="prep. 向, 对于, 为了">towards</button> <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> that develops learners’ <button class="vocab-word" type="button" data-word="ear" data-pos="" data-def="n. 耳朵, 倾听, 听觉, 穗
+vi. 抽穗">ear</button> for <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> learning in <button class="vocab-word" type="button" data-word="line" data-pos="" data-def="n. 列, 线, 绳, 电线, 线路, 路线, 航线, 作业线, 界线, 战线, 外形, 排, 家系
+vt. 排成一行, 顺...排列, 划线于, 加衬里, 使有线条, 使起皱纹
+vi. 排队
+ 线路">line</button> with their auditory characteristics,” he said.
+Responding to the findings, Prof Padraic Monaghan, <button class="vocab-word" type="button" data-word="professor" data-pos="" data-def="n. 教授">professor</button> of cognition at Lancaster <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button>, said: “Traditional <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> learning relies on structured practice, but our brains are naturally attuned to <button class="vocab-word" type="button" data-word="acquire" data-pos="" data-def="vt. 获得, 学到
+ 目标锁定">acquire</button> languages through exposure. This <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> confirms <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> <button class="vocab-word" type="button" data-word="vital" data-pos="" data-def="a. 生命的, 重要的, 充满活力的, 生死攸关的, 致命的
+ 生命的, 生活的, 生活上必需的, 紧要的">vital</button> listening is to learning, <button class="vocab-word" type="button" data-word="though" data-pos="" data-def="adv. 然而, 可是
+conj. 虽然, 纵然">though</button> learners <button class="vocab-word" type="button" data-word="vary" data-pos="" data-def="vt. 改变, 使多样化
+vi. 变化, 有不同, 违反">vary</button> in their <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> sensitivity at <button class="vocab-word" type="button" data-word="least" data-pos="" data-def="n. 最少, 最小, 最小限度
+a. 最少的, 最小的
+adv. 最小, 最少">least</button> in the <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> stages of hearing <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="language" data-pos="" data-def="n. 语言, 文字, 措辞
+ 语言">language</button> sounds.”
+<button class="vocab-word" type="button" data-word="Research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">Research</button> shows that the <button class="vocab-word" type="button" data-word="best" data-pos="" data-def="a. 最好的
+adv. 最好地
+n. 最好的人">best</button> linguists <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> unfamiliar <button class="vocab-word" type="button" data-word="foreign" data-pos="" data-def="a. 外国的, 外交的, 外省的, 外来的, 不相关的
+ 外来的">foreign</button> <button class="vocab-word" type="button" data-word="speech" data-pos="" data-def="n. 演讲, 说话, 谈话, 言语, 引语, 民族语言
+ 言语, 语言">speech</button> sounds <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> non-speech sounds</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">研究称：学语言别急</h3>
+<div class="article-content-zh">研究表明，如果你想真正精通法语、阿拉伯语或匈牙利语，不要从死记硬背词汇和语法入手，而应专注于它们的发音。
+一项关于人类如何学习现代语言的新研究发现，最具语言天赋的人的大脑会将外语词汇听成随机的噪音，而不是词语。
+通常情况下，人们在学习一门语言时，往往会尝试借助母语的语音去理解它。外语的语音和发音与母语差异越大，学习这门新语言的难度可能就越高。
+但最具语言天赋的人甚至能更轻松地掌握最复杂棘手的发音。为了探究原因，伦敦大学学院（UCL）和日本东北大学的研究人员对67名日本英语学习者的听觉精确度进行了对比，测量了他们察觉非言语声音中音高、时长和音调微小变化的能力。通过功能性磁共振成像（fMRI）扫描，研究人员测量了受试者在尝试区分日语中不存在的英语元音时的脑部活动。
+他们发现，听觉精确度较高的人比其他学习者能更快、更准确地掌握新语言的发音，并且在处理外语语音时，更少依赖大脑的左侧感觉运动系统（该系统参与语言处理）。相反，他们的大脑活动模式与大脑处理非言语声音时的活动模式相似。
+他补充说，这些发现还表明，学校在教授现代语言时，应当把重点更多地放在语音上，而不仅仅是语法和词汇。
+“外语教育应当超越基于‘多加练习’的方法，转向根据学习者的听觉特征来培养其语言学习的辨音能力，”他说。
+针对这些发现，兰卡斯特大学认知学教授帕德莱克·莫纳汉（Prof Padraic Monaghan）表示：“传统的语言学习依赖于结构化的练习，但我们的大脑天生就适合通过接触来习得语言。这项研究证实了‘听’对学习有多么至关重要，尽管学习者在声音敏感度上存在差异，至少在接触新语言发音的早期阶段是如此。”
+研究表明，最出色的语言学习者在处理不熟悉的外国语音时，更像是在处理非语音声音</div>
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">研究称：学语言别急</h3>
+<div class="article-content-zh">研究表明，如果你想真正精通法语、阿拉伯语或匈牙利语，不要从死记硬背词汇和语法入手，而应专注于它们的发音。
+一项关于人类如何学习现代语言的新研究发现，最具语言天赋的人的大脑会将外语词汇听成随机的噪音，而不是词语。
+通常情况下，人们在学习一门语言时，往往会尝试借助母语的语音去理解它。外语的语音和发音与母语差异越大，学习这门新语言的难度可能就越高。
+但最具语言天赋的人甚至能更轻松地掌握最复杂棘手的发音。为了探究原因，伦敦大学学院（UCL）和日本东北大学的研究人员对67名日本英语学习者的听觉精确度进行了对比，测量了他们察觉非言语声音中音高、时长和音调微小变化的能力。通过功能性磁共振成像（fMRI）扫描，研究人员测量了受试者在尝试区分日语中不存在的英语元音时的脑部活动。
+他们发现，听觉精确度较高的人比其他学习者能更快、更准确地掌握新语言的发音，并且在处理外语语音时，更少依赖大脑的左侧感觉运动系统（该系统参与语言处理）。相反，他们的大脑活动模式与大脑处理非言语声音时的活动模式相似。
+他补充说，这些发现还表明，学校在教授现代语言时，应当把重点更多地放在语音上，而不仅仅是语法和词汇。
+“外语教育应当超越基于‘多加练习’的方法，转向根据学习者的听觉特征来培养其语言学习的辨音能力，”他说。
+针对这些发现，兰卡斯特大学认知学教授帕德莱克·莫纳汉（Prof Padraic Monaghan）表示：“传统的语言学习依赖于结构化的练习，但我们的大脑天生就适合通过接触来习得语言。这项研究证实了‘听’对学习有多么至关重要，尽管学习者在声音敏感度上存在差异，至少在接触新语言发音的早期阶段是如此。”
+研究表明，最出色的语言学习者在处理不熟悉的外国语音时，更像是在处理非语音声音</div>
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-15 08:16</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

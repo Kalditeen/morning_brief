@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-11",
-      "cat": "guardian-tech",
-      "title": "UK must not be beholden to foreign AI, says head of Alan Turing Institute"
-    },
-    {
-      "date": "2026-10-11",
-      "cat": "bbc-env",
-      "title": "Four dead and thousands without power after Hurricane Isaias lashes US"
-    },
-    {
       "date": "2026-10-12",
       "cat": "guardian",
       "title": "Egyptian journalists plan weekend protest over detention of six colleagues"
@@ -39,6 +29,16 @@
       "date": "2026-10-14",
       "cat": "bbc-science",
       "title": "Gales and heavy rain to impact UK as yellow wind warning issued"
+    },
+    {
+      "date": "2026-10-15",
+      "cat": "guardian-science",
+      "title": "Stop making sense: focus on sounds to help learn a language, study suggests"
+    },
+    {
+      "date": "2026-10-15",
+      "cat": "bbc-business",
+      "title": "Drop-off charges at UK airports to be reviewed after sharp increase"
     }
   ]
 }
