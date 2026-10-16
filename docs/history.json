@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-12",
-      "cat": "guardian",
-      "title": "Egyptian journalists plan weekend protest over detention of six colleagues"
-    },
-    {
-      "date": "2026-10-12",
-      "cat": "bbc-tech",
-      "title": "AI is less regulated than milk, says Microsoft president"
-    },
-    {
       "date": "2026-10-13",
       "cat": "guardian-tech",
       "title": "Cyber-attack similar to OpenAI Medicare breach seems likely in UK, says minister"
@@ -39,6 +29,16 @@
       "date": "2026-10-15",
       "cat": "bbc-business",
       "title": "Drop-off charges at UK airports to be reviewed after sharp increase"
+    },
+    {
+      "date": "2026-10-16",
+      "cat": "guardian-business",
+      "title": "Key US voters say economy is getting worse ahead of midterms, exclusive poll finds"
+    },
+    {
+      "date": "2026-10-16",
+      "cat": "bbc-world",
+      "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume"
     }
   ]
 }
