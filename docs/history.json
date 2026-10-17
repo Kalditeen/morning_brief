@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-14",
-      "cat": "guardian-env",
-      "title": "Scientists deploy a 24-armed secret weapon to save California’s kelp forests"
-    },
-    {
-      "date": "2026-10-14",
-      "cat": "bbc-science",
-      "title": "Gales and heavy rain to impact UK as yellow wind warning issued"
-    },
-    {
       "date": "2026-10-15",
       "cat": "guardian-science",
       "title": "Stop making sense: focus on sounds to help learn a language, study suggests"
@@ -39,6 +29,16 @@
       "date": "2026-10-17",
       "cat": "bbc-tech",
       "title": "Toxic algorithms wouldn't let them go - now Australia wants an off switch"
+    },
+    {
+      "date": "2026-10-18",
+      "cat": "guardian-tech",
+      "title": "Palantir patient data tech rejected by many NHS trusts in England"
+    },
+    {
+      "date": "2026-10-18",
+      "cat": "bbc-env",
+      "title": "Brazil sees record fall in Amazon deforestation as key election looms"
     }
   ]
 }

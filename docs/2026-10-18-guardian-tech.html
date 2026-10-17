@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月18日 周日 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="Palantir patient data tech rejected by many NHS trusts in England">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年10月18日 周日</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月18日 周日 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-10-18.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Palantir <button class="vocab-word" type="button" data-word="patient" data-pos="" data-def="n. 病人, 承受者
+a. 忍耐的, 容忍的, 有耐性的, 坚忍的">patient</button> <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> tech rejected by <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> NHS trusts in England</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/5c48c8c2456de2d94d6e060908409ef95dd199d0/1945_0_6247_5000/master/6247.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=fc56a51462c7d52b6a82409e9f2c4d6f" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">NHS organisations that <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> for millions of <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> in England are rejecting Palantir’s <button class="vocab-word" type="button" data-word="patient" data-pos="" data-def="n. 病人, 承受者
+a. 忍耐的, 容忍的, 有耐性的, 坚忍的">patient</button> <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button>, according to freedom of information responses that <button class="vocab-word" type="button" data-word="reveal" data-pos="" data-def="vt. 露出, 显示, 透露, 揭露, 泄露, (神)启示
+n. 窗侧, 门侧">reveal</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> bosses <button class="vocab-word" type="button" data-word="believe" data-pos="" data-def="v. 相信">believe</button> they can <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> <button class="vocab-word" type="button" data-word="better" data-pos="" data-def="a. 较好的
+adv. 比较好">better</button> or <button class="vocab-word" type="button" data-word="equal" data-pos="" data-def="n. 对手, 匹敌, 同辈
+a. 相等的, 平等的, 胜任的, 合适的, 平静的, 不相上下的
+vt. 等于, 比得上
+ 等长度编码">equal</button> alternatives in <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> cases.
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> bodies said the £330m federated <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> (FDP) operated by the controversial US <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> had made it easier to <button class="vocab-word" type="button" data-word="manage" data-pos="" data-def="vi. 处理
+vt. 管理, 控制, 维持, 达成, 经营, 运用">manage</button> waiting lists and has improved <button class="vocab-word" type="button" data-word="surgery" data-pos="" data-def="n. 外科, 手术, 手术室, 换球术">surgery</button> scheduling. But, from Gateshead to Truro, others said they were declining to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it or had carried <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> trials and reverted to <button class="vocab-word" type="button" data-word="old" data-pos="" data-def="n. 以前, 往昔
+a. 老的, 旧的, 古老的, 年长的, 老练的">old</button> systems. A Suffolk <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> said <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> systems “supercede” the FDP’s functionality, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> Greater Manchester’s <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> <button class="vocab-word" type="button" data-word="board" data-pos="" data-def="n. 木板, 甲板, 膳食, 会议桌
+vt. 乘船, 供膳食, 用板覆盖
+vi. 搭伙
+ 板">board</button> called the Palantir <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> “duplicative” and “retrograde”.
+The responses <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> as Andy Burnham’s government faces a <button class="vocab-word" type="button" data-word="crunch" data-pos="" data-def="v. 嘎吱嘎吱的咬嚼, 压碎, 嘎吱嘎吱地踏过
+n. 咬碎, 咬碎声">crunch</button> decision <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> to <button class="vocab-word" type="button" data-word="exercise" data-pos="" data-def="n. 行使, 执行, 运动, 练习, 作业
+vt. 运用, 练习, 运动
+vi. 练习, 锻炼">exercise</button> a <button class="vocab-word" type="button" data-word="break" data-pos="" data-def="n. 休息, 中断, 破裂处, 绝交, 破晓, 突变
+vt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃
+vi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停
+n. 分隔符
+ 分隔符; 中断; DOS内部命令:设定扫描中断按键的时机">break</button> <button class="vocab-word" type="button" data-word="clause" data-pos="" data-def="n. 子句, 条款
+ 子句">clause</button> in the seven-year NHS-Palantir <button class="vocab-word" type="button" data-word="deal" data-pos="" data-def="n. 交易, 协定, 数量, 买卖, 松木板
+vi. 处理, 应付, 做生意
+vt. 分配, 发牌, 给予
+ 发牌">deal</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> was intended to <button class="vocab-word" type="button" data-word="better" data-pos="" data-def="a. 较好的
+adv. 比较好">better</button> <button class="vocab-word" type="button" data-word="integrate" data-pos="" data-def="vt. 综合, 使完整, 使成整体
+vi. 成一体
+a. 完整的, 完全的">integrate</button> the <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> system’s <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> to <button class="vocab-word" type="button" data-word="improve" data-pos="" data-def="vt. 改良, 提高...的价值, 改善, 利用
+vi. 变得更好, 增加">improve</button> clinical accuracy and efficiency. Protests against the US firm’s <button class="vocab-word" type="button" data-word="role" data-pos="" data-def="n. 角色, 职责, 任务
+ 作用, 功用">role</button> have <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> focused on its <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> contracts with the Israeli <button class="vocab-word" type="button" data-word="military" data-pos="" data-def="n. 军队
+a. 军事的, 军人的, 适于战争的">military</button> and Donald Trump’s <button class="vocab-word" type="button" data-word="homeland" data-pos="" data-def="n. 本国, 故国">homeland</button> security forces. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> is <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="dispute" data-pos="" data-def="n. 争论
+v. 争论">dispute</button> over evidence for the system’s effectiveness and <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="concern" data-pos="" data-def="n. 关心, 忧虑
+vt. 与...有关, 使担心, 使挂念">concern</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the involvement in the NHS of a <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> cofounded by the tech billionaire Peter Thiel, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> said in 2023: “The NHS makes <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="sick" data-pos="" data-def="n. 病人
+a. 不舒服, 有病的, 恶心的, 厌恶的, 渴望的, 病态的
+vt. 呕吐, 追击, 使(狗)去攻击">sick</button>.”
+According to <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> <button class="vocab-word" type="button" data-word="dozen" data-pos="" data-def="n. 打, 十二个
+a. 一打的">dozen</button> FOI responses reviewed by the Guardian, 16 trusts and <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> boards declared they do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it, following its introduction in <button class="vocab-word" type="button" data-word="March" data-pos="" data-def="n. 三月, 进行, 行军, 步伐, 长途跋涉, 进行曲, 边界
+vi. 进军, 前进, 交界
+vt. 使行军, 使行进">March</button> 2024. They <button class="vocab-word" type="button" data-word="include" data-pos="" data-def="vt. 包括, 把...算入, 包住
+ DOS内部命令:在CONFIG.SYS文件的一个配置块中包含另一配置块的内容">include</button> the <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button> hospitals of <button class="vocab-word" type="button" data-word="North" data-pos="" data-def="n. 北方, 北
+a. 北的, 北方的
+adv. 向北方, 在北方">North</button> Midlands NHS <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> said it will <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it primarily <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> “it does <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="appear" data-pos="" data-def="vi. 出现, 显得, 来到
+ 出庭, 到案, 出现">appear</button> to <button class="vocab-word" type="button" data-word="provide" data-pos="" data-def="vt. 提供, 供应, 规定, 预备
+vi. 作准备, 抚养, 规定">provide</button> functionality over and <button class="vocab-word" type="button" data-word="above" data-pos="" data-def="prep. 在上方, 超出
+adv. 在上面
+a. 上述的, 上面的">above</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> we have <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button>” and Dorset HealthCare <button class="vocab-word" type="button" data-word="university" data-pos="" data-def="n. 大学">university</button> <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> said it “will <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be adopting or going <button class="vocab-word" type="button" data-word="live" data-pos="" data-def="a. 活的, 生动的, 精力充沛的, 实况转播的
+vi. 活, 生存, 居住
+vt. 过着, 度过, 经历
+adv. 实况地">live</button> with the FDP”. Humber Teaching NHS <button class="vocab-word" type="button" data-word="foundation" data-pos="" data-def="n. 基础, 根据, 建立
+ 地基">foundation</button> <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> said: “We have <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> plans to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it.”
+Cambridgeshire and Peterborough NHS <button class="vocab-word" type="button" data-word="foundation" data-pos="" data-def="n. 基础, 根据, 建立
+ 地基">foundation</button> <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> said it has <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> the <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> but it has “<button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> offered <button class="vocab-word" type="button" data-word="significant" data-pos="" data-def="a. 重要的, 有效的, 有含义的, 暗示的, 值得注意的">significant</button> improvements on <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> systems”. Avon and Wiltshire <button class="vocab-word" type="button" data-word="mental" data-pos="" data-def="a. 心智的, 精神病的, 心理的, 颏的
+n. 精神病患者">mental</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> partnership NHS <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> said it had yet to <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> an FDP <button class="vocab-word" type="button" data-word="tool" data-pos="" data-def="n. 工具, 机床, 傀儡
+vt. 用工具加工
+vi. 使用工具">tool</button> that offered significantly <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than its existing capabilities and <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button> hospitals Birmingham NHS <button class="vocab-word" type="button" data-word="foundation" data-pos="" data-def="n. 基础, 根据, 建立
+ 地基">foundation</button> <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> cares for <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than 2 <button class="vocab-word" type="button" data-word="million" data-pos="" data-def="n. 百万, 无数
+num. 百万">million</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button>, said it had <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> plans to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it, citing “limited expected <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> over existing solutions”. The FOIs were gathered by Medact, a <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> <button class="vocab-word" type="button" data-word="campaign" data-pos="" data-def="n. 战役, 运动, 竞选运动
+vi. 参加运动, 作战">campaign</button> that opposes Palantir’s <button class="vocab-word" type="button" data-word="role" data-pos="" data-def="n. 角色, 职责, 任务
+ 作用, 功用">role</button> in the NHS, and posted to a <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> transparency <button class="vocab-word" type="button" data-word="website" data-pos="" data-def="n. 网站（全球资讯网的主机站）">website</button>, WhatDoTheyKnow.
+Palantir has previously challenged claims that <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="software" data-pos="" data-def="n. 软件
+ 软设备">software</button> could be <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> as effective, with its <button class="vocab-word" type="button" data-word="senior" data-pos="" data-def="n. 年长者, 资深者, 毕业班学生
+a. 年长的, 高级的, 资深的">senior</button> vice-president, the <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> MP Tom Watson, saying <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> : “If <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> are companies that can do it, they would have taken <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> in <button class="vocab-word" type="button" data-word="free" data-pos="" data-def="a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的
+vt. 释放, 解放, 使自由
+adv. 自由地, 免费">free</button> and <button class="vocab-word" type="button" data-word="open" data-pos="" data-def="n. 公开, 户外, 空旷
+a. 开着的, 开放的, 开阔的, 营业着的, 公开的, 悬而未决的
+vt. 打开, 公开, 开放
+vi. 展开, 开始, 展现
+ 打开指令; 打开语句">open</button> competition” to <button class="vocab-word" type="button" data-word="run" data-pos="" data-def="n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续
+vi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延
+vt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行
+a. 熔化的, 融化的, 浇铸的
+run的过去式和过去分词
+ 运行">run</button> the FDP.
+Watson, a <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> <button class="vocab-word" type="button" data-word="peer" data-pos="" data-def="n. 同等的人, 匹敌, 贵族
+vi. 凝视, 窥视, 费力地看, 隐现
+vt. 与...同等, 封为贵族">peer</button> and <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button> <button class="vocab-word" type="button" data-word="alongside" data-pos="" data-def="adv. 在旁边, 靠拢着
+prep. 在...旁边, 与...在一起">alongside</button> Burnham, was appointed as Palantir’s <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> lobbyist <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> amid a <button class="vocab-word" type="button" data-word="wave" data-pos="" data-def="n. 波, 波浪, 波动, 起伏, 高潮, 潮涌, 挥手致意, (气压)突变
+vi. 波动, 飘动, 挥手示意, 起伏
+vt. 使波动, 使飘扬, 挥舞, 使成波浪形">wave</button> of opposition to the Palantir <button class="vocab-word" type="button" data-word="deal" data-pos="" data-def="n. 交易, 协定, 数量, 买卖, 松木板
+vi. 处理, 应付, 做生意
+vt. 分配, 发牌, 给予
+ 发牌">deal</button>. He warned his <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> colleagues in <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> to <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> “mob <button class="vocab-word" type="button" data-word="rule" data-pos="" data-def="n. 规则, 统治, 控制, 支配, 规律, 标准, 章程, 破折号, 铅线
+vt. 规定, 统治, 管理, 控制, 支配, 裁决
+vi. 统治, 管辖, 裁定
+ 规则, 水线">rule</button> … <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> procurement practices”.
+But <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> parliamentary <button class="vocab-word" type="button" data-word="select" data-pos="" data-def="a. 挑选出来的, 极好的
+v. 选择, 挑选
+n. 被挑选者, 精萃
+ 选定">select</button> committees have urged the government to <button class="vocab-word" type="button" data-word="end" data-pos="" data-def="n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余
+v. 结束, 终结, 终止
+ 端; 结束">end</button> Palantir’s <button class="vocab-word" type="button" data-word="contract" data-pos="" data-def="n. 合约, 婚约, 契约
+vt. 使皱缩, 使缩短, 感染, 订约, 缔结
+vi. 皱缩, 订约, 收缩">contract</button>, including the Commons’ <button class="vocab-word" type="button" data-word="science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">science</button> and <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> <button class="vocab-word" type="button" data-word="committee" data-pos="" data-def="n. 委员会
+ 委员会">committee</button>. Martin Wrigley, a <button class="vocab-word" type="button" data-word="Liberal" data-pos="" data-def="n. 自由主义者
+a. 慷慨的, 不拘泥的, 宽大的, 自由主义的">Liberal</button> Democrat <button class="vocab-word" type="button" data-word="member" data-pos="" data-def="n. 成员, 会员
+ │肢, 肢体">member</button> of the <button class="vocab-word" type="button" data-word="committee" data-pos="" data-def="n. 委员会
+ 委员会">committee</button>, said the NHS boards’ responses “<button class="vocab-word" type="button" data-word="justify" data-pos="" data-def="vt. 替...辩护, 证明
+vi. 证明合法
+ 段落重排, 两端对齐">justify</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> I have been saying for the <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is that Palantir’s <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> is <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> that <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button>”.
+“<button class="vocab-word" type="button" data-word="Once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">Once</button> <button class="vocab-word" type="button" data-word="again" data-pos="" data-def="adv. 再一次, 又, 到原处">again</button> we have proven that centrally dictating a solution to the NHS can’t <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>,” he said. “We have to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> to developing interoperability so <button class="vocab-word" type="button" data-word="each" data-pos="" data-def="a. 每个, 每一
+adv. 每个
+pron. 每个, 个人, 各自">each</button> <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> has its <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="software" data-pos="" data-def="n. 软件
+ 软设备">software</button> but with a <button class="vocab-word" type="button" data-word="set" data-pos="" data-def="n. 日落, 同伙, 组合, 集合, 装置
+vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整
+vi. 日落, 凝固, 定型, 搁住, 结果, 适合
+a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的
+ 设置; DOS内部命令:改变或显示分配给环境变量的值">set</button> of standards for <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they <button class="vocab-word" type="button" data-word="interact" data-pos="" data-def="vi. 互相影响, 交互作用
+n. 幕间剧, 幕间休息">interact</button>. Palantir are <button class="vocab-word" type="button" data-word="great" data-pos="" data-def="a. 大的, 非常的, 主要的, 重大的, 崇高的, 伟大的
+adv. 顺利地, 得意地
+n. 全部, 大人物, 大师">great</button> sales <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> but they over-promise and under-deliver.”
+Dr Rhiannon Mihranian Osborne, a spokesperson for Medact, said the FOIs showed alternatives existed, a <button class="vocab-word" type="button" data-word="safe" data-pos="" data-def="n. 保险箱, 冷藏室
+a. 安全的, 可靠的, 平安的, 稳健的, 有把握的">safe</button> <button class="vocab-word" type="button" data-word="transition" data-pos="" data-def="n. 转变, 转换, 变迁, 过渡时期, 临时转调
+ 跃迁">transition</button> <button class="vocab-word" type="button" data-word="away" data-pos="" data-def="adv. 离去">away</button> from Palantir was <button class="vocab-word" type="button" data-word="possible" data-pos="" data-def="a. 可能的, 潜在的, 合适的
+n. 可能性, 可能的事物">possible</button> and “the government has <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="excuse" data-pos="" data-def="vt. 原谅, 申辩, 做为...的托辞
+n. 致歉, 理由, 饶恕, 借口">excuse</button> to <button class="vocab-word" type="button" data-word="extend" data-pos="" data-def="v. 扩充, 延伸, 伸展, 扩大
+ 扩展">extend</button> the <button class="vocab-word" type="button" data-word="contract" data-pos="" data-def="n. 合约, 婚约, 契约
+vt. 使皱缩, 使缩短, 感染, 订约, 缔结
+vi. 皱缩, 订约, 收缩">contract</button>”.
+“<button class="vocab-word" type="button" data-word="Instead" data-pos="" data-def="adv. 作为替代, 反而">Instead</button> of outsourcing <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> NHS functions to <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech companies, the government must <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> NHS innovation and the highly skilled NHS <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> professionals <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> <button class="vocab-word" type="button" data-word="alongside" data-pos="" data-def="adv. 在旁边, 靠拢着
+prep. 在...旁边, 与...在一起">alongside</button> doctors and nurses to <button class="vocab-word" type="button" data-word="deliver" data-pos="" data-def="vt. 递送, 陈述, 释放, 发表, 引渡, 投递, 交付
+ 交运">deliver</button> <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> in the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="interest" data-pos="" data-def="n. 兴趣, 嗜好, 利息, 利益, 爱好, 趣味, 势力
+vt. 使感兴趣, 与...有关系">interest</button>,” she said.
+Palantir accused Medact of “slanted analysis” and of “misleading the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button>”.
+“The FDP is, objectively, a successful <button class="vocab-word" type="button" data-word="programme" data-pos="" data-def="n. 节目, 节目单, 程序, 纲要, 大纲, 计划
+vt. 规划, 拟...计划
+vi. 安排节目, 编程序">programme</button>,” a spokesperson said, adding that its <button class="vocab-word" type="button" data-word="purpose" data-pos="" data-def="n. 目的, 意向, 决心, 用途, 效果, 论题
+vt. 意欲, 企图, 计划">purpose</button> was to <button class="vocab-word" type="button" data-word="provide" data-pos="" data-def="vt. 提供, 供应, 规定, 预备
+vi. 作准备, 抚养, 规定">provide</button> trusts with tools to <button class="vocab-word" type="button" data-word="draw" data-pos="" data-def="vi. 拉, 拖, 拔剑
+vt. 拖拉, 挨近, 领取, 打成平局, 引导, 抽签决定, 画, 描写, 制订, 草拟, 吸引
+n. 拉, 拖, 拔出, 抽签, 平局
+ 翻牌, 绘图">draw</button> on depending on their existing capabilities and needs. “It is <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> 20% of <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> government programmes with a <button class="vocab-word" type="button" data-word="green" data-pos="" data-def="n. 绿色, 绿色颜料
+a. 绿色的, 未成熟的, 新鲜的, 青春的, 无经验的, 脸色发青的">green</button> delivery rating, with ministers stating that it ‘is significantly exceeding its benefits <button class="vocab-word" type="button" data-word="forecast" data-pos="" data-def="n. 预想, 预测, 预报
+vt. 预想, 预测, 预报
+ 趋势预测">forecast</button> and has exceeded <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="target" data-pos="" data-def="n. 目标, 靶子, 指标
+vt. 对准, 订指标">target</button>’.”
+It said NHS trusts, including Chelsea and Westminster, Leicester, Northampton, <button class="vocab-word" type="button" data-word="Bath" data-pos="" data-def="n. 沐浴, 浴室
+ 浴">Bath</button>, <button class="vocab-word" type="button" data-word="North" data-pos="" data-def="n. 北方, 北
+a. 北的, 北方的
+adv. 向北方, 在北方">North</button> Cumbria, Croydon, <button class="vocab-word" type="button" data-word="Great" data-pos="" data-def="a. 大的, 非常的, 主要的, 重大的, 崇高的, 伟大的
+adv. 顺利地, 得意地
+n. 全部, 大人物, 大师">Great</button> Western, Dorset, Chesterfield, Ashford and St Peters and Norfolk have publicly praised the FDP.
+Palantir <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> points to NHS <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> that shows trusts using the FDP have carried <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> 117,000 additional operations and a 14.3% reduction in <button class="vocab-word" type="button" data-word="discharge" data-pos="" data-def="vt. 卸下, 放出, 解雇, 拔染, 履行, 放电
+vi. 卸货, 流出
+n. 卸货, 流出, 放电">discharge</button> delays for long-stay patients. NHS England has, <button class="vocab-word" type="button" data-word="however" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">however</button>, had to <button class="vocab-word" type="button" data-word="add" data-pos="" data-def="vt. 增加, 添加, 附带说明, 计算...总和
+vi. 做加法, 积累而成, 增添
+ 加法">add</button> a caveat to its statistics, making <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> it cannot <button class="vocab-word" type="button" data-word="draw" data-pos="" data-def="vi. 拉, 拖, 拔剑
+vt. 拖拉, 挨近, 领取, 打成平局, 引导, 抽签决定, 画, 描写, 制订, 草拟, 吸引
+n. 拉, 拖, 拔出, 抽签, 平局
+ 翻牌, 绘图">draw</button> conclusions <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button> and <button class="vocab-word" type="button" data-word="effect" data-pos="" data-def="n. 结果, 影响, 效果, 印象
+vt. 实行, 引起, 完成
+ 效果">effect</button> as <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> variables have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> been controlled for.
+The government’s national <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> guardian for <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> and social <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button>, Dr Nicola Byrne, this <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> urged ministers to <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> substantial weight to the “<button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> <button class="vocab-word" type="button" data-word="factor" data-pos="" data-def="n. 因素, 因数, 系数, 基因, 代理人
+ 因式">factor</button>” <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> deciding on Palantir’s <button class="vocab-word" type="button" data-word="fate" data-pos="" data-def="n. 命运, 运气
+vt. 注定">fate</button>. <button class="vocab-word" type="button" data-word="More" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">More</button> than 44,000 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> have filed <button class="vocab-word" type="button" data-word="legal" data-pos="" data-def="a. 法律的, 法定的, 合法的
+ 法定权利; 法律(上)的, 合法的">legal</button> objections to their <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> being shared with, stored in or <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> by the FDP. Byrne, a government-appointed watchdog, said <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> was evidence “a <button class="vocab-word" type="button" data-word="significant" data-pos="" data-def="a. 重要的, 有效的, 有含义的, 暗示的, 值得注意的">significant</button> <button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> of <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> organisations” were <button class="vocab-word" type="button" data-word="reluctant" data-pos="" data-def="a. 不情愿的, 勉强的
+ 不愿的, 勉强的, 难以处理的">reluctant</button> to <button class="vocab-word" type="button" data-word="adopt" data-pos="" data-def="vt. 采用, 正式通过, 收养, 接受
+ 采取">adopt</button> the FDP including <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to concerns <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> Palantir and “a preference for <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> solutions”.
+Sophie Don, the <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> executive of Voror, a <button class="vocab-word" type="button" data-word="patient" data-pos="" data-def="n. 病人, 承受者
+a. 忍耐的, 容忍的, 有耐性的, 坚忍的">patient</button> <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> that <button class="vocab-word" type="button" data-word="bid" data-pos="" data-def="n. 出价
+v. 命令, 吩咐, 请求, 表示, 宣布, 投标">bid</button> unsuccessfully against Palantir, said: “Of <button class="vocab-word" type="button" data-word="course" data-pos="" data-def="n. 课程, 路线, 过程, 一道菜, 道路
+v. 追, (使)跑">course</button> Palantir isn’t the <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> that can do this. It doesn’t <button class="vocab-word" type="button" data-word="surprise" data-pos="" data-def="n. 惊奇, 奇袭, 诧异
+vt. 使惊奇, 撞见, 奇袭">surprise</button> me that it is making things harder … If NHS <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> are choosing <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it, it’s a <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> <button class="vocab-word" type="button" data-word="sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">sign</button> it’s <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> creating <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button>. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> home-grown systems that would <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button> to the NHS than the [Palantir] <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button>.”
+A spokesperson for NHS England said: “137 NHS trusts have <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> reported benefits from the <button class="vocab-word" type="button" data-word="wide" data-pos="" data-def="a. 宽的, 广阔的, 普遍的, 宽阔的, 广泛的, 一般的
+adv. 广阔地, 遍及各处地, 广泛地
+n. 大千世界">wide</button> <button class="vocab-word" type="button" data-word="range" data-pos="" data-def="n. 排, 行, 山脉, 范围, 行列, 射程
+vt. 排列, 归类于, 使并列, 放牧
+vi. 平行, 延伸, 漫游
+ 量程; 范围; 域; 距离">range</button> of tools <button class="vocab-word" type="button" data-word="available" data-pos="" data-def="a. 可利用的, 可获得的, 有效的
+ 有效的, 可得的">available</button> on the <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> – helping <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> join-up and <button class="vocab-word" type="button" data-word="improve" data-pos="" data-def="vt. 改良, 提高...的价值, 改善, 利用
+vi. 变得更好, 增加">improve</button> <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> for patients, and <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> efficiently.”
+Exclusive: <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> bodies <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> controversial US firm’s <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="better" data-pos="" data-def="a. 较好的
+adv. 比较好">better</button> than systems <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> in <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+
+<div class="article-content-zh">“客观来说，FDP 是一个成功的项目，”一名发言人表示，并补充称其目的是根据各信托机构现有的能力和需求，为其提供可利用的工具。“在重大政府项目中，仅有 20% 获得了绿色交付评级，而它正是其中之一；部长们也表示它‘大大超出了效益预测，并且超额达成了每一项目标’。”
+该发言人称，包括切尔西和威斯敏斯特、莱斯特、北安普敦、巴斯、北坎布里亚、克罗伊登、大西部、多塞特、切斯特菲尔德、阿什福德和圣彼得以及诺福克在内的 NHS 信托机构都公开对 FDP 表示了赞赏。
+Palantir 还援引 NHS 的数据指出，使用 FDP 的信托机构额外完成了 11.7 万台手术，且长期住院患者的延期出院情况减少了 14.3%。然而，英格兰国民保健署（NHS England）不得不对其统计数据做出保留说明，明确表示在未控制其他变量的情况下，无法就因果关系得出结论。
+英国政府卫生与社会关怀国家数据监管专员尼古拉·伯恩博士（Dr Nicola Byrne）本周敦促部长们在决定 Palantir 的命运时，应高度重视“信任因素”。已有超过 4.4 万人提出法律异议，反对将自己的健康数据共享给 FDP、存储于其中或供其使用。伯恩作为政府任命的监督官员表示，有证据表明“相当数量的地方机构”不愿采用 FDP，其原因包括对 Palantir 的担忧以及“更倾向于其他解决方案”。</div>
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+
+<div class="article-content-zh">“客观来说，FDP 是一个成功的项目，”一名发言人表示，并补充称其目的是根据各信托机构现有的能力和需求，为其提供可利用的工具。“在重大政府项目中，仅有 20% 获得了绿色交付评级，而它正是其中之一；部长们也表示它‘大大超出了效益预测，并且超额达成了每一项目标’。”
+该发言人称，包括切尔西和威斯敏斯特、莱斯特、北安普敦、巴斯、北坎布里亚、克罗伊登、大西部、多塞特、切斯特菲尔德、阿什福德和圣彼得以及诺福克在内的 NHS 信托机构都公开对 FDP 表示了赞赏。
+Palantir 还援引 NHS 的数据指出，使用 FDP 的信托机构额外完成了 11.7 万台手术，且长期住院患者的延期出院情况减少了 14.3%。然而，英格兰国民保健署（NHS England）不得不对其统计数据做出保留说明，明确表示在未控制其他变量的情况下，无法就因果关系得出结论。
+英国政府卫生与社会关怀国家数据监管专员尼古拉·伯恩博士（Dr Nicola Byrne）本周敦促部长们在决定 Palantir 的命运时，应高度重视“信任因素”。已有超过 4.4 万人提出法律异议，反对将自己的健康数据共享给 FDP、存储于其中或供其使用。伯恩作为政府任命的监督官员表示，有证据表明“相当数量的地方机构”不愿采用 FDP，其原因包括对 Palantir 的担忧以及“更倾向于其他解决方案”。</div>
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-18 07:44</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
