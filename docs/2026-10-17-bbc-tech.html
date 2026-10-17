@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月17日 周六 · BBC News (科技)">
+<meta property="og:description" content="Toxic algorithms wouldn&#x27;t let them go - now Australia wants an off switch">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年10月17日 周六</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月17日 周六 · BBC News (科技)</p>
+<a class="back-link" href="2026-10-17.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="Toxic" data-pos="" data-def="a. 有毒的, 中毒的
+ 中毒的, 毒物的">Toxic</button> algorithms wouldn&#x27;t <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> them <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> - <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> Australia wants an <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> <button class="vocab-word" type="button" data-word="switch" data-pos="" data-def="n. 开关, 电闸, 转换, 软枝, 鞭子, 道岔
+vt. 转变, 切换, 摆动, 转换, 使转轨
+vi. 转换, 变换, 摆动
+ 开关; 翻转; 转移">switch</button></h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/21ca/live/8f226840-c966-11f1-a64c-550be9e3c66b.png" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">This <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> can <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be played
+<button class="vocab-word" type="button" data-word="Watch" data-pos="" data-def="n. 观察, 手表, 看守, 守护, 监视, 值班人
+vt. 看, 注视, 照顾, 看守, 守护, 监视
+vi. 观看, 注视, 守侯">Watch</button>: <button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> social platforms <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> have following-only feeds - here&#x27;s <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>
+Warning: This <button class="vocab-word" type="button" data-word="article" data-pos="" data-def="n. 文章, 冠词, 物品, 物件, 条款, 契约
+ 信件">article</button> contains an <button class="vocab-word" type="button" data-word="account" data-pos="" data-def="n. 报告, 解释, 估价, 理由, 利润, 算账, 帐目
+vi. 报帐, 解释, 导致, 报偿, 占, 杀死
+vt. 认为
+ 帐户, 帐号">account</button> of living with an eating <button class="vocab-word" type="button" data-word="disorder" data-pos="" data-def="n. 杂乱, 混乱
+vt. 扰乱, 使失调">disorder</button>
+Varsha Yajman was <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> self-conscious <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> she looked <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> she joined social media as a 13-year-old.
+Endless <button class="vocab-word" type="button" data-word="workout" data-pos="" data-def="n. 试验, 试用, 锻炼">workout</button> videos making <button class="vocab-word" type="button" data-word="impossible" data-pos="" data-def="a. 不可能的, 难以置信的, 令人无法忍受的">impossible</button> promises filled her feeds. Through the <button class="vocab-word" type="button" data-word="screen" data-pos="" data-def="n. 幕, 银幕, 屏风, 掩蔽物, 屏蔽, 筛子
+vt. 掩蔽, 放映, 拍摄, 掩护, 筛, 甄别
+vi. 拍电影
+ 筛选; 屏幕">screen</button>, girls she&#x27;d <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> met urged her to <button class="vocab-word" type="button" data-word="sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to dangerous <button class="vocab-word" type="button" data-word="calorie" data-pos="" data-def="n. 卡路里（热量单位）">calorie</button> challenges. Others proudly promoted their <button class="vocab-word" type="button" data-word="height" data-pos="" data-def="n. 高度, 海拔, 高地, 顶点
+ 高度">height</button> and weight - <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> the <button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> of times they had been sent to <button class="vocab-word" type="button" data-word="hospital" data-pos="" data-def="n. 医院
+ 医院">hospital</button> - on their profiles in a <button class="vocab-word" type="button" data-word="form" data-pos="" data-def="n. 形状, 形体, 类型, 方式, 表格, 形式
+v. 形成, 排列, (使)组成
+n. 表单
+ 表单">form</button> of twisted competition.
+<button class="vocab-word" type="button" data-word="Every" data-pos="" data-def="a. 每一, 所有的">Every</button> <button class="vocab-word" type="button" data-word="night" data-pos="" data-def="n. 夜, 夜晚, 晚上, 黑暗, 夜晚的工作
+ 夜, 黑夜, 黑暗">night</button> as she fell <button class="vocab-word" type="button" data-word="asleep" data-pos="" data-def="a. 睡着的, 长眠的, 麻木的
+adv. 熟睡地">asleep</button>, Varsha would <button class="vocab-word" type="button" data-word="watch" data-pos="" data-def="n. 观察, 手表, 看守, 守护, 监视, 值班人
+vt. 看, 注视, 照顾, 看守, 守护, 监视
+vi. 观看, 注视, 守侯">watch</button> a stranger on the <button class="vocab-word" type="button" data-word="internet" data-pos="" data-def="因特网, 国际互连网, 网际网络, 互连网络, 广域网">internet</button> diarising <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> they&#x27;d consumed that <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>.
+&quot;I was <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button>, &#x27;I don&#x27;t <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> to <button class="vocab-word" type="button" data-word="eat" data-pos="" data-def="v. 吃, 腐蚀">eat</button>. I can <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="watch" data-pos="" data-def="n. 观察, 手表, 看守, 守护, 监视, 值班人
+vt. 看, 注视, 照顾, 看守, 守护, 监视
+vi. 观看, 注视, 守侯">watch</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="eat" data-pos="" data-def="v. 吃, 腐蚀">eat</button>&#x27;,&quot; Varsha tells the BBC.
+&quot;I would <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> that I&#x27;d be <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> these really <button class="vocab-word" type="button" data-word="deep" data-pos="" data-def="a. 深的
+adv. 深入地
+n. 深渊, 深处">deep</button> <button class="vocab-word" type="button" data-word="rabbit" data-pos="" data-def="n. 兔子
+vi. 猎兔
+vt. 让...见鬼去">rabbit</button> holes... it was <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="matter" data-pos="" data-def="n. 事件, 物质, 原因, 素材, 实体, 重要
+vi. 有关系">matter</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> <button class="vocab-word" type="button" data-word="hard" data-pos="" data-def="a. 坚硬的, 硬的, 难的, 艰苦的, 困难的, 坚固的, 猛烈的, 艰难的, 结实的, 确实的
+adv. 坚硬地, 努力地, 辛苦地, 接近地, 猛烈地, 牢固地">hard</button> you tried to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button>, you couldn&#x27;t.&quot;
+<button class="vocab-word" type="button" data-word="Now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">Now</button> 24 and in recovery from anorexia, Varsha says she is <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> served weight loss <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button> on social media - <button class="vocab-word" type="button" data-word="despite" data-pos="" data-def="n. 轻视, 憎恨
+prep. 虽然, 尽管">despite</button> having <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> safety <button class="vocab-word" type="button" data-word="setting" data-pos="" data-def="n. 环境, 背景, 布景, 镶嵌, 调整, 沉落, 一副餐具
+ 设置">setting</button> turned on, and an exhaustive <button class="vocab-word" type="button" data-word="list" data-pos="" data-def="n. 目录, 名单, 明细表, 布条, 条纹, 列表, 序列, 数据清单
+vt. 列出, 列于表上, 记入名单内, 装布条
+vi. 列于表上
+ 列表, 序列, 数据清单">list</button> of banned words.
+Varsha Yajman says social media aggravated her eating <button class="vocab-word" type="button" data-word="disorder" data-pos="" data-def="n. 杂乱, 混乱
+vt. 扰乱, 使失调">disorder</button>
+It is <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> her the Australian government says it is trying to <button class="vocab-word" type="button" data-word="protect" data-pos="" data-def="vt. 防卫, 保护, 警戒
+ 庇护, 保护, 警戒">protect</button> with a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="suite" data-pos="" data-def="n. 随员, 套房, (一)组, (一)套, 组曲, 继之而来的事
+ 程序组">suite</button> of laws cracking <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> on <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> were introduced to <button class="vocab-word" type="button" data-word="parliament" data-pos="" data-def="n. 国会, 议会
+ 会议, 国会, 议院">parliament</button> this <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button>.
+The centrepiece of their proposed reforms: an algorithm <button class="vocab-word" type="button" data-word="switch" data-pos="" data-def="n. 开关, 电闸, 转换, 软枝, 鞭子, 道岔
+vt. 转变, 切换, 摆动, 转换, 使转轨
+vi. 转换, 变换, 摆动
+ 开关; 翻转; 转移">switch</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> would <button class="vocab-word" type="button" data-word="force" data-pos="" data-def="n. 力量, 武力, 势力, 影响力, 军队, 力, 效力
+vt. 强迫, 强夺, 推动, 提高
+ 人工转移; 强制">force</button> social media platforms to <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> users <button class="vocab-word" type="button" data-word="turn" data-pos="" data-def="n. 转弯, 转动, 旋转, 翻转, 一圈, 顺次, 改动, 变化, 性格, 特色, 形状, 转折
+vt. 使旋转, 转弯, 转动, 使转向, 驱赶, 阻挡, 兑换, 改写, 使作对, 绕过, 使流通
+vi. 转动, 转弯, 转向, 翻转, 回转, 改变, 转身, 变成, 变质, 晕眩, 易脱手">turn</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> recommender <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button>. The <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button> is that you would <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> posts from accounts you <button class="vocab-word" type="button" data-word="follow" data-pos="" data-def="vt. 跟随, 沿行, 遵循, 追求
+vi. 跟随, 接着
+n. 跟随, 追随">follow</button>.
+It isn&#x27;t the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> government to <button class="vocab-word" type="button" data-word="try" data-pos="" data-def="n. 尝试, 试验, 审理, 审判
+vt. 试, 尝试, 试验, 考验, 审问, 提炼
+vi. 尝试, 试图">try</button> this, but existing algorithm controls are <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> <button class="vocab-word" type="button" data-word="transient" data-pos="" data-def="n. 瞬, 短期居留者, 过境鸟, 瞬变现象
+a. 短暂的, 易变的, 瞬变的, 路过的
+ 瞬变过程; 过渡过程; 过渡的; 瞬变的; 瞬时峰值电压">transient</button> and <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> with trade-offs in <button class="vocab-word" type="button" data-word="app" data-pos="" data-def="应用, 应用程序; 相联并行处理器">app</button> functionality.
+Australia has <button class="vocab-word" type="button" data-word="set" data-pos="" data-def="n. 日落, 同伙, 组合, 集合, 装置
+vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整
+vi. 日落, 凝固, 定型, 搁住, 结果, 适合
+a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的
+ 设置; DOS内部命令:改变或显示分配给环境变量的值">set</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> its legislation tighter to <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> this. And it hopes its <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> laws – <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> would <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="impose" data-pos="" data-def="vt. 征(税), 把...强加于, 以...欺骗
+vi. 利用, 欺骗, 施加影响">impose</button> a <button class="vocab-word" type="button" data-word="legal" data-pos="" data-def="a. 法律的, 法定的, 合法的
+ 法定权利; 法律(上)的, 合法的">legal</button> <button class="vocab-word" type="button" data-word="duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">duty</button> of <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> on <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> services – will <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> Australians <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> happier and healthier.
+But critics are concerned <button class="vocab-word" type="button" data-word="Prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">Prime</button> <button class="vocab-word" type="button" data-word="Minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">Minister</button> Anthony Albanese&#x27;s government has bitten <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than it can <button class="vocab-word" type="button" data-word="chew" data-pos="" data-def="vt. 咀嚼, 嚼碎
+vi. 咀嚼, 细想
+n. 咀嚼, 咀嚼物">chew</button> in its <button class="vocab-word" type="button" data-word="fight" data-pos="" data-def="n. 打架, 争吵, 斗志
+v. 对抗, 打架">fight</button> with <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> others, including the Trump administration, <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> the reforms threaten <button class="vocab-word" type="button" data-word="free" data-pos="" data-def="a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的
+vt. 释放, 解放, 使自由
+adv. 自由地, 免费">free</button> <button class="vocab-word" type="button" data-word="speech" data-pos="" data-def="n. 演讲, 说话, 谈话, 言语, 引语, 民族语言
+ 言语, 语言">speech</button>.
+Flynn Martin knows <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> it is <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> to be sucked into an algorithmic <button class="vocab-word" type="button" data-word="spiral" data-pos="" data-def="n. 螺旋形之物, 螺线
+a. 螺旋形的, 盘旋的
+vi. 螺旋形下降, 螺旋形上升, 螺旋形行进
+vt. 使螺旋形行进">spiral</button>.
+Self-proclaimed misogynist influencer Andrew Tate and <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> manosphere figures started overwhelming the then-20-year-old&#x27;s social media feeds <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="four" data-pos="" data-def="num. 四, 四个
+ 四冲程循环">four</button> years <button class="vocab-word" type="button" data-word="ago" data-pos="" data-def="adv. 以前">ago</button>.
+It was a <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> Flynn, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> was <button class="vocab-word" type="button" data-word="eventually" data-pos="" data-def="adv. 最后, 终于">eventually</button> diagnosed with bipolar <button class="vocab-word" type="button" data-word="disorder" data-pos="" data-def="n. 杂乱, 混乱
+vt. 扰乱, 使失调">disorder</button>, was insecure, frustrated with his <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button> and struggling with his <button class="vocab-word" type="button" data-word="mental" data-pos="" data-def="a. 心智的, 精神病的, 心理的, 颏的
+n. 精神病患者">mental</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button>. He says he fell for the <button class="vocab-word" type="button" data-word="rhetoric" data-pos="" data-def="n. 修辞, 修辞学, 雄辩(术)">rhetoric</button>.
+He <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button> went viral in Australia for <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> videos: <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> ranting <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> it was OK to be a <button class="vocab-word" type="button" data-word="straight" data-pos="" data-def="n. 直线, 直
+a. 直的, 笔直的, 正直的, 直接的, 连续的, 整齐的
+adv. 直接地, 立即, 不断地">straight</button> <button class="vocab-word" type="button" data-word="white" data-pos="" data-def="n. 白色, 洁白, 眼白, 白种人, 蛋白
+a. 白色的, 纯洁的, 白种的, 苍白的, 空白的, 幸运的">white</button> <button class="vocab-word" type="button" data-word="male" data-pos="" data-def="n. 男人, 雄性动物
+a. 男性的, 雄性的, 有力的">male</button>, and <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> he criticised a <button class="vocab-word" type="button" data-word="date" data-pos="" data-def="n. 日期, 约会, 枣椰树
+vt. 约会, 定日期
+vi. 注明日期, 过时">date</button> for her frozen <button class="vocab-word" type="button" data-word="yoghurt" data-pos="" data-def="n. 酸乳, 酸奶">yoghurt</button> <button class="vocab-word" type="button" data-word="order" data-pos="" data-def="n. 次序, 规则, 命令
+vi. 命令, 定货
+vt. 整理, 命令, 定购
+n. 顺序, 阶数
+ 顺序, 阶数">order</button>.
+&quot;You <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> yourself in <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> a <button class="vocab-word" type="button" data-word="bit" data-pos="" data-def="n. 少量, 马嚼子, 辅币
+vt. 给马上嚼子, 控制
+bite的过去式和过去分词
+ 比特, 二进制数位, 机内测试">bit</button> of an <button class="vocab-word" type="button" data-word="echo" data-pos="" data-def="n. 回声, 回音, 回波
+vi. 发回声, 随声附和
+vt. 摹仿, 重复, 反射
+ 回显; DOS批处理命令:控制MS-DOS命令是否在屏幕上显示">echo</button> <button class="vocab-word" type="button" data-word="chamber" data-pos="" data-def="n. 室, 房间, 枪膛
+vt. 装(弹药), 把...关在室内
+a. 室内的">chamber</button>... It&#x27;s <button class="vocab-word" type="button" data-word="easy" data-pos="" data-def="a. 容易的, 缓缓的, 舒适的, 从容的, 宽容的, 流畅的, 随便的, 自在的, 疲软的
+adv. 容易地, 慢慢地">easy</button> to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> swept <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> in that,&quot; he tells the BBC.
+&quot;I really bought into the <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button> we were living in this matrix, we had this really negative <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> that was designed against you. And the <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to <button class="vocab-word" type="button" data-word="break" data-pos="" data-def="n. 休息, 中断, 破裂处, 绝交, 破晓, 突变
+vt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃
+vi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停
+n. 分隔符
+ 分隔符; 中断; DOS内部命令:设定扫描中断按键的时机">break</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of it was becoming this alpha <button class="vocab-word" type="button" data-word="male" data-pos="" data-def="n. 男人, 雄性动物
+a. 男性的, 雄性的, 有力的">male</button> <button class="vocab-word" type="button" data-word="character" data-pos="" data-def="n. 个性, 字符, 人物, 性质, 品格, 资格
+ 字符">character</button>.&quot;
+The Melbournian was <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> pulled from the manosphere <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> a <button class="vocab-word" type="button" data-word="period" data-pos="" data-def="n. 时期, 节段, 节, 句点, 学时, 周期
+a. 当时特有的, 过去某段时期的
+interj. 就是这话, 就是这么回事">period</button> of psychosis and a <button class="vocab-word" type="button" data-word="hospital" data-pos="" data-def="n. 医院
+ 医院">hospital</button> <button class="vocab-word" type="button" data-word="stay" data-pos="" data-def="n. 停留, 逗留, 制止, 延缓, 停止, 支柱, 支撑物, 支索
+vt. 制止, 延缓, 坚持, 支持, 支撑, 用支索固定
+vi. 停留, 逗留, 暂停, 坚持, 中止">stay</button>.
+Flynn Martin says he&#x27;s <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> finding a healthy <button class="vocab-word" type="button" data-word="balance" data-pos="" data-def="n. 平衡, 差额
+vi. 平衡, 相等
+vt. 称, 权衡, 比较, 使平衡, 结算, 抵消">balance</button> with social media
+<button class="vocab-word" type="button" data-word="Nowadays" data-pos="" data-def="n. 现在, 现时, 当今
+adv. 时下, 现今">Nowadays</button>, he finds it <button class="vocab-word" type="button" data-word="tough" data-pos="" data-def="n. 恶棍
+a. 强硬的, 艰苦的, 坚固的, 坚韧的, 粗暴的, 咬不动的">tough</button> to <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> at that <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> of himself: &quot;<button class="vocab-word" type="button" data-word="While" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">While</button> there&#x27;s a <button class="vocab-word" type="button" data-word="bit" data-pos="" data-def="n. 少量, 马嚼子, 辅币
+vt. 给马上嚼子, 控制
+bite的过去式和过去分词
+ 比特, 二进制数位, 机内测试">bit</button> of <button class="vocab-word" type="button" data-word="shame" data-pos="" data-def="n. 羞耻, 羞愧, 耻辱
+vt. 使羞愧, 侮辱">shame</button> and embarrassment... I <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is a <button class="vocab-word" type="button" data-word="bit" data-pos="" data-def="n. 少量, 马嚼子, 辅币
+vt. 给马上嚼子, 控制
+bite的过去式和过去分词
+ 比特, 二进制数位, 机内测试">bit</button> of empathy for that younger <button class="vocab-word" type="button" data-word="man" data-pos="" data-def="n. 男人, 人类, 人
+vt. 为...配备人手, 操纵, 使振奋
+ 城域网, 手册">man</button>.&quot;
+<button class="vocab-word" type="button" data-word="Both" data-pos="" data-def="a. 两者的
+adv. 两者都
+pron. 两者">Both</button> Flynn and Varsha <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> social media <button class="vocab-word" type="button" data-word="alone" data-pos="" data-def="a. 孤独的, 单独的, 独自的
+adv. 独自地">alone</button> isn&#x27;t to <button class="vocab-word" type="button" data-word="blame" data-pos="" data-def="n. 过失, 责备
+vt. 责备, 归咎于">blame</button> for the <button class="vocab-word" type="button" data-word="worst" data-pos="" data-def="n. 最坏, 最坏的时候
+a. 最坏的, 最恶劣的, 最不利的
+adv. 最坏, 最糟">worst</button> <button class="vocab-word" type="button" data-word="chapter" data-pos="" data-def="n. 章, 篇, 重要章节
+ 章; 段">chapter</button> of their lives, but <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> it was a <button class="vocab-word" type="button" data-word="key" data-pos="" data-def="n. 钥匙, 键, 解答, 关键, 要害, 基调, 线索, 答案, 暗礁
+vt. 调音, 锁上, 提供线索
+vi. 使用钥匙
+ 键, 密钥">key</button> <button class="vocab-word" type="button" data-word="factor" data-pos="" data-def="n. 因素, 因数, 系数, 基因, 代理人
+ 因式">factor</button>.
+Countless others have stories of being confronted by social media <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button> they didn&#x27;t <button class="vocab-word" type="button" data-word="seek" data-pos="" data-def="vt. 寻求, 寻找, 探索, 追求, 搜索, 请求
+vi. 寻找, 搜索
+ 查找">seek</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button>, and didn&#x27;t <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> to <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> – and there&#x27;s <button class="vocab-word" type="button" data-word="long" data-pos="" data-def="a. 长的, 长久的, 冗长的, 做多头的
+vi. 渴望, 热望, 极想
+adv. 长久, 始终
+n. 长时间, 长信号, 长整型
+ 长, 长整型">long</button> been suspicions the algorithms curating these platforms are harming users.
+Social media firms <button class="vocab-word" type="button" data-word="argue" data-pos="" data-def="vi. 提出理由, 争论, 辩论
+vt. 主张, 辩论, 证明, 说服">argue</button> the <button class="vocab-word" type="button" data-word="potential" data-pos="" data-def="n. 潜在性, 可能性, 潜力, 潜能, 势, 位
+a. 有潜力的, 可能的, 潜在的">potential</button> risks are being overstated and that they <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> <button class="vocab-word" type="button" data-word="provide" data-pos="" data-def="vt. 提供, 供应, 规定, 预备
+vi. 作准备, 抚养, 规定">provide</button> users with effective safety tools.
+But <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> emerging from <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> the <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button> has been sketching a different <button class="vocab-word" type="button" data-word="picture" data-pos="" data-def="n. 图画, 照片, 景色, 美丽如画的人(或物), 化身, 生动的描述, 想像, 形象思维
+vt. 画, 拍摄, 用图说明, 描写, 想像
+ 图象; 形象; 字形">picture</button>.
+Studies have <button class="vocab-word" type="button" data-word="found" data-pos="" data-def="vt. 建立, 创立, 铸造
+find的过去式和过去分词">found</button> social media <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> triggers a <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> <button class="vocab-word" type="button" data-word="brain" data-pos="" data-def="n. 脑
+vt. 打碎脑部">brain</button> response to gambling and <button class="vocab-word" type="button" data-word="substance" data-pos="" data-def="n. 物质, 实质, 主旨, 资产, 本质, 牢固
+ 物质">substance</button> addiction , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> ; that algorithms – <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> unsolicited – <button class="vocab-word" type="button" data-word="serve" data-pos="" data-def="vt. 可作...用, 服务, 经历, 招待, 供应, 送交, 对待
+vi. 服务, 服役, 侍应, 适合, 有用, 开球
+n. 发球, 轮到发球">serve</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> harms users&#x27; <button class="vocab-word" type="button" data-word="mental" data-pos="" data-def="a. 心智的, 精神病的, 心理的, 颏的
+n. 精神病患者">mental</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> , and that they&#x27;re spreading disinformation and increasing polarisation, driving violence offline .
+<button class="vocab-word" type="button" data-word="Court" data-pos="" data-def="n. 法院, 庭院, 奉承
+vt. 献殷勤, 追求, 招致
+vi. 求爱">Court</button> cases and whistleblowers have aired claims that these companies <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> the dangers and are willing to <button class="vocab-word" type="button" data-word="overlook" data-pos="" data-def="vt. 俯瞰, 远眺, 没注意到
+n. 眺望, 俯瞰到的景色">overlook</button> them as this <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> lifts user engagement and their <button class="vocab-word" type="button" data-word="bottom" data-pos="" data-def="n. 底部
+a. 底部的
+vt. 给...装底, 查明真相
+vi. 到达底部, 建立基础">bottom</button> <button class="vocab-word" type="button" data-word="line" data-pos="" data-def="n. 列, 线, 绳, 电线, 线路, 路线, 航线, 作业线, 界线, 战线, 外形, 排, 家系
+vt. 排成一行, 顺...排列, 划线于, 加衬里, 使有线条, 使起皱纹
+vi. 排队
+ 线路">line</button>.
+&quot;The <button class="vocab-word" type="button" data-word="result" data-pos="" data-def="n. 结果, 成绩, 答案
+vi. 产生, 结果, 致使
+ 结果">result</button> is that they <button class="vocab-word" type="button" data-word="promote" data-pos="" data-def="vt. 促进, 晋升, 创办, 推销
+ 促进, 推广, 推销">promote</button> <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button> that is outrageous or that invokes <button class="vocab-word" type="button" data-word="strong" data-pos="" data-def="a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的
+adv. 强劲地, 有力地, 猛烈地">strong</button> emotions from <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> - so it might be anger or <button class="vocab-word" type="button" data-word="fear" data-pos="" data-def="n. 恐怖, 害怕, 担心
+v. 害怕, 恐惧, 为...担心, 敬畏">fear</button> or <button class="vocab-word" type="button" data-word="desire" data-pos="" data-def="n. 欲望, 要求
+vt. 想要, 请求
+vi. 渴望">desire</button> or lust or insecurity, whatever it is, it&#x27;s going to <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> us scrolling,&quot; Chanel Contos tells the BBC.
+<button class="vocab-word" type="button" data-word="Consent" data-pos="" data-def="n. 同意, 许可
+vi. 同意, 赞同">Consent</button> education campaigner Chanel Contos lobbied the government for <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> founding the <button class="vocab-word" type="button" data-word="Teach" data-pos="" data-def="vt. 教, 讲授, 教导, 教育
+vi. 教书, 教学, 可以教">Teach</button> Us <button class="vocab-word" type="button" data-word="Consent" data-pos="" data-def="n. 同意, 许可
+vi. 同意, 赞同">Consent</button> <button class="vocab-word" type="button" data-word="website" data-pos="" data-def="n. 网站（全球资讯网的主机站）">website</button> in 2021
+<button class="vocab-word" type="button" data-word="While" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">While</button> studying the <button class="vocab-word" type="button" data-word="topic" data-pos="" data-def="n. 主题, 论题, 话题">topic</button> at <button class="vocab-word" type="button" data-word="university" data-pos="" data-def="n. 大学">university</button>, the activist - <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> helped <button class="vocab-word" type="button" data-word="reform" data-pos="" data-def="n. 改革, 改正, 改造
+vt. 改革, 改过, 革新, 重整
+vi. 革新, 改过">reform</button> sexual <button class="vocab-word" type="button" data-word="consent" data-pos="" data-def="n. 同意, 许可
+vi. 同意, 赞同">consent</button> education standards in Australia - came <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> with a <button class="vocab-word" type="button" data-word="campaign" data-pos="" data-def="n. 战役, 运动, 竞选运动
+vi. 参加运动, 作战">campaign</button> for <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button>.
+&quot;<button class="vocab-word" type="button" data-word="Fix" data-pos="" data-def="vt. 使固定, 修理, 准备, 安装, 凝视, 牢记, 确定, 整理
+vi. 固定, 注视, 确定
+n. 困境, 方位, 维修, 贿赂">Fix</button> Our Feeds&quot; demanded recommended algorithms be turned <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> by <button class="vocab-word" type="button" data-word="default" data-pos="" data-def="n. 违约, 不履行责任, 缺席, 默认值
+v. 疏怠职责, 缺席, 拖欠, 默认
+ 默认; 默认值; 缺省值">default</button>, and social media users be <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> the <button class="vocab-word" type="button" data-word="choice" data-pos="" data-def="n. 选择, 精选品, 选择权
+a. 精选的, 挑三拣四的, 上等的
+ DOS内部命令:在批处理文件中
+该命令用于提示用户作出选择, 决定批处理文件的流程">choice</button> to <button class="vocab-word" type="button" data-word="opt" data-pos="" data-def="vi. 选择">opt</button> into them.
+Contos envisaged a nostalgic <button class="vocab-word" type="button" data-word="return" data-pos="" data-def="n. 回来, 返回, 来回票, 归还, 报答, 利润率, 报告书
+a. 返回的, 回程的, 报答的, 反向的, 重现的, 复原的
+vi. 返回, 归还, 回来
+vt. 归还, 还, 回报, 产生, 反射, 报告, 申报, 退回
+ 返回">return</button> to the social media of the <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> 2010s – a <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> a person&#x27;s social media was filled with posts from friends or <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> they actually followed and their feeds were <button class="vocab-word" type="button" data-word="finite" data-pos="" data-def="a. 有限的, 有穷的, 限定的
+n. 有限物">finite</button>.
+<button class="vocab-word" type="button" data-word="More" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">More</button> than 15,000 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> signed her <button class="vocab-word" type="button" data-word="petition" data-pos="" data-def="n. 请愿, 诉状, 陈情书, 申请, 祈求, 祷文
+v. 正式请求, 恳求, 请愿">petition</button>, and the <button class="vocab-word" type="button" data-word="campaign" data-pos="" data-def="n. 战役, 运动, 竞选运动
+vi. 参加运动, 作战">campaign</button> <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> won the backing of <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> <button class="vocab-word" type="button" data-word="prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">prime</button> ministers, <button class="vocab-word" type="button" data-word="several" data-pos="" data-def="a. 几个的, 一些的, 各自的
+pron. 几个">several</button> MPs, influential figures, <button class="vocab-word" type="button" data-word="mental" data-pos="" data-def="a. 心智的, 精神病的, 心理的, 颏的
+n. 精神病患者">mental</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> advocates, and <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> safety experts.
+The government in <button class="vocab-word" type="button" data-word="September" data-pos="" data-def="n. 九月">September</button> said it had listened to the Australians <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> had backed Contos&#x27;s <button class="vocab-word" type="button" data-word="campaign" data-pos="" data-def="n. 战役, 运动, 竞选运动
+vi. 参加运动, 作战">campaign</button>, and announced a <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> of her proposal: forcing <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech to <button class="vocab-word" type="button" data-word="introduce" data-pos="" data-def="vt. 介绍, 引入, 采用, 输入
+ 引进, 输入, 介绍">introduce</button> an algorithm <button class="vocab-word" type="button" data-word="switch" data-pos="" data-def="n. 开关, 电闸, 转换, 软枝, 鞭子, 道岔
+vt. 转变, 切换, 摆动, 转换, 使转轨
+vi. 转换, 变换, 摆动
+ 开关; 翻转; 转移">switch</button> - but stopping <button class="vocab-word" type="button" data-word="short" data-pos="" data-def="a. 短的, 近的, 矮的, 短期的, 简短的, 少量的
+adv. 简短地, 突然
+n. 扼要, 短片, 缺乏
+vt. 故意少给, 使短路">short</button> of requiring it be automatically <button class="vocab-word" type="button" data-word="set" data-pos="" data-def="n. 日落, 同伙, 组合, 集合, 装置
+vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整
+vi. 日落, 凝固, 定型, 搁住, 结果, 适合
+a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的
+ 设置; DOS内部命令:改变或显示分配给环境变量的值">set</button> to <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button>.
+&quot;This is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> giving government <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button>, it is <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> giving <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button>,&quot; Albanese said.
+&quot;If <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> to <button class="vocab-word" type="button" data-word="doom" data-pos="" data-def="n. 厄运, 不幸, 法律, 宣告, 判决, 死亡
+vt. 命中注定, 判决">doom</button> scroll… that&#x27;s <button class="vocab-word" type="button" data-word="fine" data-pos="" data-def="n. 罚款, 罚金, 晴天, 精细
+a. 好的, 晴朗的, 健康的, 细小的, 精细的
+vt. 罚款, 精炼, 澄清
+vi. 变清, 变细
+adv. 很好
+ 精细">fine</button>, that&#x27;s <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to them.&quot;
+Meta hooked children on Facebook and Instagram, US <button class="vocab-word" type="button" data-word="court" data-pos="" data-def="n. 法院, 庭院, 奉承
+vt. 献殷勤, 追求, 招致
+vi. 求爱">court</button> hears
+Social media is &#x27;deliberately&#x27; addictive
+Communications <button class="vocab-word" type="button" data-word="Minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">Minister</button> Anika Wells (<button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button> podium) and Australian PM Anthony Albanese (<button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> podium) announcing the upcoming Digital <button class="vocab-word" type="button" data-word="Duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">Duty</button> of <button class="vocab-word" type="button" data-word="Care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">Care</button> <button class="vocab-word" type="button" data-word="bill" data-pos="" data-def="n. 帐单, 清单, 钞票, 鸟嘴, 广告, 法案, 票据
+vt. 开帐单, (用招贴)宣布">bill</button>
+The <button class="vocab-word" type="button" data-word="policy" data-pos="" data-def="n. 政策, 方针, 策略, 保险单
+ 凭单, 保险单">policy</button> is <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> of the government&#x27;s Digital <button class="vocab-word" type="button" data-word="Duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">Duty</button> of <button class="vocab-word" type="button" data-word="Care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">Care</button> <button class="vocab-word" type="button" data-word="bill" data-pos="" data-def="n. 帐单, 清单, 钞票, 鸟嘴, 广告, 法案, 票据
+vt. 开帐单, (用招贴)宣布">bill</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> would <button class="vocab-word" type="button" data-word="require" data-pos="" data-def="vt. 需要, 命令, 要求
+ 需要, 要求, 命令">require</button> <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> services – social media firms, gaming sites, chatbots and <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> – to &quot;<button class="vocab-word" type="button" data-word="ensure" data-pos="" data-def="vt. 确定, 保证, 担保, 保护
+ 确保, 确定">ensure</button>, so <button class="vocab-word" type="button" data-word="far" data-pos="" data-def="a. 远的, 久远的, 遥远的
+adv. 甚远地, 很, 到很深的程度, 到很远的距离">far</button> as is reasonably practicable, a <button class="vocab-word" type="button" data-word="safe" data-pos="" data-def="n. 保险箱, 冷藏室
+a. 安全的, 可靠的, 平安的, 稳健的, 有把握的">safe</button> <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> <button class="vocab-word" type="button" data-word="environment" data-pos="" data-def="n. 环境, 外界, 围绕
+ 环境">environment</button>&quot;.
+Children must be protected from &quot;harmful&quot; <button class="vocab-word" type="button" data-word="material" data-pos="" data-def="n. 材料, 物资, 素材, 布料, 资料
+a. 物质的, 肉体的, 重要的">material</button> and <button class="vocab-word" type="button" data-word="design" data-pos="" data-def="n. 设计, 图样, 方案, 企图
+v. 设计, 计划">design</button> features – for <button class="vocab-word" type="button" data-word="example" data-pos="" data-def="n. 例子, 样本, 实例
+ 实例">example</button>, pornography and <button class="vocab-word" type="button" data-word="material" data-pos="" data-def="n. 材料, 物资, 素材, 布料, 资料
+a. 物质的, 肉体的, 重要的">material</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> encourages eating disorders or harmful attitudes <button class="vocab-word" type="button" data-word="towards" data-pos="" data-def="prep. 向, 对于, 为了">towards</button> women – and adults must be protected from &quot;seriously harmful&quot; <button class="vocab-word" type="button" data-word="material" data-pos="" data-def="n. 材料, 物资, 素材, 布料, 资料
+a. 物质的, 肉体的, 重要的">material</button> and <button class="vocab-word" type="button" data-word="conduct" data-pos="" data-def="n. 行为, 举动, 指导
+vt. 为人, 指挥, 管理, 实施
+vi. 领导, 传导, 指挥">conduct</button>, a <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> narrower <button class="vocab-word" type="button" data-word="list" data-pos="" data-def="n. 目录, 名单, 明细表, 布条, 条纹, 列表, 序列, 数据清单
+vt. 列出, 列于表上, 记入名单内, 装布条
+vi. 列于表上
+ 列表, 序列, 数据清单">list</button> of <button class="vocab-word" type="button" data-word="illegal" data-pos="" data-def="a. 违法的, 不合规定的
+ 非法的, 犯规的">illegal</button> <button class="vocab-word" type="button" data-word="content" data-pos="" data-def="n. 内容, 满足, 意义, 要旨
+a. 满足的, 满意的
+vt. 使...满足, 使...安心
+ 内容">content</button>. Breaches of the <button class="vocab-word" type="button" data-word="law" data-pos="" data-def="n. 法律, 法则, 定律, 法律的制约, 法学, 司法界, 诉讼
+v. 起诉">law</button> could <button class="vocab-word" type="button" data-word="attract" data-pos="" data-def="vt. 吸引, 诱惑
+vi. 有吸引力">attract</button> fines of <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> A$100m (£52m, $70m).
+&quot;The digital <button class="vocab-word" type="button" data-word="duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">duty</button> of <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> answers a <button class="vocab-word" type="button" data-word="lot" data-pos="" data-def="n. 运气, 签, 抽签, 份额, 许多, 一堆
+vt. 划分
+vi. 抽签, 抓阄">lot</button> of the &#x27;<button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> abouts&#x27; of the social media <button class="vocab-word" type="button" data-word="minimum" data-pos="" data-def="a. 最小的, 最低的
+n. 最小值
+ 最小值">minimum</button> <button class="vocab-word" type="button" data-word="age" data-pos="" data-def="n. 年龄, 老年, 成年, 寿命, 时代, 时期
+v. 变老, 成熟">age</button> <button class="vocab-word" type="button" data-word="law" data-pos="" data-def="n. 法律, 法则, 定律, 法律的制约, 法学, 司法界, 诉讼
+v. 起诉">law</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> it&#x27;s <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> broader; it captures <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> services and it shifts the onus of responsibility from the shoulders of victims onto the shoulders of the <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech operators <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="seek" data-pos="" data-def="vt. 寻求, 寻找, 探索, 追求, 搜索, 请求
+vi. 寻找, 搜索
+ 查找">seek</button> to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> Australian users,&quot; Communications <button class="vocab-word" type="button" data-word="Minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">Minister</button> Anika Wells told the BBC.
+There&#x27;s been a muted response from <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech. Meta, <button class="vocab-word" type="button" data-word="Snap" data-pos="" data-def="vt. 使突然中断, 猛咬, 争夺, 拉断, 使有啪啪声, 厉声说, 突然射击, 用快照拍摄
+vi. 咬, 扑, 抓, 折断, 劈啪地响, 厉声说, 砰然关上
+n. 猛咬, 猛扑, 劈啪声, 申斥, 快照, 活力, 一般时期的寒冷天气, 揿钮
+a. 突然的, 装搭扣的
+adv. 猛地
+ 子网访问协议">Snap</button>, TikTok, X and Google, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> owns YouTube, have <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> declined BBC requests for <button class="vocab-word" type="button" data-word="comment" data-pos="" data-def="n. 注解, 批评, 评论, 备注
+vi. 评论, 注解
+ 备注">comment</button>, and have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> made <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> statements <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the legislation.
+In the days <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the announcement, Instagram <button class="vocab-word" type="button" data-word="boss" data-pos="" data-def="n. 老板, 上司, 岩瘤, 浮雕, 母牛
+vt. 指挥, 控制, 浮雕">boss</button> Adam Mosseri argued non-algorithmic feeds would <button class="vocab-word" type="button" data-word="mean" data-pos="" data-def="a. 低劣的, 卑贱的, 简陋的, 吝啬的, 惭愧的, 平均的, 中间的, 普通的
+vt. 意谓, 想要, 意欲, 预定
+vi. 用意, 有意义
+n. 平均数, 中间, 中庸">mean</button> users saw fewer posts from friends, and said he didn&#x27;t <button class="vocab-word" type="button" data-word="believe" data-pos="" data-def="v. 相信">believe</button> his <button class="vocab-word" type="button" data-word="app" data-pos="" data-def="应用, 应用程序; 相联并行处理器">app</button> was addictive – <button class="vocab-word" type="button" data-word="although" data-pos="" data-def="conj. 虽然, 尽管">although</button> a US <button class="vocab-word" type="button" data-word="jury" data-pos="" data-def="n. 陪审团, 评判委员会
+a. 应急的">jury</button> recently ruled <button class="vocab-word" type="button" data-word="otherwise" data-pos="" data-def="adv. 否则, 不同地, 别的方式">otherwise</button> .
+&quot;I <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> we conflate the <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> we colloquially <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> the <button class="vocab-word" type="button" data-word="word" data-pos="" data-def="n. 话, 消息, 词, 诺言, 命令
+vt. 用言辞表达
+ 字">word</button> &#x27;addicted&#x27; – <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button>, &#x27;I&#x27;m addicted to this <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button>, and I&#x27;m binge-watching it&#x27; – and clinical addiction,&quot; he told a <button class="vocab-word" type="button" data-word="press" data-pos="" data-def="n. 压, 揿, 按, 人群, 印刷机, 压力, 出版社, 记者, 报刊, 新闻舆论, 紧迫
+vt. 压, 压榨, 紧抱, 逼迫, 推进, 强迫征募, 催逼
+vi. 压, 重压, 催促, 拥挤, 奋力前进, 受压">press</button> briefing in Sydney.
+Instagram <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> Adam Mosseri argues recommender algorithms are essential to user enjoyment
+Right-wing parties in Australia – and the Trump administration – have said the algorithms proposal and the broader <button class="vocab-word" type="button" data-word="bill" data-pos="" data-def="n. 帐单, 清单, 钞票, 鸟嘴, 广告, 法案, 票据
+vt. 开帐单, (用招贴)宣布">bill</button> <button class="vocab-word" type="button" data-word="both" data-pos="" data-def="a. 两者的
+adv. 两者都
+pron. 两者">both</button> <button class="vocab-word" type="button" data-word="risk" data-pos="" data-def="n. 冒险, 危险, 保险额
+vt. 冒...的危险, 冒险干">risk</button> forcing over-moderation and censorship.</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">有害算法令人无法自拔，如今 Australia 想要一个</h3>
+<div class="article-content-zh">该视频无法播放
+观看：许多社交平台已经推出了“仅关注”信息流——以下是其运作方式
+警告：本文包含关于患有饮食失调经历的叙述
+瓦尔莎·亚吉曼（Varsha Yajman）在13岁开始接触社交媒体时，就已经对自己的外表感到十分在意。
+无穷无尽、许下不切实际承诺的健身视频充斥着她的信息流。隔着屏幕，素未谋面的女孩们力劝她参与危险的卡路里挑战。还有一些人以一种扭曲的竞争形式，在个人主页上自豪地展示自己的身高和体重——甚至是她们被送进医院的次数。
+每天晚上入睡前，瓦尔莎都会看着网络上的陌生人记录他们当天吃下的食物。
+“我当时觉得，‘我不需要吃东西。我只要看别人吃就行了’，”瓦尔莎告诉BBC。
+“我发现自己深陷在这些极深的兔子洞里……就像无论你怎么努力想要逃出来，都无济于事。”
+现年24岁且正在从厌食症中康复的瓦尔莎表示，尽管开启了所有的安全设置，并设定了详尽的屏蔽词列表，社交媒体依然会向她推送减肥内容。
+瓦尔莎·亚吉曼表示社交媒体加剧了她的饮食失调
+澳大利亚政府表示，本周向议会提交的一套打击大型科技公司的新法案，正是为了保护像她这样的人。
+超过15,000人在她的请愿书上签名，该活动还赢得了两位前总理、多名议员、具影响力人士、心理健康倡导者以及网络安全专家的支持。
+政府在9月表示已听取支持康托斯活动的澳大利亚民众的意见，并公布了其提案的一个版本：强制大型科技公司推出算法开关——但并未强制要求其自动设为关闭。
+“这并不是要给政府控制权，而是要给人民控制权，”阿尔巴尼斯说。
+“如果人们想刷负面内容……没关系，这由他们自己决定。”
+美国法庭获悉，Meta让儿童沉迷于Facebook和Instagram
+社交媒体是“故意”让人上瘾的
+通讯部长阿妮卡·韦尔斯（左讲台）与澳大利亚总理安东尼·阿尔巴尼斯（右讲台）宣布即将出台的《数字注意义务》法案
+该政策是政府《数字注意义务》法案的一部分，该法案将要求在线服务——社交媒体公司、游戏网站、聊天机器人等——“在合理可行的范围内确保安全的网络环境”。
+儿童必须受到保护，免受“有害”材料和设计特征的影响——例如色情内容以及鼓励饮食失调或对女性抱有有害态度的材料——而成年人必须受到保护，免受“严重有害”材料和行为的影响，后者的非法内容清单范围要窄得多。违反该法律可能面临高达1亿澳元（合5200万英镑，7000万美元）的罚款。
+“数字注意义务回应了针对社交媒体最低年龄法所提出的诸多‘那……怎么办’的问题，因为它的涵盖面要广泛得多；它覆盖了所有在线服务，并将责任负担从受害者身上转移到了那些试图从澳大利亚用户身上牟利的大型科技运营商身上，”通信部长阿妮卡·韦尔斯对BBC表示。
+大型科技公司反应平淡。Meta、Snap、TikTok、X以及YouTube的母公司谷歌均拒绝了BBC的置评请求，也未就该立法发表公开声明。
+在该消息宣布后的几天里，Instagram负责人亚当·莫塞里辩称，不采用算法的信息流将意味着用户看到的来自好友的帖子会减少，并表示他不认为自己的应用程序具有成瘾性——尽管美国一个陪审团最近作出了相反的裁决。
+“我认为我们把日常口语中‘上瘾’的用法——比如‘我对这部剧上瘾了，我正在疯狂刷剧’——与临床成瘾混为一谈了，”他在悉尼的一场媒体简报会上表示。
+Instagram主管亚当·莫塞里辩称推荐算法对提升用户体验至关重要
+澳大利亚的右翼政党——以及特朗普政府——表示，针对算法的提议以及这项更广泛的法案，都存在迫使出现过度内容审核和审查的风险。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">aggravate — v. 加重，使恶化</span>
+<span class="vocab-item">impose — v. 施加</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">有害算法令人无法自拔，如今 Australia 想要一个</h3>
+<div class="article-content-zh">该视频无法播放
+观看：许多社交平台已经推出了“仅关注”信息流——以下是其运作方式
+警告：本文包含关于患有饮食失调经历的叙述
+瓦尔莎·亚吉曼（Varsha Yajman）在13岁开始接触社交媒体时，就已经对自己的外表感到十分在意。
+无穷无尽、许下不切实际承诺的健身视频充斥着她的信息流。隔着屏幕，素未谋面的女孩们力劝她参与危险的卡路里挑战。还有一些人以一种扭曲的竞争形式，在个人主页上自豪地展示自己的身高和体重——甚至是她们被送进医院的次数。
+每天晚上入睡前，瓦尔莎都会看着网络上的陌生人记录他们当天吃下的食物。
+“我当时觉得，‘我不需要吃东西。我只要看别人吃就行了’，”瓦尔莎告诉BBC。
+“我发现自己深陷在这些极深的兔子洞里……就像无论你怎么努力想要逃出来，都无济于事。”
+现年24岁且正在从厌食症中康复的瓦尔莎表示，尽管开启了所有的安全设置，并设定了详尽的屏蔽词列表，社交媒体依然会向她推送减肥内容。
+瓦尔莎·亚吉曼表示社交媒体加剧了她的饮食失调
+澳大利亚政府表示，本周向议会提交的一套打击大型科技公司的新法案，正是为了保护像她这样的人。
+超过15,000人在她的请愿书上签名，该活动还赢得了两位前总理、多名议员、具影响力人士、心理健康倡导者以及网络安全专家的支持。
+政府在9月表示已听取支持康托斯活动的澳大利亚民众的意见，并公布了其提案的一个版本：强制大型科技公司推出算法开关——但并未强制要求其自动设为关闭。
+“这并不是要给政府控制权，而是要给人民控制权，”阿尔巴尼斯说。
+“如果人们想刷负面内容……没关系，这由他们自己决定。”
+美国法庭获悉，Meta让儿童沉迷于Facebook和Instagram
+社交媒体是“故意”让人上瘾的
+通讯部长阿妮卡·韦尔斯（左讲台）与澳大利亚总理安东尼·阿尔巴尼斯（右讲台）宣布即将出台的《数字注意义务》法案
+该政策是政府《数字注意义务》法案的一部分，该法案将要求在线服务——社交媒体公司、游戏网站、聊天机器人等——“在合理可行的范围内确保安全的网络环境”。
+儿童必须受到保护，免受“有害”材料和设计特征的影响——例如色情内容以及鼓励饮食失调或对女性抱有有害态度的材料——而成年人必须受到保护，免受“严重有害”材料和行为的影响，后者的非法内容清单范围要窄得多。违反该法律可能面临高达1亿澳元（合5200万英镑，7000万美元）的罚款。
+“数字注意义务回应了针对社交媒体最低年龄法所提出的诸多‘那……怎么办’的问题，因为它的涵盖面要广泛得多；它覆盖了所有在线服务，并将责任负担从受害者身上转移到了那些试图从澳大利亚用户身上牟利的大型科技运营商身上，”通信部长阿妮卡·韦尔斯对BBC表示。
+大型科技公司反应平淡。Meta、Snap、TikTok、X以及YouTube的母公司谷歌均拒绝了BBC的置评请求，也未就该立法发表公开声明。
+在该消息宣布后的几天里，Instagram负责人亚当·莫塞里辩称，不采用算法的信息流将意味着用户看到的来自好友的帖子会减少，并表示他不认为自己的应用程序具有成瘾性——尽管美国一个陪审团最近作出了相反的裁决。
+“我认为我们把日常口语中‘上瘾’的用法——比如‘我对这部剧上瘾了，我正在疯狂刷剧’——与临床成瘾混为一谈了，”他在悉尼的一场媒体简报会上表示。
+Instagram主管亚当·莫塞里辩称推荐算法对提升用户体验至关重要
+澳大利亚的右翼政党——以及特朗普政府——表示，针对算法的提议以及这项更广泛的法案，都存在迫使出现过度内容审核和审查的风险。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">aggravate — v. 加重，使恶化</span>
+<span class="vocab-item">impose — v. 施加</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-17 08:09</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
