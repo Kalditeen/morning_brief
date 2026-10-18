@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-15",
-      "cat": "guardian-science",
-      "title": "Stop making sense: focus on sounds to help learn a language, study suggests"
-    },
-    {
-      "date": "2026-10-15",
-      "cat": "bbc-business",
-      "title": "Drop-off charges at UK airports to be reviewed after sharp increase"
-    },
-    {
       "date": "2026-10-16",
       "cat": "guardian-business",
       "title": "Key US voters say economy is getting worse ahead of midterms, exclusive poll finds"
@@ -39,6 +29,16 @@
       "date": "2026-10-18",
       "cat": "bbc-env",
       "title": "Brazil sees record fall in Amazon deforestation as key election looms"
+    },
+    {
+      "date": "2026-10-19",
+      "cat": "guardian",
+      "title": "Hilarious quips and ‘100,000-volt’ energy: the hypemen (and women) redefining Afrobeats music"
+    },
+    {
+      "date": "2026-10-19",
+      "cat": "bbc-tech",
+      "title": "Don't fall for this - how to protect yourself from AI scams"
     }
   ]
 }

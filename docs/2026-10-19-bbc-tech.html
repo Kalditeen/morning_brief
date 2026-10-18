@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月19日 周一 · BBC News (科技)">
+<meta property="og:description" content="Don&#x27;t fall for this - how to protect yourself from AI scams">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年10月19日 周一</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月19日 周一 · BBC News (科技)</p>
+<a class="back-link" href="2026-10-19.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Don&#x27;t <button class="vocab-word" type="button" data-word="fall" data-pos="" data-def="n. 落下, 瀑布, 采伐量, 下降, 落差, 降低, 堕落, 秋天
+vi. 倒下, 落下, 来临, 失守, 阵亡, 下跌, 减弱, 倾斜, 垮台, 轮到, 变成, 降低
+a. 秋天的">fall</button> for this - <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> to <button class="vocab-word" type="button" data-word="protect" data-pos="" data-def="vt. 防卫, 保护, 警戒
+ 庇护, 保护, 警戒">protect</button> yourself from AI scams</h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8f70/live/9a6f8400-c98c-11f1-adc3-01d8629f0470.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Be careful <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> you <button class="vocab-word" type="button" data-word="buy" data-pos="" data-def="vt. 买, 获得
+vi. 买
+n. 购买, 买得的东西">buy</button> from, shoppers are being warned as criminals <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> AI to supercharge scams.
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> fraudsters have made websites for <button class="vocab-word" type="button" data-word="fake" data-pos="" data-def="n. 假货, 欺骗, 诡计
+a. 假的
+vt. 假造, 仿造
+vi. 伪装">fake</button> retailers that <button class="vocab-word" type="button" data-word="claim" data-pos="" data-def="n. 要求, 要求权, 断言, 权利
+vt. 要求, 认领, 主张
+vi. 提出要求, 主张, 断言">claim</button> to be family-owned firms selling <button class="vocab-word" type="button" data-word="quality" data-pos="" data-def="n. 品质, 特性, 才能, 质量
+a. 优质的
+ 品质">quality</button> UK-made products. Images may <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button> a UK <button class="vocab-word" type="button" data-word="High" data-pos="" data-def="n. 高度, 高处
+a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的
+adv. 高度地, 奢侈地">High</button> <button class="vocab-word" type="button" data-word="Street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">Street</button> with <button class="vocab-word" type="button" data-word="Union" data-pos="" data-def="n. 联盟, 联合, 结合, 工会
+ 联合; 联管节; 活接头">Union</button> <button class="vocab-word" type="button" data-word="Jack" data-pos="" data-def="n. 插座, 千斤顶, 男人
+vt. 抬起, 提醒, 扛举, 增加, 提高, 放弃
+a. 雄的
+ 插座">Jack</button> flags in <button class="vocab-word" type="button" data-word="shot" data-pos="" data-def="n. 发射, 炮弹, 射击, 射手, 投篮, 射门, 子弹, 射程, 拍摄, 注射
+vt. 装弹, 使成颗粒状
+a. 杂色的, 交织着的, 渗透的, 点焊的, 破旧的
+shoot的过去式和过去分词">shot</button>.
+If you <button class="vocab-word" type="button" data-word="order" data-pos="" data-def="n. 次序, 规则, 命令
+vi. 命令, 定货
+vt. 整理, 命令, 定购
+n. 顺序, 阶数
+ 顺序, 阶数">order</button> you&#x27;re likely to <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> a <button class="vocab-word" type="button" data-word="product" data-pos="" data-def="n. 产品, 结果, 乘积
+ 生产物">product</button> <button class="vocab-word" type="button" data-word="either" data-pos="" data-def="a. (两者之中)任一的, (两者之中)各一的
+pron. (两者之中)任一
+conj. 或, 要么">either</button> <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> arrives, or is a <button class="vocab-word" type="button" data-word="cheap" data-pos="" data-def="a. 便宜的, 不值钱的, 可鄙的
+adv. 便宜地">cheap</button>, mass-produced <button class="vocab-word" type="button" data-word="item" data-pos="" data-def="n. 项目, 条款, 一则, 项
+ 项">item</button> from a <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as <button class="vocab-word" type="button" data-word="China" data-pos="" data-def="n. 中国, 瓷器
+a. 中国的">China</button>, trading standards officers <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button>.
+AI-generated images <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> this, as <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> as <button class="vocab-word" type="button" data-word="voice" data-pos="" data-def="n. 声音, 嗓音, 嗓子, 愿望, 发言权, 表达, 喉舌, 语态
+vt. 表达, 吐露, 调音">voice</button> cloning and deepfake videos are increasingly being <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to <button class="vocab-word" type="button" data-word="trick" data-pos="" data-def="n. 诡计, 欺诈, 谋略, 恶作剧, 习惯, 决窍
+vt. 愚弄, 欺骗, 装饰
+vi. 哄骗, 戏弄
+a. 有决窍的, 特技的, 欺诈的, 漂亮的, 靠不住的">trick</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of their <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button>, according to National Trading Standards.
+For the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button>, it has drawn <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> an AI scam watchlist , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> highlighting <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of the tools and techniques criminals are using.
+Cloned or <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> websites that <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> polished and professional in <button class="vocab-word" type="button" data-word="rapid" data-pos="" data-def="a. 迅速的, 飞快的, 急促的, 陡的
+n. 急流">rapid</button> <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> and at a <button class="vocab-word" type="button" data-word="low" data-pos="" data-def="n. 低点, 低价, 低, 牛叫声
+a. 低的, 消沉的, 低等的, 浅的, 卑贱的
+adv. 低下地, 谦卑地, 低
+vi. 牛叫">low</button> <button class="vocab-word" type="button" data-word="cost" data-pos="" data-def="n. 代价, 价值, 费用
+vi. 花费
+vt. 使失去, 值, 使花费">cost</button>
+<button class="vocab-word" type="button" data-word="Romance" data-pos="" data-def="n. 冒险故事, 浪漫史, 传奇文学
+vi. 写传奇, 作空想, 虚构">Romance</button> scams in <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> AI is <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to <button class="vocab-word" type="button" data-word="remember" data-pos="" data-def="vt. 记得, 回忆起, 记住, 铭记, 纪念
+vi. 记得">remember</button> victims&#x27; personal details and <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> conversations going over weeks or months
+AI-generated deepfake videos and voice-cloned <button class="vocab-word" type="button" data-word="audio" data-pos="" data-def="a. 音频的, 声音的
+ 声频">audio</button> is <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to impersonate <button class="vocab-word" type="button" data-word="family" data-pos="" data-def="n. 家庭, 家人, 族
+a. 家庭的">family</button> members or <button class="vocab-word" type="button" data-word="close" data-pos="" data-def="n. 结束, 完结
+a. 靠近的, 亲近的, 亲密的, 严密的, 关闭的, 狭窄的, 秘密的
+vt. 关, 结束, 使靠近, 封闭, 使接近
+vi. 关闭, 结束, 靠近
+adv. 接近地, 紧密地
+ 关闭">close</button> friends asking for <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button> in an &quot;<button class="vocab-word" type="button" data-word="emergency" data-pos="" data-def="n. 紧急状况, 紧急事件, 紧急需要
+ 紧急情况">emergency</button>&quot;
+Error-free, personalised phishing emails, <button class="vocab-word" type="button" data-word="text" data-pos="" data-def="n. 文本, 正文, 课文, 主题, 圣经文句, 乐谱
+ 电文; 文本; 正文">text</button> messages and social media posts can be generated by AI on a <button class="vocab-word" type="button" data-word="huge" data-pos="" data-def="a. 极大的, 巨大的, 无限的">huge</button> <button class="vocab-word" type="button" data-word="scale" data-pos="" data-def="n. 刻度, 衡量, 比例, 比例尺, 数值范围, 等级, 规模, 天平, 秤, 鳞, 积垢
+vt. 依比例决定, 攀登, 测量, 绘制, 刮鳞, 使生垢, 过秤
+vi. 剥落, 生水垢, 重量为, 攀登, 衡量
+ 刻度">scale</button>
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> of the <button class="vocab-word" type="button" data-word="old" data-pos="" data-def="n. 以前, 往昔
+a. 老的, 旧的, 古老的, 年长的, 老练的">old</button> scam-avoidance techniques may <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> be <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> successful <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to the benefits of AI.
+Typos or grammatical errors can <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> longer be relied on to <button class="vocab-word" type="button" data-word="spot" data-pos="" data-def="n. 污点, 地点, 斑点, 点, 娱乐场所, 处境, 少量
+a. 当场的, 现场的, 现货买卖的, 现金交易的, 抽样的
+vt. 点缀, 玷污, 认出, 准确定...的位, 用灯光照射
+vi. 玷污, (从空中)侦察敌方目标">spot</button> scams, says consumer <button class="vocab-word" type="button" data-word="group" data-pos="" data-def="n. 团体, 组, 团, 群
+v. 聚合, 成群
+ 创建组; 组, 用户组">group</button> <button class="vocab-word" type="button" data-word="Which" data-pos="" data-def="pron. 哪一个, 那一个">Which</button>?.
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> of the ways to <button class="vocab-word" type="button" data-word="protect" data-pos="" data-def="vt. 防卫, 保护, 警戒
+ 庇护, 保护, 警戒">protect</button> yourself, according to trading standards, <button class="vocab-word" type="button" data-word="include" data-pos="" data-def="vt. 包括, 把...算入, 包住
+ DOS内部命令:在CONFIG.SYS文件的一个配置块中包含另一配置块的内容">include</button>:
+<button class="vocab-word" type="button" data-word="Never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">Never</button> sending <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button>, <button class="vocab-word" type="button" data-word="gift" data-pos="" data-def="n. 礼物, 赠予, 天才
+vt. 赋予">gift</button> cards or personal or financial information to <button class="vocab-word" type="button" data-word="someone" data-pos="" data-def="pron. 有人, 某人">someone</button> you have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> met in <button class="vocab-word" type="button" data-word="person" data-pos="" data-def="n. 人, 人身, 人称
+ 人, 法人, 人身">person</button>
+Doing your <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> - <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as checking <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> a shop&#x27;s <button class="vocab-word" type="button" data-word="address" data-pos="" data-def="n. 住址, 演说, 举止, 灵巧, 求爱
+vt. 发表(演说或讲话), 对付, 写地址
+ 地址, 寻址">address</button> is <button class="vocab-word" type="button" data-word="real" data-pos="" data-def="a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的
+n. 实数, 现实
+adv. 真正地">real</button>, using the Financial <button class="vocab-word" type="button" data-word="Conduct" data-pos="" data-def="n. 行为, 举动, 指导
+vt. 为人, 指挥, 管理, 实施
+vi. 领导, 传导, 指挥">Conduct</button> Authority&#x27;s <button class="vocab-word" type="button" data-word="Firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">Firm</button> Checker , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> , to <button class="vocab-word" type="button" data-word="ensure" data-pos="" data-def="vt. 确定, 保证, 担保, 保护
+ 确保, 确定">ensure</button> a <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> is authorised to <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> financial <button class="vocab-word" type="button" data-word="advice" data-pos="" data-def="n. 忠告, 劝告, 意见, 报道, 通知
+ 通知书, 通知, 建议">advice</button>, and contacting a <button class="vocab-word" type="button" data-word="business" data-pos="" data-def="n. 生意, 事情, 业务, 商业, 商行, 职责
+ 企业, 商业, 营业">business</button> directly to <button class="vocab-word" type="button" data-word="check" data-pos="" data-def="n. 检查, 支票, 阻止物, 寄物牌, 象棋中将军
+vt. 检查, 阻止, 核对, 寄存, 托运
+vi. 逐项相符, 开支票
+ 复选">check</button> <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> a <button class="vocab-word" type="button" data-word="job" data-pos="" data-def="n. 工作, 零活, 职业, 事情
+vi. 做零工, 打杂, 做股票经纪, 假公济私
+vt. 代客买卖, 批发, 承包, 欺骗
+ 作业">job</button> advert is <button class="vocab-word" type="button" data-word="real" data-pos="" data-def="a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的
+n. 实数, 现实
+adv. 真正地">real</button>
+<button class="vocab-word" type="button" data-word="Not" data-pos="" data-def="adv. 不, 非, 未
+ 非">Not</button> assuming <button class="vocab-word" type="button" data-word="someone" data-pos="" data-def="pron. 有人, 某人">someone</button> is <button class="vocab-word" type="button" data-word="genuine" data-pos="" data-def="a. 真正的, 真实的, 诚恳的
+ 真性的">genuine</button> <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> you&#x27;ve heard their <button class="vocab-word" type="button" data-word="voice" data-pos="" data-def="n. 声音, 嗓音, 嗓子, 愿望, 发言权, 表达, 喉舌, 语态
+vt. 表达, 吐露, 调音">voice</button> or seen them on a <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> <button class="vocab-word" type="button" data-word="call" data-pos="" data-def="n. 呼叫, 访问, 打电话, 号召, 召集, 要求
+vt. 呼叫, 召集, 打电话
+vi. 叫喊, 访问, 叫牌
+ 调用; 呼叫; DOS内部命令:在批处理文件中调用另一个批处理文件">call</button>
+In <button class="vocab-word" type="button" data-word="general" data-pos="" data-def="n. 一般, 将军, 大体
+a. 全面的, 大体的, 总的, 一般的, 普遍的
+n. 常规
+ 常规">general</button>, they <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> and <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> paying, sharing personal information or taking action. You should be <button class="vocab-word" type="button" data-word="especially" data-pos="" data-def="adv. 尤其, 特别, 格外">especially</button> <button class="vocab-word" type="button" data-word="wary" data-pos="" data-def="a. 谨慎的, 小心的, 机警的, 周到的, 唯恐的">wary</button> of pressure or urgency <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> criminals <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> you to <button class="vocab-word" type="button" data-word="act" data-pos="" data-def="n. 行动, 行为, 幕, 法案
+vi. 行动, 表演, 假装, 见效, 表现, 担当
+vt. 扮演, 装作
+ 先进通信技术, 先进计算机工艺, 自动代码翻译技术">act</button> <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> you have <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> to <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button>.
+<button class="vocab-word" type="button" data-word="Fraud" data-pos="" data-def="n. 欺骗, 欺诈, 诡计, 骗子
+ 欺诈, 舞弊, 骗子">Fraud</button> and scams can be reported to <button class="vocab-word" type="button" data-word="Report" data-pos="" data-def="n. 报告, 报道, 传说, 案情报告, 爆炸声, 成绩单
+vt. 报告, 汇报, 转述, 报道, 揭发, 使报到
+vi. 报告, 写报道, 报到
+ 报告">Report</button> <button class="vocab-word" type="button" data-word="Fraud" data-pos="" data-def="n. 欺骗, 欺诈, 诡计, 骗子
+ 欺诈, 舞弊, 骗子">Fraud</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> or by <button class="vocab-word" type="button" data-word="calling" data-pos="" data-def="n. 职业, 行业, 呼唤, 召集
+ 呼叫">calling</button> on 0300 1232040, or you can <button class="vocab-word" type="button" data-word="call" data-pos="" data-def="n. 呼叫, 访问, 打电话, 号召, 召集, 要求
+vt. 呼叫, 召集, 打电话
+vi. 叫喊, 访问, 叫牌
+ 调用; 呼叫; DOS内部命令:在批处理文件中调用另一个批处理文件">call</button> the Citizens <button class="vocab-word" type="button" data-word="Advice" data-pos="" data-def="n. 忠告, 劝告, 意见, 报道, 通知
+ 通知书, 通知, 建议">Advice</button> Consumer Helpline on 0808 223 1133 for <button class="vocab-word" type="button" data-word="advice" data-pos="" data-def="n. 忠告, 劝告, 意见, 报道, 通知
+ 通知书, 通知, 建议">advice</button>.
+Roofing scammers con homeowners <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of thousands of pounds
+&#x27;<button class="vocab-word" type="button" data-word="Add" data-pos="" data-def="vt. 增加, 添加, 附带说明, 计算...总和
+vi. 做加法, 积累而成, 增添
+ 加法">Add</button> me on WhatsApp&#x27; scam calls to be investigated
+Lego fraudster among <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> year&#x27;s <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> high-profile insurance scammers</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">别上当：如何防范 AI 诈骗</h3>
+<div class="article-content-zh">购物者受到警告，购物时务必谨慎选择渠道，因为犯罪分子正在利用人工智能强力升级诈骗手段。
+一些诈骗分子建立了虚假零售商网站，声称自己是销售优质英国制造产品的家族企业。图片中可能会出现带有英国国旗的英国商业街街景。
+商业准则官员表示，如果你下单，很可能会发现商品根本不会送达，或者收到的是来自中国等国家廉价、批量生产的商品。
+据英国国家商业准则局（National Trading Standards）称，此类人工智能生成的图像，以及声音克隆和深度伪造视频，正越来越多地被用于骗取人们的钱财。
+该机构首次制定了一份人工智能诈骗监视名单，外部链接，重点列出了犯罪分子正在使用的一些工具和手法。
+能在极短时间内以低成本制作出的克隆网站或全新网站，且外观看起来精致而专业
+在情感诈骗中，利用人工智能记住受害者的个人详细信息，并使对话持续数周或数月
+利用人工智能生成的深度伪造视频和声音克隆音频，冒充家人或密友以“紧急情况”为由索要钱财
+人工智能可以大规模生成毫无差错、个性化的钓鱼邮件、短信和社交媒体贴文
+由于人工智能带来的“优势”，一些旧有的防骗技巧现在效果可能大打折扣。
+消费者权益组织Which?表示，再也不能依靠错别字或语法错误来识别诈骗了。
+据贸易标准机构表示，保护自身安全的一些方法包括：
+绝不要向从未谋面的人转账、赠送礼品卡，或透露个人及财务信息
+做好调查——例如核实商店地址是否真实，使用英国金融行为监管局（Financial Conduct Authority）的企业核查工具（Firm Checker），外部链接，以确保公司获准提供财务咨询，以及直接联系企业核实招聘广告是否属实
+不要仅仅因为听过对方的声音或在视频通话中见过对方，就认定其真实可信
+总的来说，他们建议在付款、分享个人信息或采取行动之前三思而后行。你应该对施压或营造紧迫感格外警惕，因为犯罪分子希望你在来得及思考之前就采取行动。
+欺诈和诈骗行为可向“举报欺诈”（Report Fraud），外部链接，进行举报，或拨打电话 0300 1232040，您也可以拨打公民咨询消费者服务热线 0808 223 1133 寻求建议。
+屋顶维修诈骗犯骗取房主数千英镑
+“加我 WhatsApp”诈骗电话将接受调查
+乐高诈骗犯位列去年最受瞩目的保险诈骗犯之一</div>
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">别上当：如何防范 AI 诈骗</h3>
+<div class="article-content-zh">购物者受到警告，购物时务必谨慎选择渠道，因为犯罪分子正在利用人工智能强力升级诈骗手段。
+一些诈骗分子建立了虚假零售商网站，声称自己是销售优质英国制造产品的家族企业。图片中可能会出现带有英国国旗的英国商业街街景。
+商业准则官员表示，如果你下单，很可能会发现商品根本不会送达，或者收到的是来自中国等国家廉价、批量生产的商品。
+据英国国家商业准则局（National Trading Standards）称，此类人工智能生成的图像，以及声音克隆和深度伪造视频，正越来越多地被用于骗取人们的钱财。
+该机构首次制定了一份人工智能诈骗监视名单，外部链接，重点列出了犯罪分子正在使用的一些工具和手法。
+能在极短时间内以低成本制作出的克隆网站或全新网站，且外观看起来精致而专业
+在情感诈骗中，利用人工智能记住受害者的个人详细信息，并使对话持续数周或数月
+利用人工智能生成的深度伪造视频和声音克隆音频，冒充家人或密友以“紧急情况”为由索要钱财
+人工智能可以大规模生成毫无差错、个性化的钓鱼邮件、短信和社交媒体贴文
+由于人工智能带来的“优势”，一些旧有的防骗技巧现在效果可能大打折扣。
+消费者权益组织Which?表示，再也不能依靠错别字或语法错误来识别诈骗了。
+据贸易标准机构表示，保护自身安全的一些方法包括：
+绝不要向从未谋面的人转账、赠送礼品卡，或透露个人及财务信息
+做好调查——例如核实商店地址是否真实，使用英国金融行为监管局（Financial Conduct Authority）的企业核查工具（Firm Checker），外部链接，以确保公司获准提供财务咨询，以及直接联系企业核实招聘广告是否属实
+不要仅仅因为听过对方的声音或在视频通话中见过对方，就认定其真实可信
+总的来说，他们建议在付款、分享个人信息或采取行动之前三思而后行。你应该对施压或营造紧迫感格外警惕，因为犯罪分子希望你在来得及思考之前就采取行动。
+欺诈和诈骗行为可向“举报欺诈”（Report Fraud），外部链接，进行举报，或拨打电话 0300 1232040，您也可以拨打公民咨询消费者服务热线 0808 223 1133 寻求建议。
+屋顶维修诈骗犯骗取房主数千英镑
+“加我 WhatsApp”诈骗电话将接受调查
+乐高诈骗犯位列去年最受瞩目的保险诈骗犯之一</div>
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-19 07:54</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
