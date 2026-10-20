@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-16",
-      "cat": "guardian-business",
-      "title": "Key US voters say economy is getting worse ahead of midterms, exclusive poll finds"
-    },
-    {
-      "date": "2026-10-16",
-      "cat": "bbc-world",
-      "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume"
-    },
-    {
       "date": "2026-10-17",
       "cat": "guardian",
       "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story"
@@ -39,6 +29,16 @@
       "date": "2026-10-19",
       "cat": "bbc-tech",
       "title": "Don't fall for this - how to protect yourself from AI scams"
+    },
+    {
+      "date": "2026-10-20",
+      "cat": "guardian-tech",
+      "title": "AI firm Anthropic to commit 5% of shares to fund for ‘public good’"
+    },
+    {
+      "date": "2026-10-20",
+      "cat": "bbc-env",
+      "title": "Five ways El Niño is affecting the weather around the world"
     }
   ]
 }

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月20日 周二 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="AI firm Anthropic to commit 5% of shares to fund for ‘public good’">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年10月20日 周二</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月20日 周二 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-10-20.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">AI <button class="vocab-word" type="button" data-word="firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">firm</button> Anthropic to <button class="vocab-word" type="button" data-word="commit" data-pos="" data-def="vt. 委托(托付), 犯罪, 指派...作战, 使承担义务
+ 犯, 做, 把...交托给">commit</button> 5% of shares to <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> for ‘<button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button>’</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/2790d74966de266025ee31e1975f1f2ce9024d36/387_0_2915_2333/master/2915.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=16ba666f47897a1a79435713e2ff8af3" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Anthropic has said it will <button class="vocab-word" type="button" data-word="commit" data-pos="" data-def="vt. 委托(托付), 犯罪, 指派...作战, 使承担义务
+ 犯, 做, 把...交托给">commit</button> 5% of its shares to a <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> for the “<button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button>”, as the AI developer <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> the Claude chatbot seeks to <button class="vocab-word" type="button" data-word="bolster" data-pos="" data-def="n. 支持, 长枕
+vt. 支持, 支撑">bolster</button> its <button class="vocab-word" type="button" data-word="appeal" data-pos="" data-def="n. 恳求, 诉请, 上诉, 吸引力
+vi. 呼吁, 诉请, 要求, 上诉, 有吸引力
+vt. 将...上诉">appeal</button> <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> its <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button> listing.
+The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> announced it would <button class="vocab-word" type="button" data-word="commit" data-pos="" data-def="vt. 委托(托付), 犯罪, 指派...作战, 使承担义务
+ 犯, 做, 把...交托给">commit</button> the shares, <button class="vocab-word" type="button" data-word="worth" data-pos="" data-def="n. 价值, 财产
+a. 值...的, 值得的">worth</button> <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> $48bn (£36bn) at its latest valuation in May, <button class="vocab-word" type="button" data-word="subject" data-pos="" data-def="n. 科目, 主题, 臣民, 主语, 题目, (事物的)经受者, 学科, 受治疗者, 原因, 理由
+a. 服从的, 易患...的, 隶属的, 受支配的
+adv. 在...条件下
+vt. 使隶属, 使受到
+ 主题, 主体">subject</button> to shareholder approval. It will <button class="vocab-word" type="button" data-word="add" data-pos="" data-def="vt. 增加, 添加, 附带说明, 计算...总和
+vi. 做加法, 积累而成, 增添
+ 加法">add</button> a <button class="vocab-word" type="button" data-word="further" data-pos="" data-def="a. 更远的, 此外的, 更多的
+vt. 促进, 增进, 助长
+adv. 更进一步地, 更远地, 此外">further</button> 2% of its <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> to the <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> for <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> 50% <button class="vocab-word" type="button" data-word="increase" data-pos="" data-def="n. 增加, 增进, 利益
+vt. 增加, 加大
+vi. 增加, 繁殖">increase</button> in its <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button> <button class="vocab-word" type="button" data-word="above" data-pos="" data-def="prep. 在上方, 超出
+adv. 在上面
+a. 上述的, 上面的">above</button> an undisclosed baseline.
+The <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> will <button class="vocab-word" type="button" data-word="allow" data-pos="" data-def="vt. 允许, 同意给予, 承认
+vi. 容许, 猜想
+ 允许命令">allow</button> Anthropic to “<button class="vocab-word" type="button" data-word="explore" data-pos="" data-def="v. 探险, 探测, 探究">explore</button> <button class="vocab-word" type="button" data-word="large" data-pos="" data-def="a. 大的, 大量的, 宽大的, 广博的
+adv. 大大地, 夸大地">large</button> donations to traditional nonprofits or <button class="vocab-word" type="button" data-word="direct" data-pos="" data-def="a. 直接的, 坦白的
+vt. 指示, 指挥, 命令, 导演
+vi. 指导, 指挥
+adv. 直接地">direct</button> distributions to <button class="vocab-word" type="button" data-word="specific" data-pos="" data-def="n. 特效药, 特性
+a. 特殊的, 明确的, 具有特效的, 特定地, 具体地">specific</button> populations”, the <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> said.
+The <button class="vocab-word" type="button" data-word="move" data-pos="" data-def="n. 移动, 迁居, 步骤
+vt. 移动, 开动, 感动, 搬(家)
+vi. 移动, 离开, 运行, 迁移, 摇动, 搬家, 交往, 进展, 脱手
+ 移动; 传送; DOS外部命令:移动文件, 它可将文件移动到指定的地方">move</button> comes amid growing <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> nervousness <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> AI, from the <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button> to <button class="vocab-word" type="button" data-word="human" data-pos="" data-def="n. 人, 人类
+a. 人类的, 似人类的, 人性的, 有同情心的">human</button> <button class="vocab-word" type="button" data-word="labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">labour</button> to the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> on the <button class="vocab-word" type="button" data-word="environment" data-pos="" data-def="n. 环境, 外界, 围绕
+ 环境">environment</button> and its <button class="vocab-word" type="button" data-word="influence" data-pos="" data-def="n. 影响力, 权力, 势力
+vt. 影响, 改变">influence</button> on social behaviours.
+“AI may <button class="vocab-word" type="button" data-word="generate" data-pos="" data-def="vt. 产生, 发生, 导致
+ 产生">generate</button> <button class="vocab-word" type="button" data-word="enormous" data-pos="" data-def="a. 巨大的, 庞大的">enormous</button> economic <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button>, but it could <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button> instability for <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> workers,” Anthropic wrote in a blogpost.
+It said that <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> it had <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> committed $200m to addressing the <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button>, “<button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> the <button class="vocab-word" type="button" data-word="pace" data-pos="" data-def="n. 速度, 步调, 步法
+vi. 踱步, 缓慢走
+vt. 用步测, 踱步于">pace</button> of AI <button class="vocab-word" type="button" data-word="progress" data-pos="" data-def="n. 进步, 发展, 前进
+vi. 进步, 进行">progress</button>, bolder approaches may be needed. The <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> will have the versatility to <button class="vocab-word" type="button" data-word="pursue" data-pos="" data-def="vt. 追赶, 追踪, 追随, 追求, 实行, 继续, 从事
+vi. 追赶, 继续">pursue</button> them.”
+The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is preparing to <button class="vocab-word" type="button" data-word="list" data-pos="" data-def="n. 目录, 名单, 明细表, 布条, 条纹, 列表, 序列, 数据清单
+vt. 列出, 列于表上, 记入名单内, 装布条
+vi. 列于表上
+ 列表, 序列, 数据清单">list</button> on the <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button>, has called for a slowdown in breakneck development of AI, a warning later echoed by rivals <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as OpenAI.
+Anthropic was valued at $965bn in May <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> it raised $65bn in a funding <button class="vocab-word" type="button" data-word="round" data-pos="" data-def="n. 圆, 圆形物, 巡回, 循环, 一轮, 一回合, 一局, 范围, 轮唱
+a. 圆的, 球形的, 丰满的, 肥胖的, 完全的, 大概的, 完美的, 圆润的
+prep. 围着, 附近, 绕过, 在...周围
+adv. 围绕着, 在周围, 迂回地, 挨个, 朝反方向
+vt. 弄圆, 使成圆形, 绕行, 完成, 围捕, 把...四舍五入
+vi. 变圆, 发胖, 环行, 拐弯, 进展">round</button>. The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> is reportedly considering a $1.5tn valuation <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> it floats on the <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button>, with an IPO planned for <button class="vocab-word" type="button" data-word="November" data-pos="" data-def="n. 十一月">November</button>.
+<button class="vocab-word" type="button" data-word="Last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">Last</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button>, Anthropic said <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of its AI models could <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button> <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> “self-replicating” and <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> ways to infiltrate internet-connected devices <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as <button class="vocab-word" type="button" data-word="smart" data-pos="" data-def="a. 聪明的, 漂亮的, 刺痛的, 剧烈的, 敏捷的, 巧妙的, 伶俐的, 潇洒的
+n. 刺痛, 痛苦
+vi. 刺痛">smart</button> fridges and automatic <button class="vocab-word" type="button" data-word="vacuum" data-pos="" data-def="n. 真空, 空间, 真空吸尘器
+a. 真空的, 产生真空的, 利用真空的
+vt. 用吸尘器打扫">vacuum</button> cleaners.
+It said that <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button> this happens, the models would be <button class="vocab-word" type="button" data-word="able" data-pos="" data-def="a. 能干的, 能够的">able</button> to <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button> themselves without the <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> of datacentres.
+Elon Musk, the <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> executive of Tesla and founder of SpaceX, responded to Anthropic’s plans for a <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> <button class="vocab-word" type="button" data-word="fund" data-pos="" data-def="n. 基金, 资金, 存款, 财源, 贮藏
+vt. 提供资金, 积累">fund</button> on social media by pledging to <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of his <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> shares <button class="vocab-word" type="button" data-word="away" data-pos="" data-def="adv. 离去">away</button>.
+“I <button class="vocab-word" type="button" data-word="recommend" data-pos="" data-def="vt. 推荐, 介绍, 劝告, 使受欢迎, 托付
+ 建议, 推荐">recommend</button> giving the shares directly to the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button>,” he wrote. “This is <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> I will be doing.”
+He later announced: “<button class="vocab-word" type="button" data-word="Next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">Next</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>, I will <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of my SpaceX shares to <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="kid" data-pos="" data-def="n. 小山羊, 小山羊肉, 小孩, 欺骗
+a. 小山羊皮制的
+v. 哄骗, 嘲弄">kid</button> in America. This will be the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> of <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button>.”
+Shares in SpaceX, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is listed on the Nasdaq in the US, <button class="vocab-word" type="button" data-word="rose" data-pos="" data-def="n. 玫瑰, 蔷薇, 玫瑰色
+a. 玫瑰色的, 玫瑰花的
+vt. 使成玫瑰色
+rise的过去式">rose</button> by 1% in pre-market trading on <button class="vocab-word" type="button" data-word="Monday" data-pos="" data-def="n. 星期一">Monday</button>. The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> has lost <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> 9% of its <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button> <button class="vocab-word" type="button" data-word="since" data-pos="" data-def="prep. 自...以后, 自...以来
+adv. 自那时以后
+conj. 既然, 自...以后, 自...以来">since</button> it joined the <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button> in <button class="vocab-word" type="button" data-word="June" data-pos="" data-def="n. 六月">June</button>.
+OpenAI, the developer <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> ChatGPT, <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> reportedly engaged in <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> talks to <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> a 5% <button class="vocab-word" type="button" data-word="stake" data-pos="" data-def="n. 桩, 炮烙刑, 木柱, 赌注, 奖金
+vt. 打桩, 用桩撑, 下赌注, 资助
+vi. 打赌">stake</button> in its organisation to the US government .
+Anthropic, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> was founded in 2021 by <button class="vocab-word" type="button" data-word="seven" data-pos="" data-def="num. 七, 七个">seven</button> <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> OpenAI employees, was established as a <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> <button class="vocab-word" type="button" data-word="corporation" data-pos="" data-def="n. 公司, 合作, 法人团体
+ 法人团体, 社团, 法人">corporation</button>. It <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> that <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> of the company’s directors must <button class="vocab-word" type="button" data-word="balance" data-pos="" data-def="n. 平衡, 差额
+vi. 平衡, 相等
+vt. 称, 权衡, 比较, 使平衡, 结算, 抵消">balance</button> financial returns with its <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="interest" data-pos="" data-def="n. 兴趣, 嗜好, 利息, 利益, 爱好, 趣味, 势力
+vt. 使感兴趣, 与...有关系">interest</button> <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button>.
+The $48bn giveaway comes amid concerns <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the tech and as the <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> prepares for a <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button> listing</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">Anthropic将划拨5%股份设立</h3>
+<div class="article-content-zh">Anthropic表示，将把其5%的股份投入一个用于“公益”的基金，这家开发了Claude聊天机器人的AI开发商正力图在上市前提升自身的吸引力。
+该公司宣布将承诺划拨这些股份，按其5月份的最新估值计算价值约480亿美元（360亿英镑），此举尚需获得股东批准。若其估值在未公开的基准线之上每增长50%，便会向该基金再追加2%的股票。
+该公司表示，该基金将使Anthropic能够“探索向传统非营利组织进行大额捐赠，或向特定群体直接发放资金”。
+此举正值公众对人工智能的担忧日益加剧之际，这些担忧涵盖了从对人类劳动的威胁，到对环境的冲击及其对社会行为的影响。
+“人工智能可能会创造巨大的经济价值，但也可能给许多劳动者带来不稳定，”Anthropic在一篇博文中写道。
+该公司表示，尽管已经承诺投入2亿美元来应对这一问题，但“鉴于人工智能的发展速度，可能需要采取更大胆的举措。该基金将具备推行这些举措的灵活性。”
+这家正在筹备上市的公司曾呼吁放缓人工智能迅猛发展的步伐，这一警告随后得到了OpenAI等竞争对手的呼应。
+Anthropic在5月份的一轮融资中筹集了650亿美元，当时估值为9650亿美元。据报道，该公司正考虑在股票上市时争取1.5万亿美元的估值，并计划于11月进行首次公开募股（IPO）。
+上周，Anthropic 表示，其部分人工智能模型可能很快就会变得“具有自我复制能力”，并找到潜入智能冰箱和扫地机器人等联网设备的方法。
+该公司表示，一旦发生这种情况，这些模型将能够在不需要数据中心的情况下自我供能。
+特斯拉首席执行官兼 SpaceX 创始人埃隆·马斯克（Elon Musk）在社交媒体上对 Anthropic 设立公益基金的计划作出回应，承诺将赠予自己的部分股份。
+“我建议把股份直接赠予公众，”他写道。“这就是我将要做的事情。”
+他随后宣布：“明年，我将把我的一股 SpaceX 股票送给美国的每一个孩子。这只是众多举措中的第一步。”
+在美国纳斯达克上市的 SpaceX 股票在周一盘前交易中上涨了 1%。自今年 6 月上市以来，该公司的市值已缩水约 9%。
+据报道，ChatGPT 背后的开发商 OpenAI 也进行了初步洽谈，拟向美国政府提供其机构 5% 的股份。
+Anthropic 由 OpenAI 的七名前员工于 2021 年创立，设立形式为公益公司（public benefit corporation）。这意味着该公司的所有董事都必须在财务回报与公益使命之间取得平衡。
+这笔价值 480 亿美元的赠予正值外界对该技术感到担忧、且该公司正在筹备上市之际</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">commit — v. 承诺；投入（资金、时间等）</span>
+<span class="vocab-item">bolster — v.</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">Anthropic将划拨5%股份设立</h3>
+<div class="article-content-zh">Anthropic表示，将把其5%的股份投入一个用于“公益”的基金，这家开发了Claude聊天机器人的AI开发商正力图在上市前提升自身的吸引力。
+该公司宣布将承诺划拨这些股份，按其5月份的最新估值计算价值约480亿美元（360亿英镑），此举尚需获得股东批准。若其估值在未公开的基准线之上每增长50%，便会向该基金再追加2%的股票。
+该公司表示，该基金将使Anthropic能够“探索向传统非营利组织进行大额捐赠，或向特定群体直接发放资金”。
+此举正值公众对人工智能的担忧日益加剧之际，这些担忧涵盖了从对人类劳动的威胁，到对环境的冲击及其对社会行为的影响。
+“人工智能可能会创造巨大的经济价值，但也可能给许多劳动者带来不稳定，”Anthropic在一篇博文中写道。
+该公司表示，尽管已经承诺投入2亿美元来应对这一问题，但“鉴于人工智能的发展速度，可能需要采取更大胆的举措。该基金将具备推行这些举措的灵活性。”
+这家正在筹备上市的公司曾呼吁放缓人工智能迅猛发展的步伐，这一警告随后得到了OpenAI等竞争对手的呼应。
+Anthropic在5月份的一轮融资中筹集了650亿美元，当时估值为9650亿美元。据报道，该公司正考虑在股票上市时争取1.5万亿美元的估值，并计划于11月进行首次公开募股（IPO）。
+上周，Anthropic 表示，其部分人工智能模型可能很快就会变得“具有自我复制能力”，并找到潜入智能冰箱和扫地机器人等联网设备的方法。
+该公司表示，一旦发生这种情况，这些模型将能够在不需要数据中心的情况下自我供能。
+特斯拉首席执行官兼 SpaceX 创始人埃隆·马斯克（Elon Musk）在社交媒体上对 Anthropic 设立公益基金的计划作出回应，承诺将赠予自己的部分股份。
+“我建议把股份直接赠予公众，”他写道。“这就是我将要做的事情。”
+他随后宣布：“明年，我将把我的一股 SpaceX 股票送给美国的每一个孩子。这只是众多举措中的第一步。”
+在美国纳斯达克上市的 SpaceX 股票在周一盘前交易中上涨了 1%。自今年 6 月上市以来，该公司的市值已缩水约 9%。
+据报道，ChatGPT 背后的开发商 OpenAI 也进行了初步洽谈，拟向美国政府提供其机构 5% 的股份。
+Anthropic 由 OpenAI 的七名前员工于 2021 年创立，设立形式为公益公司（public benefit corporation）。这意味着该公司的所有董事都必须在财务回报与公益使命之间取得平衡。
+这笔价值 480 亿美元的赠予正值外界对该技术感到担忧、且该公司正在筹备上市之际</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">commit — v. 承诺；投入（资金、时间等）</span>
+<span class="vocab-item">bolster — v.</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-20 08:53</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
