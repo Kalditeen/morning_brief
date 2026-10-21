@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-17",
-      "cat": "guardian",
-      "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story"
-    },
-    {
-      "date": "2026-10-17",
-      "cat": "bbc-tech",
-      "title": "Toxic algorithms wouldn't let them go - now Australia wants an off switch"
-    },
-    {
       "date": "2026-10-18",
       "cat": "guardian-tech",
       "title": "Palantir patient data tech rejected by many NHS trusts in England"
@@ -39,6 +29,16 @@
       "date": "2026-10-20",
       "cat": "bbc-env",
       "title": "Five ways El Niño is affecting the weather around the world"
+    },
+    {
+      "date": "2026-10-21",
+      "cat": "guardian-env",
+      "title": "Trendy LA neighborhood’s war over wild coyote erupts after child attacked"
+    },
+    {
+      "date": "2026-10-21",
+      "cat": "bbc-science",
+      "title": "Storm Austen to bring severe gales to UK as weather warning issued"
     }
   ]
 }
