@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月22日 周四 · 卫报 The Guardian (科学)">
+<meta property="og:description" content="Bad apple effect: study shows how people are influenced by rule-breaking of others">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科学) | 2026年10月22日 周四</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月22日 周四 · 卫报 The Guardian (科学)</p>
+<a class="back-link" href="2026-10-22.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科学)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="Bad" data-pos="" data-def="a. 坏的
+n. 坏
+adv. 坏地">Bad</button> <button class="vocab-word" type="button" data-word="apple" data-pos="" data-def="n. 苹果, 家伙
+ 苹果">apple</button> <button class="vocab-word" type="button" data-word="effect" data-pos="" data-def="n. 结果, 影响, 效果, 印象
+vt. 实行, 引起, 完成
+ 效果">effect</button>: <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> shows <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> are influenced by rule-breaking of others</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/31b0c139082742f2e5c501faf48aa6e114a993df/0_0_4680_3744/master/4680.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=5da655ffbb28c48ca6372776ad869f8b" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">From politicians taking bribes to bullying and harassment in <button class="vocab-word" type="button" data-word="City" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">City</button> firms , leaders have been <button class="vocab-word" type="button" data-word="quick" data-pos="" data-def="a. 快的, 迅速的, 敏捷的, 灵敏的, 急速的
+adv. 快
+n. 新长出的肉, 要害, 核心, 感觉敏锐部位">quick</button> to <button class="vocab-word" type="button" data-word="label" data-pos="" data-def="n. 标签, 称号, 商标, 标志
+vt. 贴标签于, 标注
+ 标志; 标注; DOS外部命令:用于建立改变或删除磁盘卷标号">label</button> those <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="break" data-pos="" data-def="n. 休息, 中断, 破裂处, 绝交, 破晓, 突变
+vt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃
+vi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停
+n. 分隔符
+ 分隔符; 中断; DOS内部命令:设定扫描中断按键的时机">break</button> the rules as the <button class="vocab-word" type="button" data-word="odd" data-pos="" data-def="a. 奇数的, 古怪的, 剩余的, 零散的, 各种各样的, 少量的
+n. 奇特的事物, 怪人
+ 奇数, 奇校验, 光数据数字转换器">odd</button> “<button class="vocab-word" type="button" data-word="bad" data-pos="" data-def="a. 坏的
+n. 坏
+adv. 坏地">bad</button> <button class="vocab-word" type="button" data-word="apple" data-pos="" data-def="n. 苹果, 家伙
+ 苹果">apple</button>”. But <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> backs <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> the <button class="vocab-word" type="button" data-word="idiom" data-pos="" data-def="n. 习语, 成语, 惯用语法, 方言">idiom</button> that <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="bad" data-pos="" data-def="a. 坏的
+n. 坏
+adv. 坏地">bad</button> <button class="vocab-word" type="button" data-word="apple" data-pos="" data-def="n. 苹果, 家伙
+ 苹果">apple</button> can <button class="vocab-word" type="button" data-word="spoil" data-pos="" data-def="n. 战利品, 赃物, 奖品, 变质, 次品
+vt. 损坏, 破坏, 溺爱
+vi. 腐坏, 掠夺">spoil</button> the <button class="vocab-word" type="button" data-word="barrel" data-pos="" data-def="n. 桶
+vt. 装入桶内">barrel</button>.
+Researchers have <button class="vocab-word" type="button" data-word="found" data-pos="" data-def="vt. 建立, 创立, 铸造
+find的过去式和过去分词">found</button> that <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button> the rule-breaking they <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> in others, <button class="vocab-word" type="button" data-word="general" data-pos="" data-def="n. 一般, 将军, 大体
+a. 全面的, 大体的, 总的, 一般的, 普遍的
+n. 常规
+ 常规">general</button> compliance can swiftly <button class="vocab-word" type="button" data-word="turn" data-pos="" data-def="n. 转弯, 转动, 旋转, 翻转, 一圈, 顺次, 改动, 变化, 性格, 特色, 形状, 转折
+vt. 使旋转, 转弯, 转动, 使转向, 驱赶, 阻挡, 兑换, 改写, 使作对, 绕过, 使流通
+vi. 转动, 转弯, 转向, 翻转, 回转, 改变, 转身, 变成, 变质, 晕眩, 易脱手">turn</button> into <button class="vocab-word" type="button" data-word="widespread" data-pos="" data-def="a. 充分伸展的, 广布的, 普及的, 流传广的">widespread</button> rule-breaking.
+Dr Lucas Molleman, from the <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button> of Amsterdam and the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button> of the <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button>, said the <button class="vocab-word" type="button" data-word="goal" data-pos="" data-def="n. 目标, 终点, 得分, 球门, 守门员
+vi. 攻门, 射门得分">goal</button> was to <button class="vocab-word" type="button" data-word="explore" data-pos="" data-def="v. 探险, 探测, 探究">explore</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> individuals <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> decisions <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> rule-breaking in a social <button class="vocab-word" type="button" data-word="context" data-pos="" data-def="n. 上下文, 背景, 来龙去脉
+n. 上下文
+ 上下文">context</button>.
+“<button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> of themselves as making <button class="vocab-word" type="button" data-word="sort" data-pos="" data-def="n. 种类, 方式, 品质, 态度, 举止
+vt. 分类, 排序, 挑选
+vi. 交往, 协调
+ 排序; DOS外部命令:从标准输入设备接收数据, 整个数据输入完后
+对它以行为单位进行排序, 然后在标准输出设备上输出">sort</button> of <button class="vocab-word" type="button" data-word="autonomous" data-pos="" data-def="a. 自治的
+ 自主的">autonomous</button> decisions, <button class="vocab-word" type="button" data-word="especially" data-pos="" data-def="adv. 尤其, 特别, 格外">especially</button> in these individualist cultures that we are from, <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> Netherlands, the UK,” he said. “But in <button class="vocab-word" type="button" data-word="actual" data-pos="" data-def="a. 真实的, 实际的, 现行的
+ 实际死亡率">actual</button> <button class="vocab-word" type="button" data-word="fact" data-pos="" data-def="n. 事实, 真实性, 真相, 细节, 论据">fact</button>, in <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button>, <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> cases we are <button class="vocab-word" type="button" data-word="very" data-pos="" data-def="a. 真正的, 恰好的, 十足的, 特有的
+adv. 非常, 完全">very</button> <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> influenced by <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> others are doing.”
+Writing in the <button class="vocab-word" type="button" data-word="journal" data-pos="" data-def="n. 日记, 杂志, 日报
+ 轴颈">journal</button> Proceedings of the <button class="vocab-word" type="button" data-word="Royal" data-pos="" data-def="n. 王室, 皇族
+a. 王室的, 皇家的, 盛大的, 庄严的">Royal</button> <button class="vocab-word" type="button" data-word="Society" data-pos="" data-def="n. 社会；社交界；交往；社团">Society</button> B , Molleman and colleagues <button class="vocab-word" type="button" data-word="report" data-pos="" data-def="n. 报告, 报道, 传说, 案情报告, 爆炸声, 成绩单
+vt. 报告, 汇报, 转述, 报道, 揭发, 使报到
+vi. 报告, 写报道, 报到
+ 报告">report</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they recruited 750 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> in the US to <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> in an <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> <button class="vocab-word" type="button" data-word="experiment" data-pos="" data-def="n. 实验, 试验, 实验仪器
+vi. 实验, 尝试">experiment</button>, with the participants approximately evenly <button class="vocab-word" type="button" data-word="split" data-pos="" data-def="n. 劈开, 裂片, 裂缝, 分裂, 派系, 派别, 柳条
+a. 劈开的
+vi. 分离, 分开, 裂开, 被劈开
+vt. 劈开, 切开, 使分裂, 使分离
+ 拆分">split</button> between Republicans and Democrats.
+The researchers asked <button class="vocab-word" type="button" data-word="each" data-pos="" data-def="a. 每个, 每一
+adv. 每个
+pron. 每个, 个人, 各自">each</button> participant to <button class="vocab-word" type="button" data-word="complete" data-pos="" data-def="a. 完全的, 十足的, 完成的
+vt. 完成, 完工, 使圆满">complete</button> an <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button> <button class="vocab-word" type="button" data-word="task" data-pos="" data-def="n. 工作, 任务, 作业, 困难的工作
+vt. 派给...工作, 使辛劳
+ 任务">task</button> in <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> they saw an animated “shooting <button class="vocab-word" type="button" data-word="star" data-pos="" data-def="n. 星, 恒星, 星形物, 运气, 明星
+vt. 以星状物装饰, 用星号标, 使成为明星
+vi. 变成明星">star</button>” moving <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> a <button class="vocab-word" type="button" data-word="row" data-pos="" data-def="n. 排, 行, 街道, 划船, 吵闹
+vt. 使成排, 划, 划船, 参加(赛船), 痛骂
+vi. 划船, 划动, 争吵
+ 行">row</button> of 100 squares as its intensity varied. Participants were instructed to <button class="vocab-word" type="button" data-word="pick" data-pos="" data-def="n. 精选, 选择, 掘, 精华, 牙签, 鹤嘴锄
+v. 摘, 掘, 凿, 挖, 挑选
+ 拾取">pick</button> the <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button> that lit <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> intensely to <button class="vocab-word" type="button" data-word="receive" data-pos="" data-def="vt. 收到, 接到, 得到, 接待, 迎接, 承受
+vi. 收到, 会客
+ 接收">receive</button> a monetary <button class="vocab-word" type="button" data-word="reward" data-pos="" data-def="n. 报酬, 酬谢, 赏金
+vt. 奖赏, 酬谢, 给...应有报应">reward</button>.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, participants received greater rewards for selecting squares <button class="vocab-word" type="button" data-word="further" data-pos="" data-def="a. 更远的, 此外的, 更多的
+vt. 促进, 增进, 助长
+adv. 更进一步地, 更远地, 此外">further</button> to the <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> of the <button class="vocab-word" type="button" data-word="correct" data-pos="" data-def="a. 正确的, 合适的
+vt. 改正, 订正">correct</button> <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button>, and smaller rewards for selecting squares <button class="vocab-word" type="button" data-word="further" data-pos="" data-def="a. 更远的, 此外的, 更多的
+vt. 促进, 增进, 助长
+adv. 更进一步地, 更远地, 此外">further</button> to the <button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button>.
+Participants were then shown <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> participant had followed the rules or broken them, the <button class="vocab-word" type="button" data-word="extent" data-pos="" data-def="n. 范围, 程度, 区域
+ 范围">extent</button> of <button class="vocab-word" type="button" data-word="any" data-pos="" data-def="a. 任何的
+pron. 任何">any</button> rule-breaking, and their political affiliation, and asked if they wished to <button class="vocab-word" type="button" data-word="update" data-pos="" data-def="vt. 更新, 使现代化
+n. 更新
+ 更新">update</button> their <button class="vocab-word" type="button" data-word="choice" data-pos="" data-def="n. 选择, 精选品, 选择权
+a. 精选的, 挑三拣四的, 上等的
+ DOS内部命令:在批处理文件中
+该命令用于提示用户作出选择, 决定批处理文件的流程">choice</button>. The <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> was repeated <button class="vocab-word" type="button" data-word="six" data-pos="" data-def="num. 六, 六个">six</button> times.
+The results revealed participants showed <button class="vocab-word" type="button" data-word="large" data-pos="" data-def="a. 大的, 大量的, 宽大的, 广博的
+adv. 大大地, 夸大地">large</button> degrees of rule-breaking <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> in their <button class="vocab-word" type="button" data-word="initial" data-pos="" data-def="n. 字首, 首字母
+a. 开始的, 最初的, 字首的
+vt. 用姓名的首字母签名">initial</button> choices, with 23% of choices involving squares with the highest <button class="vocab-word" type="button" data-word="reward" data-pos="" data-def="n. 报酬, 酬谢, 赏金
+vt. 奖赏, 酬谢, 给...应有报应">reward</button>.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, the choices of others mattered: seeing others following the rules slightly reduced an individual’s rule-breaking, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> seeing others making <button class="vocab-word" type="button" data-word="small" data-pos="" data-def="a. 小的, 少的, 小型的, 低微的, 小气的, 细微的
+adv. 些微地
+n. 狭小部分">small</button> beneficial violations – choosing a <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button> a <button class="vocab-word" type="button" data-word="third" data-pos="" data-def="num. 第三, 三分之一
+ 第三; 第三的">third</button> of the <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to the <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button>, <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button> the <button class="vocab-word" type="button" data-word="correct" data-pos="" data-def="a. 正确的, 合适的
+vt. 改正, 订正">correct</button> <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button> – slightly increased rule-breaking.
+Crucially, seeing others flagrantly flout the rules by selecting a <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button> <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> <button class="vocab-word" type="button" data-word="further" data-pos="" data-def="a. 更远的, 此外的, 更多的
+vt. 促进, 增进, 助长
+adv. 更进一步地, 更远地, 此外">further</button> to the <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> led participants to greatly <button class="vocab-word" type="button" data-word="increase" data-pos="" data-def="n. 增加, 增进, 利益
+vt. 增加, 加大
+vi. 增加, 繁殖">increase</button> their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="level" data-pos="" data-def="n. 水平, 水准, 平地
+a. 同高的, 平坦的, 齐平的, 水平的
+vt. 弄平, 夷平, 使同等, 瞄准, 对准
+vi. 变平, 拉平
+ 级别">level</button> of rule-breaking. In <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> cases they went <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button> the violations they had observed.
+The <button class="vocab-word" type="button" data-word="team" data-pos="" data-def="n. 队, 组
+vt. 把马(牛)套在同一辆车上, 把...编成一组
+vi. 驾驶卡车, 协作">team</button> <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> the findings were stronger <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> a participant had the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> political leanings as others – <button class="vocab-word" type="button" data-word="something" data-pos="" data-def="pron. 某事, 某物">something</button> Molleman said chimed with <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button>, suggesting <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> are politically aligned are <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> influenced by <button class="vocab-word" type="button" data-word="each" data-pos="" data-def="a. 每个, 每一
+adv. 每个
+pron. 每个, 个人, 各自">each</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button>.
+The researchers <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> computer simulations to <button class="vocab-word" type="button" data-word="explore" data-pos="" data-def="v. 探险, 探测, 探究">explore</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> the behaviour they had observed in the experiments would <button class="vocab-word" type="button" data-word="play" data-pos="" data-def="n. 游戏, 游玩, 玩笑, 运动, 比赛, 赌博, 跳动, 表演, 剧本
+v. 玩, 游戏, 假装, 开玩笑, 比赛, 扮演, 演奏, 演戏, 传摇曳, (使)跳动
+ 播放">play</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> in a <button class="vocab-word" type="button" data-word="large" data-pos="" data-def="a. 大的, 大量的, 宽大的, 广博的
+adv. 大大地, 夸大地">large</button> <button class="vocab-word" type="button" data-word="group" data-pos="" data-def="n. 团体, 组, 团, 群
+v. 聚合, 成群
+ 创建组; 组, 用户组">group</button>. The results showed that a <button class="vocab-word" type="button" data-word="situation" data-pos="" data-def="n. 情形, 境遇, 位置
+ 情境, 处境">situation</button> could quickly <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of <button class="vocab-word" type="button" data-word="hand" data-pos="" data-def="n. 手, 爪, 指针, 掌握, 协助, 人手, 手艺, 手迹, 支配, 插手
+vt. 交给, 支持, 搀扶">hand</button>.
+“A minority of escalating individuals, exceeding the <button class="vocab-word" type="button" data-word="rule" data-pos="" data-def="n. 规则, 统治, 控制, 支配, 规律, 标准, 章程, 破折号, 铅线
+vt. 规定, 统治, 管理, 控制, 支配, 裁决
+vi. 统治, 管辖, 裁定
+ 规则, 水线">rule</button> violations they <button class="vocab-word" type="button" data-word="observe" data-pos="" data-def="vt. 觉察到, 遵守, 注意到, 庆祝
+vi. 注意, 评论">observe</button>, they might <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button> a <button class="vocab-word" type="button" data-word="whole" data-pos="" data-def="n. 全部, 全体, 整体, 完全之体系
+a. 所有的, 完整的, 完全的, 纯粹的">whole</button> <button class="vocab-word" type="button" data-word="collective" data-pos="" data-def="a. 集体的, 聚集的, 共同的
+ 集体的, 集合的">collective</button> to <button class="vocab-word" type="button" data-word="spin" data-pos="" data-def="n. 旋转, 自旋, 疾驰, 情绪低落
+vt. 纺织, 纺, 使旋转, 编造
+vi. 纺纱, 吐丝, 作茧, 结网, 旋转, 自旋, 疾驰">spin</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button>,” Molleman said.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, he noted that <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> a <button class="vocab-word" type="button" data-word="third" data-pos="" data-def="num. 第三, 三分之一
+ 第三; 第三的">third</button> of participants consistently followed the rules <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> <button class="vocab-word" type="button" data-word="though" data-pos="" data-def="adv. 然而, 可是
+conj. 虽然, 纵然">though</button> it did <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> to the largest <button class="vocab-word" type="button" data-word="reward" data-pos="" data-def="n. 报酬, 酬谢, 赏金
+vt. 奖赏, 酬谢, 给...应有报应">reward</button>.
+Prof Stephen Reicher, of the <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button> of St Andrews, in Scotland, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> was <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> involved in the <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>, said the <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> had limitations, including that the <button class="vocab-word" type="button" data-word="experiment" data-pos="" data-def="n. 实验, 试验, 实验仪器
+vi. 实验, 尝试">experiment</button> was <button class="vocab-word" type="button" data-word="abstract" data-pos="" data-def="a. 抽象的, 深奥的
+n. 摘要, 抽象概念
+vt. 摘要, 提炼, 使抽象化
+ 摘录; 摘要; 抽象">abstract</button> and <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> was <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="penalty" data-pos="" data-def="n. 处罚, 刑罚, 罚款, 罚球, 报应, 不利结果, 妨碍
+ 罚金(款), 违约金">penalty</button> for rule-breaking, meaning the relevance of the <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> to real-world examples remained unproven.
+Reicher <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> stressed that the results went against the <button class="vocab-word" type="button" data-word="concept" data-pos="" data-def="n. 观念, 概念
+ 概念">concept</button> of contagion, <button class="vocab-word" type="button" data-word="instead" data-pos="" data-def="adv. 作为替代, 反而">instead</button> showing that <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> we are influenced by others depends on <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> those others are.
+“This is <button class="vocab-word" type="button" data-word="important" data-pos="" data-def="a. 重要的, 有地位的, 大量的, 显要的, 自负的
+ 要点">important</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> it implies that, <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button>, we don’t <button class="vocab-word" type="button" data-word="riot" data-pos="" data-def="n. 暴动, 喧闹, 放纵
+vi. 发动, 暴动, 纵情, 放荡
+vt. 浪费, 挥霍">riot</button> simply <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> we <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> others rioting,” he said. “In <button class="vocab-word" type="button" data-word="fact" data-pos="" data-def="n. 事实, 真实性, 真相, 细节, 论据">fact</button>, <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> rioting <button class="vocab-word" type="button" data-word="respond" data-pos="" data-def="vt. 以...回答
+vi. 回答, 响应, 回报, 有反应, 承担责任">respond</button> by helping <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> riots.”
+<button class="vocab-word" type="button" data-word="Research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">Research</button> shows <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> seeing bigger violations by others can <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> to <button class="vocab-word" type="button" data-word="increase" data-pos="" data-def="n. 增加, 增进, 利益
+vt. 增加, 加大
+vi. 增加, 繁殖">increase</button> their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> rule-breaking</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">坏苹果效应：研究揭示他人违规行为</h3>
+<div class="article-content-zh">从政客收受贿赂，到伦敦金融城企业内的霸凌与骚扰，领导者们总是迅速将那些违纪违规者归为个别的“烂苹果”。但一项新研究证实了那句成语：一只烂苹果会坏了整筐苹果。
+研究人员发现，当人们的违规程度变本加厉、超过他们在他人身上看到的违规行为时，普遍的循规守矩会迅速转变成大范围的违规破矩。
+该研究的第一作者、阿姆斯特丹大学的卢卡斯·莫勒曼（Lucas Molleman）博士表示，该研究的目标是探讨个体在社会语境中如何做出关于违规的决策。
+“许多人认为自己的决定在某种程度上是自主做出的，特别是在我们所来自的像荷兰、英国这样的个人主义文化背景下，”他说道，“但事实上，在很多很多情况下，我们都极大程度地受到他人所作所为的影响。”
+莫勒曼及其同事在《英国皇家学会学报B》（Proceedings of the Royal Society B）上撰文，报告了他们如何招募750名美国人参与一项在线实验，受试者中共和党人和民主党人的人数大致各占一半。
+研究人员要求每位参与者完成一项在线任务，在任务中，他们会看到一颗动画“流星”在由100个方块组成的一排网格中穿行，其亮度不断变化。参与者接到指令，要选出亮得最强烈的方块，以获得金钱奖励。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">compliance — n. 顺从，遵守</span>
+<span class="vocab-item">autonomous — adj. 自主的，</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">坏苹果效应：研究揭示他人违规行为</h3>
+<div class="article-content-zh">从政客收受贿赂，到伦敦金融城企业内的霸凌与骚扰，领导者们总是迅速将那些违纪违规者归为个别的“烂苹果”。但一项新研究证实了那句成语：一只烂苹果会坏了整筐苹果。
+研究人员发现，当人们的违规程度变本加厉、超过他们在他人身上看到的违规行为时，普遍的循规守矩会迅速转变成大范围的违规破矩。
+该研究的第一作者、阿姆斯特丹大学的卢卡斯·莫勒曼（Lucas Molleman）博士表示，该研究的目标是探讨个体在社会语境中如何做出关于违规的决策。
+“许多人认为自己的决定在某种程度上是自主做出的，特别是在我们所来自的像荷兰、英国这样的个人主义文化背景下，”他说道，“但事实上，在很多很多情况下，我们都极大程度地受到他人所作所为的影响。”
+莫勒曼及其同事在《英国皇家学会学报B》（Proceedings of the Royal Society B）上撰文，报告了他们如何招募750名美国人参与一项在线实验，受试者中共和党人和民主党人的人数大致各占一半。
+研究人员要求每位参与者完成一项在线任务，在任务中，他们会看到一颗动画“流星”在由100个方块组成的一排网格中穿行，其亮度不断变化。参与者接到指令，要选出亮得最强烈的方块，以获得金钱奖励。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">compliance — n. 顺从，遵守</span>
+<span class="vocab-item">autonomous — adj. 自主的，</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-22 08:29</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

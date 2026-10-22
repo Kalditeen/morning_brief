@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-18",
-      "cat": "guardian-tech",
-      "title": "Palantir patient data tech rejected by many NHS trusts in England"
-    },
-    {
-      "date": "2026-10-18",
-      "cat": "bbc-env",
-      "title": "Brazil sees record fall in Amazon deforestation as key election looms"
-    },
-    {
       "date": "2026-10-19",
       "cat": "guardian",
       "title": "Hilarious quips and ‘100,000-volt’ energy: the hypemen (and women) redefining Afrobeats music"
@@ -39,6 +29,16 @@
       "date": "2026-10-21",
       "cat": "bbc-science",
       "title": "Storm Austen to bring severe gales to UK as weather warning issued"
+    },
+    {
+      "date": "2026-10-22",
+      "cat": "guardian-science",
+      "title": "Bad apple effect: study shows how people are influenced by rule-breaking of others"
+    },
+    {
+      "date": "2026-10-22",
+      "cat": "bbc-business",
+      "title": "The \"trillion pound\" oil fund the government believes Britain could have built"
     }
   ]
 }
