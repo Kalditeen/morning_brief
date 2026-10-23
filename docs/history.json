@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-19",
-      "cat": "guardian",
-      "title": "Hilarious quips and ‘100,000-volt’ energy: the hypemen (and women) redefining Afrobeats music"
-    },
-    {
-      "date": "2026-10-19",
-      "cat": "bbc-tech",
-      "title": "Don't fall for this - how to protect yourself from AI scams"
-    },
-    {
       "date": "2026-10-20",
       "cat": "guardian-tech",
       "title": "AI firm Anthropic to commit 5% of shares to fund for ‘public good’"
@@ -39,6 +29,16 @@
       "date": "2026-10-22",
       "cat": "bbc-business",
       "title": "The \"trillion pound\" oil fund the government believes Britain could have built"
+    },
+    {
+      "date": "2026-10-23",
+      "cat": "guardian-business",
+      "title": "US judge orders Trump to sit for deposition in $10bn lawsuit against BBC"
+    },
+    {
+      "date": "2026-10-23",
+      "cat": "bbc-world",
+      "title": "Hospitals deliberately targeted by Sudan's RSF fighters, BBC investigation finds"
     }
   ]
 }
