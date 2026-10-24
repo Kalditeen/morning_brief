@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-20",
-      "cat": "guardian-tech",
-      "title": "AI firm Anthropic to commit 5% of shares to fund for ‘public good’"
-    },
-    {
-      "date": "2026-10-20",
-      "cat": "bbc-env",
-      "title": "Five ways El Niño is affecting the weather around the world"
-    },
-    {
       "date": "2026-10-21",
       "cat": "guardian-env",
       "title": "Trendy LA neighborhood’s war over wild coyote erupts after child attacked"
@@ -39,6 +29,16 @@
       "date": "2026-10-23",
       "cat": "bbc-world",
       "title": "Hospitals deliberately targeted by Sudan's RSF fighters, BBC investigation finds"
+    },
+    {
+      "date": "2026-10-24",
+      "cat": "guardian",
+      "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus"
+    },
+    {
+      "date": "2026-10-24",
+      "cat": "bbc-tech",
+      "title": "UK to invest £100m in 'world first' AI Biosecurity Lab"
     }
   ]
 }
