@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-21",
-      "cat": "guardian-env",
-      "title": "Trendy LA neighborhood’s war over wild coyote erupts after child attacked"
-    },
-    {
-      "date": "2026-10-21",
-      "cat": "bbc-science",
-      "title": "Storm Austen to bring severe gales to UK as weather warning issued"
-    },
-    {
       "date": "2026-10-22",
       "cat": "guardian-science",
       "title": "Bad apple effect: study shows how people are influenced by rule-breaking of others"
@@ -39,6 +29,16 @@
       "date": "2026-10-24",
       "cat": "bbc-tech",
       "title": "UK to invest £100m in 'world first' AI Biosecurity Lab"
+    },
+    {
+      "date": "2026-10-25",
+      "cat": "guardian-tech",
+      "title": "The datacentre next door: on the frontline of tech’s latest David v Goliath battle"
+    },
+    {
+      "date": "2026-10-25",
+      "cat": "bbc-env",
+      "title": "Rosebank: Life on the oil field at the centre of a political storm"
     }
   ]
 }

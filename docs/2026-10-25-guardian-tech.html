@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年10月25日 周日 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="The datacentre next door: on the frontline of tech’s latest David v Goliath battle">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年10月25日 周日</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年10月25日 周日 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-10-25.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">The datacentre <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> <button class="vocab-word" type="button" data-word="door" data-pos="" data-def="n. 门">door</button>: on the frontline of tech’s latest David v Goliath <button class="vocab-word" type="button" data-word="battle" data-pos="" data-def="n. 战役
+v. 战斗">battle</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/0373ee73af80c68fd75a9ab321de66de4801ad27/865_0_5902_4724/master/5902.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=5f523b9df1901844cac4ef7d3a723b2b" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">D <button class="vocab-word" type="button" data-word="ale" data-pos="" data-def="n. 麦芽酒
+ 麦芽酒">ale</button> Johnston opens the <button class="vocab-word" type="button" data-word="gate" data-pos="" data-def="n. 门, 牌楼, 大门, 通道, 闸
+vt. 装门于
+ 门; 栅">gate</button> to his <button class="vocab-word" type="button" data-word="neat" data-pos="" data-def="a. 整洁的, 巧妙的, 匀称的, 简洁的
+n. 牛">neat</button> suburban <button class="vocab-word" type="button" data-word="garden" data-pos="" data-def="n. 花园, 果园, 菜园
+vi. 栽培花木
+vt. 造园
+a. 花园的, 普通的">garden</button> on the western fringes of Newport in <button class="vocab-word" type="button" data-word="South" data-pos="" data-def="n. 南方, 南
+a. 南的, 向南的
+adv. 在南方
+vi. 转向南方">South</button> Wales . There’s a trampoline and a <button class="vocab-word" type="button" data-word="slide" data-pos="" data-def="n. 滑, 滑道, 山崩, 雪崩, 幻灯片
+vt. 使滑动, 偷偷放入
+vi. 滑动, 滑落, 不知不觉陷入, 偷偷地走">slide</button> on the <button class="vocab-word" type="button" data-word="lawn" data-pos="" data-def="n. 草地, 草坪, 上等细麻布
+ 细筛">lawn</button> for his grandchildren, and chairs for him and his <button class="vocab-word" type="button" data-word="wife" data-pos="" data-def="n. 妻子, 太太, 夫人
+ 妻子, 已婚妇女">wife</button>. He should be enjoying the <button class="vocab-word" type="button" data-word="light" data-pos="" data-def="n. 光, 光亮, 灯, 日光, 发光体, 光源, 杰出人物, 火花, 眼光
+a. 轻的, 少量的, 轻微的, 轻快的, 轻浮的, 明亮的, 淡色的, 容易的
+vt. 点燃, 照亮
+vi. 点着, 变亮, 突降, 偶然碰到
+adv. 轻地">light</button> draining from the <button class="vocab-word" type="button" data-word="perfect" data-pos="" data-def="n. 完成时
+a. 完美的, 完好的, 理想的, 熟练的, 精确的, 完成式的
+vt. 使完美, 修改, 使精通, 改善, 使熟练">perfect</button> autumnal <button class="vocab-word" type="button" data-word="sky" data-pos="" data-def="n. 天空, 天色, 天堂
+vt. 击向空中, 挂在高处
+vi. 高涨">sky</button> – but <button class="vocab-word" type="button" data-word="almost" data-pos="" data-def="adv. 几乎, 差不多">almost</button> his <button class="vocab-word" type="button" data-word="entire" data-pos="" data-def="n. 整个, 全部
+a. 全体的, 完全的, 全部的">entire</button> <button class="vocab-word" type="button" data-word="view" data-pos="" data-def="n. 视野, 风景, 见解, 视力, 观看, 视图, 指望, 意图, 印象
+vt. 看, 考虑, 视察, 查看, 估量
+ 视图">view</button> is blotted <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> by a <button class="vocab-word" type="button" data-word="vast" data-pos="" data-def="a. 巨大的, 广大的, 非常的, 大量的">vast</button> expanse of prefabricated panels.
+The 23 metre-high <button class="vocab-word" type="button" data-word="grey" data-pos="" data-def="n. 灰色
+a. 灰色的, 阴沉的
+v. (使)成灰色">grey</button> hulk looming over him and his neighbours is a hyperscale datacentre. It is heralded by the area’s <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> politicians as a <button class="vocab-word" type="button" data-word="job" data-pos="" data-def="n. 工作, 零活, 职业, 事情
+vi. 做零工, 打杂, 做股票经纪, 假公济私
+vt. 代客买卖, 批发, 承包, 欺骗
+ 作业">job</button> creator, yet <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> Johnston can <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> is <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> he has lost: “<button class="vocab-word" type="button" data-word="Before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">Before</button>, the <button class="vocab-word" type="button" data-word="sun" data-pos="" data-def="n. 太阳, 日, 日光, 阳光
+vt. 晒
+vi. 晒太阳">sun</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> and it was lovely.” The <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> residents have been treated is “disgusting”.
+Johnston, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> for a chemical <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> in the <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button>, worries <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> their lives will be <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the centre is switched on: the 36 sets of <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> <button class="vocab-word" type="button" data-word="blast" data-pos="" data-def="n. 一阵风, 爆炸, 枯萎病
+vt. 炸, 使枯萎
+vi. 炸, 猛攻, 猛烈抨击, 枯萎">blast</button> coolers, needed to <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> the chips <button class="vocab-word" type="button" data-word="inside" data-pos="" data-def="n. 内部, 内脏, 内幕
+a. 内部的, 秘密的, 户内的
+adv. 在里面
+prep. 在...之内">inside</button> overheating, <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> likely <button class="vocab-word" type="button" data-word="generate" data-pos="" data-def="vt. 产生, 发生, 导致
+ 产生">generate</button> a <button class="vocab-word" type="button" data-word="constant" data-pos="" data-def="n. 常数, 恒量
+a. 不变的, 一定的, 时常的
+ 常量; 常数; 恒值">constant</button> drone, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> <button class="vocab-word" type="button" data-word="regular" data-pos="" data-def="a. 规则的, 常例的, 有秩序的, 整齐的, 等边的, 定期的, 经常的, 合格的, 常备军的
+n. 正规军, 正式队员
+adv. 经常地
+n. 正常体
+ 正常体">regular</button> testing of 60 back-up <button class="vocab-word" type="button" data-word="diesel" data-pos="" data-def="n. 内燃机, 柴油机, 柴油">diesel</button> generators, to <button class="vocab-word" type="button" data-word="prevent" data-pos="" data-def="v. 预防, 防止, 阻止, 妨碍">prevent</button> costly interruption to the <button class="vocab-word" type="button" data-word="flow" data-pos="" data-def="n. 流程, 流动, 流量, 洋溢, 泛滥, 涨潮
+vi. 流动, 流泄, 畅流, 川流不息, 飘扬, 涌出
+vt. 使流动, 淹没, 流出">flow</button> of <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button>, could <button class="vocab-word" type="button" data-word="produce" data-pos="" data-def="n. 生产品, 物产, 后代
+vt. 产生, 生产, 提出, 出示
+vi. 生产, 制造">produce</button> harmful fumes. He <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> has to <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> his <button class="vocab-word" type="button" data-word="bathroom" data-pos="" data-def="n. 浴室, 厕所">bathroom</button> <button class="vocab-word" type="button" data-word="window" data-pos="" data-def="n. 窗户, 窗子, 窗口
+vt. 给...开窗
+ 窗口">window</button> closed to <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> the <button class="vocab-word" type="button" data-word="low" data-pos="" data-def="n. 低点, 低价, 低, 牛叫声
+a. 低的, 消沉的, 低等的, 浅的, 卑贱的
+adv. 低下地, 谦卑地, 低
+vi. 牛叫">low</button> <button class="vocab-word" type="button" data-word="hum" data-pos="" data-def="n. 嗡嗡声, 哼声, 杂声
+vi. 发低哼声
+vt. 哼, 用哼声表示
+interj. 哼, 嗯">hum</button> from <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> <button class="vocab-word" type="button" data-word="facility" data-pos="" data-def="n. 容易, 灵巧, 设备
+ 设施; 设备; 装备">facility</button> on the rapidly expanding 46-<button class="vocab-word" type="button" data-word="acre" data-pos="" data-def="n. 英亩">acre</button> datacentre <button class="vocab-word" type="button" data-word="campus" data-pos="" data-def="n. 校园, 大学生活">campus</button> that borders the <button class="vocab-word" type="button" data-word="small" data-pos="" data-def="a. 小的, 少的, 小型的, 低微的, 小气的, 细微的
+adv. 些微地
+n. 狭小部分">small</button> enclave of 27 houses. His <button class="vocab-word" type="button" data-word="wife" data-pos="" data-def="n. 妻子, 太太, 夫人
+ 妻子, 已婚妇女">wife</button>, a <button class="vocab-word" type="button" data-word="nurse" data-pos="" data-def="n. 护士, 保姆, 奶妈
+vt. 看护, 照顾, 培养
+vi. 喂奶, 看护病人">nurse</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> works <button class="vocab-word" type="button" data-word="night" data-pos="" data-def="n. 夜, 夜晚, 晚上, 黑暗, 夜晚的工作
+ 夜, 黑夜, 黑暗">night</button> shifts, can barely <button class="vocab-word" type="button" data-word="sleep" data-pos="" data-def="n. 睡眠, 静止, 昏迷, 麻木, 长眠, 冬眠
+vi. 睡觉, 睡眠, 静止
+vt. 睡">sleep</button> <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button>. He shakes his <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> in <button class="vocab-word" type="button" data-word="despair" data-pos="" data-def="n. 绝望, 失望
+vi. 绝望">despair</button>: “We <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> don’t <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> what’s going to <button class="vocab-word" type="button" data-word="happen" data-pos="" data-def="vi. 发生, 发生, 恰巧">happen</button>.”
+Johnston can <button class="vocab-word" type="button" data-word="talk" data-pos="" data-def="n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言
+vi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话
+vt. 讲, 说, 讨论, 谈论
+ 对话类, 聊天">talk</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="little" data-pos="" data-def="n. 一点点, 少许, 一会儿, 短时间
+a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的
+adv. 很少, 稍微, 完全不">little</button> <button class="vocab-word" type="button" data-word="else" data-pos="" data-def="a. 别的, 其他的
+adv. 另外, 否则, 不然">else</button>, but he feels <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> in <button class="vocab-word" type="button" data-word="authority" data-pos="" data-def="n. 权力, 当权者, 当局, 权威, 专家
+ 代理权, 授权, 权威">authority</button> is listening. He’s invited councillors and MPs backing the development to <button class="vocab-word" type="button" data-word="visit" data-pos="" data-def="n. 拜访, 访问, 游览, 视察
+vt. 拜访, 访问, 参观, 视察, 降临
+vi. 访问, 参观, 闲谈">visit</button> his <button class="vocab-word" type="button" data-word="garden" data-pos="" data-def="n. 花园, 果园, 菜园
+vi. 栽培花木
+vt. 造园
+a. 花园的, 普通的">garden</button>. But “they won’t <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> to <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> they’ve done”.
+T his is the frontline of Britain’s datacentre <button class="vocab-word" type="button" data-word="boom" data-pos="" data-def="n. 繁荣, 隆隆声
+vi. 急速发展, 发隆隆声
+vt. 使兴旺, 发隆隆声">boom</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is pitting residents against <button class="vocab-word" type="button" data-word="giant" data-pos="" data-def="n. 巨人, 大力士, 巨大怪物
+a. 庞大的, 巨大的">giant</button> US tech firms seeking to <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> a <button class="vocab-word" type="button" data-word="network" data-pos="" data-def="n. 网络, 广播网, 网状物
+ 网络">network</button> of facilities <button class="vocab-word" type="button" data-word="capable" data-pos="" data-def="a. 有能力的, 能的, 能干的">capable</button> of providing the <button class="vocab-word" type="button" data-word="immense" data-pos="" data-def="a. 极广大的, 无边的, 非常好的">immense</button> computing <button class="vocab-word" type="button" data-word="muscle" data-pos="" data-def="n. 肌肉, 臂力
+ 肌">muscle</button> for powerful AI models. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are 315 hyperscale datacentres waiting to <button class="vocab-word" type="button" data-word="connect" data-pos="" data-def="v. 连接, 联合, 联系">connect</button> to the national <button class="vocab-word" type="button" data-word="grid" data-pos="" data-def="n. 格子, 栅格
+ 网格">grid</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> carries <button class="vocab-word" type="button" data-word="electricity" data-pos="" data-def="n. 电, 电流, 电学, 热情, 电力供应
+ 电学; 电">electricity</button> from <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button> plants to homes and businesses (hyperscale typically <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> facilities with at <button class="vocab-word" type="button" data-word="least" data-pos="" data-def="n. 最少, 最小, 最小限度
+a. 最少的, 最小的
+adv. 最小, 最少">least</button> 5,000 servers and 10,000 sq ft in <button class="vocab-word" type="button" data-word="size" data-pos="" data-def="n. 大小, 尺寸, 规模, 尺码, 能力, 浆料
+vt. 上浆, 依大小排列
+vi. 可比拟
+a. 一定大小的, 一定尺寸的">size</button>). Combined, these <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> centres will <button class="vocab-word" type="button" data-word="require" data-pos="" data-def="vt. 需要, 命令, 要求
+ 需要, 要求, 命令">require</button> 73GW of <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button>, 28GW higher than the <button class="vocab-word" type="button" data-word="typical" data-pos="" data-def="a. 典型的, 象征性的
+ 典型的">typical</button> <button class="vocab-word" type="button" data-word="peak" data-pos="" data-def="n. 山峰, 巅, 山顶, 顶点, 尖峰, 帽舌
+a. 最高的, 最大值的
+vi. 到达最高点, 消瘦, 变憔悴, 逐渐缩小
+vt. 使竖起, 使达到最高点">peak</button> <button class="vocab-word" type="button" data-word="energy" data-pos="" data-def="n. 精力, 精神, 活力, 能量
+ 能; 能量">energy</button> <button class="vocab-word" type="button" data-word="demand" data-pos="" data-def="n. 要求, 需求, 需要
+v. 要求, 查询">demand</button> of 45GW on a <button class="vocab-word" type="button" data-word="cold" data-pos="" data-def="n. 感冒, 寒冷
+a. 寒冷的, 冷淡的, 冷静的
+adv. 完全地">cold</button> winter’s <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>.
+Wales is <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the <button class="vocab-word" type="button" data-word="main" data-pos="" data-def="n. 主要部分, 干线, 体力, 力量, 主群组
+a. 主要的, 重要的, 全力的
+ 主群组">main</button> development hotspots <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> London. It <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> has the largest datacentre <button class="vocab-word" type="button" data-word="capacity" data-pos="" data-def="n. 容量, 能力, 才能, 资格
+ 容量">capacity</button> <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button> the <button class="vocab-word" type="button" data-word="capital" data-pos="" data-def="n. 首都, 大写字母, 资本
+a. 首都的, 重要的">capital</button>, with <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> hyperscale facilities planned for <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> industrial and <button class="vocab-word" type="button" data-word="urban" data-pos="" data-def="a. 都市的, 住在都市的, 习惯于都市的
+ 城市的, 都市的, 市区的">urban</button> sites. The Keir Starmer-led <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> government viewed this as an <button class="vocab-word" type="button" data-word="inevitable" data-pos="" data-def="a. 不可避免的, 必然的
+ 不可避免的, 无法规避的, 必然的">inevitable</button> <button class="vocab-word" type="button" data-word="revolution" data-pos="" data-def="n. 革命, 大变革, 旋转, 转数, 循环
+ 回转">revolution</button> , <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> must <button class="vocab-word" type="button" data-word="embrace" data-pos="" data-def="n. 拥抱
+vt. 拥抱, 互相拥抱, 包含, 收买
+vi. 拥抱">embrace</button> or be <button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button> <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button>. It established <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> AI growth zones to <button class="vocab-word" type="button" data-word="push" data-pos="" data-def="n. 推, 推动, 奋斗, 攻击, 进取心
+vt. 推, 推动, 使伸出, 推行, 逼迫, 增加
+vi. 推, 推进, 增加, 努力争取">push</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> datacentres through the planning <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> and <button class="vocab-word" type="button" data-word="speed" data-pos="" data-def="n. 速率, 速度, 迅速
+vi. 加速, 超速, 快进
+vt. 快速传送, 促进, 使加速
+ 中央处理机速度设置程序">speed</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> connections to the national <button class="vocab-word" type="button" data-word="grid" data-pos="" data-def="n. 格子, 栅格
+ 网格">grid</button>. The <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">prime</button> <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>, Andy Burnham, has signalled <button class="vocab-word" type="button" data-word="little" data-pos="" data-def="n. 一点点, 少许, 一会儿, 短时间
+a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的
+adv. 很少, 稍微, 完全不">little</button> will <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button>, turning <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> calls for a moratorium and insisting datacentres <button class="vocab-word" type="button" data-word="bring" data-pos="" data-def="vt. 带来, 产生, 促使, 提出
+vi. 生产">bring</button> economic benefits. But anti-datacentre groups springing <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> in villages, towns and cities <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> it <button class="vocab-word" type="button" data-word="rather" data-pos="" data-def="adv. 宁可, 稍微, 相当">rather</button> differently: as the imposition of a resource-hungry, polluting <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button> that increases profits for <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> US <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech, with <button class="vocab-word" type="button" data-word="little" data-pos="" data-def="n. 一点点, 少许, 一会儿, 短时间
+a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的
+adv. 很少, 稍微, 完全不">little</button> <button class="vocab-word" type="button" data-word="tangible" data-pos="" data-def="n. 可触知的东西, 有形资产
+a. 可触摸的, 有实体的, 非相像的, 有形的, 明确的">tangible</button> <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> to <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> or the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> as a <button class="vocab-word" type="button" data-word="whole" data-pos="" data-def="n. 全部, 全体, 整体, 完全之体系
+a. 所有的, 完整的, 完全的, 纯粹的">whole</button>.
+D igital storage is <button class="vocab-word" type="button" data-word="nothing" data-pos="" data-def="n. 无, 不关紧要之事, 零
+adv. 毫不, 决不
+interj. 什么也没有, 无">nothing</button> <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button>. The <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button> PC users saved files on floppy discs and <button class="vocab-word" type="button" data-word="hard" data-pos="" data-def="a. 坚硬的, 硬的, 难的, 艰苦的, 困难的, 坚固的, 猛烈的, 艰难的, 结实的, 确实的
+adv. 坚硬地, 努力地, 辛苦地, 接近地, 猛烈地, 牢固地">hard</button> drives; businesses <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> server rooms in the 80s and 90s, then moved to off-site facilities as their needs grew. But the development of <button class="vocab-word" type="button" data-word="cloud" data-pos="" data-def="n. 云, 阴暗, 烟雾, 疑团
+vt. 以云遮敝, 笼罩, 使黯然
+vi. 乌云密布, 阴沉">cloud</button> computing services in the 2010s, <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Google <button class="vocab-word" type="button" data-word="Drive" data-pos="" data-def="n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器
+vt. 开车, 驱使, 推动, 驾驶
+vi. 开车, 猛击, 飞跑
+ 驱动器">Drive</button>, and AI chatbots in the 2020s, <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> ChatGPT, led to <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> greater information and processing demands, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> the tech <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button> insists can <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> be met by larger and larger datacentres. This has driven <button class="vocab-word" type="button" data-word="huge" data-pos="" data-def="a. 极大的, 巨大的, 无限的">huge</button> speculative bets on hyperscale hubs, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> investors and tech firms <button class="vocab-word" type="button" data-word="hope" data-pos="" data-def="n. 希望, 信心, 期待
+v. 希望, 期望, 信赖">hope</button> will <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button> <button class="vocab-word" type="button" data-word="reap" data-pos="" data-def="vt. 收割, 收获, 获得
+vi. 收割, 得到报应">reap</button> the rewards of an AI-led transformation of the <button class="vocab-word" type="button" data-word="economy" data-pos="" data-def="n. 经济, 理财, 节约
+ 经济, 整体">economy</button>. Globally, it is estimated spending on <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> facilities could <button class="vocab-word" type="button" data-word="reach" data-pos="" data-def="n. 伸出, 延伸, 区域, 范围, 流域, 岬
+vt. 到达, 达到, 伸出, 延伸, 影响
+vi. 达到, 延伸, 伸出手, 传到">reach</button> $7tn by 2030 – <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than <button class="vocab-word" type="button" data-word="double" data-pos="" data-def="n. 两倍
+a. 两倍的, 双重的
+vt. 使加倍
+vi. 加倍, 代替, 快步走
+ 双精度型">double</button> the <button class="vocab-word" type="button" data-word="cost" data-pos="" data-def="n. 代价, 价值, 费用
+vi. 花费
+vt. 使失去, 值, 使花费">cost</button> of the <button class="vocab-word" type="button" data-word="New" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">New</button> <button class="vocab-word" type="button" data-word="Deal" data-pos="" data-def="n. 交易, 协定, 数量, 买卖, 松木板
+vi. 处理, 应付, 做生意
+vt. 分配, 发牌, 给予
+ 发牌">Deal</button>, the Marshall <button class="vocab-word" type="button" data-word="Plan" data-pos="" data-def="n. 计划, 方案, 策略, 方法, 进度表, 程序表, 平面图, 设计图, 轮廓, 示意图
+vt. 计划, 设计, 意欲
+vi. 订计划">Plan</button> to rebuild Europe <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">second</button> <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button> <button class="vocab-word" type="button" data-word="war" data-pos="" data-def="n. 战争, 战争状态, 战术, 军事, 冲突, 斗争, 竞争
+vi. 进行战争, 作战, 打仗, 战斗
+a. 战争的, 战时用的">war</button> and the Apollo <button class="vocab-word" type="button" data-word="space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">space</button> <button class="vocab-word" type="button" data-word="programme" data-pos="" data-def="n. 节目, 节目单, 程序, 纲要, 大纲, 计划
+vt. 规划, 拟...计划
+vi. 安排节目, 编程序">programme</button> combined, <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> allowing for inflation.
+The US is at the forefront of the <button class="vocab-word" type="button" data-word="boom" data-pos="" data-def="n. 繁荣, 隆隆声
+vi. 急速发展, 发隆隆声
+vt. 使兴旺, 发隆隆声">boom</button>, <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> hosting roughly <button class="vocab-word" type="button" data-word="half" data-pos="" data-def="n. 一半, 半场, 不完全
+a. 一半的, 不完全的, 部分的, 半场的
+adv. 一半地, 部分地, 在某种程度上地, 几乎">half</button> of the world’s hyperscale <button class="vocab-word" type="button" data-word="capacity" data-pos="" data-def="n. 容量, 能力, 才能, 资格
+ 容量">capacity</button>. But the <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button> is facing a furious backlash, with <button class="vocab-word" type="button" data-word="three" data-pos="" data-def="num. 三, 三个">three</button>- quarters of Americans <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> opposed to datacentre development and blaming it for increasing <button class="vocab-word" type="button" data-word="energy" data-pos="" data-def="n. 精力, 精神, 活力, 能量
+ 能; 能量">energy</button> bills, threatening <button class="vocab-word" type="button" data-word="water" data-pos="" data-def="n. 水, 雨水, 海水, 水位, 水面, 流水
+vt. 给...浇水, 供以水, 注入水, 使湿
+vi. 流泪, 流口水, 加水
+a. 水的, 水上的, 水生的, 含水的">water</button> supplies in drought-hit areas and spewing <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> <button class="vocab-word" type="button" data-word="toxic" data-pos="" data-def="a. 有毒的, 中毒的
+ 中毒的, 毒物的">toxic</button> fumes. <button class="vocab-word" type="button" data-word="More" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">More</button> than 500 counties and municipalities have passed <button class="vocab-word" type="button" data-word="permanent" data-pos="" data-def="a. 永久的, 不变的, 固定的, 持久的
+n. 烫发
+ 永久的">permanent</button> or <button class="vocab-word" type="button" data-word="temporary" data-pos="" data-def="a. 暂时的, 临时的
+n. 临时工, 临时雇员
+ 临时">temporary</button> datacentre bans .
+Loudoun <button class="vocab-word" type="button" data-word="County" data-pos="" data-def="n. 县, 郡">County</button> in northern Virginia sits in <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> is known as <button class="vocab-word" type="button" data-word="Data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">Data</button> <button class="vocab-word" type="button" data-word="Center" data-pos="" data-def="n. 中心, 中心点, 中锋
+a. 中央的, 位在正中的
+vt. 集中, 定中心
+vi. 居中
+ 居中; 中央">Center</button> <button class="vocab-word" type="button" data-word="Alley" data-pos="" data-def="n. 小路, 巷">Alley</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> it is <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button> to <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> facilities than <button class="vocab-word" type="button" data-word="anywhere" data-pos="" data-def="adv. 无论何处">anywhere</button> <button class="vocab-word" type="button" data-word="else" data-pos="" data-def="a. 别的, 其他的
+adv. 另外, 否则, 不然">else</button> in the <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button>. Greg Pirio’s <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button> was turned upside <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> a gas-powered datacentre opened 150 metres from his <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button> <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>. “This neighbourhood was <button class="vocab-word" type="button" data-word="calm" data-pos="" data-def="n. 平稳, 风平浪静
+a. 平静的, 冷静的
+vi. 平静下来, 镇静
+vt. 使平静">calm</button> and peaceful, and it’s turned into this <button class="vocab-word" type="button" data-word="nightmare" data-pos="" data-def="n. 梦魇, 恶梦, 可怕的事物(或情景、人物)
+ 梦魇, 恶梦">nightmare</button>,” he says on a <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> <button class="vocab-word" type="button" data-word="call" data-pos="" data-def="n. 呼叫, 访问, 打电话, 号召, 召集, 要求
+vt. 呼叫, 召集, 打电话
+vi. 叫喊, 访问, 叫牌
+ 调用; 呼叫; DOS内部命令:在批处理文件中调用另一个批处理文件">call</button>. “Our <button class="vocab-word" type="button" data-word="quality" data-pos="" data-def="n. 品质, 特性, 才能, 质量
+a. 优质的
+ 品质">quality</button> of <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button> has been degraded so <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button>.”
+The <button class="vocab-word" type="button" data-word="noise" data-pos="" data-def="n. 噪音, 杂音, 响声, 喧闹
+vt. 谣传
+vi. 喧闹
+ 噪声">noise</button> from the centre’s <button class="vocab-word" type="button" data-word="eight" data-pos="" data-def="num. 八, 八个">eight</button> <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines is “<button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> being at an <button class="vocab-word" type="button" data-word="airport" data-pos="" data-def="n. 飞机场
+ 航空站, 机场">airport</button> with <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> these engines roaring,” Pirio says. “It has <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> of my neighbours headaches. It has kept children <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> at <button class="vocab-word" type="button" data-word="night" data-pos="" data-def="n. 夜, 夜晚, 晚上, 黑暗, 夜晚的工作
+ 夜, 黑夜, 黑暗">night</button>.” Pirio, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> for the <button class="vocab-word" type="button" data-word="Voice" data-pos="" data-def="n. 声音, 嗓音, 嗓子, 愿望, 发言权, 表达, 喉舌, 语态
+vt. 表达, 吐露, 调音">Voice</button> of America <button class="vocab-word" type="button" data-word="radio" data-pos="" data-def="n. 无线电, 收音机, 无线电报, 无线电广播, 无线电台
+v. 用无线电发送">radio</button> <button class="vocab-word" type="button" data-word="station" data-pos="" data-def="n. 车站, 站, 局, 驻地, 位置, 身分, 地位
+vt. 安置, 配置, 驻扎
+ 站">station</button>, has <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> developed <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> problems <button class="vocab-word" type="button" data-word="since" data-pos="" data-def="prep. 自...以后, 自...以来
+adv. 自那时以后
+conj. 既然, 自...以后, 自...以来">since</button> it opened, including <button class="vocab-word" type="button" data-word="dry" data-pos="" data-def="a. 干的, 无酒的, 枯燥无味的, 干燥的
+vt. 把...弄干
+vi. 变干
+n. 干, 干涸">dry</button> eyes and <button class="vocab-word" type="button" data-word="chest" data-pos="" data-def="n. 胸, 胸部, 衣柜, 箱子
+ 胸, 胸廓">chest</button> tightness. <button class="vocab-word" type="button" data-word="Once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">Once</button> he had to <button class="vocab-word" type="button" data-word="leave" data-pos="" data-def="n. 许可, 告别, 请假, 休假
+vt. 离开, 剩下, 遗忘, 委托, 丢弃
+vi. 出发, 离开, 生叶">leave</button> his <button class="vocab-word" type="button" data-word="house" data-pos="" data-def="n. 房子, 住宅, 机构, 议院, 家族, 家庭
+vt. 给...房子住, 收藏
+vi. 住, 躲藏">house</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> he was struggling to <button class="vocab-word" type="button" data-word="breathe" data-pos="" data-def="vi. 呼吸, 生存, 低语
+vt. 呼吸, 使喘息, 发散, 低声说">breathe</button>: “I <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> whenever the <button class="vocab-word" type="button" data-word="diesel" data-pos="" data-def="n. 内燃机, 柴油机, 柴油">diesel</button> generators are on, <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> I <button class="vocab-word" type="button" data-word="feel" data-pos="" data-def="vt. 感觉, 觉得, 触摸, 以为
+vi. 有知觉, 摸索, 同情
+n. 感觉, 觉得, 触摸">feel</button> it in my lungs.”
+The UK has <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> yet seen the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="level" data-pos="" data-def="n. 水平, 水准, 平地
+a. 同高的, 平坦的, 齐平的, 水平的
+vt. 弄平, 夷平, 使同等, 瞄准, 对准
+vi. 变平, 拉平
+ 级别">level</button> of opposition as the US. But anti-datacentre groups are gathering <button class="vocab-word" type="button" data-word="momentum" data-pos="" data-def="n. 动力, 动量
+ 动量">momentum</button>. Residents in <button class="vocab-word" type="button" data-word="east" data-pos="" data-def="n. 东方, 东
+a. 东方的, 向东的
+adv. 向东方, 朝东方">east</button> London are waging a high-profile <button class="vocab-word" type="button" data-word="campaign" data-pos="" data-def="n. 战役, 运动, 竞选运动
+vi. 参加运动, 作战">campaign</button> against a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> datacentre on <button class="vocab-word" type="button" data-word="Brick" data-pos="" data-def="n. 砖块, 积木
+a. 用砖做的
+vt. 用砖造, 用砖砌">Brick</button> <button class="vocab-word" type="button" data-word="Lane" data-pos="" data-def="n. 小路, 巷, 弄, 单行道">Lane</button>, including protesting <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> the offices of Angela Rayner, the communities <button class="vocab-word" type="button" data-word="secretary" data-pos="" data-def="n. 秘书, 书记, 大臣
+ 秘书">secretary</button>, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> overturned a <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> decision blocking the <button class="vocab-word" type="button" data-word="scheme" data-pos="" data-def="n. 方案, 计划, 组合, 系统, 图解, 诡计, 阴谋
+v. 计划, 设计, 图谋, 策划">scheme</button>.
+Seasoned campaigner Owen Espley, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> works for environmental <button class="vocab-word" type="button" data-word="charity" data-pos="" data-def="n. 慈悲, 博爱, 慈善团体, 施舍
+ 宽大, 宽恕, 慈善机关">charity</button> Global Action <button class="vocab-word" type="button" data-word="Plan" data-pos="" data-def="n. 计划, 方案, 策略, 方法, 进度表, 程序表, 平面图, 设计图, 轮廓, 示意图
+vt. 计划, 设计, 意欲
+vi. 订计划">Plan</button>, is helping scores of residents’ groups organise against planned datacentres. “This <button class="vocab-word" type="button" data-word="summer" data-pos="" data-def="n. 夏季, 全盛时期
+vi. 避暑, 过夏天
+ 加法器">summer</button> has been <button class="vocab-word" type="button" data-word="wild" data-pos="" data-def="n. 荒野, 荒地
+a. 野性的, 野蛮的, 野生的, 失控的, 任性的, 杂乱的, 轻率的, 狂热的, 疯狂的
+adv. 狂暴地, 失控地">wild</button>. <button class="vocab-word" type="button" data-word="Every" data-pos="" data-def="a. 每一, 所有的">Every</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="group" data-pos="" data-def="n. 团体, 组, 团, 群
+v. 聚合, 成群
+ 创建组; 组, 用户组">group</button> has popped <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button>. Petitions are getting thousands of signatures in days,” he says. “Communities are in uproar, and <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> politicians are playing catch-up.”
+Espley has been taken aback by the <button class="vocab-word" type="button" data-word="gulf" data-pos="" data-def="n. 海湾, 深渊, 漩涡, 隔阂
+vt. 吞没">gulf</button> between the government’s conviction that <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="alternative" data-pos="" data-def="n. 两者择一, 供替代的选择
+a. 两者择一的, 供选择的
+ 选择对象">alternative</button> and <button class="vocab-word" type="button" data-word="ordinary" data-pos="" data-def="a. 平常的, 普通的, 平凡的
+n. 平常的人(或事)">ordinary</button> people’s deepening understanding of the <button class="vocab-word" type="button" data-word="complex" data-pos="" data-def="n. 综合体, 情结, 络合物
+a. 复杂的, 组合的">complex</button> issues at <button class="vocab-word" type="button" data-word="stake" data-pos="" data-def="n. 桩, 炮烙刑, 木柱, 赌注, 奖金
+vt. 打桩, 用桩撑, 下赌注, 资助
+vi. 打赌">stake</button>. “<button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> has been a <button class="vocab-word" type="button" data-word="real" data-pos="" data-def="a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的
+n. 实数, 现实
+adv. 真正地">real</button> grassroots questioning of datacentres that connects British Bangladeshis in <button class="vocab-word" type="button" data-word="Brick" data-pos="" data-def="n. 砖块, 积木
+a. 用砖做的
+vt. 用砖造, 用砖砌">Brick</button> <button class="vocab-word" type="button" data-word="Lane" data-pos="" data-def="n. 小路, 巷, 弄, 单行道">Lane</button> with Hertfordshire villagers and communities in Northumberland, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> <button class="vocab-word" type="button" data-word="good" data-pos="" data-def="n. 善行, 好处, 利益
+a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的">good</button> jobs to <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button>,” he says. “It is astounding.”
+In <button class="vocab-word" type="button" data-word="fact" data-pos="" data-def="n. 事实, 真实性, 真相, 细节, 论据">fact</button>, <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> are <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> <button class="vocab-word" type="button" data-word="alternative" data-pos="" data-def="n. 两者择一, 供替代的选择
+a. 两者择一的, 供选择的
+ 选择对象">alternative</button> pathways to <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button>-­led expansion – from tougher regulation to prioritising publicly-owned <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="infrastructure" data-pos="" data-def="n. 基础结构, 基础设施
+ 基础设施">infrastructure</button> – <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> <button class="vocab-word" type="button" data-word="serve" data-pos="" data-def="vt. 可作...用, 服务, 经历, 招待, 供应, 送交, 对待
+vi. 服务, 服役, 侍应, 适合, 有用, 开球
+n. 发球, 轮到发球">serve</button> communal goals, <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as the <button class="vocab-word" type="button" data-word="heart" data-pos="" data-def="n. 心, 心脏, 中心, 内心, 感情, 精神, 心情, 宝贝儿
+vt. 鼓励">heart</button> <button class="vocab-word" type="button" data-word="disease" data-pos="" data-def="n. 疾病, 弊病
+ 病">disease</button> and dementia <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> powered by Bristol University’s <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> Isambard-AI <button class="vocab-word" type="button" data-word="facility" data-pos="" data-def="n. 容易, 灵巧, 设备
+ 设施; 设备; 装备">facility</button> . “<button class="vocab-word" type="button" data-word="First" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">First</button>, we <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> <button class="vocab-word" type="button" data-word="strong" data-pos="" data-def="a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的
+adv. 强劲地, 有力地, 猛烈地">strong</button> standards for <button class="vocab-word" type="button" data-word="private" data-pos="" data-def="a. 私人的, 秘密的, 私立的, 隐蔽的
+n. 士兵, 隐士, 阴部
+ 私人的">private</button> datacentres,” Espley says. “<button class="vocab-word" type="button" data-word="Second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">Second</button>, we <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> industrial <button class="vocab-word" type="button" data-word="strategy" data-pos="" data-def="n. 战略, 策略
+ 战略, 策略">strategy</button> to <button class="vocab-word" type="button" data-word="deliver" data-pos="" data-def="vt. 递送, 陈述, 释放, 发表, 引渡, 投递, 交付
+ 交运">deliver</button> our <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> computer, <button class="vocab-word" type="button" data-word="rather" data-pos="" data-def="adv. 宁可, 稍微, 相当">rather</button> than an assumption that US <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> tech building and owning <button class="vocab-word" type="button" data-word="everything" data-pos="" data-def="pron. 每件事物, 所有事物">everything</button> is the <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> <button class="vocab-word" type="button" data-word="forward" data-pos="" data-def="a. 向前的, 早的, 迅速的, 在前的, 进步的
+vt. 促进...的生长, 转寄, 运送
+adv. 向前地
+ 前推, 转信">forward</button>.”
+O n the deprived eastern edges of Cardiff, the <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button> <button class="vocab-word" type="button" data-word="sunshine" data-pos="" data-def="n. 阳光, 光明, 晴天">sunshine</button> is warming a <button class="vocab-word" type="button" data-word="car" data-pos="" data-def="n. 汽车, 客车
+ 车">car</button> <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> dotted with scraggly weeds. The perimeter <button class="vocab-word" type="button" data-word="fence" data-pos="" data-def="n. 围墙, 栅栏, 买卖赃物的人, 剑术
+vt. 用篱笆围住, 练习剑术, 防护
+vi. 击剑, 搪塞">fence</button> is overgrown with brambles, with patches of singed, blackened <button class="vocab-word" type="button" data-word="grass" data-pos="" data-def="n. 草, 草原, 牧场
+ 草, 禾本">grass</button> from a <button class="vocab-word" type="button" data-word="recent" data-pos="" data-def="a. 最近的, 近代的, 最新的
+ 最近的, 新进的">recent</button> wildfire <button class="vocab-word" type="button" data-word="visible" data-pos="" data-def="a. 看得见的, 明显的, 显然的
+n. 可见物">visible</button> <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="beyond" data-pos="" data-def="prep. 超过, 在那一边, 迟于
+adv. 在远处
+n. 更远处">beyond</button>. It looks abandoned but <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button> cars carrying doctors, nurses and <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> NHS <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> <button class="vocab-word" type="button" data-word="start" data-pos="" data-def="n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件
+vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛
+vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用
+ 起始">start</button> arriving. They are <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> to <button class="vocab-word" type="button" data-word="catch" data-pos="" data-def="n. 捕捉, 陷阱, 捕捉之物, 抓, 拉手
+vt. 捕捉, 赶上, 感染, 听清楚
+vi. 抓住, 燃着">catch</button> <button class="vocab-word" type="button" data-word="free" data-pos="" data-def="a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的
+vt. 释放, 解放, 使自由
+adv. 自由地, 免费">free</button> buses to Cardiff’s Heath <button class="vocab-word" type="button" data-word="hospital" data-pos="" data-def="n. 医院
+ 医院">hospital</button>, the largest in Wales.
+Hundreds are said to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> the <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> and <button class="vocab-word" type="button" data-word="ride" data-pos="" data-def="n. 骑马, 乘坐, 乘车, 搭便车
+vt. 骑, 乘坐, 压迫, 控制
+vi. 骑马, 乘车, 漂游">ride</button> <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>, but it is under <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> Labour-controlled Cardiff <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> wants to <button class="vocab-word" type="button" data-word="sell" data-pos="" data-def="vt. 卖, 背叛, 销售, 出卖
+vi. 卖, 销售
+n. 卖, 推销术, 失望">sell</button> the <button class="vocab-word" type="button" data-word="land" data-pos="" data-def="n. 陆地, 地面, 地界, 地产, 国土, 土地
+vi. 登陆, 登岸, 到达
+vt. 使上岸, 使登陆, 使到达
+ 连接盘; 焊盘">land</button> to a <button class="vocab-word" type="button" data-word="property" data-pos="" data-def="n. 财产, 所有权, 性质, 属性
+ 属性">property</button> developer, Curtis <button class="vocab-word" type="button" data-word="Hall" data-pos="" data-def="n. 门厅, 走廊, 会堂">Hall</button>, to <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> a hyperscale <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="facility" data-pos="" data-def="n. 容易, 灵巧, 设备
+ 设施; 设备; 装备">facility</button>. The centre will <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to 150 megawatts (MW) of <button class="vocab-word" type="button" data-word="electricity" data-pos="" data-def="n. 电, 电流, 电学, 热情, 电力供应
+ 电学; 电">electricity</button> a <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>, <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than <button class="vocab-word" type="button" data-word="triple" data-pos="" data-def="n. 三倍数, 三个一组
+a. 三倍的
+vt. 使增至三倍
+vi. 增至三倍">triple</button> the <button class="vocab-word" type="button" data-word="demand" data-pos="" data-def="n. 要求, 需求, 需要
+v. 要求, 查询">demand</button> of a <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button> the <button class="vocab-word" type="button" data-word="size" data-pos="" data-def="n. 大小, 尺寸, 规模, 尺码, 能力, 浆料
+vt. 上浆, 依大小排列
+vi. 可比拟
+a. 一定大小的, 一定尺寸的">size</button> of Cardiff.
+The development is <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> controversial in Wales. <button class="vocab-word" type="button" data-word="Council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">Council</button> meetings have been disrupted and <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than 1,200 planning objections lodged. <button class="vocab-word" type="button" data-word="Last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">Last</button> <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button>, the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> Plaid Cymru-led government ordered the <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> to <button class="vocab-word" type="button" data-word="put" data-pos="" data-def="vt. 放, 摆, 安置, 移动, 发射, 投掷, 写上, 表达, 使从事, 使受到, 驱使, 赋予
+vi. 出发, 航行, 发芽
+n. 掷, 股票出售权, 笨蛋
+a. 固定不动的
+ 发送文件">put</button> the application on <button class="vocab-word" type="button" data-word="hold" data-pos="" data-def="n. 把握, 把持力, 柄, 控制, 掌握, 监禁
+vt. 保存, 握住, 拿住, 占据, 持有, 拥有
+vi. 支持, 持续, 有效
+n. 保留
+ 保留">hold</button> <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> it considered <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> to <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> the decision <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of councillors’ hands.
+Campaigners are determined to <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> the pressure on the Welsh government. <button class="vocab-word" type="button" data-word="Sue" data-pos="" data-def="vt. 控告, 起诉, 请求
+vi. 提出诉讼, 提出请求">Sue</button> Elias, a retired librarian with seemingly endless reserves of <button class="vocab-word" type="button" data-word="energy" data-pos="" data-def="n. 精力, 精神, 活力, 能量
+ 能; 能量">energy</button>, dashes <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> and <button class="vocab-word" type="button" data-word="forth" data-pos="" data-def="adv. 往前, 以后, 向外">forth</button> reattaching her “<button class="vocab-word" type="button" data-word="Ditch" data-pos="" data-def="n. 沟渠
+vt. 在...开沟
+vi. 开沟">Ditch</button> the datacentre” <button class="vocab-word" type="button" data-word="banner" data-pos="" data-def="n. 旗帜
+a. 显著的, 特别好的">banner</button> to the <button class="vocab-word" type="button" data-word="car" data-pos="" data-def="n. 汽车, 客车
+ 车">car</button> <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> <button class="vocab-word" type="button" data-word="fence" data-pos="" data-def="n. 围墙, 栅栏, 买卖赃物的人, 剑术
+vt. 用篱笆围住, 练习剑术, 防护
+vi. 击剑, 搪塞">fence</button> and taping leaflets to the <button class="vocab-word" type="button" data-word="bus" data-pos="" data-def="n. 公共汽车
+ 总线; 汇流条; 母线">bus</button> <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> <button class="vocab-word" type="button" data-word="glass" data-pos="" data-def="n. 玻璃, 玻璃杯, 透镜
+vt. 装玻璃于, 反射, 反映
+vi. 成玻璃状">glass</button>. “<button class="vocab-word" type="button" data-word="What" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">What</button> is going to <button class="vocab-word" type="button" data-word="happen" data-pos="" data-def="vi. 发生, 发生, 恰巧">happen</button> to <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> the <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> the <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> and <button class="vocab-word" type="button" data-word="ride" data-pos="" data-def="n. 骑马, 乘坐, 乘车, 搭便车
+vt. 骑, 乘坐, 压迫, 控制
+vi. 骑马, 乘车, 漂游">ride</button>? It’s bonkers,” she says.
+Elias has leafleted the <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> and <button class="vocab-word" type="button" data-word="ride" data-pos="" data-def="n. 骑马, 乘坐, 乘车, 搭便车
+vt. 骑, 乘坐, 压迫, 控制
+vi. 骑马, 乘车, 漂游">ride</button> <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="Wednesday" data-pos="" data-def="n. 星期三">Wednesday</button> <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button> for <button class="vocab-word" type="button" data-word="six" data-pos="" data-def="num. 六, 六个">six</button> weeks. <button class="vocab-word" type="button" data-word="Today" data-pos="" data-def="n. 今天, 当今, 现在
+adv. 今天, 当今">Today</button> she is collecting signatures for an <button class="vocab-word" type="button" data-word="open" data-pos="" data-def="n. 公开, 户外, 空旷
+a. 开着的, 开放的, 开阔的, 营业着的, 公开的, 悬而未决的
+vt. 打开, 公开, 开放
+vi. 展开, 开始, 展现
+ 打开指令; 打开语句">open</button> <button class="vocab-word" type="button" data-word="letter" data-pos="" data-def="n. 信, 字母, 证书, 字面意义, 铅字, 学问, 出租人
+vt. 写字母于, 在...上刻字母, 用字母标明
+vi. 写印刷体字
+ 字母">letter</button> to <button class="vocab-word" type="button" data-word="prove" data-pos="" data-def="vt. 证明, 查验, 检验, 勘探, 显示
+vi. 证明是">prove</button> it is <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> – so <button class="vocab-word" type="button" data-word="far" data-pos="" data-def="a. 远的, 久远的, 遥远的
+adv. 甚远地, 很, 到很深的程度, 到很远的距离">far</button> she has added the names of 1,300 <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> and patients. “I’ve <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> done <button class="vocab-word" type="button" data-word="anything" data-pos="" data-def="pron. 任何事">anything</button> <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> this <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> but I’m told I’m a natural,” she says with a mischievous <button class="vocab-word" type="button" data-word="smile" data-pos="" data-def="n. 微笑, 喜色, 笑容
+vi. 微笑, 觉得好笑
+vt. 微笑着表示">smile</button>, <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> breaking <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> to <button class="vocab-word" type="button" data-word="speak" data-pos="" data-def="vi. 说, 说话, 演说, 发言
+vt. 说, 讲, 说出">speak</button> to <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> arriving for the <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> <button class="vocab-word" type="button" data-word="bus" data-pos="" data-def="n. 公共汽车
+ 总线; 汇流条; 母线">bus</button>.
+She belongs to community-based <button class="vocab-word" type="button" data-word="union" data-pos="" data-def="n. 联盟, 联合, 结合, 工会
+ 联合; 联管节; 活接头">union</button> Acorn, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> has campaigned against the <button class="vocab-word" type="button" data-word="scheme" data-pos="" data-def="n. 方案, 计划, 组合, 系统, 图解, 诡计, 阴谋
+v. 计划, 设计, 图谋, 策划">scheme</button>, and has taken <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> in protests , including bursting into a <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> planning <button class="vocab-word" type="button" data-word="meeting" data-pos="" data-def="n. 会议, 会面
+ 会议, 会谈, 集会">meeting</button> in <button class="vocab-word" type="button" data-word="July" data-pos="" data-def="n. 七月">July</button>. “We’d sent emails, done petitions, but we’d had <button class="vocab-word" type="button" data-word="nothing" data-pos="" data-def="n. 无, 不关紧要之事, 零
+adv. 毫不, 决不
+interj. 什么也没有, 无">nothing</button> <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> – tumbleweed. They’re our elected representatives … They should be talking with us.”
+It is <button class="vocab-word" type="button" data-word="hard" data-pos="" data-def="a. 坚硬的, 硬的, 难的, 艰苦的, 困难的, 坚固的, 猛烈的, 艰难的, 结实的, 确实的
+adv. 坚硬地, 努力地, 辛苦地, 接近地, 猛烈地, 牢固地">hard</button> to <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> <button class="vocab-word" type="button" data-word="anyone" data-pos="" data-def="pron. 任何人">anyone</button> in <button class="vocab-word" type="button" data-word="support" data-pos="" data-def="n. 支持, 支撑, 援助, 供养, 支撑物
+vt. 支援, 支撑, 帮助, 支持, 忍受, 供养, 证实
+ 后援; 支持">support</button> of the <button class="vocab-word" type="button" data-word="plan" data-pos="" data-def="n. 计划, 方案, 策略, 方法, 进度表, 程序表, 平面图, 设计图, 轮廓, 示意图
+vt. 计划, 设计, 意欲
+vi. 订计划">plan</button> in the <button class="vocab-word" type="button" data-word="queue" data-pos="" data-def="n. 辫子, 一队人, 队列
+vt. 使排队, 将...梳成辫子
+vi. 排队
+ 队列">queue</button> for the <button class="vocab-word" type="button" data-word="bus" data-pos="" data-def="n. 公共汽车
+ 总线; 汇流条; 母线">bus</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> runs <button class="vocab-word" type="button" data-word="three" data-pos="" data-def="num. 三, 三个">three</button> times an <button class="vocab-word" type="button" data-word="hour" data-pos="" data-def="n. 小时, 钟头, 时间, ...点钟, 课时">hour</button>. “I <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>. Without it, I probably wouldn’t <button class="vocab-word" type="button" data-word="continue" data-pos="" data-def="vi. 继续, 延续, 延长
+vt. 使继续, 使延长">continue</button> working at the <button class="vocab-word" type="button" data-word="hospital" data-pos="" data-def="n. 医院
+ 医院">hospital</button>,” says Ami George, a <button class="vocab-word" type="button" data-word="midwife" data-pos="" data-def="n. 助产士, 接生婆
+ 助产士">midwife</button>. “Parking <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> causes that <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="stress" data-pos="" data-def="n. 压力, 紧迫, 强调, 重音, 重点, 应力
+vt. 加压力于, 着重, 重读">stress</button>.”
+<button class="vocab-word" type="button" data-word="Across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">Across</button> Cardiff’s Rhymney <button class="vocab-word" type="button" data-word="River" data-pos="" data-def="n. 河, 江
+ 河流, 江河, 内河">River</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> curves <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> the proposed datacentre development, the area’s newest residents have <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> recently moved into 100 homes built under the <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button> council’s flagship house-building <button class="vocab-word" type="button" data-word="programme" data-pos="" data-def="n. 节目, 节目单, 程序, 纲要, 大纲, 计划
+vt. 规划, 拟...计划
+vi. 安排节目, 编程序">programme</button>. Nick Richards, a freelance filmmaker and skateboarder, and his <button class="vocab-word" type="button" data-word="wife" data-pos="" data-def="n. 妻子, 太太, 夫人
+ 妻子, 已婚妇女">wife</button> arrived in <button class="vocab-word" type="button" data-word="November" data-pos="" data-def="n. 十一月">November</button>. “It felt <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> the stars had aligned <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is a <button class="vocab-word" type="button" data-word="brand" data-pos="" data-def="n. 商标, 牌子, 烙印
+vt. 打烙印于">brand</button> <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="skate" data-pos="" data-def="n. 溜冰, 冰鞋
+vi. 滑冰, 滑过">skate</button> <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> the <button class="vocab-word" type="button" data-word="road" data-pos="" data-def="n. 路, 道路, 公路, 途径, 方法
+ 公路, 道路, 行车道">road</button> … the <button class="vocab-word" type="button" data-word="best" data-pos="" data-def="a. 最好的
+adv. 最好地
+n. 最好的人">best</button> in Cardiff. It’s amazing,” he says. “I <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> pictured myself living in suburbia but <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> we came we saw kids playing <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> and <button class="vocab-word" type="button" data-word="thought" data-pos="" data-def="n. 想法, 思想, 思维, 关心, 挂念
+think的过去式和过去分词">thought</button>, this is a really <button class="vocab-word" type="button" data-word="nice" data-pos="" data-def="a. 美好的, 和蔼的, 正派的, 做得好的, 精密的, 细微的, 挑剔的, 谨慎的">nice</button> <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button>.”
+<button class="vocab-word" type="button" data-word="Like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">Like</button> <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> residents on the <button class="vocab-word" type="button" data-word="estate" data-pos="" data-def="n. 不动产, (人生的)阶段, 阶层, 财产
+ 房地产, 遗产, 财产">estate</button>, Richards had <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button> the <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> was planning to <button class="vocab-word" type="button" data-word="sell" data-pos="" data-def="vt. 卖, 背叛, 销售, 出卖
+vi. 卖, 销售
+n. 卖, 推销术, 失望">sell</button> the <button class="vocab-word" type="button" data-word="park" data-pos="" data-def="n. 公园, 停车处
+vt. 停车, 置于
+vi. 停车">park</button> and <button class="vocab-word" type="button" data-word="ride" data-pos="" data-def="n. 骑马, 乘坐, 乘车, 搭便车
+vt. 骑, 乘坐, 压迫, 控制
+vi. 骑马, 乘车, 漂游">ride</button> to a datacentre developer. They moved in <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> months <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> the planning application was submitted. <button class="vocab-word" type="button" data-word="Instead" data-pos="" data-def="adv. 作为替代, 反而">Instead</button> of enjoying their <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button>, they <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> <button class="vocab-word" type="button" data-word="fear" data-pos="" data-def="n. 恐怖, 害怕, 担心
+v. 害怕, 恐惧, 为...担心, 敬畏">fear</button> they will <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> be <button class="vocab-word" type="button" data-word="able" data-pos="" data-def="a. 能干的, 能够的">able</button> to <button class="vocab-word" type="button" data-word="sell" data-pos="" data-def="vt. 卖, 背叛, 销售, 出卖
+vi. 卖, 销售
+n. 卖, 推销术, 失望">sell</button>. Their <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button> is 300 metres from <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> the plans <button class="vocab-word" type="button" data-word="describe" data-pos="" data-def="vt. 描述, 描绘, 画">describe</button> as the <button class="vocab-word" type="button" data-word="temporary" data-pos="" data-def="a. 暂时的, 临时的
+n. 临时工, 临时雇员
+ 临时">temporary</button> <button class="vocab-word" type="button" data-word="energy" data-pos="" data-def="n. 精力, 精神, 活力, 能量
+ 能; 能量">energy</button> centre, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> includes <button class="vocab-word" type="button" data-word="seven" data-pos="" data-def="num. 七, 七个">seven</button> <button class="vocab-word" type="button" data-word="giant" data-pos="" data-def="n. 巨人, 大力士, 巨大怪物
+a. 庞大的, 巨大的">giant</button> <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines. They are expected to <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button> the <button class="vocab-word" type="button" data-word="facility" data-pos="" data-def="n. 容易, 灵巧, 设备
+ 设施; 设备; 装备">facility</button> <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> the <button class="vocab-word" type="button" data-word="clock" data-pos="" data-def="n. 时钟, 计时器, (袜子上的)绣花边花
+vt. 绣花样, 记时, 记录
+vi. 记录时间
+ 时钟">clock</button> for <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> years, according to documents filed by the developer. “I <button class="vocab-word" type="button" data-word="feel" data-pos="" data-def="vt. 感觉, 觉得, 触摸, 以为
+vi. 有知觉, 摸索, 同情
+n. 感觉, 觉得, 触摸">feel</button> trapped,” Richards says, pacing his <button class="vocab-word" type="button" data-word="kitchen" data-pos="" data-def="n. 厨房, 全套炊具
+ 厨房">kitchen</button>. “I couldn’t <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> prospective buyers in the <button class="vocab-word" type="button" data-word="eye" data-pos="" data-def="n. 眼睛, 视力, 看
+vt. 看, 注视">eye</button> and <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> there’s going to be <button class="vocab-word" type="button" data-word="seven" data-pos="" data-def="num. 七, 七个">seven</button> <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> to them.”
+Richards has pored over the planning documents and leafleted <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="house" data-pos="" data-def="n. 房子, 住宅, 机构, 议院, 家族, 家庭
+vt. 给...房子住, 收藏
+vi. 住, 躲藏">house</button> on the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="estate" data-pos="" data-def="n. 不动产, (人生的)阶段, 阶层, 财产
+ 房地产, 遗产, 财产">estate</button>, including a <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> will be <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> 150 metres from the turbines. “This datacentre will be powered by <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines,” he says. “They will <button class="vocab-word" type="button" data-word="pump" data-pos="" data-def="n. 抽水机, 打气筒, 泵, 抽吸
+vt. 用唧筒抽水, 打气, 盘问, 倾注, 使疲惫
+vi. 抽水, 上下(或往复)运动">pump</button> <button class="vocab-word" type="button" data-word="nitrogen" data-pos="" data-def="n. 氮
+ 氮N-2">nitrogen</button> <button class="vocab-word" type="button" data-word="dioxide" data-pos="" data-def="n. 二氧化物
+ 二氧化物">dioxide</button> into our <button class="vocab-word" type="button" data-word="atmosphere" data-pos="" data-def="n. 大气, 空气, 气氛
+ 大气; 大气压">atmosphere</button>. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> will <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> be <button class="vocab-word" type="button" data-word="fine" data-pos="" data-def="n. 罚款, 罚金, 晴天, 精细
+a. 好的, 晴朗的, 健康的, 细小的, 精细的
+vt. 罚款, 精炼, 澄清
+vi. 变清, 变细
+adv. 很好
+ 精细">fine</button> particulate <button class="vocab-word" type="button" data-word="matter" data-pos="" data-def="n. 事件, 物质, 原因, 素材, 实体, 重要
+vi. 有关系">matter</button> and formaldehyde. <button class="vocab-word" type="button" data-word="All" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">All</button> these toxins <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> conditions, <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as asthma, COPD and <button class="vocab-word" type="button" data-word="heart" data-pos="" data-def="n. 心, 心脏, 中心, 内心, 感情, 精神, 心情, 宝贝儿
+vt. 鼓励">heart</button> <button class="vocab-word" type="button" data-word="disease" data-pos="" data-def="n. 疾病, 弊病
+ 病">disease</button>.”
+<button class="vocab-word" type="button" data-word="Air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">Air</button> <button class="vocab-word" type="button" data-word="quality" data-pos="" data-def="n. 品质, 特性, 才能, 质量
+a. 优质的
+ 品质">quality</button> assessments commissioned by the developer <button class="vocab-word" type="button" data-word="estimate" data-pos="" data-def="n. 估计, 判断
+vt. 估计, 评价, 判断
+vi. 估计">estimate</button> the emissions will be within <button class="vocab-word" type="button" data-word="safe" data-pos="" data-def="n. 保险箱, 冷藏室
+a. 安全的, 可靠的, 平安的, 稳健的, 有把握的">safe</button> levels. Curtis <button class="vocab-word" type="button" data-word="Hall" data-pos="" data-def="n. 门厅, 走廊, 会堂">Hall</button> says the <button class="vocab-word" type="button" data-word="scheme" data-pos="" data-def="n. 方案, 计划, 组合, 系统, 图解, 诡计, 阴谋
+v. 计划, 设计, 图谋, 策划">scheme</button> cannot <button class="vocab-word" type="button" data-word="proceed" data-pos="" data-def="vi. 继续进行, 进行, 开始, 发出, 起诉
+ 所得, 收入, 收益">proceed</button> without 100% compliance with <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> environmental and <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="health" data-pos="" data-def="n. 健康, 卫生, 蓬勃, 健康状态
+ 健康">health</button> regulatory requirements.
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="Inside" data-pos="" data-def="n. 内部, 内脏, 内幕
+a. 内部的, 秘密的, 户内的
+adv. 在里面
+prep. 在...之内">Inside</button> <button class="vocab-word" type="button" data-word="Saturday" data-pos="" data-def="n. 星期六">Saturday</button>
+The <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> a <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> the scenes of the <button class="vocab-word" type="button" data-word="Saturday" data-pos="" data-def="n. 星期六">Saturday</button> <button class="vocab-word" type="button" data-word="magazine" data-pos="" data-def="n. 杂志, 仓库, 弹盒, 胶卷盒
+ 卡片箱, 介质装卸程序">magazine</button>. <button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> the <button class="vocab-word" type="button" data-word="inside" data-pos="" data-def="n. 内部, 内脏, 内幕
+a. 内部的, 秘密的, 户内的
+adv. 在里面
+prep. 在...之内">inside</button> <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button> from our <button class="vocab-word" type="button" data-word="top" data-pos="" data-def="n. 顶部, 顶端, 极点, 上面, 上部, 顶篷, 最高地位, 首位, 陀螺
+a. 最高的, 顶上的, 头等的
+vt. 盖, 加以顶, 高达, 超越
+vi. 结束, 达到顶点, 高出
+ TOP协议">top</button> writers as <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> as <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> the must-read articles and columns, delivered to your inbox <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="weekend" data-pos="" data-def="n. 周末, 周末休假">weekend</button>.
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+<button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than 100 <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> planned UK datacentres aiming to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to the <button class="vocab-word" type="button" data-word="long" data-pos="" data-def="a. 长的, 长久的, 冗长的, 做多头的
+vi. 渴望, 热望, 极想
+adv. 长久, 始终
+n. 长时间, 长信号, 长整型
+ 长, 长整型">long</button> <button class="vocab-word" type="button" data-word="wait" data-pos="" data-def="n. 等待, 等候
+vt. 等候, 期待, 延缓, 伺候, 推迟
+vi. 等, 等候, 耽搁, 伺候用餐
+ 等待">wait</button> to be connected to the <button class="vocab-word" type="button" data-word="grid" data-pos="" data-def="n. 格子, 栅格
+ 网格">grid</button>. Richards doesn’t <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> his <button class="vocab-word" type="button" data-word="estate" data-pos="" data-def="n. 不动产, (人生的)阶段, 阶层, 财产
+ 房地产, 遗产, 财产">estate</button> to be a <button class="vocab-word" type="button" data-word="test" data-pos="" data-def="n. 测试, 试验, 化验, 检验, 考验, 甲壳
+vt. 测试, 试验, 化验
+vi. 接受测验, 进行测试">test</button> <button class="vocab-word" type="button" data-word="case" data-pos="" data-def="n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子
+vt. 装箱, 包盖">case</button>. “Within a <button class="vocab-word" type="button" data-word="mile" data-pos="" data-def="n. 英里, 很大距离
+ 英里, 哩">mile</button> of this datacentre are 30,000 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button>. But the <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> building this centre don’t <button class="vocab-word" type="button" data-word="live" data-pos="" data-def="a. 活的, 生动的, 精力充沛的, 实况转播的
+vi. 活, 生存, 居住
+vt. 过着, 度过, 经历
+adv. 实况地">live</button> <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> ... They don’t <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> shits <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> Welsh <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button>.”
+A stone’s <button class="vocab-word" type="button" data-word="throw" data-pos="" data-def="vt. 投, 掷, 抛, 发射, 摔下, 匆匆穿上(或脱下), 抛弃, 摆脱
+vi. 丢, 掷, 抛
+n. 投掷, 掷骰子, 冒险">throw</button> <button class="vocab-word" type="button" data-word="away" data-pos="" data-def="adv. 离去">away</button> is Llanrumney <button class="vocab-word" type="button" data-word="Hall" data-pos="" data-def="n. 门厅, 走廊, 会堂">Hall</button>, <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button> the <button class="vocab-word" type="button" data-word="home" data-pos="" data-def="n. 家, 避难所, 故乡
+a. 家庭的, 国内的, 打中目标的
+adv. 在家, 在本国, 打中目标地
+ 返回始位">home</button> of privateer and <button class="vocab-word" type="button" data-word="slave" data-pos="" data-def="n. 奴隶, 从动装置, 卑鄙的人
+vi. 拼命工作
+ 从设备">slave</button> trader <button class="vocab-word" type="button" data-word="Sir" data-pos="" data-def="n. 先生, 阁下">Sir</button> Henry Morgan, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> gave his <button class="vocab-word" type="button" data-word="name" data-pos="" data-def="n. 名字, 名称, 姓名, 名义, 名誉, 文件名
+vt. 命名, 称呼, 任命, 提名, 列举
+a. 姓名的, 据以取名的
+ 名称, 文件名, 姓名">name</button> to <button class="vocab-word" type="button" data-word="Captain" data-pos="" data-def="n. 船长, 指挥官, 海军上校, 首领
+vt. 率领, 指挥">Captain</button> Morgan rum. It is <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> a thriving <button class="vocab-word" type="button" data-word="community" data-pos="" data-def="n. 社区, 公众, 共有, 共同体
+ 公众, 共有, 社会">community</button> centre, with a <button class="vocab-word" type="button" data-word="cafe" data-pos="" data-def="n. 咖啡馆, 酒店">cafe</button>, recording <button class="vocab-word" type="button" data-word="studio" data-pos="" data-def="n. 工作室, 画室, 演播室, 电影制片厂">studio</button> and creche. <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> councillor Lee Bridgeman is vaping on an <button class="vocab-word" type="button" data-word="outdoor" data-pos="" data-def="a. 户外的, 屋外的, 露天的">outdoor</button> <button class="vocab-word" type="button" data-word="table" data-pos="" data-def="n. 桌子, 餐桌, 工作台, 铭文, 表格, 表, 高原, 平地层
+vt. 搁置, 嵌合, 制表, 把...列入议事日程
+ 表格, 模拟运算表">table</button>, dressed in a hoodie and <button class="vocab-word" type="button" data-word="baseball" data-pos="" data-def="n. 棒球
+ 棒球系统">baseball</button> <button class="vocab-word" type="button" data-word="cap" data-pos="" data-def="n. 盖子, 帽子
+vt. 戴帽子, 覆盖, 胜过
+vi. 脱帽致意
+ 调用程序分析, 容量, 代码分析程序, 计算机辅助生产, 计算机辅助印刷">cap</button>. He ran the <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> <button class="vocab-word" type="button" data-word="youth" data-pos="" data-def="n. 年轻, 青年时代, 青年们, 青春
+ 青年, 青年时期, 青春时期">youth</button> centre <button class="vocab-word" type="button" data-word="until" data-pos="" data-def="prep. 直到, 在...以前
+conj. 直到...时, 在...以前">until</button> it was lost to austerity-era cuts, and <button class="vocab-word" type="button" data-word="though" data-pos="" data-def="adv. 然而, 可是
+conj. 虽然, 纵然">though</button> he’s a high-ranking councillor, jointly <button class="vocab-word" type="button" data-word="responsible" data-pos="" data-def="a. 有责任的, 负责的, 责任重大的
+ 应负责任的, 有责任的, 能履行责任的">responsible</button> for housing and communities, he does <button class="vocab-word" type="button" data-word="regular" data-pos="" data-def="a. 规则的, 常例的, 有秩序的, 整齐的, 等边的, 定期的, 经常的, 合格的, 常备军的
+n. 正规军, 正式队员
+adv. 经常地
+n. 正常体
+ 正常体">regular</button> <button class="vocab-word" type="button" data-word="youth" data-pos="" data-def="n. 年轻, 青年时代, 青年们, 青春
+ 青年, 青年时期, 青春时期">youth</button> <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> shifts in the <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button>, <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the poorest in Cardiff.
+“Llanrumney runs through my veins,” he says. “I’m <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> your <button class="vocab-word" type="button" data-word="usual" data-pos="" data-def="a. 平常的, 通常的">usual</button> politician. I don’t <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> to conferences. I got into <button class="vocab-word" type="button" data-word="politics" data-pos="" data-def="n. 政治, 政治学, 政见, 政治活动
+ 政治, 政治学, 政纲">politics</button> to <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> the <button class="vocab-word" type="button" data-word="community" data-pos="" data-def="n. 社区, 公众, 共有, 共同体
+ 公众, 共有, 社会">community</button>.”
+Bridgeman is charming and friendly – but he is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="afraid" data-pos="" data-def="a. 害怕的, 恐怕的, 遗憾的">afraid</button> of a <button class="vocab-word" type="button" data-word="fight" data-pos="" data-def="n. 打架, 争吵, 斗志
+v. 对抗, 打架">fight</button>. He is <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the <button class="vocab-word" type="button" data-word="few" data-pos="" data-def="a. 很少的, 不多的, 少数的
+n. 少数">few</button> <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> figures in the <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> has spoken <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> in <button class="vocab-word" type="button" data-word="support" data-pos="" data-def="n. 支持, 支撑, 援助, 供养, 支撑物
+vt. 支援, 支撑, 帮助, 支持, 忍受, 供养, 证实
+ 后援; 支持">support</button> of the development, <button class="vocab-word" type="button" data-word="sometimes" data-pos="" data-def="adv. 有时, 时常, 往往">sometimes</button> clashing with anti-datacentre campaigners on <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> Facebook groups. “<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> of the information being <button class="vocab-word" type="button" data-word="spread" data-pos="" data-def="n. 传播, 散布, 伸展
+a. 双唇展开的, 伸展的
+vt. 展开, 铺开, 传播, 推广, 伸出, 涂, 敷, 延伸
+vi. 展开, 扩大, 传开, 延伸
+ 展开">spread</button> is scaremongering,” he says. “They are telling residents their <button class="vocab-word" type="button" data-word="electricity" data-pos="" data-def="n. 电, 电流, 电学, 热情, 电力供应
+ 电学; 电">electricity</button> bills will <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> … the <button class="vocab-word" type="button" data-word="river" data-pos="" data-def="n. 河, 江
+ 河流, 江河, 内河">river</button> and <button class="vocab-word" type="button" data-word="reservoir" data-pos="" data-def="n. 贮水池, 贮藏处, 贮备, 水库
+vt. 储藏">reservoir</button> will be drained … It’s <button class="vocab-word" type="button" data-word="false" data-pos="" data-def="a. 错误的, 虚伪的, 假的, 不老实的
+adv. 不准确地, 欺诈地">false</button> information.”
+<button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> of these fears <button class="vocab-word" type="button" data-word="stem" data-pos="" data-def="n. 茎, 干, 柄, 船首, 血统, 堵塞物
+vt. 摘掉茎, 装柄于, 阻止, 堵住, 逆行
+vi. 堵住, 逆行">stem</button> from the US, <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> the <button class="vocab-word" type="button" data-word="rapid" data-pos="" data-def="a. 迅速的, 飞快的, 急促的, 陡的
+n. 急流">rapid</button> expansion of hyperscale facilities has been linked to rising <button class="vocab-word" type="button" data-word="electricity" data-pos="" data-def="n. 电, 电流, 电学, 热情, 电力供应
+ 电学; 电">electricity</button> bills, <button class="vocab-word" type="button" data-word="water" data-pos="" data-def="n. 水, 雨水, 海水, 水位, 水面, 流水
+vt. 给...浇水, 供以水, 注入水, 使湿
+vi. 流泪, 流口水, 加水
+a. 水的, 水上的, 水生的, 含水的">water</button> shortages and <button class="vocab-word" type="button" data-word="toxic" data-pos="" data-def="a. 有毒的, 中毒的
+ 中毒的, 毒物的">toxic</button> <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> pollution. Bridgeman argues that “planning processes are totally different in the UK. So <button class="vocab-word" type="button" data-word="whereas" data-pos="" data-def="conj. 然而, 鉴于
+ 考虑到, 鉴于, 就...而论">whereas</button> [US authorities] <button class="vocab-word" type="button" data-word="turn" data-pos="" data-def="n. 转弯, 转动, 旋转, 翻转, 一圈, 顺次, 改动, 变化, 性格, 特色, 形状, 转折
+vt. 使旋转, 转弯, 转动, 使转向, 驱赶, 阻挡, 兑换, 改写, 使作对, 绕过, 使流通
+vi. 转动, 转弯, 转向, 翻转, 回转, 改变, 转身, 变成, 变质, 晕眩, 易脱手">turn</button> a <button class="vocab-word" type="button" data-word="blind" data-pos="" data-def="n. 蒙蔽物, 窗帘
+a. 盲目的, 瞎的, 不加思考的
+vt. 使失明, 蒙蔽, 遮暗
+adv. 盲目地">blind</button> <button class="vocab-word" type="button" data-word="eye" data-pos="" data-def="n. 眼睛, 视力, 看
+vt. 看, 注视">eye</button> to <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of the environmental impacts of those monstrosities, that would <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> <button class="vocab-word" type="button" data-word="happen" data-pos="" data-def="vi. 发生, 发生, 恰巧">happen</button> in the UK.” He “wouldn’t be comfortable” if the <button class="vocab-word" type="button" data-word="gas" data-pos="" data-def="n. 气体, 汽油, 瓦斯
+ 气体; 煤气; 瓦斯; 毒气">gas</button> turbines were running for <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> years but thinks they might <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be needed if the datacentre can <button class="vocab-word" type="button" data-word="connect" data-pos="" data-def="v. 连接, 联合, 联系">connect</button> to the <button class="vocab-word" type="button" data-word="grid" data-pos="" data-def="n. 格子, 栅格
+ 网格">grid</button> sooner.
+The backlash has caught him by <button class="vocab-word" type="button" data-word="surprise" data-pos="" data-def="n. 惊奇, 奇袭, 诧异
+vt. 使惊奇, 撞见, 奇袭">surprise</button>, but he blames <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> activists. “I didn’t <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> it coming. I didn’t <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> would be this <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> interference,” he says.
+Emotions are running <button class="vocab-word" type="button" data-word="high" data-pos="" data-def="n. 高度, 高处
+a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的
+adv. 高度地, 奢侈地">high</button> in the <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button>. <button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> residents <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> they have been blocked by councillors <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> trying to <button class="vocab-word" type="button" data-word="question" data-pos="" data-def="n. 问题, 询问
+v. 询问, 审问, 怀疑
+ 询问">question</button> them on Facebook. Planning <button class="vocab-word" type="button" data-word="committee" data-pos="" data-def="n. 委员会
+ 委员会">committee</button> members have received threatening emails, Bridgeman says. “Threats <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> ‘I will <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> you ... we will <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> your <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button> <button class="vocab-word" type="button" data-word="hell" data-pos="" data-def="n. 地狱, 邪恶势力, 苦境, 阴间, 毁坏, 训斥
+vi. 狂饮, 飞驰">hell</button>.’ That shouldn’t <button class="vocab-word" type="button" data-word="happen" data-pos="" data-def="vi. 发生, 发生, 恰巧">happen</button>.”
+<button class="vocab-word" type="button" data-word="Although" data-pos="" data-def="conj. 虽然, 尽管">Although</button> the datacentre will <button class="vocab-word" type="button" data-word="employ" data-pos="" data-def="n. 雇用
+vt. 雇用, 使用, 使从事于">employ</button> <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to 125 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> it is built, Bridgeman believes it could <button class="vocab-word" type="button" data-word="encourage" data-pos="" data-def="vt. 鼓励, 支持, 激励
+ 怂恿, 煽动, 助长">encourage</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> companies to <button class="vocab-word" type="button" data-word="east" data-pos="" data-def="n. 东方, 东
+a. 东方的, 向东的
+adv. 向东方, 朝东方">east</button> Cardiff: “I’m told the knock-on <button class="vocab-word" type="button" data-word="effect" data-pos="" data-def="n. 结果, 影响, 效果, 印象
+vt. 实行, 引起, 完成
+ 效果">effect</button> could <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> to thousands of jobs.”
+Later that <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>, residents <button class="vocab-word" type="button" data-word="squeeze" data-pos="" data-def="n. 紧握, 挤, 榨, 榨取, 佣金
+vt. 紧握, 挤, 榨取
+vi. 压榨, 榨">squeeze</button> into the <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> <button class="vocab-word" type="button" data-word="boxing" data-pos="" data-def="n. 拳击
+ 围模(牙科)">boxing</button> <button class="vocab-word" type="button" data-word="club" data-pos="" data-def="n. 俱乐部, 木棍, 球棒
+vt. 用棍棒打, 缴纳
+vi. 联合起来
+a. 俱乐部的">club</button> for a <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="meeting" data-pos="" data-def="n. 会议, 会面
+ 会议, 会谈, 集会">meeting</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> the datacentre <button class="vocab-word" type="button" data-word="plan" data-pos="" data-def="n. 计划, 方案, 策略, 方法, 进度表, 程序表, 平面图, 设计图, 轮廓, 示意图
+vt. 计划, 设计, 意欲
+vi. 订计划">plan</button>. It is standing <button class="vocab-word" type="button" data-word="room" data-pos="" data-def="n. 房间, 空位, 场所
+vi. 住宿, 居住
+vt. 留宿">room</button> <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button>, with <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> lining the walls. Bridgeman repeats his <button class="vocab-word" type="button" data-word="claim" data-pos="" data-def="n. 要求, 要求权, 断言, 权利
+vt. 要求, 认领, 主张
+vi. 提出要求, 主张, 断言">claim</button> that <button class="vocab-word" type="button" data-word="few" data-pos="" data-def="a. 很少的, 不多的, 少数的
+n. 少数">few</button> locals have complained: “I have hundreds of emails from residents ... So <button class="vocab-word" type="button" data-word="far" data-pos="" data-def="a. 远的, 久远的, 遥远的
+adv. 甚远地, 很, 到很深的程度, 到很远的距离">far</button> I’ve had <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> emails with regards to the datacentre.”
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> in the <button class="vocab-word" type="button" data-word="audience" data-pos="" data-def="n. 听众, 观众, 读者
+ 听讼, 观众, 听众">audience</button> <button class="vocab-word" type="button" data-word="react" data-pos="" data-def="vi. 起反应, 起作用, 反攻
+ 应答, 发生反应">react</button> angrily. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are shouts of, “We don’t <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> you, that’s <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button>” and, “Have you heard of social media?” <button class="vocab-word" type="button" data-word="One" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">One</button> <button class="vocab-word" type="button" data-word="woman" data-pos="" data-def="n. 女人, 妇女, 女仆
+a. 女用的, 女性的, 妇女的
+vt. 贬称...为女人, 使成女人腔">woman</button> stands <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> and says, “Don’t <button class="vocab-word" type="button" data-word="tell" data-pos="" data-def="vt. 告诉, 说, 吩咐, 断定, 知道
+vi. 讲述, 泄密, 告发, 表明">tell</button> me you haven’t been privy to the meetings … or things <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button>.” In a <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button> of hands, roughly three-quarters of the 80 to 100 <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> in the <button class="vocab-word" type="button" data-word="room" data-pos="" data-def="n. 房间, 空位, 场所
+vi. 住宿, 居住
+vt. 留宿">room</button> <button class="vocab-word" type="button" data-word="indicate" data-pos="" data-def="vt. 显示, 象征, 指示, 指出
+ 指示">indicate</button> they are from Llanrumney, <button class="vocab-word" type="button" data-word="almost" data-pos="" data-def="adv. 几乎, 差不多">almost</button> <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> opposed. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are cries of, “<button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> you are … you don’t <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> emails!” and, “That’s <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="person" data-pos="" data-def="n. 人, 人身, 人称
+ 人, 法人, 人身">person</button>!” <button class="vocab-word" type="button" data-word="Almost" data-pos="" data-def="adv. 几乎, 差不多">Almost</button> <button class="vocab-word" type="button" data-word="three" data-pos="" data-def="num. 三, 三个">three</button> weeks later, Bridgeman performs a <button class="vocab-word" type="button" data-word="sudden" data-pos="" data-def="n. 突然, 忽然
+a. 突然的, 意外的, 快速的">sudden</button> about-turn, submitting a <button class="vocab-word" type="button" data-word="formal" data-pos="" data-def="a. 正式的, 形式的, 礼仪的, 拘于礼节的, 拘谨的
+n. 正式的社交活动">formal</button> <button class="vocab-word" type="button" data-word="letter" data-pos="" data-def="n. 信, 字母, 证书, 字面意义, 铅字, 学问, 出租人
+vt. 写字母于, 在...上刻字母, 用字母标明
+vi. 写印刷体字
+ 字母">letter</button> of objection to the <button class="vocab-word" type="button" data-word="scheme" data-pos="" data-def="n. 方案, 计划, 组合, 系统, 图解, 诡计, 阴谋
+v. 计划, 设计, 图谋, 策划">scheme</button>, noting that he has heard from a <button class="vocab-word" type="button" data-word="large" data-pos="" data-def="a. 大的, 大量的, 宽大的, 广博的
+adv. 大大地, 夸大地">large</button> <button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> of residents.
+T he UK hyperscale buildout has been focused on London, but datacentre developers are increasingly targeting areas <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> the south-east, to <button class="vocab-word" type="button" data-word="escape" data-pos="" data-def="n. 逃亡, 避难设备, 逃跑
+vi. 逃脱, 避开, 溜走
+vt. 逃避, 避免, 被...忘掉">escape</button> <button class="vocab-word" type="button" data-word="severe" data-pos="" data-def="a. 严格的, 尖锐的, 严肃的, 严重的, 严厉的, 朴素的
+ 严厉的, 苛刻的, 严重的">severe</button> electrical <button class="vocab-word" type="button" data-word="grid" data-pos="" data-def="n. 格子, 栅格
+ 网格">grid</button> <button class="vocab-word" type="button" data-word="capacity" data-pos="" data-def="n. 容量, 能力, 才能, 资格
+ 容量">capacity</button> limits. Wales <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> has the largest datacentre <button class="vocab-word" type="button" data-word="capacity" data-pos="" data-def="n. 容量, 能力, 才能, 资格
+ 容量">capacity</button> of <button class="vocab-word" type="button" data-word="anywhere" data-pos="" data-def="adv. 无论何处">anywhere</button> <button class="vocab-word" type="button" data-word="outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">outside</button> the <button class="vocab-word" type="button" data-word="capital" data-pos="" data-def="n. 首都, 大写字母, 资本
+a. 首都的, 重要的">capital</button>. <button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> could be coming: <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> of Wales’s largest <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> and proposed datacentres will <button class="vocab-word" type="button" data-word="consume" data-pos="" data-def="vt. 消耗, 消费, 消灭
+vi. 耗尽, 毁灭">consume</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="electricity" data-pos="" data-def="n. 电, 电流, 电学, 热情, 电力供应
+ 电学; 电">electricity</button> than <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> Welsh homes <button class="vocab-word" type="button" data-word="put" data-pos="" data-def="vt. 放, 摆, 安置, 移动, 发射, 投掷, 写上, 表达, 使从事, 使受到, 驱使, 赋予
+vi. 出发, 航行, 发芽
+n. 掷, 股票出售权, 笨蛋
+a. 固定不动的
+ 发送文件">put</button> <button class="vocab-word" type="button" data-word="together" data-pos="" data-def="adv. 一起, 共同, 彼此">together</button>. <button class="vocab-word" type="button" data-word="While" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">While</button> the <button class="vocab-word" type="button" data-word="previous" data-pos="" data-def="a. 早先的, 前面的, 过急的
+ 以前的, 生前的, 前述的">previous</button> Welsh <button class="vocab-word" type="button" data-word="Labour" data-pos="" data-def="n. 劳动, 努力, 工作, 劳工, 分娩
+vi. 劳动, 努力, 苦干
+vt. 详细分析, 使厌烦">Labour</button> administration welcomed the building spree, claiming <button class="vocab-word" type="button" data-word="giant" data-pos="" data-def="n. 巨人, 大力士, 巨大怪物
+a. 庞大的, 巨大的">giant</button> tech firms’ investment would <button class="vocab-word" type="button" data-word="generate" data-pos="" data-def="vt. 产生, 发生, 导致
+ 产生">generate</button> thousands of jobs, the Plaid Cymru-led government has been <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> circumspect, with ministers emphasising it must <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> Wales.
+In the <button class="vocab-word" type="button" data-word="light" data-pos="" data-def="n. 光, 光亮, 灯, 日光, 发光体, 光源, 杰出人物, 火花, 眼光
+a. 轻的, 少量的, 轻微的, 轻快的, 轻浮的, 明亮的, 淡色的, 容易的
+vt. 点燃, 照亮
+vi. 点着, 变亮, 突降, 偶然碰到
+adv. 轻地">light</button> and airy Welsh <button class="vocab-word" type="button" data-word="parliament" data-pos="" data-def="n. 国会, 议会
+ 会议, 国会, 议院">parliament</button> building, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> overlooks Cardiff <button class="vocab-word" type="button" data-word="Bay" data-pos="" data-def="n. 海湾, 狗吠声, 月桂
+vt. 吠, 使走投无路
+vi. 吠">Bay</button>, opposition is growing. Plaid Cymru’s Nick Carter, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> is the Senedd <button class="vocab-word" type="button" data-word="member" data-pos="" data-def="n. 成员, 会员
+ │肢, 肢体">member</button> for Caerdydd Ffynnon Taf, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> includes Cardiff <button class="vocab-word" type="button" data-word="East" data-pos="" data-def="n. 东方, 东
+a. 东方的, 向东的
+adv. 向东方, 朝东方">East</button>, worries that the surging <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button> will <button class="vocab-word" type="button" data-word="benefit" data-pos="" data-def="n. 利益
+vt. 有益于
+vi. 受益">benefit</button> developers and US tech firms <button class="vocab-word" type="button" data-word="rather" data-pos="" data-def="adv. 宁可, 稍微, 相当">rather</button> than the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button>. “As a <button class="vocab-word" type="button" data-word="party" data-pos="" data-def="n. 宴会, 党, 政党, 团体, 当事人, 聚会
+v. 举办聚会">party</button>, we’re <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> going to <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> to <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> a proliferation of datacentres, haphazardly being built <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button>, on <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> may be an opportunistic <button class="vocab-word" type="button" data-word="basis" data-pos="" data-def="n. 基础, 主要成分
+ 基底">basis</button>,” he says.
+Carter, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> has a <button class="vocab-word" type="button" data-word="background" data-pos="" data-def="n. 背景, 背景资料
+ 背景, 后台">background</button> in commercial <button class="vocab-word" type="button" data-word="property" data-pos="" data-def="n. 财产, 所有权, 性质, 属性
+ 属性">property</button>, has examined the Cardiff plans in <button class="vocab-word" type="button" data-word="detail" data-pos="" data-def="n. 细节, 详情
+vt. 详述, 选派
+vi. 画详图
+ 详细数据">detail</button>. He says the developer, Curtis <button class="vocab-word" type="button" data-word="Hall" data-pos="" data-def="n. 门厅, 走廊, 会堂">Hall</button>, has <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="track" data-pos="" data-def="n. 轨迹, 足迹, 径迹, 小道, 轨道, 磁轨, 途径
+vt. 循路而行, 追踪, 通过, 用纤拉
+vi. 追踪, 留下足迹, 沿轨道运行
+ 跟踪">track</button> <button class="vocab-word" type="button" data-word="record" data-pos="" data-def="n. 记录, 履历, 档案, 审判记录, 最高纪录, 唱片
+vt. 记录, 记载, 标明, 将...录音
+vi. 记录, 录音, 可被录音
+a. 创纪录的
+ 录制, 记录">record</button> in datacentres; “They could be a <button class="vocab-word" type="button" data-word="front" data-pos="" data-def="n. 前面, 开头, 前线, 阵线, 态度
+vt. 面对, 朝向, 对抗
+vi. 朝向">front</button> for <button class="vocab-word" type="button" data-word="someone" data-pos="" data-def="pron. 有人, 某人">someone</button> <button class="vocab-word" type="button" data-word="else" data-pos="" data-def="a. 别的, 其他的
+adv. 另外, 否则, 不然">else</button>: Google, Microsoft, whoever. I can <button class="vocab-word" type="button" data-word="understand" data-pos="" data-def="vt. 理解, 了解, 领会, 听说, 懂
+vi. 懂得, 认为">understand</button> <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button> these operators <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> datacentres, but I’m <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="sure" data-pos="" data-def="a. 确信, 必然的, 必定的
+adv. 当然, 确实地, 无疑地">sure</button> members of the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="share" data-pos="" data-def="n. 部分, 参与, 一份, 参股, 份额
+vt. 均分, 分担, 分享, 分配, 共有
+vi. 分享
+ 共享; DOS外部命令:在网络或多工系统中提供文件共享
+文件锁定及检测磁盘更动和对超过32MB硬盘分区的支持">share</button> the <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button>.” In response, Curtis <button class="vocab-word" type="button" data-word="Hall" data-pos="" data-def="n. 门厅, 走廊, 会堂">Hall</button> says it <button class="vocab-word" type="button" data-word="never" data-pos="" data-def="adv. 从不, 决不, 不曾
+ 永不, 决不, 从来没有">never</button> claimed it would <button class="vocab-word" type="button" data-word="operate" data-pos="" data-def="v. 操作, 运转, 动手术, 活动">operate</button> the <button class="vocab-word" type="button" data-word="facility" data-pos="" data-def="n. 容易, 灵巧, 设备
+ 设施; 设备; 装备">facility</button> itself, adding it had been working on datacentre projects for <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> years.
+Carter is <button class="vocab-word" type="button" data-word="glad" data-pos="" data-def="a. 高兴的, 喜欢的, 情愿的">glad</button> the Welsh government has intervened in Cardiff. But he doesn’t <button class="vocab-word" type="button" data-word="believe" data-pos="" data-def="v. 相信">believe</button> Wales needs to <button class="vocab-word" type="button" data-word="follow" data-pos="" data-def="vt. 跟随, 沿行, 遵循, 追求
+vi. 跟随, 接着
+n. 跟随, 追随">follow</button> Scotland by imposing a moratorium on <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> datacentres: “The Welsh government is developing a <button class="vocab-word" type="button" data-word="strategy" data-pos="" data-def="n. 战略, 策略
+ 战略, 策略">strategy</button> for datacentres nationally. We’ll <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> comes <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of that.”
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, it is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> the Welsh government can <button class="vocab-word" type="button" data-word="meet" data-pos="" data-def="n. 会, 集会
+a. 适宜的, 合适的
+vt. 遇见, 引见, 认识, 满足, 对付
+vi. 相遇, 接触">meet</button> its <button class="vocab-word" type="button" data-word="goal" data-pos="" data-def="n. 目标, 终点, 得分, 球门, 守门员
+vi. 攻门, 射门得分">goal</button> to <button class="vocab-word" type="button" data-word="reach" data-pos="" data-def="n. 伸出, 延伸, 区域, 范围, 流域, 岬
+vt. 到达, 达到, 伸出, 延伸, 影响
+vi. 达到, 延伸, 伸出手, 传到">reach</button> <button class="vocab-word" type="button" data-word="net" data-pos="" data-def="n. 网, 网状物, 罗网, 净利, 净价
+a. 净的, 最终的
+vt. 用网捕, 撒网, 净赚, 得到
+vi. 编网
+ 网络, 网络分析程序">net</button> <button class="vocab-word" type="button" data-word="zero" data-pos="" data-def="n. 零, 零点, 零度, 无, 乌有, 最低点
+a. 零的, 没有的
+vt. 调零, 对(炮火等)作协调校正
+ 零">zero</button> by 2040 without limiting datacentre expansion. Carter admits, “It’s massively problematic.” In Westminster, <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> questions have been asked. The <button class="vocab-word" type="button" data-word="Department" data-pos="" data-def="n. 部门, 系, 机关
+ 部, 科">Department</button> for <button class="vocab-word" type="button" data-word="Science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">Science</button>, Innovation and <button class="vocab-word" type="button" data-word="Technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">Technology</button> tells me the government will <button class="vocab-word" type="button" data-word="enable" data-pos="" data-def="vt. 使能够
+ 允许, 使能, 打开">enable</button> the development of datacentres by generating <button class="vocab-word" type="button" data-word="unprecedented" data-pos="" data-def="a. 空前的
+ 空前的, 无前例的">unprecedented</button> amounts of <button class="vocab-word" type="button" data-word="clean" data-pos="" data-def="a. 干净的, 清白的, 简洁的
+adv. 清洁地, 完全地
+vt. 清理, 使干净, 出空
+vi. 被搞干净
+n. 打扫">clean</button> <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button>.
+A <button class="vocab-word" type="button" data-word="soft" data-pos="" data-def="a. 软的, 温和的, 柔和的, 柔滑的, 温柔的, 软弱的, 坡度小的, 笨的, 纸币的
+n. 柔软的东西, 笨人, 纸币
+adv. 柔软地, 温和地">soft</button> autumnal <button class="vocab-word" type="button" data-word="dusk" data-pos="" data-def="n. 薄暮, 傍晚, 黄昏
+a. 微暗的
+v. (使)微暗">dusk</button> descends on the residents living <button class="vocab-word" type="button" data-word="beside" data-pos="" data-def="prep. 在旁边">beside</button> the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> datacentre in Newport. Its sleek industrial-grey walls <button class="vocab-word" type="button" data-word="cast" data-pos="" data-def="n. 演员阵容, 投掷, 铸件, 预测, 特性
+vt. 投, 掷, 抛, 脱落, 铸, 使弯曲, 计算
+vi. 投, 计算, 浇铸成型">cast</button> shadows <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> the closest gardens and homes. <button class="vocab-word" type="button" data-word="Much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">Much</button> of the anger and frustration that met the original proposals has <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to weariness and resignation. <button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> residents <button class="vocab-word" type="button" data-word="talk" data-pos="" data-def="n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言
+vi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话
+vt. 讲, 说, 讨论, 谈论
+ 对话类, 聊天">talk</button> of moving <button class="vocab-word" type="button" data-word="away" data-pos="" data-def="adv. 离去">away</button>, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> others are mollified by meetings with the US-based <button class="vocab-word" type="button" data-word="data" data-pos="" data-def="pl. 资料, 数据
+ 数据; DOS内部命令:用于显示或设定系统的日期">data</button> <button class="vocab-word" type="button" data-word="campus" data-pos="" data-def="n. 校园, 大学生活">campus</button> operator, Vantage.
+Yet their troubles may <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> be beginning – <button class="vocab-word" type="button" data-word="right" data-pos="" data-def="n. 权利, 右边, 正义, 右派, 公正
+a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的
+adv. 正确地, 以有利结果, 一直, 直接, 向右
+vt. 扶直, 整理, 纠正, 伸冤, 使昭雪
+vi. 恢复平衡
+ 右, 权利">right</button> <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button>, <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the <button class="vocab-word" type="button" data-word="three" data-pos="" data-def="num. 三, 三个">three</button> Vantage datacentres is operational. Microsoft will be opening its <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="nearby" data-pos="" data-def="a. 附近的, 近旁的
+adv. 在附近, 近旁地
+prep. 在...附近">nearby</button> <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button>. <button class="vocab-word" type="button" data-word="When" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">When</button> <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> are running, <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> could be upwards of 500 <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> handling units working at the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button>, with back-up <button class="vocab-word" type="button" data-word="diesel" data-pos="" data-def="n. 内燃机, 柴油机, 柴油">diesel</button> generators needing <button class="vocab-word" type="button" data-word="regular" data-pos="" data-def="a. 规则的, 常例的, 有秩序的, 整齐的, 等边的, 定期的, 经常的, 合格的, 常备军的
+n. 正规军, 正式队员
+adv. 经常地
+n. 正常体
+ 正常体">regular</button> testing, so they can immediately <button class="vocab-word" type="button" data-word="fire" data-pos="" data-def="n. 火, 炉火, 电炉, 火灾, 闪光体, 炮火, 热情
+vt. 点燃, 烧制, 使发光, 激动, 放枪, 解雇
+vi. 着火, 烧火, 开枪, 射击, 激动">fire</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> if <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is a <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button> <button class="vocab-word" type="button" data-word="cut" data-pos="" data-def="n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路
+a. 经切割的, 缩减的
+vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出
+vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑
+ 剪切">cut</button>.
+Newport council’s <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> scientific <button class="vocab-word" type="button" data-word="officer" data-pos="" data-def="n. 军官, 主管, 官员, 公务员
+vt. 指挥">officer</button> warned <button class="vocab-word" type="button" data-word="during" data-pos="" data-def="prep. 在...的时候">during</button> the planning <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> that the fumes from <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> the generators had the “<button class="vocab-word" type="button" data-word="potential" data-pos="" data-def="n. 潜在性, 可能性, 潜力, 潜能, 势, 位
+a. 有潜力的, 可能的, 潜在的">potential</button> to <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button> unacceptable <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> pollution levels under <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button>, and testing needs to be understood and mitigation proposed, if needed”.
+The <button class="vocab-word" type="button" data-word="council" data-pos="" data-def="n. 会议, 委员会
+ 委员会">council</button> tells me it doesn’t have a <button class="vocab-word" type="button" data-word="duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">duty</button> to <button class="vocab-word" type="button" data-word="monitor" data-pos="" data-def="n. 监督器, 级长, 监听员, 班长, 监视器, 告诫物
+v. 监视, 监听, 监督
+ 监视器, 监视程序; 监视">monitor</button> emissions from generators, but says its officers <button class="vocab-word" type="button" data-word="check" data-pos="" data-def="n. 检查, 支票, 阻止物, 寄物牌, 象棋中将军
+vt. 检查, 阻止, 核对, 寄存, 托运
+vi. 逐项相符, 开支票
+ 复选">check</button> <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> <button class="vocab-word" type="button" data-word="quality" data-pos="" data-def="n. 品质, 特性, 才能, 质量
+a. 优质的
+ 品质">quality</button> management plans, and <button class="vocab-word" type="button" data-word="ask" data-pos="" data-def="vi. 问, 要求
+vt. 问, 要求, 邀请, 需要">ask</button> managers to minimise the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> of generator tests. Vantage says <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> its facilities <button class="vocab-word" type="button" data-word="operate" data-pos="" data-def="v. 操作, 运转, 动手术, 活动">operate</button> in <button class="vocab-word" type="button" data-word="accordance" data-pos="" data-def="n. 一致, 和谐">accordance</button> with <button class="vocab-word" type="button" data-word="noise" data-pos="" data-def="n. 噪音, 杂音, 响声, 喧闹
+vt. 谣传
+vi. 喧闹
+ 噪声">noise</button> and <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> <button class="vocab-word" type="button" data-word="quality" data-pos="" data-def="n. 品质, 特性, 才能, 质量
+a. 优质的
+ 品质">quality</button> controls. It says it will <button class="vocab-word" type="button" data-word="monitor" data-pos="" data-def="n. 监督器, 级长, 监听员, 班长, 监视器, 告诫物
+v. 监视, 监听, 监督
+ 监视器, 监视程序; 监视">monitor</button> impacts and <button class="vocab-word" type="button" data-word="investigate" data-pos="" data-def="v. 调查, 审查">investigate</button> concerns <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> centre opens.
+<button class="vocab-word" type="button" data-word="Some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">Some</button> residents have <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> on democratic <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button>. Johnston fought the proposals through the planning <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> but felt he was ignored. “We’ve been <button class="vocab-word" type="button" data-word="let" data-pos="" data-def="vt. 让, 假设, 出租, 排放, 妨碍
+vi. 出租, 被承包
+n. 出租屋, 障碍">let</button> <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> by <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> of them. I’ve had <button class="vocab-word" type="button" data-word="electoral" data-pos="" data-def="a. 选举人的, 选举的, (有关)选举的
+ 选举的, 选举人的, 由选举人组成的">electoral</button> <button class="vocab-word" type="button" data-word="roll" data-pos="" data-def="n. 卷, 滚动, 名单, 案卷, 压路机
+vi. 滚, 滚动, 飘流, 起伏, 卷, 绕
+vt. 使滚动, 卷, 绕">roll</button> cards <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button> through my <button class="vocab-word" type="button" data-word="door" data-pos="" data-def="n. 门">door</button>. But I’m voting for <button class="vocab-word" type="button" data-word="none" data-pos="" data-def="adv. 一点也不, 毫不
+pron. 没有人, 无一物, 并无一个
+a. 没有的">none</button> of them … I can’t <button class="vocab-word" type="button" data-word="trust" data-pos="" data-def="n. 信任, 信赖, 相信, 受托, 职责, 信心, 托拉斯
+a. 信托的, 托拉斯的
+vt. 信赖, 信任, 相信, 盼望, 赊卖给
+vi. 相信, 信赖, 依靠
+ 委托, 信任">trust</button> them. They don’t <button class="vocab-word" type="button" data-word="care" data-pos="" data-def="n. 小心, 照料, 忧虑
+vi. 关心, 介意
+vt. 在意, 喜欢">care</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="any" data-pos="" data-def="a. 任何的
+pron. 任何">any</button> of us.”
+Over the <button class="vocab-word" type="button" data-word="road" data-pos="" data-def="n. 路, 道路, 公路, 途径, 方法
+ 公路, 道路, 行车道">road</button> are older homes, <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> <button class="vocab-word" type="button" data-word="staff" data-pos="" data-def="n. 全体人员, 工作班子, 棍棒, 杆, 拐杖, 支柱, 权杖
+a. 职员的, 雇员的, 参谋的
+vt. 为...配备人员">staff</button> working on a <button class="vocab-word" type="button" data-word="nearby" data-pos="" data-def="a. 附近的, 近旁的
+adv. 在附近, 近旁地
+prep. 在...附近">nearby</button> wealthy <button class="vocab-word" type="button" data-word="estate" data-pos="" data-def="n. 不动产, (人生的)阶段, 阶层, 财产
+ 房地产, 遗产, 财产">estate</button> <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button> lived. Sonia Thomas, a retired teacher, has lived in the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> housekeeper’s <button class="vocab-word" type="button" data-word="cottage" data-pos="" data-def="n. 小屋, 茅舍">cottage</button> <button class="vocab-word" type="button" data-word="since" data-pos="" data-def="prep. 自...以后, 自...以来
+adv. 自那时以后
+conj. 既然, 自...以后, 自...以来">since</button> 1969. She can <button class="vocab-word" type="button" data-word="remember" data-pos="" data-def="vt. 记得, 回忆起, 记住, 铭记, 纪念
+vi. 记得">remember</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> orchards and fields fanned <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> in <button class="vocab-word" type="button" data-word="front" data-pos="" data-def="n. 前面, 开头, 前线, 阵线, 态度
+vt. 面对, 朝向, 对抗
+vi. 朝向">front</button> of their gardens but <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> she doesn’t <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> if the <button class="vocab-word" type="button" data-word="sun" data-pos="" data-def="n. 太阳, 日, 日光, 阳光
+vt. 晒
+vi. 晒太阳">sun</button> is shining. “From <button class="vocab-word" type="button" data-word="inside" data-pos="" data-def="n. 内部, 内脏, 内幕
+a. 内部的, 秘密的, 户内的
+adv. 在里面
+prep. 在...之内">inside</button> you <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> <button class="vocab-word" type="button" data-word="grey" data-pos="" data-def="n. 灰色
+a. 灰色的, 阴沉的
+v. (使)成灰色">grey</button>, <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="blue" data-pos="" data-def="n. 蓝色
+a. 蓝色的, 下流的, 忧郁的
+vt. 染成蓝色
+vi. 变蓝">blue</button>,” she says, glancing at the datacentre filling the <button class="vocab-word" type="button" data-word="sky" data-pos="" data-def="n. 天空, 天色, 天堂
+vt. 击向空中, 挂在高处
+vi. 高涨">sky</button>. “It’s horrible.”
+The AI <button class="vocab-word" type="button" data-word="boom" data-pos="" data-def="n. 繁荣, 隆隆声
+vi. 急速发展, 发隆隆声
+vt. 使兴旺, 发隆隆声">boom</button> is pitting <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> residents against corporate giants seeking to <button class="vocab-word" type="button" data-word="power" data-pos="" data-def="n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率
+vt. 使...有力量, 供以动力, 激励
+ 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性">power</button> their energy-hungry networks – but <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> Welsh <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button> is fighting <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">隔壁的数据中心：走进科技</h3>
+<div class="article-content-zh">戴尔·约翰斯顿推开了通往其整洁郊区花园的大门，这里位于南威尔士纽波特市的西侧边缘。草坪上摆着给孙辈玩的蹦床和滑梯，还有供他和妻子休息的椅子。他本应在这里欣赏秋日绝美天空中渐渐消逝的余晖——但几乎整个视野都被大片预制板材遮挡得严严实实。
+耸立在他和邻居们面前的，是一个23米高的灰色庞然大物，那是一座超大规模数据中心。当地工党政客将其盛赞为创造就业的引擎，但约翰斯顿满脑子想的都是自己失去了什么：“以前，阳光总能照到这里，那时候多惬意啊。”居民们受到的这种对待简直“令人作呕”。
+约翰斯顿曾在城里的一家化工公司工作，他担心一旦数据中心投入运行，他们的生活会变成什么样子：为防止内部芯片过热所需的36组风冷散热器极可能会产生持续不断的嗡嗡噪音，而为了避免数据流发生代价高昂的中断，60台备用柴油发电机的定期测试也可能会排放出有害烟气。这处占地46英亩且在迅速扩张的数据中心园区与一个由27栋房屋组成的小聚居区接壤，如今约翰斯顿就不得不紧闭浴室窗户，以阻隔园区内另一处设施传来的低沉嗡鸣声。他的妻子是一名上夜班的护士，现在就已经几乎无法入睡了。他绝望地摇了摇头：“我们根本不知道接下来会发生什么。”
+约翰斯顿嘴里几乎离不开这件事，但他觉得当局中没有人在倾听。他曾邀请支持该开发项目的地方议员和国会议员来他的花园看看。但是“他们根本不会来这里看看他们都干了些什么”。
+这是英国数据中心建设热潮的前沿阵地，这场热潮正让当地居民与美国科技巨头形成对立，后者正寻求建立一个设施网络，以便为强大的AI模型提供巨大的算力支撑。目前有315座超大规模数据中心正等待接入国家电网，该电网负责将电力从发电厂输送至家庭和企业（超大规模通常是指拥有至少5000台服务器且面积达10000平方英尺的设施）。综合来看，这些新建中心总计将需要73吉瓦的电力，比寒冬腊月45吉瓦的典型峰值用电需求还要高出28吉瓦。
+威尔士是伦敦以外的主要发展热点地区之一。除首都之外，它已拥有最大规模的数据中心容量，并计划在原工业与城市用地上建设新的超大规模设施。基尔·斯塔默领导的工党政府将此视为一场不可避免的革命，国家必须欣然拥抱，否则就会落于人后。该政府设立了五个AI增长区，以推动更多数据中心通过规划审批流程，并加快接入国家电网的速度。新任首相安迪·伯纳姆已表明情况不会有什么变化，他拒绝了暂缓推进的呼声，并坚称数据中心能带来经济效益。但在全国各地乡村、城镇和城市不断涌现的反数据中心团体看来，情况却截然不同：他们认为这是强加了一项消耗大量资源且造成污染的产业，往往只会增加美国大型科技公司的利润，而对当地居民或整个国家几乎没有任何切实的利益。
+数字存储并不是什么新鲜事。最早的家用个人电脑用户将文件保存在软盘和硬盘上；企业在80年代和90年代使用自己的服务器机房，随后随着需求的增长转移到了异地设施。但2010年代云计算服务（例如Google Drive）的发展，以及2020年代人工智能聊天机器人（例如ChatGPT）的兴起，带来了更大的信息与处理需求，科技行业坚称这些需求只有通过越来越大的数据中心才能满足。这推动了针对超大规模枢纽的巨额投机性押注，投资者和科技公司希望有朝一日能从人工智能主导的经济转型中获得回报。在全球范围内，据估计到2030年，在新建设施上的支出可能达到7万亿美元——即使计入通货膨胀，也相当于“新政”、二战后重建欧洲的“马歇尔计划”以及“阿波罗”太空计划三者成本总和的两倍以上。
+
+美国处于这一热潮的最前沿，目前已承载了全球大约一半的超大规模容量。但该行业正面临激烈的抵制，目前四分之三的美国人反对建设数据中心，指责其推高了能源账单、威胁受干旱影响地区的供水并排放有毒烟雾。已有500多个县和市政当局通过了永久或临时的数据中心禁令。
+弗吉尼亚州北部的劳登县坐落于被称为“数据中心巷”的地区，因为这里拥有的此类设施比世界上任何地方都多。去年，一家燃气动力数据中心在格雷格·皮里奥家仅150米外开业，他的生活彻底被颠覆了。“这个街区原本平静安宁，如今却变成了一场噩梦，”他在视频通话中说道，“我们的生活质量严重下降。”
+
+皮里奥说，该中心八台燃气轮机发出的噪音“就像置身于机场，所有的引擎都在轰鸣”。“它让我很多邻居头痛不已，让孩子们夜不能寐。”曾就职于“美国之音”电台的皮里奥自该中心投入运营以来也出现了健康问题，包括眼睛干涩和胸闷。有一次他甚至因为呼吸困难而不得不离开家：“只要柴油发电机一启动，我就能知道，因为我的肺部能感觉得出来。”
+
+英国尚未出现像美国那样强烈的反对声浪，但反对数据中心的团体正在蓄积势头。伦敦东部的居民正发起一场声势浩大的抗议活动，反对在砖巷新建数据中心，包括在社区事务大臣安吉拉·雷纳的办公室外抗议，雷纳此前推翻了地方议会阻止该方案的决定。
+在环保慈善机构“全球行动计划”（Global Action Plan）工作的资深活动家欧文·埃斯普利（Owen Espley）正在协助数十个居民团体组织起来，反对规划中的数据中心。“这个夏天太疯狂了。每隔一周就会冒出一个新团体。请愿书几天内就能获得数千个签名，”他说。“各社区一片哗然，而大多数政客还在疲于应对。”
+
+政府坚信“别无选择”，而普通民众对所涉复杂问题的理解却在不断加深，两者之间的鸿沟令埃斯普利感到震惊。“基层对数据中心提出了切实的质疑，这种质疑将布里克巷（Brick Lane）的英国孟加拉裔居民、赫特福德郡的村民以及渴望优质工作岗位回归的诺森伯兰郡社区紧密联系在了一起，”他说。“这令人惊叹。”
+
+事实上，除了市场主导的扩张模式之外，还存在许多替代路径——从更严格的监管到优先发展公有数据基础设施——这些路径服务于公共目标，例如布里斯托大学新建的Isambard-AI设施所支持的心脏病和痴呆症研究。“首先，我们需要针对私营数据中心制定严格的标准，”埃斯普利说。“其次，我们需要制定产业战略来打造我们自己的公共计算机设施，而不是想当然地认为由美国科技巨头包办和拥有一切才是唯一的出路。”
+在卡迪夫贫困的东部边缘，清晨的阳光照暖了一座点缀着杂乱野草的停车场。周围的围栏上爬满了荆棘，围栏外不远处隐约可见最近一场野火留下的一片片烧焦发黑的草地。这里看起来一片荒弃，但不久后，载着医生、护士和其他英国国家医疗服务体系（NHS）工作人员的车辆便开始陆续抵达。他们来到这里是为了搭乘免费巴士前往威尔士最大的医院——卡迪夫的希斯医院（Heath hospital）。
+
+据称每天有数百人使用这个停车换乘设施，但它如今正面临威胁，因为工党控制的卡迪夫市议会希望将这块土地出售给房地产开发商柯蒂斯·霍尔（Curtis Hall），以建造一座超大规模的数据设施。该中心每年的耗电量将高达150兆瓦（MW），是卡迪夫这样规模城市电力需求的三倍以上。
+
+该开发项目是威尔士最具争议的项目之一。市议会会议曾受到干扰，且已有超过1200份规划异议被提交。上个月，由威尔士党（Plaid Cymru）领导的新政府命令该市议会暂缓审批该申请，同时考虑是否将这一决定权从市议员手中收回。
+
+抗议活动人士决意继续向威尔士政府施压。苏·埃利亚斯（Sue Elias）是一名看似拥有无尽精力的退休图书管理员，她来回奔波，将写有“放弃数据中心”（Ditch the datacentre）的横幅重新固定在停车场的围栏上，并把传单用胶带贴在公交站台的玻璃上。“那些使用停车换乘点的人该怎么办？这简直不可理喻，”她说。
+埃利亚斯已经连续六周在每个周三早晨去换乘停车场发传单。今天，她正在为一封公开信征集签名，以证明这里的使用率很高——到目前为止，她已经征集到了1300名员工和患者的签名。“我以前从未做过这样的事，但他们都说我很有天赋，”她带着顽皮的微笑说道，随后打住话头，走上前去与赶下一班公交车的员工交谈。
+
+她是社区工会Acorn的成员，该工会一直在发起反对该方案的行动，她也参与了多场抗议活动，包括在7月份闯入地方议会的一次规划会议。“我们发过邮件，发起过请愿，但没有得到任何回应——一片死寂。他们是我们选出的代表……
+在蜿蜒环绕着拟建数据中心项目的卡迪夫雷姆尼河对岸，该地区最新的居民最近才搬进市议会旗舰建房计划下建造的100套住房中。自由电影制作人兼滑板爱好者尼克·理查兹和妻子于11月搬来这里。“感觉就像命中注定一样，因为沿路就有一个崭新的滑板公园……全卡迪夫最好的。太棒了，”他说，“我从没想过自己会住在郊区，但我们来的时候看到孩子们在外面玩耍，心想，这里环境真不错。”
+和该小区的许多其他居民一样，理查兹根本不知道市议会正计划将换乘停车场出售给数据中心开发商。他们是在规划申请提交前两个月搬进来的。如今，他们不仅没能享受新生活，反而担心房子再也卖不出去了。他们的家距离规划中所称的临时能源中心仅300米，其中包括七台巨型燃气轮机。根据开发商提交的文件，预计这些轮机将在五年内全天候为该设施供电。“我感觉自己被困住了，”理查兹在厨房里踱步时说道，“我无法在看着潜在买家的眼睛时，不告诉他们旁边就会有七台燃气轮机。”
+理查兹仔细研读了规划文件，并在新住宅区的每家每户散发了传单，其中包括一家距离燃气轮机仅150米的养老院。“这个数据中心将由燃气轮机供电，”他说，“它们会向我们的大气中排放二氧化氮。还会有细颗粒物和甲醛。所有这些毒素都会引发健康问题，比如哮喘、慢性阻塞性肺病（COPD）和心脏病。”
+开发商委托开展的空气质量评估预计排放量将处于安全水平以内。柯蒂斯·霍尔（Curtis Hall）表示，如果不百分之百符合所有环境与公共卫生监管要求，该方案就无法推进。
+订阅《Inside Saturday》
+深入了解《Saturday》杂志幕后的唯一途径。立即注册，获取我们顶尖作者带来的内幕故事，以及所有必读文章和专栏，每个周末直接发送至您的收件箱。
+简报推广内容之后
+由于接入电网需要漫长的等待，英国还有100多个拟建的数据中心打算使用燃气轮机。理查兹不希望自己的住宅区成为试验品。“在该数据中心一英里范围内生活着3万人。但建造这座中心的人并不住在这里……他们对威尔士人根本屁都不在乎。”
+仅一步之遥便是兰拉姆尼大宅（Llanrumney Hall），这里曾是私掠船长兼奴隶贩子亨利·摩根爵士（Sir Henry Morgan）的故居，“摩根船长”朗姆酒（Captain Morgan）正是以他的名字命名的。如今，这里成了一个充满生机的社区中心，配有咖啡馆、录音室和托儿所。工党议员李·布里奇曼（Lee Bridgeman）身穿连帽衫、头戴棒球帽，正坐在室外的一张桌子旁抽着电子烟。他曾负责经营当地的青年中心，直到该中心因紧缩时期的削减开支而关闭；尽管他现在身居高级议员要职，共同分管住房与社区事务，但他仍定期在这一地区轮班参与青年工作，这里是加的夫最贫困的地区之一。
+
+“兰拉姆尼流淌在我的血液里，”他说，“我不是那种按部就班的政客。我不去参加各种大会。我从政就是为了帮助社区。”
+
+布里奇曼很有魅力且待人亲切——但他也不怕硬碰硬。他是该地区少数公开支持该开发项目的公众人物之一，有时还会在当地的脸书（Facebook）群组中与反对数据中心的抗议人士发生争论。“流传的一些信息完全是在制造恐慌，”他说，“他们对居民说电费会上涨……河流和水库的水会被抽干……这纯属虚假信息。”
+这些担忧很多源自美国，在那里，超大规模设施的迅速扩张与电费上涨、水资源短缺以及有毒空气污染挂上了钩。布里奇曼辩称：“英国的规划流程完全不同。因此，尽管[美国当局]对那些庞然大物造成的部分环境影响视而不见，但这在英国绝不可能发生。”如果燃气轮机运行五年，他“会感到不安”，但他认为，如果数据中心能更快接入电网，可能就不需要这些轮机了。
+这场强烈反对让他始料未及，但他将其归咎于外部活动人士。“我没想到会这样。我没料到会有这么多的干涉，”他说。
+该市的情绪十分激烈。一些居民表示，他们在Facebook上试图质询市议员时遭到了拉黑。布里奇曼说，规划委员会成员收到了恐吓邮件。“诸如‘我绝不会放过你……我们会让你的日子生不如死’这类的威胁。这本不应该发生。”
+尽管该数据中心建成后最多只雇佣125人，但布里奇曼认为它能吸引其他大公司来到加的夫东部：“有人告诉我，其连锁反应可能会带来数以千计的就业机会。”
+当天晚些时候，居民们挤进当地的拳击俱乐部，参加一场关于数据中心规划的公开会议。现场座无虚席，只能站立，人们沿墙站满。布里奇曼重申了他的说法，称鲜有当地人投诉：“我收到了居民发来的数百封电子邮件……到目前为止，关于数据中心的我只收到了两封。”
+现场的一些听众反应愤怒。有人喊道：“那是因为我们不认识你！”还有人喊：“你听说过社交媒体吗？”一名女士站起身来说道：“别告诉我你对那些会议……或者网上的事情一无所知。”在举手表决中，现场80至100人中约有四分之三表示他们来自兰拉姆尼，且几乎全部表示反对。人群中有人喊道：“看见了吧……你根本不需要电子邮件！”还有人喊：“那可是每一个人！”近三周后，布里奇曼突然彻底改变了态度，就该方案提交了一份正式反对信，并指出他已收到了大量居民的意见。
+英国的超大规模设施建设此前一直集中在伦敦，但为了摆脱严重的电网容量限制，数据中心开发商正越来越多地将目光投向东南部以外的地区。威尔士拥有的数据中心容量已经是首都以外所有地区中最大的。未来可能还会有更多：威尔士规模最大的五个新建和拟建数据中心的用电量，将超过威尔士所有家庭用电量的总和。尽管上届威尔士工党政府对这股建设热潮表示欢迎，声称科技巨头的投资将创造数千个就业岗位，但威尔士党领导的政府态度更为审慎，部长们强调这必须让威尔士受益。
+
+在俯瞰加的夫湾、采光通风良好的威尔士议会大厦内，反对的声音正在与日俱增。威尔士党的尼克·卡特（Nick Carter）是代表涵盖东加的夫在内的 Caerdydd Ffynnon Taf 选区的威尔士议会议员，他担心激增的市场将让开发商和美国科技公司受益，而不是公众。他说：“作为一个政党，我们不希望看到数据中心泛滥成灾，出于可能仅仅是投机的目的在全国各地胡乱建造。”</div>
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">隔壁的数据中心：走进科技</h3>
+<div class="article-content-zh">戴尔·约翰斯顿推开了通往其整洁郊区花园的大门，这里位于南威尔士纽波特市的西侧边缘。草坪上摆着给孙辈玩的蹦床和滑梯，还有供他和妻子休息的椅子。他本应在这里欣赏秋日绝美天空中渐渐消逝的余晖——但几乎整个视野都被大片预制板材遮挡得严严实实。
+耸立在他和邻居们面前的，是一个23米高的灰色庞然大物，那是一座超大规模数据中心。当地工党政客将其盛赞为创造就业的引擎，但约翰斯顿满脑子想的都是自己失去了什么：“以前，阳光总能照到这里，那时候多惬意啊。”居民们受到的这种对待简直“令人作呕”。
+约翰斯顿曾在城里的一家化工公司工作，他担心一旦数据中心投入运行，他们的生活会变成什么样子：为防止内部芯片过热所需的36组风冷散热器极可能会产生持续不断的嗡嗡噪音，而为了避免数据流发生代价高昂的中断，60台备用柴油发电机的定期测试也可能会排放出有害烟气。这处占地46英亩且在迅速扩张的数据中心园区与一个由27栋房屋组成的小聚居区接壤，如今约翰斯顿就不得不紧闭浴室窗户，以阻隔园区内另一处设施传来的低沉嗡鸣声。他的妻子是一名上夜班的护士，现在就已经几乎无法入睡了。他绝望地摇了摇头：“我们根本不知道接下来会发生什么。”
+约翰斯顿嘴里几乎离不开这件事，但他觉得当局中没有人在倾听。他曾邀请支持该开发项目的地方议员和国会议员来他的花园看看。但是“他们根本不会来这里看看他们都干了些什么”。
+这是英国数据中心建设热潮的前沿阵地，这场热潮正让当地居民与美国科技巨头形成对立，后者正寻求建立一个设施网络，以便为强大的AI模型提供巨大的算力支撑。目前有315座超大规模数据中心正等待接入国家电网，该电网负责将电力从发电厂输送至家庭和企业（超大规模通常是指拥有至少5000台服务器且面积达10000平方英尺的设施）。综合来看，这些新建中心总计将需要73吉瓦的电力，比寒冬腊月45吉瓦的典型峰值用电需求还要高出28吉瓦。
+威尔士是伦敦以外的主要发展热点地区之一。除首都之外，它已拥有最大规模的数据中心容量，并计划在原工业与城市用地上建设新的超大规模设施。基尔·斯塔默领导的工党政府将此视为一场不可避免的革命，国家必须欣然拥抱，否则就会落于人后。该政府设立了五个AI增长区，以推动更多数据中心通过规划审批流程，并加快接入国家电网的速度。新任首相安迪·伯纳姆已表明情况不会有什么变化，他拒绝了暂缓推进的呼声，并坚称数据中心能带来经济效益。但在全国各地乡村、城镇和城市不断涌现的反数据中心团体看来，情况却截然不同：他们认为这是强加了一项消耗大量资源且造成污染的产业，往往只会增加美国大型科技公司的利润，而对当地居民或整个国家几乎没有任何切实的利益。
+数字存储并不是什么新鲜事。最早的家用个人电脑用户将文件保存在软盘和硬盘上；企业在80年代和90年代使用自己的服务器机房，随后随着需求的增长转移到了异地设施。但2010年代云计算服务（例如Google Drive）的发展，以及2020年代人工智能聊天机器人（例如ChatGPT）的兴起，带来了更大的信息与处理需求，科技行业坚称这些需求只有通过越来越大的数据中心才能满足。这推动了针对超大规模枢纽的巨额投机性押注，投资者和科技公司希望有朝一日能从人工智能主导的经济转型中获得回报。在全球范围内，据估计到2030年，在新建设施上的支出可能达到7万亿美元——即使计入通货膨胀，也相当于“新政”、二战后重建欧洲的“马歇尔计划”以及“阿波罗”太空计划三者成本总和的两倍以上。
+
+美国处于这一热潮的最前沿，目前已承载了全球大约一半的超大规模容量。但该行业正面临激烈的抵制，目前四分之三的美国人反对建设数据中心，指责其推高了能源账单、威胁受干旱影响地区的供水并排放有毒烟雾。已有500多个县和市政当局通过了永久或临时的数据中心禁令。
+弗吉尼亚州北部的劳登县坐落于被称为“数据中心巷”的地区，因为这里拥有的此类设施比世界上任何地方都多。去年，一家燃气动力数据中心在格雷格·皮里奥家仅150米外开业，他的生活彻底被颠覆了。“这个街区原本平静安宁，如今却变成了一场噩梦，”他在视频通话中说道，“我们的生活质量严重下降。”
+
+皮里奥说，该中心八台燃气轮机发出的噪音“就像置身于机场，所有的引擎都在轰鸣”。“它让我很多邻居头痛不已，让孩子们夜不能寐。”曾就职于“美国之音”电台的皮里奥自该中心投入运营以来也出现了健康问题，包括眼睛干涩和胸闷。有一次他甚至因为呼吸困难而不得不离开家：“只要柴油发电机一启动，我就能知道，因为我的肺部能感觉得出来。”
+
+英国尚未出现像美国那样强烈的反对声浪，但反对数据中心的团体正在蓄积势头。伦敦东部的居民正发起一场声势浩大的抗议活动，反对在砖巷新建数据中心，包括在社区事务大臣安吉拉·雷纳的办公室外抗议，雷纳此前推翻了地方议会阻止该方案的决定。
+在环保慈善机构“全球行动计划”（Global Action Plan）工作的资深活动家欧文·埃斯普利（Owen Espley）正在协助数十个居民团体组织起来，反对规划中的数据中心。“这个夏天太疯狂了。每隔一周就会冒出一个新团体。请愿书几天内就能获得数千个签名，”他说。“各社区一片哗然，而大多数政客还在疲于应对。”
+
+政府坚信“别无选择”，而普通民众对所涉复杂问题的理解却在不断加深，两者之间的鸿沟令埃斯普利感到震惊。“基层对数据中心提出了切实的质疑，这种质疑将布里克巷（Brick Lane）的英国孟加拉裔居民、赫特福德郡的村民以及渴望优质工作岗位回归的诺森伯兰郡社区紧密联系在了一起，”他说。“这令人惊叹。”
+
+事实上，除了市场主导的扩张模式之外，还存在许多替代路径——从更严格的监管到优先发展公有数据基础设施——这些路径服务于公共目标，例如布里斯托大学新建的Isambard-AI设施所支持的心脏病和痴呆症研究。“首先，我们需要针对私营数据中心制定严格的标准，”埃斯普利说。“其次，我们需要制定产业战略来打造我们自己的公共计算机设施，而不是想当然地认为由美国科技巨头包办和拥有一切才是唯一的出路。”
+在卡迪夫贫困的东部边缘，清晨的阳光照暖了一座点缀着杂乱野草的停车场。周围的围栏上爬满了荆棘，围栏外不远处隐约可见最近一场野火留下的一片片烧焦发黑的草地。这里看起来一片荒弃，但不久后，载着医生、护士和其他英国国家医疗服务体系（NHS）工作人员的车辆便开始陆续抵达。他们来到这里是为了搭乘免费巴士前往威尔士最大的医院——卡迪夫的希斯医院（Heath hospital）。
+
+据称每天有数百人使用这个停车换乘设施，但它如今正面临威胁，因为工党控制的卡迪夫市议会希望将这块土地出售给房地产开发商柯蒂斯·霍尔（Curtis Hall），以建造一座超大规模的数据设施。该中心每年的耗电量将高达150兆瓦（MW），是卡迪夫这样规模城市电力需求的三倍以上。
+
+该开发项目是威尔士最具争议的项目之一。市议会会议曾受到干扰，且已有超过1200份规划异议被提交。上个月，由威尔士党（Plaid Cymru）领导的新政府命令该市议会暂缓审批该申请，同时考虑是否将这一决定权从市议员手中收回。
+
+抗议活动人士决意继续向威尔士政府施压。苏·埃利亚斯（Sue Elias）是一名看似拥有无尽精力的退休图书管理员，她来回奔波，将写有“放弃数据中心”（Ditch the datacentre）的横幅重新固定在停车场的围栏上，并把传单用胶带贴在公交站台的玻璃上。“那些使用停车换乘点的人该怎么办？这简直不可理喻，”她说。
+埃利亚斯已经连续六周在每个周三早晨去换乘停车场发传单。今天，她正在为一封公开信征集签名，以证明这里的使用率很高——到目前为止，她已经征集到了1300名员工和患者的签名。“我以前从未做过这样的事，但他们都说我很有天赋，”她带着顽皮的微笑说道，随后打住话头，走上前去与赶下一班公交车的员工交谈。
+
+她是社区工会Acorn的成员，该工会一直在发起反对该方案的行动，她也参与了多场抗议活动，包括在7月份闯入地方议会的一次规划会议。“我们发过邮件，发起过请愿，但没有得到任何回应——一片死寂。他们是我们选出的代表……
+在蜿蜒环绕着拟建数据中心项目的卡迪夫雷姆尼河对岸，该地区最新的居民最近才搬进市议会旗舰建房计划下建造的100套住房中。自由电影制作人兼滑板爱好者尼克·理查兹和妻子于11月搬来这里。“感觉就像命中注定一样，因为沿路就有一个崭新的滑板公园……全卡迪夫最好的。太棒了，”他说，“我从没想过自己会住在郊区，但我们来的时候看到孩子们在外面玩耍，心想，这里环境真不错。”
+和该小区的许多其他居民一样，理查兹根本不知道市议会正计划将换乘停车场出售给数据中心开发商。他们是在规划申请提交前两个月搬进来的。如今，他们不仅没能享受新生活，反而担心房子再也卖不出去了。他们的家距离规划中所称的临时能源中心仅300米，其中包括七台巨型燃气轮机。根据开发商提交的文件，预计这些轮机将在五年内全天候为该设施供电。“我感觉自己被困住了，”理查兹在厨房里踱步时说道，“我无法在看着潜在买家的眼睛时，不告诉他们旁边就会有七台燃气轮机。”
+理查兹仔细研读了规划文件，并在新住宅区的每家每户散发了传单，其中包括一家距离燃气轮机仅150米的养老院。“这个数据中心将由燃气轮机供电，”他说，“它们会向我们的大气中排放二氧化氮。还会有细颗粒物和甲醛。所有这些毒素都会引发健康问题，比如哮喘、慢性阻塞性肺病（COPD）和心脏病。”
+开发商委托开展的空气质量评估预计排放量将处于安全水平以内。柯蒂斯·霍尔（Curtis Hall）表示，如果不百分之百符合所有环境与公共卫生监管要求，该方案就无法推进。
+订阅《Inside Saturday》
+深入了解《Saturday》杂志幕后的唯一途径。立即注册，获取我们顶尖作者带来的内幕故事，以及所有必读文章和专栏，每个周末直接发送至您的收件箱。
+简报推广内容之后
+由于接入电网需要漫长的等待，英国还有100多个拟建的数据中心打算使用燃气轮机。理查兹不希望自己的住宅区成为试验品。“在该数据中心一英里范围内生活着3万人。但建造这座中心的人并不住在这里……他们对威尔士人根本屁都不在乎。”
+仅一步之遥便是兰拉姆尼大宅（Llanrumney Hall），这里曾是私掠船长兼奴隶贩子亨利·摩根爵士（Sir Henry Morgan）的故居，“摩根船长”朗姆酒（Captain Morgan）正是以他的名字命名的。如今，这里成了一个充满生机的社区中心，配有咖啡馆、录音室和托儿所。工党议员李·布里奇曼（Lee Bridgeman）身穿连帽衫、头戴棒球帽，正坐在室外的一张桌子旁抽着电子烟。他曾负责经营当地的青年中心，直到该中心因紧缩时期的削减开支而关闭；尽管他现在身居高级议员要职，共同分管住房与社区事务，但他仍定期在这一地区轮班参与青年工作，这里是加的夫最贫困的地区之一。
+
+“兰拉姆尼流淌在我的血液里，”他说，“我不是那种按部就班的政客。我不去参加各种大会。我从政就是为了帮助社区。”
+
+布里奇曼很有魅力且待人亲切——但他也不怕硬碰硬。他是该地区少数公开支持该开发项目的公众人物之一，有时还会在当地的脸书（Facebook）群组中与反对数据中心的抗议人士发生争论。“流传的一些信息完全是在制造恐慌，”他说，“他们对居民说电费会上涨……河流和水库的水会被抽干……这纯属虚假信息。”
+这些担忧很多源自美国，在那里，超大规模设施的迅速扩张与电费上涨、水资源短缺以及有毒空气污染挂上了钩。布里奇曼辩称：“英国的规划流程完全不同。因此，尽管[美国当局]对那些庞然大物造成的部分环境影响视而不见，但这在英国绝不可能发生。”如果燃气轮机运行五年，他“会感到不安”，但他认为，如果数据中心能更快接入电网，可能就不需要这些轮机了。
+这场强烈反对让他始料未及，但他将其归咎于外部活动人士。“我没想到会这样。我没料到会有这么多的干涉，”他说。
+该市的情绪十分激烈。一些居民表示，他们在Facebook上试图质询市议员时遭到了拉黑。布里奇曼说，规划委员会成员收到了恐吓邮件。“诸如‘我绝不会放过你……我们会让你的日子生不如死’这类的威胁。这本不应该发生。”
+尽管该数据中心建成后最多只雇佣125人，但布里奇曼认为它能吸引其他大公司来到加的夫东部：“有人告诉我，其连锁反应可能会带来数以千计的就业机会。”
+当天晚些时候，居民们挤进当地的拳击俱乐部，参加一场关于数据中心规划的公开会议。现场座无虚席，只能站立，人们沿墙站满。布里奇曼重申了他的说法，称鲜有当地人投诉：“我收到了居民发来的数百封电子邮件……到目前为止，关于数据中心的我只收到了两封。”
+现场的一些听众反应愤怒。有人喊道：“那是因为我们不认识你！”还有人喊：“你听说过社交媒体吗？”一名女士站起身来说道：“别告诉我你对那些会议……或者网上的事情一无所知。”在举手表决中，现场80至100人中约有四分之三表示他们来自兰拉姆尼，且几乎全部表示反对。人群中有人喊道：“看见了吧……你根本不需要电子邮件！”还有人喊：“那可是每一个人！”近三周后，布里奇曼突然彻底改变了态度，就该方案提交了一份正式反对信，并指出他已收到了大量居民的意见。
+英国的超大规模设施建设此前一直集中在伦敦，但为了摆脱严重的电网容量限制，数据中心开发商正越来越多地将目光投向东南部以外的地区。威尔士拥有的数据中心容量已经是首都以外所有地区中最大的。未来可能还会有更多：威尔士规模最大的五个新建和拟建数据中心的用电量，将超过威尔士所有家庭用电量的总和。尽管上届威尔士工党政府对这股建设热潮表示欢迎，声称科技巨头的投资将创造数千个就业岗位，但威尔士党领导的政府态度更为审慎，部长们强调这必须让威尔士受益。
+
+在俯瞰加的夫湾、采光通风良好的威尔士议会大厦内，反对的声音正在与日俱增。威尔士党的尼克·卡特（Nick Carter）是代表涵盖东加的夫在内的 Caerdydd Ffynnon Taf 选区的威尔士议会议员，他担心激增的市场将让开发商和美国科技公司受益，而不是公众。他说：“作为一个政党，我们不希望看到数据中心泛滥成灾，出于可能仅仅是投机的目的在全国各地胡乱建造。”</div>
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-10-25 08:17</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
