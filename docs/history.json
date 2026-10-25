@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-22",
-      "cat": "guardian-science",
-      "title": "Bad apple effect: study shows how people are influenced by rule-breaking of others"
-    },
-    {
-      "date": "2026-10-22",
-      "cat": "bbc-business",
-      "title": "The \"trillion pound\" oil fund the government believes Britain could have built"
-    },
-    {
       "date": "2026-10-23",
       "cat": "guardian-business",
       "title": "US judge orders Trump to sit for deposition in $10bn lawsuit against BBC"
@@ -39,6 +29,16 @@
       "date": "2026-10-25",
       "cat": "bbc-env",
       "title": "Rosebank: Life on the oil field at the centre of a political storm"
+    },
+    {
+      "date": "2026-10-26",
+      "cat": "guardian",
+      "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix"
+    },
+    {
+      "date": "2026-10-26",
+      "cat": "bbc-tech",
+      "title": "Data centre debate heats up ahead of US midterms - here's what you need to know"
     }
   ]
 }
