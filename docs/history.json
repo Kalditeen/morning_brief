@@ -1,26 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-25",
-      "cat": "guardian-tech",
-      "title": "The datacentre next door: on the frontline of tech’s latest David v Goliath battle"
-    },
-    {
-      "date": "2026-10-25",
-      "cat": "bbc-env",
-      "title": "Rosebank: Life on the oil field at the centre of a political storm"
-    },
-    {
-      "date": "2026-10-26",
-      "cat": "guardian",
-      "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix"
-    },
-    {
-      "date": "2026-10-26",
-      "cat": "bbc-tech",
-      "title": "Data centre debate heats up ahead of US midterms - here's what you need to know"
-    },
-    {
       "date": "2026-10-28",
       "cat": "guardian-env",
       "title": "Aerial video shows California flooding amid ‘record-breaking tides’ – video"
@@ -29,6 +9,16 @@
       "date": "2026-10-28",
       "cat": "bbc-science",
       "title": "Weather warning lifted as third storm to hit Scotland eases off"
+    },
+    {
+      "date": "2026-10-31",
+      "cat": "guardian",
+      "title": "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job"
+    },
+    {
+      "date": "2026-10-31",
+      "cat": "bbc-tech",
+      "title": "US tech stocks see sharp falls as AI spending nears $1tn"
     }
   ]
 }
