@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-10-28",
-      "cat": "guardian-env",
-      "title": "Aerial video shows California flooding amid ‘record-breaking tides’ – video"
-    },
-    {
-      "date": "2026-10-28",
-      "cat": "bbc-science",
-      "title": "Weather warning lifted as third storm to hit Scotland eases off"
-    },
-    {
       "date": "2026-10-31",
       "cat": "guardian",
       "title": "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job"
@@ -19,6 +9,16 @@
       "date": "2026-10-31",
       "cat": "bbc-tech",
       "title": "US tech stocks see sharp falls as AI spending nears $1tn"
+    },
+    {
+      "date": "2026-11-01",
+      "cat": "guardian-tech",
+      "title": "North Korea is likely culprit behind $6.3bn crypto hack, ‘largest heist in history’"
+    },
+    {
+      "date": "2026-11-01",
+      "cat": "bbc-env",
+      "title": "'Fascinating' rare beetle found in Wales again after 60 years"
     }
   ]
 }
