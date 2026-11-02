@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月02日 周一 · BBC News (科技)">
+<meta property="og:description" content="Binance users withdraw $3.6bn after record crypto hack">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年11月02日 周一</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月02日 周一 · BBC News (科技)</p>
+<a class="back-link" href="2026-11-02.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Binance users <button class="vocab-word" type="button" data-word="withdraw" data-pos="" data-def="vt. 撤回, 取回, 撤消, 使撤退, 拉开, 移开
+vi. 撤退, 离开">withdraw</button> $3.6bn <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> <button class="vocab-word" type="button" data-word="record" data-pos="" data-def="n. 记录, 履历, 档案, 审判记录, 最高纪录, 唱片
+vt. 记录, 记载, 标明, 将...录音
+vi. 记录, 录音, 可被录音
+a. 创纪录的
+ 录制, 记录">record</button> crypto <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button></h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a7f/live/ad865b20-d64f-11f1-a701-fddedf244c16.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Binance customers withdrew <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than $3.6bn (£2.7bn) of assets from the world&#x27;s largest cryptocurrency <button class="vocab-word" type="button" data-word="exchange" data-pos="" data-def="n. 交换, (电话)交换局, 交换机, 汇兑, 交易所
+v. 交换, 交易, 兑换
+ 交换; 电话局">exchange</button> as it reopened on <button class="vocab-word" type="button" data-word="Sunday" data-pos="" data-def="n. 星期日
+a. 星期日的, 业余的
+vi. 度星期日">Sunday</button> following a <button class="vocab-word" type="button" data-word="record" data-pos="" data-def="n. 记录, 履历, 档案, 审判记录, 最高纪录, 唱片
+vt. 记录, 记载, 标明, 将...录音
+vi. 记录, 录音, 可被录音
+a. 创纪录的
+ 录制, 记录">record</button> <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button> <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> .
+The <button class="vocab-word" type="button" data-word="firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">firm</button> suspended <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> transactions in the <button class="vocab-word" type="button" data-word="wake" data-pos="" data-def="vt. 叫醒, 激发
+vi. 醒来, 醒着, 觉醒, 活跃起来
+n. 守侯, 守夜, 尾迹, 痕迹">wake</button> of the <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> impacted $6.3bn <button class="vocab-word" type="button" data-word="worth" data-pos="" data-def="n. 价值, 财产
+a. 值...的, 值得的">worth</button> of digital assets.
+<button class="vocab-word" type="button" data-word="Major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">Major</button> organisations, including the US <button class="vocab-word" type="button" data-word="Federal" data-pos="" data-def="a. 联邦的, 联合的, 同盟的
+ 联邦的, 联邦制的, 联盟的">Federal</button> <button class="vocab-word" type="button" data-word="Bureau" data-pos="" data-def="n. 局, 办公处
+ 局, 司, 处">Bureau</button> of Investigation (FBI), have accused <button class="vocab-word" type="button" data-word="North" data-pos="" data-def="n. 北方, 北
+a. 北的, 北方的
+adv. 向北方, 在北方">North</button> Korea of being <button class="vocab-word" type="button" data-word="responsible" data-pos="" data-def="a. 有责任的, 负责的, 责任重大的
+ 应负责任的, 有责任的, 能履行责任的">responsible</button> for the cyber <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button> , <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is said to be the largest <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button> in <button class="vocab-word" type="button" data-word="history" data-pos="" data-def="n. 历史, 过去, 经历, 发展过程, 历史学, 过去的事, 历史记录
+ 历史记录">history</button>.
+The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> said it has covered <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> 95% of the assets stolen in the <button class="vocab-word" type="button" data-word="breach" data-pos="" data-def="n. 裂口, 违背, 破坏, 违反, 突破, 破裂
+vt. 攻破, 突破
+vi. 跳出水面">breach</button>, but that the remaining <button class="vocab-word" type="button" data-word="amount" data-pos="" data-def="n. 总数, 总额
+vi. 总计, 等同">amount</button> may <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> longer to <button class="vocab-word" type="button" data-word="source" data-pos="" data-def="n. 来源, 水源, 根源, 原始资料, 源
+ 来源, 源程序">source</button>. Binance has repeatedly said it would <button class="vocab-word" type="button" data-word="cover" data-pos="" data-def="n. 盖子, 封面, 藉口
+vt. 覆盖, 掩饰, 保护, 掩护, 包括
+vi. 覆盖">cover</button> <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> of the losses linked to the <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button>.
+<button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> was an &quot;<button class="vocab-word" type="button" data-word="initial" data-pos="" data-def="n. 字首, 首字母
+a. 开始的, 最初的, 字首的
+vt. 用姓名的首字母签名">initial</button> spike&quot; in withdrawals, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> later declined and &quot;are stabilising as expected&quot;, Binance posted on X.
+It added that withdrawals for <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> cryptocurrencies <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> Bitcoin and Ethereum have resumed and that <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> services will <button class="vocab-word" type="button" data-word="resume" data-pos="" data-def="vt. 重新开始, 取回, 恢复
+vi. 再开始
+n. 摘要, 个人简历
+ 继续执行">resume</button> in phases <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button> security checks are completed.
+This <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> can <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be played
+<button class="vocab-word" type="button" data-word="Watch" data-pos="" data-def="n. 观察, 手表, 看守, 守护, 监视, 值班人
+vt. 看, 注视, 照顾, 看守, 守护, 监视
+vi. 观看, 注视, 守侯">Watch</button>: <button class="vocab-word" type="button" data-word="What" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">What</button> we <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> Binance&#x27;s $6.3bn <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button> and <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> to do if you&#x27;re affected
+The <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button> <button class="vocab-word" type="button" data-word="hit" data-pos="" data-def="n. 打击, 打, 冲撞, 讽刺
+vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上
+vi. 打, 打中, 打击, 碰撞, 偶然碰上
+ 击中; 找到; 瞬时打扰">hit</button> Binance&#x27;s global centralised <button class="vocab-word" type="button" data-word="exchange" data-pos="" data-def="n. 交换, (电话)交换局, 交换机, 汇兑, 交易所
+v. 交换, 交易, 兑换
+ 交换; 电话局">exchange</button>, Binance.com, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> its US-facing <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> has said it has <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> been affected by the <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button>.
+Binance said <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> that <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> checks <button class="vocab-word" type="button" data-word="suggest" data-pos="" data-def="vt. 提议, 建议, 促成, 暗示, 启发, 使人想起
+ 建议, 提出, 提议">suggest</button> the <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> may have started with a compromised <button class="vocab-word" type="button" data-word="laptop" data-pos="" data-def="膝上型的">laptop</button> that belonged to an <button class="vocab-word" type="button" data-word="engineer" data-pos="" data-def="n. 工程师, 工兵
+vt. 设计, 监造, 精明地处理, 策划">engineer</button>, allowing hackers to <button class="vocab-word" type="button" data-word="find" data-pos="" data-def="vt. 发现, 感到, 找到, 认为, 得到
+vi. 裁决
+n. 发现
+ 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中
+寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上">find</button> a <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> unauthorised transactions.
+The crypto withdrawn represents <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> a <button class="vocab-word" type="button" data-word="fraction" data-pos="" data-def="n. 小部分, 破片, 分数
+ 部分, 成分, 分散">fraction</button> of the <button class="vocab-word" type="button" data-word="total" data-pos="" data-def="a. 全体的, 总的, 全然的
+vt. 计算...的总和, 共计为
+vi. 合计
+n. 总数, 全体, 合计
+adv. 统统">total</button> <button class="vocab-word" type="button" data-word="value" data-pos="" data-def="n. 价值, 价格, 购买力, 评价, 估价, 计算结果
+vt. 评价, 估价, 重视
+ 计算结果">value</button> of assets held by Binance.
+The <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> said in 2024 that it had <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than $160bn in assets in its <button class="vocab-word" type="button" data-word="custody" data-pos="" data-def="n. 监护, 拘留, 监禁
+ 保管, 照顾, 保护">custody</button>.
+Cryptocurrencies are digital assets traded on exchanges <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Binance. Unlike <button class="vocab-word" type="button" data-word="cash" data-pos="" data-def="n. 现金
+vt. 兑现">cash</button>, they do <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="exist" data-pos="" data-def="vi. 存在, 生存, 发生">exist</button> in <button class="vocab-word" type="button" data-word="physical" data-pos="" data-def="a. 身体的, 物质的, 自然的, 物理学的, 好色的
+n. 体格检查">physical</button> <button class="vocab-word" type="button" data-word="form" data-pos="" data-def="n. 形状, 形体, 类型, 方式, 表格, 形式
+v. 形成, 排列, (使)组成
+n. 表单
+ 表单">form</button> and are managed on computers, smartphones and <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> digital devices.
+Binance was founded in <button class="vocab-word" type="button" data-word="China" data-pos="" data-def="n. 中国, 瓷器
+a. 中国的">China</button> and has hundreds of millions of registered users globally.
+<button class="vocab-word" type="button" data-word="Why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">Why</button> <button class="vocab-word" type="button" data-word="North" data-pos="" data-def="n. 北方, 北
+a. 北的, 北方的
+adv. 向北方, 在北方">North</button> Korea&#x27;s &#x27;<button class="vocab-word" type="button" data-word="elite" data-pos="" data-def="n. 精华, 精锐, 中坚分子">elite</button>&#x27; hackers are the <button class="vocab-word" type="button" data-word="prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">prime</button> <button class="vocab-word" type="button" data-word="suspect" data-pos="" data-def="n. 被怀疑者, 嫌疑犯
+a. 令人怀疑的, 不可信的, 可疑的
+v. 怀疑, 猜想">suspect</button> in <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> Binance <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button>
+<button class="vocab-word" type="button" data-word="Meet" data-pos="" data-def="n. 会, 集会
+a. 适宜的, 合适的
+vt. 遇见, 引见, 认识, 满足, 对付
+vi. 相遇, 接触">Meet</button> the crypto billionaires building a <button class="vocab-word" type="button" data-word="world" data-pos="" data-def="n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量
+ 世界, 地球, 世人">world</button> <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button> buys you a <button class="vocab-word" type="button" data-word="vote" data-pos="" data-def="n. 投票, 选举, 选票, 表决, 选举权, 得票数
+vi. 投票, 选举
+vt. 投票选举, 投票决定, 公认, 使投票">vote</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">36亿美元).
+    *   &quot;after</h3>
+<div class="article-content-zh">上周发生创纪录的黑客攻击后，全球最大的加密货币交易所币安（Binance）于周日重新开放，其客户已从中提取了超过36亿美元（约合27亿英镑）的资产。
+事件发生后，该公司暂停了所有交易，该事件影响了价值63亿美元的数字资产。
+包括美国联邦调查局（FBI）在内的主要机构已指控朝鲜应对此次网络攻击负责，据称这是历史上最大规模的黑客攻击。
+该公司表示，已弥补了此次安全漏洞中被盗资产的约95%，但筹集剩余资金可能需要更长时间。币安已多次表示，将承担与此次攻击相关的所有损失。
+提款最初出现了“激增”，随后有所下降，且“正如预期般趋于稳定”，币安在X上发文表示。
+它补充称，比特币和以太坊等主要加密货币的提款已恢复，一旦安全检查完成，更多服务将分阶段恢复。
+该视频无法播放
+观看：关于币安63亿美元黑客攻击事件的已知情况，以及如果您受到影响该怎么办
+此次黑客攻击影响了币安的全球中心化交易所Binance.com，而其面向美国的平台则表示未受该问题影响。
+币安上周表示，初步检查表明，该事件可能是从一名工程师的笔记本电脑遭到入侵开始的，这使得黑客找到了进行未经授权交易的途径。
+被提取的加密货币仅占币安所持资产总值的一小部分。
+该公司在2024年表示，其托管资产超过1600亿美元。
+加密货币是在币安等交易所进行交易的数字资产。与现金不同，它们不以实物形式存在，而是在计算机、智能手机和其他数字设备上进行管理。
+币安创立于中国，在全球拥有数亿注册用户。
+为何朝鲜“精英”黑客是币安重大黑客攻击事件的主要嫌疑人
+走近那些正在构建“金钱能买选票”世界的加密货币亿万富翁</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">withdraw — v. 提取；撤回</span>
+<span class="vocab-item">suspend — v. 暂停；中止</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">36亿美元).
+    *   &quot;after</h3>
+<div class="article-content-zh">上周发生创纪录的黑客攻击后，全球最大的加密货币交易所币安（Binance）于周日重新开放，其客户已从中提取了超过36亿美元（约合27亿英镑）的资产。
+事件发生后，该公司暂停了所有交易，该事件影响了价值63亿美元的数字资产。
+包括美国联邦调查局（FBI）在内的主要机构已指控朝鲜应对此次网络攻击负责，据称这是历史上最大规模的黑客攻击。
+该公司表示，已弥补了此次安全漏洞中被盗资产的约95%，但筹集剩余资金可能需要更长时间。币安已多次表示，将承担与此次攻击相关的所有损失。
+提款最初出现了“激增”，随后有所下降，且“正如预期般趋于稳定”，币安在X上发文表示。
+它补充称，比特币和以太坊等主要加密货币的提款已恢复，一旦安全检查完成，更多服务将分阶段恢复。
+该视频无法播放
+观看：关于币安63亿美元黑客攻击事件的已知情况，以及如果您受到影响该怎么办
+此次黑客攻击影响了币安的全球中心化交易所Binance.com，而其面向美国的平台则表示未受该问题影响。
+币安上周表示，初步检查表明，该事件可能是从一名工程师的笔记本电脑遭到入侵开始的，这使得黑客找到了进行未经授权交易的途径。
+被提取的加密货币仅占币安所持资产总值的一小部分。
+该公司在2024年表示，其托管资产超过1600亿美元。
+加密货币是在币安等交易所进行交易的数字资产。与现金不同，它们不以实物形式存在，而是在计算机、智能手机和其他数字设备上进行管理。
+币安创立于中国，在全球拥有数亿注册用户。
+为何朝鲜“精英”黑客是币安重大黑客攻击事件的主要嫌疑人
+走近那些正在构建“金钱能买选票”世界的加密货币亿万富翁</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">withdraw — v. 提取；撤回</span>
+<span class="vocab-item">suspend — v. 暂停；中止</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-02 09:24</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
