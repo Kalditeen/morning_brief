@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月03日 周二 · 卫报 The Guardian (科技)">
+<meta property="og:description" content="Shop fridges and freezers across Europe hit by fresh suspected cyber-attack">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科技) | 2026年11月03日 周二</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月03日 周二 · 卫报 The Guardian (科技)</p>
+<a class="back-link" href="2026-11-03.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="Shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">Shop</button> fridges and freezers <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> Europe <button class="vocab-word" type="button" data-word="hit" data-pos="" data-def="n. 打击, 打, 冲撞, 讽刺
+vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上
+vi. 打, 打中, 打击, 碰撞, 偶然碰上
+ 击中; 找到; 瞬时打扰">hit</button> by <button class="vocab-word" type="button" data-word="fresh" data-pos="" data-def="a. 新鲜的, 新奇的, 另外的, 淡的, 精神饱满的, 冒失的
+adv. 最新地, 刚刚
+n. 开始, 泛滥">fresh</button> suspected cyber-attack</h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/47506f81531a77d5b27d52c5ed4d7ac3485d3802/528_0_5356_4284/master/5356.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=bd257e87d40e0fdc3ad4b8c235a0da6b" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body"><button class="vocab-word" type="button" data-word="Supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">Supermarket</button> chains in at <button class="vocab-word" type="button" data-word="least" data-pos="" data-def="n. 最少, 最小, 最小限度
+a. 最少的, 最小的
+adv. 最小, 最少">least</button> <button class="vocab-word" type="button" data-word="seven" data-pos="" data-def="num. 七, 七个">seven</button> European countries have said the temperatures of refrigerators and freezers in <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of their shops soared <button class="vocab-word" type="button" data-word="overnight" data-pos="" data-def="n. 前一天晚上, 一夜的逗留
+a. 通宵的, 晚上的, 前夜的
+adv. 在前一夜, 整夜, 昨晚一晚上">overnight</button> to as <button class="vocab-word" type="button" data-word="high" data-pos="" data-def="n. 高度, 高处
+a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的
+adv. 高度地, 奢侈地">high</button> as 50C (122F), echoing a cyber-attack <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> that caused millions of euros of <button class="vocab-word" type="button" data-word="damage" data-pos="" data-def="n. 损害, 伤害
+v. 损害">damage</button> in France.
+Retailers in Belgium, Estonia, Ireland, Finland, Luxembourg , the Netherlands and Sweden reported problems with their refrigeration systems on <button class="vocab-word" type="button" data-word="Monday" data-pos="" data-def="n. 星期一">Monday</button>, and <button class="vocab-word" type="button" data-word="several" data-pos="" data-def="a. 几个的, 一些的, 各自的
+pron. 几个">several</button> companies confirmed they had been hacked.
+The EU <button class="vocab-word" type="button" data-word="food" data-pos="" data-def="n. 食物, 养料
+ 食物, 食品">food</button> and <button class="vocab-word" type="button" data-word="agriculture" data-pos="" data-def="n. 农业
+ 农业, 农学">agriculture</button> commissioner, Christophe Hansen, said the repeated cyber-attacks were deeply concerning, <button class="vocab-word" type="button" data-word="calling" data-pos="" data-def="n. 职业, 行业, 呼唤, 召集
+ 呼叫">calling</button> them “a <button class="vocab-word" type="button" data-word="deliberate" data-pos="" data-def="a. 深思熟虑的, 故意的, 从容的
+v. 仔细考虑">deliberate</button> <button class="vocab-word" type="button" data-word="attempt" data-pos="" data-def="n. 尝试, 企图
+vt. 尝试, 企图">attempt</button> to <button class="vocab-word" type="button" data-word="disrupt" data-pos="" data-def="a. 分裂的, 中断的
+vt. 使分裂, 使瓦解">disrupt</button> our <button class="vocab-word" type="button" data-word="food" data-pos="" data-def="n. 食物, 养料
+ 食物, 食品">food</button> <button class="vocab-word" type="button" data-word="supply" data-pos="" data-def="n. 补给, 供给, 供应品
+vt. 补给, 供给, 提供, 补充
+vi. 替代">supply</button> <button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button> and <button class="vocab-word" type="button" data-word="undermine" data-pos="" data-def="vt. 在...下面挖, 渐渐破坏, 暗地里破坏
+ 暗中破坏, 以阴谋中伤伤害">undermine</button> consumers’ <button class="vocab-word" type="button" data-word="confidence" data-pos="" data-def="n. 信心
+ 可靠">confidence</button> in it”.
+The incidents <button class="vocab-word" type="button" data-word="follow" data-pos="" data-def="vt. 跟随, 沿行, 遵循, 追求
+vi. 跟随, 接着
+n. 跟随, 追随">follow</button> an <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button> in France <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> in <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> hackers seized <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button> of cooling units in as <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> as 700 supermarkets, raising their temperatures as <button class="vocab-word" type="button" data-word="high" data-pos="" data-def="n. 高度, 高处
+a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的
+adv. 高度地, 奢侈地">high</button> ⁠as 50C (122F) and causing fires and <button class="vocab-word" type="button" data-word="food" data-pos="" data-def="n. 食物, 养料
+ 食物, 食品">food</button> losses estimated in the tens of millions of euros.
+A growing <button class="vocab-word" type="button" data-word="range" data-pos="" data-def="n. 排, 行, 山脉, 范围, 行列, 射程
+vt. 排列, 归类于, 使并列, 放牧
+vi. 平行, 延伸, 漫游
+ 量程; 范围; 域; 距离">range</button> of devices, including refrigeration systems, can <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> be monitored and controlled remotely, leading authorities to particularly <button class="vocab-word" type="button" data-word="fear" data-pos="" data-def="n. 恐怖, 害怕, 担心
+v. 害怕, 恐惧, 为...担心, 敬畏">fear</button> government-sponsored <button class="vocab-word" type="button" data-word="hybrid" data-pos="" data-def="n. 混血儿, 杂种, 混合物
+a. 混合的, 杂种的, 混合语的
+ NetWare的主机实用程序, 双重用户建立程序">hybrid</button> attacks ​in <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> Russia’s 2022 invasion of Ukraine.
+Sweden’s Coop <button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button> told the <button class="vocab-word" type="button" data-word="daily" data-pos="" data-def="a. 每日的, 日常的
+adv. 每日地, 日常地
+n. 日报">daily</button> Aftonbladet that <button class="vocab-word" type="button" data-word="six" data-pos="" data-def="num. 六, 六个">six</button> of ​its shops ‌had been ​<button class="vocab-word" type="button" data-word="hit" data-pos="" data-def="n. 打击, 打, 冲撞, 讽刺
+vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上
+vi. 打, 打中, 打击, 碰撞, 偶然碰上
+ 击中; 找到; 瞬时打扰">hit</button>, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> ICA said it was “<button class="vocab-word" type="button" data-word="aware" data-pos="" data-def="a. 知道的, 有觉悟的">aware</button> that a limited ​<button class="vocab-word" type="button" data-word="number" data-pos="" data-def="n. 数, 数字, 数目, 号码
+vt. 数, 计算, 共计
+vi. 计算, 报数
+ 数字">number</button> of stores were affected by an <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> <button class="vocab-word" type="button" data-word="overnight" data-pos="" data-def="n. 前一天晚上, 一夜的逗留
+a. 通宵的, 晚上的, 前夜的
+adv. 在前一夜, 整夜, 昨晚一晚上">overnight</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> impacted their refrigeration and freezer systems”.
+An ICA <button class="vocab-word" type="button" data-word="shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">shop</button> at Sjöbo in southern Sweden posted that its fridges and freezers had been hacked and their <button class="vocab-word" type="button" data-word="temperature" data-pos="" data-def="n. 温度, 发烧, 热度
+ 温度">temperature</button> <button class="vocab-word" type="button" data-word="set" data-pos="" data-def="n. 日落, 同伙, 组合, 集合, 装置
+vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整
+vi. 日落, 凝固, 定型, 搁住, 结果, 适合
+a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的
+ 设置; DOS内部命令:改变或显示分配给环境变量的值">set</button> at 50C. <button class="vocab-word" type="button" data-word="Another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">Another</button> in Stockholm said its freezers were broken “<button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to a 2am cyberattack” and that “<button class="vocab-word" type="button" data-word="everything" data-pos="" data-def="pron. 每件事物, 所有事物">everything</button> was destroyed”.
+The <button class="vocab-word" type="button" data-word="head" data-pos="" data-def="n. 头, 头脑, 领袖, 脑袋, 最前的部分
+vt. 为首, 朝向, 前进, 用头顶
+vi. 朝特定方向行进, (作物)结穗
+a. 头的, 在顶端的, 主要的
+ 磁头; 冲头">head</button> of Sweden’s national cybersecurity centre, John Billow, said it ‌was working on incidents <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button>. It had established the <button class="vocab-word" type="button" data-word="country" data-pos="" data-def="n. 国家, 乡村, 地区, 故乡
+a. 乡下的, 农村的
+ DOS外部命令:用于设定国家代码, 包括日期时间及货币格式">country</button> had “<button class="vocab-word" type="button" data-word="quite" data-pos="" data-def="adv. 相当, 完全, 十分">quite</button> a <button class="vocab-word" type="button" data-word="lot" data-pos="" data-def="n. 运气, 签, 抽签, 份额, 许多, 一堆
+vt. 划分
+vi. 抽签, 抓阄">lot</button> of exposed operational ‌<button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> devices” that needed updating or patching, he told Reuters.
+The Dutch retailer Ahold Delhaize, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> ​<button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> ​reported a ​<button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> ​to <button class="vocab-word" type="button" data-word="police" data-pos="" data-def="n. 警察, 警察当局, 治安
+vt. 维持治安, 管辖">police</button> in the Netherlands, said fridges and ⁠freezers in dozens of its ⁠supermarkets in ​Belgium ‌and ‌Luxembourg had been <button class="vocab-word" type="button" data-word="hit" data-pos="" data-def="n. 打击, 打, 冲撞, 讽刺
+vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上
+vi. 打, 打中, 打击, 碰撞, 偶然碰上
+ 击中; 找到; 瞬时打扰">hit</button>.
+It did <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="specify" data-pos="" data-def="vt. 详列, 指定, 说明
+ 指定">specify</button> the <button class="vocab-word" type="button" data-word="cause" data-pos="" data-def="n. 原因, 目标
+vt. 引起, 使产生, 使遭受">cause</button>, but reporters visiting a <button class="vocab-word" type="button" data-word="shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">shop</button> north-east of Brussels saw refrigerators and freezers <button class="vocab-word" type="button" data-word="empty" data-pos="" data-def="a. 空的, 空虚的, 空腹的, 空洞的
+n. 空的东西, 空车
+vt. 倒空, 使变空, 使排出
+vi. 流空
+ 空">empty</button> and a <button class="vocab-word" type="button" data-word="sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">sign</button> reading: “<button class="vocab-word" type="button" data-word="Due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">Due</button> to cyberattacks, <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> will be <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> products on the refrigerated or freezer shelves. We <button class="vocab-word" type="button" data-word="offer" data-pos="" data-def="n. 给予(物), 出价, 提议, 意图, 报价
+vt. 提供, 出价, 奉献, 试图, 使出现, 演出
+vi. 出现, 献祭, 提议, 求婚">offer</button> our <button class="vocab-word" type="button" data-word="sincere" data-pos="" data-def="a. 诚实的, 正直的, 真挚的, 纯净的">sincere</button> apologies.”
+A <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> spokesperson, Sarah ‌De Meester, said the <button class="vocab-word" type="button" data-word="range" data-pos="" data-def="n. 排, 行, 山脉, 范围, 行列, 射程
+vt. 排列, 归类于, 使并列, 放牧
+vi. 平行, 延伸, 漫游
+ 量程; 范围; 域; 距离">range</button> of <button class="vocab-word" type="button" data-word="fresh" data-pos="" data-def="a. 新鲜的, 新奇的, 另外的, 淡的, 精神饱满的, 冒失的
+adv. 最新地, 刚刚
+n. 开始, 泛滥">fresh</button> and frozen products was “temporarily <button class="vocab-word" type="button" data-word="somewhat" data-pos="" data-def="n. 某物, 几分
+adv. 多少, 几分">somewhat</button> limited” in affected shops, but that distribution centres were operating normally and <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> was <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> disruption to deliveries.
+Belgium’s Le Soir <button class="vocab-word" type="button" data-word="newspaper" data-pos="" data-def="n. 报纸">newspaper</button> reported that dozens of shops and supermarkets had been affected, including <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> Spar outlets, <button class="vocab-word" type="button" data-word="Shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">Shop</button> &amp; <button class="vocab-word" type="button" data-word="Go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">Go</button> convenience shops attached to Q8 service stations and <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> smaller Proxy Delhaize mini-markets.
+“We started mobilising technicians at 1am,” Stephan Moelans, the <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> executive of Sabcobel, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> operates Delhaize’s refrigeration systems, told the <button class="vocab-word" type="button" data-word="paper" data-pos="" data-def="n. 纸, 文件, 文章, 报纸, 证券, 证件
+vt. 用纸糊, 贴壁纸于, 用纸包装
+vi. 贴壁纸
+a. 纸做的, 纸上的">paper</button>. “We spent <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> <button class="vocab-word" type="button" data-word="night" data-pos="" data-def="n. 夜, 夜晚, 晚上, 黑暗, 夜晚的工作
+ 夜, 黑夜, 黑暗">night</button> and <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button> disconnecting the affected installations.”
+He told the Belga <button class="vocab-word" type="button" data-word="news" data-pos="" data-def="n. 新闻, 消息, 报导
+ 新闻, 消息, 新闻报导">news</button> agency the ‌<button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> had been a cyber-attack and that the units’ evaporators were switched to defrost <button class="vocab-word" type="button" data-word="mode" data-pos="" data-def="n. 模态, 调式, 样式, 文体, 状态, 方式, 风尚
+ 方式; DOS外部命令:设定各种设备命令">mode</button>.
+The Colruyt and Intermarché <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> chains <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> said they had been <button class="vocab-word" type="button" data-word="hit" data-pos="" data-def="n. 打击, 打, 冲撞, 讽刺
+vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上
+vi. 打, 打中, 打击, 碰撞, 偶然碰上
+ 击中; 找到; 瞬时打扰">hit</button> by <button class="vocab-word" type="button" data-word="technical" data-pos="" data-def="a. 技术上的, 专门的, 工业的, 严格根据法律的
+ 技巧">technical</button> problems affecting fridges in <button class="vocab-word" type="button" data-word="five" data-pos="" data-def="num. 五, 五个">five</button> and 15 of their shops respectively, and Carrefour Belgium reported disruption in <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> 15 of its 700 shops.
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to Headlines Europe
+A <button class="vocab-word" type="button" data-word="digest" data-pos="" data-def="n. 文摘
+vi. 消化
+vt. 消化, 理解
+ 摘要">digest</button> of the morning&#x27;s <button class="vocab-word" type="button" data-word="main" data-pos="" data-def="n. 主要部分, 干线, 体力, 力量, 主群组
+a. 主要的, 重要的, 全力的
+ 主群组">main</button> headlines from the Europe edition emailed <button class="vocab-word" type="button" data-word="direct" data-pos="" data-def="a. 直接的, 坦白的
+vt. 指示, 指挥, 命令, 导演
+vi. 指导, 指挥
+adv. 直接地">direct</button> to you <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button>
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+“It’s a cyber-attack, <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> is <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="reason" data-pos="" data-def="n. 理由, 原因, 理智, 道理, 前提, 理性
+vt. 说服, 推论, 辩论
+vi. 推论, 劝说, 思考">reason</button>,” said Mich Vergauwen, a Carrefour spokesperson. An Ikea Belgium spokesperson <button class="vocab-word" type="button" data-word="likewise" data-pos="" data-def="adv. 同样地, 也">likewise</button> told Agence France-Presse that a cyber-attack had caused the <button class="vocab-word" type="button" data-word="temperature" data-pos="" data-def="n. 温度, 发烧, 热度
+ 温度">temperature</button> of freezers in its Mons <button class="vocab-word" type="button" data-word="shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">shop</button> to <button class="vocab-word" type="button" data-word="rise" data-pos="" data-def="n. 上升, 增加, 上涨, 高地, 升高, 出现
+vi. 升起, 起身, 起立, 上升, 上涨, 增长, 高耸, 起义, 浮现
+vt. 使飞起">rise</button> suddenly.
+Ikea, famous for its in-store Swedish meatballs, said it had had to ‌<button class="vocab-word" type="button" data-word="remove" data-pos="" data-def="vt. 移动, 调动, 除去, 迁移, 开除, 移交
+vi. 迁移, 移动, 搬家
+n. 班级, 升级, 移动, 搬家, 间距
+ 删除">remove</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> <button class="vocab-word" type="button" data-word="food" data-pos="" data-def="n. 食物, 养料
+ 食物, 食品">food</button> products from refrigeration units ​as a <button class="vocab-word" type="button" data-word="precaution" data-pos="" data-def="n. 预防, 留心, 警戒
+vt. 预先警告">precaution</button> and expected <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> <button class="vocab-word" type="button" data-word="food" data-pos="" data-def="n. 食物, 养料
+ 食物, 食品">food</button> <button class="vocab-word" type="button" data-word="waste" data-pos="" data-def="n. 浪费, 废物, 损耗, 消耗, 荒地, 垃圾, 地面风化物
+a. 废弃的, 荒芜的, 多余的
+vt. 浪费, 消耗, 使荒芜
+vi. 浪费, 消耗, 变消瘦">waste</button> as ⁠a <button class="vocab-word" type="button" data-word="result" data-pos="" data-def="n. 结果, 成绩, 答案
+vi. 产生, 结果, 致使
+ 结果">result</button>.
+In Finland, the Helsingin Sanomat <button class="vocab-word" type="button" data-word="newspaper" data-pos="" data-def="n. 报纸">newspaper</button> said shops operated by the Kesko <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> <button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button> were investigating <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> problems, <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> the Dutch <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> <button class="vocab-word" type="button" data-word="radio" data-pos="" data-def="n. 无线电, 收音机, 无线电报, 无线电广播, 无线电台
+v. 用无线电发送">radio</button> NOS reported that the systems of at <button class="vocab-word" type="button" data-word="least" data-pos="" data-def="n. 最少, 最小, 最小限度
+a. 最少的, 最小的
+adv. 最小, 最少">least</button> 17 mainly <button class="vocab-word" type="button" data-word="small" data-pos="" data-def="a. 小的, 少的, 小型的, 低微的, 小气的, 细微的
+adv. 些微地
+n. 狭小部分">small</button> <button class="vocab-word" type="button" data-word="local" data-pos="" data-def="a. 地方性的, 当地的, 局部的, 乡土的, 本地的
+n. 当地居民, 本地新闻, 局部
+ 本地的; 局部">local</button> shops had been affected.
+At <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> Estonian <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> <button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button>, attackers accessed a computer controlling the refrigeration <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> and turned <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> the <button class="vocab-word" type="button" data-word="temperature" data-pos="" data-def="n. 温度, 发烧, 热度
+ 温度">temperature</button> to 50C, the refrigeration <button class="vocab-word" type="button" data-word="supply" data-pos="" data-def="n. 补给, 供给, 供应品
+vt. 补给, 供给, 提供, 补充
+vi. 替代">supply</button> <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> Kitman Coldtech told the <button class="vocab-word" type="button" data-word="ERR" data-pos="" data-def="vi. 犯错, 做错, 犯罪
+ 弄错, 犯错误, 陈述">ERR</button> broadcaster.
+“This is <button class="vocab-word" type="button" data-word="very" data-pos="" data-def="a. 真正的, 恰好的, 十足的, 特有的
+adv. 非常, 完全">very</button> <button class="vocab-word" type="button" data-word="fresh" data-pos="" data-def="a. 新鲜的, 新奇的, 另外的, 淡的, 精神饱满的, 冒失的
+adv. 最新地, 刚刚
+n. 开始, 泛滥">fresh</button>, it happened this <button class="vocab-word" type="button" data-word="morning" data-pos="" data-def="n. 早晨, 早上, 初期">morning</button>,” its <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> executive, Jann Mutso, said, adding that the <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button> was responded to within minutes and <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> had been <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="significant" data-pos="" data-def="a. 重要的, 有效的, 有含义的, 暗示的, 值得注意的">significant</button> <button class="vocab-word" type="button" data-word="damage" data-pos="" data-def="n. 损害, 伤害
+v. 损害">damage</button>. The Selver <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> <button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button> said <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of its outlets had been affected.
+Ireland’s third-largest <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> ⁠<button class="vocab-word" type="button" data-word="chain" data-pos="" data-def="n. 链, 枷锁, 束缚
+vt. 用铁练锁住, 束缚, 囚禁">chain</button>, ⁠SuperValu, said ​refrigeration systems limited ⁠to ​a ‌<button class="vocab-word" type="button" data-word="specific" data-pos="" data-def="n. 特效药, 特性
+a. 特殊的, 明确的, 具有特效的, 特定地, 具体地">specific</button> ‌<button class="vocab-word" type="button" data-word="model" data-pos="" data-def="n. 模型, 模范, 模特儿
+a. 模范的, 作模型用的
+vi. 做模型, 做模特儿
+vt. 使模仿, 塑造
+ 模型">model</button> ‌in 13 of its 223 shops ‌had been affected by ​a cyber-incident, ⁠and that chilled and ​frozen products ​had been removed from ​<button class="vocab-word" type="button" data-word="sale" data-pos="" data-def="n. 出售, 卖, 拍卖, 销售额, 廉价出售
+ 卖, 出售; 销售(货)">sale</button>.
+<button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> cyber-attacks <button class="vocab-word" type="button" data-word="involve" data-pos="" data-def="vt. 包括, 使陷于, 潜心于, 包围
+ 累及, 牵涉, 包含">involve</button> extortion or are politically motivated and are potentially carried <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> by state-level actors, said Tom Hegel of the cybersecurity <button class="vocab-word" type="button" data-word="firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">firm</button> SentinelOne. But the <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> attacks, with <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> financial demands, <button class="vocab-word" type="button" data-word="point" data-pos="" data-def="n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位
+vt. 弄尖, 强调, 指出, 加标点于, 瞄准
+vi. 指, 指向, 表明">point</button> to sabotage, he said.
+“<button class="vocab-word" type="button" data-word="Retail" data-pos="" data-def="n. 零售
+a. 零售的
+vt. 零售, 详述, 传播
+vi. 零售">Retail</button> is an <button class="vocab-word" type="button" data-word="easy" data-pos="" data-def="a. 容易的, 缓缓的, 舒适的, 从容的, 宽容的, 流畅的, 随便的, 自在的, 疲软的
+adv. 容易地, 慢慢地">easy</button> <button class="vocab-word" type="button" data-word="target" data-pos="" data-def="n. 目标, 靶子, 指标
+vt. 对准, 订指标">target</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> <button class="vocab-word" type="button" data-word="retail" data-pos="" data-def="n. 零售
+a. 零售的
+vt. 零售, 详述, 传播
+vi. 零售">retail</button> chains <button class="vocab-word" type="button" data-word="run" data-pos="" data-def="n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续
+vi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延
+vt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行
+a. 熔化的, 融化的, 浇铸的
+run的过去式和过去分词
+ 运行">run</button> <button class="vocab-word" type="button" data-word="enormous" data-pos="" data-def="a. 巨大的, 庞大的">enormous</button> estates of refrigeration controllers, building management systems, <button class="vocab-word" type="button" data-word="door" data-pos="" data-def="n. 门">door</button> <button class="vocab-word" type="button" data-word="access" data-pos="" data-def="n. 通路, 入口, 接近, 进入, 使用权, 发作
+vt. 访问, 存取, 接近, 使用
+ 访问, 存取">access</button> panels and point-of-sale <button class="vocab-word" type="button" data-word="gear" data-pos="" data-def="n. 齿轮, 工具
+vt. 以齿轮连起, 开动, 使适应, 安排
+vi. 连接上, 适合">gear</button>,” Hegel told Reuters.
+Patrick Lamplmair of the cybersecurity <button class="vocab-word" type="button" data-word="firm" data-pos="" data-def="n. 公司, 商号
+a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的
+vt. 使牢固, 使坚定
+vi. 变稳固, 变坚实
+adv. 稳固地">firm</button> Tributech said cyber-attackers would <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> going “<button class="vocab-word" type="button" data-word="until" data-pos="" data-def="prep. 直到, 在...以前
+conj. 直到...时, 在...以前">until</button> it stops working” <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> the <button class="vocab-word" type="button" data-word="method" data-pos="" data-def="n. 方法, 办法, 条理, 秩序
+ 法">method</button> was “<button class="vocab-word" type="button" data-word="cheap" data-pos="" data-def="a. 便宜的, 不值钱的, 可鄙的
+adv. 便宜地">cheap</button> and the <button class="vocab-word" type="button" data-word="damage" data-pos="" data-def="n. 损害, 伤害
+v. 损害">damage</button> is <button class="vocab-word" type="button" data-word="immediate" data-pos="" data-def="a. 立即的, 直接的, 接近的
+ 直接的, 立即的">immediate</button>”. <button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> refrigeration systems had known and as yet unfixed flaws, he said.
+“Thousands of these controllers were <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> reachable from the <button class="vocab-word" type="button" data-word="internet" data-pos="" data-def="因特网, 国际互连网, 网际网络, 互连网络, 广域网">internet</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the French <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button>,” he added. “A <button class="vocab-word" type="button" data-word="few" data-pos="" data-def="a. 很少的, 不多的, 少数的
+n. 少数">few</button> commands to a <button class="vocab-word" type="button" data-word="temperature" data-pos="" data-def="n. 温度, 发烧, 热度
+ 温度">temperature</button> controller can <button class="vocab-word" type="button" data-word="destroy" data-pos="" data-def="vt. 破坏, 毁坏, 消灭">destroy</button> <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="overnight" data-pos="" data-def="n. 前一天晚上, 一夜的逗留
+a. 通宵的, 晚上的, 前夜的
+adv. 在前一夜, 整夜, 昨晚一晚上">overnight</button> and <button class="vocab-word" type="button" data-word="close" data-pos="" data-def="n. 结束, 完结
+a. 靠近的, 亲近的, 亲密的, 严密的, 关闭的, 狭窄的, 秘密的
+vt. 关, 结束, 使靠近, 封闭, 使接近
+vi. 关闭, 结束, 靠近
+adv. 接近地, 紧密地
+ 关闭">close</button> stores.”
+In the French <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button>, the hackers pirated controllers mostly supplied by the Danish <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> Danfoss, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> said subsequently that it had identified <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> security flaws <button class="vocab-word" type="button" data-word="last" data-pos="" data-def="a. 最后的, 末尾的, 最近的
+vi. 持续, 支持, 维持
+vt. 使维持, 够...用
+adv. 最后, 后来
+n. 最后, 末尾, 鞋楦头">last</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button> and had “<button class="vocab-word" type="button" data-word="long" data-pos="" data-def="a. 长的, 长久的, 冗长的, 做多头的
+vi. 渴望, 热望, 极想
+adv. 长久, 始终
+n. 长时间, 长信号, 长整型
+ 长, 长整型">long</button> recommended” customers <button class="vocab-word" type="button" data-word="install" data-pos="" data-def="vt. 安装, 安置, 使就职
+ 安装, 安装程序; DOS内部命令:安装常驻程序">install</button> updates.
+The hackers remotely overrode the settings on thousands of freezers, fridges and chiller cabinets at chains including Intermarché, Coopérative U, Carrefour, Leclerc and Monoprix, pushing them from as <button class="vocab-word" type="button" data-word="low" data-pos="" data-def="n. 低点, 低价, 低, 牛叫声
+a. 低的, 消沉的, 低等的, 浅的, 卑贱的
+adv. 低下地, 谦卑地, 低
+vi. 牛叫">low</button> as -27C to <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> over 50C.
+The shops had to <button class="vocab-word" type="button" data-word="discard" data-pos="" data-def="vt. 丢弃, 抛弃
+vi. 垫牌
+n. 垫牌, 抛弃">discard</button> <button class="vocab-word" type="button" data-word="vast" data-pos="" data-def="a. 巨大的, 广大的, 非常的, 大量的">vast</button> quantities of <button class="vocab-word" type="button" data-word="fresh" data-pos="" data-def="a. 新鲜的, 新奇的, 另外的, 淡的, 精神饱满的, 冒失的
+adv. 最新地, 刚刚
+n. 开始, 泛滥">fresh</button> <button class="vocab-word" type="button" data-word="meat" data-pos="" data-def="n. 肉, 餐, 食物
+ 肉类">meat</button>, <button class="vocab-word" type="button" data-word="dairy" data-pos="" data-def="n. 牛奶公司, 乳品店, 乳牛场">dairy</button> and frozen products. <button class="vocab-word" type="button" data-word="Individual" data-pos="" data-def="n. 人, 个人, 个体
+a. 个别的, 个人的, 独特的">Individual</button> supermarkets reportedly suffered losses ranging from tens of thousands of euros to <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than €130,000 (£109,000).
+The Paris prosecutor’s <button class="vocab-word" type="button" data-word="office" data-pos="" data-def="n. 办公室, 部, 公职, 职责
+ 办公室">office</button> has opened a <button class="vocab-word" type="button" data-word="formal" data-pos="" data-def="a. 正式的, 形式的, 礼仪的, 拘于礼节的, 拘谨的
+n. 正式的社交活动">formal</button> investigation into the French <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button> and the <button class="vocab-word" type="button" data-word="prime" data-pos="" data-def="n. 最佳部分, 初期, 全盛期
+a. 主要的, 最初的, 根本的
+v. 加油启动, 灌注, 填装">prime</button> <button class="vocab-word" type="button" data-word="minister" data-pos="" data-def="n. 部长, 牧师, 公使
+vi. 服侍, 救助, 主持宗教仪式">minister</button>, Sébastien Lecornu, instructed France’s national cybersecurity agency, Ansii, to <button class="vocab-word" type="button" data-word="investigate" data-pos="" data-def="v. 调查, 审查">investigate</button>.
+The agency subsequently reported that supermarkets using controllers from <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> companies had <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> been targeted in the <button class="vocab-word" type="button" data-word="attack" data-pos="" data-def="n. 攻击, 抨击
+vt. 攻击, 抨击, 动手干
+vi. 攻击">attack</button>, but authorities have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> indicated <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> could have been <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> the incidents. <button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> have been <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> claims of responsibility.
+Chains in <button class="vocab-word" type="button" data-word="seven" data-pos="" data-def="num. 七, 七个">seven</button> countries <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> cooling <button class="vocab-word" type="button" data-word="unit" data-pos="" data-def="n. 单位, 分队, 部队, 单元, 部件, 装置
+a. 单位的, 单元的
+ 单元常数; 部件">unit</button> temperatures <button class="vocab-word" type="button" data-word="rose" data-pos="" data-def="n. 玫瑰, 蔷薇, 玫瑰色
+a. 玫瑰色的, 玫瑰花的
+vt. 使成玫瑰色
+rise的过去式">rose</button> <button class="vocab-word" type="button" data-word="overnight" data-pos="" data-def="n. 前一天晚上, 一夜的逗留
+a. 通宵的, 晚上的, 前夜的
+adv. 在前一夜, 整夜, 昨晚一晚上">overnight</button> in <button class="vocab-word" type="button" data-word="incident" data-pos="" data-def="n. 事件, 事变, 小事
+a. 附带的, 易于发生的, 外来的, 入射的">incident</button> <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> to <button class="vocab-word" type="button" data-word="hack" data-pos="" data-def="n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄
+vt. 劈, 砍, 出租, 用旧
+vi. 劈, 砍, 干咳, 驾驶出租车
+a. 出租的">hack</button> of French shops
+<button class="vocab-word" type="button" data-word="Who" data-pos="" data-def="pron. 谁">Who</button> is hacking Europe’s <button class="vocab-word" type="button" data-word="supermarket" data-pos="" data-def="n. 超级市场
+ 超级市场, 自助售货商店">supermarket</button> fridges and freezers, and <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button>?</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+
+
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+
+
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-03 11:16</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
