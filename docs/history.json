@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-01",
-      "cat": "guardian-tech",
-      "title": "North Korea is likely culprit behind $6.3bn crypto hack, ‘largest heist in history’"
-    },
-    {
-      "date": "2026-11-01",
-      "cat": "bbc-env",
-      "title": "'Fascinating' rare beetle found in Wales again after 60 years"
-    },
-    {
       "date": "2026-11-02",
       "cat": "guardian",
       "title": "Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official"
@@ -39,6 +29,16 @@
       "date": "2026-11-04",
       "cat": "bbc-science",
       "title": "Prince William says UK faces terrifying risk of more wildfires due to climate change"
+    },
+    {
+      "date": "2026-11-05",
+      "cat": "guardian-science",
+      "title": "Nasa telescope launched in 2004 to plunge back to Earth after failed rescue mission"
+    },
+    {
+      "date": "2026-11-05",
+      "cat": "bbc-business",
+      "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms"
     }
   ]
 }
