@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-02",
-      "cat": "guardian",
-      "title": "Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official"
-    },
-    {
-      "date": "2026-11-02",
-      "cat": "bbc-tech",
-      "title": "Binance users withdraw $3.6bn after record crypto hack"
-    },
-    {
       "date": "2026-11-03",
       "cat": "guardian-tech",
       "title": "Shop fridges and freezers across Europe hit by fresh suspected cyber-attack"
@@ -39,6 +29,16 @@
       "date": "2026-11-05",
       "cat": "bbc-business",
       "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms"
+    },
+    {
+      "date": "2026-11-06",
+      "cat": "guardian-business",
+      "title": "Nasdaq sees worst day in 18 months as investors bet on AI slowdown after Democrats’ election triumph"
+    },
+    {
+      "date": "2026-11-06",
+      "cat": "bbc-world",
+      "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown"
     }
   ]
 }
