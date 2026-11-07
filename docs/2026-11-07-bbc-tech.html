@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月07日 周六 · BBC News (科技)">
+<meta property="og:description" content="Elon Musk appears to signal the end of the road for Cybertruck">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年11月07日 周六</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月07日 周六 · BBC News (科技)</p>
+<a class="back-link" href="2026-11-07.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Elon Musk appears to <button class="vocab-word" type="button" data-word="signal" data-pos="" data-def="n. 信号, 暗号, 近因, 导火线
+vt. 向...作信号, 标志, 用信号通知
+vi. 发信号
+a. 作为信号的, 显著的
+ 信号">signal</button> the <button class="vocab-word" type="button" data-word="end" data-pos="" data-def="n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余
+v. 结束, 终结, 终止
+ 端; 结束">end</button> of the <button class="vocab-word" type="button" data-word="road" data-pos="" data-def="n. 路, 道路, 公路, 途径, 方法
+ 公路, 道路, 行车道">road</button> for Cybertruck</h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d7ce/live/3fc37350-d9f3-11f1-a701-fddedf244c16.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Tesla will <button class="vocab-word" type="button" data-word="wind" data-pos="" data-def="n. 风, 气息, 气味, 呼吸, 风声, 趋势, 空谈, 卷绕, 弯曲
+vt. 使通风, 嗅出, 使喘气, 吹号角, 上发条, 缠绕, 包, 绞起, 吊起, 使弯曲, 使迂回
+vi. 嗅出猎物, 吹响号角, 卷曲, 蜿蜒, 迂回, 缠绕">wind</button> <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> production of its Cybertruck vehicles at its Texas <button class="vocab-word" type="button" data-word="factory" data-pos="" data-def="n. 工厂, 产生地, 代理店
+ 工厂, 代理店, 商行在国外的代理处">factory</button> <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>, Elon Musk says.
+He did <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="spell" data-pos="" data-def="n. 符咒, 魅力, 轮值, 轮班, 工作时间, 一次发作
+vt. 拼写, 拼成, 琢磨, 理解, 招致, 轮换, 迷住
+vi. 轮换, 拼字">spell</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> it plans to <button class="vocab-word" type="button" data-word="stop" data-pos="" data-def="n. 停止, 车站, 逗留, 填塞, 障碍, (风琴的)音栓
+vi. 停止, 被塞住
+vt. 塞住, 堵塞, 阻止, 击落, 停止, 终止, 断绝">stop</button> making them entirely or <button class="vocab-word" type="button" data-word="shift" data-pos="" data-def="n. 变化, 移动, 轮班, 手段, 应急办法, 移位
+vt. 替换, 转移, 改变, 推卸, 变速
+vi. 转换, 移动, 转变, 推托, 变速
+ DOS内部命令:该命令可将批处理参数向左移动一个位置">shift</button> production <button class="vocab-word" type="button" data-word="elsewhere" data-pos="" data-def="adv. 在别处">elsewhere</button>, but did <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> the decision was to &quot;<button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> <button class="vocab-word" type="button" data-word="room" data-pos="" data-def="n. 房间, 空位, 场所
+vi. 住宿, 居住
+vt. 留宿">room</button>&quot; for building <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> of its self-driving Cybercab cars.
+But the project&#x27;s <button class="vocab-word" type="button" data-word="lead" data-pos="" data-def="n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线
+vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包
+vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖
+a. 带头的, 最重要的">lead</button> <button class="vocab-word" type="button" data-word="engineer" data-pos="" data-def="n. 工程师, 工兵
+vt. 设计, 监造, 精明地处理, 策划">engineer</button>, Wes Morrill, appeared to <button class="vocab-word" type="button" data-word="suggest" data-pos="" data-def="vt. 提议, 建议, 促成, 暗示, 启发, 使人想起
+ 建议, 提出, 提议">suggest</button> the <button class="vocab-word" type="button" data-word="vehicle" data-pos="" data-def="n. 交通工具, 车辆, 传播媒介
+ 载体; 运载体; 漆料">vehicle</button> was being discontinued, writing on X: &quot;Cybertruck was an <button class="vocab-word" type="button" data-word="incredible" data-pos="" data-def="a. 难以置信的">incredible</button> <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> development <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> and lives on through Cybercab.&quot;
+With its distinctive angular looks, the Cybertruck attracted diehard fans, but was <button class="vocab-word" type="button" data-word="beset" data-pos="" data-def="vt. 围绕, 使苦恼, 镶嵌">beset</button> by delays <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> being launched in 2023 and has had disappointing sales numbers <button class="vocab-word" type="button" data-word="since" data-pos="" data-def="prep. 自...以后, 自...以来
+adv. 自那时以后
+conj. 既然, 自...以后, 自...以来">since</button>.
+Tesla fans have been mourning the <button class="vocab-word" type="button" data-word="news" data-pos="" data-def="n. 新闻, 消息, 报导
+ 新闻, 消息, 新闻报导">news</button> <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button>, with <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="person" data-pos="" data-def="n. 人, 人身, 人称
+ 人, 法人, 人身">person</button> <button class="vocab-word" type="button" data-word="calling" data-pos="" data-def="n. 职业, 行业, 呼唤, 召集
+ 呼叫">calling</button> it &quot; the <button class="vocab-word" type="button" data-word="best" data-pos="" data-def="a. 最好的
+adv. 最好地
+n. 最好的人">best</button> <button class="vocab-word" type="button" data-word="vehicle" data-pos="" data-def="n. 交通工具, 车辆, 传播媒介
+ 载体; 运载体; 漆料">vehicle</button> Tesla has <button class="vocab-word" type="button" data-word="ever" data-pos="" data-def="adv. 曾经, 究竟, 永远">ever</button> made , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> &quot; as he lamented it being &quot;discontinued <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>&quot;.
+Musk responded to the user , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> with the <button class="vocab-word" type="button" data-word="word" data-pos="" data-def="n. 话, 消息, 词, 诺言, 命令
+vt. 用言辞表达
+ 字">word</button> &quot;<button class="vocab-word" type="button" data-word="true" data-pos="" data-def="a. 真实的, 正确的, 忠诚的, 可靠的, 纯粹的, 正式的
+n. 真实, 准确
+adv. 真实地, 准确地">true</button>&quot;, adding: &quot;But the Cybertruck <button class="vocab-word" type="button" data-word="fleet" data-pos="" data-def="n. 舰队, 港湾, 小河
+a. 快速的, 敏捷的, 浅的, 短暂的
+adv. 浅
+vi. 疾驰, 飞逝, 掠过
+vt. 消磨, 变换船(或船员)的位置">fleet</button> will be <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button> for a <button class="vocab-word" type="button" data-word="long" data-pos="" data-def="a. 长的, 长久的, 冗长的, 做多头的
+vi. 渴望, 热望, 极想
+adv. 长久, 始终
+n. 长时间, 长信号, 长整型
+ 长, 长整型">long</button> <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button>.&quot;
+Tesla&#x27;s <button class="vocab-word" type="button" data-word="stock" data-pos="" data-def="n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目
+a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的
+vt. 装把手于, 进货, 备有, 放牧
+vi. 出新芽, 备货, 囤积">stock</button> <button class="vocab-word" type="button" data-word="rose" data-pos="" data-def="n. 玫瑰, 蔷薇, 玫瑰色
+a. 玫瑰色的, 玫瑰花的
+vt. 使成玫瑰色
+rise的过去式">rose</button> 4.7% on <button class="vocab-word" type="button" data-word="Friday" data-pos="" data-def="n. 星期五">Friday</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> his announcement.
+The <button class="vocab-word" type="button" data-word="vehicle" data-pos="" data-def="n. 交通工具, 车辆, 传播媒介
+ 载体; 运载体; 漆料">vehicle</button> has <button class="vocab-word" type="button" data-word="always" data-pos="" data-def="adv. 总是, 始终">always</button> been a <button class="vocab-word" type="button" data-word="passion" data-pos="" data-def="n. 激情, 酷爱, 热爱, 强烈感情, 耶稣受难(故事)">passion</button> <button class="vocab-word" type="button" data-word="project" data-pos="" data-def="n. 计划, 设计, 事业
+vt. 计划, 设计, 投掷, 发射, 使凸出, 放映
+vi. 凸出">project</button> for Musk. He said it was &quot; <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="awesome" data-pos="" data-def="a. 引起敬畏的, 可怕的">awesome</button> than <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> realise , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> &quot; in <button class="vocab-word" type="button" data-word="March" data-pos="" data-def="n. 三月, 进行, 行军, 步伐, 长途跋涉, 进行曲, 边界
+vi. 进军, 前进, 交界
+vt. 使行军, 使行进">March</button>, and called it the &quot; <button class="vocab-word" type="button" data-word="best" data-pos="" data-def="a. 最好的
+adv. 最好地
+n. 最好的人">best</button> <button class="vocab-word" type="button" data-word="product" data-pos="" data-def="n. 产品, 结果, 乘积
+ 生产物">product</button> Tesla has <button class="vocab-word" type="button" data-word="ever" data-pos="" data-def="adv. 曾经, 究竟, 永远">ever</button> made to <button class="vocab-word" type="button" data-word="date" data-pos="" data-def="n. 日期, 约会, 枣椰树
+vt. 约会, 定日期
+vi. 注明日期, 过时">date</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> &quot; in <button class="vocab-word" type="button" data-word="April" data-pos="" data-def="n. 四月">April</button>.
+But <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> have <button class="vocab-word" type="button" data-word="always" data-pos="" data-def="adv. 总是, 始终">always</button> been <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> questions <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> consumers shared that <button class="vocab-word" type="button" data-word="view" data-pos="" data-def="n. 视野, 风景, 见解, 视力, 观看, 视图, 指望, 意图, 印象
+vt. 看, 考虑, 视察, 查看, 估量
+ 视图">view</button> and <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> the Cybertruck could <button class="vocab-word" type="button" data-word="cut" data-pos="" data-def="n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路
+a. 经切割的, 缩减的
+vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出
+vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑
+ 剪切">cut</button> through and <button class="vocab-word" type="button" data-word="earn" data-pos="" data-def="vt. 赚得, 获得, 博得
+ 欧州科学研究网">earn</button> a <button class="vocab-word" type="button" data-word="spot" data-pos="" data-def="n. 污点, 地点, 斑点, 点, 娱乐场所, 处境, 少量
+a. 当场的, 现场的, 现货买卖的, 现金交易的, 抽样的
+vt. 点缀, 玷污, 认出, 准确定...的位, 用灯光照射
+vi. 玷污, (从空中)侦察敌方目标">spot</button> in the US&#x27; <button class="vocab-word" type="button" data-word="lucrative" data-pos="" data-def="a. 有利益的, 获利的, 合算的">lucrative</button> <button class="vocab-word" type="button" data-word="truck" data-pos="" data-def="n. 卡车, 货车, 对...进行交易, 来往, 实物工资, (供应市场的)蔬菜, 废物, 废话
+vt. 对...进行交易, 交往, 以卡车运输
+vi. 驾驶卡车, 以物易物">truck</button> <button class="vocab-word" type="button" data-word="market" data-pos="" data-def="n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路
+vt. 在市场上交易, 使上市, 销售
+vi. 在市场上买卖">market</button>.
+It was <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> helped by inauspicious introduction to the <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> in 2019 <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> Musk attempted to <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> the Cybertruck&#x27;s apparently unbreakable <button class="vocab-word" type="button" data-word="glass" data-pos="" data-def="n. 玻璃, 玻璃杯, 透镜
+vt. 装玻璃于, 反射, 反映
+vi. 成玻璃状">glass</button>, <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> for it to <button class="vocab-word" type="button" data-word="shatter" data-pos="" data-def="n. 碎片, 粉碎, 落叶, 喷洒
+vt. 打碎, 使散开, 粉碎, 破坏
+vi. 粉碎, 损坏, 脱落">shatter</button> <button class="vocab-word" type="button" data-word="during" data-pos="" data-def="prep. 在...的时候">during</button> a <button class="vocab-word" type="button" data-word="live" data-pos="" data-def="a. 活的, 生动的, 精力充沛的, 实况转播的
+vi. 活, 生存, 居住
+vt. 过着, 度过, 经历
+adv. 实况地">live</button> demonstration.
+This <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> can <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> be played
+<button class="vocab-word" type="button" data-word="Watch" data-pos="" data-def="n. 观察, 手表, 看守, 守护, 监视, 值班人
+vt. 看, 注视, 照顾, 看守, 守护, 监视
+vi. 观看, 注视, 守侯">Watch</button>: The Cybertruck <button class="vocab-word" type="button" data-word="window" data-pos="" data-def="n. 窗户, 窗子, 窗口
+vt. 给...开窗
+ 窗口">window</button> stunt
+<button class="vocab-word" type="button" data-word="Despite" data-pos="" data-def="n. 轻视, 憎恨
+prep. 虽然, 尽管">Despite</button> the gaffe, the Cybertruck ended <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> receiving a 146,000 orders, Musk said in 2019 , <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> it was <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> in development.
+In the <button class="vocab-word" type="button" data-word="end" data-pos="" data-def="n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余
+v. 结束, 终结, 终止
+ 端; 结束">end</button>, the <button class="vocab-word" type="button" data-word="vehicle" data-pos="" data-def="n. 交通工具, 车辆, 传播媒介
+ 载体; 运载体; 漆料">vehicle</button> launched in 2023, keeping its <button class="vocab-word" type="button" data-word="novel" data-pos="" data-def="n. 小说, 长篇故事
+a. 新奇的, 异常的">novel</button> <button class="vocab-word" type="button" data-word="design" data-pos="" data-def="n. 设计, 图样, 方案, 企图
+v. 设计, 计划">design</button> - an angular <button class="vocab-word" type="button" data-word="shape" data-pos="" data-def="n. 形状, 形态, 外形, 形式, 身材
+vt. 定形, 使成形, 塑造, 计划, 使符合
+vi. 成形, 形成, 成长
+ 形状">shape</button> with a <button class="vocab-word" type="button" data-word="body" data-pos="" data-def="n. 身体, 人, 尸体, 主要部分, 团体
+vt. 赋以形体
+ 体">body</button> made of stainless <button class="vocab-word" type="button" data-word="steel" data-pos="" data-def="n. 钢, 钢制品, 钢铁, 坚硬, 坚固
+a. 钢的, 钢制的, 钢铁业的, 坚强的
+vt. 使坚强, 钢化, 使冷酷">steel</button>.
+In 2025, Tesla sold <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> 20,237 Cybertrucks, a <button class="vocab-word" type="button" data-word="decline" data-pos="" data-def="n. 衰退, 跌落, 下降
+vt. 使降低, 婉谢
+vi. 下降, 衰落, 偏斜">decline</button> from 38,965 a <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button> earlier, according to figures from Kelley <button class="vocab-word" type="button" data-word="Blue" data-pos="" data-def="n. 蓝色
+a. 蓝色的, 下流的, 忧郁的
+vt. 染成蓝色
+vi. 变蓝">Blue</button> <button class="vocab-word" type="button" data-word="Book" data-pos="" data-def="n. 书, 书籍, 帐簿, 名册, 工作簿
+v. 登记, 预订
+ 工作簿">Book</button>.
+Musk had predicted <button class="vocab-word" type="button" data-word="annual" data-pos="" data-def="n. 年刊, 年报
+a. 每年的, 一年一次的, 全年的, 一年生的">annual</button> sales of 250,000 <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> commercial production of Cybertruck began in 2023.
+Tesla fans praised its retro-futuristic <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> said looked <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> <button class="vocab-word" type="button" data-word="something" data-pos="" data-def="pron. 某事, 某物">something</button> &quot; <button class="vocab-word" type="button" data-word="straight" data-pos="" data-def="n. 直线, 直
+a. 直的, 笔直的, 正直的, 直接的, 连续的, 整齐的
+adv. 直接地, 立即, 不断地">straight</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of <button class="vocab-word" type="button" data-word="Blade" data-pos="" data-def="n. 叶片, 刀锋, 刀口, 剑
+ 页, 叶片, 刀片, 刀刃, 刀口">Blade</button> Runner , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> &quot;.
+But critics were <button class="vocab-word" type="button" data-word="far" data-pos="" data-def="a. 远的, 久远的, 遥远的
+adv. 甚远地, 很, 到很深的程度, 到很远的距离">far</button> <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> <button class="vocab-word" type="button" data-word="kind" data-pos="" data-def="n. 种类, 性质, 方式
+a. 亲切的, 仁慈的, 和蔼的">kind</button>, joking <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> its appearance and labelling it &quot; <button class="vocab-word" type="button" data-word="ugly" data-pos="" data-def="a. 丑陋的, 邪恶的, 险恶的, 不祥的
+n. 丑陋的人(或物)">ugly</button> as <button class="vocab-word" type="button" data-word="sin" data-pos="" data-def="n. 罪, 犯罪, 过失, 失礼
+v. 犯">sin</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> &quot;.
+<button class="vocab-word" type="button" data-word="Several" data-pos="" data-def="a. 几个的, 一些的, 各自的
+pron. 几个">Several</button> recalls - including in 2025 affecting <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than 46,000 Cybertrucks over concerns <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> of its <button class="vocab-word" type="button" data-word="trim" data-pos="" data-def="n. 整齐, 情形, 修剪
+a. 整齐的
+vt. 使整齐, 整理, 修剪
+vi. 调整, 见风使舵
+ 库存管理检查规则程序">trim</button> could <button class="vocab-word" type="button" data-word="fall" data-pos="" data-def="n. 落下, 瀑布, 采伐量, 下降, 落差, 降低, 堕落, 秋天
+vi. 倒下, 落下, 来临, 失守, 阵亡, 下跌, 减弱, 倾斜, 垮台, 轮到, 变成, 降低
+a. 秋天的">fall</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> - would <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> have helped.
+And then there&#x27;s the <button class="vocab-word" type="button" data-word="price" data-pos="" data-def="n. 价格, 代价, 价值
+vt. 定...的价格">price</button>.
+&quot;We <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> it at a <button class="vocab-word" type="button" data-word="price" data-pos="" data-def="n. 价格, 代价, 价值
+vt. 定...的价格">price</button> that <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> can <button class="vocab-word" type="button" data-word="afford" data-pos="" data-def="vt. 买得起, 足以, 给予">afford</button>,&quot; Musk told <button class="vocab-word" type="button" data-word="Wall" data-pos="" data-def="n. 墙, 墙壁, 垣, 内壁, 分界物, 屏障
+a. 墙的
+vt. 给...建墙, 禁闭, 用墙围住
+ 背景墙">Wall</button> <button class="vocab-word" type="button" data-word="Street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">Street</button> analysts that <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button> - <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> ended <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> being $61,000 (then £48,000) for <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> the &quot;bells and whistles&quot;.
+In 2026, the so-called &quot;Cyberbeast&quot; <button class="vocab-word" type="button" data-word="model" data-pos="" data-def="n. 模型, 模范, 模特儿
+a. 模范的, 作模型用的
+vi. 做模型, 做模特儿
+vt. 使模仿, 塑造
+ 模型">model</button> comes in at $102,000.
+Will Tesla&#x27;s cybertruck <button class="vocab-word" type="button" data-word="recover" data-pos="" data-def="vt. 重新获得, 恢复, 复原, 拯救
+vi. 痊愈, 复原, 胜诉
+ 恢复">recover</button> from its shattering <button class="vocab-word" type="button" data-word="start" data-pos="" data-def="n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件
+vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛
+vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用
+ 起始">start</button>?
+Tesla <button class="vocab-word" type="button" data-word="truck" data-pos="" data-def="n. 卡车, 货车, 对...进行交易, 来往, 实物工资, (供应市场的)蔬菜, 废物, 废话
+vt. 对...进行交易, 交往, 以卡车运输
+vi. 驾驶卡车, 以物易物">truck</button> has 150,000 orders <button class="vocab-word" type="button" data-word="despite" data-pos="" data-def="n. 轻视, 憎恨
+prep. 虽然, 尽管">despite</button> <button class="vocab-word" type="button" data-word="launch" data-pos="" data-def="n. 下水, 汽艇, 发射
+vt. 使下水, 发射, 发动
+vi. 起飞, 下水, 投入, 开始">launch</button> gaffe
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> for our Tech Decoded newsletter to <button class="vocab-word" type="button" data-word="follow" data-pos="" data-def="vt. 跟随, 沿行, 遵循, 追求
+vi. 跟随, 接着
+n. 跟随, 追随">follow</button> the world&#x27;s <button class="vocab-word" type="button" data-word="top" data-pos="" data-def="n. 顶部, 顶端, 极点, 上面, 上部, 顶篷, 最高地位, 首位, 陀螺
+a. 最高的, 顶上的, 头等的
+vt. 盖, 加以顶, 高达, 超越
+vi. 结束, 达到顶点, 高出
+ TOP协议">top</button> tech stories and trends. <button class="vocab-word" type="button" data-word="Outside" data-pos="" data-def="n. 外面, 外表, 外界
+a. 外面的, 外表的, 外界的
+adv. 外面, 外表, 外界">Outside</button> the UK? <button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button> .</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+
+
+
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+
+
+
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-07 09:59</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

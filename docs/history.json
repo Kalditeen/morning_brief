@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-03",
-      "cat": "guardian-tech",
-      "title": "Shop fridges and freezers across Europe hit by fresh suspected cyber-attack"
-    },
-    {
-      "date": "2026-11-03",
-      "cat": "bbc-env",
-      "title": "'Rok' solid recognition for Slovenian space scientist"
-    },
-    {
       "date": "2026-11-04",
       "cat": "guardian-env",
       "title": "A lackluster response to North Carolina flooding disasters is eroding Republican support in one county"
@@ -39,6 +29,16 @@
       "date": "2026-11-06",
       "cat": "bbc-world",
       "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown"
+    },
+    {
+      "date": "2026-11-07",
+      "cat": "guardian",
+      "title": "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children"
+    },
+    {
+      "date": "2026-11-07",
+      "cat": "bbc-tech",
+      "title": "Elon Musk appears to signal the end of the road for Cybertruck"
     }
   ]
 }
