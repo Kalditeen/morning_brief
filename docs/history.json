@@ -1,36 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-04",
-      "cat": "guardian-env",
-      "title": "A lackluster response to North Carolina flooding disasters is eroding Republican support in one county"
-    },
-    {
-      "date": "2026-11-04",
-      "cat": "bbc-science",
-      "title": "Prince William says UK faces terrifying risk of more wildfires due to climate change"
-    },
-    {
-      "date": "2026-11-05",
-      "cat": "guardian-science",
-      "title": "Nasa telescope launched in 2004 to plunge back to Earth after failed rescue mission"
-    },
-    {
-      "date": "2026-11-05",
-      "cat": "bbc-business",
-      "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms"
-    },
-    {
-      "date": "2026-11-06",
-      "cat": "guardian-business",
-      "title": "Nasdaq sees worst day in 18 months as investors bet on AI slowdown after Democrats’ election triumph"
-    },
-    {
-      "date": "2026-11-06",
-      "cat": "bbc-world",
-      "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown"
-    },
-    {
       "date": "2026-11-07",
       "cat": "guardian",
       "title": "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children"
@@ -39,6 +9,16 @@
       "date": "2026-11-07",
       "cat": "bbc-tech",
       "title": "Elon Musk appears to signal the end of the road for Cybertruck"
+    },
+    {
+      "date": "2026-11-10",
+      "cat": "guardian-tech",
+      "title": "Silicon Valley and Trump rally behind Nvidia CEO after his affair with alleged Chinese spy"
+    },
+    {
+      "date": "2026-11-10",
+      "cat": "bbc-env",
+      "title": "The superpower battle over energy – and what it means for your bills"
     }
   ]
 }
