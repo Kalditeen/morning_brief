@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-07",
-      "cat": "guardian",
-      "title": "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children"
-    },
-    {
-      "date": "2026-11-07",
-      "cat": "bbc-tech",
-      "title": "Elon Musk appears to signal the end of the road for Cybertruck"
-    },
-    {
       "date": "2026-11-10",
       "cat": "guardian-tech",
       "title": "Silicon Valley and Trump rally behind Nvidia CEO after his affair with alleged Chinese spy"
@@ -19,6 +9,16 @@
       "date": "2026-11-10",
       "cat": "bbc-env",
       "title": "The superpower battle over energy – and what it means for your bills"
+    },
+    {
+      "date": "2026-11-11",
+      "cat": "guardian-env",
+      "title": "Senate advances bill to speed up projects from gas pipelines to clean energy"
+    },
+    {
+      "date": "2026-11-11",
+      "cat": "bbc-science",
+      "title": "'It can kill us': Kenyans fear impact of El Niño with floods predicted"
     }
   ]
 }
