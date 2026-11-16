@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月16日 周一 · 卫报 The Guardian">
+<meta property="og:description" content="Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian | 2026年11月16日 周一</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月16日 周一 · 卫报 The Guardian</p>
+<a class="back-link" href="2026-11-16.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Zimbabwean <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button> Simbarashe Kundizeza cleared of using AI to <button class="vocab-word" type="button" data-word="write" data-pos="" data-def="vt. 书写, 著述, 写, 写满, 写信给
+vi. 写, 写字, 写信, 写作, 作曲
+ 书写器">write</button> prize-winning <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/6487803463c6c4e3138642f657eeb1cd90cd5acc/0_111_1078_862/master/1078.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=e825c93b0c4e49e69e380953e02995c6" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">The Zimbabwean <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button> Simbarashe Kundizeza has been cleared of using AI to <button class="vocab-word" type="button" data-word="write" data-pos="" data-def="vt. 书写, 著述, 写, 写满, 写信给
+vi. 写, 写字, 写信, 写作, 作曲
+ 书写器">write</button> a prize-winning <button class="vocab-word" type="button" data-word="short" data-pos="" data-def="a. 短的, 近的, 矮的, 短期的, 简短的, 少量的
+adv. 简短地, 突然
+n. 扼要, 短片, 缺乏
+vt. 故意少给, 使短路">short</button> <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button>, <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the prestigious Caine <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button> for African writers concluded that his entry was “human-written” <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> a month-long investigation.
+Kundizeza’s <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button> The <button class="vocab-word" type="button" data-word="Blue" data-pos="" data-def="n. 蓝色
+a. 蓝色的, 下流的, 忧郁的
+vt. 染成蓝色
+vi. 变蓝">Blue</button> Fighter , <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> charts the declining fortunes of a <button class="vocab-word" type="button" data-word="family" data-pos="" data-def="n. 家庭, 家人, 族
+a. 家庭的">family</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="father" data-pos="" data-def="n. 父亲, 祖先, 长辈, 神父, 创始者
+vt. 当...的父亲, 保护, 创作, 发明, 培养">father</button> invests in <button class="vocab-word" type="button" data-word="fish" data-pos="" data-def="n. 鱼, 鱼肉, 鱼类, 接合板
+vt. 钓, 钓鱼, 查出, 用接合板连接
+vi. 捕鱼, 钓鱼, 用钩捞取, 摸索寻找">fish</button> tanks, was announced as the winner of the £10,000 <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button> on 6 <button class="vocab-word" type="button" data-word="October" data-pos="" data-def="n. 十月">October</button>.
+<button class="vocab-word" type="button" data-word="Five" data-pos="" data-def="num. 五, 五个">Five</button> days later, the Atlantic published an <button class="vocab-word" type="button" data-word="article" data-pos="" data-def="n. 文章, 冠词, 物品, 物件, 条款, 契约
+ 信件">article</button> titled “Yet <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> <button class="vocab-word" type="button" data-word="literary" data-pos="" data-def="a. 文学的, 文艺的, 精通文学的
+ 文学的, 从事文学的, 从事写作的">literary</button> <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button> winner seems to be AI”, in <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> the <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button> and journalist Vauhini Vara said the AI-detection <button class="vocab-word" type="button" data-word="software" data-pos="" data-def="n. 软件
+ 软设备">software</button> Pangram, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> itself uses AI, had deemed the <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button> to be <button class="vocab-word" type="button" data-word="almost" data-pos="" data-def="adv. 几乎, 差不多">almost</button> completely artificially generated.
+The Caine <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button> <button class="vocab-word" type="button" data-word="chair" data-pos="" data-def="n. 椅子, 显要的席位, 主席
+vt. 使入座, 使就任要职">chair</button>, Ellah Wakatama, said in a statement : “From our detailed investigation, we <button class="vocab-word" type="button" data-word="feel" data-pos="" data-def="vt. 感觉, 觉得, 触摸, 以为
+vi. 有知觉, 摸索, 同情
+n. 感觉, 觉得, 触摸">feel</button> the evidence is <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button>: The <button class="vocab-word" type="button" data-word="Blue" data-pos="" data-def="n. 蓝色
+a. 蓝色的, 下流的, 忧郁的
+vt. 染成蓝色
+vi. 变蓝">Blue</button> Fighter was human-written. We <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> <button class="vocab-word" type="button" data-word="forward" data-pos="" data-def="a. 向前的, 早的, 迅速的, 在前的, 进步的
+vt. 促进...的生长, 转寄, 运送
+adv. 向前地
+ 前推, 转信">forward</button> to awarding and celebrating Simbarashe Steyn Kundizeza … <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> the <button class="vocab-word" type="button" data-word="end" data-pos="" data-def="n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余
+v. 结束, 终结, 终止
+ 端; 结束">end</button> of the <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>.”
+She said: “<button class="vocab-word" type="button" data-word="When" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">When</button> concerns were raised, we have a <button class="vocab-word" type="button" data-word="duty" data-pos="" data-def="n. 责任, 关税, 职务, 尊敬
+ 职责">duty</button> as an organisation to <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> at them carefully and fairly,” adding that the <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button> had taken a “human-centred” <button class="vocab-word" type="button" data-word="approach" data-pos="" data-def="n. 接近, 入门
+vt. 接近, 近似, 找...商量
+vi. 靠近">approach</button> to its investigation.
+“Our <button class="vocab-word" type="button" data-word="review" data-pos="" data-def="n. 检讨, 复习, 回顾, 检阅, 评论
+vt. 温习, 检讨, 评论, 再检察, 复审
+vi. 复习功课, 写评论">review</button> included interviews with the <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button>, the 2026 judging <button class="vocab-word" type="button" data-word="panel" data-pos="" data-def="n. 嵌板, 仪表板, 专题讨论小组, 全体陪审员
+vt. 嵌镶板">panel</button> and The <button class="vocab-word" type="button" data-word="Shallow" data-pos="" data-def="n. 水浅的地方, 浅滩
+a. 浅的, 肤浅的
+v. (使)变浅">Shallow</button> Tales <button class="vocab-word" type="button" data-word="Review" data-pos="" data-def="n. 检讨, 复习, 回顾, 检阅, 评论
+vt. 温习, 检讨, 评论, 再检察, 复审
+vi. 复习功课, 写评论">Review</button>, <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> the <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button> was <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> published,” Wakatama said. “It <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> included <button class="vocab-word" type="button" data-word="independent" data-pos="" data-def="n. 独立自主者, 无党派者
+a. 独立的, 有主见的, 不须依赖的, 不受约束的">independent</button> and expert-led metadata analysis of drafts written by the <button class="vocab-word" type="button" data-word="author" data-pos="" data-def="n. 作家, 作家的著作, 创始人
+ 作者, 著作人, 本人">author</button>.”
+Kundizeza, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> had strongly denied using generative AI to <button class="vocab-word" type="button" data-word="write" data-pos="" data-def="vt. 书写, 著述, 写, 写满, 写信给
+vi. 写, 写字, 写信, 写作, 作曲
+ 书写器">write</button> the <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button>, said he was “relieved” that the allegations had been dismissed <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the investigation. “It was <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="necessary" data-pos="" data-def="a. 必要的；必然的；必需的">necessary</button> in the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> <button class="vocab-word" type="button" data-word="place" data-pos="" data-def="n. 地方, 地点, 位置, 住所, 座位, 地位, 处境, 特权, 空间, 余地, 职务, 位
+vt. 放置, 寄予, 认出, 评定, 任命
+vi. 名次列前">place</button>, I am <button class="vocab-word" type="button" data-word="happy" data-pos="" data-def="a. 快乐的, 幸福的, 愉快的, 恰当的">happy</button> to <button class="vocab-word" type="button" data-word="put" data-pos="" data-def="vt. 放, 摆, 安置, 移动, 发射, 投掷, 写上, 表达, 使从事, 使受到, 驱使, 赋予
+vi. 出发, 航行, 发芽
+n. 掷, 股票出售权, 笨蛋
+a. 固定不动的
+ 发送文件">put</button> <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> this <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> me and <button class="vocab-word" type="button" data-word="continue" data-pos="" data-def="vi. 继续, 延续, 延长
+vt. 使继续, 使延长">continue</button> with my writing <button class="vocab-word" type="button" data-word="journey" data-pos="" data-def="n. 旅程, 旅行, 行程
+vi. 旅行
+vt. 游历">journey</button>,” he said.
+Vara’s <button class="vocab-word" type="button" data-word="article" data-pos="" data-def="n. 文章, 冠词, 物品, 物件, 条款, 契约
+ 信件">article</button> prompted <button class="vocab-word" type="button" data-word="outrage" data-pos="" data-def="n. 暴行, 侮辱, 愤怒
+vt. 凌辱, 虐待, 触犯">outrage</button> <button class="vocab-word" type="button" data-word="online" data-pos="" data-def="联机">online</button>, with <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> claiming that <button class="vocab-word" type="button" data-word="Black" data-pos="" data-def="n. 黑色, 黑颜料
+a. 黑色的">Black</button> writers, and Africans in <button class="vocab-word" type="button" data-word="particular" data-pos="" data-def="n. 一项(或条、点), 个别项目, 详细说明
+a. 特别的, 独有的, 挑剔的, 详尽的">particular</button>, were being unfairly singled <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> by allegations of the <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> of AI.
+Associated <button class="vocab-word" type="button" data-word="Press" data-pos="" data-def="n. 压, 揿, 按, 人群, 印刷机, 压力, 出版社, 记者, 报刊, 新闻舆论, 紧迫
+vt. 压, 压榨, 紧抱, 逼迫, 推进, 强迫征募, 催逼
+vi. 压, 重压, 催促, 拥挤, 奋力前进, 受压">Press</button> contributed to this <button class="vocab-word" type="button" data-word="report" data-pos="" data-def="n. 报告, 报道, 传说, 案情报告, 爆炸声, 成绩单
+vt. 报告, 汇报, 转述, 报道, 揭发, 使报到
+vi. 报告, 写报道, 报到
+ 报告">report</button>
+<button class="vocab-word" type="button" data-word="After" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">After</button> a month-long investigation it was concluded that Kundizeza’s <button class="vocab-word" type="button" data-word="story" data-pos="" data-def="n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层">story</button> The <button class="vocab-word" type="button" data-word="Blue" data-pos="" data-def="n. 蓝色
+a. 蓝色的, 下流的, 忧郁的
+vt. 染成蓝色
+vi. 变蓝">Blue</button> Fighter, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> won the £10,000 Caine <button class="vocab-word" type="button" data-word="prize" data-pos="" data-def="n. 奖赏, 奖金, 奖品, 战利品, 捕获
+a. 得奖的
+vt. 珍视, 估价, 捕获, 撬, 撬动">prize</button>, was ‘human-written’</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">津巴布韦作家 Simbarashe Kundize</h3>
+<div class="article-content-zh">在享有盛誉的凯恩非洲文学奖历经长达一个月的调查并得出其参赛作品为“人工创作”的结论后，津巴布韦作家辛巴拉谢·昆迪泽扎（Simbarashe Kundizeza）已被洗清使用人工智能创作获奖短篇小说的嫌疑。
+昆迪泽扎的作品《蓝色斗士》（The Blue Fighter）讲述了一个家庭在父亲投资鱼缸后家道中落的故事，该作品于10月6日被宣布获得这一奖金为1万英镑的奖项。
+五天后，《大西洋月刊》（the Atlantic）发表了一篇题为《又一位文学奖得主似乎是人工智能》（Yet another literary prize winner seems to be AI）的文章，作家兼记者沃希尼·瓦拉（Vauhini Vara）在文中表示，本身也采用人工智能的AI检测软件Pangram已判定该故事几乎完全由人工生成。
+凯恩奖主席埃拉·瓦卡塔玛（Ellah Wakatama）在一份声明中表示：“通过我们详尽的调查，我们认为证据是明确的：《蓝色斗士》是由人类创作的。我们现在期待在年底前……为辛巴拉谢·斯坦因·昆迪泽扎颁奖并向其表示祝贺。”
+她说：“当出现疑虑时，作为一家机构，我们有责任认真、公正地审视它们，”并补充称该奖项在调查中采取了“以人为本”的方式。
+瓦卡塔玛说：“我们的审查包括对作者、2026年评审团以及最初发表该故事的《浅谈评论》（The Shallow Tales Review）的访谈。还包括由专家主导的对作者所写草稿的独立元数据分析。”
+曾强烈否认使用生成式人工智能创作该故事的昆迪泽扎表示，在调查后指控被驳回让他“松了一口气”。他说：“这本来就毫无必要，我很高兴能把这一切抛在脑后，继续我的写作之旅。”
+瓦拉的文章在网络上引发了愤怒，许多人指责黑人作家、尤其 monetization是非洲作家，正因涉嫌使用人工智能而受到不公正的针对。
+美联社对本报道亦有贡献
+经过长达一个月的调查，最终得出结论，昆迪泽扎斩获1万英镑凯恩奖的作品《蓝色战士》（The Blue Fighter）为“人类创作”。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">prestigious — adj. 有威望的，享有盛誉的</span>
+<span class="vocab-item">investigation</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">津巴布韦作家 Simbarashe Kundize</h3>
+<div class="article-content-zh">在享有盛誉的凯恩非洲文学奖历经长达一个月的调查并得出其参赛作品为“人工创作”的结论后，津巴布韦作家辛巴拉谢·昆迪泽扎（Simbarashe Kundizeza）已被洗清使用人工智能创作获奖短篇小说的嫌疑。
+昆迪泽扎的作品《蓝色斗士》（The Blue Fighter）讲述了一个家庭在父亲投资鱼缸后家道中落的故事，该作品于10月6日被宣布获得这一奖金为1万英镑的奖项。
+五天后，《大西洋月刊》（the Atlantic）发表了一篇题为《又一位文学奖得主似乎是人工智能》（Yet another literary prize winner seems to be AI）的文章，作家兼记者沃希尼·瓦拉（Vauhini Vara）在文中表示，本身也采用人工智能的AI检测软件Pangram已判定该故事几乎完全由人工生成。
+凯恩奖主席埃拉·瓦卡塔玛（Ellah Wakatama）在一份声明中表示：“通过我们详尽的调查，我们认为证据是明确的：《蓝色斗士》是由人类创作的。我们现在期待在年底前……为辛巴拉谢·斯坦因·昆迪泽扎颁奖并向其表示祝贺。”
+她说：“当出现疑虑时，作为一家机构，我们有责任认真、公正地审视它们，”并补充称该奖项在调查中采取了“以人为本”的方式。
+瓦卡塔玛说：“我们的审查包括对作者、2026年评审团以及最初发表该故事的《浅谈评论》（The Shallow Tales Review）的访谈。还包括由专家主导的对作者所写草稿的独立元数据分析。”
+曾强烈否认使用生成式人工智能创作该故事的昆迪泽扎表示，在调查后指控被驳回让他“松了一口气”。他说：“这本来就毫无必要，我很高兴能把这一切抛在脑后，继续我的写作之旅。”
+瓦拉的文章在网络上引发了愤怒，许多人指责黑人作家、尤其 monetization是非洲作家，正因涉嫌使用人工智能而受到不公正的针对。
+美联社对本报道亦有贡献
+经过长达一个月的调查，最终得出结论，昆迪泽扎斩获1万英镑凯恩奖的作品《蓝色战士》（The Blue Fighter）为“人类创作”。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">prestigious — adj. 有威望的，享有盛誉的</span>
+<span class="vocab-item">investigation</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-16 09:43</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
