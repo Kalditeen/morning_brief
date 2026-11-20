@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-16",
-      "cat": "guardian",
-      "title": "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story"
-    },
-    {
-      "date": "2026-11-16",
-      "cat": "bbc-tech",
-      "title": "South Korea's top scorer in tax accountancy exam admits cheating"
-    },
-    {
       "date": "2026-11-18",
       "cat": "guardian-env",
       "title": "Tag team: dual waterspouts appear in San Francisco Bay amid stormy weather"
@@ -19,6 +9,16 @@
       "date": "2026-11-18",
       "cat": "bbc-science",
       "title": "Government risks missing climate targets if EV rules weakened, adviser warns"
+    },
+    {
+      "date": "2026-11-20",
+      "cat": "guardian-business",
+      "title": "Labor leaders call on governments to stop awarding Amazon public contracts"
+    },
+    {
+      "date": "2026-11-20",
+      "cat": "bbc-world",
+      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut"
     }
   ]
 }
