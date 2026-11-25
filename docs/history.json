@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-20",
-      "cat": "guardian-business",
-      "title": "Labor leaders call on governments to stop awarding Amazon public contracts"
-    },
-    {
-      "date": "2026-11-20",
-      "cat": "bbc-world",
-      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut"
-    },
-    {
       "date": "2026-11-22",
       "cat": "guardian-tech",
       "title": "‘I was shaking, crying, having trouble breathing’: the uncharted trauma of breaking up with AI companions"
@@ -29,6 +19,16 @@
       "date": "2026-11-23",
       "cat": "bbc-tech",
       "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing"
+    },
+    {
+      "date": "2026-11-25",
+      "cat": "guardian-env",
+      "title": "California ‘king tides’ stress test San Francisco as low-lying areas flood"
+    },
+    {
+      "date": "2026-11-25",
+      "cat": "bbc-science",
+      "title": "Badger cull ruled out by Welsh government after speculation"
     }
   ]
 }
