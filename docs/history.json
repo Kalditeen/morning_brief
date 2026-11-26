@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-22",
-      "cat": "guardian-tech",
-      "title": "‘I was shaking, crying, having trouble breathing’: the uncharted trauma of breaking up with AI companions"
-    },
-    {
-      "date": "2026-11-22",
-      "cat": "bbc-env",
-      "title": "Will COP31 end with a new global climate deal?"
-    },
-    {
       "date": "2026-11-23",
       "cat": "guardian",
       "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack"
@@ -29,6 +19,16 @@
       "date": "2026-11-25",
       "cat": "bbc-science",
       "title": "Badger cull ruled out by Welsh government after speculation"
+    },
+    {
+      "date": "2026-11-26",
+      "cat": "guardian-science",
+      "title": "Nasa knocked an asteroid off course. New closeup photos shed light on aftermath"
+    },
+    {
+      "date": "2026-11-26",
+      "cat": "bbc-business",
+      "title": "UK government set to publish new treaties agreed with EU"
     }
   ]
 }

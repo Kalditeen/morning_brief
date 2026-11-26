@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月26日 周四 · 卫报 The Guardian (科学)">
+<meta property="og:description" content="Nasa knocked an asteroid off course. New closeup photos shed light on aftermath">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian (科学) | 2026年11月26日 周四</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月26日 周四 · 卫报 The Guardian (科学)</p>
+<a class="back-link" href="2026-11-26.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian (科学)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en">Nasa knocked an asteroid <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> <button class="vocab-word" type="button" data-word="course" data-pos="" data-def="n. 课程, 路线, 过程, 一道菜, 道路
+v. 追, (使)跑">course</button>. <button class="vocab-word" type="button" data-word="New" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">New</button> closeup photos <button class="vocab-word" type="button" data-word="shed" data-pos="" data-def="n. 车棚, 小屋, 脱落之物, 分水岭
+vt. 使流出, 放射, 脱落, 散发, 摆脱
+vi. 流出, 散布, 脱落">shed</button> <button class="vocab-word" type="button" data-word="light" data-pos="" data-def="n. 光, 光亮, 灯, 日光, 发光体, 光源, 杰出人物, 火花, 眼光
+a. 轻的, 少量的, 轻微的, 轻快的, 轻浮的, 明亮的, 淡色的, 容易的
+vt. 点燃, 照亮
+vi. 点着, 变亮, 突降, 偶然碰到
+adv. 轻地">light</button> on <button class="vocab-word" type="button" data-word="aftermath" data-pos="" data-def="n. 结果, 后果
+ 后果, 结果">aftermath</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/c59805d1f746c42dcd6115a769e7cc163a78595c/98_115_677_541/master/677.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=88b3e5ea948c5df1dba728f3c5035031" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">Humanity may <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> yet have a <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> of fending <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> a Vogon constructor <button class="vocab-word" type="button" data-word="fleet" data-pos="" data-def="n. 舰队, 港湾, 小河
+a. 快速的, 敏捷的, 浅的, 短暂的
+adv. 浅
+vi. 疾驰, 飞逝, 掠过
+vt. 消磨, 变换船(或船员)的位置">fleet</button> – the destroyers of <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button> in The Hitchhiker’s <button class="vocab-word" type="button" data-word="Guide" data-pos="" data-def="n. 引导者, 导游, 指南, 路标
+vt. 指导, 支配, 管理, 带领, 操纵
+vi. 任向导
+ 辅助线">Guide</button> to the <button class="vocab-word" type="button" data-word="Galaxy" data-pos="" data-def="n. 银河, 星系, 一群(显赫的人物)
+ 银河系">Galaxy</button> – but its prospects of surviving an <button class="vocab-word" type="button" data-word="encounter" data-pos="" data-def="n. 相会, 相遇, 遭遇
+vt. 遇见, 邂逅, 会战
+vi. 偶然相遇">encounter</button> with a rogue asteroid are looking considerably brighter.
+<button class="vocab-word" type="button" data-word="Four" data-pos="" data-def="num. 四, 四个
+ 四冲程循环">Four</button> years <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> Nasa deliberately slammed a <button class="vocab-word" type="button" data-word="spacecraft" data-pos="" data-def="n. 航天飞船">spacecraft</button> into a roughly 160-metre-wide asteroid called Dimorphos to <button class="vocab-word" type="button" data-word="knock" data-pos="" data-def="n. 敲, 敲打, 敲门
+v. 敲击, 互撞, 攻击">knock</button> it <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> <button class="vocab-word" type="button" data-word="course" data-pos="" data-def="n. 课程, 路线, 过程, 一道菜, 道路
+v. 追, (使)跑">course</button>, scientists have released the <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> closeup images of the <button class="vocab-word" type="button" data-word="aftermath" data-pos="" data-def="n. 结果, 后果
+ 后果, 结果">aftermath</button>.
+They <button class="vocab-word" type="button" data-word="suggest" data-pos="" data-def="vt. 提议, 建议, 促成, 暗示, 启发, 使人想起
+ 建议, 提出, 提议">suggest</button> the asteroid <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> has <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="face" data-pos="" data-def="n. 脸, 面容, 正面, 外观
+vt. 面对, 朝, 正视, 面临
+vi. 朝, 向
+ 现场可改变的控制元件">face</button> flattened with a stadium-sized crater and is tumbling chaotically. <button class="vocab-word" type="button" data-word="Meanwhile" data-pos="" data-def="n. 其时, 其间
+adv. 同时, 于此时">Meanwhile</button>, hundreds of previously unknown boulders encircle Dimorphos and its larger <button class="vocab-word" type="button" data-word="companion" data-pos="" data-def="n. 朋友, 陪伴, 指南, 升降口围罩
+vt. 陪伴">companion</button> asteroid, Didymos.
+As <button class="vocab-word" type="button" data-word="well" data-pos="" data-def="n. 井, 泉水, 源泉, 好
+v. 涌出
+a. 健康的, 良好的, 适宜的, 恰当的
+adv. 很好地, 适当地, 好意地, 很, 完全
+interj. 好啦">well</button> as shedding <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="light" data-pos="" data-def="n. 光, 光亮, 灯, 日光, 发光体, 光源, 杰出人物, 火花, 眼光
+a. 轻的, 少量的, 轻微的, 轻快的, 轻浮的, 明亮的, 淡色的, 容易的
+vt. 点燃, 照亮
+vi. 点着, 变亮, 突降, 偶然碰到
+adv. 轻地">light</button> on <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> happened to the asteroid <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the collision, the images, captured by the European <button class="vocab-word" type="button" data-word="Space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">Space</button> Agency’s (Esa) Hera <button class="vocab-word" type="button" data-word="spacecraft" data-pos="" data-def="n. 航天飞船">spacecraft</button>, could <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> scientists <button class="vocab-word" type="button" data-word="design" data-pos="" data-def="n. 设计, 图样, 方案, 企图
+v. 设计, 计划">design</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> effective missions to deflect potentially hazardous <button class="vocab-word" type="button" data-word="space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">space</button> rocks in the <button class="vocab-word" type="button" data-word="future" data-pos="" data-def="n. 未来, 将来
+a. 将来的, 未来的">future</button>.
+“Nasa’s <button class="vocab-word" type="button" data-word="Dart" data-pos="" data-def="n. 飞镖, 投射
+vt. 投射
+vi. 疾走, 突进">Dart</button> [<button class="vocab-word" type="button" data-word="Double" data-pos="" data-def="n. 两倍
+a. 两倍的, 双重的
+vt. 使加倍
+vi. 加倍, 代替, 快步走
+ 双精度型">Double</button> Asteroid Redirection <button class="vocab-word" type="button" data-word="Test" data-pos="" data-def="n. 测试, 试验, 化验, 检验, 考验, 甲壳
+vt. 测试, 试验, 化验
+vi. 接受测验, 进行测试">Test</button>] <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> demonstrated that we can <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button> an asteroid’s <button class="vocab-word" type="button" data-word="orbit" data-pos="" data-def="n. 轨道, 常轨, 眼眶
+vt. 绕...轨道而行
+vi. 进入轨道, 盘旋">orbit</button>. Hera is <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> revealing <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> happened to the asteroid itself,” said the Hera <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> manager, Ian Carnelli, at Esa. “By combining these <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> missions, humanity is taking a decisive <button class="vocab-word" type="button" data-word="step" data-pos="" data-def="n. 步骤, 步, 步幅, 脚步声, 踏级, 步伐, 短距离, 步态, 手段, 等级
+vt. 踏, 以步测量, 跨步, 使成阶梯状
+vi. 跨步, 轻快地走, 跳舞, 踩, 踏上, 行走
+ 步骤">step</button> <button class="vocab-word" type="button" data-word="towards" data-pos="" data-def="prep. 向, 对于, 为了">towards</button> making asteroid deflection a reliable <button class="vocab-word" type="button" data-word="tool" data-pos="" data-def="n. 工具, 机床, 傀儡
+vt. 用工具加工
+vi. 使用工具">tool</button> for protecting our <button class="vocab-word" type="button" data-word="planet" data-pos="" data-def="n. 行星, 命运星辰, 杰出的人, 重大影响的事">planet</button>.”
+Nasa’s <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> aimed to test-drive a planetary defence <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button> that could <button class="vocab-word" type="button" data-word="prevent" data-pos="" data-def="v. 预防, 防止, 阻止, 妨碍">prevent</button> humanity from going the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> as the dinosaurs, should an asteroid or <button class="vocab-word" type="button" data-word="comet" data-pos="" data-def="n. 彗星">comet</button> threaten <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button>.
+<button class="vocab-word" type="button" data-word="Neither" data-pos="" data-def="adv. 皆不, 两个都不
+a. (两者)都不的
+pron. 两者都不
+conj. 既非, 既不">Neither</button> Dimorphos nor its larger <button class="vocab-word" type="button" data-word="companion" data-pos="" data-def="n. 朋友, 陪伴, 指南, 升降口围罩
+vt. 陪伴">companion</button> asteroid, Didymos, posed <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> a <button class="vocab-word" type="button" data-word="threat" data-pos="" data-def="n. 恐吓, 恶兆, 威胁
+ 威胁">threat</button>, but their movements <button class="vocab-word" type="button" data-word="provided" data-pos="" data-def="conj. 倘若, 以...为条件">provided</button> scientists with a <button class="vocab-word" type="button" data-word="convenient" data-pos="" data-def="a. 方便的, 合宜的
+ 适当的, 合理而可行的, 方便的">convenient</button> <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> of assessing <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> the <button class="vocab-word" type="button" data-word="strategy" data-pos="" data-def="n. 战略, 策略
+ 战略, 策略">strategy</button> of trying to <button class="vocab-word" type="button" data-word="knock" data-pos="" data-def="n. 敲, 敲打, 敲门
+v. 敲击, 互撞, 攻击">knock</button> an asteroid <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> <button class="vocab-word" type="button" data-word="course" data-pos="" data-def="n. 课程, 路线, 过程, 一道菜, 道路
+v. 追, (使)跑">course</button> might <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>.
+On 26 <button class="vocab-word" type="button" data-word="September" data-pos="" data-def="n. 九月">September</button> 2022, the roughly half-tonne <button class="vocab-word" type="button" data-word="Dart" data-pos="" data-def="n. 飞镖, 投射
+vt. 投射
+vi. 疾走, 突进">Dart</button> <button class="vocab-word" type="button" data-word="spacecraft" data-pos="" data-def="n. 航天飞船">spacecraft</button> ploughed into Dimorphos at <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> than 13,000mph, blasting a <button class="vocab-word" type="button" data-word="vast" data-pos="" data-def="a. 巨大的, 广大的, 非常的, 大量的">vast</button> <button class="vocab-word" type="button" data-word="cloud" data-pos="" data-def="n. 云, 阴暗, 烟雾, 疑团
+vt. 以云遮敝, 笼罩, 使黯然
+vi. 乌云密布, 阴沉">cloud</button> of rocky <button class="vocab-word" type="button" data-word="debris" data-pos="" data-def="n. 碎片, 残骸
+ 碎屑">debris</button> into <button class="vocab-word" type="button" data-word="space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">space</button>.
+Observations by telescopes on <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button> revealed that the <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> had succeeded in shortening the <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> it took Dimorphos to <button class="vocab-word" type="button" data-word="orbit" data-pos="" data-def="n. 轨道, 常轨, 眼眶
+vt. 绕...轨道而行
+vi. 进入轨道, 盘旋">orbit</button> Didymos by <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> 33 minutes. <button class="vocab-word" type="button" data-word="Before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">Before</button> the collision, Nasa officials had said a <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button> of 73 seconds or <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> would be considered a <button class="vocab-word" type="button" data-word="success" data-pos="" data-def="n. 成功, 成就, 胜利">success</button>.
+But <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> of the asteroid was displaced and precisely <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> it responded to the collision have remained <button class="vocab-word" type="button" data-word="open" data-pos="" data-def="n. 公开, 户外, 空旷
+a. 开着的, 开放的, 开阔的, 营业着的, 公开的, 悬而未决的
+vt. 打开, 公开, 开放
+vi. 展开, 开始, 展现
+ 打开指令; 打开语句">open</button> questions.
+To <button class="vocab-word" type="button" data-word="investigate" data-pos="" data-def="v. 调查, 审查">investigate</button>, Esa launched its Hera <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> on 7 <button class="vocab-word" type="button" data-word="October" data-pos="" data-def="n. 十月">October</button> 2024. <button class="vocab-word" type="button" data-word="After" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">After</button> a two-year <button class="vocab-word" type="button" data-word="journey" data-pos="" data-def="n. 旅程, 旅行, 行程
+vi. 旅行
+vt. 游历">journey</button>, the car-sized <button class="vocab-word" type="button" data-word="spacecraft" data-pos="" data-def="n. 航天飞船">spacecraft</button> reached the asteroid <button class="vocab-word" type="button" data-word="pair" data-pos="" data-def="n. 一双, 一对, 一副
+v. (使)成对">pair</button> this <button class="vocab-word" type="button" data-word="month" data-pos="" data-def="n. 月
+ 月">month</button> and has been surveying them from a <button class="vocab-word" type="button" data-word="distance" data-pos="" data-def="n. 距离, 远方, 遥远
+ 位距">distance</button> of 15-18 miles (25-30km).
+“Scientists debated <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> Dimorphos had sustained an <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> crater, changed its <button class="vocab-word" type="button" data-word="shape" data-pos="" data-def="n. 形状, 形态, 外形, 形式, 身材
+vt. 定形, 使成形, 塑造, 计划, 使符合
+vi. 成形, 形成, 成长
+ 形状">shape</button> or stayed the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button>,” said Dr Patrick Michel, Hera <button class="vocab-word" type="button" data-word="principal" data-pos="" data-def="n. 校长, 首长, 本金, 主犯, 资本, 委托人
+a. 主要的, 最重要的, 首要的">principal</button> investigator and director of <button class="vocab-word" type="button" data-word="research" data-pos="" data-def="n. 研究, 调查, 考察
+vi. 研究, 调查">research</button> at the CNRS Côte d’Azur <button class="vocab-word" type="button" data-word="observatory" data-pos="" data-def="n. 天文台, 气象台, 了望台">observatory</button> in France. “<button class="vocab-word" type="button" data-word="Much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">Much</button> to our <button class="vocab-word" type="button" data-word="surprise" data-pos="" data-def="n. 惊奇, 奇袭, 诧异
+vt. 使惊奇, 撞见, 奇袭">surprise</button> the <button class="vocab-word" type="button" data-word="answer" data-pos="" data-def="n. 答案, 回答, 回报, 答辩
+vt. 回答, 反驳, 适应, 响应, 符合
+vi. 回答, 答应, 负责, 符合, 成功
+ 用户问题及答案新闻组">answer</button> turns <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> to be <button class="vocab-word" type="button" data-word="all" data-pos="" data-def="a. 所有的, 全部的, 一切的
+adv. 全部, 全然
+pron. 全部
+n. 全部">all</button> <button class="vocab-word" type="button" data-word="three" data-pos="" data-def="num. 三, 三个">three</button> at <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button>. The <button class="vocab-word" type="button" data-word="face" data-pos="" data-def="n. 脸, 面容, 正面, 外观
+vt. 面对, 朝, 正视, 面临
+vi. 朝, 向
+ 现场可改变的控制元件">face</button> struck by <button class="vocab-word" type="button" data-word="Dart" data-pos="" data-def="n. 飞镖, 投射
+vt. 投射
+vi. 疾走, 突进">Dart</button> has been flattened into an <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> crater the <button class="vocab-word" type="button" data-word="size" data-pos="" data-def="n. 大小, 尺寸, 规模, 尺码, 能力, 浆料
+vt. 上浆, 依大小排列
+vi. 可比拟
+a. 一定大小的, 一定尺寸的">size</button> of a sports <button class="vocab-word" type="button" data-word="stadium" data-pos="" data-def="n. 露天大型运动场
+ 期, 病期">stadium</button>, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> extends <button class="vocab-word" type="button" data-word="across" data-pos="" data-def="prep. 越过, 穿过, 与...相交叉, 在...的对面
+adv. 交叉, 到另一边, 在对面, 成十字">across</button> the asteroid’s <button class="vocab-word" type="button" data-word="entire" data-pos="" data-def="n. 整个, 全部
+a. 全体的, 完全的, 全部的">entire</button> width.”
+<button class="vocab-word" type="button" data-word="While" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">While</button> the <button class="vocab-word" type="button" data-word="rest" data-pos="" data-def="n. 休息, 睡眠, 安息, 稍息, 静止, 支架, 休息处, 其余者, 剩余部分
+vi. 休息, 睡, 长眠, 安心, 静止, 停止, 安置, 依赖
+vt. 使休息, 使支撑, 把...寄托于">rest</button> of Dimorphos appears to be relatively unchanged, the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> has <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="left" data-pos="" data-def="a. 左边的, 左倾的, 左侧的, 左派的
+adv. 在左面
+n. 左, 左面, 左派
+leave的过去式和过去分词">left</button> Dimorphos “tumbling wildly in its <button class="vocab-word" type="button" data-word="orbit" data-pos="" data-def="n. 轨道, 常轨, 眼眶
+vt. 绕...轨道而行
+vi. 进入轨道, 盘旋">orbit</button>”, added Dr Michael Kueppers, the Esa’s Hera <button class="vocab-word" type="button" data-word="mission" data-pos="" data-def="n. 任务, 代表团, 使命, 传教团
+vt. 派遣, 向...传教">mission</button> scientist.
+“<button class="vocab-word" type="button" data-word="Another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">Another</button> <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> <button class="vocab-word" type="button" data-word="surprise" data-pos="" data-def="n. 惊奇, 奇袭, 诧异
+vt. 使惊奇, 撞见, 奇袭">surprise</button> is that Hera is showing that the asteroids are surrounded by hundreds of orbiting boulders, <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> a <button class="vocab-word" type="button" data-word="few" data-pos="" data-def="a. 很少的, 不多的, 少数的
+n. 少数">few</button> metres in <button class="vocab-word" type="button" data-word="size" data-pos="" data-def="n. 大小, 尺寸, 规模, 尺码, 能力, 浆料
+vt. 上浆, 依大小排列
+vi. 可比拟
+a. 一定大小的, 一定尺寸的">size</button>,” Kueppers said.
+Dr Michaël Marsset, an astronomer at the European Southern <button class="vocab-word" type="button" data-word="Observatory" data-pos="" data-def="n. 天文台, 气象台, 了望台">Observatory</button> in Germany, described the <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> of the images as “a <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> <button class="vocab-word" type="button" data-word="milestone" data-pos="" data-def="n. 里程碑, 里程石, 里程标">milestone</button> for <button class="vocab-word" type="button" data-word="both" data-pos="" data-def="a. 两者的
+adv. 两者都
+pron. 两者">both</button> planetary defence and asteroid <button class="vocab-word" type="button" data-word="science" data-pos="" data-def="n. 科学, 学科, 学问, 自然科学
+ 科学">science</button>”.
+Unlike naturally occurring asteroid collisions, scientists knew precisely the <button class="vocab-word" type="button" data-word="mass" data-pos="" data-def="n. 块, 大多数, 质量, 大量, 群众, 弥撒
+a. 群众的, 大规模的, 整个的
+vt. 使集合, 集中
+vi. 聚集">mass</button>, <button class="vocab-word" type="button" data-word="velocity" data-pos="" data-def="n. 速度, 迅速
+ 速度">velocity</button> and trajectory of the projectile and <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> had images of the asteroid <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> and <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button>, he said. “This offers a <button class="vocab-word" type="button" data-word="unique" data-pos="" data-def="a. 独一无二的, 独特的, 稀罕的">unique</button> <button class="vocab-word" type="button" data-word="opportunity" data-pos="" data-def="n. 机会, 时机">opportunity</button> to <button class="vocab-word" type="button" data-word="study" data-pos="" data-def="n. 学习, 研究, 学科, 论文, 求学, 书房, 试作
+vt. 学习, 读书, 研究, 考虑, 计划
+vi. 学习, 思索">study</button> the <button class="vocab-word" type="button" data-word="physics" data-pos="" data-def="n. 物理学, 物理过程, 物理现象
+ 物理; 物理学">physics</button> of impacts at the <button class="vocab-word" type="button" data-word="scale" data-pos="" data-def="n. 刻度, 衡量, 比例, 比例尺, 数值范围, 等级, 规模, 天平, 秤, 鳞, 积垢
+vt. 依比例决定, 攀登, 测量, 绘制, 刮鳞, 使生垢, 过秤
+vi. 剥落, 生水垢, 重量为, 攀登, 衡量
+ 刻度">scale</button> of an asteroid.”
+The <button class="vocab-word" type="button" data-word="Dart" data-pos="" data-def="n. 飞镖, 投射
+vt. 投射
+vi. 疾走, 突进">Dart</button> <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> may <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> have exposed pristine <button class="vocab-word" type="button" data-word="material" data-pos="" data-def="n. 材料, 物资, 素材, 布料, 资料
+a. 物质的, 肉体的, 重要的">material</button> <button class="vocab-word" type="button" data-word="beneath" data-pos="" data-def="prep. 在...下方
+adv. 在...下方">beneath</button> Dimorphos’s weathered <button class="vocab-word" type="button" data-word="surface" data-pos="" data-def="n. 面, 表面, 水面, 外表, 平面
+a. 表面的, 外观的, 肤浅的, 水面上的
+vt. 使成平面, 使浮出水面
+vi. 浮出水面, 呈现, 在地面上工作">surface</button>, offering scientists a <button class="vocab-word" type="button" data-word="rare" data-pos="" data-def="a. 稀罕的, 罕有的, 珍奇的, 稀薄的, 半熟的, 非常好的
+adv. 非常">rare</button> <button class="vocab-word" type="button" data-word="glimpse" data-pos="" data-def="n. 一瞥, 一闪
+vi. 投以一瞥, 闪烁不定
+vt. 瞥见">glimpse</button> of its <button class="vocab-word" type="button" data-word="interior" data-pos="" data-def="n. 内部, 内政
+a. 内部的, 心灵的, 内地的, 内政的">interior</button>, Marsset added.
+Over the coming months, Hera will <button class="vocab-word" type="button" data-word="venture" data-pos="" data-def="n. 冒险, 风险
+vt. 敢于, 冒...的危险
+vi. 冒险">venture</button> progressively closer to the asteroids and <button class="vocab-word" type="button" data-word="deploy" data-pos="" data-def="v. 展开, 配置">deploy</button> <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> shoebox-sized satellites, <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> will <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> <button class="vocab-word" type="button" data-word="radar" data-pos="" data-def="n. 雷达, 无线电探测器
+ 雷达图">radar</button> to <button class="vocab-word" type="button" data-word="peer" data-pos="" data-def="n. 同等的人, 匹敌, 贵族
+vi. 凝视, 窥视, 费力地看, 隐现
+vt. 与...同等, 封为贵族">peer</button> <button class="vocab-word" type="button" data-word="inside" data-pos="" data-def="n. 内部, 内脏, 内幕
+a. 内部的, 秘密的, 户内的
+adv. 在里面
+prep. 在...之内">inside</button> Dimorphos.
+The <button class="vocab-word" type="button" data-word="ultimate" data-pos="" data-def="n. 终极, 根本, 顶点, 基本原则
+a. 终极的, 根本的, 极限的, 最远的, 最后的, 最大的">ultimate</button> <button class="vocab-word" type="button" data-word="aim" data-pos="" data-def="n. 目标, 瞄准, 击中目标的能力
+vi. 对准目标, 致力, 打算
+vt. 瞄准
+ 医学文摘索引, 存取隔离机构, 高级信息管理程序, 先进接口模块
+应用接口模块, 医学人工智能, 相联索引法, 异步接口模块
+自动化信息管理, 自动化综合制造, 自动化库存管理">aim</button> of these investigations is to <button class="vocab-word" type="button" data-word="transform" data-pos="" data-def="vt. 使转换, 改变, 改造, 使...变形
+vi. 改变, 转化, 变换
+ 变换">transform</button> asteroid deflection from a successful one-off <button class="vocab-word" type="button" data-word="experiment" data-pos="" data-def="n. 实验, 试验, 实验仪器
+vi. 实验, 尝试">experiment</button> into a reliable <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> of planetary defence.
+“The <button class="vocab-word" type="button" data-word="initial" data-pos="" data-def="n. 字首, 首字母
+a. 开始的, 最初的, 字首的
+vt. 用姓名的首字母签名">initial</button> <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button> of deflecting an asteroid is <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> as <button class="vocab-word" type="button" data-word="straightforward" data-pos="" data-def="a. 笔直的, 率直的, 明确的, 简单的, 直接的">straightforward</button> as it sounds,” said Dr Ian Whittaker, a <button class="vocab-word" type="button" data-word="senior" data-pos="" data-def="n. 年长者, 资深者, 毕业班学生
+a. 年长的, 高级的, 资深的">senior</button> lecturer in <button class="vocab-word" type="button" data-word="physics" data-pos="" data-def="n. 物理学, 物理过程, 物理现象
+ 物理; 物理学">physics</button> at Nottingham Trent <button class="vocab-word" type="button" data-word="University" data-pos="" data-def="n. 大学">University</button>. <button class="vocab-word" type="button" data-word="Although" data-pos="" data-def="conj. 虽然, 尽管">Although</button> the <button class="vocab-word" type="button" data-word="momentum" data-pos="" data-def="n. 动力, 动量
+ 动量">momentum</button> transferred by a <button class="vocab-word" type="button" data-word="spacecraft" data-pos="" data-def="n. 航天飞船">spacecraft</button> colliding with an asteroid should <button class="vocab-word" type="button" data-word="alter" data-pos="" data-def="v. 改变">alter</button> its <button class="vocab-word" type="button" data-word="motion" data-pos="" data-def="n. 移动, 手势, 动作, 意向, 请求, 提议
+v. 打手势">motion</button>, <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> depends on <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> the asteroid responds to the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button>, including <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> <button class="vocab-word" type="button" data-word="much" data-pos="" data-def="n. 大量, 许多, 重要的事
+a. 很多的, 重要的
+adv. 多, 甚, 几乎">much</button> <button class="vocab-word" type="button" data-word="material" data-pos="" data-def="n. 材料, 物资, 素材, 布料, 资料
+a. 物质的, 肉体的, 重要的">material</button> is blasted into <button class="vocab-word" type="button" data-word="space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">space</button>.“These images will <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> with understanding <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> is <button class="vocab-word" type="button" data-word="present" data-pos="" data-def="n. 现在, 礼品, 瞄准
+a. 现在的, 出席的
+vt. 介绍, 引见, 赠送, 提出, 呈现, 上演
+vi. 举枪瞄准">present</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button> and <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> for <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="accurate" data-pos="" data-def="a. 正确的, 精确的
+ 准确的, 精确的">accurate</button> calculations in the <button class="vocab-word" type="button" data-word="future" data-pos="" data-def="n. 未来, 将来
+a. 将来的, 未来的">future</button>,” he said.
+Asteroids are <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> remarkably <button class="vocab-word" type="button" data-word="diverse" data-pos="" data-def="a. 不同的, 变化多的">diverse</button>, ranging from relatively <button class="vocab-word" type="button" data-word="solid" data-pos="" data-def="n. 固体
+a. 坚硬的, 稳固的, 固体的, 实心的, 纯质的, 立体的, 立方的
+ 原色">solid</button> bodies to <button class="vocab-word" type="button" data-word="loose" data-pos="" data-def="n. 发射, 放任, 放纵
+a. 宽松的, 松的, 宽的, 不牢固的, 散漫的, 自由的, 不精确的
+vt. 释放, 放枪, 开船
+vi. 变松, 开火
+adv. 松散地">loose</button> piles of rocks held <button class="vocab-word" type="button" data-word="together" data-pos="" data-def="adv. 一起, 共同, 彼此">together</button> by their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="weak" data-pos="" data-def="a. 不牢固的, 弱的, 虚弱的, 软弱的, 无力的, 无权力的, (论据等)不充分的
+ 疲软的">weak</button> <button class="vocab-word" type="button" data-word="gravity" data-pos="" data-def="n. 地心引力, 重力
+ 重力">gravity</button>, said Marsset. “If we <button class="vocab-word" type="button" data-word="ever" data-pos="" data-def="adv. 曾经, 究竟, 永远">ever</button> have to deflect <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button> asteroid, this <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> on a collision <button class="vocab-word" type="button" data-word="course" data-pos="" data-def="n. 课程, 路线, 过程, 一道菜, 道路
+v. 追, (使)跑">course</button> with <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button>, we <button class="vocab-word" type="button" data-word="need" data-pos="" data-def="n. 需要, 必须, 缺乏
+vt. 需要, 必需
+vi. 贫困, 有必要
+aux. 需要">need</button> to <button class="vocab-word" type="button" data-word="know" data-pos="" data-def="v. 知道, 了解, 认识, 确信">know</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> we are shooting at.”
+The <button class="vocab-word" type="button" data-word="other" data-pos="" data-def="a. 其他的, 另外的, 从前的
+pron. 其他的, 他人, 另外一个">other</button> <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> <button class="vocab-word" type="button" data-word="challenge" data-pos="" data-def="n. 挑战, 盘问
+vt. 向...挑战, 要求, 怀疑
+vi. 挑战, 对(证据等)表示异议">challenge</button> is detecting potentially hazardous asteroids sufficiently <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button>. <button class="vocab-word" type="button" data-word="Given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">Given</button> years or decades of warning, <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> a <button class="vocab-word" type="button" data-word="tiny" data-pos="" data-def="a. 很少的, 微小的">tiny</button> <button class="vocab-word" type="button" data-word="change" data-pos="" data-def="n. 变化, 找回的零钱, 找头, 更换
+vt. 改变, 更换, 兑换">change</button> in an asteroid’s <button class="vocab-word" type="button" data-word="velocity" data-pos="" data-def="n. 速度, 迅速
+ 速度">velocity</button> could be <button class="vocab-word" type="button" data-word="enough" data-pos="" data-def="n. 充足, 够, 很多
+a. 充足的, 足够
+adv. 足够
+interj. 够了">enough</button> to <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> it <button class="vocab-word" type="button" data-word="miss" data-pos="" data-def="n. 失误, 避免, 失败, 小姐
+vt. 未得到, 未达到, 未听到, 未觉察, 逃脱, 遗漏, 错过, 思念
+vi. 失败, 击不中">miss</button> <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button>. “If it is discovered <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> months <button class="vocab-word" type="button" data-word="before" data-pos="" data-def="prep. 在...之前
+conj. 在...之前
+adv. 在前">before</button> <button class="vocab-word" type="button" data-word="impact" data-pos="" data-def="n. 冲击, 冲突, 影响, 效果
+vt. 挤入, 撞击, 压紧, 对...发生影响">impact</button>, our options <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> considerably <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> limited,” Marsset said.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, he added that <button class="vocab-word" type="button" data-word="major" data-pos="" data-def="n. 主修课, 成年人, 陆军少校
+a. 主要的, 较多的, 大部分的, 成年的, 严重的
+vi. 主修
+ 主要, 主要刻度">major</button> advances in asteroid detection were expected from the Vera C Rubin <button class="vocab-word" type="button" data-word="Observatory" data-pos="" data-def="n. 天文台, 气象台, 了望台">Observatory</button> in Chile and Nasa’s <button class="vocab-word" type="button" data-word="forthcoming" data-pos="" data-def="a. 即将来临的
+n. 来临">forthcoming</button> Near-Earth <button class="vocab-word" type="button" data-word="Object" data-pos="" data-def="n. 物体, 目标, 目的, 对象, 宾语, 客体
+vi. 反对, 抱反感
+vt. 提出...来反对
+ 对象">Object</button> Surveyor <button class="vocab-word" type="button" data-word="space" data-pos="" data-def="n. 位置, 空间, 距离, 太空, 空白, 间隔, (期刊等的)篇幅
+vt. 隔开, 分隔
+vi. 留间隔
+ 空白, 空格校验">space</button> <button class="vocab-word" type="button" data-word="telescope" data-pos="" data-def="n. 望远镜
+vi. 叠缩, 嵌进, 缩短
+vt. 使叠缩, 使缩短">telescope</button>. “These <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> complementary surveys will greatly <button class="vocab-word" type="button" data-word="improve" data-pos="" data-def="vt. 改良, 提高...的价值, 改善, 利用
+vi. 变得更好, 增加">improve</button> our ability to <button class="vocab-word" type="button" data-word="discover" data-pos="" data-def="vt. 发现, 找到, 暴露
+vi. 发现">discover</button> potentially hazardous asteroids and, crucially, <button class="vocab-word" type="button" data-word="give" data-pos="" data-def="n. 弹性, 适应性
+vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出
+vi. 捐赠, 支持不住, 让步">give</button> us <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> to <button class="vocab-word" type="button" data-word="respond" data-pos="" data-def="vt. 以...回答
+vi. 回答, 响应, 回报, 有反应, 承担责任">respond</button>.”
+<button class="vocab-word" type="button" data-word="Whereas" data-pos="" data-def="conj. 然而, 鉴于
+ 考虑到, 鉴于, 就...而论">Whereas</button> Douglas Adams’s <button class="vocab-word" type="button" data-word="Earth" data-pos="" data-def="n. 地球, 泥土, 世界, 尘世
+vt. 埋入土中, 赶入洞内
+vi. 躲入洞内">Earth</button> inhabitants were <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> <button class="vocab-word" type="button" data-word="mere" data-pos="" data-def="n. 小湖, 池塘
+a. 仅仅的, 只不过的">mere</button> minutes’ warning of their destruction, <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> advances could <button class="vocab-word" type="button" data-word="afford" data-pos="" data-def="vt. 买得起, 足以, 给予">afford</button> us <button class="vocab-word" type="button" data-word="both" data-pos="" data-def="a. 两者的
+adv. 两者都
+pron. 两者">both</button> the <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> and the <button class="vocab-word" type="button" data-word="technology" data-pos="" data-def="n. 技术, 工业技术, 术语
+ 技术学, 工艺学">technology</button> to <button class="vocab-word" type="button" data-word="avert" data-pos="" data-def="vt. 转开, 避免, 防止">avert</button> our <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button>.
+Images of Dimorphos <button class="vocab-word" type="button" data-word="four" data-pos="" data-def="num. 四, 四个
+ 四冲程循环">four</button> years on from <button class="vocab-word" type="button" data-word="crash" data-pos="" data-def="n. 哗啦声, 猛撞, 崩溃, 粗布
+v. 撞碎, 破碎, (使)...坠毁
+a. 速成的
+ 崩溃">crash</button> could <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> scientists <button class="vocab-word" type="button" data-word="design" data-pos="" data-def="n. 设计, 图样, 方案, 企图
+v. 设计, 计划">design</button> <button class="vocab-word" type="button" data-word="potential" data-pos="" data-def="n. 潜在性, 可能性, 潜力, 潜能, 势, 位
+a. 有潜力的, 可能的, 潜在的">potential</button> planetary defence <button class="vocab-word" type="button" data-word="system" data-pos="" data-def="n. 系统, 体系, 制度, 方式, 秩序, 分类原则
+ 系统; 体制; 体系">system</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">*   &quot;shed light</h3>
+<div class="article-content-zh">人类或许还没有手段抵御沃贡建造舰队——即《银河系漫游指南》中地球的毁灭者——但如果遭遇一颗失控的流浪小行星，人类幸存的前景看起来已经光明得多。
+在美国国家航空航天局（Nasa）故意操纵一艘航天器撞击一颗宽约160米、名为“迪莫弗斯”（Dimorphos）的小行星以使其改变轨道四年之后，科学家们公布了撞击现场的首批特写图像。
+图像显示，这颗小行星现在有一面被一个体育场大小的撞击坑撞平，并且正在混乱地翻滚。与此同时，数百块此前未知的巨石环绕着迪莫弗斯及其体积更大的伴星“迪迪莫斯”（Didymos）。
+这些由欧洲空间局（Esa）的“赫拉”（Hera）号航天器拍摄的图像，不仅让人们对撞击后小行星发生的变化有了新的认识，还可能有助于科学家在未来设计出更有效的任务，来偏转具有潜在威胁的太空岩石。
+欧洲空间局的赫拉任务经理伊恩·卡内利（Ian Carnelli）表示：“Nasa的Dart［双小行星重定向测试］任务证明了我们能够
+无论是迪莫弗斯还是其体积更大的伴随小行星“双生星”（Didymos），都没有构成此类威胁，但它们的运行为科学家提供了一种便捷的手段，用以评估试图将小行星撞离轨道的策略是否可行。
+2022年9月26日，重约半吨的“达特”（Dart）航天器以超过每小时1.3万英里的速度撞向迪莫弗斯，将一大团岩石碎片炸入太空。
+地球上望远镜的观测结果显示，该任务成功将迪莫弗斯绕双生星运行一圈的时间缩短了约33分钟。在撞击发生前，美国国家航空航天局（Nasa）的官员曾表示，轨道周期改变73秒或更多即可算作成功。
+但是这颗小行星有多少物质被撞移位，以及它究竟如何应对这次撞击，仍然是未解之谜。
+为了展开调查，欧洲空间局（Esa）于2024年10月7日发射了“赫拉”（Hera）探测器。经过两年的旅程，这艘汽车大小的航天器于本月抵达了这组双小行星，并一直在距离它们15至18英里（25至30公里）的位置展开探测。
+“科学家们此前曾争论，迪莫弗斯究竟是留下了一个撞击坑、改变了形状，还是保持了原样，”赫拉任务首席研究员、法国国家科学研究中心（CNRS）蔚蓝海岸天文台研究主任帕特里克·米歇尔（Patrick Michel）博士表示。“非常出乎我们意料的是，答案
+欧洲空间局“赫拉”任务科学家迈克尔·屈佩尔斯博士补充道，虽然迪莫弗斯的其余部分看起来相对没有变化，但这次撞击也让迪莫弗斯“在其轨道上剧烈翻滚”。
+“另一个巨大的惊喜是，‘赫拉’号显示这几颗小行星周围环绕着数百块大小仅几米的在轨巨石，”屈佩尔斯说。
+德国欧洲南方天文台的天文学家米夏埃尔·马塞博士将这些图像的发布称为“行星防御和小行星科学的重大里程碑”。
+他表示，与自然发生的小行星碰撞不同，科学家们精确知晓撞击物的质量、速度和轨迹，并且如今拥有该小行星在撞击前后的图像。“这为研究小行星尺度上的撞击物理学提供了绝佳的机会。”
+马塞补充说，DART的撞击还可能暴露出迪莫弗斯风化表面下未经改变的原始物质，让科学家得以罕见地一窥其内部。
+在接下来的几个月里，“赫拉”号将逐步靠近这些小行星，并部署两颗鞋盒大小的卫星，其中一颗将利用雷达探查迪莫弗斯内部。
+这些探测的最终目标是将小行星偏转从一次性成功的实验，转变为一种可靠的行星防御手段。
+“偏转小行星的最初设想并不像听起来那么简单，”诺丁汉特伦特大学物理学高级讲师伊恩·惠特克（Ian Whittaker）博士说。尽管航天器与小行星碰撞所传递的动量应当会改变其运动状态，但很大程度上还取决于小行星对撞击的反应，包括有多少物质被炸入太空。“这些图像将有助于了解撞击后的现场情况，并为未来的更精确计算提供依据，”他说。
+马尔塞（Marsset）表示，小行星的形态也极其多样，从相对坚固的实体，到依靠自身微弱引力聚集在一起的松散碎石堆不等。“如果我们将来不得不偏转另一颗小行星——而且这一次是处于与地球相撞的轨道上，我们就需要清楚自己的瞄准目标究竟是什么。”
+另一个重大挑战是足够早地探测到潜在危险小行星。如果能提前数年或数十年获得预警，哪怕小行星的速度只发生极微小的改变，也足以使其偏离并错开地球。“如果直到撞击前几个月才被发现，我们的选择余地就会变得非常有限，”马尔塞说。
+不过他补充道，智利的薇拉·C·鲁宾天文台（Vera C Rubin Observatory）以及美国宇航局即将推出的近地天体巡天者（Near-Earth Object Surveyor）太空望远镜，有望在小行星探测方面带来重大突破。“这两项互补的巡天巡视项目将极大提升我们发现潜在危险小行星的能力，更关键的是，能为我们争取更多的应对时间。”
+道格拉斯·亚当斯笔下的地球居民在毁灭前仅仅得到了数分钟的预警，而此类进展则能为我们提供避免自身毁灭所需的时间与技术。
+撞击四年后迪莫弗斯的图像或可帮助科学家设计潜在的行星防御系统</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">5个最典型且契合四六级考点的词汇**：</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">*   &quot;shed light</h3>
+<div class="article-content-zh">人类或许还没有手段抵御沃贡建造舰队——即《银河系漫游指南》中地球的毁灭者——但如果遭遇一颗失控的流浪小行星，人类幸存的前景看起来已经光明得多。
+在美国国家航空航天局（Nasa）故意操纵一艘航天器撞击一颗宽约160米、名为“迪莫弗斯”（Dimorphos）的小行星以使其改变轨道四年之后，科学家们公布了撞击现场的首批特写图像。
+图像显示，这颗小行星现在有一面被一个体育场大小的撞击坑撞平，并且正在混乱地翻滚。与此同时，数百块此前未知的巨石环绕着迪莫弗斯及其体积更大的伴星“迪迪莫斯”（Didymos）。
+这些由欧洲空间局（Esa）的“赫拉”（Hera）号航天器拍摄的图像，不仅让人们对撞击后小行星发生的变化有了新的认识，还可能有助于科学家在未来设计出更有效的任务，来偏转具有潜在威胁的太空岩石。
+欧洲空间局的赫拉任务经理伊恩·卡内利（Ian Carnelli）表示：“Nasa的Dart［双小行星重定向测试］任务证明了我们能够
+无论是迪莫弗斯还是其体积更大的伴随小行星“双生星”（Didymos），都没有构成此类威胁，但它们的运行为科学家提供了一种便捷的手段，用以评估试图将小行星撞离轨道的策略是否可行。
+2022年9月26日，重约半吨的“达特”（Dart）航天器以超过每小时1.3万英里的速度撞向迪莫弗斯，将一大团岩石碎片炸入太空。
+地球上望远镜的观测结果显示，该任务成功将迪莫弗斯绕双生星运行一圈的时间缩短了约33分钟。在撞击发生前，美国国家航空航天局（Nasa）的官员曾表示，轨道周期改变73秒或更多即可算作成功。
+但是这颗小行星有多少物质被撞移位，以及它究竟如何应对这次撞击，仍然是未解之谜。
+为了展开调查，欧洲空间局（Esa）于2024年10月7日发射了“赫拉”（Hera）探测器。经过两年的旅程，这艘汽车大小的航天器于本月抵达了这组双小行星，并一直在距离它们15至18英里（25至30公里）的位置展开探测。
+“科学家们此前曾争论，迪莫弗斯究竟是留下了一个撞击坑、改变了形状，还是保持了原样，”赫拉任务首席研究员、法国国家科学研究中心（CNRS）蔚蓝海岸天文台研究主任帕特里克·米歇尔（Patrick Michel）博士表示。“非常出乎我们意料的是，答案
+欧洲空间局“赫拉”任务科学家迈克尔·屈佩尔斯博士补充道，虽然迪莫弗斯的其余部分看起来相对没有变化，但这次撞击也让迪莫弗斯“在其轨道上剧烈翻滚”。
+“另一个巨大的惊喜是，‘赫拉’号显示这几颗小行星周围环绕着数百块大小仅几米的在轨巨石，”屈佩尔斯说。
+德国欧洲南方天文台的天文学家米夏埃尔·马塞博士将这些图像的发布称为“行星防御和小行星科学的重大里程碑”。
+他表示，与自然发生的小行星碰撞不同，科学家们精确知晓撞击物的质量、速度和轨迹，并且如今拥有该小行星在撞击前后的图像。“这为研究小行星尺度上的撞击物理学提供了绝佳的机会。”
+马塞补充说，DART的撞击还可能暴露出迪莫弗斯风化表面下未经改变的原始物质，让科学家得以罕见地一窥其内部。
+在接下来的几个月里，“赫拉”号将逐步靠近这些小行星，并部署两颗鞋盒大小的卫星，其中一颗将利用雷达探查迪莫弗斯内部。
+这些探测的最终目标是将小行星偏转从一次性成功的实验，转变为一种可靠的行星防御手段。
+“偏转小行星的最初设想并不像听起来那么简单，”诺丁汉特伦特大学物理学高级讲师伊恩·惠特克（Ian Whittaker）博士说。尽管航天器与小行星碰撞所传递的动量应当会改变其运动状态，但很大程度上还取决于小行星对撞击的反应，包括有多少物质被炸入太空。“这些图像将有助于了解撞击后的现场情况，并为未来的更精确计算提供依据，”他说。
+马尔塞（Marsset）表示，小行星的形态也极其多样，从相对坚固的实体，到依靠自身微弱引力聚集在一起的松散碎石堆不等。“如果我们将来不得不偏转另一颗小行星——而且这一次是处于与地球相撞的轨道上，我们就需要清楚自己的瞄准目标究竟是什么。”
+另一个重大挑战是足够早地探测到潜在危险小行星。如果能提前数年或数十年获得预警，哪怕小行星的速度只发生极微小的改变，也足以使其偏离并错开地球。“如果直到撞击前几个月才被发现，我们的选择余地就会变得非常有限，”马尔塞说。
+不过他补充道，智利的薇拉·C·鲁宾天文台（Vera C Rubin Observatory）以及美国宇航局即将推出的近地天体巡天者（Near-Earth Object Surveyor）太空望远镜，有望在小行星探测方面带来重大突破。“这两项互补的巡天巡视项目将极大提升我们发现潜在危险小行星的能力，更关键的是，能为我们争取更多的应对时间。”
+道格拉斯·亚当斯笔下的地球居民在毁灭前仅仅得到了数分钟的预警，而此类进展则能为我们提供避免自身毁灭所需的时间与技术。
+撞击四年后迪莫弗斯的图像或可帮助科学家设计潜在的行星防御系统</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">5个最典型且契合四六级考点的词汇**：</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-26 12:09</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
