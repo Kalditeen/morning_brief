@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月28日 周六 · BBC News (科技)">
+<meta property="og:description" content="How gamers are using AI and leaked files to clone Grand Theft Auto 6">
+<meta property="og:type" content="article">
+<title>BBC News (科技) | 2026年11月28日 周六</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月28日 周六 · BBC News (科技)</p>
+<a class="back-link" href="2026-11-28.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">BBC News (科技)</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="How" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">How</button> gamers are using AI and leaked files to <button class="vocab-word" type="button" data-word="clone" data-pos="" data-def="n. 无性系
+ 代用件">clone</button> <button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto 6</h2>
+<img class="article-img" src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98a4/live/a2c48d10-e97d-11f1-99a1-253766e7ad8b.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body"><button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto 6 saw <button class="vocab-word" type="button" data-word="record" data-pos="" data-def="n. 记录, 履历, 档案, 审判记录, 最高纪录, 唱片
+vt. 记录, 记载, 标明, 将...录音
+vi. 记录, 录音, 可被录音
+a. 创纪录的
+ 录制, 记录">record</button> <button class="vocab-word" type="button" data-word="retail" data-pos="" data-def="n. 零售
+a. 零售的
+vt. 零售, 详述, 传播
+vi. 零售">retail</button> sales in its <button class="vocab-word" type="button" data-word="first" data-pos="" data-def="adv. 首先, 第一, 优先
+a. 第一的
+num. 第一
+n. 开始, 第一">first</button> <button class="vocab-word" type="button" data-word="full" data-pos="" data-def="n. 全部, 完整
+a. 充满的, 完全的, 丰富的, 完美的, 丰满的, 详尽的
+adv. 完全地, 整整, 十分
+vt. 把(衣服等)缝得宽松, 漂洗
+ 完整">full</button> <button class="vocab-word" type="button" data-word="day" data-pos="" data-def="n. 天, 日子, 白天, 工作日
+ 日(一昼夜), 昼, 白天">day</button> of <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button>, hitting $3.8bn (£2.9bn), making it the biggest entertainment <button class="vocab-word" type="button" data-word="launch" data-pos="" data-def="n. 下水, 汽艇, 发射
+vt. 使下水, 发射, 发动
+vi. 起飞, 下水, 投入, 开始">launch</button> in <button class="vocab-word" type="button" data-word="history" data-pos="" data-def="n. 历史, 过去, 经历, 发展过程, 历史学, 过去的事, 历史记录
+ 历史记录">history</button>
+<button class="vocab-word" type="button" data-word="Hot" data-pos="" data-def="a. 热的, 热心的, 辣的, 热情的, 激动的, 猛烈的, 紧迫的
+adv. 热, 紧迫地">Hot</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button> its record-breaking <button class="vocab-word" type="button" data-word="console" data-pos="" data-def="vt. 安慰, 藉慰
+n. 控制台
+ 控制台">console</button> <button class="vocab-word" type="button" data-word="launch" data-pos="" data-def="n. 下水, 汽艇, 发射
+vt. 使下水, 发射, 发动
+vi. 起飞, 下水, 投入, 开始">launch</button>, the developer of <button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto 6 is facing a <button class="vocab-word" type="button" data-word="problem" data-pos="" data-def="n. 问题, 难题
+a. 成问题的, 难处理的">problem</button> – and it&#x27;s <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> that is increasingly affecting the wider games <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button>.
+Rockstar is yet to <button class="vocab-word" type="button" data-word="announce" data-pos="" data-def="vt. 宣布, 声称, 显示, 预告
+vi. 当报幕员, 宣布参加竞选">announce</button> an <button class="vocab-word" type="button" data-word="official" data-pos="" data-def="n. 官员, 公务员, 职员
+a. 公务的, 官方的, 正式的">official</button> PC <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> of GTA 6, but with the emergence of powerful AI tools, coders and gamers have taken matters into their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> hands.
+The developer has typically released <button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto on PC <button class="vocab-word" type="button" data-word="long" data-pos="" data-def="a. 长的, 长久的, 冗长的, 做多头的
+vi. 渴望, 热望, 极想
+adv. 长久, 始终
+n. 长时间, 长信号, 长整型
+ 长, 长整型">long</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> its <button class="vocab-word" type="button" data-word="initial" data-pos="" data-def="n. 字首, 首字母
+a. 开始的, 最初的, 字首的
+vt. 用姓名的首字母签名">initial</button> <button class="vocab-word" type="button" data-word="console" data-pos="" data-def="vt. 安慰, 藉慰
+n. 控制台
+ 控制台">console</button> <button class="vocab-word" type="button" data-word="launch" data-pos="" data-def="n. 下水, 汽艇, 发射
+vt. 使下水, 发射, 发动
+vi. 起飞, 下水, 投入, 开始">launch</button> – 19 months later in the <button class="vocab-word" type="button" data-word="case" data-pos="" data-def="n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子
+vt. 装箱, 包盖">case</button> of GTA 5.
+This <button class="vocab-word" type="button" data-word="time" data-pos="" data-def="n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间
+vt. 测定...的时间, 记录...的时间, 计时, 定时
+a. 时间的, 记时的, 定时的, 定期的, 分期的
+ DOS内部命令:用于显示或设定系统的时间">time</button> it may <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> have that <button class="vocab-word" type="button" data-word="luxury" data-pos="" data-def="n. 奢侈, 豪华
+a. 奢侈的, 豪华的">luxury</button> – in <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> of an <button class="vocab-word" type="button" data-word="apparent" data-pos="" data-def="a. 清晰可见的, 显然的, 表面上的
+ 外在的">apparent</button> <button class="vocab-word" type="button" data-word="leak" data-pos="" data-def="n. 漏洞, 漏处, 漏出, 泄漏
+vi. 漏, 泄漏
+vt. 使渗漏">leak</button> of files from an Xbox development <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> of the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button>, but <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to the <button class="vocab-word" type="button" data-word="rapid" data-pos="" data-def="a. 迅速的, 飞快的, 急促的, 陡的
+n. 急流">rapid</button> <button class="vocab-word" type="button" data-word="advance" data-pos="" data-def="n. 前进, 进展, 行过的路程
+vi. 前进, 进展, 提高, 上涨
+vt. 使前进, 促进, 提出, 提高, 使提前, 预付
+a. 前面的, 预先的">advance</button> of AI coding platforms.
+These tools are being <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> to recreate or <button class="vocab-word" type="button" data-word="adapt" data-pos="" data-def="vt. 使适应, 改编
+vi. 适应">adapt</button> existing games, <button class="vocab-word" type="button" data-word="sometimes" data-pos="" data-def="adv. 有时, 时常, 往往">sometimes</button> within days, taking <button class="vocab-word" type="button" data-word="away" data-pos="" data-def="adv. 离去">away</button> the <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button> developers have over their products.
+Rockstar is yet to <button class="vocab-word" type="button" data-word="announce" data-pos="" data-def="vt. 宣布, 声称, 显示, 预告
+vi. 当报幕员, 宣布参加竞选">announce</button> an <button class="vocab-word" type="button" data-word="official" data-pos="" data-def="n. 官员, 公务员, 职员
+a. 公务的, 官方的, 正式的">official</button> PC <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> of GTA 6
+Barely a <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button> <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button> of GTA 6, efforts are <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> under <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> an unofficial <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> playable on PC, <button class="vocab-word" type="button" data-word="although" data-pos="" data-def="conj. 虽然, 尽管">although</button> <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> projects have faced takedown notices from the game&#x27;s publisher.
+For <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> gamers, it&#x27;s an exciting <button class="vocab-word" type="button" data-word="prospect" data-pos="" data-def="n. 景色, 展望
+vt. 勘探, 勘察
+vi. 勘探, 有前途">prospect</button>, <button class="vocab-word" type="button" data-word="despite" data-pos="" data-def="n. 轻视, 憎恨
+prep. 虽然, 尽管">despite</button> the <button class="vocab-word" type="button" data-word="legal" data-pos="" data-def="a. 法律的, 法定的, 合法的
+ 法定权利; 法律(上)的, 合法的">legal</button> questions surrounding the <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button>.
+For developers, it may be a warning: if a <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> as <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> as GTA 6 can be recreated, <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> does that <button class="vocab-word" type="button" data-word="mean" data-pos="" data-def="a. 低劣的, 卑贱的, 简陋的, 吝啬的, 惭愧的, 平均的, 中间的, 普通的
+vt. 意谓, 想要, 意欲, 预定
+vi. 用意, 有意义
+n. 平均数, 中间, 中庸">mean</button> for <button class="vocab-word" type="button" data-word="everyone" data-pos="" data-def="pron. 每个人, 人人
+ 系统中的一个组名">everyone</button> <button class="vocab-word" type="button" data-word="else" data-pos="" data-def="a. 别的, 其他的
+adv. 另外, 否则, 不然">else</button>?
+The <button class="vocab-word" type="button" data-word="recent" data-pos="" data-def="a. 最近的, 近代的, 最新的
+ 最近的, 新进的">recent</button> <button class="vocab-word" type="button" data-word="wave" data-pos="" data-def="n. 波, 波浪, 波动, 起伏, 高潮, 潮涌, 挥手致意, (气压)突变
+vi. 波动, 飘动, 挥手示意, 起伏
+vt. 使波动, 使飘扬, 挥舞, 使成波浪形">wave</button> of AI-assisted <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> <button class="vocab-word" type="button" data-word="recreation" data-pos="" data-def="n. 娱乐, 消遣, 休息, 再创造
+ 娱乐, 休养">recreation</button> has been widely linked to Anthropic&#x27;s Opus 5.5 <button class="vocab-word" type="button" data-word="model" data-pos="" data-def="n. 模型, 模范, 模特儿
+a. 模范的, 作模型用的
+vi. 做模型, 做模特儿
+vt. 使模仿, 塑造
+ 模型">model</button>, released in <button class="vocab-word" type="button" data-word="September" data-pos="" data-def="n. 九月">September</button>, and to agentic tools <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Claude <button class="vocab-word" type="button" data-word="Code" data-pos="" data-def="n. 代码, 密码, 法规, 法典
+vt. 把...编码
+ 代码">Code</button>.
+<button class="vocab-word" type="button" data-word="Mark" data-pos="" data-def="n. 标志, 分数, 马克, 痕迹, 斑点, 靶子, 刻度, 记号, 符号, 戳记, 标准, 起跑线
+vt. 做标记于, 留意, 打分数, 表明, 标志, 记录
+vi. 作记号, 记得分
+ 标志; 标记; 传号">Mark</button> <button class="vocab-word" type="button" data-word="Brown" data-pos="" data-def="n. 褐色
+a. 褐色的
+v. (使)变褐色">Brown</button>, creator of the YouTube <button class="vocab-word" type="button" data-word="channel" data-pos="" data-def="n. 海峡, 航道, 频道
+vt. 引导, 在...上挖沟, 形成河道
+ 信道, 通道">channel</button> <button class="vocab-word" type="button" data-word="Game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">Game</button> Maker&#x27;s Toolkit and <button class="vocab-word" type="button" data-word="whose" data-pos="" data-def="pron. 谁的">whose</button> <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> <button class="vocab-word" type="button" data-word="Word" data-pos="" data-def="n. 话, 消息, 词, 诺言, 命令
+vt. 用言辞表达
+ 字">Word</button> <button class="vocab-word" type="button" data-word="Play" data-pos="" data-def="n. 游戏, 游玩, 玩笑, 运动, 比赛, 赌博, 跳动, 表演, 剧本
+v. 玩, 游戏, 假装, 开玩笑, 比赛, 扮演, 演奏, 演戏, 传摇曳, (使)跳动
+ 播放">Play</button> was recently recreated using AI, said cloning largely took <button class="vocab-word" type="button" data-word="two" data-pos="" data-def="num. 二, 二个">two</button> forms: replication and <button class="vocab-word" type="button" data-word="reverse" data-pos="" data-def="n. 相反, 背面, 倒退, 挫折, 失败
+a. 反面的, 相反的, 反向的, 颠倒的
+vt. 使颠倒, 使逆转, 使倒退, 使反向
+vi. 倒退, 反向, 倒转, 反转
+ 反转">reverse</button> engineering.
+Replication is <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> <button class="vocab-word" type="button" data-word="someone" data-pos="" data-def="pron. 有人, 某人">someone</button> asks an AI chatbot <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Claude or ChatGPT to <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> based on an existing <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button>, possibly using screenshots or a description.
+This, he said, was <button class="vocab-word" type="button" data-word="similar" data-pos="" data-def="a. 相似的, 类似的
+n. 相似的东西">similar</button> to &quot;looking at a painting and making your <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> replica&quot; – <button class="vocab-word" type="button" data-word="something" data-pos="" data-def="pron. 某事, 某物">something</button> <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> is &quot;a <button class="vocab-word" type="button" data-word="very" data-pos="" data-def="a. 真正的, 恰好的, 十足的, 特有的
+adv. 非常, 完全">very</button> <button class="vocab-word" type="button" data-word="close" data-pos="" data-def="n. 结束, 完结
+a. 靠近的, 亲近的, 亲密的, 严密的, 关闭的, 狭窄的, 秘密的
+vt. 关, 结束, 使靠近, 封闭, 使接近
+vi. 关闭, 结束, 靠近
+adv. 接近地, 紧密地
+ 关闭">close</button> <button class="vocab-word" type="button" data-word="copy" data-pos="" data-def="n. 副本, 摹仿, 一册
+v. 复印, 抄袭, 复制
+ 副本; 复制; DOS内部命令:复制文件
+将几个文件合并成一个文件, 以及将文件传至外设或在设备之间传送">copy</button>, but is ultimately a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> painting&quot;.
+It&#x27;s a <button class="vocab-word" type="button" data-word="particular" data-pos="" data-def="n. 一项(或条、点), 个别项目, 详细说明
+a. 特别的, 独有的, 挑剔的, 详尽的">particular</button> <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button> among smaller studios, <button class="vocab-word" type="button" data-word="many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">many</button> of <button class="vocab-word" type="button" data-word="whom" data-pos="" data-def="pron. 谁">whom</button> <button class="vocab-word" type="button" data-word="worry" data-pos="" data-def="n. 担心, 烦恼, 忧虑, 苦恼, 撕咬
+vt. 使烦恼, 使焦虑, 使苦恼, 困扰, 折磨, 撕咬
+vi. 烦恼, 担心, 撕咬">worry</button> that AI makes it easier for others to <button class="vocab-word" type="button" data-word="copy" data-pos="" data-def="n. 副本, 摹仿, 一册
+v. 复印, 抄袭, 复制
+ 副本; 复制; DOS内部命令:复制文件
+将几个文件合并成一个文件, 以及将文件传至外设或在设备之间传送">copy</button> their <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>.
+<button class="vocab-word" type="button" data-word="When" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">When</button> indie developers Sodoj and Marco from the <button class="vocab-word" type="button" data-word="studio" data-pos="" data-def="n. 工作室, 画室, 演播室, 电影制片厂">studio</button> Robotonic noticed a <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> of their unreleased <button class="vocab-word" type="button" data-word="puzzle" data-pos="" data-def="n. 难题, 迷惑
+vt. 使困惑, 使为难
+vi. 迷惑, 苦思">puzzle</button> <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> 204<button class="vocab-word" type="button" data-word="Snake" data-pos="" data-def="n. 蛇, 阴险的人
+vi. 曲折行进
+vt. 迂回, 拉, 急抽">Snake</button> <button class="vocab-word" type="button" data-word="appear" data-pos="" data-def="vi. 出现, 显得, 来到
+ 出庭, 到案, 出现">appear</button> on the <button class="vocab-word" type="button" data-word="free" data-pos="" data-def="a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的
+vt. 释放, 解放, 使自由
+adv. 自由地, 免费">free</button> games <button class="vocab-word" type="button" data-word="platform" data-pos="" data-def="n. 站台, 月台, 讲台, 论坛, 平台
+ 平台">platform</button> Yandex with the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="name" data-pos="" data-def="n. 名字, 名称, 姓名, 名义, 名誉, 文件名
+vt. 命名, 称呼, 任命, 提名, 列举
+a. 姓名的, 据以取名的
+ 名称, 文件名, 姓名">name</button>, they were &quot;appalled&quot;.
+&quot;The <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> was essentially the <button class="vocab-word" type="button" data-word="exact" data-pos="" data-def="a. 精确的, 准确的, 精密的
+vt. 强求, 急需">exact</button> <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="idea" data-pos="" data-def="n. 主意, 办法, 理想, 思想, 概念, 意见
+ 观念, 思想">idea</button>, the <button class="vocab-word" type="button" data-word="exact" data-pos="" data-def="a. 精确的, 准确的, 精密的
+vt. 强求, 急需">exact</button> <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> mechanics as we had, but with the <button class="vocab-word" type="button" data-word="art" data-pos="" data-def="n. 艺术, 人文科学, 技术, 巧妙, 诡计, 美术
+ 实际保持时间, 特许权和资源表, 平均检索时间, 平均运行时间">art</button> looking a <button class="vocab-word" type="button" data-word="bit" data-pos="" data-def="n. 少量, 马嚼子, 辅币
+vt. 给马上嚼子, 控制
+bite的过去式和过去分词
+ 比特, 二进制数位, 机内测试">bit</button> <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button>,&quot; Marco told the BBC .
+The duo were <button class="vocab-word" type="button" data-word="able" data-pos="" data-def="a. 能干的, 能够的">able</button> to <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button> a <button class="vocab-word" type="button" data-word="copyright" data-pos="" data-def="n. 版权, 著作权
+ 著作权">copyright</button> <button class="vocab-word" type="button" data-word="strike" data-pos="" data-def="n. 罢工, 打击, 殴打
+vt. 打, 撞击, 冲击, 侵袭, 取消, 结算, 打掉, 罢工, 刺透, 使生根, 遇见
+vi. 打, 打击, 抓, 罢工, 搏动, 触礁, 敲, 响, 穿透, 打动">strike</button> to Yandex and Google to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> the <button class="vocab-word" type="button" data-word="copy" data-pos="" data-def="n. 副本, 摹仿, 一册
+v. 复印, 抄袭, 复制
+ 副本; 复制; DOS内部命令:复制文件
+将几个文件合并成一个文件, 以及将文件传至外设或在设备之间传送">copy</button> taken <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button>, but said it <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> felt <button class="vocab-word" type="button" data-word="like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">like</button> a &quot;<button class="vocab-word" type="button" data-word="small" data-pos="" data-def="a. 小的, 少的, 小型的, 低微的, 小气的, 细微的
+adv. 些微地
+n. 狭小部分">small</button> <button class="vocab-word" type="button" data-word="victory" data-pos="" data-def="n. 胜利, 战胜, 克服">victory</button>&quot;.
+Replication is <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> <button class="vocab-word" type="button" data-word="someone" data-pos="" data-def="pron. 有人, 某人">someone</button> asks an AI chatbot <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Claude or ChatGPT to <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> based on an existing <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button>
+The <button class="vocab-word" type="button" data-word="second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">second</button> <button class="vocab-word" type="button" data-word="approach" data-pos="" data-def="n. 接近, 入门
+vt. 接近, 近似, 找...商量
+vi. 靠近">approach</button> – <button class="vocab-word" type="button" data-word="reverse" data-pos="" data-def="n. 相反, 背面, 倒退, 挫折, 失败
+a. 反面的, 相反的, 反向的, 颠倒的
+vt. 使颠倒, 使逆转, 使倒退, 使反向
+vi. 倒退, 反向, 倒转, 反转
+ 反转">reverse</button> engineering – involves working backwards from a finished <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> to <button class="vocab-word" type="button" data-word="understand" data-pos="" data-def="vt. 理解, 了解, 领会, 听说, 懂
+vi. 懂得, 认为">understand</button> <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> it was created.
+<button class="vocab-word" type="button" data-word="One" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">One</button> <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> of doing this is decompilation, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> attempts to <button class="vocab-word" type="button" data-word="turn" data-pos="" data-def="n. 转弯, 转动, 旋转, 翻转, 一圈, 顺次, 改动, 变化, 性格, 特色, 形状, 转折
+vt. 使旋转, 转弯, 转动, 使转向, 驱赶, 阻挡, 兑换, 改写, 使作对, 绕过, 使流通
+vi. 转动, 转弯, 转向, 翻转, 回转, 改变, 转身, 变成, 变质, 晕眩, 易脱手">turn</button> the game&#x27;s <button class="vocab-word" type="button" data-word="final" data-pos="" data-def="n. 期末考试, 结局, 决赛
+a. 最后的, 终极的, 决定性的">final</button> <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> into <button class="vocab-word" type="button" data-word="something" data-pos="" data-def="pron. 某事, 某物">something</button> closer to its original <button class="vocab-word" type="button" data-word="source" data-pos="" data-def="n. 来源, 水源, 根源, 原始资料, 源
+ 来源, 源程序">source</button> <button class="vocab-word" type="button" data-word="code" data-pos="" data-def="n. 代码, 密码, 法规, 法典
+vt. 把...编码
+ 代码">code</button>.
+<button class="vocab-word" type="button" data-word="Brown" data-pos="" data-def="n. 褐色
+a. 褐色的
+v. (使)变褐色">Brown</button> compares the <button class="vocab-word" type="button" data-word="process" data-pos="" data-def="n. 程序, 进行, 过程
+vt. 加工, 使...接受处理, 对...处置, 对...起诉
+a. 经加工的, 有特殊光效的
+ 进程">process</button> to &quot;taking a <button class="vocab-word" type="button" data-word="cake" data-pos="" data-def="n. 蛋糕, 块, 饼
+vt. 使结块, 加块状物于
+vi. 结块">cake</button> and <button class="vocab-word" type="button" data-word="somehow" data-pos="" data-def="adv. 不知何故">somehow</button> turning it <button class="vocab-word" type="button" data-word="back" data-pos="" data-def="a. 后面的
+vt. 使后退, 支持
+vi. 倒退, 背靠
+adv. 向后地
+n. 背部, 后面">back</button> into the original <button class="vocab-word" type="button" data-word="recipe" data-pos="" data-def="n. 食谱, 处方, 秘诀
+ 取(处方头语), 处方">recipe</button>, with the <button class="vocab-word" type="button" data-word="exact" data-pos="" data-def="a. 精确的, 准确的, 精密的
+vt. 强求, 急需">exact</button> quantities of <button class="vocab-word" type="button" data-word="flour" data-pos="" data-def="n. 面粉, 粉沫, 碎粉
+ 面粉, 麦粉">flour</button>, eggs, and <button class="vocab-word" type="button" data-word="milk" data-pos="" data-def="n. 奶, 乳状物
+vt. 挤乳, 榨取
+vi. 产乳">milk</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button>, so <button class="vocab-word" type="button" data-word="anyone" data-pos="" data-def="pron. 任何人">anyone</button> can remake the <button class="vocab-word" type="button" data-word="same" data-pos="" data-def="a. 相同的, 同样的
+pron. 相同的人(或事物)
+adv. 同样地">same</button> <button class="vocab-word" type="button" data-word="cake" data-pos="" data-def="n. 蛋糕, 块, 饼
+vt. 使结块, 加块状物于
+vi. 结块">cake</button>&quot;.
+Reverse-engineering projects have helped <button class="vocab-word" type="button" data-word="bring" data-pos="" data-def="vt. 带来, 产生, 促使, 提出
+vi. 生产">bring</button> games <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as Halo: <button class="vocab-word" type="button" data-word="Combat" data-pos="" data-def="n. 争斗, 战斗
+vi. 战斗, 争斗
+vt. 与...战斗, 与...斗争">Combat</button> Evolved and <button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto: <button class="vocab-word" type="button" data-word="Vice" data-pos="" data-def="n. 恶习, 恶行, 罪恶, 堕落, 缺陷, 恶癖, 老虎钳
+vt. 钳住
+prep. 代替">Vice</button> <button class="vocab-word" type="button" data-word="City" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">City</button> to <button class="vocab-word" type="button" data-word="web" data-pos="" data-def="n. 网, 蛛丝, 蹼, 织物, 圈套, 卷筒纸
+vi. 结网, 形成网
+vt. 织蜘蛛网于, 使落入圈套">web</button> browsers.
+A related <button class="vocab-word" type="button" data-word="technique" data-pos="" data-def="n. 技巧, 技术, 方法
+ 工艺方法; 技巧">technique</button>, recompilation, can <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> <button class="vocab-word" type="button" data-word="adapt" data-pos="" data-def="vt. 使适应, 改编
+vi. 适应">adapt</button> a <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> that has been reverse-engineered to <button class="vocab-word" type="button" data-word="run" data-pos="" data-def="n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续
+vi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延
+vt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行
+a. 熔化的, 融化的, 浇铸的
+run的过去式和过去分词
+ 运行">run</button> on different <button class="vocab-word" type="button" data-word="hardware" data-pos="" data-def="n. 硬件, 五金器具, 零件
+ 硬件">hardware</button>. This is <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of the methods being explored in efforts to <button class="vocab-word" type="button" data-word="get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">get</button> GTA 6 onto PC.
+Coders wanting to <button class="vocab-word" type="button" data-word="attempt" data-pos="" data-def="n. 尝试, 企图
+vt. 尝试, 企图">attempt</button> this with Rockstar&#x27;s latest <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> <button class="vocab-word" type="button" data-word="face" data-pos="" data-def="n. 脸, 面容, 正面, 外观
+vt. 面对, 朝, 正视, 面临
+vi. 朝, 向
+ 现场可改变的控制元件">face</button> a <button class="vocab-word" type="button" data-word="difficult" data-pos="" data-def="a. 困难的">difficult</button> <button class="vocab-word" type="button" data-word="task" data-pos="" data-def="n. 工作, 任务, 作业, 困难的工作
+vt. 派给...工作, 使辛劳
+ 任务">task</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> of its <button class="vocab-word" type="button" data-word="sheer" data-pos="" data-def="a. 绝对的, 全然的, 纯粹的, 透明的, 峻峭的
+vi. 偏转, 偏航
+vt. 使急转向, 使偏航
+adv. 完全, 全然, 峻峭
+n. 偏航">sheer</button> <button class="vocab-word" type="button" data-word="size" data-pos="" data-def="n. 大小, 尺寸, 规模, 尺码, 能力, 浆料
+vt. 上浆, 依大小排列
+vi. 可比拟
+a. 一定大小的, 一定尺寸的">size</button> and complexity.
+Earlier in <button class="vocab-word" type="button" data-word="November" data-pos="" data-def="n. 十一月">November</button>, Cyberleek – a hacker or <button class="vocab-word" type="button" data-word="group" data-pos="" data-def="n. 团体, 组, 团, 群
+v. 聚合, 成群
+ 创建组; 组, 用户组">group</button> of hackers – released <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> they claimed to be a near-complete Xbox development <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button> of the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button>. They later leaked <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> they claimed to be the <button class="vocab-word" type="button" data-word="missing" data-pos="" data-def="a. 不见的, 缺少的
+ 行踪不明的, 失踪的, 遗失的">missing</button> .exe <button class="vocab-word" type="button" data-word="file" data-pos="" data-def="n. 档案, 公文箱, 文件夹, 文件, 卷宗, 锉刀
+vi. 列队行进, 用锉刀做
+vt. 归档, 申请, 锉, 琢磨
+ 文件">file</button> needed to <button class="vocab-word" type="button" data-word="launch" data-pos="" data-def="n. 下水, 汽艇, 发射
+vt. 使下水, 发射, 发动
+vi. 起飞, 下水, 投入, 开始">launch</button> the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button>.
+It gave those working on an unofficial PC <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> a <button class="vocab-word" type="button" data-word="crucial" data-pos="" data-def="a. 决定性的, 重要的, 严厉的
+ 十字形的; 决断的, 定局的">crucial</button> <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> starting <button class="vocab-word" type="button" data-word="point" data-pos="" data-def="n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位
+vt. 弄尖, 强调, 指出, 加标点于, 瞄准
+vi. 指, 指向, 表明">point</button>.
+&quot;<button class="vocab-word" type="button" data-word="Now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">Now</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> are using AI to <button class="vocab-word" type="button" data-word="try" data-pos="" data-def="n. 尝试, 试验, 审理, 审判
+vt. 试, 尝试, 试验, 考验, 审问, 提炼
+vi. 尝试, 试图">try</button> and decompile it, <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button> a modified <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> that could <button class="vocab-word" type="button" data-word="run" data-pos="" data-def="n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续
+vi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延
+vt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行
+a. 熔化的, 融化的, 浇铸的
+run的过去式和过去分词
+ 运行">run</button> on PC, and <button class="vocab-word" type="button" data-word="compile" data-pos="" data-def="vt. 编译, 编辑, 编纂, 收集
+ 编译">compile</button> a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button>,&quot; said <button class="vocab-word" type="button" data-word="Brown" data-pos="" data-def="n. 褐色
+a. 褐色的
+v. (使)变褐色">Brown</button>.
+Reverse-engineering projects have made it <button class="vocab-word" type="button" data-word="possible" data-pos="" data-def="a. 可能的, 潜在的, 合适的
+n. 可能性, 可能的事物">possible</button> to <button class="vocab-word" type="button" data-word="bring" data-pos="" data-def="vt. 带来, 产生, 促使, 提出
+vi. 生产">bring</button> <button class="vocab-word" type="button" data-word="full" data-pos="" data-def="n. 全部, 完整
+a. 充满的, 完全的, 丰富的, 完美的, 丰满的, 详尽的
+adv. 完全地, 整整, 十分
+vt. 把(衣服等)缝得宽松, 漂洗
+ 完整">full</button> games <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as <button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto: <button class="vocab-word" type="button" data-word="Vice" data-pos="" data-def="n. 恶习, 恶行, 罪恶, 堕落, 缺陷, 恶癖, 老虎钳
+vt. 钳住
+prep. 代替">Vice</button> <button class="vocab-word" type="button" data-word="City" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">City</button> to <button class="vocab-word" type="button" data-word="web" data-pos="" data-def="n. 网, 蛛丝, 蹼, 织物, 圈套, 卷筒纸
+vi. 结网, 形成网
+vt. 织蜘蛛网于, 使落入圈套">web</button> browsers
+<button class="vocab-word" type="button" data-word="Since" data-pos="" data-def="prep. 自...以后, 自...以来
+adv. 自那时以后
+conj. 既然, 自...以后, 自...以来">Since</button> the <button class="vocab-word" type="button" data-word="leak" data-pos="" data-def="n. 漏洞, 漏处, 漏出, 泄漏
+vi. 漏, 泄漏
+vt. 使渗漏">leak</button>, <button class="vocab-word" type="button" data-word="several" data-pos="" data-def="a. 几个的, 一些的, 各自的
+pron. 几个">several</button> groups have posted claims of their <button class="vocab-word" type="button" data-word="progress" data-pos="" data-def="n. 进步, 发展, 前进
+vi. 进步, 进行">progress</button> on platforms <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as X, ranging from getting the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> to <button class="vocab-word" type="button" data-word="boot" data-pos="" data-def="n. 长靴, 踢, 解雇, 效用
+vt. 使穿靴, 踢, 解雇, 有用
+ 引导, 自举">boot</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to making it <button class="vocab-word" type="button" data-word="run" data-pos="" data-def="n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续
+vi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延
+vt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行
+a. 熔化的, 融化的, 浇铸的
+run的过去式和过去分词
+ 运行">run</button> at a <button class="vocab-word" type="button" data-word="stable" data-pos="" data-def="n. 马房, 牛棚
+a. 稳定的, 安定的, 坚固的, 坚定的
+vt. 赶入马房
+vi. 被关在马厩">stable</button> <button class="vocab-word" type="button" data-word="rate" data-pos="" data-def="n. 比率, 率, 速度, 价格, 费用, 等级
+vt. 估价, 认为, 鉴定等级, 责骂
+vi. 被评价, 责骂">rate</button>.
+<button class="vocab-word" type="button" data-word="One" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">One</button> <button class="vocab-word" type="button" data-word="attempt" data-pos="" data-def="n. 尝试, 企图
+vt. 尝试, 企图">attempt</button> seen by the BBC on X purported to have <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> of the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> running nearly as smoothly as it does on <button class="vocab-word" type="button" data-word="console" data-pos="" data-def="vt. 安慰, 藉慰
+n. 控制台
+ 控制台">console</button>, albeit on a high-end PC.
+Accounts and sites have <button class="vocab-word" type="button" data-word="even" data-pos="" data-def="a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的
+vt. 使平坦, 使相等
+vi. 变平, 成为相等
+adv. 甚至, 实际上, 完全, 十分
+n. 偶数, 偶校验
+ 偶数, 偶校验">even</button> sprung <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="track" data-pos="" data-def="n. 轨迹, 足迹, 径迹, 小道, 轨道, 磁轨, 途径
+vt. 循路而行, 追踪, 通过, 用纤拉
+vi. 追踪, 留下足迹, 沿轨道运行
+ 跟踪">track</button> the <button class="vocab-word" type="button" data-word="various" data-pos="" data-def="a. 不同的, 各种的, 多方面的, 许多的, 个别的, 杂色的
+ 不同的, 种种的, 各式各样的">various</button> attempts, excitedly sharing clips of the latest <button class="vocab-word" type="button" data-word="milestone" data-pos="" data-def="n. 里程碑, 里程石, 里程标">milestone</button> passed and scoring their efforts.
+Rockstar and its <button class="vocab-word" type="button" data-word="parent" data-pos="" data-def="n. 父母, 父母亲, 根源
+ 父亲, 母亲, 根源">parent</button> <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button>, Take-Two Interactive, have <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> confirmed the authenticity of the leaked <button class="vocab-word" type="button" data-word="build" data-pos="" data-def="v. 建立, 建筑
+n. 构造, 体格">build</button>, and <button class="vocab-word" type="button" data-word="neither" data-pos="" data-def="adv. 皆不, 两个都不
+a. (两者)都不的
+pron. 两者都不
+conj. 既非, 既不">neither</button> has responded to the BBC&#x27;s <button class="vocab-word" type="button" data-word="request" data-pos="" data-def="n. 请求, 需要, 申请书
+vt. 请求, 要求, 邀请
+ 请求">request</button> for a statement.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, Take-Two has issued <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> <button class="vocab-word" type="button" data-word="down" data-pos="" data-def="a. 向下的
+adv. 下, 下去, 降下
+prep. 往下, 沿着
+n. 丘陵, 软毛, 开阔的高地
+ 向下, 退下命令">down</button> notices , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> of <button class="vocab-word" type="button" data-word="public" data-pos="" data-def="n. 公众, 民众
+a. 公众的, 公共的, 公立的, 公用的">public</button> projects aiming to <button class="vocab-word" type="button" data-word="port" data-pos="" data-def="n. 港口, 埠, 舱门, 避风港, 左舷, 炮眼, 姿势, 意义
+vt. 左转舵, 持(枪)
+vi. 左转舵
+ 端口, 移植">port</button> the Xbox <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> to PC on platforms <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as GitHub.
+&quot;<button class="vocab-word" type="button" data-word="There" data-pos="" data-def="adv. 在那里">There</button> are <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> remedies <button class="vocab-word" type="button" data-word="available" data-pos="" data-def="a. 可利用的, 可获得的, 有效的
+ 有效的, 可得的">available</button> to <button class="vocab-word" type="button" data-word="rectify" data-pos="" data-def="vt. 订正, 矫正, 改正, 调正, 校正, 精馏, 整流
+ 精馏">rectify</button> this <button class="vocab-word" type="button" data-word="clear" data-pos="" data-def="a. 清楚的, 明确的, 澄清的
+adv. 清晰地
+vt. 澄清, 清除障碍
+vi. 放晴, 变清澈
+n. 空隙
+ 清除">clear</button> <button class="vocab-word" type="button" data-word="attempt" data-pos="" data-def="n. 尝试, 企图
+vt. 尝试, 企图">attempt</button> to facilitate <button class="vocab-word" type="button" data-word="copyright" data-pos="" data-def="n. 版权, 著作权
+ 著作权">copyright</button> infringement based upon Take-Two&#x27;s copyrighted <button class="vocab-word" type="button" data-word="property" data-pos="" data-def="n. 财产, 所有权, 性质, 属性
+ 属性">property</button>,&quot; <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="notice" data-pos="" data-def="n. 注意, 布告, 通知, 预告, 短评
+vt. 注意, 通知, 评论, 提及, 关注
+vi. 注意">notice</button> stated.
+Tech <button class="vocab-word" type="button" data-word="Life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">Life</button>: <button class="vocab-word" type="button" data-word="One" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">One</button> <button class="vocab-word" type="button" data-word="hundred" data-pos="" data-def="n. 百, 百个东西
+num. 百, 百个
+a. 一百的, 许多的">hundred</button> years of AI
+Laura Cress talks to <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> designers <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> their unreleased <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> was copied using AI. And Shiona McCallum reports on a <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> AI <button class="vocab-word" type="button" data-word="police" data-pos="" data-def="n. 警察, 警察当局, 治安
+vt. 维持治安, 管辖">police</button> chatbot.
+<button class="vocab-word" type="button" data-word="Available" data-pos="" data-def="a. 可利用的, 可获得的, 有效的
+ 有效的, 可得的">Available</button> for over a <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button>
+<button class="vocab-word" type="button" data-word="News" data-pos="" data-def="n. 新闻, 消息, 报导
+ 新闻, 消息, 新闻报导">News</button> of the <button class="vocab-word" type="button" data-word="leak" data-pos="" data-def="n. 漏洞, 漏处, 漏出, 泄漏
+vi. 漏, 泄漏
+vt. 使渗漏">leak</button> has been celebrated by <button class="vocab-word" type="button" data-word="some" data-pos="" data-def="pron. 一些, 一部分, 若干
+adv. 大约
+a. 一些的, 少许的, 某一的">some</button> gamers on Reddit, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> <button class="vocab-word" type="button" data-word="resent" data-pos="" data-def="vt. 愤恨, 憎恶, 怨恨">resent</button> having to <button class="vocab-word" type="button" data-word="wait" data-pos="" data-def="n. 等待, 等候
+vt. 等候, 期待, 延缓, 伺候, 推迟
+vi. 等, 等候, 耽搁, 伺候用餐
+ 等待">wait</button> for the PC <button class="vocab-word" type="button" data-word="release" data-pos="" data-def="n. 释放, 发泄, 豁免, 发行, 释放证书
+vt. 释放, 解除, 放松, 豁免, 免除, 发布, 放弃, 让与
+n. 发布
+ 版本, 发布">release</button>.
+&quot;<button class="vocab-word" type="button" data-word="Why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">Why</button> should the PC players have to <button class="vocab-word" type="button" data-word="wait" data-pos="" data-def="n. 等待, 等候
+vt. 等候, 期待, 延缓, 伺候, 推迟
+vi. 等, 等候, 耽搁, 伺候用餐
+ 等待">wait</button> <button class="vocab-word" type="button" data-word="half" data-pos="" data-def="n. 一半, 半场, 不完全
+a. 一半的, 不完全的, 部分的, 半场的
+adv. 一半地, 部分地, 在某种程度上地, 几乎">half</button> a <button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button> if you can <button class="vocab-word" type="button" data-word="develop" data-pos="" data-def="vt. 发展, 使发达, 进步, 洗印, 显影
+vi. 发展, 生长">develop</button> the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> in weeks as shown so <button class="vocab-word" type="button" data-word="far" data-pos="" data-def="a. 远的, 久远的, 遥远的
+adv. 甚远地, 很, 到很深的程度, 到很远的距离">far</button>!&quot; wrote <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> gamer , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> .
+&quot;Will be funny <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the decomp runs <button class="vocab-word" type="button" data-word="way" data-pos="" data-def="n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面
+adv. 远远地, 非常">way</button> <button class="vocab-word" type="button" data-word="better" data-pos="" data-def="a. 较好的
+adv. 比较好">better</button> than whatever Rockstar can <button class="vocab-word" type="button" data-word="make" data-pos="" data-def="vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行
+vi. 开始, 前进, 增大, 被制造, 被处理
+n. 制造, 构造, 性情">make</button>,&quot; said <button class="vocab-word" type="button" data-word="another" data-pos="" data-def="a. 另外的, 再一的, 不同的
+pron. 又一个, 另一个, 类似的另一个">another</button>.
+Christopher Dring, editor-in-chief and co-founder of The <button class="vocab-word" type="button" data-word="Game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">Game</button> <button class="vocab-word" type="button" data-word="Business" data-pos="" data-def="n. 生意, 事情, 业务, 商业, 商行, 职责
+ 企业, 商业, 营业">Business</button>, said <button class="vocab-word" type="button" data-word="part" data-pos="" data-def="n. 部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位
+vt. 分开, 分离, 断绝, 区别, 分配
+vi. 分开, 断裂, 分手
+a. 部分的, 局部的
+adv. 部分地, 有些">part</button> of the <button class="vocab-word" type="button" data-word="reason" data-pos="" data-def="n. 理由, 原因, 理智, 道理, 前提, 理性
+vt. 说服, 推论, 辩论
+vi. 推论, 劝说, 思考">reason</button> <button class="vocab-word" type="button" data-word="why" data-pos="" data-def="adv. 为什么
+n. 原因, 理由">why</button> the games are <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> released on PCs months <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> consoles is that PC versions are &quot;<button class="vocab-word" type="button" data-word="complex" data-pos="" data-def="n. 综合体, 情结, 络合物
+a. 复杂的, 组合的">complex</button>&quot; with &quot;different <button class="vocab-word" type="button" data-word="hardware" data-pos="" data-def="n. 硬件, 五金器具, 零件
+ 硬件">hardware</button> configurations&quot;, as opposed to the <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> standardised set-up of consoles.
+He added <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button> could <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> be a <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> commercial <button class="vocab-word" type="button" data-word="reason" data-pos="" data-def="n. 理由, 原因, 理智, 道理, 前提, 理性
+vt. 说服, 推论, 辩论
+vi. 推论, 劝说, 思考">reason</button>, as Rockstar can &quot;have a <button class="vocab-word" type="button" data-word="second" data-pos="" data-def="n. 秒, 瞬间, 第二名, 支持者, 助手
+a. 第二的, 其次的, 次要的, 附加的, 辅助的
+num. 第二
+vt. 当...助手, 支持">second</button> <button class="vocab-word" type="button" data-word="moment" data-pos="" data-def="n. 片刻, 瞬间, 重要, 阶段, 力矩
+ 片刻, 瞬间, 时机, 因素, 矩">moment</button> <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the PC <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> is <button class="vocab-word" type="button" data-word="ready" data-pos="" data-def="n. 预备好的状态, 现款
+a. 准备好的, 备用的, 可以使用的
+adv. 预先, 迅速
+vt. 使准备好">ready</button>&quot;.
+In an <button class="vocab-word" type="button" data-word="interview" data-pos="" data-def="n. 面谈, 访问, 接见, 面试
+vt. 接见, 对...进行面谈(试)">interview</button> with The <button class="vocab-word" type="button" data-word="Wall" data-pos="" data-def="n. 墙, 墙壁, 垣, 内壁, 分界物, 屏障
+a. 墙的
+vt. 给...建墙, 禁闭, 用墙围住
+ 背景墙">Wall</button> <button class="vocab-word" type="button" data-word="Street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">Street</button> <button class="vocab-word" type="button" data-word="Journal" data-pos="" data-def="n. 日记, 杂志, 日报
+ 轴颈">Journal</button> , <button class="vocab-word" type="button" data-word="external" data-pos="" data-def="n. 外部, 外面
+a. 外部的, 客观的, 表面的">external</button> , the <button class="vocab-word" type="button" data-word="chief" data-pos="" data-def="n. 领袖, 酋长, 长官, 主要部分
+a. 主要的, 首位的">chief</button> executive of Take-Two Interactive, Strauss Zelnick, said <button class="vocab-word" type="button" data-word="while" data-pos="" data-def="n. 一会儿, (一段)时间
+conj. 当...的时候, 虽然
+vt. 消磨">while</button> piracy was a &quot;<button class="vocab-word" type="button" data-word="fact" data-pos="" data-def="n. 事实, 真实性, 真相, 细节, 论据">fact</button> of <button class="vocab-word" type="button" data-word="life" data-pos="" data-def="n. 生活, 生命, 人生, 世事, 生物, 寿命, 一生, 生命力, 灵魂, 无期徒刑
+ 生活, 生存, 生命, 寿命">life</button>&quot; in the entertainment <button class="vocab-word" type="button" data-word="business" data-pos="" data-def="n. 生意, 事情, 业务, 商业, 商行, 职责
+ 企业, 商业, 营业">business</button>, it had <button class="vocab-word" type="button" data-word="until" data-pos="" data-def="prep. 直到, 在...以前
+conj. 直到...时, 在...以前">until</button> <button class="vocab-word" type="button" data-word="now" data-pos="" data-def="adv. 现在, 刚才, 目前
+n. 现在
+a. 现在的
+conj. 由于">now</button> been &quot;<button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button> of an <button class="vocab-word" type="button" data-word="issue" data-pos="" data-def="n. 发行, 问题, 后果, 流出, 出口, 争端
+vi. 发行, 流出, 造成...结果, 传下
+vt. 使流出, 放出, 发行, 发布, 发给">issue</button>&quot; for <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> games <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to their &quot;<button class="vocab-word" type="button" data-word="file" data-pos="" data-def="n. 档案, 公文箱, 文件夹, 文件, 卷宗, 锉刀
+vi. 列队行进, 用锉刀做
+vt. 归档, 申请, 锉, 琢磨
+ 文件">file</button> sizes and complexity&quot;.
+<button class="vocab-word" type="button" data-word="However" data-pos="" data-def="adv. 然而, 无论如何, 究竟怎样
+conj. 然而, 可是">However</button>, Zelnick <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> reportedly told an investor Q&amp;A that the <button class="vocab-word" type="button" data-word="company" data-pos="" data-def="n. 公司, 友伴, 交往, 连队, 朋友, 一群
+vt. 陪伴
+vi. 交往">company</button> was &quot;utterly focused on enhancing our <button class="vocab-word" type="button" data-word="technical" data-pos="" data-def="a. 技术上的, 专门的, 工业的, 严格根据法律的
+ 技巧">technical</button> defences and... <button class="vocab-word" type="button" data-word="legal" data-pos="" data-def="a. 法律的, 法定的, 合法的
+ 法定权利; 法律(上)的, 合法的">legal</button> activities appropriately&quot;.
+<button class="vocab-word" type="button" data-word="Grand" data-pos="" data-def="a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的
+ 重大的, 主要的, 伟大的">Grand</button> <button class="vocab-word" type="button" data-word="Theft" data-pos="" data-def="n. 盗窃, 失窃, 盗窃罪, 赃物
+ 盗窃行为, 偷窃, 失窃">Theft</button> Auto 6 is a <button class="vocab-word" type="button" data-word="masterpiece" data-pos="" data-def="n. 杰作, 名著">masterpiece</button>, <button class="vocab-word" type="button" data-word="say" data-pos="" data-def="vt. 说, 讲, 念, 说明, 指明
+vi. 说, 讲
+n. 意见, 发言权">say</button> critics
+Dr Tommy Thompson, an AI consultant <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> presents the AI and Games YouTube <button class="vocab-word" type="button" data-word="channel" data-pos="" data-def="n. 海峡, 航道, 频道
+vt. 引导, 在...上挖沟, 形成河道
+ 信道, 通道">channel</button>, said the practice of decompilation exists in a &quot;<button class="vocab-word" type="button" data-word="grey" data-pos="" data-def="n. 灰色
+a. 灰色的, 阴沉的
+v. (使)成灰色">grey</button> <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button>&quot; <button class="vocab-word" type="button" data-word="until" data-pos="" data-def="prep. 直到, 在...以前
+conj. 直到...时, 在...以前">until</button> it &quot;reaches a <button class="vocab-word" type="button" data-word="point" data-pos="" data-def="n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位
+vt. 弄尖, 强调, 指出, 加标点于, 瞄准
+vi. 指, 指向, 表明">point</button> <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> <button class="vocab-word" type="button" data-word="copyright" data-pos="" data-def="n. 版权, 著作权
+ 著作权">copyright</button> and <button class="vocab-word" type="button" data-word="intellectual" data-pos="" data-def="n. 有知识者, 知识分子, 凭理智做事者
+a. 智力的, 用脑力的, 聪明的">intellectual</button> <button class="vocab-word" type="button" data-word="property" data-pos="" data-def="n. 财产, 所有权, 性质, 属性
+ 属性">property</button> [IP] are infringed upon&quot;.
+He added that decompiling <button class="vocab-word" type="button" data-word="code" data-pos="" data-def="n. 代码, 密码, 法规, 法典
+vt. 把...编码
+ 代码">code</button> could be <button class="vocab-word" type="button" data-word="legal" data-pos="" data-def="a. 法律的, 法定的, 合法的
+ 法定权利; 法律(上)的, 合法的">legal</button> within limits, <button class="vocab-word" type="button" data-word="such" data-pos="" data-def="a. 如此的, 这样的">such</button> as for educational purposes, but &quot;as <button class="vocab-word" type="button" data-word="soon" data-pos="" data-def="adv. 不久, 早, 快, 宁可">soon</button> as you <button class="vocab-word" type="button" data-word="attempt" data-pos="" data-def="n. 尝试, 企图
+vt. 尝试, 企图">attempt</button> to <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> it to redistribute or repackage existing <button class="vocab-word" type="button" data-word="software" data-pos="" data-def="n. 软件
+ 软设备">software</button>&quot;, then this is &quot;largely <button class="vocab-word" type="button" data-word="illegal" data-pos="" data-def="a. 违法的, 不合规定的
+ 非法的, 犯规的">illegal</button>&quot;.
+&quot;In <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> cases, decompiling or recompiling <button class="vocab-word" type="button" data-word="code" data-pos="" data-def="n. 代码, 密码, 法规, 法典
+vt. 把...编码
+ 代码">code</button> is likely to <button class="vocab-word" type="button" data-word="involve" data-pos="" data-def="vt. 包括, 使陷于, 潜心于, 包围
+ 累及, 牵涉, 包含">involve</button> unauthorised <button class="vocab-word" type="button" data-word="use" data-pos="" data-def="n. 使用, 习惯, 使用价值, 用法, 使用权
+vt. 使用, 利用, 运用, 耗费
+vi. 惯常">use</button> of the <button class="vocab-word" type="button" data-word="game" data-pos="" data-def="n. 比赛, 玩耍, 比分, 得胜, 比赛规则, 策略, 游戏, 野味
+vi. 赌博
+a. 勇敢的, 有胆量的, 关于野味的, 跛的
+ 博弈; 对策">game</button> IP,&quot; said Aaron Treble, a UK <button class="vocab-word" type="button" data-word="intellectual" data-pos="" data-def="n. 有知识者, 知识分子, 凭理智做事者
+a. 智力的, 用脑力的, 聪明的">intellectual</button> <button class="vocab-word" type="button" data-word="property" data-pos="" data-def="n. 财产, 所有权, 性质, 属性
+ 属性">property</button> <button class="vocab-word" type="button" data-word="lawyer" data-pos="" data-def="n. 律师
+ 律师">lawyer</button> for Lewis Silkin.
+<button class="vocab-word" type="button" data-word="Anyone" data-pos="" data-def="pron. 任何人">Anyone</button> <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> releases or sells a <button class="vocab-word" type="button" data-word="clone" data-pos="" data-def="n. 无性系
+ 代用件">clone</button> &quot;will <button class="vocab-word" type="button" data-word="almost" data-pos="" data-def="adv. 几乎, 差不多">almost</button> certainly be infringing [on <button class="vocab-word" type="button" data-word="copyright" data-pos="" data-def="n. 版权, 著作权
+ 著作权">copyright</button>]&quot;, Treble added, <button class="vocab-word" type="button" data-word="though" data-pos="" data-def="adv. 然而, 可是
+conj. 虽然, 纵然">though</button> he said the <button class="vocab-word" type="button" data-word="law" data-pos="" data-def="n. 法律, 法则, 定律, 法律的制约, 法学, 司法界, 诉讼
+v. 起诉">law</button> on AI companies&#x27; <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> responsibility is <button class="vocab-word" type="button" data-word="still" data-pos="" data-def="n. 蒸馏室, 寂静, 剧照
+v. 蒸馏, (使)平静, (使)静止
+a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的
+adv. 仍然, 更, 静止地
+conj. 然而, 但是">still</button> evolving.</div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">玩家如何利用AI与泄露文件克隆</h3>
+<div class="article-content-zh">《侠盗猎车手6》（Grand Theft Auto 6）在发售首日创下零售额纪录，达到38亿美元（约合29亿英镑），成为历史上规模最大的娱乐产品发售
+刚刚经历创纪录的主机端发售，《侠盗猎车手6》的开发商就面临着一个问题——而且这个问题正日益影响着更广泛的游戏行业。
+Rockstar尚未公布《GTA 6》的官方PC版本，但随着强大的AI工具的出现，程序员和玩家们已经开始自己动手了。
+该开发商通常在主机版本首发很久之后才推出《侠盗猎车手》的PC版——以《GTA 5》为例，间隔了19个月。
+这一次它可能无法享有这种从容——部分原因是该游戏Xbox开发版文件的疑似泄露，但也是由于AI编程平台的突飞猛进。
+这些工具正被用于重制或改编现有游戏，有时甚至只需几天时间，剥夺了开发者对其产品的控制权。
+Rockstar尚未公布《GTA 6》的官方PC版本
+在《GTA 6》发售后仅仅一周，让非官方版本在PC上可玩的尝试就已经在进行中，尽管一些项目已经收到了该游戏发行商的下架通知。
+对一些玩家来说，尽管这一过程存在法律争议，但这仍是一个令人兴奋的前景。
+对开发者而言，这可能是一个警告：如果像《GTA 6》这样体量的游戏都能被重制，这对其他人来说又意味着什么？
+近期这股由人工智能辅助游戏复现的浪潮，被广泛与 Anthropic 于 9 月发布的 Opus 5.5 模型以及 Claude Code 等智能体工具联系在一起。
+YouTube 频道“Game Maker&#x27;s Toolkit”创作者马克·布朗（Mark Brown）自己的游戏《Word Play》最近也被人工智能复刻了，他表示克隆主要有两种形式：复制和逆向工程。
+复制是指有人让 Claude 或 ChatGPT 等人工智能聊天机器人根据现有游戏制作一款新游戏，可能会使用截图或描述文字。
+他说，这类似于“看着一幅画，然后自己临摹一幅”——这种产物“是一个高度相似的副本，但归根结底是一幅新画”。
+这在小型工作室中是一个尤为突出的问题，他们当中许多人担心人工智能会让其他人更容易抄袭自己的作品。
+当来自 Robotonic 工作室的独立开发者 Sodoj 和 Marco 发现他们尚未发行的解谜游戏《204Snake》的一个同名版本出现在免费游戏平台 Yandex 上时，他们感到“震惊不已”。
+“这款游戏在本质上与我们的创意完全相同，机制也完全一样，只是美术看起来有点不对劲，”Marco 告诉 BBC。
+两人向 Yandex 和谷歌发出了版权警告从而下架了侵权版本，但表示这只感觉像是一场“小小的胜利”。
+复制是指有人让 Claude 或 ChatGPT 等人工智能聊天机器人根据现有游戏制作一款新游戏
+自泄露事件发生以来，已有数个团队在 X 等平台上声称取得了进展，从成功让游戏启动到使其以稳定速率运行不等。
+BBC 在 X 上看到的一项尝试据称已让游戏的部分内容运行得几乎和主机版本一样流畅，尽管使用的是一台高端 PC。
+甚至还涌现出了一些账号和网站专门追踪各种尝试，兴奋地分享突破最新里程碑的视频片段，并为他们的成果打分。
+Rockstar 及其母公司 Take-Two Interactive 尚未证实泄露版本的真实性，且双方均未回应 BBC 的置评请求。
+然而，Take-Two 已在 GitHub 等平台上，针对旨在将 Xbox 版本移植至 PC 的公开项目发出了下架通知。
+一份通知中写道：“对于这种基于 Take-Two 受版权保护的资产、公然企图协助侵犯版权的行为，没有任何补救措施可以挽回。”
+科技生活：AI 的一百年
+劳拉·克雷斯（Laura Cress）与几位游戏设计师展开交流，后者称其尚未发售的新游戏被人使用 AI 进行了抄袭。希奥娜·麦卡勒姆（Shiona McCallum）则报道了一款全新的人工智能警察聊天机器人。
+上线时间超过一年
+泄露的消息受到了 Reddit 上部分玩家的庆祝，他们对苦等 PC 版发售早已心生怨怼。
+“如果真如目前所展示的那样几周就能把游戏搞定，为什么 PC 玩家还得再等半年！”一位玩家写道。
+“等反编译版本运行得比Rockstar做出来的任何版本都要好得多的时候，那就搞笑了，”另一人说道。
+《The Game Business》主编兼联合创始人克里斯托弗·德林（Christopher Dring）表示，游戏通常在主机版推出数月后才登陆PC，部分原因在于PC版本“很复杂”，有着“不同的硬件配置”，这与配置更标准化的主机形成了对比。
+他补充说，这也可能存在一个更为商业化的原因，因为当PC版本准备就绪时，Rockstar能够“迎来第二个高光时刻”。
+在接受《华尔街日报》（外部链接）采访时，Take-Two Interactive首席执行官施特劳斯·泽尔尼克（Strauss Zelnick）表示，尽管盗版在娱乐行业是一个“无可奈何的现实”，但由于视频游戏的“文件体积和复杂性”，盗版迄今为止在视频游戏领域“还不算太严重的问题”。
+然而，据报道泽尔尼克还在一次投资者问答中表示，该公司正“全力专注于加强我们的技术防御，并在适当时机……采取法律手段”。
+评论人士称《侠盗猎车手6》是一部杰作
+主持YouTube频道“AI and Games”的人工智能顾问汤米·汤普森（Tommy Thompson）博士表示，反编译行为一直处于“灰色地带”，直到它“达到侵犯版权和知识产权[IP]的地步”。
+他补充说，在一定限度内（例如出于教育目的）反编译代码可能是合法的，但“一旦你企图用它来重新分发或重新包装现有软件”，那么这“在很大程度上就是违法的”。
+“在大多数情况下，反编译或重新编译代码很可能涉及未经授权使用游戏IP，”Lewis Silkin律师事务所的英国知识产权律师亚伦·特雷布尔（Aaron Treble）表示。
+特雷布尔补充道，任何发布或销售克隆版本的人“几乎肯定会[侵犯版权]”，不过他也表示，关于人工智能公司自身责任的法律仍在不断演进。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">emergence — n. 出现，兴起</span>
+<span class="vocab-item">apparent — adj. 明显的</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">玩家如何利用AI与泄露文件克隆</h3>
+<div class="article-content-zh">《侠盗猎车手6》（Grand Theft Auto 6）在发售首日创下零售额纪录，达到38亿美元（约合29亿英镑），成为历史上规模最大的娱乐产品发售
+刚刚经历创纪录的主机端发售，《侠盗猎车手6》的开发商就面临着一个问题——而且这个问题正日益影响着更广泛的游戏行业。
+Rockstar尚未公布《GTA 6》的官方PC版本，但随着强大的AI工具的出现，程序员和玩家们已经开始自己动手了。
+该开发商通常在主机版本首发很久之后才推出《侠盗猎车手》的PC版——以《GTA 5》为例，间隔了19个月。
+这一次它可能无法享有这种从容——部分原因是该游戏Xbox开发版文件的疑似泄露，但也是由于AI编程平台的突飞猛进。
+这些工具正被用于重制或改编现有游戏，有时甚至只需几天时间，剥夺了开发者对其产品的控制权。
+Rockstar尚未公布《GTA 6》的官方PC版本
+在《GTA 6》发售后仅仅一周，让非官方版本在PC上可玩的尝试就已经在进行中，尽管一些项目已经收到了该游戏发行商的下架通知。
+对一些玩家来说，尽管这一过程存在法律争议，但这仍是一个令人兴奋的前景。
+对开发者而言，这可能是一个警告：如果像《GTA 6》这样体量的游戏都能被重制，这对其他人来说又意味着什么？
+近期这股由人工智能辅助游戏复现的浪潮，被广泛与 Anthropic 于 9 月发布的 Opus 5.5 模型以及 Claude Code 等智能体工具联系在一起。
+YouTube 频道“Game Maker&#x27;s Toolkit”创作者马克·布朗（Mark Brown）自己的游戏《Word Play》最近也被人工智能复刻了，他表示克隆主要有两种形式：复制和逆向工程。
+复制是指有人让 Claude 或 ChatGPT 等人工智能聊天机器人根据现有游戏制作一款新游戏，可能会使用截图或描述文字。
+他说，这类似于“看着一幅画，然后自己临摹一幅”——这种产物“是一个高度相似的副本，但归根结底是一幅新画”。
+这在小型工作室中是一个尤为突出的问题，他们当中许多人担心人工智能会让其他人更容易抄袭自己的作品。
+当来自 Robotonic 工作室的独立开发者 Sodoj 和 Marco 发现他们尚未发行的解谜游戏《204Snake》的一个同名版本出现在免费游戏平台 Yandex 上时，他们感到“震惊不已”。
+“这款游戏在本质上与我们的创意完全相同，机制也完全一样，只是美术看起来有点不对劲，”Marco 告诉 BBC。
+两人向 Yandex 和谷歌发出了版权警告从而下架了侵权版本，但表示这只感觉像是一场“小小的胜利”。
+复制是指有人让 Claude 或 ChatGPT 等人工智能聊天机器人根据现有游戏制作一款新游戏
+自泄露事件发生以来，已有数个团队在 X 等平台上声称取得了进展，从成功让游戏启动到使其以稳定速率运行不等。
+BBC 在 X 上看到的一项尝试据称已让游戏的部分内容运行得几乎和主机版本一样流畅，尽管使用的是一台高端 PC。
+甚至还涌现出了一些账号和网站专门追踪各种尝试，兴奋地分享突破最新里程碑的视频片段，并为他们的成果打分。
+Rockstar 及其母公司 Take-Two Interactive 尚未证实泄露版本的真实性，且双方均未回应 BBC 的置评请求。
+然而，Take-Two 已在 GitHub 等平台上，针对旨在将 Xbox 版本移植至 PC 的公开项目发出了下架通知。
+一份通知中写道：“对于这种基于 Take-Two 受版权保护的资产、公然企图协助侵犯版权的行为，没有任何补救措施可以挽回。”
+科技生活：AI 的一百年
+劳拉·克雷斯（Laura Cress）与几位游戏设计师展开交流，后者称其尚未发售的新游戏被人使用 AI 进行了抄袭。希奥娜·麦卡勒姆（Shiona McCallum）则报道了一款全新的人工智能警察聊天机器人。
+上线时间超过一年
+泄露的消息受到了 Reddit 上部分玩家的庆祝，他们对苦等 PC 版发售早已心生怨怼。
+“如果真如目前所展示的那样几周就能把游戏搞定，为什么 PC 玩家还得再等半年！”一位玩家写道。
+“等反编译版本运行得比Rockstar做出来的任何版本都要好得多的时候，那就搞笑了，”另一人说道。
+《The Game Business》主编兼联合创始人克里斯托弗·德林（Christopher Dring）表示，游戏通常在主机版推出数月后才登陆PC，部分原因在于PC版本“很复杂”，有着“不同的硬件配置”，这与配置更标准化的主机形成了对比。
+他补充说，这也可能存在一个更为商业化的原因，因为当PC版本准备就绪时，Rockstar能够“迎来第二个高光时刻”。
+在接受《华尔街日报》（外部链接）采访时，Take-Two Interactive首席执行官施特劳斯·泽尔尼克（Strauss Zelnick）表示，尽管盗版在娱乐行业是一个“无可奈何的现实”，但由于视频游戏的“文件体积和复杂性”，盗版迄今为止在视频游戏领域“还不算太严重的问题”。
+然而，据报道泽尔尼克还在一次投资者问答中表示，该公司正“全力专注于加强我们的技术防御，并在适当时机……采取法律手段”。
+评论人士称《侠盗猎车手6》是一部杰作
+主持YouTube频道“AI and Games”的人工智能顾问汤米·汤普森（Tommy Thompson）博士表示，反编译行为一直处于“灰色地带”，直到它“达到侵犯版权和知识产权[IP]的地步”。
+他补充说，在一定限度内（例如出于教育目的）反编译代码可能是合法的，但“一旦你企图用它来重新分发或重新包装现有软件”，那么这“在很大程度上就是违法的”。
+“在大多数情况下，反编译或重新编译代码很可能涉及未经授权使用游戏IP，”Lewis Silkin律师事务所的英国知识产权律师亚伦·特雷布尔（Aaron Treble）表示。
+特雷布尔补充道，任何发布或销售克隆版本的人“几乎肯定会[侵犯版权]”，不过他也表示，关于人工智能公司自身责任的法律仍在不断演进。</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">emergence — n. 出现，兴起</span>
+<span class="vocab-item">apparent — adj. 明显的</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-28 11:51</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>

@@ -1,16 +1,6 @@
 {
   "articles": [
     {
-      "date": "2026-11-23",
-      "cat": "guardian",
-      "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack"
-    },
-    {
-      "date": "2026-11-23",
-      "cat": "bbc-tech",
-      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing"
-    },
-    {
       "date": "2026-11-25",
       "cat": "guardian-env",
       "title": "California ‘king tides’ stress test San Francisco as low-lying areas flood"
@@ -29,6 +19,16 @@
       "date": "2026-11-26",
       "cat": "bbc-business",
       "title": "UK government set to publish new treaties agreed with EU"
+    },
+    {
+      "date": "2026-11-28",
+      "cat": "guardian",
+      "title": "Mad about mara: the DIY dance movement helping young Nigerians escape the daily grind"
+    },
+    {
+      "date": "2026-11-28",
+      "cat": "bbc-tech",
+      "title": "How gamers are using AI and leaked files to clone Grand Theft Auto 6"
     }
   ]
 }

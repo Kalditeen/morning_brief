@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="2026年11月28日 周六 · 卫报 The Guardian">
+<meta property="og:description" content="Mad about mara: the DIY dance movement helping young Nigerians escape the daily grind">
+<meta property="og:type" content="article">
+<title>卫报 The Guardian | 2026年11月28日 周六</title>
+<style>
+:root{--bg:#f0f2f5;--card:#fff;--text:#1a1a2e;--muted:#888;--accent:#667eea;--accent2:#764ba2;--ai-bg:#f0f4ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;min-height:100vh}
+.header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:26px 30px;border-radius:16px;margin:26px auto 22px;box-shadow:0 6px 24px rgba(102,126,234,.3);max-width:1180px}
+.header h1{font-size:1.35em;font-weight:800;letter-spacing:.5px}
+.header .subtitle{font-size:.88em;opacity:.88;margin-top:6px}
+.back-link{display:inline-block;margin-top:12px;color:#fff;text-decoration:none;font-size:.82em;opacity:.92}
+.back-link:hover{text-decoration:underline}
+/* 桌面端：默认单栏居中，open 后两栏平分 */
+.reader{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:880px;margin:0 auto;padding:0 16px 60px;transition:max-width .32s ease,grid-template-columns .32s ease,gap .32s ease}
+.reader.open{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;max-width:1440px}
+.original-panel{background:var(--card);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;transition:padding .32s ease}
+.translation-panel{display:none;background:linear-gradient(180deg,#fbfaff,#f4f0ff);border-radius:14px;padding:26px 30px;box-shadow:0 2px 8px rgba(0,0,0,.04);min-width:0;border:1px solid #e8e1ff;transition:padding .32s ease}
+.reader.open .translation-panel{display:block;animation:slideIn .24s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+.reader.open .original-panel,.reader.open .translation-panel{padding:22px 26px}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.translate-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.82em;font-weight:700;box-shadow:0 4px 14px rgba(102,126,234,.32);transition:transform .18s ease,box-shadow .18s ease;white-space:nowrap}
+.translate-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(102,126,234,.42)}
+.translate-btn:active{transform:translateY(0)}
+.article-img{max-width:100%;height:auto;border-radius:8px;margin:12px 0;display:block}
+.article-title-en{font-weight:750;font-size:1.26em;margin:6px 0 10px;line-height:1.4;color:var(--text)}
+.reader.open .article-title-en{font-size:1.14em}
+.article-body{white-space:pre-line;font-size:.95em;color:#444;margin:8px 0}
+.vocab-word{display:inline;padding:0;margin:0;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;cursor:pointer}
+.vocab-word:hover{color:var(--accent2);text-decoration-style:solid}
+.vocab-popover{position:absolute;z-index:80;width:min(340px,calc(100vw - 16px));padding:12px 14px;background:#fff;border:1px solid #e0e0f0;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);color:var(--text);line-height:1.5}
+.vocab-popover[hidden]{display:none}
+.vocab-popover-close{position:absolute;top:4px;right:7px;border:0;background:none;color:#999;font-size:20px;line-height:1;cursor:pointer}
+.vocab-popover-word{display:block;padding-right:18px;font-weight:800;font-size:1.05em;color:var(--accent)}
+.vocab-popover-pos{margin-top:3px;font-size:.82em;color:#777}
+.vocab-popover-def{margin-top:5px;white-space:pre-line;font-size:.9em;color:#333}
+.reader.open .article-body{font-size:.92em}
+.article-title-zh{font-weight:750;font-size:1.08em;color:var(--accent2);margin:6px 0 10px;line-height:1.45}
+.article-content-zh{white-space:pre-line;font-size:.92em;color:#333;margin:8px 0}
+.source-badge{display:inline-block;background:#ede7f6;color:var(--accent2);border-radius:12px;padding:2px 10px;font-weight:600;font-size:.82em}
+.article-meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82em;flex-wrap:wrap;color:var(--muted)}
+.vocab-box{background:var(--ai-bg);border-radius:8px;padding:10px 14px;margin-top:14px}
+.vocab-box strong{font-size:.88em;color:var(--accent)}
+.vocab-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vocab-item{background:#fff;border:1px solid #e0e0f0;border-radius:14px;padding:3px 10px;font-size:.82em;color:#333}
+.footer{text-align:center;color:#999;font-size:.78em;margin-top:0;padding:20px 16px 30px}
+.footer a{color:var(--accent)}
+/* 固定底部中文浮窗：展开时给英文正文预留不被遮挡的底部空间 */
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 76px)}
+.translation-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:30;width:min(100%,920px);height:var(--drawer-height,25vh);display:flex;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid #e8e1ff;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(0,0,0,.12);overflow:hidden;transition:height .28s ease}
+.translation-drawer.collapsed{height:46px}
+.translation-drawer.collapsed .drawer-content{display:none}
+.drawer-handle{display:flex;align-items:center;gap:10px;flex:0 0 46px;width:100%;padding:0 16px;border:0;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:ns-resize;touch-action:none;font:inherit;user-select:none}
+body.drawer-resizing{user-select:none}
+.drawer-grip{width:38px;height:4px;border-radius:999px;background:rgba(255,255,255,.78);flex:none}
+.drawer-title{font-weight:750;font-size:.9em;letter-spacing:.2px}
+.drawer-toggle-text{margin-left:auto;font-size:.8em;font-weight:700;opacity:.92}
+.drawer-content{flex:1;overflow-y:auto;padding:14px 22px 20px}
+.drawer-content .article-title-zh{margin:0 0 10px;font-size:1.05em}
+.drawer-content .article-content-zh{font-size:.9em;color:#333;line-height:1.72}
+.drawer-content .vocab-box{margin-top:14px}
+.drawer-content .vocab-box strong{font-size:.82em}
+.drawer-content .vocab-item{font-size:.78em}
+/* 移动端标签栏：默认隐藏 */
+.mobile-tabs{display:none}
+/* 桌面端隐藏 translate-btn 的规则不会出现；移动端在媒体查询里隐藏 translate-btn */
+@media(max-width:980px){
+  /* 移动端：改为标签切换，一次只显示一栏 */
+  .mobile-tabs{
+    display:flex;gap:6px;margin:0 0 14px;padding:5px;
+    background:var(--card);border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  .mobile-tabs .tab-btn{
+    flex:1;padding:10px 12px;border:none;background:transparent;
+    border-radius:10px;font-size:.88em;font-weight:700;color:var(--muted);
+    cursor:pointer;transition:all .2s ease;font-family:inherit;letter-spacing:.3px;
+  }
+  .mobile-tabs .tab-btn.active{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#fff;box-shadow:0 4px 12px rgba(102,126,234,.32);
+  }
+  .reader,.reader.open{display:block;max-width:880px;padding:0 16px 40px}
+  .reader .original-panel,
+  .reader .translation-panel,
+  .reader.open .original-panel,
+  .reader.open .translation-panel{display:none;animation:none;padding:22px 22px}
+  .reader[data-active-tab="original"] .original-panel{display:block}
+  .reader[data-active-tab="translation"] .translation-panel{display:block}
+  .translate-btn{display:none}
+}
+@media(max-width:760px){
+.header{margin:16px 8px 16px;padding:20px}
+.reader,.reader.open{padding:0 8px 40px}
+.reader .original-panel,
+.reader .translation-panel,
+.reader.open .original-panel,
+.reader.open .translation-panel{padding:18px}
+body.drawer-open .reader{padding-bottom:calc(var(--drawer-height,25vh) + 68px)}
+.translation-drawer{width:100%;border-left:0;border-right:0;border-radius:16px 16px 0 0}
+.drawer-handle{padding:0 12px}
+.drawer-content{padding:12px 16px 18px}
+}
+</style>
+</head>
+<body class="drawer-open">
+<div class="header">
+<h1>📰 晨间双语头条</h1>
+<p class="subtitle">2026年11月28日 周六 · 卫报 The Guardian</p>
+<a class="back-link" href="2026-11-28.html">← 返回今日总览</a>
+</div>
+<main class="reader" id="reader" data-active-tab="original">
+<div class="mobile-tabs">
+<button class="tab-btn active" data-tab="original" onclick="switchTab('original')">🇬🇧 英文原文</button>
+<button class="tab-btn" data-tab="translation" onclick="switchTab('translation')">🇨🇳 中文翻译</button>
+</div>
+<section class="original-panel">
+<div class="panel-header">
+<span class="source-badge">卫报 The Guardian</span>
+<button class="translate-btn" id="translateBtn" onclick="toggleTranslation()">🇨🇳 查看翻译</button>
+</div>
+<h2 class="article-title-en"><button class="vocab-word" type="button" data-word="Mad" data-pos="" data-def="a. 疯狂的, 发疯的, 生气的, 愚蠢的, 狂欢的
+n. 狂怒">Mad</button> <button class="vocab-word" type="button" data-word="about" data-pos="" data-def="prep. 在...周围, 大约, 有关, 关于
+adv. 大约, 四处, 在附近, 周围">about</button> mara: the DIY <button class="vocab-word" type="button" data-word="dance" data-pos="" data-def="n. 跳舞, 舞蹈, 舞会
+v. 跳舞">dance</button> movement helping <button class="vocab-word" type="button" data-word="young" data-pos="" data-def="a. 年轻的, 无经验的, 朝气蓬勃的
+n. 青年们, 幼小动物, 崽">young</button> Nigerians <button class="vocab-word" type="button" data-word="escape" data-pos="" data-def="n. 逃亡, 避难设备, 逃跑
+vi. 逃脱, 避开, 溜走
+vt. 逃避, 避免, 被...忘掉">escape</button> the <button class="vocab-word" type="button" data-word="daily" data-pos="" data-def="a. 每日的, 日常的
+adv. 每日地, 日常地
+n. 日报">daily</button> <button class="vocab-word" type="button" data-word="grind" data-pos="" data-def="n. 磨, 碾, 苦差, 摩擦声, 用功的学生
+vt. 磨擦, 磨碎, 磨光, 折磨, 压榨
+vi. 磨, 磨碎, 苦干">grind</button></h2>
+<img class="article-img" src="https://i.guim.co.uk/img/media/420a704a7b9337bcc84564de8c0db0836d052aac/433_0_5275_4223/master/5275.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=558556ddc90089bd8666c299074f9675" alt="" loading="lazy" onerror="this.style.display='none'">
+<div class="article-body">A s a <button class="vocab-word" type="button" data-word="student" data-pos="" data-def="n. 学生, 研究者, 学者">student</button> in the central Nigerian <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button> of Ilorin, Lawal Habeeb Kola loved staying in his hostel <button class="vocab-word" type="button" data-word="room" data-pos="" data-def="n. 房间, 空位, 场所
+vi. 住宿, 居住
+vt. 留宿">room</button> to <button class="vocab-word" type="button" data-word="produce" data-pos="" data-def="n. 生产品, 物产, 后代
+vt. 产生, 生产, 提出, 出示
+vi. 生产, 制造">produce</button> beats <button class="vocab-word" type="button" data-word="rather" data-pos="" data-def="adv. 宁可, 稍微, 相当">rather</button> than returning to his <button class="vocab-word" type="button" data-word="family" data-pos="" data-def="n. 家庭, 家人, 族
+a. 家庭的">family</button> <button class="vocab-word" type="button" data-word="house" data-pos="" data-def="n. 房子, 住宅, 机构, 议院, 家族, 家庭
+vt. 给...房子住, 收藏
+vi. 住, 躲藏">house</button> in Lagos, the <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> frenetic <button class="vocab-word" type="button" data-word="city" data-pos="" data-def="n. 城市, 市
+ 都市, 城市, 市">city</button> of his <button class="vocab-word" type="button" data-word="birth" data-pos="" data-def="n. 出生, 起源
+ 生产, 分娩">birth</button>.
+In 2022, <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> of his beats became <button class="vocab-word" type="button" data-word="popular" data-pos="" data-def="a. 通俗的, 流行的, 受欢迎的, 大众的, 人民的, 普及的
+ 大众的, 通俗的, 普及的">popular</button> on TikTok, and a <button class="vocab-word" type="button" data-word="version" data-pos="" data-def="n. 一种描述, 版本, 译文
+ 版本">version</button> featuring ad-libbed vocals from a hypeman sent it viral. He was invited to the <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> <button class="vocab-word" type="button" data-word="shoot" data-pos="" data-def="n. 射击, 狩猎, 芽, 射伤, 发射, 发芽, 急流, 推力, 摄影, 急送, 滑运道, 浪费
+vt. 射击, 射中, 损毁, 拍摄, 喷出, 投射, 挥出, 飞速行进, 挥霍, 给...注射
+vi. 射出, 射击, 发出, 拍电影, 射门, 发芽">shoot</button> in Lagos and <button class="vocab-word" type="button" data-word="thought" data-pos="" data-def="n. 想法, 思想, 思维, 关心, 挂念
+think的过去式和过去分词">thought</button> his <button class="vocab-word" type="button" data-word="big" data-pos="" data-def="a. 大的, 重要的
+adv. 大量地">big</button> <button class="vocab-word" type="button" data-word="break" data-pos="" data-def="n. 休息, 中断, 破裂处, 绝交, 破晓, 突变
+vt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃
+vi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停
+n. 分隔符
+ 分隔符; 中断; DOS内部命令:设定扫描中断按键的时机">break</button> had finally <button class="vocab-word" type="button" data-word="come" data-pos="" data-def="vi. 过来, 来, 到达, 出现, 开始
+interj. 喂">come</button>, but <button class="vocab-word" type="button" data-word="when" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">when</button> the <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> was released, he was <button class="vocab-word" type="button" data-word="absent" data-pos="" data-def="a. 缺席的, 不在的, 缺乏的, 漫不经心的
+vt. 使缺席">absent</button>.
+“I was in a <button class="vocab-word" type="button" data-word="restaurant" data-pos="" data-def="n. 餐馆, 饭店">restaurant</button> and <button class="vocab-word" type="button" data-word="everybody" data-pos="" data-def="pron. 每个人, 人人">everybody</button> was anticipating seeing me, but my <button class="vocab-word" type="button" data-word="face" data-pos="" data-def="n. 脸, 面容, 正面, 外观
+vt. 面对, 朝, 正视, 面临
+vi. 朝, 向
+ 现场可改变的控制元件">face</button> did <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> <button class="vocab-word" type="button" data-word="show" data-pos="" data-def="n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相
+vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领
+vi. 露面, 显现, 演出
+ 显示">show</button> <button class="vocab-word" type="button" data-word="once" data-pos="" data-def="adv. 一次, 曾经, 一旦
+conj. 一旦, 一经
+n. 一次
+a. 从前的">once</button>,” the 27-<button class="vocab-word" type="button" data-word="year" data-pos="" data-def="n. 年, 年度, 年龄
+ 年度">year</button> <button class="vocab-word" type="button" data-word="old" data-pos="" data-def="n. 以前, 往昔
+a. 老的, 旧的, 古老的, 年长的, 老练的">old</button>, known as DJ Khalipha, said. “I felt disgraced. I stopped posting the <button class="vocab-word" type="button" data-word="song" data-pos="" data-def="n. 歌, 曲, 鸣声, 歌唱, 歌曲, 诗歌">song</button>.”
+Khalipha retreated to his <button class="vocab-word" type="button" data-word="dorm" data-pos="" data-def="n. 宿舍">dorm</button> and revisited the DIY “<button class="vocab-word" type="button" data-word="cruise" data-pos="" data-def="n. 巡航, 巡弋, 漫游
+v. 巡航, 巡弋, 漫游">cruise</button> beats” <button class="vocab-word" type="button" data-word="genre" data-pos="" data-def="n. 类型, 流派">genre</button> of <button class="vocab-word" type="button" data-word="dance" data-pos="" data-def="n. 跳舞, 舞蹈, 舞会
+v. 跳舞">dance</button> <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> that he had previously worked in. Taking its <button class="vocab-word" type="button" data-word="name" data-pos="" data-def="n. 名字, 名称, 姓名, 名义, 名誉, 文件名
+vt. 命名, 称呼, 任命, 提名, 列举
+a. 姓名的, 据以取名的
+ 名称, 文件名, 姓名">name</button> from the pidgin expression “<button class="vocab-word" type="button" data-word="catch" data-pos="" data-def="n. 捕捉, 陷阱, 捕捉之物, 抓, 拉手
+vt. 捕捉, 赶上, 感染, 听清楚
+vi. 抓住, 燃着">catch</button> <button class="vocab-word" type="button" data-word="cruise" data-pos="" data-def="n. 巡航, 巡弋, 漫游
+v. 巡航, 巡弋, 漫游">cruise</button>”, meaning to <button class="vocab-word" type="button" data-word="joke" data-pos="" data-def="n. 笑话, 玩笑, 笑柄
+v. 开玩笑, 取笑, 作弄">joke</button> <button class="vocab-word" type="button" data-word="around" data-pos="" data-def="prep. 包围, 在...周围, 四处
+adv. 兜着圈子, 在附近, 到处">around</button>, <button class="vocab-word" type="button" data-word="cruise" data-pos="" data-def="n. 巡航, 巡弋, 漫游
+v. 巡航, 巡弋, 漫游">cruise</button> beats is a lo-fi, frenetic <button class="vocab-word" type="button" data-word="genre" data-pos="" data-def="n. 类型, 流派">genre</button> that incorporates amusing <button class="vocab-word" type="button" data-word="voice" data-pos="" data-def="n. 声音, 嗓音, 嗓子, 愿望, 发言权, 表达, 喉舌, 语态
+vt. 表达, 吐露, 调音">voice</button> samples from Nollywood and memes.
+Khalipha raised the <button class="vocab-word" type="button" data-word="already" data-pos="" data-def="adv. 已经, 早已">already</button> <button class="vocab-word" type="button" data-word="fast" data-pos="" data-def="a. 快速的, 紧的
+adv. 很快地, 紧紧地, 彻底地
+n. 绝食, 斋戒
+vi. 绝食, 斋戒">fast</button> 115-120 beats <button class="vocab-word" type="button" data-word="per" data-pos="" data-def="prep. 每一, 通过, 经, 按照
+ 每, 按照">per</button> <button class="vocab-word" type="button" data-word="minute" data-pos="" data-def="n. 分, 分钟, 片刻, 备忘录, 笔记
+vt. 记录, 摘录, 测定时间
+a. 微小的, 详细的">minute</button> of <button class="vocab-word" type="button" data-word="cruise" data-pos="" data-def="n. 巡航, 巡弋, 漫游
+v. 巡航, 巡弋, 漫游">cruise</button> beats to 140-150bpm, added melancholic undertones and named the <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> <button class="vocab-word" type="button" data-word="style" data-pos="" data-def="n. 风格, 时尚, 文体, 风度, 字体, 类型
+vt. 称呼, (根据新款式)设计, 使合潮流
+n. 风格, 样式
+ 风格, 样式">style</button> mara , meaning to <button class="vocab-word" type="button" data-word="lose" data-pos="" data-def="vt. 遗失, 损失, 丢失, 使失去, 错过, 浪费, 迷失, 使迷路, 输去, 使沉溺于
+vi. 受损失, 失败">lose</button> one’s senses. The popularity of the <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> soared, <button class="vocab-word" type="button" data-word="eventually" data-pos="" data-def="adv. 最后, 终于">eventually</button> crossing over from the Lagos <button class="vocab-word" type="button" data-word="underground" data-pos="" data-def="n. 地下, 地铁, 地道, 秘密活动
+a. 地下的, 秘密的
+adv. 在地下, 秘密地">underground</button> and becoming incorporated into the <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> of <button class="vocab-word" type="button" data-word="mainstream" data-pos="" data-def="n. 主流">mainstream</button> musicians.
+As the <button class="vocab-word" type="button" data-word="genre" data-pos="" data-def="n. 类型, 流派">genre</button> exploded, Khalipha lost creative <button class="vocab-word" type="button" data-word="control" data-pos="" data-def="n. 控制, 管理, 克制, 控制器, 操纵装置
+vt. 控制, 操纵, 抑制
+ 控制; 控制器">control</button>. “It became a <button class="vocab-word" type="button" data-word="trend" data-pos="" data-def="n. 趋势, 倾向, 走向
+vi. 倾向, 转向
+ 趋势">trend</button> that <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> producer and DJ was hopping on,” said Feranmi Abiola, 24, <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> directed the 2025 documentary Mara Mania. “They were making sounds and <button class="vocab-word" type="button" data-word="whether" data-pos="" data-def="conj. 是否, 不论
+pron. 两个中的哪一个">whether</button> it was mara <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> or <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button>, they would <button class="vocab-word" type="button" data-word="just" data-pos="" data-def="a. 正直的, 合理的, 正确的, 应得的
+adv. 刚刚, 正好, 仅仅">just</button> <button class="vocab-word" type="button" data-word="title" data-pos="" data-def="n. 头衔, 名称, 标题, 书名, 扉页, 权利, 资格, 冠军, 字幕
+vt. 授予头衔, 加标题于
+ 标题">title</button> it mara <button class="vocab-word" type="button" data-word="fever" data-pos="" data-def="n. 发烧, 发热, 热病
+ 发热, 热">fever</button>, mara this, mara that.”
+<button class="vocab-word" type="button" data-word="Like" data-pos="" data-def="a. 相似的, 同样的
+vt. 喜欢, 愿意, 想
+vi. 喜欢, 希望
+n. 爱好, 同样的人(或物)
+prep. 象, 如同
+adv. 可能">Like</button> its predecessors, mara’s <button class="vocab-word" type="button" data-word="spread" data-pos="" data-def="n. 传播, 散布, 伸展
+a. 双唇展开的, 伸展的
+vt. 展开, 铺开, 传播, 推广, 伸出, 涂, 敷, 延伸
+vi. 展开, 扩大, 传开, 延伸
+ 展开">spread</button> was driven by choreography. <button class="vocab-word" type="button" data-word="One" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">One</button> dancer, Obi “Odogwu Mara” Madubogwu, named himself <button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> the <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> and dropped <button class="vocab-word" type="button" data-word="dance" data-pos="" data-def="n. 跳舞, 舞蹈, 舞会
+v. 跳舞">dance</button> routines on social media weekly, gaining <button class="vocab-word" type="button" data-word="street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">street</button> credibility. His <button class="vocab-word" type="button" data-word="death" data-pos="" data-def="n. 死亡
+ 死亡">death</button> in unclear circumstances at the <button class="vocab-word" type="button" data-word="age" data-pos="" data-def="n. 年龄, 老年, 成年, 寿命, 时代, 时期
+v. 变老, 成熟">age</button> of 26 galvanised <button class="vocab-word" type="button" data-word="interest" data-pos="" data-def="n. 兴趣, 嗜好, 利息, 利益, 爱好, 趣味, 势力
+vt. 使感兴趣, 与...有关系">interest</button> in mara, <button class="vocab-word" type="button" data-word="especially" data-pos="" data-def="adv. 尤其, 特别, 格外">especially</button> among <button class="vocab-word" type="button" data-word="young" data-pos="" data-def="a. 年轻的, 无经验的, 朝气蓬勃的
+n. 青年们, 幼小动物, 崽">young</button> Nigerians for <button class="vocab-word" type="button" data-word="whom" data-pos="" data-def="pron. 谁">whom</button> posting and responding to <button class="vocab-word" type="button" data-word="dance" data-pos="" data-def="n. 跳舞, 舞蹈, 舞会
+v. 跳舞">dance</button> challenges in his <button class="vocab-word" type="button" data-word="style" data-pos="" data-def="n. 风格, 时尚, 文体, 风度, 字体, 类型
+vt. 称呼, (根据新款式)设计, 使合潮流
+n. 风格, 样式
+ 风格, 样式">style</button> became a <button class="vocab-word" type="button" data-word="form" data-pos="" data-def="n. 形状, 形体, 类型, 方式, 表格, 形式
+v. 形成, 排列, (使)组成
+n. 表单
+ 表单">form</button> of <button class="vocab-word" type="button" data-word="escape" data-pos="" data-def="n. 逃亡, 避难设备, 逃跑
+vi. 逃脱, 避开, 溜走
+vt. 逃避, 避免, 被...忘掉">escape</button> from <button class="vocab-word" type="button" data-word="poor" data-pos="" data-def="a. 贫穷的, 贫乏的, 不幸的, 可怜的, 拙劣的, 卑鄙的
+ 低劣的, 不良的">poor</button> <button class="vocab-word" type="button" data-word="job" data-pos="" data-def="n. 工作, 零活, 职业, 事情
+vi. 做零工, 打杂, 做股票经纪, 假公济私
+vt. 代客买卖, 批发, 承包, 欺骗
+ 作业">job</button> prospects in Nigeria’s sluggish <button class="vocab-word" type="button" data-word="economy" data-pos="" data-def="n. 经济, 理财, 节约
+ 经济, 整体">economy</button>.
+“We’ve seen <button class="vocab-word" type="button" data-word="area" data-pos="" data-def="n. 区域, 面积, 范围, 空地
+ 区域">area</button> boys [<button class="vocab-word" type="button" data-word="street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">street</button> urchins] switching to <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> dancers,” said the producer Azzi On The <button class="vocab-word" type="button" data-word="Beat" data-pos="" data-def="n. 心跳(声), 打, 敲打声, 拍子
+v. 打, 拍打, 打败
+a. 疲乏的, 颓废的
+beat的过去式
+ 拍; 节拍">Beat</button>, an <button class="vocab-word" type="button" data-word="early" data-pos="" data-def="a. 早的, 早熟的
+adv. 很早, 初">early</button> adopter of mara <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> has stayed <button class="vocab-word" type="button" data-word="true" data-pos="" data-def="a. 真实的, 正确的, 忠诚的, 可靠的, 纯粹的, 正式的
+n. 真实, 准确
+adv. 真实地, 准确地">true</button> to the <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button>. “The <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> is spiritual.”
+T he <button class="vocab-word" type="button" data-word="hectic" data-pos="" data-def="a. 脸上发红, 发热的, 潮热的, 肺病的
+n. 脸红, 潮热病人">hectic</button> but harmonious <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> has <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> a fixture at raves, <button class="vocab-word" type="button" data-word="which" data-pos="" data-def="pron. 哪一个, 那一个">which</button> in Nigeria <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> the <button class="vocab-word" type="button" data-word="form" data-pos="" data-def="n. 形状, 形体, 类型, 方式, 表格, 形式
+v. 形成, 排列, (使)组成
+n. 表单
+ 表单">form</button> of street-style block-gatherings populated by <button class="vocab-word" type="button" data-word="young" data-pos="" data-def="a. 年轻的, 无经验的, 朝气蓬勃的
+n. 青年们, 幼小动物, 崽">young</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> tired of the markup on <button class="vocab-word" type="button" data-word="alcohol" data-pos="" data-def="n. 酒精, 酒
+ 醇; 乙醇; 酒精">alcohol</button> at nightclubs and “<button class="vocab-word" type="button" data-word="bottle" data-pos="" data-def="n. 瓶子, 酒瓶
+vt. 装瓶, 抑制, 围困">bottle</button> <button class="vocab-word" type="button" data-word="culture" data-pos="" data-def="n. 文化, 修养, 耕种
+vt. 耕种, 培养">culture</button>” – the buying of expensive bottles of <button class="vocab-word" type="button" data-word="champagne" data-pos="" data-def="n. 香槟酒, 香槟酒色
+ 香槟酒">champagne</button> and spirts in VIP sections, <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> as a <button class="vocab-word" type="button" data-word="means" data-pos="" data-def="n. 方法, 手段, 工具, 财产, 收入
+ 方法, 手段, 工具; 意谓">means</button> of flaunting <button class="vocab-word" type="button" data-word="wealth" data-pos="" data-def="n. 财富, 资源, 财产, 丰富, 富裕, 大量
+ 财富">wealth</button>.
+<button class="vocab-word" type="button" data-word="Top" data-pos="" data-def="n. 顶部, 顶端, 极点, 上面, 上部, 顶篷, 最高地位, 首位, 陀螺
+a. 最高的, 顶上的, 头等的
+vt. 盖, 加以顶, 高达, 超越
+vi. 结束, 达到顶点, 高出
+ TOP协议">Top</button> musicians have been enlisting the <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> in <button class="vocab-word" type="button" data-word="search" data-pos="" data-def="n. 搜寻, 查究
+v. 搜寻, 搜查, 探求, 调查, 搜索
+ 搜索, 路径检索程序">search</button> of <button class="vocab-word" type="button" data-word="new" data-pos="" data-def="a. 新的, 陌生的, 最近的, 不熟悉的
+ 新发现的, 新的, 重新开始的">new</button> hits, but mara’s originators <button class="vocab-word" type="button" data-word="remain" data-pos="" data-def="vi. 保持, 逗留, 剩余
+ 停留, 居住, 继续">remain</button> relatively unknown, their <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button> <button class="vocab-word" type="button" data-word="often" data-pos="" data-def="adv. 时常, 常常">often</button> restricted to the thriving <button class="vocab-word" type="button" data-word="underground" data-pos="" data-def="n. 地下, 地铁, 地道, 秘密活动
+a. 地下的, 秘密的
+adv. 在地下, 秘密地">underground</button> “TrenchTok” <button class="vocab-word" type="button" data-word="scene" data-pos="" data-def="n. 场, 情景, 镜头, 发生地点, 道具, 布景, 景色
+ 现场">scene</button>.
+Khalipha said bookers assumed that mara DJs would have an <button class="vocab-word" type="button" data-word="air" data-pos="" data-def="n. 空气, 旋律, 态度
+vt. 晾, 使通风, 夸耀">air</button> of <button class="vocab-word" type="button" data-word="chaos" data-pos="" data-def="n. 大混乱, 混沌
+ 混沌; 浑沌">chaos</button> and violence, <button class="vocab-word" type="button" data-word="due" data-pos="" data-def="n. 应得的东西, 应付款
+a. 到期的, 应得的, 应付的, 约定的">due</button> to the <button class="vocab-word" type="button" data-word="raw" data-pos="" data-def="n. 擦伤处, 半成品
+a. 生的, 未加工的, 生疏的, 不成熟的, 阴冷的, 刺痛的, 擦掉皮的
+vt. 擦伤
+ 写后读">raw</button> <button class="vocab-word" type="button" data-word="sound" data-pos="" data-def="n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡
+a. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的
+adv. 彻底地, 充分地
+vi. 发出声音, 回响, 测深, 试探, 听起来
+vt. 使发声, 宣告, 听诊, 测...深, 试探
+ 声音">sound</button> of the <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> and its association with <button class="vocab-word" type="button" data-word="street" data-pos="" data-def="n. 街道, 马路, 街区
+a. 街道的">street</button> <button class="vocab-word" type="button" data-word="culture" data-pos="" data-def="n. 文化, 修养, 耕种
+vt. 耕种, 培养">culture</button>.
+Abiola agreed. “[Mara DJs] are <button class="vocab-word" type="button" data-word="not" data-pos="" data-def="adv. 不, 非, 未
+ 非">not</button> harmful, but they <button class="vocab-word" type="button" data-word="face" data-pos="" data-def="n. 脸, 面容, 正面, 外观
+vt. 面对, 朝, 正视, 面临
+vi. 朝, 向
+ 现场可改变的控制元件">face</button> stereotypes <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> of their <button class="vocab-word" type="button" data-word="background" data-pos="" data-def="n. 背景, 背景资料
+ 背景, 后台">background</button>, <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they <button class="vocab-word" type="button" data-word="look" data-pos="" data-def="n. 一看, 神色, 样子, 面容
+vi. 看, 注意, 朝着, 显得
+vt. 打量, 看上去与...一样, 以眼色(或脸色)显示, 期待">look</button> and <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> they <button class="vocab-word" type="button" data-word="dress" data-pos="" data-def="n. 服装, 覆盖物
+vi. 穿着
+vt. 给...穿衣, 整理">dress</button>,” she said. “In my documentary, I wanted <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> to <button class="vocab-word" type="button" data-word="see" data-pos="" data-def="vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意
+vi. 看, 观看, 注意, 知道, 考虑
+n. 主教的职位">see</button> these <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> for <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> they were … <button class="vocab-word" type="button" data-word="young" data-pos="" data-def="a. 年轻的, 无经验的, 朝气蓬勃的
+n. 青年们, 幼小动物, 崽">young</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> innovating and contributing to the cultural <button class="vocab-word" type="button" data-word="identity" data-pos="" data-def="n. 身份, 相同, 一致, 特性, 恒等式
+ (打)标记, 标识">identity</button> of this <button class="vocab-word" type="button" data-word="generation" data-pos="" data-def="n. 一代, 一世, 产生
+ 生殖, 世代">generation</button>. <button class="vocab-word" type="button" data-word="Regardless" data-pos="" data-def="a. 不管, 不注意, 不顾">Regardless</button> of <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> they are from, they <button class="vocab-word" type="button" data-word="deserve" data-pos="" data-def="vt. 该得到, 值得
+vi. 应得报答">deserve</button> to be taken seriously.”
+<button class="vocab-word" type="button" data-word="Sign" data-pos="" data-def="n. 符号, 招牌, 征兆, 正负号, 手势
+vt. 签名, 打手势表达
+vi. 签名
+ 正负号; 符号; 符号字符">Sign</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> to <button class="vocab-word" type="button" data-word="Sleeve" data-pos="" data-def="n. 袖子, 套管
+vt. 缝上袖子">Sleeve</button> Notes
+<button class="vocab-word" type="button" data-word="Get" data-pos="" data-def="vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上
+vi. 到达, 成为, 变得
+n. (网球等)救球, 生殖, 幼兽
+ 取得指令, 获取文件">Get</button> <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> <button class="vocab-word" type="button" data-word="news" data-pos="" data-def="n. 新闻, 消息, 报导
+ 新闻, 消息, 新闻报导">news</button>, <button class="vocab-word" type="button" data-word="bold" data-pos="" data-def="a. 大胆的
+n. 粗体
+ 粗体">bold</button> reviews and unexpected extras. <button class="vocab-word" type="button" data-word="Every" data-pos="" data-def="a. 每一, 所有的">Every</button> <button class="vocab-word" type="button" data-word="genre" data-pos="" data-def="n. 类型, 流派">genre</button>, <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="era" data-pos="" data-def="n. 时代, 纪元, 时期">era</button>, <button class="vocab-word" type="button" data-word="every" data-pos="" data-def="a. 每一, 所有的">every</button> <button class="vocab-word" type="button" data-word="week" data-pos="" data-def="n. 星期, 周">week</button>
+<button class="vocab-word" type="button" data-word="after" data-pos="" data-def="prep. 在...之后, 由于
+conj. 在...之后
+adv. 后来">after</button> newsletter promotion
+Without institutional backing, the DJs have been learning <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> to <button class="vocab-word" type="button" data-word="navigate" data-pos="" data-def="vi. 航行
+vt. 航行于, 驾驶, 操纵, 使通过">navigate</button> the <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button> on the <button class="vocab-word" type="button" data-word="go" data-pos="" data-def="vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下
+vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)
+n. 去, 尝试, 进行">go</button>. <button class="vocab-word" type="button" data-word="When" data-pos="" data-def="conj. 当...的时候
+adv. 何时, 什么时候
+pron. 什么时侯
+n. 时间">When</button> the samples they were using were flagged for <button class="vocab-word" type="button" data-word="copyright" data-pos="" data-def="n. 版权, 著作权
+ 著作权">copyright</button> issues, they created their <button class="vocab-word" type="button" data-word="own" data-pos="" data-def="n. 自己的
+a. 自己的, 嫡亲的, 同胞的
+vt. 拥有, 支配, 自认, 承认, 顺从于
+vi. 承认, 供认">own</button> instrumentals from <button class="vocab-word" type="button" data-word="scratch" data-pos="" data-def="n. 抓痕, 搔, 抓, 擦伤, 刮擦声, 乱写, 零分, 起跑线
+vt. 搔, 抓, 挖出, 擦, 刮, 乱涂, 勾抹掉
+vi. 搔, 抓, 发刮擦声, 勉强糊口
+a. 碰巧的, 凑合的, 打草稿用的
+ 擦除">scratch</button> using plugins.
+<button class="vocab-word" type="button" data-word="Many" data-pos="" data-def="n. 多数, 多数人
+a. 许多的
+pron. 许多">Many</button> artists are self-funded, investing <button class="vocab-word" type="button" data-word="money" data-pos="" data-def="n. 金钱, 一笔款, 财富, 货币, 金额
+ 货币, 金钱, 财产">money</button> earned as social media influencers or from royalties into shooting videos and promotion. <button class="vocab-word" type="button" data-word="Female" data-pos="" data-def="n. 女性, 女人, 雌性动物
+a. 女性的, 女子的">Female</button> dancers <button class="vocab-word" type="button" data-word="talk" data-pos="" data-def="n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言
+vi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话
+vt. 讲, 说, 讨论, 谈论
+ 对话类, 聊天">talk</button> of sexual harassment and financial exploitation in the <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button>.
+“The financial challenges are <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> <button class="vocab-word" type="button" data-word="apparent" data-pos="" data-def="a. 清晰可见的, 显然的, 表面上的
+ 外在的">apparent</button> for the dancers, <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> don’t really <button class="vocab-word" type="button" data-word="take" data-pos="" data-def="vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费
+vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产
+n. 拿, 取, 收成, 奏效">take</button> dancers seriously,” said Abiola.
+Pointing to a <button class="vocab-word" type="button" data-word="square" data-pos="" data-def="n. 正方形, 街区, 广场, 平方, 直角尺
+a. 正方形的, 正直的, 公正的, 平方的, 方正的, 结清的
+adv. 成直角地, 对准地
+vi. 一致, 符合, 结清
+vt. 使成方形, 使平方自乘, 调正, 结清, 使一致">square</button> littered with weeds and <button class="vocab-word" type="button" data-word="rubbish" data-pos="" data-def="n. 废物, 垃圾, 胡说">rubbish</button>, <button class="vocab-word" type="button" data-word="where" data-pos="" data-def="adv. 在哪里
+pron. 哪里
+n. 地点">where</button> goats roamed <button class="vocab-word" type="button" data-word="next" data-pos="" data-def="n. 下一个
+a. 下一个的, 其次的, 贴近的
+adv. 然后, 下次, 次于
+ 近邻干扰">next</button> to a <button class="vocab-word" type="button" data-word="woman" data-pos="" data-def="n. 女人, 妇女, 女仆
+a. 女用的, 女性的, 妇女的
+vt. 贬称...为女人, 使成女人腔">woman</button> sieving black-eyed peas on a <button class="vocab-word" type="button" data-word="tray" data-pos="" data-def="n. 托盘, 公文盘, 满盘, 发射箱
+ 淋盘">tray</button>, Azzi’s 27-year-old manager, Sangokunle Anuoluwapo – known as Kadima – said: “We do <button class="vocab-word" type="button" data-word="most" data-pos="" data-def="n. 最多, 最大
+a. 大多数的, 几乎全部的, 最多的
+adv. 最, 最多, 极其">most</button> of our videos <button class="vocab-word" type="button" data-word="here" data-pos="" data-def="adv. 在这里, 此时, 这里
+n. 这里">here</button>.”
+D espite the challenges, the <button class="vocab-word" type="button" data-word="people" data-pos="" data-def="n. 人, 人民, 民族, 平民
+vt. 使住满人, 居住于">people</button> involved in mara <button class="vocab-word" type="button" data-word="harbour" data-pos="" data-def="n. 港, 避难所
+v. 庇护, 藏匿, (使)入港停泊">harbour</button> dreams of global traction. <button class="vocab-word" type="button" data-word="Support" data-pos="" data-def="n. 支持, 支撑, 援助, 供养, 支撑物
+vt. 支援, 支撑, 帮助, 支持, 忍受, 供养, 证实
+ 后援; 支持">Support</button> from the French <button class="vocab-word" type="button" data-word="embassy" data-pos="" data-def="n. 大使馆, 大使馆全体人员
+ 大使馆">embassy</button> helped Azzi <button class="vocab-word" type="button" data-word="perform" data-pos="" data-def="vt. 进行, 履行, 完成, 执行, 表演
+vi. 行动, 工作, 执行, 演出">perform</button> at festivals in Uganda and parts of Europe. A <button class="vocab-word" type="button" data-word="few" data-pos="" data-def="a. 很少的, 不多的, 少数的
+n. 少数">few</button> <button class="vocab-word" type="button" data-word="industry" data-pos="" data-def="n. 勤劳, 工业, 企业, 产业, 有组织的劳动
+ 工业, 实业">industry</button> friends on the <button class="vocab-word" type="button" data-word="rise" data-pos="" data-def="n. 上升, 增加, 上涨, 高地, 升高, 出现
+vi. 升起, 起身, 起立, 上升, 上涨, 增长, 高耸, 起义, 浮现
+vt. 使飞起">rise</button> or those <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> Kadima at <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> <button class="vocab-word" type="button" data-word="point" data-pos="" data-def="n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位
+vt. 弄尖, 强调, 指出, 加标点于, 瞄准
+vi. 指, 指向, 表明">point</button> managed <button class="vocab-word" type="button" data-word="also" data-pos="" data-def="adv. 也, 并且, 同样地">also</button> <button class="vocab-word" type="button" data-word="help" data-pos="" data-def="n. 帮忙, 帮助者, 补救办法, 有益的东西
+vt. 帮助, 帮忙, 接济, 治疗, 款待
+vi. 有用, 救命, 招待
+ 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序">help</button> intermittently with funding or promoting projects for <button class="vocab-word" type="button" data-word="free" data-pos="" data-def="a. 自由的, 享受政治权力的, 允许的, 免费的, 丰富的
+vt. 释放, 解放, 使自由
+adv. 自由地, 免费">free</button>.
+“I <button class="vocab-word" type="button" data-word="understand" data-pos="" data-def="vt. 理解, 了解, 领会, 听说, 懂
+vi. 懂得, 认为">understand</button> <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> we <button class="vocab-word" type="button" data-word="want" data-pos="" data-def="n. 需要的东西, 缺乏, 贫困, 需要
+vt. 要, 希望, 应该, 缺少
+vi. 生活困苦, 需要, 缺少">want</button> for this <button class="vocab-word" type="button" data-word="culture" data-pos="" data-def="n. 文化, 修养, 耕种
+vt. 耕种, 培养">culture</button> so we <button class="vocab-word" type="button" data-word="keep" data-pos="" data-def="n. 生计, 维持, 保持
+vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐
+vi. 保持, 继续不断">keep</button> pushing really <button class="vocab-word" type="button" data-word="hard" data-pos="" data-def="a. 坚硬的, 硬的, 难的, 艰苦的, 困难的, 坚固的, 猛烈的, 艰难的, 结实的, 确实的
+adv. 坚硬地, 努力地, 辛苦地, 接近地, 猛烈地, 牢固地">hard</button>,” said Kadima. “It’s <button class="vocab-word" type="button" data-word="family" data-pos="" data-def="n. 家庭, 家人, 族
+a. 家庭的">family</button> <button class="vocab-word" type="button" data-word="work" data-pos="" data-def="n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程
+vi. 工作, 劳动, 做, 运转, 起作用, 被加工
+vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成">work</button>, so we <button class="vocab-word" type="button" data-word="try" data-pos="" data-def="n. 尝试, 试验, 审理, 审判
+vt. 试, 尝试, 试验, 考验, 审问, 提炼
+vi. 尝试, 试图">try</button> to <button class="vocab-word" type="button" data-word="split" data-pos="" data-def="n. 劈开, 裂片, 裂缝, 分裂, 派系, 派别, 柳条
+a. 劈开的
+vi. 分离, 分开, 裂开, 被劈开
+vt. 劈开, 切开, 使分裂, 使分离
+ 拆分">split</button> revenues among <button class="vocab-word" type="button" data-word="everybody" data-pos="" data-def="pron. 每个人, 人人">everybody</button>.”
+Azzi was <button class="vocab-word" type="button" data-word="given" data-pos="" data-def="a. 赠予的, 沉溺的, 约定的
+give的过去分词">given</button> a <button class="vocab-word" type="button" data-word="leg" data-pos="" data-def="n. 腿, 假腿, 路程
+vi. 走, 跑">leg</button> <button class="vocab-word" type="button" data-word="up" data-pos="" data-def="a. 向上的, 起床的, 涨的
+adv. 向上, 上涨
+prep. 在...上面, 向...的较高处">up</button> from the Footprints of David <button class="vocab-word" type="button" data-word="Art" data-pos="" data-def="n. 艺术, 人文科学, 技术, 巧妙, 诡计, 美术
+ 实际保持时间, 特许权和资源表, 平均检索时间, 平均运行时间">Art</button> <button class="vocab-word" type="button" data-word="Academy" data-pos="" data-def="n. 学院, 院校, 学会">Academy</button>, a children’s <button class="vocab-word" type="button" data-word="dance" data-pos="" data-def="n. 跳舞, 舞蹈, 舞会
+v. 跳舞">dance</button> theatre troupe that held performances <button class="vocab-word" type="button" data-word="behind" data-pos="" data-def="adv. 在后地
+prep. 在...背后">behind</button> his mother’s <button class="vocab-word" type="button" data-word="shop" data-pos="" data-def="n. 商店, 工厂, 车间
+vi. 购物, 到处寻找
+vt. 选购">shop</button>. He honed his dancing skills, learned <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> to <button class="vocab-word" type="button" data-word="drum" data-pos="" data-def="n. 鼓, 鼓声
+vi. 击鼓, 作鼓声
+vt. 打鼓奏出
+ 磁鼓">drum</button>, and met Kadima <button class="vocab-word" type="button" data-word="there" data-pos="" data-def="adv. 在那里">there</button>. “We were taught <button class="vocab-word" type="button" data-word="how" data-pos="" data-def="adv. 如何, 怎样, 多少, 多么
+n. 方式">how</button> to <button class="vocab-word" type="button" data-word="fight" data-pos="" data-def="n. 打架, 争吵, 斗志
+v. 对抗, 打架">fight</button> through <button class="vocab-word" type="button" data-word="tough" data-pos="" data-def="n. 恶棍
+a. 强硬的, 艰苦的, 坚固的, 坚韧的, 粗暴的, 咬不动的">tough</button> times,” Azzi said.
+The <button class="vocab-word" type="button" data-word="art" data-pos="" data-def="n. 艺术, 人文科学, 技术, 巧妙, 诡计, 美术
+ 实际保持时间, 特许权和资源表, 平均检索时间, 平均运行时间">art</button> director Seun Awobajo launched the <button class="vocab-word" type="button" data-word="academy" data-pos="" data-def="n. 学院, 院校, 学会">academy</button> in 2005 with the <button class="vocab-word" type="button" data-word="aim" data-pos="" data-def="n. 目标, 瞄准, 击中目标的能力
+vi. 对准目标, 致力, 打算
+vt. 瞄准
+ 医学文摘索引, 存取隔离机构, 高级信息管理程序, 先进接口模块
+应用接口模块, 医学人工智能, 相联索引法, 异步接口模块
+自动化信息管理, 自动化综合制造, 自动化库存管理">aim</button> of channelling the <button class="vocab-word" type="button" data-word="energy" data-pos="" data-def="n. 精力, 精神, 活力, 能量
+ 能; 能量">energy</button> of disadvantaged children into creative endeavours. “[I had] the <button class="vocab-word" type="button" data-word="notion" data-pos="" data-def="n. 概念, 观念, 想法, 打算, 别致的小东西
+ 概念, 打算, 想法">notion</button> that <button class="vocab-word" type="button" data-word="no" data-pos="" data-def="n. 不, 拒绝, 否决票
+a. 没有, 不是, 绝非
+adv. 不">no</button> <button class="vocab-word" type="button" data-word="child" data-pos="" data-def="n. 孩子, 产物, 追随者
+ 儿童">child</button> is useless, they are <button class="vocab-word" type="button" data-word="only" data-pos="" data-def="a. 唯一的, 仅有的, 最佳的
+adv. 只有, 仅仅, 只能
+conj. 但是, 不过">only</button> <button class="vocab-word" type="button" data-word="used" data-pos="" data-def="a. 使用过的, 二手的, 习惯的">used</button> <button class="vocab-word" type="button" data-word="less" data-pos="" data-def="n. 较少, 较小
+a. 少的, 小的
+adv. 较少, 较小, 较差
+ 最低成本估算与调度法">less</button>,” he said.
+Awobajo is proud of his <button class="vocab-word" type="button" data-word="former" data-pos="" data-def="a. 从前的, 前者的
+n. 起形成作用的人(或物), 模型, 样板">former</button> wards and the mara <button class="vocab-word" type="button" data-word="scene" data-pos="" data-def="n. 场, 情景, 镜头, 发生地点, 道具, 布景, 景色
+ 现场">scene</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> generally. “Being proud is an understatement,” he said. “But I <button class="vocab-word" type="button" data-word="think" data-pos="" data-def="vt. 想, 考虑, 想起, 想像, 打算, 认为
+vi. 思考, 料想
+n. 想法
+a. 思想的">think</button> I <button class="vocab-word" type="button" data-word="feel" data-pos="" data-def="vt. 感觉, 觉得, 触摸, 以为
+vi. 有知觉, 摸索, 同情
+n. 感觉, 觉得, 触摸">feel</button> <button class="vocab-word" type="button" data-word="more" data-pos="" data-def="n. 更多
+a. 多的, 程度较大的, 更大的
+adv. 多, 更多, 进一步
+ DOS外部命令:显示满屏后自动暂停, 并显示:&quot;--More--&quot;, 按任意键继续">more</button> fulfilled seeing <button class="vocab-word" type="button" data-word="what" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">what</button> they’ve <button class="vocab-word" type="button" data-word="become" data-pos="" data-def="vi. 变成, 变得
+vt. 适合">become</button> <button class="vocab-word" type="button" data-word="because" data-pos="" data-def="conj. 因为">because</button> these are children <button class="vocab-word" type="button" data-word="who" data-pos="" data-def="pron. 谁">who</button> the <button class="vocab-word" type="button" data-word="upper" data-pos="" data-def="a. 上面的, 较高的, 上级的, 上院的, 穿在外面的, 北部的, 地表的, 后期的
+n. 鞋帮, 上齿">upper</button> <button class="vocab-word" type="button" data-word="class" data-pos="" data-def="n. 班级, 阶级, 种类, 课
+vt. 分类
+ 类别; 类; 种类; 类程">class</button> of the <button class="vocab-word" type="button" data-word="society" data-pos="" data-def="n. 社会；社交界；交往；社团">society</button> have written <button class="vocab-word" type="button" data-word="off" data-pos="" data-def="a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的
+adv. 走开, ...掉, ...下, 休息, 出发, 隔断
+prep. 离开, 脱落, 不在从事......, 在...之外
+vi. 离开, 滚开
+vt. 杀死
+n. 关闭状态
+ 关闭, 清屏命令">off</button>.”
+<button class="vocab-word" type="button" data-word="What" data-pos="" data-def="pron. 什么
+interj. 怎么, 多么
+a. 什么的
+adv. 到什么程度">What</button> started as <button class="vocab-word" type="button" data-word="one" data-pos="" data-def="n. 一(个)
+pron. 一, 任何人
+num. 一, 一个
+a. 一致的, 完整的">one</button> artist’s response to being <button class="vocab-word" type="button" data-word="cut" data-pos="" data-def="n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路
+a. 经切割的, 缩减的
+vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出
+vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑
+ 剪切">cut</button> <button class="vocab-word" type="button" data-word="out" data-pos="" data-def="a. 外面的, 熄灭的, 结束的
+adv. 在外, 熄灭, 出现
+prep. 出自, 离去, 向">out</button> of a <button class="vocab-word" type="button" data-word="music" data-pos="" data-def="n. 音乐, 乐曲">music</button> <button class="vocab-word" type="button" data-word="video" data-pos="" data-def="n. 影像, 电视
+a. 图像的, 电视的">video</button> has exploded, becoming a driving <button class="vocab-word" type="button" data-word="force" data-pos="" data-def="n. 力量, 武力, 势力, 影响力, 军队, 力, 效力
+vt. 强迫, 强夺, 推动, 提高
+ 人工转移; 强制">force</button> in Nigeria’s cultural <button class="vocab-word" type="button" data-word="landscape" data-pos="" data-def="n. 风景, 山水, 风景画
+vi. 从事景观美化
+vt. 美化...景观
+ 横向">landscape</button></div>
+<div class="article-meta">已抓取完整报道并保存在本站</div>
+</section>
+<section class="translation-panel">
+<div class="panel-header">
+<span class="source-badge">中文翻译</span>
+</div>
+<h3 class="article-title-zh">痴迷 mara：这场 DIY 舞蹈运动正帮助</h3>
+<div class="article-content-zh">在尼日利亚中部城市伊洛林求学期间，拉瓦尔·哈比卜·科拉喜欢待在宿舍房间里制作伴奏节拍，而不是回到更加喧闹的出生地拉各斯的家中。
+2022年，他制作的一段伴奏在TikTok上走红，而一个加入了暖场歌手即兴人声的版本更是让它在网络疯传。他受邀前往拉各斯参加MV拍摄，以为自己终于迎来了出人头地的成名良机，然而当MV发布时，里面根本没有他的身影
+随着该流派爆发式走红，哈利法（Khalipha）失去了创作控制权。“这变成了一种每个制作人和DJ都在跟风的潮流，”执导了2025年纪录片《马拉狂潮》（Mara Mania）的24岁导演费兰米·阿比奥拉（Feranmi Abiola）说，“他们都在做音乐，不管到底是不是马拉之声，都会直接冠以‘马拉狂热’、‘马拉这个’、‘马拉那个’的标题。”
+
+与其前身一样，马拉音乐
+哈利法表示，演出预订人认为马拉DJ身上会带有一种混乱和暴力的气息，这是由于这种音乐粗粝的声音以及它与街头文化的关联。
+阿比奥拉表示赞同。“[马拉DJ]并没有危害性，但由于他们的背景、外貌以及穿着方式，他们面临着刻板印象，”她说，“在我的纪录片中，我想让人们看到他们真实的样子……一群正在创新并为这一代人的文化认同做出贡献的年轻人。无论他们来自哪里，他们都理应受到认真对待。”
+订阅 Sleeve Notes
+获取音乐新闻
+尽管面临种种挑战，参与mara文化的人们依然怀揣着获得全球关注的梦想。法国大使馆的支持帮助阿齐得以在乌干达和欧洲部分地区的艺术节上演出。几位正处于上升期的业内好友，或是卡迪马曾带过的艺人，也会不时提供资金支持，或是免费协助推广项目。
+
+“我明白我们想为这种文化争取什么，所以我们一直在全力推进，”卡迪马说，“这是一项像家人一样的事业，所以我们尽量把收益分给大家。”
+
+阿齐曾得到过“大卫足迹艺术学院”（Footprints of David Art Academy）的扶持，那是一个常在他母亲店铺后方进行演出的儿童舞蹈剧团。他在那里磨炼了舞技，学会了击鼓，并结识了卡迪马。“我们学会了如何在困境中奋力拼搏，”阿齐说。
+
+艺术总监休恩·阿沃巴乔（Seun Awobajo）于2005年创办了这所学院，旨在将弱势儿童的精力引导至创意追求中。“【我的】理念是没有孩子是一无是处的，他们只是缺乏施展的机会，”他说。
+
+阿沃巴乔为他曾经的学生以及更广泛的mara圈子感到自豪。“用自豪来形容都</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">anticipate — v. 预料，期望</span>
+<span class="vocab-item">incorporate —</span></div></div>
+</section>
+</main>
+<aside class="translation-drawer" id="translationDrawer" aria-label="中文翻译窗口">
+<button class="drawer-handle" id="drawerToggle" type="button" aria-expanded="true">
+<span class="drawer-grip"></span>
+<span class="drawer-title">🇨🇳 中文翻译</span>
+<span class="drawer-toggle-text">收起</span>
+</button>
+<div class="drawer-content">
+<h3 class="article-title-zh">痴迷 mara：这场 DIY 舞蹈运动正帮助</h3>
+<div class="article-content-zh">在尼日利亚中部城市伊洛林求学期间，拉瓦尔·哈比卜·科拉喜欢待在宿舍房间里制作伴奏节拍，而不是回到更加喧闹的出生地拉各斯的家中。
+2022年，他制作的一段伴奏在TikTok上走红，而一个加入了暖场歌手即兴人声的版本更是让它在网络疯传。他受邀前往拉各斯参加MV拍摄，以为自己终于迎来了出人头地的成名良机，然而当MV发布时，里面根本没有他的身影
+随着该流派爆发式走红，哈利法（Khalipha）失去了创作控制权。“这变成了一种每个制作人和DJ都在跟风的潮流，”执导了2025年纪录片《马拉狂潮》（Mara Mania）的24岁导演费兰米·阿比奥拉（Feranmi Abiola）说，“他们都在做音乐，不管到底是不是马拉之声，都会直接冠以‘马拉狂热’、‘马拉这个’、‘马拉那个’的标题。”
+
+与其前身一样，马拉音乐
+哈利法表示，演出预订人认为马拉DJ身上会带有一种混乱和暴力的气息，这是由于这种音乐粗粝的声音以及它与街头文化的关联。
+阿比奥拉表示赞同。“[马拉DJ]并没有危害性，但由于他们的背景、外貌以及穿着方式，他们面临着刻板印象，”她说，“在我的纪录片中，我想让人们看到他们真实的样子……一群正在创新并为这一代人的文化认同做出贡献的年轻人。无论他们来自哪里，他们都理应受到认真对待。”
+订阅 Sleeve Notes
+获取音乐新闻
+尽管面临种种挑战，参与mara文化的人们依然怀揣着获得全球关注的梦想。法国大使馆的支持帮助阿齐得以在乌干达和欧洲部分地区的艺术节上演出。几位正处于上升期的业内好友，或是卡迪马曾带过的艺人，也会不时提供资金支持，或是免费协助推广项目。
+
+“我明白我们想为这种文化争取什么，所以我们一直在全力推进，”卡迪马说，“这是一项像家人一样的事业，所以我们尽量把收益分给大家。”
+
+阿齐曾得到过“大卫足迹艺术学院”（Footprints of David Art Academy）的扶持，那是一个常在他母亲店铺后方进行演出的儿童舞蹈剧团。他在那里磨炼了舞技，学会了击鼓，并结识了卡迪马。“我们学会了如何在困境中奋力拼搏，”阿齐说。
+
+艺术总监休恩·阿沃巴乔（Seun Awobajo）于2005年创办了这所学院，旨在将弱势儿童的精力引导至创意追求中。“【我的】理念是没有孩子是一无是处的，他们只是缺乏施展的机会，”他说。
+
+阿沃巴乔为他曾经的学生以及更广泛的mara圈子感到自豪。“用自豪来形容都</div>
+<div class="vocab-box"><strong>📚 四六级高频词</strong><div class="vocab-list"><span class="vocab-item">anticipate — v. 预料，期望</span>
+<span class="vocab-item">incorporate —</span></div></div>
+</div>
+</aside>
+<div class="vocab-popover" id="vocabPopover" role="dialog" hidden></div>
+<div class="footer">⚡ 自动生成 · <a href="https://github.com/Kalditeen/morning_brief">Kalditeen/morning_brief</a> · 2026-11-28 11:49</div>
+<script>
+function openVocabPopover(btn){
+  var pop=document.getElementById('vocabPopover');
+  if(!pop){return;}
+  var key=btn.getAttribute('data-word')||'';
+  if(!pop.hidden && pop.getAttribute('data-word')===key){
+    pop.hidden=true;return;
+  }
+  pop.innerHTML='<button class="vocab-popover-close" type="button" aria-label="关闭">×</button>'
+    +'<strong class="vocab-popover-word"></strong>'
+    +'<div class="vocab-popover-pos"></div>'
+    +'<div class="vocab-popover-def"></div>';
+  pop.querySelector('.vocab-popover-word').textContent=btn.textContent;
+  pop.querySelector('.vocab-popover-pos').textContent=btn.getAttribute('data-pos')||'';
+  pop.querySelector('.vocab-popover-def').textContent=btn.getAttribute('data-def')||'';
+  pop.setAttribute('data-word',key);
+  pop.hidden=false;
+  var close=pop.querySelector('.vocab-popover-close');
+  if(close){close.onclick=function(){pop.hidden=true;};}
+  var rect=btn.getBoundingClientRect();
+  var left=rect.left+window.scrollX+rect.width/2-pop.offsetWidth/2;
+  var top=rect.bottom+window.scrollY+6;
+  var maxLeft=document.documentElement.clientWidth+window.scrollX-pop.offsetWidth-8;
+  if(left<window.scrollX+8){left=window.scrollX+8;}
+  if(left>maxLeft){left=Math.max(window.scrollX+8,maxLeft);}
+  var viewportBottom=window.scrollY+window.innerHeight;
+  if(top+pop.offsetHeight>viewportBottom-8){top=rect.top+window.scrollY-pop.offsetHeight-6;}
+  pop.style.left=left+'px';
+  pop.style.top=top+'px';
+}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest?e.target.closest('.vocab-word'):null;
+  if(btn){openVocabPopover(btn);e.stopPropagation();return;}
+  var pop=document.getElementById('vocabPopover');
+  if(pop && !pop.hidden && !e.target.closest('.vocab-popover')){pop.hidden=true;}
+});
+</script>
+<script>
+function toggleTranslation(){
+  var reader=document.getElementById('reader');
+  var btn=document.getElementById('translateBtn');
+  reader.classList.toggle('open');
+  if(reader.classList.contains('open')){
+    btn.textContent='🇨🇳 收起翻译';
+    reader.setAttribute('data-active-tab','translation');
+    updateTabs();
+  }else{
+    btn.textContent='🇨🇳 查看翻译';
+  }
+}
+function switchTab(tab){
+  var reader=document.getElementById('reader');
+  reader.setAttribute('data-active-tab',tab);
+  updateTabs();
+}
+function toggleDrawer(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  var collapsed=drawer.classList.toggle('collapsed');
+  document.body.classList.toggle('drawer-open',!collapsed);
+  btn.setAttribute('aria-expanded',String(!collapsed));
+  var txt=btn.querySelector('.drawer-toggle-text');
+  if(txt){txt.textContent=collapsed?'展开':'收起';}
+}
+function initDrawerResize(){
+  var drawer=document.getElementById('translationDrawer');
+  var btn=document.getElementById('drawerToggle');
+  if(!drawer||!btn){return;}
+  var startY=0,startHeight=0,moved=false;
+  function setDrawerHeight(px){
+    var vh=window.innerHeight||800;
+    var min=Math.max(72,vh*0.12);
+    var max=Math.max(min,vh*0.80);
+    var next=Math.min(max,Math.max(min,px));
+    document.body.style.setProperty('--drawer-height',next+'px');
+    drawer.classList.remove('collapsed');
+    document.body.classList.add('drawer-open');
+    btn.setAttribute('aria-expanded','true');
+    var txt=btn.querySelector('.drawer-toggle-text');
+    if(txt){txt.textContent='收起';}
+  }
+  btn.addEventListener('pointerdown',function(e){
+    startY=e.clientY;startHeight=drawer.getBoundingClientRect().height;moved=false;
+    if(btn.setPointerCapture){btn.setPointerCapture(e.pointerId);}
+    document.body.classList.add('drawer-resizing');
+  });
+  btn.addEventListener('pointermove',function(e){
+    if(!btn.hasPointerCapture||!btn.hasPointerCapture(e.pointerId)){return;}
+    if(Math.abs(e.clientY-startY)>4){moved=true;}
+    setDrawerHeight(startHeight+(startY-e.clientY));
+  });
+  function endResize(e){
+    if(btn.hasPointerCapture&&btn.hasPointerCapture(e.pointerId)){btn.releasePointerCapture(e.pointerId);}
+    document.body.classList.remove('drawer-resizing');
+  }
+  btn.addEventListener('pointerup',endResize);
+  btn.addEventListener('pointercancel',endResize);
+  btn.addEventListener('click',function(e){
+    if(moved){e.preventDefault();e.stopPropagation();moved=false;return;}
+    toggleDrawer();
+  });
+}
+function updateTabs(){
+  var reader=document.getElementById('reader');
+  var active=reader.getAttribute('data-active-tab')||'original';
+  var tabs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<tabs.length;i++){
+    if(tabs[i].getAttribute('data-tab')===active){
+      tabs[i].classList.add('active');
+    }else{
+      tabs[i].classList.remove('active');
+    }
+  }
+}
+updateTabs();
+initDrawerResize();
+</script>
+</body>
+</html>
